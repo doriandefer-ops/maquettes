@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Al'Eau SOS Gaz – Dépannage chauffage et gaz à Barges</title>
+<meta name="description" content="Al'Eau SOS Gaz à Barges, près de Dijon : dépannage, entretien et remplacement de chaudières gaz et fioul. Contact par téléphone ou email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#ffd60a;--k:#111;--w:#fffdf5;--b:#2b50ff;--r:#ff4d4d;--g:#e9e6d8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Archivo',system-ui,sans-serif;background:var(--w);color:var(--k);line-height:1.6;font-size:17px;overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;line-height:1.02;text-transform:uppercase}
+a{color:inherit}
+.ic{width:1.5em;height:1.5em;flex:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:80px 0;border-top:4px solid var(--k)}
+h2{font-size:clamp(2.2rem,6vw,4rem);margin-bottom:22px}
+h2 mark{background:var(--y);padding:0 .15em;box-shadow:5px 5px 0 var(--k)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-family:'Archivo Black';text-transform:uppercase;text-decoration:none;background:var(--y);color:var(--k);border:4px solid var(--k);box-shadow:6px 6px 0 var(--k);transition:.12s;cursor:pointer;font-size:1rem}
+.btn:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--k)}
+.btn.b{background:var(--b);color:#fff}
+.btn.w{background:var(--w)}
+nav.top{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--y);border-bottom:4px solid var(--k)}
+nav.top .wrap{height:64px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Archivo Black';text-decoration:none;font-size:1.2rem;text-transform:uppercase;display:flex;gap:8px;align-items:center}
+.logo i{background:var(--k);color:var(--y);padding:2px 8px;font-style:normal}
+#menu{display:flex;gap:6px;align-items:center}
+#menu a{font-weight:700;text-decoration:none;padding:8px 12px;border:3px solid transparent;text-transform:uppercase;font-size:.85rem}
+#menu a:hover{border-color:var(--k);background:var(--w)}
+#menu a.cta{background:var(--k);color:var(--y)}
+#burger{display:none;width:48px;height:42px;border:4px solid var(--k);background:var(--w);cursor:pointer}
+#burger span,#burger span::before,#burger span::after{display:block;width:20px;height:3px;background:var(--k);margin:auto;position:relative}
+#burger span::before,#burger span::after{content:"";position:absolute;left:0}
+#burger span::before{top:-7px}#burger span::after{top:7px}
+/* hero bandeau + carte flottante */
+.hero{padding:64px 0 0;background:var(--w);position:relative;border:0}
+.hero .band{background:var(--b);color:#fff;border-top:4px solid var(--k);border-bottom:4px solid var(--k);padding:70px 0 130px;position:relative;overflow:hidden}
+.hero .band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.07) 22px 44px)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(3rem,9.5vw,7.4rem);max-width:900px}
+.hero h1 span{color:var(--y);-webkit-text-stroke:0}
+.hero .sub{font-size:1.25rem;max-width:560px;margin:22px 0 28px;font-weight:500}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero .sticker{position:absolute;right:20px;top:-10px;width:170px;height:170px;transform:rotate(12deg)}
+.card-float{position:relative;z-index:3;margin:-70px auto 0;max-width:1000px;background:var(--w);border:4px solid var(--k);box-shadow:10px 10px 0 var(--k);display:grid;grid-template-columns:repeat(3,1fr);margin-left:auto;margin-right:auto}
+.card-float>div{padding:24px;border-right:4px solid var(--k);display:flex;gap:14px;align-items:flex-start}
+.card-float>div:last-child{border:0}
+.card-float .ic{width:34px;height:34px}
+.card-float b{font-family:'Archivo Black';text-transform:uppercase;display:block;font-size:.85rem}
+.card-float a{font-weight:700}
+.fl{animation:fl 3s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes fl{50%{transform:scale(1.07,.94)}}
+/* marquee */
+.marq{background:var(--k);color:var(--y);overflow:hidden;white-space:nowrap;border-top:4px solid var(--k);margin-top:70px}
+.marq div{display:inline-block;padding:14px 0;font-family:'Archivo Black';text-transform:uppercase;animation:mq 26s linear infinite}
+.marq span{margin:0 24px}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* services */
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.sv{background:var(--w);border:4px solid var(--k);padding:26px;box-shadow:8px 8px 0 var(--k);transition:.15s}
+.sv:nth-child(3n+1){background:var(--y)}.sv:nth-child(3n+2){background:var(--w)}.sv:nth-child(3n){background:var(--g)}
+.sv:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--b)}
+.sv .ic{width:46px;height:46px;margin-bottom:10px}
+.sv h3{font-size:1.4rem;margin-bottom:8px}
+.sv p{font-weight:500}
+/* pourquoi : bandes numérotées */
+.why{background:var(--y)}
+.rows{border:4px solid var(--k);background:var(--w)}
+.rows .row{display:grid;grid-template-columns:90px 1fr 1fr;gap:20px;padding:22px;align-items:center;border-bottom:4px solid var(--k)}
+.rows .row:last-child{border:0}
+.rows .n{font-family:'Archivo Black';font-size:3rem;color:var(--b);line-height:1}
+.rows h3{font-size:1.4rem}
+.rows p{font-weight:500}
+/* étapes */
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:4px solid var(--k)}
+.st li{list-style:none;padding:26px 22px;border-right:4px solid var(--k);position:relative;background:var(--w);counter-increment:s}
+.st{counter-reset:s}
+.st li:last-child{border:0}
+.st li:nth-child(even){background:var(--g)}
+.st li::before{content:counter(s);display:inline-grid;place-items:center;width:46px;height:46px;background:var(--k);color:var(--y);font-family:'Archivo Black';font-size:1.4rem;margin-bottom:12px}
+.st h3{font-size:1.2rem;margin-bottom:6px}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:start}
+.about p{margin-bottom:14px;font-weight:500}
+.tab{border:4px solid var(--k);background:var(--w);box-shadow:8px 8px 0 var(--r)}
+.tab div{display:grid;grid-template-columns:130px 1fr;border-bottom:3px solid var(--k)}
+.tab div:last-child{border:0}
+.tab b{font-family:'Archivo Black';text-transform:uppercase;font-size:.8rem;background:var(--k);color:var(--y);padding:14px}
+.tab span{padding:14px}
+/* sécurité */
+.safe{background:var(--r);color:#fff}
+.safe h2 mark{background:#fff;color:var(--k)}
+.safe .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:26px 0}
+.safe .steps li{list-style:none;background:var(--w);color:var(--k);border:4px solid var(--k);padding:20px;box-shadow:6px 6px 0 var(--k)}
+.safe .steps .ic{width:40px;height:40px;color:var(--r);margin-bottom:6px}
+.safe .steps b{font-family:'Archivo Black';text-transform:uppercase;display:block;margin-bottom:4px}
+.safe .num{display:inline-block;background:var(--k);color:var(--y);padding:12px 20px;font-family:'Archivo Black';font-size:1.3rem;border:4px solid #fff}
+.safe small{display:block;margin-top:14px;max-width:640px}
+/* avis */
+.rev{border:4px dashed var(--k);padding:36px;text-align:center;max-width:740px;margin:0 auto;background:var(--g)}
+.rev .s{display:flex;justify-content:center;gap:4px;margin-bottom:8px}
+.rev .s .ic{width:30px;height:30px;color:var(--b)}
+/* faq */
+details{border:4px solid var(--k);margin-bottom:14px;background:var(--w);box-shadow:5px 5px 0 var(--k)}
+summary{padding:18px 22px;font-family:'Archivo Black';text-transform:uppercase;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--b);transition:.15s}
+details[open]{background:var(--y)}
+details[open] summary::after{transform:rotate(45deg);color:var(--k)}
+details p{padding:0 22px 20px;font-weight:500}
+/* contact */
+.contact{background:var(--g)}
+.contact .wrap>div{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.hrs{list-style:none;border:4px solid var(--k);background:var(--w);margin:14px 0}
+.hrs li{display:flex;justify-content:space-between;gap:10px;padding:11px 14px;border-bottom:3px solid var(--k)}
+.hrs li:last-child{border:0}
+.hrs li.today{background:var(--y);font-weight:700}
+.hrs li.today span::after{content:" ← AUJOURD’HUI";font-family:'Archivo Black';font-size:.7rem}
+.note{font-size:.9rem;margin-bottom:18px}
+form{border:4px solid var(--k);background:var(--w);padding:28px;box-shadow:10px 10px 0 var(--k);display:grid;gap:14px}
+form h3{font-size:1.7rem}
+label{display:grid;gap:5px;font-weight:700;font-size:.9rem;text-transform:uppercase}
+input,textarea,select{font:inherit;text-transform:none;padding:12px;border:3px solid var(--k);background:var(--w);width:100%}
+input:focus,textarea:focus,select:focus{outline:4px solid var(--b)}
+#fmsg{background:var(--y);border:3px solid var(--k);padding:10px 14px;font-weight:700}
+footer{background:var(--k);color:#d6d2c0;padding:56px 0 100px;border-top:4px solid var(--k)}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer h4{font-family:'Archivo Black';text-transform:uppercase;color:var(--y);margin-bottom:10px}
+footer ul{list-style:none}footer li{margin-bottom:6px}
+footer a{color:#fff}
+.demo{background:var(--y);text-align:center;font-size:.85rem;padding:12px 16px;font-weight:700;border-top:4px solid var(--k)}
+.fcall{display:none;position:fixed;right:14px;bottom:14px;z-index:60;width:64px;height:64px;background:var(--y);border:4px solid var(--k);box-shadow:4px 4px 0 var(--k);align-items:center;justify-content:center}
+.fcall .ic{width:30px;height:30px}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.fl,.marq div{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){
+section{padding:56px 0}
+#burger{display:block}
+#menu{position:fixed;inset:68px 0 0 0;background:var(--y);flex-direction:column;justify-content:center;gap:18px;transform:translateX(100%);transition:.25s}
+#menu.open{transform:none}
+#menu a{font-size:1.3rem}
+.hero .band{padding:50px 0 110px}
+.hero .sticker{display:none}
+.card-float{grid-template-columns:1fr;margin-left:16px;margin-right:16px;margin-top:-60px}
+.card-float>div{border-right:0;border-bottom:4px solid var(--k)}.card-float>div:last-child{border:0}
+.g3,.safe .steps,.about .wrap,.contact .wrap>div,footer .wrap{grid-template-columns:1fr}
+.safe .steps{grid-template-columns:1fr 1fr}
+.rows .row{grid-template-columns:60px 1fr}.rows .row p{grid-column:2}
+.st{grid-template-columns:1fr 1fr}
+.st li:nth-child(2){border-right:0}.st li:nth-child(-n+2){border-bottom:4px solid var(--k)}
+.fcall{display:flex}
+}
+@media(max-width:520px){.safe .steps,.st{grid-template-columns:1fr}.st li{border-right:0;border-bottom:4px solid var(--k)}.st li:last-child{border:0}.tab div{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="logo" href="#haut"><i>SOS</i>Al'Eau Gaz</a>
+<button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+<div id="menu"><a href="#services">Services</a><a href="#atouts">Atouts</a><a href="#securite">Sécurité</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="cta" href="tel:+33981267431">Appeler</a></div>
+</div></nav>
+
+<header class="hero" id="haut">
+<div class="band"><div class="wrap">
+<svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,2 61,18 80,12 82,32 98,40 88,57 96,76 77,80 70,98 52,90 34,98 27,80 6,78 14,60 2,44 20,34 20,14 40,18" fill="#ffd60a" stroke="#111" stroke-width="3"/><g class="fl"><path d="M50 24c6 12 22 16 22 34a22 22 0 0 1-44 0c0-9 4-14 10-18 0 7 4 11 8 11-3-10-2-19 4-27z" fill="#ff4d4d" stroke="#111" stroke-width="3"/></g></svg>
+<h1>Votre chaudière,<br><span>notre affaire.</span></h1>
+<p class="sub">Al'Eau SOS Gaz, à Barges près de Dijon : dépannage, entretien et remplacement de chaudières gaz et fioul. Un appel, on s’en occupe.</p>
+<div class="cta"><a class="btn" href="tel:+33981267431"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn w" href="#contact">Demander un devis</a></div>
+</div></div>
+<div class="wrap"><div class="card-float">
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span><b>Téléphone</b><a href="tel:+33981267431">09 81 26 74 31</a></span></div>
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>Email</b><a href="mailto:u1sosgaz@gmail.com">u1sosgaz@gmail.com</a></span></div>
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Basé à</b>Barges, secteur Dijon</span></div>
+</div></div>
+<div class="marq"><div><span>Chaudières gaz</span>★<span>Chaudières fioul</span>★<span>Dépannage</span>★<span>Entretien</span>★<span>Remplacement</span>★<span>Chaudières gaz</span>★<span>Chaudières fioul</span>★<span>Dépannage</span>★<span>Entretien</span>★<span>Remplacement</span>★</div></div>
+</header>
+
+<section id="services"><div class="wrap">
+<h2 class="rv"><mark>Ce qu’on fait</mark></h2>
+<div class="grid g3">
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg><h3>Chaudières gaz</h3><p>Installation, remplacement, réglage et contrôle de votre chaudière à gaz.</p></article>
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><h3>Chaudières fioul</h3><p>Mise en service, remise en état ou remplacement de chaudière fioul.</p></article>
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L21 13l-8 8-4-4 8-8z" /><path d="M14 7l3-3"/><path d="M5 19l-2 2"/></svg><h3>Dépannage</h3><p>Plus de chauffage, plus d’eau chaude, panne de chaudière : appelez, on vous dit comment agir.</p></article>
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg><h3>Entretien</h3><p>Vérification de l’installation, nettoyage et réglages pour garder un bon rendement.</p></article>
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Contrôle sécurité</h3><p>Un œil de professionnel sur vos raccordements et votre installation gaz.</p></article>
+<article class="sv rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><h3>Remplacement</h3><p>Dépose de l’ancienne chaudière, pose de la nouvelle, essais et explications.</p></article>
+</div></div></section>
+
+<section class="why" id="atouts"><div class="wrap">
+<h2 class="rv"><mark>Pourquoi nous</mark></h2>
+<div class="rows">
+<div class="row rv"><span class="n">01</span><h3>On décroche</h3><p>Un numéro direct, un artisan au bout du fil, pas de standard.</p></div>
+<div class="row rv"><span class="n">02</span><h3>Pas de jargon</h3><p>On explique le problème et les solutions simplement, devis à l’appui.</p></div>
+<div class="row rv"><span class="n">03</span><h3>Travail propre</h3><p>Pose soignée, essais de fonctionnement, chantier laissé en ordre.</p></div>
+<div class="row rv"><span class="n">04</span><h3>Local</h3><p>Basés à Barges, nous intervenons autour de Dijon.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2 class="rv"><mark>Comment ça se passe</mark></h2>
+<ol class="st rv" style="padding:0">
+<li><h3>Vous appelez</h3><p>Décrivez la panne ou votre projet.</p></li>
+<li><h3>On diagnostique</h3><p>Conseil au téléphone, puis passage si nécessaire.</p></li>
+<li><h3>On intervient</h3><p>Réparation, entretien ou remplacement.</p></li>
+<li><h3>On vérifie</h3><p>Essais, explications et conseils pour la suite.</p></li>
+</ol></div></section>
+
+<section class="about"><div class="wrap">
+<div class="rv"><h2><mark>Qui sommes-nous</mark></h2>
+<p>Al'Eau SOS Gaz est une entreprise de chauffage installée à Barges, en Côte-d’Or, à proximité de Dijon. Elle s’occupe des chaudières gaz et fioul : dépannage, entretien, remplacement.</p>
+<p>L’objectif : que vous retrouviez rapidement chaleur et eau chaude, avec une installation fiable et un artisan joignable.</p></div>
+<div class="tab rv"><div><b>Métier</b><span>Chauffagiste</span></div><div><b>Basé à</b><span>Barges (Côte-d’Or)</span></div><div><b>Spécialités</b><span>Chaudières gaz et fioul</span></div><div><b>Téléphone</b><span>09 81 26 74 31</span></div><div><b>Email</b><span>u1sosgaz@gmail.com</span></div></div>
+</div></section>
+
+<section class="safe" id="securite"><div class="wrap">
+<h2 class="rv"><mark>Odeur de gaz ?</mark></h2>
+<p class="rv" style="max-width:640px;font-weight:700">Quelques réflexes à connaître avant même d’appeler un professionnel.</p>
+<ul class="steps rv" style="padding:0">
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><b>Aérez</b>Ouvrez portes et fenêtres en grand.</li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z"/></svg><b>Pas d’étincelle</b>Ne touchez ni interrupteur, ni sonnette, ni flamme.</li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10h8a3 3 0 0 1 3 3v1M6 10V7h4M3 10h3"/><path d="M17 17c-1 1.5-1 2.5 0 3 1-.5 1-1.5 0-3z"/></svg><b>Coupez le gaz</b>Fermez le robinet d’arrivée si vous y avez accès.</li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><b>Sortez, puis appelez</b>Quittez le logement et appelez depuis l’extérieur.</li>
+</ul>
+<span class="num">GRDF urgence gaz : 0 800 47 33 33</span>
+<small>Information générale de prévention. En cas de danger immédiat, appelez les pompiers (18 ou 112).</small>
+</div></section>
+
+<section><div class="wrap">
+<div class="rev rv"><h2 style="font-size:1.9rem"><mark>Avis clients</mark></h2>
+<div class="s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg></div>
+<p>La note et le nombre d’avis de vos clients (Google, Facebook…) s’afficheront ici dès qu’ils seront reliés à votre site, avec un lien vers la source.</p></div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:860px">
+<h2 class="rv"><mark>FAQ</mark></h2>
+<details class="rv"><summary>Comment demander un devis ?</summary><p>Appelez ou utilisez le formulaire en précisant votre équipement et le problème. Nous vous répondons pour convenir de la suite.</p></details>
+<details class="rv"><summary>Ma chaudière ne démarre plus, que faire ?</summary><p>Vérifiez l’alimentation électrique et la pression indiquée sur le manomètre, puis appelez-nous en décrivant les voyants ou messages affichés.</p></details>
+<details class="rv"><summary>À quelle fréquence faut-il l’entretenir ?</summary><p>Un entretien régulier est recommandé, et obligatoire dans de nombreux cas. Nous vous indiquons la fréquence adaptée à votre équipement.</p></details>
+<details class="rv"><summary>Réparer ou remplacer ma chaudière ?</summary><p>Cela dépend de l’âge, de l’état et du coût de la réparation. Un diagnostic permet de choisir l’option la plus raisonnable.</p></details>
+<details class="rv"><summary>Travaillez-vous sur les chaudières fioul ?</summary><p>Oui, nous intervenons sur les chaudières gaz comme sur les chaudières fioul.</p></details>
+<details class="rv"><summary>Dans quel secteur intervenez-vous ?</summary><p>Autour de Barges et de Dijon. Pour une autre commune, appelez-nous pour en discuter.</p></details>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<h2 class="rv"><mark>Contact</mark></h2>
+<div>
+<div class="rv">
+<ul class="hrs"><li data-d="1"><span>Lundi</span><b>Sur appel ou rendez-vous</b></li><li data-d="2"><span>Mardi</span><b>Sur appel ou rendez-vous</b></li><li data-d="3"><span>Mercredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="4"><span>Jeudi</span><b>Sur appel ou rendez-vous</b></li><li data-d="5"><span>Vendredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="6"><span>Samedi</span><b>Nous contacter</b></li><li data-d="0"><span>Dimanche</span><b>Nous contacter</b></li></ul>
+<p class="note">Horaires exacts à confirmer avec l’entreprise : appelez pour convenir d’un créneau.</p>
+<p style="margin-bottom:16px"><b>Barges (Côte-d’Or)</b> et environs de Dijon.</p>
+<a class="btn b" href="https://www.google.com/maps/dir/?api=1&destination=Barges%2C+C%C3%B4te-d%27Or%2C+France" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Itinéraire</a></div>
+<form id="cform" class="rv"><h3>Demander un devis</h3>
+<label>Nom<input required name="n" autocomplete="name"></label>
+<label>Téléphone<input name="t" type="tel" autocomplete="tel"></label>
+<label>Besoin<select><option>Dépannage chaudière</option><option>Entretien</option><option>Remplacement</option><option>Autre</option></select></label>
+<label>Message<textarea rows="4"></textarea></label>
+<button class="btn" type="submit">Envoyer</button><p id="fmsg" hidden></p></form>
+</div></div></section>
+
+<footer><div class="wrap">
+<div><h4>Al'Eau SOS Gaz</h4><p>Dépannage, entretien et remplacement de chaudières gaz et fioul à Barges et autour de Dijon.</p></div>
+<div><h4>Coordonnées</h4><ul><li><a href="tel:+33981267431">09 81 26 74 31</a></li><li><a href="mailto:u1sosgaz@gmail.com">u1sosgaz@gmail.com</a></li><li>Barges (Côte-d’Or)</li></ul></div>
+<div><h4>Horaires</h4><p>Sur appel ou rendez-vous. Horaires exacts à confirmer.</p></div>
+</div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="fcall" href="tel:+33981267431" aria-label="Appeler Al'Eau SOS Gaz"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+<script>document.documentElement.classList.add('js');
+(function(){
+var b=document.getElementById('burger'),n=document.getElementById('menu');
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o)});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('lock')})})}
+var d=new Date().getDay();document.querySelectorAll('.hrs li').forEach(function(li){if(+li.dataset.d===d)li.classList.add('today')});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+var f=document.getElementById('cform');
+if(f){f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('fmsg');m.textContent='Maquette de démonstration : votre message n’a pas été envoyé.';m.hidden=false})}
+})();
+</script>
+</body>
+</html>

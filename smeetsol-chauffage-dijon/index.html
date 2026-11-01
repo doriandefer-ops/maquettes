@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smeetsol – Chauffagiste à Dijon</title>
+<meta name="description" content="Smeetsol, chauffagiste à Dijon : chaudières gaz et fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Devis par téléphone ou par email.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#1d242b;--steel2:#2c363f;--mid:#5b6975;--line:#d3d8dc;--bg:#eceff1;--paper:#fff;--or:#ff6a13;--or2:#d94f00;--ink:#14191e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3,.bn{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1}
+a{color:inherit}
+.ic{width:1.5em;height:1.5em;flex:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.tag{display:inline-block;font-family:'Bebas Neue';letter-spacing:.14em;color:var(--or);font-size:1.1rem;margin-bottom:10px}
+.tag::before{content:"";display:inline-block;width:28px;height:3px;background:var(--or);vertical-align:middle;margin-right:10px}
+h2{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font-family:'Bebas Neue';font-size:1.3rem;letter-spacing:.06em;text-decoration:none;border:2px solid var(--or);background:var(--or);color:#fff;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:.2s;cursor:pointer}
+.btn:hover{background:var(--or2);border-color:var(--or2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--steel)}
+.btn.dark{background:var(--steel);border-color:var(--steel)}
+/* nav */
+nav.top{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,36,43,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--or)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Bebas Neue';font-size:1.9rem;color:#fff;text-decoration:none;letter-spacing:.06em;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-block;width:14px;height:14px;background:var(--or);transform:rotate(45deg)}
+#menu{display:flex;gap:26px;align-items:center}
+#menu a{color:#cfd6dc;text-decoration:none;font-weight:600;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em}
+#menu a:hover{color:var(--or)}
+#menu .tel{background:var(--or);color:#fff;padding:8px 16px}
+#burger{display:none;background:none;border:2px solid #fff;color:#fff;width:44px;height:40px;cursor:pointer}
+#burger span,#burger span::before,#burger span::after{display:block;width:20px;height:2px;background:#fff;margin:auto;position:relative}
+#burger span::before,#burger span::after{content:"";position:absolute;left:0}
+#burger span::before{top:-6px}#burger span::after{top:6px}
+/* hero : texte géant superposé */
+.hero{position:relative;background:var(--steel);color:#fff;padding:140px 0 90px;overflow:hidden;min-height:92vh;display:flex;align-items:center}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px}
+.giant{position:absolute;left:-1vw;top:50%;transform:translateY(-52%);font-family:'Bebas Neue';font-size:clamp(7rem,27vw,23rem);line-height:.8;color:transparent;-webkit-text-stroke:2px rgba(255,106,19,.35);white-space:nowrap;pointer-events:none;user-select:none}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;width:100%}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem);text-shadow:0 4px 0 rgba(0,0,0,.3)}
+.hero h1 em{font-style:normal;color:var(--or)}
+.hero p.lead{font-size:1.25rem;max-width:560px;margin:22px 0 32px;color:#d8dee3}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero svg.art{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 20px 30px rgba(0,0,0,.4))}
+.flame{transform-origin:50% 90%;animation:fl 2.2s ease-in-out infinite}
+@keyframes fl{50%{transform:scale(1.06,.95)}}
+.rot{transform-origin:210px 150px;animation:rot 9s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+/* trust */
+.trust{background:var(--or);color:#fff;padding:0}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust li{padding:22px 18px;display:flex;gap:12px;align-items:center;border-right:1px solid rgba(255,255,255,.35);font-weight:700}
+.trust li:last-child{border:0}
+.trust small{display:block;font-weight:400;opacity:.9;line-height:1.3}
+/* services */
+.services{background:var(--paper)}
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--bg);border-left:6px solid var(--or);padding:28px 24px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 0 -6px var(--steel)}
+.card .ic{width:44px;height:44px;color:var(--or);margin-bottom:14px}
+.card h3{font-size:1.8rem;margin-bottom:8px}
+.card p{color:var(--mid)}
+/* pourquoi */
+.why{background:var(--steel);color:#fff}
+.why h2{color:#fff}
+.g4{grid-template-columns:repeat(4,1fr)}
+.why .card{background:var(--steel2);border-color:var(--or)}
+.why .card p{color:#b8c2ca}
+/* étapes */
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:90px 1fr;gap:18px;padding:26px 0;border-top:2px solid var(--line);align-items:start}
+.steps li:last-child{border-bottom:2px solid var(--line)}
+.steps li::before{content:"0" counter(s);font-family:'Bebas Neue';font-size:4.2rem;color:var(--or);line-height:.9}
+.steps h3{font-size:1.9rem;margin-bottom:4px}
+.steps p{color:var(--mid)}
+/* about */
+.about{background:var(--paper)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about p{margin-bottom:14px;color:#2f3a43}
+.plate{background:var(--steel);color:#fff;padding:34px;position:relative}
+.plate::after{content:"";position:absolute;right:-12px;bottom:-12px;width:100%;height:100%;border:3px solid var(--or);z-index:-1}
+.plate dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px}
+.plate dt{font-family:'Bebas Neue';letter-spacing:.1em;color:var(--or);font-size:1.15rem}
+.plate dd{color:#e4e9ed}
+/* métier : installations */
+.tech .wrap>p{max-width:640px;color:var(--mid);margin-bottom:34px}
+.diag{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.diag figure{background:var(--paper);border:2px solid var(--steel);padding:18px;transition:.25s}
+.diag figure:hover{box-shadow:8px 8px 0 var(--or);transform:translate(-4px,-4px)}
+.diag svg{width:100%;height:150px;display:block;background:linear-gradient(var(--bg),#e0e5e8);margin-bottom:12px}
+.diag figcaption b{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.04em;display:block}
+.diag figcaption span{color:var(--mid);font-size:.95rem}
+/* avis */
+.reviews{background:var(--paper);text-align:center}
+.reviews .box{max-width:720px;margin:0 auto;border:2px dashed var(--mid);padding:36px}
+.reviews .stars{color:var(--or);display:flex;justify-content:center;gap:4px;margin-bottom:10px}
+.reviews .stars .ic{width:30px;height:30px}
+.reviews p{color:var(--mid)}
+/* faq */
+details{background:var(--paper);border-left:6px solid var(--steel);margin-bottom:12px;transition:.2s}
+details[open]{border-color:var(--or)}
+summary{cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Bebas Neue';font-size:2rem;line-height:1;color:var(--or);transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 24px 22px;color:#3b4650}
+/* horaires + contact */
+.visit{background:var(--steel);color:#fff}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.visit h2{color:#fff}
+.hrs{list-style:none;margin:18px 0 24px}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.15)}
+.hrs li.today{background:var(--or);font-weight:700}
+.hrs li.today::after{content:"aujourd’hui";font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;order:3;align-self:center}
+.hrs li.today b{order:2}
+.note{font-size:.88rem;color:#aab4bc;margin-bottom:22px}
+form{background:var(--paper);color:var(--ink);padding:30px;display:grid;gap:14px}
+form h3{font-size:2rem}
+label{font-weight:600;font-size:.9rem;display:grid;gap:5px}
+input,textarea,select{font:inherit;padding:12px;border:2px solid var(--line);background:#f7f9fa;width:100%}
+input:focus,textarea:focus{outline:3px solid var(--or);border-color:var(--or)}
+#fmsg{background:#fff3ea;border-left:5px solid var(--or);padding:12px;font-weight:600}
+/* footer */
+footer{background:#0f1418;color:#aab4bc;padding:60px 0 100px}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+footer h4{font-family:'Bebas Neue';font-size:1.4rem;color:#fff;letter-spacing:.08em;margin-bottom:10px}
+footer a{color:#e4e9ed}
+footer li{list-style:none;margin-bottom:6px}
+.demo{background:var(--or);color:#fff;text-align:center;font-size:.85rem;padding:10px 16px;font-weight:600}
+.fcall{display:none;position:fixed;right:16px;bottom:16px;z-index:60;background:var(--or);color:#fff;width:60px;height:60px;border-radius:50%;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.fcall .ic{width:28px;height:28px}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.flame,.rot{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){
+section{padding:60px 0}
+#burger{display:block}
+#menu{position:fixed;inset:67px 0 0 0;background:var(--steel);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.3s}
+#menu.open{transform:none}
+#menu a{font-size:1.4rem}
+.hero .wrap,.about .wrap,.visit .wrap{grid-template-columns:1fr}
+.hero svg.art{max-width:300px}
+.giant{top:auto;bottom:-2vw;transform:none;font-size:38vw}
+.trust ul{grid-template-columns:1fr 1fr}
+.trust li:nth-child(2){border-right:0}
+.trust li:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.35)}
+.g3,.g4,.diag{grid-template-columns:1fr}
+.g4{grid-template-columns:1fr 1fr}
+footer .wrap{grid-template-columns:1fr}
+.fcall{display:flex}
+.steps li{grid-template-columns:64px 1fr}.steps li::before{font-size:3.2rem}
+}
+@media(max-width:520px){.g4{grid-template-columns:1fr}.hero{padding-top:110px}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="logo" href="#haut"><i></i>SMEETSOL</a>
+<button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+<div id="menu"><a href="#services">Services</a><a href="#atouts">Atouts</a><a href="#etapes">Déroulé</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="tel" href="tel:+33682686203">06 82 68 62 03</a></div>
+</div></nav>
+
+<header class="hero" id="haut">
+<div class="giant" aria-hidden="true">CHAUD</div>
+<div class="wrap">
+<div>
+<span class="tag">Chauffagiste · Dijon</span>
+<h1>Un foyer au chaud,<br><em>sans mauvaise surprise.</em></h1>
+<p class="lead">Smeetsol installe, remplace et entretient vos chaudières gaz et fioul, pompes à chaleur, climatisations et chauffe-eau thermodynamiques à Dijon et dans ses environs.</p>
+<div class="cta"><a class="btn" href="tel:+33682686203"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn ghost" href="#contact">Demander un devis</a></div>
+</div>
+<svg class="art" viewBox="0 0 420 420" role="img" aria-label="Chaudière avec flamme et pompe à chaleur">
+<rect x="70" y="60" width="170" height="270" rx="10" fill="#e9edf0" stroke="#0f1418" stroke-width="5"/>
+<rect x="88" y="80" width="134" height="60" fill="#1d242b"/><circle cx="110" cy="110" r="10" fill="#ff6a13"/><rect x="132" y="102" width="70" height="8" fill="#5b6975"/><rect x="132" y="116" width="46" height="8" fill="#5b6975"/>
+<circle cx="155" cy="205" r="42" fill="#fff" stroke="#0f1418" stroke-width="5"/>
+<g class="flame"><path d="M155 175c6 14 22 20 22 40a22 22 0 0 1-44 0c0-10 5-16 10-20 0 8 4 12 8 12-3-12-2-22 4-32z" fill="#ff6a13"/><path d="M155 200c3 7 10 10 10 19a10 10 0 0 1-20 0c0-5 3-8 5-9 0 4 2 6 4 6-1-6-1-11 1-16z" fill="#ffd2a6"/></g>
+<rect x="100" y="260" width="110" height="14" fill="#5b6975"/><rect x="100" y="282" width="110" height="14" fill="#5b6975"/>
+<path d="M120 330v50M190 330v50" stroke="#0f1418" stroke-width="12"/><path d="M190 380h140" stroke="#0f1418" stroke-width="12"/>
+<rect x="270" y="170" width="120" height="120" rx="10" fill="#e9edf0" stroke="#0f1418" stroke-width="5"/>
+<g class="rot" style="transform-origin:330px 230px"><circle cx="330" cy="230" r="5" fill="#0f1418"/><path d="M330 225c0-22 6-32 20-32 8 0 8 14-2 22l-14 8M335 230c22 0 32 6 32 20 0 8-14 8-22-2l-8-14M330 235c0 22-6 32-20 32-8 0-8-14 2-22l14-8M325 230c-22 0-32-6-32-20 0-8 14-8 22 2l8 14" fill="#ff6a13" stroke="#0f1418" stroke-width="3"/></g>
+<path d="M300 90c-14 20 14 24 0 44M335 90c-14 20 14 24 0 44M370 90c-14 20 14 24 0 44" fill="none" stroke="#ff6a13" stroke-width="5" stroke-linecap="round"/>
+</svg>
+</div>
+</header>
+
+<div class="trust"><div class="wrap"><ul>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Dijon<small>et ses environs</small></div></li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg><div>Gaz &amp; fioul<small>installation, remplacement</small></div></li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-6 4-6 2 0 2 3 0 5l-3 2M14 12c4 0 6 1 6 4 0 2-3 2-5 0l-2-3M12 14c0 4-1 6-4 6-2 0-2-3 0-5l3-2M10 12c-4 0-6-1-6-4 0-2 3-2 5 0l2 3"/></svg><div>Pompes à chaleur<small>et climatisation</small></div></li>
+<li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><div>Devis<small>par téléphone ou email</small></div></li>
+</ul></div></div>
+
+<section class="services" id="services"><div class="wrap">
+<span class="tag">Nos prestations</span><h2 class="rv">Tout le confort thermique, en un seul interlocuteur</h2>
+<div class="grid g3">
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg><h3>Chaudières gaz</h3><p>Installation, remplacement et entretien de votre chaudière à gaz, avec réglages soignés et conseils d’usage.</p></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><h3>Chaudières fioul</h3><p>Remise à niveau ou remplacement d’une chaudière fioul, avec une installation propre et sécurisée.</p></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-6 4-6 2 0 2 3 0 5l-3 2M14 12c4 0 6 1 6 4 0 2-3 2-5 0l-2-3M12 14c0 4-1 6-4 6-2 0-2-3 0-5l3-2M10 12c-4 0-6-1-6-4 0-2 3-2 5 0l2 3"/></svg><h3>Pompes à chaleur</h3><p>Étude de votre logement et pose d’une pompe à chaleur adaptée pour chauffer plus sobrement.</p></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7 4 17"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg><h3>Climatisation</h3><p>Installation de climatisation réversible : fraîcheur l’été, appoint de chaleur en mi-saison.</p></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg><h3>Chauffe-eau thermodynamique</h3><p>De l’eau chaude en consommant moins d’électricité, posé et mis en service par un professionnel.</p></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L21 13l-8 8-4-4 8-8z" /><path d="M14 7l3-3"/><path d="M5 19l-2 2"/></svg><h3>Dépannage &amp; entretien</h3><p>Panne, bruit suspect, radiateurs froids : appelez-nous pour qu’on regarde ce qui se passe.</p></article>
+</div></div></section>
+
+<section class="why" id="atouts"><div class="wrap">
+<span class="tag">Pourquoi nous choisir</span><h2 class="rv">Un artisan local, des interventions claires</h2>
+<div class="grid g4">
+<div class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><h3>Un seul contact</h3><p>Vous parlez directement à l’entreprise, du premier appel jusqu’à la mise en service.</p></div>
+<div class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg><h3>Conseil adapté</h3><p>On vous oriente vers la solution qui correspond à votre logement et à votre budget.</p></div>
+<div class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Pose soignée</h3><p>Installation propre, essais de fonctionnement et explications avant de repartir.</p></div>
+<div class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Proximité</h3><p>Basés à Dijon, nous intervenons dans l’agglomération et les communes voisines.</p></div>
+</div></div></section>
+
+<section id="etapes"><div class="wrap">
+<span class="tag">Comment ça se passe</span><h2 class="rv">De l’appel à la mise en service</h2>
+<ol class="steps">
+<li class="rv"><div><h3>Vous nous contactez</h3><p>Un appel ou un email suffit pour décrire votre besoin : remplacement, installation, panne.</p></div></li>
+<li class="rv"><div><h3>Étude et devis</h3><p>Nous évaluons votre installation et vous remettons un devis clair avant tout travaux.</p></div></li>
+<li class="rv"><div><h3>Installation</h3><p>Pose des équipements, raccordements et essais, en respectant votre intérieur.</p></div></li>
+<li class="rv"><div><h3>Mise en service</h3><p>Réglages, explications d’utilisation et conseils d’entretien pour la suite.</p></div></li>
+</ol></div></section>
+
+<section class="about"><div class="wrap">
+<div class="rv"><span class="tag">À propos</span><h2>Smeetsol, votre chauffagiste dijonnais</h2>
+<p>Smeetsol est une entreprise de chauffage installée à Dijon. Elle intervient sur les chaudières gaz et fioul, les pompes à chaleur, la climatisation et les chauffe-eau thermodynamiques.</p>
+<p>Particuliers qui rénovent ou qui tombent en panne en plein hiver : l’idée est la même, trouver rapidement une solution fiable et un interlocuteur qui décroche.</p></div>
+<div class="plate rv"><dl>
+<dt>Métier</dt><dd>Chauffagiste</dd><dt>Ville</dt><dd>Dijon (Côte-d’Or)</dd>
+<dt>Spécialités</dt><dd>Gaz, fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique</dd>
+<dt>Contact</dt><dd>06 82 68 62 03<br>smeetsol@free.fr</dd></dl></div>
+</div></section>
+
+<section class="tech"><div class="wrap">
+<span class="tag">Nos installations</span><h2 class="rv">Les équipements que nous posons</h2>
+<p>Illustrations schématiques de nos principales familles d’équipements. Les marques et modèles sont choisis avec vous, selon votre logement.</p>
+<div class="diag">
+<figure class="rv"><svg viewBox="0 0 300 150"><rect x="95" y="15" width="110" height="120" rx="6" fill="#fff" stroke="#1d242b" stroke-width="4"/><circle cx="150" cy="85" r="26" fill="#eceff1" stroke="#1d242b" stroke-width="4"/><path d="M150 66c4 8 14 12 14 24a14 14 0 0 1-28 0c0-6 3-10 6-12 0 5 3 8 5 8-2-7-1-14 3-20z" fill="#ff6a13"/><rect x="110" y="28" width="80" height="12" fill="#1d242b"/></svg><figcaption><b>Chaudière</b><span>Gaz ou fioul, remplacement ou première installation.</span></figcaption></figure>
+<figure class="rv"><svg viewBox="0 0 300 150"><rect x="60" y="30" width="100" height="90" rx="6" fill="#fff" stroke="#1d242b" stroke-width="4"/><circle cx="110" cy="75" r="30" fill="#eceff1" stroke="#1d242b" stroke-width="4"/><path d="M110 75l0-24M110 75l21 12M110 75l-21 12" stroke="#ff6a13" stroke-width="7" stroke-linecap="round"/><path d="M160 75h50v-30h60" fill="none" stroke="#ff6a13" stroke-width="5"/><rect x="230" y="30" width="50" height="30" fill="#fff" stroke="#1d242b" stroke-width="4"/></svg><figcaption><b>Pompe à chaleur</b><span>Unité extérieure et circuit de chauffage de la maison.</span></figcaption></figure>
+<figure class="rv"><svg viewBox="0 0 300 150"><rect x="40" y="25" width="220" height="50" rx="8" fill="#fff" stroke="#1d242b" stroke-width="4"/><path d="M60 62h180" stroke="#5b6975" stroke-width="4"/><path d="M90 90c-8 10 8 14 0 26M150 90c-8 10 8 14 0 26M210 90c-8 10 8 14 0 26" fill="none" stroke="#ff6a13" stroke-width="5" stroke-linecap="round"/></svg><figcaption><b>Climatisation</b><span>Unité murale réversible, pour le froid comme pour le chaud.</span></figcaption></figure>
+</div></div></section>
+
+<section class="reviews"><div class="wrap">
+<span class="tag">Avis clients</span><h2 class="rv">La parole à vos clients</h2>
+<div class="box rv"><div class="stars"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg></div>
+<p>Cet espace affichera la note et le nombre d’avis de vos clients (Google, Facebook…) dès qu’ils seront connectés à votre site, avec un lien vers la source.</p></div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:860px">
+<span class="tag">Questions fréquentes</span><h2 class="rv">On vous répond</h2>
+<details class="rv"><summary>Comment obtenir un devis ?</summary><p>Appelez-nous ou écrivez-nous en décrivant votre logement et votre besoin. Nous vous proposons ensuite un devis, après échange ou visite selon la situation.</p></details>
+<details class="rv"><summary>Faut-il remplacer ma vieille chaudière ?</summary><p>Cela dépend de son état, de son âge et de votre consommation. Un contrôle permet de savoir si une réparation suffit ou si un remplacement est plus pertinent.</p></details>
+<details class="rv"><summary>Une pompe à chaleur convient-elle à mon logement ?</summary><p>Souvent oui, mais cela dépend de l’isolation, du type d’émetteurs et de la surface. C’est pour cela qu’une étude préalable est nécessaire.</p></details>
+<details class="rv"><summary>Existe-t-il des aides financières ?</summary><p>Certains travaux de rénovation énergétique peuvent ouvrir droit à des aides. Les conditions évoluent régulièrement : renseignez-vous auprès des organismes officiels ou demandez-nous conseil.</p></details>
+<details class="rv"><summary>Intervenez-vous en cas de panne ?</summary><p>Contactez-nous par téléphone pour décrire le problème. Nous vous dirons ce qu’il est possible de faire et dans quels délais.</p></details>
+<details class="rv"><summary>À quelle fréquence entretenir ma chaudière ?</summary><p>Un entretien régulier est recommandé, et obligatoire dans de nombreux cas. Nous pouvons vous indiquer la fréquence adaptée à votre équipement.</p></details>
+</div></section>
+
+<section class="visit" id="contact"><div class="wrap">
+<div class="rv"><span class="tag">Nous joindre</span><h2>Parlons de votre chauffage</h2>
+<ul class="hrs"><li data-d="1"><span>Lundi</span><b>Sur appel ou rendez-vous</b></li><li data-d="2"><span>Mardi</span><b>Sur appel ou rendez-vous</b></li><li data-d="3"><span>Mercredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="4"><span>Jeudi</span><b>Sur appel ou rendez-vous</b></li><li data-d="5"><span>Vendredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="6"><span>Samedi</span><b>Nous contacter</b></li><li data-d="0"><span>Dimanche</span><b>Nous contacter</b></li></ul>
+<p class="note">Horaires exacts à confirmer avec l’entreprise : appelez ou écrivez pour convenir d’un créneau.</p>
+<p style="margin-bottom:18px">Dijon et communes environnantes.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Dijon%2C+France" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Itinéraire</a></div>
+<form id="cform" class="rv"><h3>Demander un devis</h3>
+<label>Nom<input required name="n" autocomplete="name"></label>
+<label>Téléphone<input name="t" type="tel" autocomplete="tel"></label>
+<label>Votre besoin<select><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Dépannage</option></select></label>
+<label>Message<textarea rows="4" name="m"></textarea></label>
+<button class="btn dark" type="submit">Envoyer</button><p id="fmsg" hidden></p></form>
+</div></section>
+
+<footer><div class="wrap">
+<div><h4>SMEETSOL</h4><p>Chauffagiste à Dijon : chaudières, pompes à chaleur, climatisation, chauffe-eau thermodynamiques.</p></div>
+<div><h4>Coordonnées</h4><ul><li><a href="tel:+33682686203">06 82 68 62 03</a></li><li><a href="mailto:smeetsol@free.fr">smeetsol@free.fr</a></li><li>Dijon (Côte-d’Or)</li></ul></div>
+<div><h4>Horaires</h4><p>Sur appel ou rendez-vous. Horaires exacts à confirmer.</p></div>
+</div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="fcall" href="tel:+33682686203" aria-label="Appeler Smeetsol"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+<script>document.documentElement.classList.add('js');
+(function(){
+var b=document.getElementById('burger'),n=document.getElementById('menu');
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o)});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('lock')})})}
+var d=new Date().getDay();document.querySelectorAll('.hrs li').forEach(function(li){if(+li.dataset.d===d)li.classList.add('today')});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+var f=document.getElementById('cform');
+if(f){f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('fmsg');m.textContent='Maquette de démonstration : votre message n’a pas été envoyé.';m.hidden=false})}
+})();
+</script>
+</body>
+</html>

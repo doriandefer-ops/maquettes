@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MCCVS – Chauffage et pompe à chaleur à Quetigny</title>
+<meta name="description" content="MCCVS, chauffagiste à Quetigny près de Dijon : chaudières, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--n1:#080b24;--n2:#1b1052;--n3:#4a1d7a;--teal:#2de2c8;--pink:#ff7ac6;--txt:#eef0ff;--mut:#aab0d6;--glass:rgba(255,255,255,.08);--gb:rgba(255,255,255,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--txt);line-height:1.65;font-size:17px;background:var(--n1);background-image:radial-gradient(900px 600px at 85% -5%,#4a1d7a 0,transparent 60%),radial-gradient(800px 700px at -10% 35%,#133a7a 0,transparent 60%),radial-gradient(900px 700px at 100% 80%,#5a1d6a 0,transparent 60%);background-attachment:fixed;overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3{font-family:'Syne',sans-serif;line-height:1.1;font-weight:800}
+a{color:inherit}
+.ic{width:1.5em;height:1.5em;flex:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.eyebrow{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:600;display:block;margin-bottom:12px}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px}
+.glass{background:var(--glass);border:1px solid var(--gb);border-radius:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;font-weight:600;text-decoration:none;border:1px solid transparent;background:linear-gradient(120deg,var(--teal),#5aa8ff);color:#06122e;transition:.25s;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(45,226,200,.35)}
+.btn.o{background:var(--glass);color:var(--txt);border-color:var(--gb)}
+.btn.o:hover{background:rgba(255,255,255,.16);box-shadow:none}
+nav.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1100px,calc(100% - 28px));z-index:50;border-radius:999px;padding:0 10px 0 22px}
+nav.top .in{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Syne';font-weight:800;font-size:1.4rem;text-decoration:none;letter-spacing:.04em}
+.logo b{color:var(--teal)}
+#menu{display:flex;gap:6px;align-items:center}
+#menu a{text-decoration:none;color:var(--mut);padding:8px 14px;border-radius:999px;font-size:.95rem}
+#menu a:hover{color:#fff;background:rgba(255,255,255,.1)}
+#menu a.cta{background:linear-gradient(120deg,var(--teal),#5aa8ff);color:#06122e;font-weight:600}
+#burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--gb);background:var(--glass);cursor:pointer;color:#fff}
+#burger span,#burger span::before,#burger span::after{display:block;width:18px;height:2px;background:#fff;margin:auto;position:relative}
+#burger span::before,#burger span::after{content:"";position:absolute;left:0}
+#burger span::before{top:-6px}#burger span::after{top:6px}
+/* hero écran coupé */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;max-width:1240px;margin:0 auto;padding:130px 20px 60px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:6px 0 22px}
+.hero h1 span{background:linear-gradient(110deg,var(--teal),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:1.15rem;max-width:520px;margin-bottom:30px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero .viz{position:relative;aspect-ratio:1;max-width:520px;width:100%;justify-self:center}
+.viz svg{width:100%;height:100%}
+.orb{animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-14px)}}
+.pulse{animation:pu 3s ease-in-out infinite;transform-origin:center}
+@keyframes pu{50%{opacity:.5}}
+.chip{position:absolute;padding:10px 16px;border-radius:999px;font-size:.9rem;display:flex;gap:8px;align-items:center}
+.chip .ic{width:1.2em;height:1.2em;color:var(--teal)}
+.c1{top:6%;left:0}.c2{bottom:18%;right:-2%}.c3{bottom:2%;left:12%}
+/* trust */
+.trust .row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust .it{padding:20px;display:flex;gap:14px;align-items:center}
+.trust .it .ic{color:var(--teal);width:34px;height:34px}
+.trust small{display:block;color:var(--mut)}
+.trust{padding:20px 0 40px}
+/* services */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.svc{padding:30px;transition:.3s}
+.svc:hover{transform:translateY(-8px);background:rgba(255,255,255,.13)}
+.svc .ico{width:60px;height:60px;border-radius:18px;background:linear-gradient(135deg,rgba(45,226,200,.3),rgba(255,122,198,.3));display:grid;place-items:center;margin-bottom:18px;color:var(--teal)}
+.svc h3{font-size:1.35rem;margin-bottom:8px}
+.svc p{color:var(--mut)}
+/* pourquoi */
+.why .grid{grid-template-columns:repeat(4,1fr)}
+.why .glass{padding:26px}
+.why h3{font-size:1.15rem;margin:10px 0 6px}
+.why p{color:var(--mut);font-size:.97rem}
+.why .ic{color:var(--pink)}
+/* timeline horizontale */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;counter-reset:t}
+.tl::before{content:"";position:absolute;left:5%;right:5%;top:30px;height:2px;background:linear-gradient(90deg,var(--teal),var(--pink));opacity:.6}
+.tl li{list-style:none;counter-increment:t;position:relative;text-align:center;padding-top:0}
+.tl li::before{content:counter(t);display:grid;place-items:center;width:60px;height:60px;border-radius:50%;margin:0 auto 18px;background:var(--n1);border:2px solid var(--teal);font-family:'Syne';font-weight:800;font-size:1.3rem;box-shadow:0 0 24px rgba(45,226,200,.4)}
+.tl h3{font-size:1.15rem;margin-bottom:6px}
+.tl p{color:var(--mut);font-size:.97rem}
+/* about */
+.about .box{padding:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.about p{color:var(--mut);margin-bottom:14px}
+.facts{display:grid;gap:12px}
+.facts div{background:rgba(255,255,255,.06);border-radius:16px;padding:14px 18px}
+.facts b{display:block;color:var(--teal);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:16px}
+.bento .glass{padding:22px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;transition:.3s}
+.bento .glass:hover{transform:scale(1.02)}
+.bento .big{grid-column:span 2;grid-row:span 2}
+.bento .wide{grid-column:span 2}
+.bento .full{grid-column:span 4;grid-row:span 1}
+.bento h3{font-size:1.15rem}
+.bento p{color:var(--mut);font-size:.92rem}
+.bento svg.bg{position:absolute;right:-10px;top:-10px;width:55%;opacity:.9}
+/* avis */
+.rev{padding:40px;text-align:center;max-width:760px;margin:0 auto}
+.rev .st{display:flex;justify-content:center;gap:4px;color:var(--pink);margin-bottom:10px}
+.rev .st .ic{width:28px;height:28px}
+.rev p{color:var(--mut)}
+/* faq */
+details{margin-bottom:12px;border-radius:18px;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(12px)}
+summary{padding:20px 24px;cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;font-family:'Syne';font-size:1.05rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--teal);font-size:1.6rem;line-height:1;transition:.25s}
+details[open] summary::after{transform:rotate(135deg);color:var(--pink)}
+details p{padding:0 24px 22px;color:var(--mut)}
+/* contact */
+.contact .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact .glass{padding:34px}
+.hrs{list-style:none;margin:16px 0}
+.hrs li{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-radius:12px;color:var(--mut)}
+.hrs li.today{background:linear-gradient(120deg,rgba(45,226,200,.25),rgba(255,122,198,.2));color:#fff;font-weight:600}
+.hrs li.today::before{content:"●";color:var(--teal);margin-right:8px}
+.hrs li span{flex:1}
+.addr{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.addr .ic{color:var(--teal);margin-top:4px}
+.note{font-size:.88rem;color:var(--mut);margin-bottom:18px}
+label{display:grid;gap:6px;margin-bottom:14px;font-size:.9rem;color:var(--mut)}
+input,textarea,select{font:inherit;color:#fff;background:rgba(255,255,255,.07);border:1px solid var(--gb);border-radius:14px;padding:13px 16px;width:100%}
+select option{color:#000}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--teal)}
+#fmsg{margin-top:14px;padding:12px 16px;border-radius:14px;background:rgba(45,226,200,.15);border:1px solid var(--teal)}
+footer{padding:50px 0 110px;border-top:1px solid var(--gb);color:var(--mut)}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer h4{font-family:'Syne';color:#fff;margin-bottom:10px}
+footer ul{list-style:none}footer li{margin-bottom:6px}
+footer a{color:var(--txt)}
+.demo{text-align:center;font-size:.85rem;padding:12px 16px;background:rgba(255,255,255,.08);color:var(--mut)}
+.fcall{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:62px;height:62px;border-radius:50%;background:linear-gradient(120deg,var(--teal),#5aa8ff);color:#06122e;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(45,226,200,.5)}
+.fcall .ic{width:28px;height:28px}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.orb,.pulse{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){
+section{padding:60px 0}
+#burger{display:block}
+#menu{position:fixed;inset:0;background:rgba(8,11,36,.97);flex-direction:column;justify-content:center;gap:14px;opacity:0;pointer-events:none;transition:.3s;z-index:-1}
+#menu.open{opacity:1;pointer-events:auto;z-index:1}
+#menu a{font-size:1.4rem}
+nav.top .in{position:relative}
+nav.top .logo,#burger{position:relative;z-index:5}
+.hero{grid-template-columns:1fr;padding-top:110px;min-height:auto}
+.hero .viz{max-width:360px}
+.trust .row,.why .grid{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:minmax(0,1fr)}
+.svc h3{font-size:1.2rem;overflow-wrap:anywhere}
+.tl{grid-template-columns:1fr;gap:26px}.tl::before{display:none}
+.tl li{display:grid;grid-template-columns:60px 1fr;gap:16px;text-align:left}.tl li::before{margin:0}
+.about .box,.contact .grid2,footer .wrap{grid-template-columns:1fr}
+.about .box{padding:28px}
+.bento{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+.bento .big,.bento .full{grid-column:span 2}
+.fcall{display:flex}
+}
+@media(max-width:520px){.trust .row,.why .grid{grid-template-columns:1fr}.c2{right:0}}
+</style>
+</head>
+<body>
+<nav class="top glass"><div class="in">
+<a class="logo" href="#haut">MC<b>CVS</b></a>
+<button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+<div id="menu"><a href="#services">Services</a><a href="#atouts">Atouts</a><a href="#etapes">Déroulé</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="cta" href="tel:+33681139184">Appeler</a></div>
+</div></nav>
+
+<header class="hero" id="haut">
+<div>
+<span class="eyebrow">Chauffage · Quetigny &amp; Dijon</span>
+<h1>Le confort thermique, <span>pensé pour votre maison.</span></h1>
+<p>MCCVS installe et remplace chaudières, pompes à chaleur, climatisations et chauffe-eau thermodynamiques, à Quetigny et dans l’agglomération dijonnaise.</p>
+<div class="cta-row"><a class="btn" href="tel:+33681139184"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn o" href="#contact">Demander un devis</a></div>
+</div>
+<div class="viz">
+<svg viewBox="0 0 500 500" role="img" aria-label="Maison avec pompe à chaleur"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2de2c8"/><stop offset="1" stop-color="#ff7ac6"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity=".05"/></linearGradient></defs>
+<circle class="pulse" cx="250" cy="250" r="220" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-dasharray="4 10"/>
+<circle cx="250" cy="250" r="170" fill="url(#g2)" stroke="rgba(255,255,255,.2)"/>
+<g class="orb"><path d="M120 260l130-110 130 110v120H120z" fill="url(#g2)" stroke="url(#g1)" stroke-width="4" stroke-linejoin="round"/>
+<rect x="215" y="300" width="70" height="80" rx="6" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-opacity=".5"/>
+<rect x="140" y="285" width="46" height="46" rx="6" fill="rgba(45,226,200,.25)" stroke="#2de2c8"/><rect x="314" y="285" width="46" height="46" rx="6" fill="rgba(45,226,200,.25)" stroke="#2de2c8"/>
+<path d="M250 205c8 16 24 20 24 36a24 24 0 0 1-48 0c0-9 4-14 9-18 0 7 4 10 8 10-3-9-2-19 7-28z" fill="url(#g1)"/>
+<rect x="385" y="320" width="64" height="64" rx="10" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-opacity=".6"/><circle cx="417" cy="352" r="20" fill="none" stroke="#2de2c8" stroke-width="3"/><path d="M417 352l0-16M417 352l14 8M417 352l-14 8" stroke="#ff7ac6" stroke-width="4" stroke-linecap="round"/>
+<path d="M380 352h-20" stroke="#2de2c8" stroke-width="3" stroke-dasharray="3 5"/></g></svg>
+<div class="chip glass c1"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg> Gaz &amp; fioul</div>
+<div class="chip glass c2"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-6 4-6 2 0 2 3 0 5l-3 2M14 12c4 0 6 1 6 4 0 2-3 2-5 0l-2-3M12 14c0 4-1 6-4 6-2 0-2-3 0-5l3-2M10 12c-4 0-6-1-6-4 0-2 3-2 5 0l2 3"/></svg> Pompe à chaleur</div>
+<div class="chip glass c3"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7 4 17"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg> Climatisation</div>
+</div>
+</header>
+
+<div class="trust"><div class="wrap"><div class="row">
+<div class="it glass"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Quetigny<small>6 impasse des Boussenots</small></div></div>
+<div class="it glass"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg><div>Dijon &amp; environs<small>zone d’intervention</small></div></div>
+<div class="it glass"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-6 4-6 2 0 2 3 0 5l-3 2M14 12c4 0 6 1 6 4 0 2-3 2-5 0l-2-3M12 14c0 4-1 6-4 6-2 0-2-3 0-5l3-2M10 12c-4 0-6-1-6-4 0-2 3-2 5 0l2 3"/></svg><div>PAC &amp; clim<small>étude et installation</small></div></div>
+<div class="it glass"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><div>Devis<small>sur simple appel</small></div></div>
+</div></div></div>
+
+<section id="services"><div class="wrap">
+<span class="eyebrow">Prestations</span><h2 class="rv">Des solutions pour chaque besoin</h2>
+<div class="grid g3">
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg></div><h3>Chaudières gaz</h3><p>Pose et remplacement de chaudières à gaz, réglages et explications d’utilisation.</p></article>
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div><h3>Chaudières fioul</h3><p>Installation ou renouvellement d’une chaudière fioul, avec une pose propre et sécurisée.</p></article>
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-6 4-6 2 0 2 3 0 5l-3 2M14 12c4 0 6 1 6 4 0 2-3 2-5 0l-2-3M12 14c0 4-1 6-4 6-2 0-2-3 0-5l3-2M10 12c-4 0-6-1-6-4 0-2 3-2 5 0l2 3"/></svg></div><h3>Pompes à chaleur</h3><p>Étude de votre logement puis installation d’une pompe à chaleur adaptée à vos besoins.</p></article>
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7 4 17"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></div><h3>Climatisation</h3><p>Climatisation réversible pour garder la maison fraîche l’été et tempérée en hiver.</p></article>
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg></div><h3>Chauffe-eau thermodynamique</h3><p>Produire l’eau chaude avec moins d’électricité, grâce à la technologie thermodynamique.</p></article>
+<article class="svc glass rv"><div class="ico"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L21 13l-8 8-4-4 8-8z" /><path d="M14 7l3-3"/><path d="M5 19l-2 2"/></svg></div><h3>Entretien &amp; dépannage</h3><p>Un souci avec votre équipement ? Contactez-nous pour faire le point ensemble.</p></article>
+</div></div></section>
+
+<section class="why" id="atouts"><div class="wrap">
+<span class="eyebrow">Pourquoi nous choisir</span><h2 class="rv">Proche, clair, appliqué</h2>
+<div class="grid">
+<div class="glass rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Entreprise locale</h3><p>Basée à Quetigny, à quelques minutes de Dijon.</p></div>
+<div class="glass rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg><h3>Solution sur mesure</h3><p>Chaque logement est différent : on choisit ensemble l’équipement adapté.</p></div>
+<div class="glass rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg><h3>Devis avant travaux</h3><p>Vous savez ce que vous achetez avant que le chantier ne commence.</p></div>
+<div class="glass rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><h3>Contact direct</h3><p>Un appel, un email : vous échangez directement avec l’entreprise.</p></div>
+</div></div></section>
+
+<section id="etapes"><div class="wrap">
+<span class="eyebrow">Comment ça se passe</span><h2 class="rv">Quatre étapes, sans stress</h2>
+<ol class="tl">
+<li class="rv"><div><h3>Prise de contact</h3><p>Vous décrivez votre projet par téléphone ou par email.</p></div></li>
+<li class="rv"><div><h3>Étude &amp; devis</h3><p>Nous analysons votre logement et chiffrons les travaux.</p></div></li>
+<li class="rv"><div><h3>Installation</h3><p>Pose, raccordements et essais par un professionnel.</p></div></li>
+<li class="rv"><div><h3>Mise en service</h3><p>Réglages, prise en main et conseils d’entretien.</p></div></li>
+</ol></div></section>
+
+<section class="about"><div class="wrap"><div class="box glass rv">
+<div><span class="eyebrow">À propos</span><h2>MCCVS, chauffage à Quetigny</h2>
+<p>MCCVS est une société installée à Quetigny, aux portes de Dijon. Son métier : installer des équipements de chauffage et de production d’eau chaude qui durent.</p>
+<p>Chaudière à remplacer, projet de pompe à chaleur ou envie de climatisation : l’entreprise vous accompagne de l’étude jusqu’à la mise en service.</p></div>
+<div class="facts"><div><b>Siège</b>6 impasse des Boussenots, 21800 Quetigny</div><div><b>Spécialités</b>Gaz, fioul, pompe à chaleur, climatisation</div><div><b>Contact</b>06 81 13 91 84</div></div>
+</div></div></section>
+
+<section><div class="wrap">
+<span class="eyebrow">Nos installations</span><h2 class="rv">Ce que nous posons chez vous</h2>
+<div class="bento">
+<div class="glass big rv"><svg class="bg" viewBox="0 0 100 100"><rect x="20" y="10" width="60" height="80" rx="6" fill="none" stroke="#2de2c8" stroke-width="3"/><circle cx="50" cy="55" r="16" fill="none" stroke="#ff7ac6" stroke-width="3"/><path d="M50 42c4 6 10 8 10 14a10 10 0 0 1-20 0c0-4 2-6 4-8 0 3 2 4 3 4-1-4-1-7 3-10z" fill="#2de2c8"/></svg><h3>Chaudières gaz &amp; fioul</h3><p>Remplacement ou première installation, avec essais et mise en service.</p></div>
+<div class="glass rv"><h3>Pompe à chaleur</h3><p>Air-eau ou air-air selon le projet.</p></div>
+<div class="glass rv"><h3>Climatisation</h3><p>Unités murales réversibles.</p></div>
+<div class="glass wide rv"><h3>Chauffe-eau thermodynamique</h3><p>Une eau chaude plus économe, installée proprement.</p></div>
+<div class="glass full rv"><h3>Entretien &amp; dépannage</h3><p>Pour garder vos équipements en bon état de marche.</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="rev glass rv"><span class="eyebrow">Avis clients</span>
+<div class="st"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg></div>
+<p>La note et le nombre d’avis de vos clients (Google, Facebook…) s’afficheront ici dès qu’ils seront reliés à votre site, avec un lien vers la source.</p></div>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:860px">
+<span class="eyebrow">FAQ</span><h2 class="rv">Vos questions, nos réponses</h2>
+<details class="rv"><summary>Comment demander un devis ?</summary><p>Par téléphone ou via le formulaire. Indiquez votre type de logement et votre projet, nous revenons vers vous pour la suite.</p></details>
+<details class="rv"><summary>Quelle différence entre pompe à chaleur et chaudière ?</summary><p>Une chaudière produit de la chaleur en brûlant du gaz ou du fioul. Une pompe à chaleur capte les calories de l’air et les transfère au logement. Le bon choix dépend de votre habitation.</p></details>
+<details class="rv"><summary>La climatisation peut-elle aussi chauffer ?</summary><p>Les climatisations réversibles produisent du froid l’été et de la chaleur en mi-saison. Elles sont souvent un complément plus qu’un chauffage principal.</p></details>
+<details class="rv"><summary>Combien de temps durent les travaux ?</summary><p>Cela varie selon l’équipement et l’état de l’installation existante. Nous vous donnons une estimation avec le devis.</p></details>
+<details class="rv"><summary>Existe-t-il des aides pour changer de système ?</summary><p>Des aides à la rénovation énergétique existent selon les projets. Leurs conditions changent, renseignez-vous auprès des organismes officiels.</p></details>
+<details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Principalement à Quetigny, Dijon et les communes voisines. Pour une autre commune, appelez-nous.</p></details>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<span class="eyebrow">Contact</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="grid2">
+<div class="glass rv"><div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>MCCVS</b><br>6 impasse des Boussenots<br>21800 Quetigny</div></div>
+<ul class="hrs"><li data-d="1"><span>Lundi</span><b>Sur appel ou rendez-vous</b></li><li data-d="2"><span>Mardi</span><b>Sur appel ou rendez-vous</b></li><li data-d="3"><span>Mercredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="4"><span>Jeudi</span><b>Sur appel ou rendez-vous</b></li><li data-d="5"><span>Vendredi</span><b>Sur appel ou rendez-vous</b></li><li data-d="6"><span>Samedi</span><b>Nous contacter</b></li><li data-d="0"><span>Dimanche</span><b>Nous contacter</b></li></ul>
+<p class="note">Horaires exacts à confirmer avec l’entreprise : appelez pour convenir d’un créneau.</p>
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=6+impasse+des+Boussenots%2C+21800+Quetigny" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Itinéraire</a></div>
+<form class="glass rv" id="cform"><h3 style="margin-bottom:16px">Demander un devis</h3>
+<label>Nom<input name="n" required autocomplete="name"></label>
+<label>Téléphone<input name="t" type="tel" autocomplete="tel"></label>
+<label>Votre projet<select><option>Chaudière gaz ou fioul</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Autre</option></select></label>
+<label>Message<textarea rows="4"></textarea></label>
+<button class="btn" type="submit">Envoyer</button><p id="fmsg" hidden></p></form>
+</div></div></section>
+
+<footer><div class="wrap">
+<div><h4>MCCVS</h4><p>Chauffage, pompes à chaleur et climatisation à Quetigny et autour de Dijon.</p></div>
+<div><h4>Coordonnées</h4><ul><li><a href="tel:+33681139184">06 81 13 91 84</a></li><li><a href="mailto:montant.julien@gmail.com">montant.julien@gmail.com</a></li><li>6 impasse des Boussenots, 21800 Quetigny</li></ul></div>
+<div><h4>Horaires</h4><p>Sur appel ou rendez-vous. Horaires exacts à confirmer.</p></div>
+</div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="fcall" href="tel:+33681139184" aria-label="Appeler MCCVS"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+<script>document.documentElement.classList.add('js');
+(function(){
+var b=document.getElementById('burger'),n=document.getElementById('menu');
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);document.body.classList.toggle('lock',o)});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('lock')})})}
+var d=new Date().getDay();document.querySelectorAll('.hrs li').forEach(function(li){if(+li.dataset.d===d)li.classList.add('today')});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+var f=document.getElementById('cform');
+if(f){f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('fmsg');m.textContent='Maquette de démonstration : votre message n’a pas été envoyé.';m.hidden=false})}
+})();
+</script>
+</body>
+</html>
