@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auguste Menuiserie Rénovation – Menuisier à Moissannes</title>
+<meta name="description" content="Auguste Menuiserie Rénovation, menuisier reconnu RGE à Moissannes (87) : fenêtres, volets et portes, pose et rénovation autour de Saint-Léonard-de-Noblat et Limoges. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Yeseva+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oak:#c8a06a; --oak-d:#a98147; --petrol:#1e4d5a; --petrol-d:#133540; --petrol-l:#2c6676;
+  --kraft:#efe3cf; --kraft-l:#f7efe1; --brown:#4a3320; --copper:#d9732b; --copper-d:#b85a18;
+  --ff-h:'Yeseva One','Georgia','Times New Roman',serif;
+  --ff-b:'Mulish','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --grain:repeating-linear-gradient(92deg,rgba(74,51,32,.05) 0 2px,transparent 2px 7px,rgba(74,51,32,.035) 7px 8px,transparent 8px 17px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--ff-b);color:var(--brown);background:var(--kraft);background-image:var(--grain);line-height:1.65;font-size:17px;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--ff-h);font-weight:400;line-height:1.15}
+.wrap{width:min(1140px,100% - 32px);margin-inline:auto}
+section{padding:84px 0;position:relative}
+.tag{display:inline-block;background:var(--oak);color:var(--brown);font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px 6px 22px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%);margin-bottom:16px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);color:var(--petrol);margin-bottom:14px}
+.lead{max-width:640px;font-size:1.08rem;opacity:.92;margin-bottom:40px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:800;text-decoration:none;font-family:var(--ff-b);font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.22)}
+.btn-primary{background:var(--copper);color:#fff}
+.btn-primary:hover{background:var(--copper-d)}
+.btn-ghost{background:transparent;color:var(--kraft);border-color:var(--oak)}
+.btn-ghost:hover{background:var(--oak);color:var(--brown)}
+.btn-petrol{background:var(--petrol);color:var(--kraft)}
+.btn-petrol:hover{background:var(--petrol-d)}
+.btn svg{width:20px;height:20px}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+/* NAV */
+nav{position:fixed;top:12px;left:0;right:0;z-index:50;pointer-events:none}
+.nav-in{pointer-events:auto;width:min(1140px,100% - 24px);margin-inline:auto;background:rgba(19,53,64,.94);backdrop-filter:blur(8px);border:1px solid rgba(200,160,106,.5);border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 22px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.logo{font-family:var(--ff-h);color:var(--kraft);text-decoration:none;font-size:1.1rem;white-space:nowrap}
+.logo b{color:var(--oak);font-weight:400}
+.menu{display:flex;gap:4px;list-style:none;align-items:center}
+.menu a{color:var(--kraft);text-decoration:none;font-weight:700;font-size:.92rem;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.menu a:hover{background:var(--oak);color:var(--brown)}
+.menu a.cta{background:var(--copper);color:#fff}
+.menu a.cta:hover{background:var(--kraft);color:var(--brown)}
+.burger{display:none;background:var(--oak);border:0;width:44px;height:44px;border-radius:50%;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{display:block;position:absolute;left:12px;width:20px;height:2.5px;background:var(--brown);border-radius:2px;transition:.25s}
+.burger span{top:21px}.burger span::before{content:"";top:-7px;left:0}.burger span::after{content:"";top:7px;left:0}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{background:var(--petrol);background-image:var(--grain),linear-gradient(180deg,var(--petrol-d),var(--petrol));color:var(--kraft);padding:130px 0 0;overflow:hidden}
+.hero .txt{max-width:680px;position:relative;z-index:2}
+.hero .tag{background:var(--oak)}
+.hero h1{font-size:clamp(2.1rem,5vw,3.3rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--oak)}
+.hero p{font-size:1.12rem;max-width:560px;margin-bottom:28px;color:#e9dcc4}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px;position:relative;z-index:2}
+.hero-ill{margin-top:10px;position:relative;z-index:1;display:block;width:100%;height:auto}
+.hero .wrap{position:relative}
+
+/* TRUST */
+.trust{background:var(--oak);background-image:var(--grain);padding:0;border-block:4px solid var(--brown)}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust li{padding:22px 18px;display:flex;gap:12px;align-items:center;font-weight:800;font-size:.95rem;line-height:1.3;border-right:2px dashed rgba(74,51,32,.4)}
+.trust li:last-child{border:0}
+.trust svg{width:34px;height:34px;flex:none}
+
+/* SERVICES */
+.grid{display:grid;gap:22px}
+.services{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--kraft-l);background-image:var(--grain);border:2px solid var(--brown);border-radius:10px;padding:28px 24px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:5px 5px 0 var(--oak)}
+.card:hover{transform:translate(-3px,-5px);box-shadow:9px 11px 0 var(--petrol)}
+.card .ico{width:64px;height:64px;background:var(--petrol);border-radius:14px;display:grid;place-items:center;margin-bottom:16px}
+.card .ico svg{width:40px;height:40px}
+.card h3{font-size:1.35rem;color:var(--petrol);margin-bottom:8px}
+.card p{font-size:.97rem}
+.devis{position:absolute;top:14px;right:14px;background:var(--copper);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:4px;transform:rotate(3deg)}
+.services-note{margin-top:28px;font-weight:700;color:var(--petrol)}
+
+/* WHY */
+.why{background:var(--petrol);background-image:var(--grain);color:var(--kraft)}
+.why h2{color:var(--kraft)}
+.why .lead{color:#e9dcc4}
+.why-grid{grid-template-columns:repeat(4,1fr)}
+.why-item{border:2px solid var(--oak);border-radius:10px;padding:26px 22px;background:rgba(0,0,0,.14);transition:transform .25s,background .25s}
+.why-item:hover{transform:translateY(-6px);background:rgba(0,0,0,.28)}
+.why-item .n{font-family:var(--ff-h);font-size:2.4rem;color:var(--oak);line-height:1}
+.why-item h3{font-size:1.25rem;margin:8px 0}
+.why-item p{font-size:.95rem;color:#e9dcc4}
+
+/* STEPS */
+.steps{grid-template-columns:repeat(4,1fr);counter-reset:s;position:relative}
+.step{background:var(--kraft-l);border-radius:10px;border:2px solid var(--brown);padding:30px 22px 24px;position:relative;margin-top:22px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-22px;left:20px;width:44px;height:44px;border-radius:50%;background:var(--copper);color:#fff;font-family:var(--ff-h);display:grid;place-items:center;font-size:1.3rem;border:3px solid var(--kraft)}
+.step h3{color:var(--petrol);font-size:1.25rem;margin-bottom:6px}
+.step p{font-size:.95rem}
+
+/* ABOUT */
+.about{background:var(--kraft-l);background-image:var(--grain)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px}
+.about .plate{background:var(--petrol);border-radius:14px;padding:18px;border:3px solid var(--brown);box-shadow:8px 8px 0 var(--oak)}
+.about .plate svg{width:100%;height:auto;display:block}
+
+/* MATERIALS */
+.mat{grid-template-columns:repeat(3,1fr)}
+.mcard{background:var(--kraft-l);border:2px solid var(--brown);border-radius:10px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.mcard:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(74,51,32,.25)}
+.mhead{padding:22px 24px;color:#fff;display:flex;align-items:center;gap:14px}
+.mhead h3{font-size:1.5rem}
+.m-bois .mhead{background:var(--brown);background-image:repeating-linear-gradient(90deg,rgba(200,160,106,.22) 0 3px,transparent 3px 12px)}
+.m-pvc .mhead{background:var(--petrol-l)}
+.m-alu .mhead{background:#5d6b72;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 2px,transparent 2px 10px)}
+.mbody{padding:22px 24px}
+.mbody h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--copper-d);margin:12px 0 4px}
+.mbody h4:first-child{margin-top:0}
+.mbody p{font-size:.95rem}
+.mat-note{margin-top:24px;font-size:.95rem;font-style:italic}
+
+/* AIDES */
+.aides{background:var(--oak);background-image:var(--grain)}
+.aides h2{color:var(--brown)}
+.aides-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.paper{background:var(--kraft-l);border:2px dashed var(--brown);border-radius:10px;padding:26px}
+.paper ul{padding-left:20px}
+.paper li{margin-bottom:8px}
+.paper h3{color:var(--petrol);margin-bottom:10px;font-size:1.3rem}
+.disclaimer{font-size:.88rem;opacity:.85;margin-top:14px}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{background:var(--kraft-l);border:2px solid var(--brown);border-radius:10px;margin-bottom:12px;overflow:hidden;transition:box-shadow .2s}
+.faq details[open]{box-shadow:5px 5px 0 var(--oak)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;display:flex;justify-content:space-between;gap:16px;align-items:center;color:var(--petrol)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:var(--copper);color:#fff;display:grid;place-items:center;font-size:1.3rem;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{background:rgba(200,160,106,.2)}
+.faq .ans{padding:0 22px 20px}
+
+/* ZONE */
+.zone{background:var(--petrol-d);background-image:var(--grain);color:var(--kraft)}
+.zone h2{color:var(--kraft)}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.zone p{margin-bottom:14px;color:#e9dcc4}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px;list-style:none}
+.chips li{background:var(--oak);color:var(--brown);font-weight:800;font-size:.9rem;padding:6px 16px;border-radius:999px}
+.addr{font-weight:700;color:var(--kraft)}
+.mapcard{background:var(--kraft);border-radius:14px;border:3px solid var(--oak);padding:12px}
+.mapcard svg{width:100%;height:auto;display:block;border-radius:8px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.coords{list-style:none}
+.coords li{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.coords .ci{width:44px;height:44px;border-radius:50%;background:var(--petrol);display:grid;place-items:center;flex:none}
+.coords .ci svg{width:22px;height:22px}
+.coords a{font-weight:800;color:var(--petrol);word-break:break-word}
+.coords small{display:block;opacity:.75}
+form{background:var(--kraft-l);background-image:var(--grain);border:2px solid var(--brown);border-radius:12px;padding:28px;box-shadow:8px 8px 0 var(--petrol)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-weight:800;font-size:.88rem;margin-bottom:14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;border-radius:8px;border:2px solid var(--oak);background:#fff;font:inherit;color:var(--brown)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--copper);box-shadow:0 0 0 3px rgba(217,115,43,.25)}
+textarea{min-height:120px;resize:vertical}
+.form-msg{margin-top:14px;font-weight:700;color:var(--petrol);min-height:1.4em}
+
+/* FOOTER */
+footer{background:var(--brown);color:var(--kraft);padding:56px 0 24px;background-image:var(--grain)}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;margin-bottom:34px}
+footer h3{font-size:1.15rem;color:var(--oak);margin-bottom:12px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--oak)}
+footer ul{list-style:none}
+footer li{margin-bottom:6px;font-size:.95rem}
+.f-bot{border-top:1px solid rgba(200,160,106,.4);padding-top:18px;font-size:.85rem;opacity:.85}
+.demo{background:#2a1c10;color:#d9c9ae;text-align:center;font-size:.82rem;padding:12px 16px 84px}
+.fcall{display:none}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+@media (max-width:980px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .why-grid,.steps{grid-template-columns:repeat(2,1fr)}
+  .trust ul{grid-template-columns:repeat(2,1fr)}
+  .trust li:nth-child(2){border-right:0}
+  .trust li:nth-child(-n+2){border-bottom:2px dashed rgba(74,51,32,.4)}
+  .mat{grid-template-columns:1fr}
+  .about-grid,.aides-grid,.zone-grid,.contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;align-items:stretch;background:var(--petrol-d);border:1px solid var(--oak);border-radius:24px;padding:12px;display:none;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:14px 18px;text-align:center}
+  .nav-in{position:relative}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:60px 0}
+  .services,.why-grid,.steps{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .hero{padding-top:110px}
+  .hero-ill{height:230px;margin-top:36px}
+  .hero .btns .btn{width:100%;justify-content:center}
+  .trust li{padding:16px 12px;font-size:.85rem}
+  .fcall{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--copper);align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.4);animation:pulse 2.4s infinite}
+  .fcall svg{width:28px;height:28px}
+  form{padding:20px}
+}
+@keyframes pulse{0%,100%{box-shadow:0 8px 22px rgba(0,0,0,.4),0 0 0 0 rgba(217,115,43,.6)}50%{box-shadow:0 8px 22px rgba(0,0,0,.4),0 0 0 14px rgba(217,115,43,0)}}
+</style>
+</head>
+<body class="no-js">
+
+<nav aria-label="Navigation principale">
+  <div class="nav-in">
+    <a href="#accueil" class="logo">Auguste <b>Menuiserie</b></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#materiaux">Matériaux</a></li>
+      <li><a href="#aides">Aides</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#zone">Zone</a></li>
+      <li><a href="#contact" class="cta">Devis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <div class="wrap">
+    <div class="txt">
+      <span class="tag">Menuisier à Moissannes · RGE</span>
+      <h1>Vos vieilles fenêtres méritent mieux qu'un courant d'air.</h1>
+      <p>Fenêtres, volets, portes : Auguste Menuiserie Rénovation dépose l'ancien, ajuste le neuf et referme proprement. Un artisan de Haute-Vienne qui rénove votre maison à la main, du côté de Saint-Léonard-de-Noblat et de Limoges.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="tel:+33786774906"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Appeler</a>
+        <a class="btn btn-ghost" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+  <svg class="hero-ill" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration d'un établi avec rabot, équerre et une fenêtre en chantier">
+    <defs>
+      <pattern id="wg" width="60" height="14" patternUnits="userSpaceOnUse"><path d="M0 4c15-3 30 3 60 0M0 10c20 3 35-3 60 0" stroke="#a98147" stroke-width="1.2" fill="none" opacity=".7"/></pattern>
+    </defs>
+    <!-- wall plank lines -->
+    <g stroke="#0f2c36" stroke-width="2" opacity=".5"><path d="M0 120h1440M0 220h1440"/></g>
+    <!-- window in construction -->
+    <g transform="translate(860 40)">
+      <rect x="0" y="0" width="300" height="290" fill="#2c6676" opacity=".55" stroke="none"/>
+      <rect x="0" y="0" width="300" height="290" fill="none" stroke="#c8a06a" stroke-width="16"/>
+      <rect x="0" y="0" width="300" height="290" fill="url(#wg)" opacity=".5"/>
+      <path d="M150 8v274M8 145h284" stroke="#c8a06a" stroke-width="10"/>
+      <path d="M30 60l70-30M180 220l90-40" stroke="#efe3cf" stroke-width="5" opacity=".35" stroke-linecap="round"/>
+      <!-- clamp -->
+      <rect x="-26" y="120" width="36" height="12" fill="#d9732b"/><rect x="-26" y="100" width="12" height="52" fill="#d9732b"/>
+      <!-- missing corner marks -->
+      <path d="M270 4l26 26M296 4L270 30" stroke="#d9732b" stroke-width="4" stroke-linecap="round" opacity="0"/>
+    </g>
+    <!-- shelf tools on wall -->
+    <g transform="translate(120 70)">
+      <rect x="0" y="86" width="330" height="10" fill="#4a3320"/>
+      <g fill="#c8a06a"><rect x="14" y="22" width="16" height="64" rx="3"/><rect x="40" y="34" width="14" height="52" rx="3"/><rect x="64" y="14" width="18" height="72" rx="3"/></g>
+      <g fill="#efe3cf"><rect x="19" y="26" width="6" height="16"/><rect x="45" y="38" width="4" height="14"/></g>
+      <!-- saw -->
+      <path d="M130 10l180 60-6 14L130 40z" fill="#9fb4ba"/><path d="M118 8h28v36h-28z" fill="#4a3320" rx="6"/>
+    </g>
+    <!-- bench -->
+    <rect x="0" y="330" width="1440" height="90" fill="#4a3320"/>
+    <rect x="0" y="330" width="1440" height="22" fill="#c8a06a"/>
+    <rect x="0" y="330" width="1440" height="22" fill="url(#wg)"/>
+    <rect x="0" y="352" width="1440" height="68" fill="url(#wg)" opacity=".18"/>
+    <g fill="#33220f"><rect x="90" y="352" width="60" height="68"/><rect x="1290" y="352" width="60" height="68"/></g>
+    <!-- plank on bench -->
+    <rect x="200" y="306" width="360" height="24" rx="3" fill="#e0bb85"/>
+    <path d="M204 314c60-4 120 4 190 0s110 3 160-1M204 322c70 3 130-3 190 0" stroke="#a98147" stroke-width="1.5" fill="none"/>
+    <!-- shavings -->
+    <g fill="none" stroke="#efe3cf" stroke-width="3" stroke-linecap="round"><path d="M600 318c20-26 46-26 40 0s-40 22-30-4"/><path d="M660 322c16-18 34-16 30 2"/><path d="M572 326c8 6 20 4 22-4"/></g>
+    <!-- plane -->
+    <g transform="translate(300 266)">
+      <path d="M0 40h170l16 -10h24v-12h-14l-14 8H0z" fill="#d9732b" opacity="0"/>
+      <rect x="0" y="22" width="190" height="20" rx="4" fill="#d9732b"/>
+      <rect x="0" y="40" width="190" height="6" fill="#133540"/>
+      <path d="M70 22c0-18 10-26 24-26 12 0 16 8 16 18v8z" fill="#8a5a2c"/>
+      <rect x="150" y="2" width="22" height="20" rx="10" fill="#8a5a2c"/>
+      <path d="M92 6l18 16" stroke="#efe3cf" stroke-width="4"/>
+    </g>
+    <!-- square -->
+    <g transform="translate(740 180)">
+      <path d="M0 0h20v150h130v20H0z" fill="#efe3cf" stroke="#4a3320" stroke-width="3" transform="translate(0 0)"/>
+      <g stroke="#4a3320" stroke-width="2"><path d="M20 20h8M20 40h12M20 60h8M20 80h12M20 100h8M20 120h12M40 150v-8M60 150v-12M80 150v-8M100 150v-12M120 150v-8"/></g>
+    </g>
+    <!-- pencil -->
+    <g transform="translate(980 300) rotate(-8)"><rect x="0" y="0" width="150" height="12" fill="#d9732b"/><path d="M150 0l24 6-24 6z" fill="#efe3cf"/><path d="M168 4l6 2-6 2z" fill="#4a3320"/></g>
+    <!-- tape measure -->
+    <g transform="translate(1220 276)"><circle cx="30" cy="30" r="30" fill="#c8a06a" stroke="#4a3320" stroke-width="3"/><circle cx="30" cy="30" r="12" fill="#133540"/><rect x="48" y="38" width="64" height="12" fill="#efe3cf" stroke="#4a3320" stroke-width="2"/></g>
+  </svg>
+</header>
+
+<div class="trust" aria-label="Points de confiance">
+  <div class="wrap">
+    <ul>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#4a3320" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="17" r="11"/><path d="M14 27l-3 10 9-5 9 5-3-10M15 17l4 4 7-8"/></svg>Reconnu RGE (registre ADEME)</li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#4a3320" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 36s12-11 12-20a12 12 0 0 0-24 0c0 9 12 20 12 20z"/><circle cx="20" cy="16" r="4"/></svg>Moissannes, Saint-Léonard, Limoges</li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#4a3320" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="30" rx="2"/><path d="M20 5v30M7 20h26"/></svg>Fenêtres, volets, portes</li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#4a3320" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h16l6 6v22H10z"/><path d="M26 6v6h6M15 20h12M15 27h8"/></svg>Devis sur demande</li>
+    </ul>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <span class="tag">Nos prestations</span>
+    <h2>Du bois, du PVC, de l'alu : on pose, on rénove.</h2>
+    <p class="lead">Chaque maison a ses ouvertures, chaque ouverture a son histoire. Voici ce que nous faisons de nos mains, toujours après avoir regardé de près votre chantier.</p>
+    <div class="grid services">
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="28" height="30" rx="1.5"/><path d="M20 5v30M6 20h28M24 24v4"/></svg></div>
+        <h3>Fenêtres</h3><p>Fourniture et pose de fenêtres neuves en bois, PVC ou aluminium, pour gagner en confort et en silence.</p></article>
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="30" height="30" rx="1.5"/><path d="M5 11h30M5 17h30M5 23h30M5 29h30"/></svg></div>
+        <h3>Volets</h3><p>Volets battants, persiennes ou roulants : pose, remplacement et remise en état pour protéger et habiller la façade.</p></article>
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 36V6h20v30M6 36h28"/><circle cx="25" cy="22" r="1.8"/><rect x="14" y="10" width="12" height="9"/></svg></div>
+        <h3>Portes d'entrée</h3><p>Portes donnant sur l'extérieur, choisies pour leur solidité et leur allure, posées avec soin dans votre encadrement.</p></article>
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32l16-16 6 6-16 16H8z"/><path d="M26 14l3-3a3 3 0 0 1 4 0l2 2a3 3 0 0 1 0 4l-3 3"/></svg></div>
+        <h3>Rénovation de menuiseries</h3><p>Vos menuiseries existantes peuvent parfois être remises en état plutôt que remplacées. On en discute sur place.</p></article>
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20l15-13 15 13M9 17v18h22V17"/><path d="M20 20v15M14 26h12"/></svg></div>
+        <h3>Remplacement en rénovation</h3><p>Dépose de l'ancien et pose du neuf sur le cadre existant ou en dépose totale, selon l'état de votre maison.</p></article>
+      <article class="card rv"><span class="devis">Sur devis</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#c8a06a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l6 4"/></svg></div>
+        <h3>Réglages et petits travaux</h3><p>Fenêtre qui frotte, porte qui ferme mal, joint fatigué : un coup d'œil, un réglage, et ça referme comme au premier jour.</p></article>
+    </div>
+    <p class="services-note">Chaque projet est unique : tous nos travaux sont chiffrés sur devis.</p>
+  </div>
+</section>
+
+<section class="why" id="pourquoi">
+  <div class="wrap">
+    <span class="tag">Pourquoi nous choisir</span>
+    <h2>Un artisan, un chantier, une parole.</h2>
+    <p class="lead">Pas de grands discours : de l'écoute, du travail propre et un interlocuteur qui décroche.</p>
+    <div class="grid why-grid">
+      <div class="why-item rv"><div class="n">01</div><h3>Reconnu RGE</h3><p>Une reconnaissance qui peut compter pour les aides à la rénovation énergétique, à vérifier selon votre dossier.</p></div>
+      <div class="why-item rv"><div class="n">02</div><h3>Proche de chez vous</h3><p>Basé à Moissannes, nous connaissons les maisons du secteur : granit, longères, pavillons plus récents.</p></div>
+      <div class="why-item rv"><div class="n">03</div><h3>Un seul interlocuteur</h3><p>Vous parlez à celui qui vient mesurer, poser et finir. Pas d'intermédiaires, pas de malentendus.</p></div>
+      <div class="why-item rv"><div class="n">04</div><h3>Chantier soigné</h3><p>On protège, on pose, on nettoie. Vous retrouvez une maison propre et des ouvertures qui ferment bien.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deroule">
+  <div class="wrap">
+    <span class="tag">Comment ça se passe</span>
+    <h2>De l'appel à la dernière vis.</h2>
+    <p class="lead">Un déroulé simple, pour que vous sachiez toujours où en est votre chantier.</p>
+    <div class="grid steps">
+      <div class="step rv"><h3>On se parle</h3><p>Un appel ou un message : vous décrivez votre projet, vos fenêtres, vos envies.</p></div>
+      <div class="step rv"><h3>On regarde sur place</h3><p>Prise de mesures, état des cadres, conseils sur les matériaux. Puis devis détaillé.</p></div>
+      <div class="step rv"><h3>On fabrique et on pose</h3><p>Dépose de l'existant, pose des nouvelles menuiseries, réglages et finitions.</p></div>
+      <div class="step rv"><h3>On vérifie ensemble</h3><p>Tout s'ouvre, tout se ferme, tout est propre. Vous validez, on range.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <span class="tag">À propos</span>
+      <h2>Le métier de menuisier, côté rénovation.</h2>
+      <p>Auguste Menuiserie Rénovation est installée chemin d'Eygurande, à Moissannes. Ici, on aime le bois qui a vécu, les belles pierres et les ouvertures qui ferment bien.</p>
+      <p>Notre quotidien : redonner du confort aux maisons de la région en remplaçant ou en remettant en état fenêtres, volets et portes.</p>
+      <p>Nous sommes reconnus RGE pour ces travaux, et nous prenons le temps d'expliquer chaque choix avant de poser le premier outil.</p>
+      <a class="btn btn-petrol" href="tel:+33786774906">Parlons de votre projet</a>
+    </div>
+    <div class="plate rv" aria-hidden="true">
+      <svg viewBox="0 0 400 320"><rect width="400" height="320" fill="#133540"/>
+        <g fill="none" stroke="#c8a06a" stroke-width="3"><rect x="60" y="40" width="130" height="150"/><path d="M125 40v150M60 115h130"/><path d="M210 190h130" stroke-dasharray="6 6"/></g>
+        <g stroke="#efe3cf" stroke-width="2" opacity=".7"><path d="M60 215h130M60 210v10M190 210v10M125 212v6"/></g>
+        <text x="95" y="240" fill="#efe3cf" font-size="14" font-family="Mulish,sans-serif">mesure au millimètre</text>
+        <rect x="230" y="60" width="110" height="110" fill="none" stroke="#d9732b" stroke-width="3"/><path d="M230 60l110 110M340 60L230 170" stroke="#d9732b" stroke-width="1.5" opacity=".5"/>
+        <rect x="0" y="270" width="400" height="50" fill="#4a3320"/><rect x="0" y="270" width="400" height="10" fill="#c8a06a"/></svg>
+    </div>
+  </div>
+</section>
+
+<section id="materiaux" style="background:var(--kraft)">
+  <div class="wrap">
+    <span class="tag">Choisir ses matériaux</span>
+    <h2>Bois, PVC ou alu : lequel pour votre maison ?</h2>
+    <p class="lead">Quelques repères généraux pour préparer la discussion. Le bon choix dépend toujours de votre maison, de votre budget et de vos goûts.</p>
+    <div class="grid mat">
+      <article class="mcard m-bois rv"><div class="mhead"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#efe3cf" stroke-width="2.4" stroke-linecap="round"><path d="M20 35V15M20 22c-7-1-10-6-10-12 7 0 10 4 10 12zM20 26c6-1 9-5 9-10-6 0-9 3-9 10z"/></svg><h3>Bois</h3></div>
+        <div class="mbody"><h4>Les plus</h4><p>Aspect chaleureux, s'accorde bien aux maisons anciennes, réparable et repeignable.</p><h4>À savoir</h4><p>Demande un entretien régulier (lasure ou peinture) pour durer.</p><h4>Idéal pour</h4><p>Les façades de caractère et les amateurs de matière noble.</p></div></article>
+      <article class="mcard m-pvc rv"><div class="mhead"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#efe3cf" stroke-width="2.4" stroke-linecap="round"><rect x="7" y="6" width="26" height="28"/><path d="M7 20h26M20 6v28"/></svg><h3>PVC</h3></div>
+        <div class="mbody"><h4>Les plus</h4><p>Entretien très simple et bon rapport confort / budget en général.</p><h4>À savoir</h4><p>Profilés plus épais, choix de finitions variable selon les gammes.</p><h4>Idéal pour</h4><p>Les rénovations où l'on cherche la simplicité au quotidien.</p></div></article>
+      <article class="mcard m-alu rv"><div class="mhead"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#efe3cf" stroke-width="2.4" stroke-linecap="round"><rect x="9" y="5" width="22" height="30"/><rect x="13" y="9" width="14" height="22"/></svg><h3>Aluminium</h3></div>
+        <div class="mbody"><h4>Les plus</h4><p>Profilés fins, lignes contemporaines, grande surface vitrée possible.</p><h4>À savoir</h4><p>Choisir des profilés à rupture de pont thermique ; budget souvent plus élevé.</p><h4>Idéal pour</h4><p>Les baies lumineuses et les styles actuels.</p></div></article>
+    </div>
+    <p class="mat-note">Ces indications sont générales : lors de la visite, nous vous conseillons selon l'état de votre bâti et vos priorités.</p>
+  </div>
+</section>
+
+<section class="aides" id="aides">
+  <div class="wrap aides-grid">
+    <div class="rv">
+      <span class="tag">Aides à la rénovation</span>
+      <h2>Rénover, ça peut se financer.</h2>
+      <p>Remplacer ses fenêtres ou ses portes extérieures peut, selon votre situation, ouvrir droit à des aides publiques à la rénovation énergétique. Faire appel à une entreprise reconnue RGE est souvent une condition à remplir.</p>
+      <p class="disclaimer">Dispositifs, montants et conditions évoluent régulièrement : nous ne les garantissons pas sur cette page. Renseignez-vous auprès des organismes officiels (France Rénov', ANAH, impots.gouv.fr) avant de signer.</p>
+    </div>
+    <div class="paper rv">
+      <h3>À préparer avant de nous appeler</h3>
+      <ul>
+        <li>Le type de logement et son ancienneté approximative</li>
+        <li>Le nombre de fenêtres, volets ou portes concernés</li>
+        <li>Vos dernières photos des menuiseries actuelles</li>
+        <li>Votre projet de calendrier</li>
+      </ul>
+      <p class="disclaimer">Nous vous indiquons ce qui relève de notre métier ; l'éligibilité à une aide reste déterminée par l'organisme concerné.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="tag">Questions fréquentes</span>
+    <h2>Vous vous demandez…</h2>
+    <div class="faq">
+      <details class="rv"><summary>Comment obtenir un devis ?</summary><div class="ans">Appelez-nous au 07 86 77 49 06 ou remplissez le formulaire plus bas. Nous convenons d'une visite pour mesurer et voir l'existant, puis nous établissons le devis.</div></details>
+      <details class="rv"><summary>Mieux vaut remplacer ou rénover mes fenêtres ?</summary><div class="ans">Cela dépend de l'état du bois, de l'étanchéité et de vos attentes. Parfois une remise en état suffit ; parfois le remplacement est plus pertinent. Nous vous donnons un avis honnête sur place.</div></details>
+      <details class="rv"><summary>Que signifie « RGE » ?</summary><div class="ans">« Reconnu Garant de l'Environnement » : une qualification pour les travaux de rénovation énergétique. Auguste Menuiserie Rénovation figure au registre de l'ADEME pour les fenêtres, volets et portes donnant sur l'extérieur.</div></details>
+      <details class="rv"><summary>Intervenez-vous près de chez moi ?</summary><div class="ans">Nous travaillons à Moissannes, Saint-Léonard-de-Noblat, Limoges et dans les environs. Si vous êtes un peu plus loin, appelez-nous, nous verrons ensemble.</div></details>
+      <details class="rv"><summary>Combien de temps dure une pose ?</summary><div class="ans">La durée dépend du nombre d'ouvertures et du type de pose. Nous vous donnons une estimation au moment du devis.</div></details>
+      <details class="rv"><summary>Puis-je choisir la couleur et le style ?</summary><div class="ans">Oui. Matériau, teinte, ouverture, poignées : nous en parlons ensemble pour que les menuiseries s'accordent à votre maison.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap zone-grid">
+    <div class="rv">
+      <span class="tag">Zone d'intervention</span>
+      <h2>Du Limousin à votre porte.</h2>
+      <p>Basés à Moissannes, nous nous déplaçons chez vous pour mesurer, conseiller et poser.</p>
+      <ul class="chips"><li>Moissannes</li><li>Saint-Léonard-de-Noblat</li><li>Limoges</li><li>Et environs</li></ul>
+      <p class="addr">3 chemin d'Eygurande, 87400 Moissannes</p>
+      <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=3+chemin+d%27Eygurande+87400+Moissannes" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+    <div class="mapcard rv" aria-hidden="true">
+      <svg viewBox="0 0 400 280"><rect width="400" height="280" fill="#efe3cf"/>
+        <g fill="none" stroke="#c8a06a" stroke-width="6" stroke-linecap="round"><path d="M-10 220C80 200 140 150 220 140S340 80 410 60"/><path d="M120 300C130 220 170 190 220 140"/><path d="M200 -10C210 50 230 100 220 140" stroke-width="4"/></g>
+        <path d="M-10 250C100 230 160 260 250 240s120-10 170 10v40H-10z" fill="#1e4d5a" opacity=".18"/>
+        <g fill="#1e4d5a"><circle cx="300" cy="86" r="7"/><circle cx="110" cy="190" r="7"/></g>
+        <g font-family="Mulish,sans-serif" font-size="13" font-weight="700" fill="#4a3320"><text x="312" y="90">Saint-Léonard</text><text x="124" y="194">Limoges</text></g>
+        <path d="M220 140c-14-18-24-28-24-40a24 24 0 1 1 48 0c0 12-10 22-24 40z" fill="#d9732b" stroke="#4a3320" stroke-width="2.5"/><circle cx="220" cy="100" r="8" fill="#efe3cf"/>
+        <text x="190" y="165" font-family="Mulish,sans-serif" font-size="14" font-weight="800" fill="#4a3320">Moissannes</text>
+        <text x="12" y="268" font-family="Mulish,sans-serif" font-size="10" fill="#4a3320" opacity=".7">Schéma illustratif, positions non à l'échelle</text></svg>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="tag">Contact</span>
+      <h2>Parlons de vos menuiseries.</h2>
+      <p class="lead" style="margin-bottom:26px">Un appel, un message, une photo : on vous répond avec plaisir.</p>
+      <ul class="coords">
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a06a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><a href="tel:+33786774906">07 86 77 49 06</a><small>Téléphone</small></div></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a06a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><a href="mailto:augustemenuiserierenovation@gmail.com">augustemenuiserierenovation@gmail.com</a><small>Email</small></div></li>
+        <li><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="#c8a06a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div>3 chemin d'Eygurande<br>87400 Moissannes<small>Atelier</small></div></li>
+      </ul>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="row">
+        <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
+        <label>Téléphone<input type="tel" name="tel" autocomplete="tel"></label>
+      </div>
+      <label>Email<input type="email" name="email" autocomplete="email"></label>
+      <label>Votre projet
+        <select name="projet"><option>Fenêtres</option><option>Volets</option><option>Porte d'entrée</option><option>Rénovation de menuiseries</option><option>Autre</option></select></label>
+      <label>Message<textarea name="msg" placeholder="Décrivez votre projet en quelques mots…"></textarea></label>
+      <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+      <p class="form-msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><h3>Auguste Menuiserie Rénovation</h3><p>Menuisier à Moissannes : fenêtres, volets et portes. Reconnu RGE.</p></div>
+      <div><h3>Navigation</h3><ul><li><a href="#services">Services</a></li><li><a href="#materiaux">Matériaux</a></li><li><a href="#aides">Aides</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Coordonnées</h3><ul><li><a href="tel:+33786774906">07 86 77 49 06</a></li><li><a href="mailto:augustemenuiserierenovation@gmail.com">augustemenuiserierenovation@gmail.com</a></li><li>3 chemin d'Eygurande, 87400 Moissannes</li></ul></div>
+    </div>
+    <div class="f-bot">© Auguste Menuiserie Rénovation · Moissannes (87) · Mentions légales à compléter</div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="fcall" href="tel:+33786774906" aria-label="Appeler Auguste Menuiserie Rénovation"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+document.body.classList.remove('no-js');
+const b=document.getElementById('burger'),m=document.getElementById('menu');
+function toggle(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')}
+b.addEventListener('click',()=>toggle(!m.classList.contains('open')));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+const els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  els.forEach((e,i)=>{e.style.transitionDelay=(i%3)*90+'ms';io.observe(e)});
+}else els.forEach(e=>e.classList.add('in'));
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('msg').textContent="Maquette de démonstration : votre message n'a pas été envoyé. Appelez le 07 86 77 49 06 pour joindre l'atelier.";
+});
+</script>
+</body>
+</html>

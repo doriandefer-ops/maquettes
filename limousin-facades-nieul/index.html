@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limousin Façades – Ravalement et isolation à Nieul</title>
+<meta name="description" content="SARL Limousin Façades à Nieul : ravalement de façades et isolation des murs par l'extérieur (ITE), entreprise reconnue RGE. Devis pour Limoges et la Haute-Vienne.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5ead2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f5ead2; --creme2:#efe0bd; --moutarde:#e0a526; --terra:#c4572f; --olive:#5c6b2f; --brun:#3a2a1c;
+  --titre:'DM Serif Display','Rockwell','Georgia',serif; --texte:'Karla','Trebuchet MS','Helvetica Neue',Arial,sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--texte);background:var(--creme);color:var(--brun);line-height:1.6;font-size:17px;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.1}
+h2{font-size:clamp(2rem,5vw,3.2rem)}
+section{padding:84px 0;position:relative}
+.kicker{display:inline-block;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--creme);background:var(--terra);padding:5px 14px;border-radius:99px;margin-bottom:16px}
+.lead{max-width:60ch;font-size:1.12rem;margin-top:14px;opacity:.9}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--texte);font-weight:800;font-size:1.02rem;text-decoration:none;padding:15px 26px;border-radius:99px;border:3px solid var(--brun);cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:4px 4px 0 var(--brun)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--brun)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--brun)}
+.btn-p{background:var(--moutarde);color:var(--brun)}
+.btn-s{background:var(--creme);color:var(--brun)}
+.btn-t{background:var(--terra);color:var(--creme)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--brun);color:var(--creme);border-bottom:4px solid var(--moutarde)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--titre);font-size:1.4rem;text-decoration:none;display:flex;align-items:center;gap:10px;color:var(--creme)}
+.logo i{width:34px;height:34px;border-radius:50%;background:var(--moutarde);border:3px solid var(--terra);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--brun)}
+.menu{display:flex;gap:26px;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-weight:700;font-size:.95rem;position:relative;padding:4px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-2px;height:3px;width:0;background:var(--moutarde);transition:width .25s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:9px 18px;font-size:.92rem;box-shadow:3px 3px 0 var(--terra);border-color:var(--creme)}
+.burger{display:none;background:none;border:3px solid var(--creme);border-radius:12px;width:48px;height:44px;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{display:block;position:absolute;left:10px;right:10px;height:3px;background:var(--creme);border-radius:3px;transition:.25s}
+.burger span{top:18px}.burger span::before{content:"";top:-9px;left:0;right:0}.burger span::after{content:"";top:9px;left:0;right:0}
+.burger[aria-expanded=true] span{background:transparent}
+.burger[aria-expanded=true] span::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded=true] span::after{top:0;transform:rotate(-45deg)}
+@media(max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:72px;left:0;right:0;background:var(--brun);flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 22px;border-bottom:4px solid var(--moutarde);transform:translateY(-130%);transition:transform .35s;max-height:calc(100vh - 72px);overflow:auto}
+  .menu.open{transform:none}
+  .menu li{border-bottom:1px solid rgba(245,234,210,.18)}
+  .menu a{display:block;padding:15px 4px;font-size:1.1rem}
+  .menu li:last-child{border:0;padding-top:16px}
+  .menu .btn{justify-content:center;padding:14px}
+}
+
+/* HERO */
+.hero{padding:112px 0 0;background:var(--creme);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.9rem);color:var(--brun)}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero p.sub{font-size:1.2rem;margin:20px 0 28px;max-width:52ch}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.hero-art{position:relative;padding:20px 0 40px}
+.badge{position:absolute;top:-6px;right:-4px;width:clamp(120px,19vw,176px);z-index:3;filter:drop-shadow(4px 5px 0 rgba(58,42,28,.25))}
+.badge .spin{transform-origin:100px 100px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.house{width:100%;height:auto;display:block}
+.bands{display:block;width:100%;height:auto;margin-top:46px}
+.bands.flip{transform:scaleY(-1);margin:0}
+
+/* TRUST */
+.trust{background:var(--brun);color:var(--creme);padding:34px 0}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust li{display:flex;align-items:center;gap:14px;font-weight:700;line-height:1.3}
+.trust li b{display:block;font-family:var(--titre);font-weight:400;font-size:1.25rem;color:var(--moutarde)}
+.trust svg{width:46px;height:46px;flex:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.trust ul{grid-template-columns:1fr 1fr}.hero-art{order:-1;padding-top:30px}.badge{right:0;top:-10px}}
+@media(max-width:520px){.trust ul{grid-template-columns:1fr}}
+
+/* SERVICES */
+.services{background:var(--creme)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;margin-top:40px}
+.card{background:#fbf3df;border:3px solid var(--brun);border-radius:var(--r);padding:26px 24px 24px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--brun)}
+.card:hover{transform:translate(-3px,-5px) rotate(-.6deg);box-shadow:10px 11px 0 var(--brun)}
+.ico{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--brun);margin-bottom:16px}
+.ico svg{width:46px;height:46px}
+.card:nth-child(4n+1) .ico{background:var(--moutarde)}
+.card:nth-child(4n+2) .ico{background:var(--terra)}
+.card:nth-child(4n+3) .ico{background:var(--olive)}
+.card:nth-child(4n+4) .ico{background:var(--creme2)}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.card p{font-size:.98rem}
+.devis{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:2px dashed var(--terra);color:var(--terra);padding:3px 10px;border-radius:99px}
+
+/* WHY */
+.why{background:var(--olive);color:var(--creme)}
+.why .kicker{background:var(--moutarde);color:var(--brun)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:40px}
+.why-item{border-top:6px solid var(--moutarde);padding-top:18px}
+.why-item .n{font-family:var(--titre);font-size:3.6rem;color:var(--moutarde);line-height:1}
+.why-item h3{font-size:1.45rem;margin:6px 0 8px}
+.why-item p{opacity:.92}
+
+/* STEPS */
+.steps-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:44px;counter-reset:s;position:relative}
+.step{background:var(--creme2);border-radius:var(--r);padding:56px 22px 24px;position:relative;border:3px solid var(--brun)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-26px;left:20px;width:56px;height:56px;border-radius:50%;background:var(--terra);color:var(--creme);font-family:var(--titre);font-size:1.9rem;display:grid;place-items:center;border:3px solid var(--brun);box-shadow:3px 3px 0 var(--brun)}
+.step:nth-child(even)::before{background:var(--moutarde);color:var(--brun)}
+.step h3{font-size:1.4rem;margin-bottom:8px}
+
+/* ABOUT */
+.about{background:var(--moutarde)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.about .kicker{background:var(--brun)}
+.about p{margin-top:14px;font-size:1.08rem}
+.stamp{background:var(--creme);border:4px solid var(--brun);border-radius:50% 50% 24px 24px;padding:34px 24px 28px;text-align:center;box-shadow:8px 8px 0 var(--brun);transform:rotate(-2deg)}
+.stamp svg{width:140px;height:auto}
+.stamp b{font-family:var(--titre);font-weight:400;font-size:1.6rem;display:block;margin-top:6px}
+@media(max-width:800px){.about-grid{grid-template-columns:1fr}.stamp{max-width:340px;margin:auto}}
+
+/* BEFORE AFTER */
+.ba{background:var(--creme)}
+.ba-box{position:relative;margin-top:36px;border:4px solid var(--brun);border-radius:var(--r);overflow:hidden;box-shadow:8px 8px 0 var(--brun);background:#ccc;touch-action:pan-y;user-select:none;aspect-ratio:16/9}
+.ba-box svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba-after-wrap{position:absolute;inset:0;clip-path:inset(0 0 0 50%)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:6px;margin-left:-3px;background:var(--creme);box-shadow:0 0 0 2px var(--brun);pointer-events:none}
+.ba-handle::after{content:"◀ ▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--moutarde);border:3px solid var(--brun);border-radius:99px;padding:8px 10px;font-size:.78rem;white-space:nowrap;color:var(--brun);letter-spacing:2px}
+.ba-box input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:3}
+.tag{position:absolute;top:14px;z-index:2;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:99px;border:2px solid var(--brun)}
+.tag.a{left:14px;background:var(--creme)}.tag.b{right:14px;background:var(--moutarde)}
+.note{font-size:.88rem;opacity:.75;margin-top:14px}
+
+/* AIDES */
+.aides{background:var(--creme2)}
+.aides-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:34px;align-items:start}
+.aides ul{list-style:none;display:grid;gap:14px}
+.aides li{display:flex;gap:14px;background:var(--creme);border:3px solid var(--brun);border-radius:18px;padding:16px 18px}
+.aides li svg{width:34px;height:34px;flex:none}
+.aides li b{font-family:var(--titre);font-weight:400;font-size:1.2rem;display:block}
+.callout{background:var(--brun);color:var(--creme);border-radius:var(--r);padding:30px;position:relative}
+.callout h3{font-size:1.7rem;color:var(--moutarde);margin-bottom:10px}
+.callout .btn{margin-top:18px;box-shadow:4px 4px 0 var(--moutarde);border-color:var(--creme)}
+@media(max-width:800px){.aides-grid{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq-list{margin-top:34px;display:grid;gap:14px;max-width:860px}
+.q{background:#fbf3df;border:3px solid var(--brun);border-radius:18px;overflow:hidden}
+.q button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font-family:var(--titre);font-size:1.25rem;line-height:1.25}
+.q button:focus-visible{outline:3px solid var(--terra);outline-offset:-6px}
+.q .plus{flex:none;width:34px;height:34px;border-radius:50%;background:var(--moutarde);border:3px solid var(--brun);position:relative;transition:transform .3s,background .3s}
+.q .plus::before,.q .plus::after{content:"";position:absolute;left:7px;right:7px;top:12px;height:3px;background:var(--brun)}
+.q .plus::after{transform:rotate(90deg);transition:.3s}
+.q.open .plus{transform:rotate(180deg);background:var(--terra)}
+.q.open .plus::after{transform:rotate(0)}
+.a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q.open .a{grid-template-rows:1fr}
+.a>div{overflow:hidden}
+.a p{padding:0 22px 20px}
+
+/* ZONE */
+.zone{background:var(--terra);color:var(--creme)}
+.zone .kicker{background:var(--brun)}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.zone p{margin-top:14px;font-size:1.08rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+.chips span{background:var(--creme);color:var(--brun);font-weight:800;padding:6px 16px;border-radius:99px;border:3px solid var(--brun)}
+.zone address{font-style:normal;margin-top:18px;font-weight:700;font-size:1.1rem}
+.zone .btn-p{box-shadow:4px 4px 0 var(--brun)}
+.map{background:var(--creme);border:4px solid var(--brun);border-radius:var(--r);box-shadow:8px 8px 0 var(--brun);padding:12px}
+@media(max-width:800px){.zone-grid{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact{background:var(--creme)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;margin-top:10px}
+.coords{list-style:none;margin-top:22px;display:grid;gap:14px}
+.coords li{display:flex;gap:14px;align-items:flex-start;font-weight:700}
+.coords svg{width:30px;height:30px;flex:none}
+.coords a{text-decoration:none;border-bottom:3px solid var(--moutarde)}
+form{background:#fbf3df;border:4px solid var(--brun);border-radius:var(--r);padding:28px;display:grid;gap:16px;box-shadow:8px 8px 0 var(--brun)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-weight:800;font-size:.92rem}
+input,select,textarea{font:inherit;font-weight:500;color:var(--brun);background:var(--creme);border:3px solid var(--brun);border-radius:14px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--moutarde);outline-offset:1px}
+textarea{min-height:120px;resize:vertical}
+.msg{font-weight:800;color:var(--olive);display:none;padding:12px 16px;border:3px dashed var(--olive);border-radius:14px}
+.msg.show{display:block}
+@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{background:var(--brun);color:var(--creme);padding:56px 0 0}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+footer h4{font-family:var(--titre);font-weight:400;font-size:1.25rem;color:var(--moutarde);margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none;opacity:.9}footer a:hover{color:var(--moutarde)}
+.legal{margin-top:36px;border-top:1px solid rgba(245,234,210,.2);padding:18px 0;font-size:.85rem;opacity:.75}
+.demo{background:var(--moutarde);color:var(--brun);text-align:center;font-size:.85rem;font-weight:700;padding:10px 16px 10px}
+@media(max-width:800px){.foot{grid-template-columns:1fr}}
+
+/* FLOAT CALL */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:none;align-items:center;gap:8px;background:var(--terra);color:var(--creme);font-weight:800;text-decoration:none;padding:14px 20px;border-radius:99px;border:3px solid var(--brun);box-shadow:4px 4px 0 var(--brun)}
+.fab svg{width:22px;height:22px}
+@media(max-width:900px){.fab{display:inline-flex}footer{padding-bottom:0}.demo{padding-bottom:84px}}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.wob{animation:wob 7s ease-in-out infinite}
+@keyframes wob{50%{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .badge .spin,.wob{animation:none}
+  *{transition-duration:.01s!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><i></i>Limousin Façades</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#pourquoi">Atouts</a></li>
+      <li><a href="#deroulement">Déroulement</a></li>
+      <li><a href="#avant-apres">Avant / Après</a></li>
+      <li><a href="#aides">Aides</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn btn-p">Devis gratuit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker rv">Nieul · Limoges · Haute-Vienne</span>
+      <h1 class="rv d1">Votre maison mérite une <em>façade</em> qui fait tourner les têtes.</h1>
+      <p class="sub rv d2">Ravalement soigné, enduits qui tiennent et isolation des murs par l'extérieur : on redonne de l'allure à vos murs, et de la douceur à vos hivers limousins.</p>
+      <div class="cta rv d3">
+        <a class="btn btn-p" href="tel:+33614192320"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+        <a class="btn btn-s" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+    <div class="hero-art rv d2">
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"/></defs>
+        <circle cx="100" cy="100" r="96" fill="#c4572f" stroke="#3a2a1c" stroke-width="5"/>
+        <g class="spin"><text font-family="Karla,Arial,sans-serif" font-weight="800" font-size="15.5" letter-spacing="3.2" fill="#f5ead2"><textPath href="#circ">ENTREPRISE RGE · ITE · RAVALEMENT · </textPath></text></g>
+        <circle cx="100" cy="100" r="48" fill="#e0a526" stroke="#3a2a1c" stroke-width="4"/>
+        <text x="100" y="96" text-anchor="middle" font-family="DM Serif Display,Georgia,serif" font-size="30" fill="#3a2a1c">RGE</text>
+        <text x="100" y="118" text-anchor="middle" font-family="Karla,Arial,sans-serif" font-weight="800" font-size="10" letter-spacing="0.5" fill="#3a2a1c">ITE · ADEME</text>
+      </svg>
+      <svg class="house wob" viewBox="0 0 520 440" role="img" aria-label="Illustration d'une maison en ravalement avec échafaudage et rouleau de peinture">
+        <ellipse cx="260" cy="410" rx="240" ry="16" fill="#3a2a1c" opacity=".18"/>
+        <circle cx="400" cy="100" r="62" fill="#e0a526"/>
+        <circle cx="400" cy="100" r="42" fill="#f5ead2" opacity=".55"/>
+        <!-- house -->
+        <polygon points="70,170 260,50 450,170" fill="#c4572f" stroke="#3a2a1c" stroke-width="5" stroke-linejoin="round"/>
+        <rect x="100" y="170" width="320" height="230" fill="#efe0bd" stroke="#3a2a1c" stroke-width="5"/>
+        <!-- freshly painted half -->
+        <rect x="260" y="170" width="160" height="230" fill="#e0a526" stroke="#3a2a1c" stroke-width="5"/>
+        <!-- dirty patches left -->
+        <g fill="#a89473" opacity=".55"><ellipse cx="135" cy="215" rx="22" ry="12"/><ellipse cx="205" cy="360" rx="30" ry="12"/><ellipse cx="150" cy="320" rx="14" ry="22"/></g>
+        <!-- windows -->
+        <g stroke="#3a2a1c" stroke-width="5"><rect x="125" y="205" width="62" height="78" fill="#5c6b2f"/><rect x="330" y="205" width="62" height="78" fill="#5c6b2f"/></g>
+        <g stroke="#3a2a1c" stroke-width="4"><path d="M156 205v78M125 244h62M361 205v78M330 244h62" /></g>
+        <rect x="222" y="300" width="76" height="100" rx="38" ry="0" fill="#c4572f" stroke="#3a2a1c" stroke-width="5"/>
+        <circle cx="282" cy="352" r="4.500" fill="#e0a526"/>
+        <rect x="108" y="378" width="304" height="22" fill="none"/>
+        <!-- scaffold -->
+        <g stroke="#3a2a1c" stroke-width="6" stroke-linecap="round" fill="none">
+          <path d="M70 410V160M180 410V160M70 330H180M70 250H180M70 170H180"/>
+          <path d="M70 410L180 330M70 330L180 250M70 250L180 170" stroke-width="4"/>
+        </g>
+        <g fill="#e0a526" stroke="#3a2a1c" stroke-width="4"><rect x="60" y="322" width="130" height="12"/><rect x="60" y="242" width="130" height="12"/></g>
+        <!-- roller -->
+        <g transform="translate(160 150) rotate(-18)">
+          <rect x="0" y="0" width="92" height="30" rx="15" fill="#f5ead2" stroke="#3a2a1c" stroke-width="5"/>
+          <rect x="10" y="0" width="26" height="30" fill="#e0a526" opacity=".85"/>
+          <path d="M92 15h22v36" fill="none" stroke="#3a2a1c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="104" y="48" width="20" height="62" rx="9" fill="#5c6b2f" stroke="#3a2a1c" stroke-width="5"/>
+        </g>
+        <!-- drip -->
+        <path d="M205 190c-6 12-6 20 0 20s6-8 0-20z" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/>
+        <!-- chimney -->
+        <rect x="355" y="78" width="30" height="62" fill="#a85030" stroke="#3a2a1c" stroke-width="5"/>
+      </svg>
+    </div>
+  </div>
+  <svg class="bands" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" height="120">
+    <path d="M0 30 Q180 -10 360 30 T720 30 T1080 30 T1440 30 V70 H0Z" fill="#e0a526"/>
+    <path d="M0 62 Q180 22 360 62 T720 62 T1080 62 T1440 62 V100 H0Z" fill="#c4572f"/>
+    <path d="M0 94 Q180 54 360 94 T720 94 T1080 94 T1440 94 V130 H0Z" fill="#5c6b2f"/>
+    <path d="M0 124 Q180 84 360 124 T720 124 T1080 124 T1440 124 V150 H0Z" fill="#3a2a1c"/>
+  </svg>
+</header>
+
+<div class="trust">
+  <div class="wrap">
+    <ul>
+      <li class="rv"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#e0a526" stroke="#f5ead2" stroke-width="3"/><path d="M14 25l7 7 13-15" fill="none" stroke="#3a2a1c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Reconnu RGE</b>Isolation des murs par l'extérieur (registre ADEME)</span></li>
+      <li class="rv d1"><svg viewBox="0 0 48 48"><path d="M24 4c-8 0-14 6-14 14 0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" fill="#c4572f" stroke="#f5ead2" stroke-width="3"/><circle cx="24" cy="18" r="5.500" fill="#f5ead2"/></svg><span><b>Nieul (87)</b>Entreprise locale, à deux pas de Limoges</span></li>
+      <li class="rv d2"><svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="28" fill="#5c6b2f" stroke="#f5ead2" stroke-width="3"/><path d="M3 16L24 4l21 12z" fill="#e0a526" stroke="#f5ead2" stroke-width="3" stroke-linejoin="round"/><rect x="20" y="26" width="8" height="16" fill="#f5ead2"/></svg><span><b>Ravalement &amp; ITE</b>Du nettoyage à l'isolation complète</span></li>
+      <li class="rv d3"><svg viewBox="0 0 48 48"><path d="M8 40h32M12 40V16l12-9 12 9v24" fill="none" stroke="#e0a526" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M19 28h10" stroke="#f5ead2" stroke-width="4" stroke-linecap="round"/></svg><span><b>Devis sur demande</b>Chaque chantier est étudié au cas par cas</span></li>
+    </ul>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <span class="kicker rv">Nos prestations</span>
+    <h2 class="rv">Tout pour des murs <br>en pleine forme</h2>
+    <p class="lead rv">De la façade fatiguée à la maison qu'on a envie de montrer : voici ce qu'on fait, pinceaux, taloches et panneaux isolants compris.</p>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><path d="M6 22L24 7l18 15"/><path d="M10 20v22h28V20"/><path d="M20 42V30h8v12"/></svg></div>
+        <h3>Ravalement de façade</h3>
+        <p>Remise à neuf complète : reprise des fissures, traitement du support, finition propre et durable.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+      <article class="card rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#f5ead2" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><path d="M8 34h26l6-8-4-3H12z" fill="#f5ead2" fill-opacity=".25"/><path d="M8 34v6h32v-6"/><path d="M14 18l6-8M22 20l8-9"/></svg></div>
+        <h3>Enduits &amp; crépis</h3>
+        <p>Enduits à la chaux, monocouches, projetés ou talochés : le bon fini pour le bon mur.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+      <article class="card rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#f5ead2" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="8" width="12" height="32" fill="#f5ead2" fill-opacity=".25"/><rect x="18" y="8" width="8" height="32"/><path d="M32 14c4 4 4 8 0 12s-4 8 0 12M40 14c4 4 4 8 0 12s-4 8 0 12" stroke-width="3"/></svg></div>
+        <h3>Isolation par l'extérieur</h3>
+        <p>L'ITE enveloppe la maison d'un manteau isolant : moins de déperditions, plus de confort, façade neuve à la clé.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><path d="M24 6c6 8 11 13 11 20a11 11 0 0 1-22 0c0-7 5-12 11-20z" fill="#f5ead2" fill-opacity=".6"/><path d="M19 28a5 5 0 0 0 5 5"/></svg></div>
+        <h3>Nettoyage &amp; traitement</h3>
+        <p>Démoussage, anti-algues, hydrofuge : on débarrasse les murs de l'humidité et de la mousse accumulées.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+      <article class="card rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#f5ead2" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="8" width="30" height="12" rx="4" fill="#f5ead2" fill-opacity=".25"/><path d="M36 14h5v12H24v6"/><rect x="20" y="32" width="8" height="10" rx="2"/></svg></div>
+        <h3>Peinture de façade</h3>
+        <p>Peintures minérales ou siloxane, teintes choisies avec vous pour une maison qui a du caractère.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+      <article class="card rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linejoin="round" stroke-linecap="round"><path d="M10 42V6M38 42V6M10 14h28M10 26h28M10 38h28"/><path d="M10 38l28-12M10 26l28-12" stroke-width="2.500"/></svg></div>
+        <h3>Travaux en hauteur</h3>
+        <p>Échafaudage monté et sécurisé pour travailler sereinement sur toute la hauteur de votre bâtiment.</p>
+        <span class="devis">Sur devis</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="pourquoi">
+  <div class="wrap">
+    <span class="kicker rv">Pourquoi nous choisir</span>
+    <h2 class="rv">Du travail de pro, <br>sans chichis</h2>
+    <div class="why-grid">
+      <div class="why-item rv"><div class="n">01</div><h3>Une vraie qualification</h3><p>Reconnu RGE pour l'isolation des murs par l'extérieur : un repère utile pour votre dossier d'aides.</p></div>
+      <div class="why-item rv d1"><div class="n">02</div><h3>Un artisan de proximité</h3><p>Basés à Nieul, nous intervenons dans le secteur : on se déplace, on regarde, on vous répond en direct.</p></div>
+      <div class="why-item rv d2"><div class="n">03</div><h3>Un devis clair</h3><p>Ce qui est fait, avec quoi, et pour quel prix : vous savez où vous mettez les pieds avant de signer.</p></div>
+      <div class="why-item rv d3"><div class="n">04</div><h3>Un chantier propre</h3><p>Zone protégée, passages respectés, nettoyage en fin de journée : on laisse les lieux comme on les aime.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deroulement" style="background:var(--creme)">
+  <div class="wrap">
+    <span class="kicker rv">Comment ça se passe</span>
+    <h2 class="rv">De l'appel à la façade <br>fraîchement rénovée</h2>
+    <div class="steps-list">
+      <div class="step rv"><h3>On en discute</h3><p>Un coup de fil ou un message : vous nous expliquez votre projet et l'état de vos murs.</p></div>
+      <div class="step rv d1"><h3>Visite &amp; devis</h3><p>On se déplace, on observe le support, on prend les mesures et vous recevez un devis détaillé.</p></div>
+      <div class="step rv d2"><h3>Le chantier</h3><p>Échafaudage, préparation, isolation ou enduit, finition : chaque étape est suivie et expliquée.</p></div>
+      <div class="step rv d3"><h3>La remise des clés</h3><p>On fait le tour ensemble, on nettoie, on range. Vous profitez de votre nouvelle façade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos">
+  <div class="wrap about-grid">
+    <div class="stamp rv">
+      <svg viewBox="0 0 140 110" aria-hidden="true"><polygon points="10,52 70,8 130,52" fill="#c4572f" stroke="#3a2a1c" stroke-width="4" stroke-linejoin="round"/><rect x="22" y="52" width="96" height="52" fill="#efe0bd" stroke="#3a2a1c" stroke-width="4"/><rect x="62" y="72" width="16" height="32" fill="#5c6b2f" stroke="#3a2a1c" stroke-width="3"/><rect x="32" y="64" width="18" height="18" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/><rect x="90" y="64" width="18" height="18" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/></svg>
+      <b>SARL Limousin Façades</b>
+      <span>6 route de Bannaud · Nieul</span>
+    </div>
+    <div class="rv d1">
+      <span class="kicker">À propos</span>
+      <h2>Des murs qu'on aime, <br>des clients qu'on écoute</h2>
+      <p>Limousin Façades est une entreprise de Nieul, spécialisée dans le ravalement de façades et l'isolation des murs par l'extérieur. Une façade, c'est la première chose qu'on voit de chez vous : elle doit être belle, mais aussi protéger et isoler.</p>
+      <p>On travaille au service des particuliers comme des propriétaires de bâtiments en Haute-Vienne, avec le souci du détail et un devis toujours expliqué. Vous avez un projet ? Parlons-en simplement, au téléphone ou sur place.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ba" id="avant-apres">
+  <div class="wrap">
+    <span class="kicker rv">Avant / Après</span>
+    <h2 class="rv">Faites glisser, <br>la façade se transforme</h2>
+    <p class="lead rv">Une illustration pour comprendre l'effet d'un ravalement avec isolation : à gauche, le mur fatigué ; à droite, la façade refaite.</p>
+    <div class="ba-box rv" id="ba">
+      <!-- AVANT -->
+      <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="800" height="450" fill="#cfc7b4"/>
+        <rect y="380" width="800" height="70" fill="#8d8470"/>
+        <polygon points="80,150 400,20 720,150" fill="#7d6a5a"/>
+        <rect x="120" y="150" width="560" height="240" fill="#b9ad92"/>
+        <g fill="#8c8068" opacity=".6"><ellipse cx="200" cy="190" rx="60" ry="20"/><ellipse cx="520" cy="350" rx="90" ry="22"/><ellipse cx="170" cy="340" rx="20" ry="40"/><ellipse cx="640" cy="210" rx="26" ry="36"/></g>
+        <g stroke="#5a5040" stroke-width="3" fill="none"><path d="M300 150l14 40-10 36 18 44"/><path d="M560 250l-12 30 14 30"/></g>
+        <g fill="#6b6150"><rect x="170" y="210" width="110" height="110"/><rect x="520" y="210" width="110" height="110"/></g>
+        <g stroke="#a89e86" stroke-width="6"><path d="M225 210v110M170 265h110M575 210v110M520 265h110"/></g>
+        <rect x="350" y="270" width="100" height="120" fill="#6b5a48"/>
+        <g fill="#6c7a45" opacity=".55"><ellipse cx="140" cy="385" rx="40" ry="12"/><ellipse cx="660" cy="385" rx="50" ry="12"/></g>
+      </svg>
+      <!-- APRES -->
+      <div class="ba-after-wrap" id="baAfter">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="800" height="450" fill="#f2dfa8"/>
+          <circle cx="690" cy="70" r="46" fill="#e0a526"/>
+          <rect y="380" width="800" height="70" fill="#5c6b2f"/>
+          <polygon points="80,150 400,20 720,150" fill="#c4572f" stroke="#3a2a1c" stroke-width="5" stroke-linejoin="round"/>
+          <rect x="120" y="150" width="560" height="240" fill="#f5ead2" stroke="#3a2a1c" stroke-width="5"/>
+          <rect x="120" y="340" width="560" height="50" fill="#e0a526" stroke="#3a2a1c" stroke-width="5"/>
+          <g fill="#5c6b2f" stroke="#3a2a1c" stroke-width="5"><rect x="170" y="210" width="110" height="110"/><rect x="520" y="210" width="110" height="110"/></g>
+          <g stroke="#3a2a1c" stroke-width="5"><path d="M225 210v110M170 265h110M575 210v110M520 265h110"/></g>
+          <g fill="#e0a526" stroke="#3a2a1c" stroke-width="4"><rect x="160" y="320" width="130" height="14"/><rect x="510" y="320" width="130" height="14"/></g>
+          <rect x="350" y="270" width="100" height="120" rx="50" ry="0" fill="#c4572f" stroke="#3a2a1c" stroke-width="5"/>
+          <circle cx="436" cy="335" r="6" fill="#e0a526"/>
+        </svg>
+      </div>
+      <span class="tag a">Avant</span><span class="tag b">Après</span>
+      <div class="ba-handle" id="baHandle"></div>
+      <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Comparer la façade avant et après ravalement">
+    </div>
+    <p class="note">Illustration stylisée, non contractuelle : elle ne représente pas un chantier réel.</p>
+  </div>
+</section>
+
+<section class="aides" id="aides">
+  <div class="wrap">
+    <span class="kicker rv">Aides à la rénovation</span>
+    <h2 class="rv">Un coup de pouce <br>pour vos travaux ?</h2>
+    <div class="aides-grid">
+      <ul>
+        <li class="rv"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="15" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/><path d="M10 18l5 5 9-11" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Le label RGE compte</b>Pour certaines aides à la rénovation énergétique, les travaux d'isolation doivent être réalisés par une entreprise RGE.</div></li>
+        <li class="rv d1"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="15" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/><path d="M10 18l5 5 9-11" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Des dispositifs qui évoluent</b>Conditions, montants et éligibilité changent régulièrement et dépendent de votre situation.</div></li>
+        <li class="rv d2"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="15" fill="#e0a526" stroke="#3a2a1c" stroke-width="3"/><path d="M10 18l5 5 9-11" fill="none" stroke="#3a2a1c" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Un point à faire avant de signer</b>Renseignez-vous auprès des organismes officiels avant le début des travaux, nous vous indiquons ce qu'il faut prévoir sur le devis.</div></li>
+      </ul>
+      <div class="callout rv d1">
+        <h3>On y voit plus clair ensemble</h3>
+        <p>Nous ne promettons aucun montant d'aide : chaque dossier est différent. En revanche, nous pouvons vous dire quels travaux entrent dans notre champ d'intervention et préparer un devis détaillé.</p>
+        <a class="btn btn-p" href="#contact">Parler de mon projet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--creme)">
+  <div class="wrap">
+    <span class="kicker rv">Questions fréquentes</span>
+    <h2 class="rv">On vous répond</h2>
+    <div class="faq-list">
+      <div class="q rv"><button aria-expanded="false">Qu'est-ce que l'isolation par l'extérieur (ITE) ?<span class="plus"></span></button><div class="a"><div><p>C'est une technique qui consiste à poser des panneaux isolants sur l'extérieur des murs, puis à les recouvrir d'un enduit ou d'un bardage. La maison est enveloppée sans perdre de surface habitable, et la façade est renouvelée en même temps.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Quand faut-il ravaler une façade ?<span class="plus"></span></button><div class="a"><div><p>Quand apparaissent des fissures, des écailles d'enduit, de la mousse ou des traces d'humidité. Mieux vaut agir tôt : un mur traité à temps évite des réparations plus lourdes.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Le devis est-il payant ?<span class="plus"></span></button><div class="a"><div><p>Contactez-nous pour connaître les modalités : nous étudions votre projet, puis nous vous remettons un devis écrit et détaillé avant tout démarrage de chantier.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Dans quelles communes intervenez-vous ?<span class="plus"></span></button><div class="a"><div><p>Nous sommes installés à Nieul et nous intervenons à Limoges et dans toute la Haute-Vienne. Pour un chantier un peu plus éloigné, appelez-nous : nous verrons ensemble.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Combien de temps dure un chantier ?<span class="plus"></span></button><div class="a"><div><p>Cela dépend de la surface, de l'état des murs, de la technique choisie et de la météo. Nous vous indiquons un calendrier réaliste dans le devis.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Peut-on obtenir des aides pour l'ITE ?<span class="plus"></span></button><div class="a"><div><p>Certaines aides existent pour les travaux d'isolation, et elles exigent souvent une entreprise RGE. Leur éligibilité dépend de votre situation : renseignez-vous auprès des organismes officiels avant de commencer.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap zone-grid">
+    <div class="rv">
+      <span class="kicker">Zone d'intervention</span>
+      <h2>Chez nous, en Haute-Vienne</h2>
+      <p>Installée à Nieul, l'équipe se déplace pour étudier votre chantier sur place, sans engagement.</p>
+      <div class="chips"><span>Nieul</span><span>Limoges</span><span>Haute-Vienne</span></div>
+      <address>SARL Limousin Façades<br>6 route de Bannaud<br>87510 Nieul</address>
+      <p style="margin-top:22px"><a class="btn btn-p" href="https://www.google.com/maps/search/?api=1&query=6+route+de+Bannaud+87510+Nieul" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>Itinéraire</a></p>
+    </div>
+    <div class="map rv d1">
+      <svg viewBox="0 0 400 320" aria-hidden="true">
+        <rect width="400" height="320" fill="#efe0bd"/>
+        <path d="M0 230Q100 190 190 230T400 200V320H0Z" fill="#5c6b2f" opacity=".85"/>
+        <path d="M0 270Q120 230 220 270T400 250V320H0Z" fill="#3a2a1c" opacity=".85"/>
+        <path d="M-10 130C80 110 120 170 200 150S330 90 410 120" stroke="#f5ead2" stroke-width="22" fill="none"/>
+        <path d="M-10 130C80 110 120 170 200 150S330 90 410 120" stroke="#e0a526" stroke-width="3" stroke-dasharray="14 12" fill="none"/>
+        <path d="M230 0C220 80 250 150 200 215" stroke="#f5ead2" stroke-width="12" fill="none"/>
+        <g transform="translate(205 100)"><circle cx="0" cy="38" r="34" fill="#c4572f" opacity=".2"/><path d="M0 40c-18-24-26-34-26-48a26 26 0 0 1 52 0c0 14-8 24-26 48z" fill="#c4572f" stroke="#3a2a1c" stroke-width="4"/><circle cx="0" cy="-8" r="9" fill="#f5ead2" stroke="#3a2a1c" stroke-width="3"/></g>
+        <text x="205" y="180" text-anchor="middle" font-family="DM Serif Display,Georgia,serif" font-size="24" fill="#3a2a1c">Nieul</text>
+        <text x="40" y="60" font-family="Karla,Arial,sans-serif" font-weight="800" font-size="14" letter-spacing="2" fill="#3a2a1c">HAUTE-VIENNE</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="kicker rv">Contact &amp; devis</span>
+    <h2 class="rv">Parlons de votre façade</h2>
+    <div class="contact-grid">
+      <div class="rv">
+        <p class="lead" style="margin-top:0">Décrivez-nous votre projet en quelques lignes, ou décrochez simplement votre téléphone.</p>
+        <ul class="coords">
+          <li><svg viewBox="0 0 24 24" fill="#c4572f"><path d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25 11 11 0 0 0 3.600.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"/></svg><a href="tel:+33614192320">06 14 19 23 20</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#c4572f" stroke-width="2.500" stroke-linejoin="round"><rect x="2.500" y="5" width="19" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:limousinfacades@orange.fr">limousinfacades@orange.fr</a></li>
+          <li><svg viewBox="0 0 24 24" fill="#c4572f"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg><span>6 route de Bannaud, 87510 Nieul</span></li>
+        </ul>
+      </div>
+      <form id="form" class="rv d1" novalidate>
+        <div class="row2">
+          <label>Nom<input name="nom" required autocomplete="name" placeholder="Votre nom"></label>
+          <label>Téléphone<input name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
+        </div>
+        <label>Email<input name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></label>
+        <label>Type de projet
+          <select name="projet"><option>Ravalement de façade</option><option>Isolation par l'extérieur (ITE)</option><option>Enduit / crépi</option><option>Nettoyage / traitement</option><option>Peinture de façade</option><option>Autre / je ne sais pas encore</option></select>
+        </label>
+        <label>Votre message<textarea name="message" placeholder="Commune, type de maison, état des murs…"></textarea></label>
+        <button class="btn btn-t" type="submit">Envoyer ma demande</button>
+        <div class="msg" id="msg" role="status">Maquette de démonstration : ce formulaire n'envoie rien pour le moment. Merci de passer par le téléphone ou l'email ci-contre.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#top" class="logo" style="margin-bottom:12px"><i></i>Limousin Façades</a>
+      <p>Ravalement de façades et isolation des murs par l'extérieur à Nieul, Limoges et en Haute-Vienne.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul><li><a href="#services">Prestations</a></li><li><a href="#pourquoi">Atouts</a></li><li><a href="#avant-apres">Avant / Après</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul><li>SARL Limousin Façades</li><li>6 route de Bannaud<br>87510 Nieul</li><li><a href="tel:+33614192320">06 14 19 23 20</a></li><li><a href="mailto:limousinfacades@orange.fr">limousinfacades@orange.fr</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap legal">© SARL Limousin Façades · Reconnu RGE (isolation des murs par l'extérieur – registre ADEME)</div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33614192320" aria-label="Appeler Limousin Façades"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25 11 11 0 0 0 3.600.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function close(){m.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  document.querySelectorAll('.q button').forEach(function(btn){
+    btn.addEventListener('click',function(){var q=btn.parentNode,o=q.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  });
+
+  var r=document.getElementById('baRange'),a=document.getElementById('baAfter'),h=document.getElementById('baHandle');
+  function upd(){a.style.clipPath='inset(0 0 0 '+r.value+'%)';h.style.left=r.value+'%'}
+  r.addEventListener('input',upd);upd();
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('msg').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

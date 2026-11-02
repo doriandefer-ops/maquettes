@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BJ Menuiserie – Menuisier à Ambazac</title>
+<meta name="description" content="BJ Menuiserie, menuisier à Ambazac (Haute-Vienne) : fenêtres, volets et portes d'entrée sur mesure. Entreprise reconnue RGE. Intervention autour de Limoges.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#f4efe6; --noyer:#3b2a1e; --brique:#a63d2a; --filet:#d8cfc0;
+  --papier:#fbf8f2; --noyer-2:#5e4a3b;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--ivoire);color:var(--noyer);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-.01em}
+.kicker{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--brique);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--brique)}
+section{padding:72px 0;border-top:1px solid var(--filet)}
+.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:760px}
+.sec-head h2{font-size:clamp(1.9rem,4.6vw,3rem)}
+.sec-head p{color:var(--noyer-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font:600 .95rem var(--sans);text-decoration:none;border:1px solid var(--noyer);cursor:pointer;transition:.25s;background:transparent;color:var(--noyer)}
+.btn.primary{background:var(--brique);border-color:var(--brique);color:#fff}
+.btn.primary:hover{background:var(--noyer);border-color:var(--noyer);transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--noyer);color:var(--ivoire);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:2px solid var(--brique);outline-offset:3px}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(244,239,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--filet)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-weight:800;font-size:1.3rem;text-decoration:none;display:flex;align-items:baseline;gap:8px}
+.logo b{color:var(--brique)}
+.logo small{font:500 .65rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--noyer-2)}
+.menu{display:flex;gap:26px;align-items:center;list-style:none}
+.menu a{text-decoration:none;font-size:.9rem;font-weight:500;position:relative;padding:4px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--brique);transition:.25s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:10px 18px;color:#fff}
+.burger{display:none;width:44px;height:44px;background:none;border:1px solid var(--filet);cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:11px;width:20px;height:2px;background:var(--noyer);transition:.25s;content:""}
+.burger span{top:20px}.burger span::before{left:0;top:-6px}.burger span::after{left:0;top:6px}
+.burger[aria-expanded=true] span{background:transparent}
+.burger[aria-expanded=true] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded=true] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:116px 0 0;border-top:0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;border-bottom:1px solid var(--noyer)}
+.hero-txt{padding:30px 48px 56px 0;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.7rem);font-weight:800}
+.hero h1 em{color:var(--brique);font-style:italic;font-weight:500}
+.hero .lead{font-size:1.08rem;color:var(--noyer-2);max-width:520px;border-left:2px solid var(--brique);padding-left:18px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-art{background:var(--papier);border-left:1px solid var(--filet);display:flex;align-items:center;justify-content:center;padding:36px;position:relative}
+.hero-art .cap{position:absolute;left:20px;bottom:12px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--noyer-2)}
+.hero-art svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 18px 24px rgba(59,42,30,.18))}
+.meta-row{display:flex;gap:28px;flex-wrap:wrap;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--noyer-2);padding-top:6px}
+
+/* trust */
+.trust{background:var(--noyer);color:var(--ivoire);padding:0;border:0}
+.trust-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-in div{padding:24px 18px;text-align:center;border-left:1px solid rgba(244,239,230,.18);font-family:var(--serif);font-size:1.05rem}
+.trust-in div:first-child{border-left:0}
+.trust-in small{display:block;font:500 .68rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#d9b9a9;margin-bottom:4px}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--noyer);border-left:1px solid var(--filet)}
+.card{padding:32px 28px 34px;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);background:transparent;transition:.3s;position:relative}
+.card:hover{background:var(--papier);transform:translateY(-4px);box-shadow:0 14px 30px rgba(59,42,30,.1);z-index:2}
+.card .num{position:absolute;top:22px;right:24px;font:italic 500 1rem var(--serif);color:var(--brique)}
+.card svg{width:62px;height:62px;margin-bottom:22px;stroke:var(--noyer);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card svg .a{stroke:var(--brique)}
+.card h3{font-size:1.4rem;margin-bottom:10px}
+.card p{font-size:.94rem;color:var(--noyer-2)}
+.card .tag{display:inline-block;margin-top:16px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brique);font-weight:600}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+.why-grid .big{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.25;font-style:italic;font-weight:500}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--noyer)}
+.why-list article{padding:24px 22px 26px 0;border-bottom:1px solid var(--filet)}
+.why-list article:nth-child(even){padding-left:22px;border-left:1px solid var(--filet)}
+.why-list h3{font-size:1.2rem;margin-bottom:8px}
+.why-list h3 span{color:var(--brique);font-style:italic;margin-right:8px}
+.why-list p{font-size:.93rem;color:var(--noyer-2)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:6px 26px 6px 0;position:relative}
+.step+.step{padding-left:26px;border-left:1px solid var(--filet)}
+.step .n{font-family:var(--serif);font-size:4rem;font-weight:800;color:var(--brique);line-height:1;opacity:.9;margin-bottom:12px}
+.step h3{font-size:1.25rem;margin-bottom:8px}
+.step p{font-size:.93rem;color:var(--noyer-2)}
+
+/* about */
+.about{background:var(--papier)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about h2{font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:20px}
+.about p{margin-bottom:14px;color:var(--noyer-2)}
+.about p:first-of-type::first-letter{font-family:var(--serif);font-size:3.4rem;float:left;line-height:.85;padding:6px 10px 0 0;color:var(--brique);font-weight:800}
+.about .sign{font-family:var(--serif);font-style:italic;color:var(--noyer)}
+.about-art{border:1px solid var(--filet);background:var(--ivoire);padding:30px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fig{margin:0;background:var(--papier);border:1px solid var(--filet);overflow:hidden;transition:.3s}
+.fig:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(59,42,30,.12)}
+.fig svg{width:100%;height:auto;transition:transform .5s}
+.fig:hover svg{transform:scale(1.04)}
+.fig figcaption{padding:14px 16px;border-top:1px solid var(--filet);font-size:.85rem;display:flex;justify-content:space-between;gap:10px;background:var(--papier);position:relative}
+.fig figcaption b{font-family:var(--serif);font-size:1rem}
+.fig figcaption i{color:var(--noyer-2);font-style:normal;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;align-self:center}
+.note{margin-top:18px;font-size:.8rem;color:var(--noyer-2)}
+
+/* aides */
+.aides{background:var(--noyer);color:var(--ivoire);border-top:0}
+.aides .kicker{color:#e3a592}.aides .kicker::before{background:#e3a592}
+.aides-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.aides h2{font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:18px}
+.aides p{color:#e3d9ca;margin-bottom:14px}
+.aides ul{list-style:none;border-top:1px solid rgba(244,239,230,.3)}
+.aides li{padding:16px 0;border-bottom:1px solid rgba(244,239,230,.18);display:flex;gap:14px;color:#e3d9ca}
+.aides li b{font-family:var(--serif);color:#fff;font-style:italic;min-width:26px}
+.aides .small{font-size:.82rem;color:#c9bcaa;margin-top:18px}
+
+/* faq */
+.faq{max-width:860px;border-top:1px solid var(--noyer)}
+.faq details{border-bottom:1px solid var(--filet)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-family:var(--serif);font-size:1.2rem;font-weight:700;position:relative;transition:color .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--brique)}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font:400 1.8rem var(--sans);color:var(--brique);transition:.25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq .ans{padding:0 44px 24px 0;color:var(--noyer-2)}
+
+/* zone */
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.zone h2{font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:18px}
+.zone p{color:var(--noyer-2);margin-bottom:12px}
+.zone address{font-style:normal;margin:18px 0 24px;padding:16px 0;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);line-height:1.8}
+.map-art{border:1px solid var(--filet);background:var(--papier);padding:14px}
+
+/* contact */
+.contact{background:var(--papier)}
+.contact-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+.contact h2{font-size:clamp(1.9rem,4.6vw,3rem);margin-bottom:18px}
+.contact .info p{color:var(--noyer-2);margin-bottom:10px}
+.contact .info a{font-weight:600;text-decoration-color:var(--brique)}
+.contact .tel{font-family:var(--serif);font-size:1.7rem;font-weight:700;text-decoration:none;display:block;margin:14px 0 6px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:grid;gap:6px}.f.full{grid-column:1/-1}
+label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+input,select,textarea{font:400 1rem var(--sans);color:var(--noyer);background:var(--ivoire);border:1px solid var(--filet);border-bottom:1px solid var(--noyer);padding:12px 14px;width:100%;border-radius:0;transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brique);background:#fff}
+textarea{min-height:130px;resize:vertical}
+.msg{grid-column:1/-1;padding:14px 16px;border-left:3px solid var(--brique);background:var(--ivoire);font-size:.92rem;display:none}
+.msg.on{display:block}
+
+/* footer */
+footer{background:var(--noyer);color:var(--ivoire);padding:56px 0 0;border:0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:40px}
+footer h4{font:600 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#e3a592;margin-bottom:14px}
+footer p,footer li{font-size:.9rem;color:#d9cfbf}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+footer .logo{color:#fff;font-size:1.5rem;margin-bottom:10px}
+.legal{border-top:1px solid rgba(244,239,230,.18);padding:18px 0;font-size:.78rem;color:#c9bcaa;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo{background:#1f150e;color:#e3d9ca;text-align:center;font-size:.8rem;padding:12px 20px}
+
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--brique);align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.3);color:#fff}
+.fab svg{width:26px;height:26px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{transition:none!important;animation:none!important}
+}
+
+@media (max-width:980px){
+  .cards{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
+  .step:nth-child(3){padding-left:0;border-left:0}
+  .why-grid,.about-grid,.aides-grid,.zone-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .gal{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .trust-in{grid-template-columns:1fr 1fr}
+  .trust-in div:nth-child(3){border-left:0}
+  .trust-in div:nth-child(n+3){border-top:1px solid rgba(244,239,230,.18)}
+}
+@media (max-width:760px){
+  .burger{display:block}
+  .menu{position:fixed;top:68px;left:0;right:0;background:var(--ivoire);flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--noyer);padding:8px 20px 20px;transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  .menu.open{transform:none}
+  .menu li{border-bottom:1px solid var(--filet)}
+  .menu a{display:block;padding:15px 0;font-size:1.05rem}
+  .menu li:last-child{border:0;padding-top:16px}
+  .menu .btn{display:flex;padding:14px}
+  .hero{padding-top:84px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-txt{padding:22px 0 36px}
+  .hero-art{border-left:0;border-top:1px solid var(--filet);margin:0 -20px;padding:32px 20px 40px}
+  .hero-art svg{max-width:300px}
+  .cta .btn{flex:1 1 100%}
+  section{padding:54px 0}
+  .fab{display:flex}
+  .cards{grid-template-columns:1fr}
+  .why-list{grid-template-columns:1fr}
+  .why-list article:nth-child(even){padding-left:0;border-left:0}
+  .steps{grid-template-columns:1fr}
+  .step+.step{padding-left:0;border-left:0;border-top:1px solid var(--filet);padding-top:26px}
+  .gal{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .demo{padding-bottom:80px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="BJ Menuiserie, accueil"><span>BJ <b>Menuiserie</b></span><small>Ambazac</small></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#aides">Aides</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a class="btn primary" href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-txt">
+        <div class="kicker">Menuiserie · Ambazac, Haute-Vienne</div>
+        <h1>Là où la lumière entre, <em>le bois</em> fait la différence.</h1>
+        <p class="lead">Fenêtres, volets et portes d'entrée : BJ Menuiserie conçoit et pose des ouvertures qui tiennent chaud l'hiver, résistent aux saisons du Limousin et donnent du caractère à votre façade.</p>
+        <div class="cta">
+          <a class="btn primary" href="tel:+33681875991"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+          <a class="btn ghost" href="#contact">Demander un devis</a>
+        </div>
+        <div class="meta-row"><span>Entreprise RGE</span><span>Ambazac &amp; Limoges</span></div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 400 480" role="img" aria-label="Illustration d'une grande fenêtre en bois à petits carreaux">
+          <rect x="30" y="460" width="340" height="10" fill="#3b2a1e" opacity=".15"/>
+          <!-- appui -->
+          <rect x="24" y="428" width="352" height="22" fill="#5e4a3b"/>
+          <rect x="24" y="428" width="352" height="5" fill="#7a624f"/>
+          <!-- dormant -->
+          <rect x="50" y="30" width="300" height="400" fill="#3b2a1e"/>
+          <rect x="60" y="40" width="280" height="380" fill="#8a6a4f"/>
+          <!-- vitrages -->
+          <g>
+            <rect x="72" y="52" width="115" height="170" fill="#cfe0e4"/>
+            <rect x="213" y="52" width="115" height="170" fill="#cfe0e4"/>
+            <rect x="72" y="238" width="115" height="170" fill="#cfe0e4"/>
+            <rect x="213" y="238" width="115" height="170" fill="#cfe0e4"/>
+            <!-- reflets -->
+            <path d="M72 52h60L72 150z" fill="#fff" opacity=".45"/>
+            <path d="M213 52h60l-60 98z" fill="#fff" opacity=".45"/>
+            <path d="M72 238h60l-60 98z" fill="#fff" opacity=".35"/>
+            <path d="M213 238h60l-60 98z" fill="#fff" opacity=".35"/>
+          </g>
+          <!-- ouvrants -->
+          <g fill="none" stroke="#3b2a1e" stroke-width="3">
+            <rect x="66" y="46" width="127" height="182"/><rect x="207" y="46" width="127" height="182"/>
+            <rect x="66" y="232" width="127" height="182"/><rect x="207" y="232" width="127" height="182"/>
+          </g>
+          <!-- petits bois -->
+          <g stroke="#b99b7c" stroke-width="5">
+            <path d="M129.500 52v170M270.500 52v170M129.500 238v170M270.500 238v170M72 137h115M213 137h115M72 323h115M213 323h115"/>
+          </g>
+          <!-- poignées -->
+          <rect x="193" y="214" width="14" height="40" rx="3" fill="#a63d2a"/>
+          <!-- fleur pot -->
+          <rect x="262" y="408" width="58" height="22" fill="#a63d2a"/>
+          <path d="M291 408c0-28-14-34-22-46M291 408c0-24 10-34 20-44" stroke="#4d6b3a" stroke-width="3" fill="none"/>
+          <circle cx="268" cy="360" r="7" fill="#a63d2a" opacity=".0"/>
+        </svg>
+        <span class="cap">Fenêtre bois · illustration</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust" aria-label="Repères">
+  <div class="wrap trust-in">
+    <div><small>Reconnu</small>RGE</div>
+    <div><small>Atelier</small>Ambazac</div>
+    <div><small>Zone</small>Limoges · Haute-Vienne</div>
+    <div><small>Spécialités</small>Fenêtres · Volets · Portes</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">Nos ouvrages</div>
+      <h2>Six façons d'habiller et de protéger votre maison.</h2>
+      <p>Chaque projet est étudié sur place, puis fabriqué ou commandé aux bonnes dimensions. Les prestations sont chiffrées sur devis.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv"><span class="num">01</span>
+        <svg viewBox="0 0 64 64"><rect x="10" y="8" width="44" height="48"/><path d="M32 8v48M10 32h44"/><circle class="a" cx="28" cy="32" r="1.5"/></svg>
+        <h3>Fenêtres PVC</h3><p>Un bon compromis entre isolation, entretien réduit et budget, en ouverture à la française, oscillo-battante ou coulissante.</p><span class="tag">Sur devis</span></article>
+      <article class="card rv"><span class="num">02</span>
+        <svg viewBox="0 0 64 64"><rect x="8" y="10" width="48" height="44"/><rect x="13" y="15" width="38" height="34"/><path class="a" d="M32 15v34"/><path d="M8 54h48"/></svg>
+        <h3>Fenêtres aluminium</h3><p>Des profils fins pour de grandes surfaces vitrées, une allure contemporaine et une belle tenue dans le temps.</p><span class="tag">Sur devis</span></article>
+      <article class="card rv"><span class="num">03</span>
+        <svg viewBox="0 0 64 64"><rect x="10" y="6" width="44" height="52"/><path d="M10 32h44M32 6v52M21 6v26M43 6v26M21 32v26M43 32v26" stroke-width="1"/><path class="a" d="M6 58h52"/></svg>
+        <h3>Fenêtres bois</h3><p>La chaleur du bois, des petits bois traditionnels et des finitions travaillées, idéales pour une maison de caractère.</p><span class="tag">Sur devis</span></article>
+      <article class="card rv"><span class="num">04</span>
+        <svg viewBox="0 0 64 64"><rect x="8" y="6" width="48" height="8"/><path d="M12 14h40v38H12zM12 20h40M12 26h40M12 32h40M12 38h40"/><path class="a" d="M26 52v6h12v-6"/></svg>
+        <h3>Volets roulants</h3><p>Confort thermique, occultation et sécurité, avec commande manuelle ou motorisée selon vos habitudes.</p><span class="tag">Sur devis</span></article>
+      <article class="card rv"><span class="num">05</span>
+        <svg viewBox="0 0 64 64"><rect x="4" y="8" width="22" height="48"/><rect x="38" y="8" width="22" height="48"/><path d="M8 14h14M8 20h14M8 26h14M8 32h14M8 38h14M8 44h14M8 50h14M42 14h14M42 20h14M42 26h14M42 32h14M42 38h14M42 44h14M42 50h14" stroke-width="1.2"/><path class="a" d="M26 32h-2M38 32h2"/></svg>
+        <h3>Volets battants</h3><p>Le charme des volets de pays, en bois ou matériaux au choix, ajustés à votre façade et à vos gonds.</p><span class="tag">Sur devis</span></article>
+      <article class="card rv"><span class="num">06</span>
+        <svg viewBox="0 0 64 64"><rect x="14" y="4" width="36" height="56"/><rect x="20" y="10" width="24" height="18"/><rect x="20" y="34" width="24" height="20"/><circle class="a" cx="43" cy="32" r="2.200"/><path d="M8 60h48"/></svg>
+        <h3>Portes d'entrée</h3><p>La première impression de votre maison : une porte solide, isolante et dessinée pour s'accorder à votre style.</p><span class="tag">Sur devis</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="atouts">
+  <div class="wrap why-grid">
+    <div class="rv">
+      <div class="kicker">Pourquoi nous choisir</div>
+      <p class="big">« Une ouverture bien posée, c'est une maison qui respire mieux, et un chantier dont on n'a plus à se soucier. »</p>
+    </div>
+    <div class="why-list">
+      <article class="rv"><h3><span>I.</span>Un interlocuteur unique</h3><p>Vous parlez à l'artisan qui vient prendre les cotes et qui suit votre chantier, sans intermédiaire.</p></article>
+      <article class="rv"><h3><span>II.</span>Reconnu RGE</h3><p>Notre statut RGE est référencé au registre de l'ADEME pour les fenêtres, volets et portes donnant sur l'extérieur.</p></article>
+      <article class="rv"><h3><span>III.</span>Du sur-mesure</h3><p>Dimensions, matériaux, teintes, finitions : on s'adapte à votre bâti, ancien comme récent.</p></article>
+      <article class="rv"><h3><span>IV.</span>Un artisan de proximité</h3><p>Installés à Ambazac, nous intervenons autour de Limoges et dans toute la Haute-Vienne.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="methode" style="background:var(--papier)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">Comment ça se passe</div>
+      <h2>De votre appel à la dernière vis, en quatre temps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><h3>On échange</h3><p>Un appel ou un message pour comprendre votre projet, vos contraintes et vos envies.</p></div>
+      <div class="step rv"><div class="n">2</div><h3>On vient mesurer</h3><p>Visite sur place, relevé des cotes, conseils sur les matériaux et les styles.</p></div>
+      <div class="step rv"><div class="n">3</div><h3>On vous chiffre</h3><p>Un devis détaillé, expliqué simplement, que vous prenez le temps d'étudier.</p></div>
+      <div class="step rv"><div class="n">4</div><h3>On pose</h3><p>Fabrication ou commande, pose soignée, finitions et chantier laissé propre.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <div class="kicker">À propos</div>
+      <h2>Un atelier à Ambazac, un métier fait de gestes précis.</h2>
+      <p>BJ Menuiserie est une entreprise de menuiserie installée au lieu-dit Le Puy Roudier, à Ambazac. Nous travaillons les fenêtres, les volets et les portes d'entrée pour les particuliers de la Haute-Vienne.</p>
+      <p>Notre approche tient en peu de mots : écouter, mesurer juste, poser proprement. Parce qu'une menuiserie réussie se juge dans la durée, sur les courants d'air qu'on ne sent plus et les volets qui ferment sans forcer.</p>
+      <p class="sign">Parlons de votre projet, autour d'un café ou au téléphone.</p>
+    </div>
+    <div class="about-art rv">
+      <svg viewBox="0 0 440 300" role="img" aria-label="Illustration d'un établi de menuisier">
+        <rect x="20" y="210" width="400" height="22" fill="#3b2a1e"/>
+        <rect x="50" y="232" width="22" height="58" fill="#5e4a3b"/><rect x="368" y="232" width="22" height="58" fill="#5e4a3b"/>
+        <rect x="40" y="196" width="360" height="14" fill="#8a6a4f"/>
+        <!-- rabot -->
+        <path d="M90 196v-26h110l16 10v16z" fill="#a63d2a"/><rect x="120" y="150" width="30" height="20" rx="8" fill="#3b2a1e"/>
+        <!-- équerre -->
+        <path d="M250 196V92h14v90h84v14z" fill="#d8cfc0" stroke="#3b2a1e" stroke-width="2"/>
+        <!-- crayon -->
+        <path d="M300 170l70-8" stroke="#a63d2a" stroke-width="6" stroke-linecap="round"/>
+        <!-- cadre en construction -->
+        <rect x="90" y="40" width="130" height="100" fill="none" stroke="#3b2a1e" stroke-width="10"/>
+        <path d="M155 40v100M90 90h130" stroke="#8a6a4f" stroke-width="5"/>
+        <!-- copeaux -->
+        <path d="M60 192c10-14 24-6 18 4s-22 6-18-4zM330 192c8-12 22-4 16 6" fill="none" stroke="#a63d2a" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">Galerie</div>
+      <h2>Quelques ambiances d'ouvertures, en illustration.</h2>
+      <p>Des exemples stylisés pour imaginer le rendu sur votre façade. Les photos de chantiers viendront avec la mise en ligne définitive.</p>
+    </div>
+    <div class="gal">
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#e8dcc8"/><rect y="250" width="400" height="50" fill="#b9a78d"/>
+          <rect x="60" y="40" width="280" height="210" fill="#efe7d8" stroke="#3b2a1e" stroke-width="2"/>
+          <path d="M40 40l160-34 160 34z" fill="#a63d2a"/>
+          <g><rect x="90" y="85" width="70" height="100" fill="#cfe0e4" stroke="#3b2a1e" stroke-width="3"/><path d="M125 85v100M90 135h70" stroke="#3b2a1e" stroke-width="2"/>
+          <rect x="240" y="85" width="70" height="100" fill="#cfe0e4" stroke="#3b2a1e" stroke-width="3"/><path d="M275 85v100M240 135h70" stroke="#3b2a1e" stroke-width="2"/></g>
+          <g fill="#5e4a3b"><rect x="68" y="85" width="22" height="100"/><rect x="160" y="85" width="22" height="100"/><rect x="218" y="85" width="22" height="100"/><rect x="310" y="85" width="22" height="100"/></g>
+          <g stroke="#3b2a1e" stroke-width="1" opacity=".5"><path d="M72 95h14M72 105h14M72 115h14M72 125h14M72 135h14M72 145h14M72 155h14M72 165h14M72 175h14M164 95h14M164 105h14M164 115h14M164 125h14M164 135h14M164 145h14M164 155h14M164 165h14M164 175h14"/></g>
+          <rect x="170" y="190" width="60" height="60" fill="#3b2a1e"/></svg>
+        <figcaption><b>Volets battants</b><i>Façade de pays</i></figcaption></figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#dfd5c2"/><rect y="262" width="400" height="38" fill="#a99a82"/>
+          <rect x="110" y="30" width="180" height="232" fill="#3b2a1e"/>
+          <rect x="122" y="42" width="156" height="220" fill="#a63d2a"/>
+          <rect x="140" y="60" width="120" height="70" fill="#cfe0e4" stroke="#3b2a1e" stroke-width="4"/>
+          <path d="M200 60v70M140 95h120" stroke="#3b2a1e" stroke-width="3"/>
+          <rect x="140" y="150" width="120" height="96" fill="none" stroke="#7d2a1b" stroke-width="3"/>
+          <rect x="150" y="160" width="100" height="76" fill="none" stroke="#7d2a1b" stroke-width="2"/>
+          <rect x="250" y="190" width="8" height="34" rx="3" fill="#e8dcc8"/>
+          <rect x="95" y="256" width="210" height="8" fill="#8a7a64"/></svg>
+        <figcaption><b>Porte d'entrée</b><i>Rouge brique</i></figcaption></figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#ebe3d3"/>
+          <rect x="30" y="30" width="340" height="240" fill="#d8cfc0"/>
+          <rect x="70" y="60" width="260" height="170" fill="#3b2a1e"/>
+          <rect x="80" y="70" width="115" height="150" fill="#cfe0e4"/><rect x="205" y="70" width="115" height="150" fill="#cfe0e4"/>
+          <path d="M80 70h50L80 150zM205 70h50l-50 80z" fill="#fff" opacity=".45"/>
+          <rect x="195" y="70" width="10" height="150" fill="#5e4a3b"/>
+          <rect x="60" y="230" width="280" height="14" fill="#8a6a4f"/></svg>
+        <figcaption><b>Baie aluminium</b><i>Profils fins</i></figcaption></figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#e6dcc9"/>
+          <rect x="70" y="20" width="260" height="30" fill="#5e4a3b"/>
+          <rect x="80" y="50" width="240" height="190" fill="#cfd8d6"/>
+          <g stroke="#3b2a1e" stroke-width="1.5" opacity=".55"><path d="M80 70h240M80 90h240M80 110h240M80 130h240M80 150h240M80 170h240"/></g>
+          <rect x="80" y="50" width="240" height="120" fill="#b9c7c5"/>
+          <rect x="80" y="170" width="240" height="70" fill="#e8f0f1"/>
+          <rect x="190" y="164" width="20" height="10" fill="#a63d2a"/>
+          <rect x="60" y="240" width="280" height="14" fill="#8a6a4f"/></svg>
+        <figcaption><b>Volet roulant</b><i>À mi-course</i></figcaption></figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#dfd5c2"/><rect y="250" width="400" height="50" fill="#b9a78d"/>
+          <rect x="95" y="25" width="210" height="225" fill="#8a6a4f" stroke="#3b2a1e" stroke-width="8"/>
+          <g fill="#cfe0e4" stroke="#3b2a1e" stroke-width="3"><rect x="110" y="40" width="85" height="95"/><rect x="205" y="40" width="85" height="95"/><rect x="110" y="145" width="85" height="95"/><rect x="205" y="145" width="85" height="95"/></g>
+          <g stroke="#b99b7c" stroke-width="4"><path d="M152 40v95M247 40v95M152 145v95M247 145v95M110 88h85M205 88h85M110 192h85M205 192h85"/></g>
+          <rect x="85" y="244" width="230" height="12" fill="#5e4a3b"/></svg>
+        <figcaption><b>Fenêtre bois</b><i>Petits carreaux</i></figcaption></figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 400 300"><rect width="400" height="300" fill="#ebe3d3"/><rect y="255" width="400" height="45" fill="#b9a78d"/>
+          <rect x="40" y="40" width="320" height="215" fill="#efe7d8" stroke="#3b2a1e" stroke-width="2"/>
+          <rect x="70" y="80" width="80" height="110" fill="#cfe0e4" stroke="#fff" stroke-width="8"/><path d="M110 80v110M70 135h80" stroke="#fff" stroke-width="4"/>
+          <rect x="170" y="80" width="80" height="110" fill="#cfe0e4" stroke="#fff" stroke-width="8"/><path d="M210 80v110M170 135h80" stroke="#fff" stroke-width="4"/>
+          <rect x="280" y="100" width="55" height="155" fill="#fff" stroke="#3b2a1e" stroke-width="2"/><rect x="288" y="112" width="39" height="50" fill="#cfe0e4"/><circle cx="326" cy="190" r="3" fill="#a63d2a"/>
+          <path d="M30 40l170-34 170 34z" fill="#5e4a3b"/></svg>
+        <figcaption><b>Fenêtres PVC</b><i>Blanc classique</i></figcaption></figure>
+    </div>
+    <p class="note">Illustrations non contractuelles, réalisées pour cette maquette.</p>
+  </div>
+</section>
+
+<section class="aides" id="aides">
+  <div class="wrap aides-grid">
+    <div class="rv">
+      <div class="kicker">Aides à la rénovation</div>
+      <h2>Le statut RGE peut ouvrir des portes, au sens propre.</h2>
+      <p>BJ Menuiserie est reconnue RGE pour les fenêtres, volets et portes donnant sur l'extérieur. Pour un projet de rénovation énergétique, cette reconnaissance peut permettre d'ouvrir droit à certaines aides, selon votre dossier et les règles en vigueur.</p>
+      <p class="small">Les conditions d'accès varient selon les revenus, le logement et la nature des travaux. Aucune aide n'est garantie : renseignez-vous auprès des organismes officiels et parlons-en lors du devis.</p>
+    </div>
+    <ul class="rv">
+      <li><b>1.</b><span>Nous vous indiquons les travaux concernés par la qualification RGE.</span></li>
+      <li><b>2.</b><span>Vous vérifiez votre éligibilité auprès des organismes compétents.</span></li>
+      <li><b>3.</b><span>Nous établissons un devis détaillé, utile à la constitution de votre dossier.</span></li>
+      <li><b>4.</b><span>Les démarches se font avant le démarrage des travaux.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">Questions fréquentes</div>
+      <h2>Vous vous demandez peut-être…</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Quelle matière choisir : PVC, aluminium ou bois ?</summary><div class="ans">Cela dépend de votre budget, du style de la maison et de l'entretien souhaité. Le PVC est économe en entretien, l'aluminium convient aux grandes baies, le bois apporte chaleur et caractère. Nous vous conseillons sur place.</div></details>
+      <details><summary>Intervenez-vous en dehors d'Ambazac ?</summary><div class="ans">Oui, nous nous déplaçons à Limoges et dans la Haute-Vienne. Contactez-nous pour vérifier que votre commune est bien couverte.</div></details>
+      <details><summary>Comment obtenir un devis ?</summary><div class="ans">Appelez-nous ou remplissez le formulaire ci-dessous. Nous convenons d'un rendez-vous pour prendre les mesures et comprendre votre projet avant de vous remettre un devis.</div></details>
+      <details><summary>Peut-on remplacer seulement quelques fenêtres ?</summary><div class="ans">Bien sûr. Vous pouvez traiter une pièce, une façade ou l'ensemble de la maison, en plusieurs étapes si vous le souhaitez.</div></details>
+      <details><summary>Que signifie « RGE » ?</summary><div class="ans">« Reconnu Garant de l'Environnement » est une qualification des professionnels de la rénovation énergétique. BJ Menuiserie figure au registre de l'ADEME pour les fenêtres, volets et portes donnant sur l'extérieur.</div></details>
+      <details><summary>Puis-je voir vos disponibilités ?</summary><div class="ans">Nous travaillons sur rendez-vous. Le plus simple est de nous appeler au 06 81 87 59 91 ou de nous écrire, nous revenons vers vous.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="zone" id="zone">
+  <div class="wrap zone-grid">
+    <div class="rv">
+      <div class="kicker">Zone d'intervention</div>
+      <h2>Ambazac, Limoges et toute la Haute-Vienne.</h2>
+      <p>Notre adresse est à Ambazac, aux portes des monts d'Ambazac et à quelques minutes de Limoges. De là, nous rayonnons dans le département.</p>
+      <address><strong>BJ Menuiserie</strong><br>315 route Martin Nadaud, Le Puy Roudier<br>87240 Ambazac<br>Sur rendez-vous · nous contacter</address>
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=315+route+Martin+Nadaud+87240+Ambazac" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+    <div class="map-art rv">
+      <svg viewBox="0 0 440 320" role="img" aria-label="Carte stylisée de la zone">
+        <rect width="440" height="320" fill="#f4efe6"/>
+        <g stroke="#d8cfc0" stroke-width="1"><path d="M0 60h440M0 120h440M0 180h440M0 240h440M0 300h440M60 0v320M140 0v320M220 0v320M300 0v320M380 0v320"/></g>
+        <path d="M-10 250C80 210 140 240 220 170S380 120 450 60" stroke="#a63d2a" stroke-width="5" fill="none" opacity=".7"/>
+        <path d="M60 330C120 260 160 200 230 150" stroke="#8a6a4f" stroke-width="3" fill="none"/>
+        <circle cx="230" cy="155" r="70" fill="#a63d2a" opacity=".1"/><circle cx="230" cy="155" r="120" fill="none" stroke="#a63d2a" stroke-dasharray="4 6" opacity=".4"/>
+        <path d="M230 135a14 14 0 0 1 14 14c0 12-14 28-14 28s-14-16-14-28a14 14 0 0 1 14-14z" fill="#a63d2a"/><circle cx="230" cy="149" r="5" fill="#fff"/>
+        <text x="248" y="150" font-family="Playfair Display,Georgia,serif" font-size="18" font-weight="700" fill="#3b2a1e">Ambazac</text>
+        <text x="62" y="250" font-family="Playfair Display,Georgia,serif" font-size="16" font-style="italic" fill="#5e4a3b">Limoges</text>
+        <text x="300" y="300" font-family="Inter,sans-serif" font-size="10" letter-spacing="2" fill="#5e4a3b">HAUTE-VIENNE</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="info rv">
+      <div class="kicker">Contact</div>
+      <h2>Parlons de vos ouvertures.</h2>
+      <p>Une question, un projet, une simple envie de comparer ? Écrivez-nous ou appelez, nous répondons dès que possible.</p>
+      <a class="tel" href="tel:+33681875991">06 81 87 59 91</a>
+      <p><a href="mailto:bjmenuiserie87@gmail.com">bjmenuiserie87@gmail.com</a></p>
+      <p>315 route Martin Nadaud, 87240 Ambazac<br>Sur rendez-vous</p>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="f"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+      <div class="f"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+      <div class="f full"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
+      <div class="f full"><label for="proj">Votre projet</label>
+        <select id="proj" name="proj"><option>Fenêtres</option><option>Volets roulants</option><option>Volets battants</option><option>Porte d'entrée</option><option>Autre</option></select></div>
+      <div class="f full"><label for="txt">Message</label><textarea id="txt" name="txt" required></textarea></div>
+      <div class="f full"><button class="btn primary" type="submit">Envoyer ma demande</button></div>
+      <div class="msg" id="msg" role="status">Maquette de démonstration : ce formulaire n'envoie rien pour l'instant. Pour joindre BJ Menuiserie, appelez le 06 81 87 59 91.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><a class="logo" href="#top"><span>BJ <b>Menuiserie</b></span></a><p>Fenêtres, volets et portes d'entrée à Ambazac et dans toute la Haute-Vienne.</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="#services">Ouvrages</a></li><li><a href="#methode">Méthode</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#faq">Questions</a></li></ul></div>
+      <div><h4>Coordonnées</h4><ul><li><a href="tel:+33681875991">06 81 87 59 91</a></li><li><a href="mailto:bjmenuiserie87@gmail.com">bjmenuiserie87@gmail.com</a></li><li>315 route Martin Nadaud<br>87240 Ambazac</li></ul></div>
+      <div><h4>Repères</h4><ul><li>Entreprise RGE</li><li>Sur rendez-vous</li><li>Ambazac · Limoges · Haute-Vienne</li></ul></div>
+    </div>
+    <div class="legal"><span>© BJ Menuiserie – Tous droits réservés</span><span>Mentions légales à compléter avant la mise en ligne</span></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33681875991" aria-label="Appeler BJ Menuiserie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');}
+  b.addEventListener('click',function(){set(!m.classList.contains('open'));});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});
+    els.forEach(function(e,i){e.style.transitionDelay=((i%3)*80)+'ms';io.observe(e);});
+  }else{els.forEach(function(e){e.classList.add('in');});}
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('on');});
+})();
+</script>
+</body>
+</html>
