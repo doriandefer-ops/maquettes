@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guinee – chauffagiste à Saint-Nazaire</title>
+<meta name="description" content="Guinee, chauffagiste à Saint-Nazaire : installation, entretien et dépannage de chaudières gaz et fioul.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--fb);line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.sec{padding:clamp(56px,8vw,104px) 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.08;margin:0 0 .5em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,4.4vw,3.1rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+.ic{width:28px;height:28px;flex:none}
+.btn{display:inline-flex;align-items:center;gap:.55em;padding:.85em 1.4em;font:600 1rem var(--fb);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn .ic{width:20px;height:20px}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6rem}
+/* nav */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--fh);font-weight:700;font-size:1.2rem;text-decoration:none;display:flex;align-items:center;gap:.5em}
+.links{display:flex;gap:24px;list-style:none;margin:0;padding:0;align-items:center}
+.links a{text-decoration:none;font-size:.95rem;font-weight:500;opacity:.85}
+.links a:hover{opacity:1}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit;padding:10px}
+.burger span{display:block;height:2px;background:currentColor;margin:6px 0;transition:transform .3s,opacity .3s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .links{position:fixed;inset:68px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;background:var(--navbg);transform:translateY(-130%);transition:transform .35s;max-height:calc(100vh - 68px);overflow:auto;box-shadow:0 20px 30px rgba(0,0,0,.2)}
+ .links.open{transform:none}
+ .links a{display:block;padding:14px 4px;border-bottom:1px solid var(--line);font-size:1.05rem}
+}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.trust div{display:flex;gap:12px;align-items:flex-start;padding:16px}
+.trust b{display:block;font-family:var(--fh);font-size:1.1rem}
+.trust small{opacity:.75;font-size:.9rem;display:block;line-height:1.4}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.card{padding:26px;transition:transform .25s,box-shadow .25s,background .25s}
+.card:hover{transform:translateY(-5px)}
+.card .ic{width:38px;height:38px;margin-bottom:14px}
+.card p{margin:0;opacity:.85;font-size:.97rem}
+.head{max-width:720px;margin-bottom:2.4rem}
+.head p{opacity:.8;font-size:1.05rem}
+.kick{font:700 .8rem var(--fb);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.8rem;display:block;color:var(--accent)}
+/* why / steps */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.why>div{padding:22px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;padding:24px;position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 2.6rem var(--fh);color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center}
+.about .art{aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;font:600 1.08rem var(--fb);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;transition:transform .3s;color:var(--accent)}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 18px;opacity:.85;max-width:70ch;margin:0}
+/* hours */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:820px){.info{grid-template-columns:1fr}}
+.info>div{padding:28px}
+table.h{width:100%;border-collapse:collapse}
+table.h td{padding:9px 6px;border-bottom:1px solid var(--line)}
+table.h td:last-child{text-align:right}
+table.h tr.today{font-weight:700;color:var(--accent)}
+table.h tr.today td:first-child::after{content:" · aujourd'hui";font-weight:500;font-size:.8em}
+/* form */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px)}
+@media(max-width:820px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;padding:.8em 1em;width:100%;color:inherit;background:var(--field);border:1.5px solid var(--line);border-radius:var(--r,8px)}
+textarea{min-height:120px;resize:vertical}
+.ok{display:none;padding:14px 16px;font-weight:600;border:2px dashed var(--accent)}
+.ok.show{display:block}
+.cl{list-style:none;padding:0;margin:0 0 1.4rem;display:grid;gap:12px}
+.cl li{display:flex;gap:12px;align-items:flex-start}
+.cl .ic{width:22px;height:22px;color:var(--accent);margin-top:3px}
+.cl a{word-break:break-word}
+/* footer */
+footer{padding:48px 0 90px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+footer h3{font-size:1rem;text-transform:uppercase;letter-spacing:.1em}
+footer a{opacity:.85}
+.demo{font-size:.82rem;text-align:center;padding:12px 16px;background:#111;color:#ddd;position:relative;z-index:2}
+.fab{display:none}
+@media(max-width:860px){.fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent);color:var(--accentfg);box-shadow:0 8px 24px rgba(0,0,0,.3);text-decoration:none}.fab .ic{width:26px;height:26px}.fab{opacity:0;pointer-events:none;transition:opacity .3s}body.sc .fab{opacity:1;pointer-events:auto}}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+
+:root{--bg:#eeeae2;--fg:#1d2b27;--accent:#c9701f;--accent2:#1e3a34;--accentfg:#fff;--navbg:#eeeae2;--line:rgba(29,43,39,.2);--field:#f8f6f1;--fh:'Newsreader',Georgia,serif;--fb:'Hanken Grotesk',system-ui,sans-serif;--r:0}
+h1,h2,h3{font-weight:400;letter-spacing:-.015em}h2{font-size:clamp(2rem,4.4vw,3.2rem)}h3{font-family:var(--fb);font-weight:600;font-size:1.05rem;letter-spacing:0}
+.top{background:rgba(238,234,226,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}.brand{font-size:1.4rem}
+.hero{padding:130px 0 60px;min-height:100svh;display:flex;align-items:center}
+.hero .wrap{display:grid;gap:40px}
+.hero .top3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid #1d2b27;padding-top:14px;font:600 .78rem var(--fb);letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-size:clamp(4.4rem,17vw,14rem);line-height:.84;font-weight:300;margin:0;letter-spacing:-.04em}.hero h1 i{color:#c9701f;font-weight:300}
+.hero .bottom{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:34px;align-items:end;border-top:1px solid #1d2b27;padding-top:26px}
+.hero p.lead{font-size:1.15rem;max-width:36ch;margin:0}.hero .cta-row{margin:0;justify-content:flex-end;flex-direction:column;align-items:stretch}
+.hero .cta-row .btn{justify-content:center}
+.boiler{width:100%;max-width:240px;justify-self:center}
+@media(max-width:860px){.hero .bottom{grid-template-columns:1fr}.hero .cta-row{flex-direction:row;justify-content:flex-start}.boiler{max-width:170px;justify-self:start}.hero .top3{grid-template-columns:1fr;gap:6px}}
+.b1{background:#1e3a34;color:#eeeae2;border-radius:0}.b1:hover{background:#c9701f}.b2{border-color:#1d2b27;border-radius:0}.b2:hover{background:#1d2b27;color:#eeeae2}
+.trustband{border-block:1px solid #1d2b27}.trust div+div{border-left:1px solid var(--line)}.trust .ic{color:#c9701f}
+.card{border:1px solid #1d2b27;background:#f8f6f1}.card:hover{background:#1e3a34;color:#eeeae2}.card:hover .ic{color:#eeeae2}.card .ic{color:#c9701f;transition:color .25s}.card p{opacity:.8}
+.alt{background:#e3ded3}.why>div{border-top:2px solid #c9701f;padding-left:0}.why .ic{color:#1e3a34;margin-bottom:6px}
+.steps li{border-top:1px solid #1d2b27;padding-left:0}.steps li::before{font-weight:300;font-size:3.2rem}
+.panel{border:1px solid #1d2b27;padding:28px;background:#f8f6f1}
+footer{background:#1e3a34;color:#eeeae2}footer .cl .ic{color:#e8a05a}
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #1d2b27}
+.seasons>div{padding:28px 22px;border-right:1px solid #1d2b27;min-height:260px;position:relative;display:flex;flex-direction:column;justify-content:space-between}
+.seasons>div:last-child{border:0}.seasons .m{font:300 3.4rem/1 var(--fh);color:#c9701f}.seasons h3{margin:.4rem 0}.seasons p{margin:0;font-size:.95rem;opacity:.85}
+.seasons>div.hl{background:#1e3a34;color:#eeeae2}
+@media(max-width:900px){.seasons{grid-template-columns:1fr 1fr}.seasons>div{border-bottom:1px solid #1d2b27}}@media(max-width:520px){.seasons{grid-template-columns:1fr}.seasons>div{min-height:0}}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="#top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9701f" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3" fill="#c9701f"/></svg><span>Guinee</span></a>
+<button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<ul class="links"><li><a href="#services">Services</a></li><li><a href="#pourquoi">Atouts</a></li><li><a href="#deroule">Déroulé</a></li><li><a href="#calendrier">Calendrier</a></li><li><a href="#faq">FAQ</a></li><li><a href="#infos">Infos</a></li><li><a class="btn b1 navbtn" href="#contact" style="padding:.5em 1.1em;font-size:.9rem">Contact</a></li></ul></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="top3"><span>Chaudières</span><span>Entretien &amp; dépannage</span><span>Saint-Nazaire</span></div>
+<h1>Guin<i>ee</i></h1><div class="bottom"><p class="lead">Une chaudière au gaz ou au fioul qui fonctionne simplement, sans histoire. Installation, entretien et dépannage à Saint-Nazaire.</p><svg class="boiler" viewBox="0 0 200 260" fill="none" stroke="#1d2b27" stroke-width="2" role="img" aria-label="Dessin au trait d'une chaudière"><rect x="30" y="10" width="140" height="190" rx="4"/><circle cx="100" cy="70" r="30"/><path d="M100 70l14-12M100 40v6M70 70h6M124 70h6"/><rect x="60" y="120" width="80" height="12"/><rect x="60" y="144" width="52" height="8"/><circle cx="130" cy="170" r="6" stroke="#c9701f"/><path d="M55 200v40M145 200v40M30 240h140"/></svg><div class="cta-row"><a class="btn b1" href="mailto:maxime.guinee@orange.fr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Écrire</a><a class="btn b2" href="#contact">Demander un devis</a></div></div></div></section>
+<section class="trustband"><div class="wrap trust"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1 4-3 5-3 9a4 4 0 0 0 8 0c0-2-1-3-2-4 0 2-1 3-2 3 1-3 0-6-1-8z"/><path d="M7 15a5 5 0 0 0 10 0"/></svg><span><b>Gaz et fioul</b><small>Deux énergies maîtrisées</small></span></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg><span><b>Saint-Nazaire</b><small>Zone d’intervention</small></span></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><span><b>Entretien &amp; dépannage</b><small>Au même endroit</small></span></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><b>Par email</b><small>Réponse à votre demande</small></span></div></div></section>
+<section class="sec" id="services"><div class="wrap"><div class="head rv"><span class="kick">Prestations</span><h2>L’essentiel, bien fait</h2><p>Chaudières à gaz et à fioul pour les particuliers de Saint-Nazaire.</p></div><div class="cards"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1 4-3 5-3 9a4 4 0 0 0 8 0c0-2-1-3-2-4 0 2-1 3-2 3 1-3 0-6-1-8z"/><path d="M7 15a5 5 0 0 0 10 0"/></svg><h3>Installation de chaudière</h3><p>Pose d’une chaudière gaz ou fioul adaptée à votre logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="9"/><path d="M12 13l4-5M7 13h1M12 7v1M16 13h1"/></svg><h3>Entretien</h3><p>Contrôle annuel, nettoyage et réglage de l’appareil.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><h3>Dépannage</h3><p>Une panne de chaudière ? Contactez-nous pour organiser l’intervention.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 5v12M12 5v12M16 5v12M6 20h12"/></svg><h3>Remplacement</h3><p>Remplacement d’une chaudière ancienne par un modèle récent.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><h3>Conseil</h3><p>Un avis honnête sur la réparation ou le remplacement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"/></svg><h3>Eau chaude</h3><p>Réglage de la production d’eau chaude liée à votre chaudière.</p></article></div></div></section>
+<section class="sec alt" id="pourquoi"><div class="wrap"><div class="head rv"><span class="kick">Pourquoi nous choisir</span><h2>Ce qui compte</h2></div><div class="why"><div class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><h3>Simple</h3><p style="margin:0;opacity:.85">Pas de jargon : on explique ce qu’on fait.</p></div><div class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></svg><h3>Fiable</h3><p style="margin:0;opacity:.85">Un travail soigné qui dure.</p></div><div class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg><h3>Proche</h3><p style="margin:0;opacity:.85">Un chauffagiste de Saint-Nazaire.</p></div><div class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><h3>Polyvalent</h3><p style="margin:0;opacity:.85">Installation, entretien, dépannage.</p></div></div></div></section>
+<section class="sec" id="deroule"><div class="wrap"><div class="head rv"><span class="kick">Comment ça se passe</span><h2>Le déroulé</h2></div><ol class="steps"><li class="rv"><h3>Contact</h3><p style="margin:0;opacity:.85">Vous nous écrivez votre besoin.</p></li><li class="rv"><h3>Diagnostic</h3><p style="margin:0;opacity:.85">Nous regardons votre installation.</p></li><li class="rv"><h3>Devis</h3><p style="margin:0;opacity:.85">Les travaux sont chiffrés avant de commencer.</p></li><li class="rv"><h3>Intervention</h3><p style="margin:0;opacity:.85">Réalisation, essais, conseils.</p></li></ol></div></section>
+<section class="sec alt" id="apropos"><div class="wrap about"><div class="rv"><span class="kick">À propos</span><h2>Un chauffagiste de Saint-Nazaire</h2><p>Guinee est un chauffagiste installé à Saint-Nazaire. Son métier : installer, entretenir et dépanner les chaudières à gaz et à fioul.</p><p>Peu de mots, du travail propre, et un interlocuteur facile à joindre.</p></div><div class="art rv"><svg viewBox="0 0 300 300" width="100%" role="img" aria-label="Cercle et ligne"><rect width="300" height="300" fill="#e3ded3"/><circle cx="150" cy="150" r="96" fill="none" stroke="#1d2b27" stroke-width="2"/><circle cx="150" cy="150" r="60" fill="#c9701f"/><path d="M30 150h240" stroke="#1d2b27" stroke-width="2"/></svg></div></div></section>
+<section class="sec" id="calendrier"><div class="wrap"><div class="head rv"><span class="kick">Le bon rythme</span><h2>Une chaudière au fil de l’année</h2><p>Quelques repères généraux pour garder votre chauffage fiable. Un professionnel vous conseille selon votre appareil.</p></div>
+<div class="seasons rv"><div><div><span class="m">01</span><h3>Automne</h3></div><p>C’est le bon moment pour faire entretenir la chaudière avant les premiers froids.</p></div><div class="hl"><div><span class="m">02</span><h3>Hiver</h3></div><p>Surveillez la pression et la température. Au moindre doute, contactez un professionnel.</p></div><div><div><span class="m">03</span><h3>Printemps</h3></div><p>Moment idéal pour remplacer un appareil vieillissant, hors période de grand froid.</p></div><div><div><span class="m">04</span><h3>Été</h3></div><p>Une période calme pour prévoir les travaux de radiateurs ou de circuit.</p></div></div></div></section>
+<section class="sec" id="faq"><div class="wrap"><div class="head rv"><span class="kick">Questions fréquentes</span><h2>Vos questions, nos réponses</h2></div><div class="faq rv"><details><summary>Entretenez-vous les chaudières fioul ?</summary><p>Oui, comme les chaudières à gaz.</p></details><details><summary>L’entretien est-il obligatoire ?</summary><p>Oui, un entretien annuel par un professionnel est obligatoire pour les chaudières.</p></details><details><summary>Quand remplacer sa chaudière ?</summary><p>Lorsqu’elle est ancienne, souvent en panne ou coûteuse à l’usage : un diagnostic aide à décider.</p></details><details><summary>Que faire en cas de panne ?</summary><p>Vérifiez l’alimentation et la pression selon la notice, puis contactez-nous.</p></details><details><summary>Comment demander un devis ?</summary><p>Par le formulaire ou par email, avec votre adresse et votre appareil actuel.</p></details><details><summary>Quelle zone desservez-vous ?</summary><p>Saint-Nazaire et communes voisines.</p></details></div></div></section>
+<section class="sec alt" id="infos"><div class="wrap info"><div class="rv panel"><h2 style="font-size:1.7rem">Horaires</h2><p>Les horaires ne sont pas publiés : écrivez-nous ou appelez pour convenir d’un rendez-vous.</p></div><div class="rv panel"><h2 style="font-size:1.7rem">Où nous trouver</h2><p>Saint-Nazaire et environs</p><p style="opacity:.8">Adresse communiquée sur rendez-vous.</p><a class="btn b1" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saint-Nazaire+chauffagiste+Guinee"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Itinéraire</a></div></div></section>
+<section class="sec" id="contact"><div class="wrap contact"><div class="rv"><span class="kick">Contact</span><h2>Écrivez-nous</h2><p>Votre chaudière mérite un coup d’œil ? Un message suffit.</p><ul class="cl"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:maxime.guinee@orange.fr">maxime.guinee@orange.fr</a></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg><span>Saint-Nazaire et environs</span></li></ul></div>
+<form class="rv panel" novalidate><label>Votre nom<input type="text" name="nom" autocomplete="name"></label><label>Votre email ou téléphone<input type="text" name="contact" autocomplete="email"></label><label>Votre besoin<select name="besoin"><option>Installation</option><option>Entretien</option><option>Dépannage</option><option>Autre</option></select></label><label>Message<textarea name="message" placeholder="Décrivez brièvement votre projet…"></textarea></label><button class="btn b1" type="submit">Envoyer ma demande</button><div class="ok" role="status">Maquette de démonstration : ce formulaire n’envoie rien pour l’instant.</div></form></div></section>
+</main>
+<footer><div class="wrap fgrid"><div><h3>Guinee</h3><p style="opacity:.8">Chauffagiste à Saint-Nazaire : chaudières gaz et fioul.</p></div><div><h3>Coordonnées</h3><ul class="cl"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:maxime.guinee@orange.fr">maxime.guinee@orange.fr</a></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg><span>Saint-Nazaire et environs</span></li></ul></div><div><h3>Horaires</h3><p style="opacity:.8">Sur rendez-vous : contactez-nous pour convenir d’un créneau.</p></div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="fab" href="mailto:maxime.guinee@orange.fr" aria-label="Écrire un email"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+<script>
+(function(){
+var b=document.querySelector('.burger'),l=document.querySelector('.links');
+b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+var t=document.querySelector('.top');function sc(){t.classList.toggle('scrolled',window.scrollY>30);document.body.classList.toggle('sc',window.scrollY>600)}sc();window.addEventListener('scroll',sc,{passive:true});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+var d=(new Date().getDay()+6)%7,r=document.querySelectorAll('table.h tr[data-d]');r.forEach(function(x){if(+x.dataset.d===d)x.classList.add('today')});
+var f=document.querySelector('form');f.addEventListener('submit',function(e){e.preventDefault();document.querySelector('.ok').classList.add('show')});
+})();
+</script>
+</body></html>
