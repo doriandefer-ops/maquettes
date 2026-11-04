@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Climatisation et Chauffage Ibanez – Climatisation et chauffage à Saint-Estève</title>
+<meta name="description" content="Climatisation et Chauffage Ibanez à Saint-Estève (66) : chaudières, pompes à chaleur, climatisation pour particuliers et professionnels.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;font-weight:var(--hw,700)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px;display:block}
+.lead{color:var(--muted);max-width:640px;margin-bottom:38px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);color:var(--navfg);backdrop-filter:blur(10px);border-bottom:1px solid var(--navline,transparent)}
+.nav .in{max-width:1160px;margin:auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.15rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;opacity:.85;transition:.2s}
+.menu a:hover{opacity:1;color:var(--accent)}
+.menu a.cta{background:var(--accent);color:var(--onaccent,#fff);padding:9px 18px;border-radius:var(--rb,999px);opacity:1;font-weight:700}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .menu{position:absolute;top:66px;left:0;right:0;background:var(--navbg);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.3s}
+ .menu.open{max-height:520px;opacity:1;pointer-events:auto}
+ .menu a{padding:14px 0;border-bottom:1px solid rgba(128,128,128,.25);font-size:1rem}
+ .menu a.cta{text-align:center;margin-top:12px;border:0}
+ section{padding:64px 0}
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--rb,999px);font-weight:700;text-decoration:none;font-family:var(--fb);font-size:1rem;border:2px solid var(--accent);background:var(--accent);color:var(--onaccent,#fff);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.btn .ic{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.ic{width:34px;height:34px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.trust li{display:flex;gap:14px;align-items:center}
+.trust b{display:block;font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.trust small{color:var(--muted);font-size:.85rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px;transition:transform .25s,box-shadow .25s;box-shadow:var(--sh,none)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shh,0 18px 40px rgba(0,0,0,.12))}
+.card .ic{color:var(--accent);margin-bottom:14px;width:40px;height:40px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.steps li{counter-increment:s;position:relative;padding:26px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--fh);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:.96rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px;color:var(--muted)}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{padding:16px 18px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);display:flex;gap:12px;align-items:center;font-weight:600}
+.facts .ic{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.faq details{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);margin-bottom:12px;padding:0 22px;transition:.2s}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-weight:700;font-family:var(--fh);font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--accent);transition:.25s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 20px}
+.hours td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+.note{font-size:.82rem;color:var(--muted)}
+.addr{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.addr .ic{width:24px;height:24px;color:var(--accent);flex:none;margin-top:3px}
+form.f{display:grid;gap:14px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px}
+form.f label{font-size:.85rem;font-weight:700;display:grid;gap:6px}
+form.f input,form.f textarea,form.f select{font:inherit;padding:13px 14px;border-radius:calc(var(--r,16px)/2);border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.f input:focus,form.f textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.sent{display:none;padding:14px;border-radius:10px;background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+footer{padding:56px 0 30px;background:var(--fbg);color:var(--ffg)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+footer h4{font-family:var(--fh);margin-bottom:10px;font-size:1.05rem}
+footer p,footer a{font-size:.94rem;opacity:.85;display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{opacity:1;text-decoration:underline}
+.demo{background:#111;color:#ddd;text-align:center;font-size:.8rem;padding:12px 16px}
+.callfab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--onaccent,#fff);align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.callfab .ic{width:26px;height:26px;color:inherit;margin:0}
+@media(max-width:860px){.callfab{display:flex}}
+.spec .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gal figure{border-radius:var(--r,16px);overflow:hidden;background:var(--card);border:var(--cb,1px solid var(--line))}
+.gal figure svg{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 18px;font-weight:700;font-size:.95rem}
+.gal figcaption small{display:block;color:var(--muted);font-weight:400}
+
+:root{--bg:#f4f8ff;--fg:#0a1b3d;--muted:#52627f;--accent:#1565ff;--card:#fff;--line:#dce6f7;--navbg:rgba(255,255,255,.88);--navfg:#0a1b3d;--navline:#dce6f7;--fh:'Sora',sans-serif;--fb:'Public Sans',sans-serif;--hw:700;--r:24px;--sh:0 10px 30px rgba(21,101,255,.08);--shh:0 24px 50px rgba(21,101,255,.22);--fbg:#0a1b3d;--ffg:#e7efff}
+.hero{padding:130px 0 80px;background:radial-gradient(900px 500px at 85% 20%,#dbe9ff,transparent),linear-gradient(#f4f8ff,#eaf2ff);min-height:100vh;display:flex;align-items:center}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);letter-spacing:-.03em}.hero h1 span{color:#1565ff}
+.hero p{max-width:540px;margin-top:20px;color:var(--muted)}
+.pill{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #dce6f7;padding:8px 16px;border-radius:99px;font-size:.82rem;font-weight:600;margin-bottom:22px;box-shadow:var(--sh)}.pill i{width:8px;height:8px;border-radius:50%;background:#ff6a3d;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.7);opacity:.4}}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.chips li{background:#0a1b3d;color:#fff;border-radius:99px;padding:6px 14px;font-size:.8rem}
+.iso svg{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(21,101,255,.2))}
+.air path{stroke-dasharray:8 10;animation:flow 3s linear infinite}@keyframes flow{to{stroke-dashoffset:-72}}
+@media(max-width:860px){.hg{grid-template-columns:1fr}.hero{padding-top:100px}}
+.trust{margin-top:-30px;padding:0 0 30px;z-index:3}.trust ul{background:#fff;border-radius:28px;padding:26px;box-shadow:var(--sh)}.trust .ic{color:#1565ff}
+.alt{background:#eaf1fd}
+.card .ic{background:#e6efff;border-radius:16px;padding:10px;width:54px;height:54px}
+.steps li{border-radius:24px}.steps li:before{background:#1565ff;color:#fff;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.2rem}
+.btn{box-shadow:0 8px 20px rgba(21,101,255,.28)}.btn.alt{box-shadow:none}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.duo .card{padding:38px}.duo .card:first-child{background:#0a1b3d;color:#fff}.duo .card:first-child p,.duo .card:first-child li{color:#b8c9ee}.duo .card:first-child .ic{background:#1565ff;color:#fff}
+.duo ul{list-style:none;margin-top:14px}.duo li{padding:8px 0;border-top:1px solid rgba(128,150,200,.3);color:var(--muted)}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+</style></head>
+<body class="t-ibanez">
+<header class="nav"><div class="in"><a class="brand" href="#top">Climatisation et Chauffage Ibanez</a>
+<nav class="menu" id="menu"><a href="#services">Prestations</a><a href="#apropos">À propos</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="cta" href="tel:0468923737">04 68 92 37 37</a></nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hero" id="hero"><div class="wrap hg"><div class="ht"><span class="pill rv in"><i></i> Saint-Estève · Climatisation &amp; chauffage</span>
+<h1>Le bon climat,<br><span>toute l’année.</span></h1>
+<p>Climatisation et Chauffage Ibanez installe et entretient chaudières, pompes à chaleur et climatisation pour les particuliers et les professionnels de Saint-Estève et de l’agglomération de Perpignan.</p>
+<div class="btns"><a class="btn" href="tel:0468923737"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="#contact">Demander un devis</a></div>
+<ul class="chips"><li>Qualibat PAC</li><li>Qualibat CET</li><li>Qualibat chaudière gaz/fioul</li></ul></div>
+<div class="iso"><svg viewBox="0 0 520 440" role="img" aria-label="Illustration d’une climatisation et d’un thermostat"><defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dbe9ff"/></linearGradient></defs>
+<path d="M260 380L60 270V140l200 110 200-110v130z" fill="#cfe0ff"/><path d="M60 140L260 30l200 110-200 110z" fill="#eaf2ff"/><path d="M260 250v130l200-110V140z" fill="#b9d0ff"/>
+<g><path d="M110 150l110-62 110 62-110 62z" fill="url(#gl)" stroke="#1565ff" stroke-width="3"/><path d="M110 150v34l110 62v-34z" fill="#c4d8ff" stroke="#1565ff" stroke-width="3"/><path d="M330 150v34l-110 62v-34z" fill="#a9c4ff" stroke="#1565ff" stroke-width="3"/>
+<g stroke="#1565ff" stroke-width="3" stroke-linecap="round"><path d="M140 168l70 40M140 178l70 40M140 188l70 40"/></g></g>
+<g class="air" fill="none" stroke="#1565ff" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M250 240q40 30 80 20t60 30"/><path d="M240 262q50 40 90 30t70 40"/><path d="M230 284q60 40 100 36t80 44"/></g>
+<g transform="translate(340 60)"><rect width="150" height="96" rx="22" fill="#0a1b3d"/><text x="75" y="58" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="44" fill="#fff">21°</text><text x="75" y="80" text-anchor="middle" font-family="Sora,sans-serif" font-size="11" fill="#7fb0ff" letter-spacing="2">CONFORT</text></g>
+<circle cx="110" cy="360" r="26" fill="#ff6a3d"/><path d="M110 344c3 7 10 9 10 17a10 10 0 0 1-20 0c0-4 2-6 4-8 2 2 4 1 6-9z" fill="#fff"/></svg></div></div></section>
+<section class="trust" id="confiance"><div class="wrap"><ul><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><div><b>Qualibat PAC</b><small>Pompes à chaleur</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><div><b>Qualibat CET</b><small>Chauffe-eau thermodynamique</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><div><b>Qualibat chaudière</b><small>Gaz et fioul</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Saint-Estève</b><small>Zone La Mirande</small></div></li></ul></div></section>
+<section id="services"><div class="wrap"><span class="kicker rv">Nos prestations</span><h2 class="rv">Climatisation, chauffage, pompes à chaleur</h2><p class="lead rv">Des installations pensées pour durer, pour les particuliers comme pour les professionnels.</p><div class="svc"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Climatisation</h3><p>Étude, pose et entretien de climatisations pour la maison, le commerce et le bureau.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompes à chaleur</h3><p>Chauffer et rafraîchir avec un seul équipement, selon le modèle et votre logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><h3>Chaudières gaz et fioul</h3><p>Remplacement et installation de chaudières, avec réglages et mise en service.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><h3>Chauffe-eau thermodynamique</h3><p>Eau chaude économe : fourniture, pose et raccordement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Entretien &amp; réparation</h3><p>Contrôles, dépannage et remplacement de pièces pour garder vos équipements fiables.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Conseil &amp; devis</h3><p>Une visite et un devis détaillé pour choisir l’équipement adapté.</p></article></div></div></section>
+<section id="atouts" class="alt"><div class="wrap"><span class="kicker rv">Pourquoi nous choisir</span><h2 class="rv">Pourquoi choisir Ibanez</h2><div class="why" style="margin-top:30px"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Trois qualifications Qualibat</h3><p>PAC, chauffe-eau thermodynamique et remplacement de chaudière gaz/fioul.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Particuliers et pros</h3><p>Une équipe habituée aux logements comme aux locaux professionnels.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><h3>Au cœur de l’agglo</h3><p>Basés à Saint-Estève, zone La Mirande, proches de Perpignan.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Du conseil au SAV</h3><p>Étude, pose, entretien : un seul interlocuteur sur la durée.</p></article></div></div></section>
+<section id="etapes"><div class="wrap"><span class="kicker rv">Comment ça se passe</span><h2 class="rv">Simple, du premier appel à la mise en service</h2><ol class="steps" style="margin-top:30px"><li class="rv"><h3>Votre demande</h3><p>Appel, e-mail ou formulaire : vous décrivez votre besoin.</p></li><li class="rv"><h3>Étude sur place</h3><p>Un technicien évalue le local ou le logement.</p></li><li class="rv"><h3>Devis</h3><p>Proposition détaillée, sans engagement.</p></li><li class="rv"><h3>Pose & suivi</h3><p>Installation, essais, explications et entretien ensuite.</p></li></ol></div></section>
+<section id="apropos" class="alt"><div class="wrap about"><div class="rv"><span class="kicker">À propos</span><h2>Une entreprise de climatisation et de chauffage à Saint-Estève</h2><p>Climatisation et Chauffage Ibanez est installée au 2 rue du Ribéral, dans la zone d’activités de Saint-Estève, aux portes de Perpignan.</p><p>L’entreprise installe de la climatisation, du chauffage et des pompes à chaleur pour les particuliers comme pour les professionnels, et affiche des qualifications Qualibat en pompe à chaleur, chauffe-eau thermodynamique et remplacement de chaudière gaz/fioul.</p></div><ul class="facts rv"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><span>Qualibat PAC</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><span>Qualibat chauffe-eau thermodynamique</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><span>Qualibat remplacement chaudière gaz/fioul</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><span>2 rue du Ribéral, Saint-Estève</span></li></ul></div></section>
+<section id="special" class="spec"><div class="wrap"><span class="kicker rv">Particuliers &amp; professionnels</span><h2 class="rv">Une même équipe pour la maison et le local pro</h2>
+<div class="duo"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Pour votre maison</h3><p>Chauffage, eau chaude et fraîcheur pour votre logement.</p><ul><li>Remplacement de chaudière gaz ou fioul</li><li>Pompe à chaleur et climatisation</li><li>Chauffe-eau thermodynamique</li><li>Entretien et dépannage</li></ul></article>
+<article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Pour votre activité</h3><p>Confort des équipes et des clients dans vos locaux.</p><ul><li>Climatisation de bureaux et commerces</li><li>Chauffage de locaux professionnels</li><li>Installation et maintenance</li><li>Devis sur demande</li></ul></article></div></div></section>
+<section id="avis" class="alt"><div class="wrap"><span class="kicker rv">Avis clients</span><h2 class="rv">Vos avis, bientôt ici</h2><p class="lead rv">Aucune note ni avis n’est affiché en ligne pour le moment. Sur un vrai site, les retours de vos clients seraient mis en avant ici.</p><a class="btn alt rv" href="https://www.google.com/search?q=Climatisation%20et%20Chauffage%20Ibanez%20Saint-Est%C3%A8ve" target="_blank" rel="noopener">Voir les avis sur Google</a></div></section>
+<section id="faq" class="faq"><div class="wrap"><span class="kicker rv">Questions fréquentes</span><h2 class="rv">On vous répond</h2><div style="margin-top:26px;max-width:860px"><details class="rv"><summary>À quelle fréquence faire entretenir ma chaudière ?</summary><p>En général une fois par an. Pour les chaudières gaz et fioul, un entretien annuel est d’ailleurs prévu par la réglementation : l’artisan vous confirmera ce qui s’applique à votre installation.</p></details><details class="rv"><summary>Pompe à chaleur ou chaudière : que choisir ?</summary><p>Cela dépend de votre logement, de son isolation et de votre budget. Une visite sur place permet de comparer les solutions et de vous remettre un devis détaillé.</p></details><details class="rv"><summary>Existe-t-il des aides financières pour mes travaux ?</summary><p>Selon votre situation et les travaux, certaines aides peuvent exister. Elles demandent souvent des conditions précises : renseignez-vous directement auprès de l’entreprise avant de vous engager.</p></details><details class="rv"><summary>Que faire en cas de panne de chauffage ?</summary><p>Contactez-nous dès que possible en décrivant le symptôme (pas de chauffage, bruit, voyant d’erreur). Cela permet de préparer l’intervention.</p></details><details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Saint-Estève, Perpignan et les communes alentour, pour les particuliers et les professionnels.</p></details><details class="rv"><summary>Comment obtenir un devis ?</summary><p>Par le formulaire, par e-mail ou par téléphone : décrivez votre besoin et nous revenons vers vous pour fixer un rendez-vous si une visite est utile.</p></details></div></div></section>
+<section id="contact" class="alt"><div class="wrap"><span class="kicker rv">Contact &amp; horaires</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="contact" style="margin-top:28px"><div class="rv">
+<div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Saint-Estève</b><br>2 rue du Ribéral<br>66240 Saint-Estève</div></div>
+<p style="margin:6px 0"><a href="tel:0468923737">04 68 92 37 37</a></p><p style="margin:6px 0"><a href="mailto:c.c.ibanez@wanadoo.fr">c.c.ibanez@wanadoo.fr</a></p>
+<table class="hours"><tr><td>Lundi</td><td>Sur rendez-vous</td></tr><tr><td>Mardi</td><td>Sur rendez-vous</td></tr><tr><td>Mercredi</td><td>Sur rendez-vous</td></tr><tr><td>Jeudi</td><td>Sur rendez-vous</td></tr><tr><td>Vendredi</td><td>Sur rendez-vous</td></tr><tr><td>Samedi</td><td>Sur rendez-vous</td></tr><tr><td>Dimanche</td><td>Sur rendez-vous</td></tr></table><p class="note">Horaires indicatifs de la maquette : à confirmer avec l’entreprise.</p>
+<div class="btns" style="margin-top:20px"><a class="btn" href="tel:0468923737"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=2%20rue%20du%20Rib%C3%A9ral%2C%2066240%20Saint-Est%C3%A8ve" target="_blank" rel="noopener">Itinéraire</a></div></div>
+<form class="f rv" action="#" method="post"><label>Votre nom<input required name="nom" autocomplete="name"></label>
+<label>Téléphone ou e-mail<input required name="contact" autocomplete="email"></label>
+<label>Votre besoin<select name="b"><option>Entretien / dépannage chaudière</option><option>Remplacement de chaudière</option><option>Pompe à chaleur / climatisation</option><option>Plomberie</option><option>Autre demande</option></select></label>
+<label>Message<textarea rows="4" name="m" placeholder="Décrivez brièvement votre projet…"></textarea></label>
+<button class="btn" type="submit">Demander un devis</button><div class="sent" role="status"></div></form></div></div></section>
+</main>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Climatisation et Chauffage Ibanez</h4><p>Climatisation, chauffage et pompes à chaleur à Saint-Estève et autour de Perpignan.</p></div>
+<div><h4>Coordonnées</h4><p>2 rue du Ribéral<br>66240 Saint-Estève</p><a href="tel:0468923737">04 68 92 37 37</a><a href="mailto:c.c.ibanez@wanadoo.fr">c.c.ibanez@wanadoo.fr</a></div>
+<div><h4>Horaires</h4><p>Sur rendez-vous, du lundi au dimanche (à confirmer).</p></div>
+<div><h4>Navigation</h4><a href="#services">Prestations</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div>
+</div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="callfab" href="tel:0468923737" aria-label="Appeler"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+ var d=(new Date().getDay()+6)%7,rows=document.querySelectorAll('.hours tr');if(rows[d])rows[d].classList.add('today');
+ var f=document.querySelector('form.f');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.sent');s.style.display='block';s.textContent='Maquette de démonstration : ce formulaire n\u2019envoie rien pour le moment.'});
+})();
+</script></body></html>

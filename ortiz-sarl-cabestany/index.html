@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ortiz SARL – Chauffage et plomberie à Cabestany</title>
+<meta name="description" content="Ortiz SARL, plombier chauffagiste à Cabestany (66) : chaudières, chauffage, plomberie. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;font-weight:var(--hw,700)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px;display:block}
+.lead{color:var(--muted);max-width:640px;margin-bottom:38px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);color:var(--navfg);backdrop-filter:blur(10px);border-bottom:1px solid var(--navline,transparent)}
+.nav .in{max-width:1160px;margin:auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.15rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;opacity:.85;transition:.2s}
+.menu a:hover{opacity:1;color:var(--accent)}
+.menu a.cta{background:var(--accent);color:var(--onaccent,#fff);padding:9px 18px;border-radius:var(--rb,999px);opacity:1;font-weight:700}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .menu{position:absolute;top:66px;left:0;right:0;background:var(--navbg);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.3s}
+ .menu.open{max-height:520px;opacity:1;pointer-events:auto}
+ .menu a{padding:14px 0;border-bottom:1px solid rgba(128,128,128,.25);font-size:1rem}
+ .menu a.cta{text-align:center;margin-top:12px;border:0}
+ section{padding:64px 0}
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--rb,999px);font-weight:700;text-decoration:none;font-family:var(--fb);font-size:1rem;border:2px solid var(--accent);background:var(--accent);color:var(--onaccent,#fff);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.btn .ic{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.ic{width:34px;height:34px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.trust li{display:flex;gap:14px;align-items:center}
+.trust b{display:block;font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.trust small{color:var(--muted);font-size:.85rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px;transition:transform .25s,box-shadow .25s;box-shadow:var(--sh,none)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shh,0 18px 40px rgba(0,0,0,.12))}
+.card .ic{color:var(--accent);margin-bottom:14px;width:40px;height:40px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.steps li{counter-increment:s;position:relative;padding:26px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--fh);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:.96rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px;color:var(--muted)}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{padding:16px 18px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);display:flex;gap:12px;align-items:center;font-weight:600}
+.facts .ic{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.faq details{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);margin-bottom:12px;padding:0 22px;transition:.2s}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-weight:700;font-family:var(--fh);font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--accent);transition:.25s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 20px}
+.hours td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+.note{font-size:.82rem;color:var(--muted)}
+.addr{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.addr .ic{width:24px;height:24px;color:var(--accent);flex:none;margin-top:3px}
+form.f{display:grid;gap:14px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px}
+form.f label{font-size:.85rem;font-weight:700;display:grid;gap:6px}
+form.f input,form.f textarea,form.f select{font:inherit;padding:13px 14px;border-radius:calc(var(--r,16px)/2);border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.f input:focus,form.f textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.sent{display:none;padding:14px;border-radius:10px;background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+footer{padding:56px 0 30px;background:var(--fbg);color:var(--ffg)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+footer h4{font-family:var(--fh);margin-bottom:10px;font-size:1.05rem}
+footer p,footer a{font-size:.94rem;opacity:.85;display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{opacity:1;text-decoration:underline}
+.demo{background:#111;color:#ddd;text-align:center;font-size:.8rem;padding:12px 16px}
+.callfab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--onaccent,#fff);align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.callfab .ic{width:26px;height:26px;color:inherit;margin:0}
+@media(max-width:860px){.callfab{display:flex}}
+.spec .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gal figure{border-radius:var(--r,16px);overflow:hidden;background:var(--card);border:var(--cb,1px solid var(--line))}
+.gal figure svg{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 18px;font-weight:700;font-size:.95rem}
+.gal figcaption small{display:block;color:var(--muted);font-weight:400}
+
+:root{--bg:#f3f8ff;--fg:#0b2540;--muted:#4a617a;--accent:#d98a00;--onaccent:#0b2540;--card:#fff;--line:#c4d9ee;--navbg:rgba(11,58,107,.96);--navfg:#e8f4ff;--fh:'Big Shoulders Display',sans-serif;--fb:'Barlow',sans-serif;--hw:800;--r:4px;--rb:3px;--fbg:#0b3a6b;--ffg:#e8f4ff;--cb:1px solid var(--line)}
+.hero{background:#0b3a6b;color:#e8f4ff;padding:120px 0 70px;min-height:100vh;display:flex;align-items:center;background-image:linear-gradient(rgba(127,180,230,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(127,180,230,.12) 1px,transparent 1px);background-size:40px 40px}
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);text-transform:uppercase;letter-spacing:.01em}
+.hero h1 em{display:block;font-style:normal;color:#ffcf33;font-size:.55em;letter-spacing:.06em}
+.hero p{max-width:520px;margin-top:20px;font-size:1.08rem;opacity:.9}
+.tag{display:inline-block;border:1px solid #7fb4e6;padding:6px 12px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+.hero .btn{background:#ffcf33;border-color:#ffcf33;color:#0b2540}.hero .btn.alt{background:transparent;color:#e8f4ff;border-color:#7fb4e6}
+.plan{border:1px solid #7fb4e6;background:rgba(5,30,60,.4)}.plan svg{display:block;width:100%;height:auto}
+@media(max-width:860px){.hg{grid-template-columns:1fr}.hero{padding-top:100px}}
+.trust{background:#ffcf33;color:#0b2540;padding:34px 0}.trust small{color:#3c3200}.trust .ic{color:#0b2540}
+.alt{background:#e4f0fc}
+.card{border-left:6px solid var(--accent);position:relative}
+.card:before{content:'';position:absolute;top:8px;right:8px;width:14px;height:14px;border-top:2px solid var(--accent);border-right:2px solid var(--accent)}
+h2{text-transform:uppercase;letter-spacing:.02em}
+.steps li{border-top:6px solid #0b3a6b}
+.steps li:before{color:#0b3a6b}
+.kicker{color:#0b3a6b;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px}
+.spec{background:#0b3a6b;color:#e8f4ff}.spec .kicker{color:#ffcf33}.spec .lead{color:#b9d6f3}
+.spec .gal figure{background:rgba(5,30,60,.5);border:1px solid #7fb4e6;color:#e8f4ff}.spec .gal figcaption small{color:#b9d6f3}
+</style></head>
+<body class="t-ortiz">
+<header class="nav"><div class="in"><a class="brand" href="#top">Ortiz SARL</a>
+<nav class="menu" id="menu"><a href="#services">Prestations</a><a href="#apropos">À propos</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="cta" href="tel:0468504924">04 68 50 49 24</a></nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hero" id="hero"><div class="wrap hg">
+<div class="ht"><span class="tag rv in">Plomberie · Chauffage · Cabestany</span>
+<h1>Ortiz&nbsp;SARL<br><em>chauffage &amp; plomberie</em></h1>
+<p>Chaudières, installations de chauffage et plomberie à Cabestany et autour de Perpignan. Un artisan de proximité, installé depuis 1996, pour que chez vous tout circule comme prévu.</p>
+<div class="btns"><a class="btn" href="tel:0468504924"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="#contact">Demander un devis</a></div></div>
+<div class="plan"><svg viewBox="0 0 520 440" role="img" aria-label="Plan technique d’une chaudière et de ses circuits">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#7fb4e6" stroke-opacity=".25"/></pattern></defs>
+<rect width="520" height="440" fill="url(#g)"/><rect x="6" y="6" width="508" height="428" fill="none" stroke="#cfe8ff" stroke-width="2"/>
+<g fill="none" stroke="#e8f4ff" stroke-width="2.4" stroke-linejoin="round">
+<rect x="150" y="90" width="150" height="210" rx="14"/><rect x="170" y="112" width="110" height="46" rx="6"/><circle cx="225" cy="205" r="34"/><path d="M225 205l18-16"/>
+<path d="M205 262q10-28 20 0t20 0" stroke="#ffcf33"/><path d="M175 300v50h-90M275 300v50h140v-80"/>
+<path d="M300 130h60v-40h110M300 160h40v90"/>
+<g stroke-width="2"><path d="M395 90v-30M415 90v-30M435 90v-30M455 90v-30M385 60h80"/><rect x="385" y="90" width="90" height="180" rx="8"/><path d="M405 90v180M425 90v180M445 90v180M465 90v180"/></g></g>
+<g stroke="#ffcf33" stroke-width="1.4" fill="none"><path d="M85 372h90M85 364v16M175 364v16"/><path d="M110 410h200"/><path d="M485 90v180M477 90h16M477 270h16"/></g>
+<g fill="#ffcf33" font-family="Barlow,sans-serif" font-size="13" font-weight="600"><text x="105" y="392">Ø 22</text><text x="494" y="185" transform="rotate(90 494 185)">H 1,80 m</text><text x="160" y="80">CHAUDIÈRE</text><text x="385" y="52">RADIATEUR</text></g>
+<g fill="#0b3a6b" stroke="#cfe8ff" stroke-width="1.6"><rect x="300" y="360" width="200" height="58"/></g>
+<g fill="#e8f4ff" font-family="Barlow,sans-serif"><text x="312" y="382" font-size="12" letter-spacing="1.4">PLAN N°1 · CABESTANY</text><text x="312" y="404" font-size="16" font-weight="700">ORTIZ SARL · DEPUIS 1996</text></g></svg></div></div></section>
+<section class="trust" id="confiance"><div class="wrap"><ul><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Depuis 1996</b><small>Une entreprise installée à Cabestany</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><div><b>Qualibat</b><small>Remplacement de chaudière</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Cabestany</b><small>et alentours de Perpignan</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><div><b>Gaz &amp; fioul</b><small>Chaudières toutes énergies</small></div></li></ul></div></section>
+<section id="services"><div class="wrap"><span class="kicker rv">Nos prestations</span><h2 class="rv">Chauffage, chaudières et plomberie</h2><p class="lead rv">Du dépannage à l’installation complète, des prestations claires et un interlocuteur unique.</p><div class="svc"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><h3>Chaudières gaz et fioul</h3><p>Installation, remplacement et mise en service de votre chaudière. Réglages soignés pour un confort durable.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Entretien &amp; dépannage</h3><p>Entretien annuel, recherche de panne, remplacement de pièces : on remet votre chauffage en marche.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><h3>Radiateurs &amp; circuits</h3><p>Pose et remplacement de radiateurs, purge, équilibrage et reprise de circuits de chauffage.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg><h3>Plomberie</h3><p>Robinetterie, sanitaires, fuites, évacuations : les petits et grands travaux d’eau de la maison.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Climatisation</h3><p>Étude et pose de solutions de climatisation pour les particuliers, selon votre logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Conseil &amp; devis</h3><p>Visite sur place si besoin et devis détaillé pour comparer les solutions en toute transparence.</p></article></div></div></section>
+<section id="atouts" class="alt"><div class="wrap"><span class="kicker rv">Pourquoi nous choisir</span><h2 class="rv">Un artisan local, du concret</h2><div class="why" style="margin-top:30px"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Proximité</h3><p>Basé à Cabestany, à deux pas de Perpignan : on se déplace vite et on connaît le secteur.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Travail qualifié</h3><p>Une qualification Qualibat en remplacement de chaudière, gage de savoir-faire.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Expérience</h3><p>Installé depuis 1996 : des années de chantiers derrière nous.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Un seul interlocuteur</h3><p>Chauffage et plomberie gérés par la même équipe, sans vous renvoyer la balle.</p></article></div></div></section>
+<section id="etapes"><div class="wrap"><span class="kicker rv">Comment ça se passe</span><h2 class="rv">Simple, du premier appel à la mise en service</h2><ol class="steps" style="margin-top:30px"><li class="rv"><h3>Votre appel</h3><p>Vous décrivez votre besoin ou votre panne, par téléphone ou via le formulaire.</p></li><li class="rv"><h3>La visite</h3><p>Si nécessaire, passage sur place pour mesurer, observer et conseiller.</p></li><li class="rv"><h3>Le devis</h3><p>Un devis détaillé, clair, avant tout engagement.</p></li><li class="rv"><h3>Les travaux</h3><p>Intervention soignée, mise en service et explications sur le fonctionnement.</p></li></ol></div></section>
+<section id="apropos" class="alt"><div class="wrap about"><div class="rv"><span class="kicker">À propos</span><h2>Le chauffage et la plomberie, version Cabestany</h2><p>Ortiz SARL est une entreprise de chauffage et de plomberie établie à Cabestany, près de Perpignan, depuis 1996.</p><p>Elle intervient sur les chaudières gaz et fioul, les installations de chauffage, la plomberie et la climatisation, avec une qualification Qualibat pour le remplacement de chaudière.</p><p>Cette maquette présente comment ces savoir-faire pourraient se raconter sur un site clair, rassurant et facile à contacter depuis un téléphone.</p></div><ul class="facts rv"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Création : 1996</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><span>Cabestany (66330)</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><span>Qualibat – remplacement de chaudière</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><span>Chauffage, plomberie, climatisation</span></li></ul></div></section>
+<section id="special" class="spec"><div class="wrap"><span class="kicker rv">Nos interventions</span><h2 class="rv">Du schéma à la mise en route</h2><p class="lead rv">Quatre types de travaux que l’on retrouve chez les particuliers de Cabestany et des environs.</p><div class="gal">
+<figure class="rv"><svg viewBox="0 0 300 190"><rect width="300" height="190" fill="#0a3160"/><g fill="none" stroke="#e8f4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="105" y="30" width="90" height="130" rx="10"/><circle cx="150" cy="105" r="22"/><path d="M130 62h40" /><path d="M140 160v14h-60M160 160v14h60" /><path d="M140 45q5-12 10 0t10 0" stroke="#ffcf33"/></g></svg><figcaption>Remplacement de chaudière<small>Gaz ou fioul, dépose et pose.</small></figcaption></figure>
+<figure class="rv"><svg viewBox="0 0 300 190"><rect width="300" height="190" fill="#0a3160"/><g fill="none" stroke="#e8f4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 150h70v-60h80v-40h70"/><circle cx="40" cy="150" r="5"/><circle cx="260" cy="50" r="5"/><path d="M110 90l-8-10M110 90l-8 10M190 90l8-10" stroke="#ffcf33"/></g></svg><figcaption>Circuits de chauffage<small>Tuyauterie, vannes, circulateurs.</small></figcaption></figure>
+<figure class="rv"><svg viewBox="0 0 300 190"><rect width="300" height="190" fill="#0a3160"/><g fill="none" stroke="#e8f4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M60 40v110M95 40v110M130 40v110M165 40v110M200 40v110M50 60h160M50 130h160"/><path d="M200 95h60" stroke="#ffcf33"/></g></svg><figcaption>Radiateurs<small>Pose, remplacement, purge.</small></figcaption></figure>
+<figure class="rv"><svg viewBox="0 0 300 190"><rect width="300" height="190" fill="#0a3160"/><g fill="none" stroke="#e8f4ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M90 120h120M150 120V60q0-14 14-14h30"/><path d="M194 46v30"/><path d="M118 150q10-12 20 0M150 150q10-12 20 0" stroke="#ffcf33"/><path d="M85 120v30h130v-30"/></g></svg><figcaption>Plomberie &amp; sanitaire<small>Robinetterie, évacuations, fuites.</small></figcaption></figure>
+</div></div></section>
+<section id="avis" class="alt"><div class="wrap"><span class="kicker rv">Avis clients</span><h2 class="rv">Vos avis, bientôt ici</h2><p class="lead rv">Aucune note ni avis n’est affiché en ligne pour le moment. Sur un vrai site, vos meilleurs avis clients seraient mis en avant ici.</p><a class="btn alt rv" href="https://www.google.com/search?q=Ortiz%20SARL%20Cabestany" target="_blank" rel="noopener">Voir les avis sur Google</a></div></section>
+<section id="faq" class="faq"><div class="wrap"><span class="kicker rv">Questions fréquentes</span><h2 class="rv">On vous répond</h2><div style="margin-top:26px;max-width:860px"><details class="rv"><summary>À quelle fréquence faire entretenir ma chaudière ?</summary><p>En général une fois par an. Pour les chaudières gaz et fioul, un entretien annuel est d’ailleurs prévu par la réglementation : l’artisan vous confirmera ce qui s’applique à votre installation.</p></details><details class="rv"><summary>Pompe à chaleur ou chaudière : que choisir ?</summary><p>Cela dépend de votre logement, de son isolation et de votre budget. Une visite sur place permet de comparer les solutions et de vous remettre un devis détaillé.</p></details><details class="rv"><summary>Existe-t-il des aides financières pour mes travaux ?</summary><p>Selon votre situation et les travaux, certaines aides peuvent exister. Elles demandent souvent des conditions précises : renseignez-vous directement auprès de l’entreprise avant de vous engager.</p></details><details class="rv"><summary>Que faire en cas de panne de chauffage ?</summary><p>Contactez-nous dès que possible en décrivant le symptôme (pas de chauffage, bruit, voyant d’erreur). Cela permet de préparer l’intervention.</p></details><details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Cabestany, Perpignan et les communes voisines. Précisez votre adresse lors de la demande pour confirmer.</p></details><details class="rv"><summary>Comment obtenir un devis ?</summary><p>Par le formulaire, par e-mail ou par téléphone : décrivez votre besoin et nous revenons vers vous pour fixer un rendez-vous si une visite est utile.</p></details></div></div></section>
+<section id="contact" class="alt"><div class="wrap"><span class="kicker rv">Contact &amp; horaires</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="contact" style="margin-top:28px"><div class="rv">
+<div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Cabestany et environs</b><br>5 rue Célestin Freinet<br>66330 Cabestany</div></div>
+<p style="margin:6px 0"><a href="tel:0468504924">04 68 50 49 24</a></p><p style="margin:6px 0"><a href="mailto:ortizsarl@free.fr">ortizsarl@free.fr</a></p>
+<table class="hours"><tr><td>Lundi</td><td>Sur rendez-vous</td></tr><tr><td>Mardi</td><td>Sur rendez-vous</td></tr><tr><td>Mercredi</td><td>Sur rendez-vous</td></tr><tr><td>Jeudi</td><td>Sur rendez-vous</td></tr><tr><td>Vendredi</td><td>Sur rendez-vous</td></tr><tr><td>Samedi</td><td>Sur rendez-vous</td></tr><tr><td>Dimanche</td><td>Sur rendez-vous</td></tr></table><p class="note">Horaires indicatifs de la maquette : à confirmer avec l’entreprise.</p>
+<div class="btns" style="margin-top:20px"><a class="btn" href="tel:0468504924"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=5%20rue%20C%C3%A9lestin%20Freinet%2C%2066330%20Cabestany" target="_blank" rel="noopener">Itinéraire</a></div></div>
+<form class="f rv" action="#" method="post"><label>Votre nom<input required name="nom" autocomplete="name"></label>
+<label>Téléphone ou e-mail<input required name="contact" autocomplete="email"></label>
+<label>Votre besoin<select name="b"><option>Entretien / dépannage chaudière</option><option>Remplacement de chaudière</option><option>Pompe à chaleur / climatisation</option><option>Plomberie</option><option>Autre demande</option></select></label>
+<label>Message<textarea rows="4" name="m" placeholder="Décrivez brièvement votre projet…"></textarea></label>
+<button class="btn" type="submit">Demander un devis</button><div class="sent" role="status"></div></form></div></div></section>
+</main>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Ortiz SARL</h4><p>Chauffage, chaudières et plomberie à Cabestany et autour de Perpignan.</p></div>
+<div><h4>Coordonnées</h4><p>5 rue Célestin Freinet<br>66330 Cabestany</p><a href="tel:0468504924">04 68 50 49 24</a><a href="mailto:ortizsarl@free.fr">ortizsarl@free.fr</a></div>
+<div><h4>Horaires</h4><p>Sur rendez-vous, du lundi au dimanche (à confirmer).</p></div>
+<div><h4>Navigation</h4><a href="#services">Prestations</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div>
+</div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="callfab" href="tel:0468504924" aria-label="Appeler"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+ var d=(new Date().getDay()+6)%7,rows=document.querySelectorAll('.hours tr');if(rows[d])rows[d].classList.add('today');
+ var f=document.querySelector('form.f');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.sent');s.style.display='block';s.textContent='Maquette de démonstration : ce formulaire n\u2019envoie rien pour le moment.'});
+})();
+</script></body></html>

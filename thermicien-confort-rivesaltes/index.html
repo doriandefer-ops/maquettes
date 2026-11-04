@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thermicien Confort – Chauffage à Rivesaltes</title>
+<meta name="description" content="Thermicien Confort à Rivesaltes (66) : chaudières, radiateurs électriques, pompes à chaleur et climatisation.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;font-weight:var(--hw,700)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px;display:block}
+.lead{color:var(--muted);max-width:640px;margin-bottom:38px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);color:var(--navfg);backdrop-filter:blur(10px);border-bottom:1px solid var(--navline,transparent)}
+.nav .in{max-width:1160px;margin:auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.15rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;opacity:.85;transition:.2s}
+.menu a:hover{opacity:1;color:var(--accent)}
+.menu a.cta{background:var(--accent);color:var(--onaccent,#fff);padding:9px 18px;border-radius:var(--rb,999px);opacity:1;font-weight:700}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .menu{position:absolute;top:66px;left:0;right:0;background:var(--navbg);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.3s}
+ .menu.open{max-height:520px;opacity:1;pointer-events:auto}
+ .menu a{padding:14px 0;border-bottom:1px solid rgba(128,128,128,.25);font-size:1rem}
+ .menu a.cta{text-align:center;margin-top:12px;border:0}
+ section{padding:64px 0}
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--rb,999px);font-weight:700;text-decoration:none;font-family:var(--fb);font-size:1rem;border:2px solid var(--accent);background:var(--accent);color:var(--onaccent,#fff);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.btn .ic{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.ic{width:34px;height:34px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.trust li{display:flex;gap:14px;align-items:center}
+.trust b{display:block;font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.trust small{color:var(--muted);font-size:.85rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px;transition:transform .25s,box-shadow .25s;box-shadow:var(--sh,none)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shh,0 18px 40px rgba(0,0,0,.12))}
+.card .ic{color:var(--accent);margin-bottom:14px;width:40px;height:40px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.steps li{counter-increment:s;position:relative;padding:26px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--fh);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:.96rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px;color:var(--muted)}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{padding:16px 18px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);display:flex;gap:12px;align-items:center;font-weight:600}
+.facts .ic{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.faq details{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);margin-bottom:12px;padding:0 22px;transition:.2s}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-weight:700;font-family:var(--fh);font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--accent);transition:.25s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 20px}
+.hours td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+.note{font-size:.82rem;color:var(--muted)}
+.addr{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.addr .ic{width:24px;height:24px;color:var(--accent);flex:none;margin-top:3px}
+form.f{display:grid;gap:14px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px}
+form.f label{font-size:.85rem;font-weight:700;display:grid;gap:6px}
+form.f input,form.f textarea,form.f select{font:inherit;padding:13px 14px;border-radius:calc(var(--r,16px)/2);border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.f input:focus,form.f textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.sent{display:none;padding:14px;border-radius:10px;background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+footer{padding:56px 0 30px;background:var(--fbg);color:var(--ffg)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+footer h4{font-family:var(--fh);margin-bottom:10px;font-size:1.05rem}
+footer p,footer a{font-size:.94rem;opacity:.85;display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{opacity:1;text-decoration:underline}
+.demo{background:#111;color:#ddd;text-align:center;font-size:.8rem;padding:12px 16px}
+.callfab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--onaccent,#fff);align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.callfab .ic{width:26px;height:26px;color:inherit;margin:0}
+@media(max-width:860px){.callfab{display:flex}}
+.spec .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gal figure{border-radius:var(--r,16px);overflow:hidden;background:var(--card);border:var(--cb,1px solid var(--line))}
+.gal figure svg{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 18px;font-weight:700;font-size:.95rem}
+.gal figcaption small{display:block;color:var(--muted);font-weight:400}
+
+:root{--bg:#fff6e6;--fg:#2a1a4a;--muted:#62557e;--accent:#e8503a;--card:#fff;--line:#f0dfc2;--navbg:rgba(255,246,230,.94);--navfg:#2a1a4a;--navline:#f0dfc2;--fh:'Familjen Grotesk',sans-serif;--fb:'Instrument Sans',sans-serif;--hw:700;--r:28px;--fbg:#2a1a4a;--ffg:#fff6e6}
+.hero{padding:104px 0 60px;min-height:100vh;display:flex;align-items:center}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(120px,auto);gap:16px;width:100%}
+.b{border-radius:28px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.b1{grid-column:span 4;grid-row:span 2;background:#2a1a4a;color:#fff6e6;justify-content:flex-end}
+.b1 h1{font-size:clamp(2.8rem,7.5vw,5.8rem);letter-spacing:-.03em;margin:10px 0}.b1 p{color:#d9cdf0;max-width:480px}
+.tag{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#ffb020;font-weight:700}
+.b2{grid-column:span 2;background:#ffb020;align-items:center;justify-content:center}.b2 svg{width:80%;animation:spin 50s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.b2 svg circle{fill:#e8503a}.b2 svg g{stroke:#e8503a}
+.b3{grid-column:span 2;background:#e8503a;color:#fff}.b3 .ic{color:#fff}.mailbig{font-size:.92rem;word-break:break-all;font-weight:700;color:#fff}
+.b4{grid-column:span 6;min-height:90px;background:#fff;border:2px solid #2a1a4a;align-items:center;justify-content:center}
+.b4 .btn{background:#2a1a4a;border-color:#2a1a4a;color:#fff}
+.b5,.b6,.b7{grid-column:span 2;background:#fff;border:1px solid #f0dfc2}.b5 .ic,.b6 .ic,.b7 .ic{color:#e8503a;width:38px;height:38px}.b5 b,.b6 b,.b7 b{font-family:var(--fh);font-size:1.4rem}.b5 span,.b6 span,.b7 span{color:var(--muted);font-size:.9rem}
+.b7{background:#e6dcf7}
+@media(max-width:860px){.bento{grid-template-columns:repeat(2,1fr)}.b1{grid-column:span 2;min-height:360px}.b2{grid-column:span 1}.b3{grid-column:span 1}.b4,.b5,.b6,.b7{grid-column:span 2}.hero{padding-top:90px}}
+.trust{padding:30px 0}.trust .ic{color:#e8503a}
+.alt{background:#fdeacb}
+.svc{grid-template-columns:repeat(6,1fr)}
+.svc .card:nth-child(1){grid-column:span 3;background:#2a1a4a;color:#fff6e6}.svc .card:nth-child(1) p{color:#d9cdf0}.svc .card:nth-child(1) .ic{color:#ffb020}
+.svc .card:nth-child(2),.svc .card:nth-child(3){grid-column:span 3}
+.svc .card:nth-child(n+4){grid-column:span 2}
+@media(max-width:860px){.svc{grid-template-columns:1fr}.svc .card{grid-column:auto!important}}
+.card{border:0;box-shadow:0 2px 0 var(--line)}
+.steps li{border:2px solid #2a1a4a}.steps li:before{color:#e8503a}
+.mat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.mat div{background:#fff;border-radius:24px;padding:24px;border:1px solid var(--line)}.mat div:nth-child(2){background:#ffb020}.mat div:nth-child(3){background:#2a1a4a;color:#fff6e6}.mat div:nth-child(3) p{color:#d9cdf0}
+.mat .ic{color:#e8503a;margin-bottom:10px}.mat div:nth-child(3) .ic{color:#ffb020}.mat h3{font-size:1.2rem;margin-bottom:6px}.mat p{color:var(--muted);font-size:.93rem}
+@media(max-width:900px){.mat{grid-template-columns:1fr 1fr}}@media(max-width:520px){.mat{grid-template-columns:1fr}}
+</style></head>
+<body class="t-therm">
+<header class="nav"><div class="in"><a class="brand" href="#top">Thermicien Confort</a>
+<nav class="menu" id="menu"><a href="#services">Prestations</a><a href="#apropos">À propos</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="cta" href="#contact">Demander un devis</a></nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hero" id="hero"><div class="wrap"><div class="bento">
+<div class="b b1 rv in"><span class="tag">Rivesaltes · Chauffage · Pompe à chaleur</span><h1>Thermicien<br>Confort</h1><p>Chaudières, radiateurs électriques et pompes à chaleur : votre confort thermique, à Rivesaltes et dans la Salanque.</p></div>
+<div class="b b2 rv in"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="42" fill="#ffb020"/><g stroke="#ffb020" stroke-width="9" stroke-linecap="round"><path d="M100 20v20M100 160v20M20 100h20M160 100h20M44 44l14 14M142 142l14 14M156 44l-14 14M58 142l-14 14"/></g></svg></div>
+<div class="b b3 rv in"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><b>Écrivez-nous</b><a class="mailbig" href="mailto:thermicienconfort@gmail.com">thermicienconfort@gmail.com</a></div>
+<div class="b b4 rv in"><a class="btn" href="#contact">Demander un devis</a></div>
+<div class="b b5 rv in"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><b>Chaud</b><span>Chaudières gaz &amp; fioul, radiateurs électriques</span></div>
+<div class="b b6 rv in"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><b>Pompe à chaleur</b><span>et climatisation</span></div>
+<div class="b b7 rv in"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><b>Rivesaltes</b><span>et alentours</span></div></div></div></section>
+<section class="trust" id="confiance"><div class="wrap"><ul><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Rivesaltes</b><small>et la Salanque</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><div><b>Gaz &amp; fioul</b><small>Chaudières</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><div><b>Électrique</b><small>Radiateurs et chaudières</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><div><b>Pompe à chaleur</b><small>et climatisation</small></div></li></ul></div></section>
+<section id="services"><div class="wrap"><span class="kicker rv">Nos prestations</span><h2 class="rv">Votre confort thermique, de A à Z</h2><p class="lead rv">Chauffage, radiateurs, pompe à chaleur et climatisation, avec un contact simple.</p><div class="svc"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><h3>Chaudières gaz et fioul</h3><p>Installation, remplacement, réglage et entretien de votre chaudière pour un chauffage fiable.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompe à chaleur &amp; climatisation</h3><p>Un équipement pour chauffer l’hiver et rafraîchir l’été, choisi selon votre logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><h3>Radiateurs &amp; chaudière électrique</h3><p>Pose et remplacement de radiateurs électriques, solutions de chauffage tout électrique.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Dépannage</h3><p>Diagnostic de panne et remise en route de votre installation.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg><h3>Plomberie</h3><p>Interventions de plomberie en lien avec votre installation de chauffage.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Conseil &amp; devis</h3><p>Un échange pour trouver la bonne solution et un devis détaillé.</p></article></div></div></section>
+<section id="atouts" class="alt"><div class="wrap"><span class="kicker rv">Pourquoi nous choisir</span><h2 class="rv">Un thermicien à votre écoute</h2><div class="why" style="margin-top:30px"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Spécialiste du confort</h3><p>Chauffage, pompe à chaleur, clim : la thermique est notre métier.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Local à Rivesaltes</h3><p>Un professionnel du secteur, facile à joindre par e-mail.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><h3>Toutes énergies</h3><p>Gaz, fioul, électrique, pompe à chaleur : une solution pour chaque budget.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Conseil honnête</h3><p>On compare les options avec vous avant de vous proposer un devis.</p></article></div></div></section>
+<section id="etapes"><div class="wrap"><span class="kicker rv">Comment ça se passe</span><h2 class="rv">Simple, du premier appel à la mise en service</h2><ol class="steps" style="margin-top:30px"><li class="rv"><h3>Votre message</h3><p>Écrivez-nous par e-mail ou via le formulaire.</p></li><li class="rv"><h3>Échange</h3><p>On clarifie votre besoin et on fixe un rendez-vous si utile.</p></li><li class="rv"><h3>Devis</h3><p>Proposition détaillée et transparente.</p></li><li class="rv"><h3>Installation</h3><p>Pose soignée, essais et explications.</p></li></ol></div></section>
+<section id="apropos" class="alt"><div class="wrap about"><div class="rv"><span class="kicker">À propos</span><h2>Thermicien Confort, à Rivesaltes</h2><p>Thermicien Confort est un professionnel du chauffage et de la climatisation basé à Rivesaltes, dans les Pyrénées-Orientales.</p><p>Il intervient sur les chaudières gaz et fioul, les radiateurs et chaudières électriques, ainsi que sur les pompes à chaleur et la climatisation.</p></div><ul class="facts rv"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><span>Rivesaltes (66600)</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><span>Chaudières gaz et fioul</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><span>Radiateurs et chaudières électriques</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><span>Pompe à chaleur et climatisation</span></li></ul></div></section>
+<section id="special" class="spec"><div class="wrap"><span class="kicker rv">Les équipements</span><h2 class="rv">Ce qui chauffe (et rafraîchit) chez vous</h2><div class="mat rv"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><h3>Chaudière</h3><p>Gaz ou fioul : installation, remplacement, réglages.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6v12M9 6v12M13 6v12M17 6v12M3 8h16M3 16h16"/></svg><h3>Radiateurs électriques</h3><p>Pose et remplacement, programmation simple.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompe à chaleur</h3><p>Chauffage et climatisation avec un seul équipement.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Entretien</h3><p>Contrôle et dépannage pour garder un confort régulier.</p></div></div></div></section>
+<section id="avis" class="alt"><div class="wrap"><span class="kicker rv">Avis clients</span><h2 class="rv">Vos avis, bientôt ici</h2><p class="lead rv">Aucune note ni avis n’est affiché en ligne pour le moment. Sur un vrai site, les avis de vos clients seraient mis en avant ici.</p><a class="btn alt rv" href="https://www.google.com/search?q=Thermicien%20Confort%20Rivesaltes" target="_blank" rel="noopener">Voir les avis sur Google</a></div></section>
+<section id="faq" class="faq"><div class="wrap"><span class="kicker rv">Questions fréquentes</span><h2 class="rv">On vous répond</h2><div style="margin-top:26px;max-width:860px"><details class="rv"><summary>À quelle fréquence faire entretenir ma chaudière ?</summary><p>En général une fois par an. Pour les chaudières gaz et fioul, un entretien annuel est d’ailleurs prévu par la réglementation : l’artisan vous confirmera ce qui s’applique à votre installation.</p></details><details class="rv"><summary>Pompe à chaleur ou chaudière : que choisir ?</summary><p>Cela dépend de votre logement, de son isolation et de votre budget. Une visite sur place permet de comparer les solutions et de vous remettre un devis détaillé.</p></details><details class="rv"><summary>Existe-t-il des aides financières pour mes travaux ?</summary><p>Selon votre situation et les travaux, certaines aides peuvent exister. Elles demandent souvent des conditions précises : renseignez-vous directement auprès de l’entreprise avant de vous engager.</p></details><details class="rv"><summary>Que faire en cas de panne de chauffage ?</summary><p>Contactez-nous dès que possible en décrivant le symptôme (pas de chauffage, bruit, voyant d’erreur). Cela permet de préparer l’intervention.</p></details><details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Rivesaltes, la Salanque, Perpignan et les communes voisines. Précisez votre adresse pour confirmer.</p></details><details class="rv"><summary>Comment obtenir un devis ?</summary><p>Par le formulaire, par e-mail ou par téléphone : décrivez votre besoin et nous revenons vers vous pour fixer un rendez-vous si une visite est utile.</p></details></div></div></section>
+<section id="contact" class="alt"><div class="wrap"><span class="kicker rv">Contact &amp; horaires</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="contact" style="margin-top:28px"><div class="rv">
+<div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Rivesaltes et environs</b><br>Rivesaltes (66600)<br>et alentours</div></div>
+<p style="margin:6px 0"></p><p style="margin:6px 0"><a href="mailto:thermicienconfort@gmail.com">thermicienconfort@gmail.com</a></p>
+<table class="hours"><tr><td>Lundi</td><td>Sur rendez-vous</td></tr><tr><td>Mardi</td><td>Sur rendez-vous</td></tr><tr><td>Mercredi</td><td>Sur rendez-vous</td></tr><tr><td>Jeudi</td><td>Sur rendez-vous</td></tr><tr><td>Vendredi</td><td>Sur rendez-vous</td></tr><tr><td>Samedi</td><td>Sur rendez-vous</td></tr><tr><td>Dimanche</td><td>Sur rendez-vous</td></tr></table><p class="note">Horaires indicatifs de la maquette : à confirmer avec l’entreprise.</p>
+<div class="btns" style="margin-top:20px"><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Rivesaltes%2066600" target="_blank" rel="noopener">Itinéraire</a></div></div>
+<form class="f rv" action="#" method="post"><label>Votre nom<input required name="nom" autocomplete="name"></label>
+<label>Téléphone ou e-mail<input required name="contact" autocomplete="email"></label>
+<label>Votre besoin<select name="b"><option>Entretien / dépannage chaudière</option><option>Remplacement de chaudière</option><option>Pompe à chaleur / climatisation</option><option>Plomberie</option><option>Autre demande</option></select></label>
+<label>Message<textarea rows="4" name="m" placeholder="Décrivez brièvement votre projet…"></textarea></label>
+<button class="btn" type="submit">Demander un devis</button><div class="sent" role="status"></div></form></div></div></section>
+</main>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Thermicien Confort</h4><p>Chauffage, radiateurs et pompes à chaleur à Rivesaltes et dans les Pyrénées-Orientales.</p></div>
+<div><h4>Coordonnées</h4><p>Rivesaltes (66600)<br>et alentours</p><a href="mailto:thermicienconfort@gmail.com">thermicienconfort@gmail.com</a></div>
+<div><h4>Horaires</h4><p>Sur rendez-vous (à confirmer).</p></div>
+<div><h4>Navigation</h4><a href="#services">Prestations</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div>
+</div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+ var d=(new Date().getDay()+6)%7,rows=document.querySelectorAll('.hours tr');if(rows[d])rows[d].classList.add('today');
+ var f=document.querySelector('form.f');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.sent');s.style.display='block';s.textContent='Maquette de démonstration : ce formulaire n\u2019envoie rien pour le moment.'});
+})();
+</script></body></html>

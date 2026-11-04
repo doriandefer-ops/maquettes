@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catalogne Énergies – Pompe à chaleur et climatisation à Perpignan</title>
+<meta name="description" content="Catalogne Énergies à Perpignan (66) : pompes à chaleur et climatisation. Demandez votre devis.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;font-weight:var(--hw,700)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px;display:block}
+.lead{color:var(--muted);max-width:640px;margin-bottom:38px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);color:var(--navfg);backdrop-filter:blur(10px);border-bottom:1px solid var(--navline,transparent)}
+.nav .in{max-width:1160px;margin:auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.15rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;opacity:.85;transition:.2s}
+.menu a:hover{opacity:1;color:var(--accent)}
+.menu a.cta{background:var(--accent);color:var(--onaccent,#fff);padding:9px 18px;border-radius:var(--rb,999px);opacity:1;font-weight:700}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .menu{position:absolute;top:66px;left:0;right:0;background:var(--navbg);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.3s}
+ .menu.open{max-height:520px;opacity:1;pointer-events:auto}
+ .menu a{padding:14px 0;border-bottom:1px solid rgba(128,128,128,.25);font-size:1rem}
+ .menu a.cta{text-align:center;margin-top:12px;border:0}
+ section{padding:64px 0}
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--rb,999px);font-weight:700;text-decoration:none;font-family:var(--fb);font-size:1rem;border:2px solid var(--accent);background:var(--accent);color:var(--onaccent,#fff);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.btn .ic{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.ic{width:34px;height:34px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.trust li{display:flex;gap:14px;align-items:center}
+.trust b{display:block;font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.trust small{color:var(--muted);font-size:.85rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px;transition:transform .25s,box-shadow .25s;box-shadow:var(--sh,none)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shh,0 18px 40px rgba(0,0,0,.12))}
+.card .ic{color:var(--accent);margin-bottom:14px;width:40px;height:40px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.steps li{counter-increment:s;position:relative;padding:26px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--fh);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:.96rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px;color:var(--muted)}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{padding:16px 18px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);display:flex;gap:12px;align-items:center;font-weight:600}
+.facts .ic{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.faq details{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);margin-bottom:12px;padding:0 22px;transition:.2s}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-weight:700;font-family:var(--fh);font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--accent);transition:.25s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 20px}
+.hours td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+.note{font-size:.82rem;color:var(--muted)}
+.addr{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.addr .ic{width:24px;height:24px;color:var(--accent);flex:none;margin-top:3px}
+form.f{display:grid;gap:14px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px}
+form.f label{font-size:.85rem;font-weight:700;display:grid;gap:6px}
+form.f input,form.f textarea,form.f select{font:inherit;padding:13px 14px;border-radius:calc(var(--r,16px)/2);border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.f input:focus,form.f textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.sent{display:none;padding:14px;border-radius:10px;background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+footer{padding:56px 0 30px;background:var(--fbg);color:var(--ffg)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+footer h4{font-family:var(--fh);margin-bottom:10px;font-size:1.05rem}
+footer p,footer a{font-size:.94rem;opacity:.85;display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{opacity:1;text-decoration:underline}
+.demo{background:#111;color:#ddd;text-align:center;font-size:.8rem;padding:12px 16px}
+.callfab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--onaccent,#fff);align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.callfab .ic{width:26px;height:26px;color:inherit;margin:0}
+@media(max-width:860px){.callfab{display:flex}}
+.spec .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gal figure{border-radius:var(--r,16px);overflow:hidden;background:var(--card);border:var(--cb,1px solid var(--line))}
+.gal figure svg{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 18px;font-weight:700;font-size:.95rem}
+.gal figcaption small{display:block;color:var(--muted);font-weight:400}
+
+:root{--bg:#fffdf5;--fg:#141414;--muted:#55524a;--accent:#d7141a;--card:#fff;--line:#141414;--navbg:#ffd400;--navfg:#141414;--navline:#141414;--fh:'Anton',sans-serif;--fb:'Libre Franklin',sans-serif;--hw:400;--r:0px;--rb:0;--fbg:#141414;--ffg:#fffdf5;--cb:3px solid #141414}
+h1,h2,h3{text-transform:uppercase;letter-spacing:.015em}h3{font-size:1.5rem!important}
+.menu a:hover{color:#d7141a}
+.hero{min-height:100vh;background:#ffd400;position:relative;overflow:hidden;display:flex;align-items:center;padding:110px 0 70px}
+.stripes{position:absolute;inset:0;display:flex;justify-content:space-between;padding:0 3%}
+.stripes i{width:5.5%;background:#d7141a;height:100%;transform:translateY(-100%);animation:drop .9s cubic-bezier(.2,.8,.2,1) forwards}
+.stripes i:nth-child(2n){background:#d7141a}
+.stripes i:nth-child(1){animation-delay:.05s}.stripes i:nth-child(2){animation-delay:.12s}.stripes i:nth-child(3){animation-delay:.19s}.stripes i:nth-child(4){animation-delay:.26s}.stripes i:nth-child(5){animation-delay:.33s}.stripes i:nth-child(6){animation-delay:.4s}.stripes i:nth-child(7){animation-delay:.47s}.stripes i:nth-child(8){animation-delay:.54s}.stripes i:nth-child(9){animation-delay:.61s}
+@keyframes drop{to{transform:none}}
+.hw2{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(3.4rem,11vw,9rem);line-height:.92}.hero h1 span{display:block;background:#fffdf5;border:4px solid #141414;padding:0 16px;width:fit-content;margin-bottom:8px;box-shadow:8px 8px 0 #141414}.hero h1 span+span{background:#141414;color:#ffd400;box-shadow:8px 8px 0 #fffdf5;margin-left:24px}
+.hero p{background:#fffdf5;border:3px solid #141414;padding:14px 18px;max-width:520px;margin-top:26px;font-weight:600}
+.tag{display:inline-block;background:#141414;color:#ffd400;padding:6px 14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin-bottom:18px}
+.hero .btn{background:#141414;border-color:#141414;color:#ffd400;box-shadow:5px 5px 0 #fffdf5;text-transform:uppercase;letter-spacing:.06em}.hero .btn.alt{background:#fffdf5;color:#141414;box-shadow:5px 5px 0 #141414}
+.unit svg{width:100%;height:auto;filter:drop-shadow(10px 10px 0 #141414)}.blades{transform-origin:180px 150px;animation:spin 6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:860px){.hw2{grid-template-columns:1fr}.unit{max-width:300px}.hero h1 span+span{margin-left:10px}.stripes i{width:7%}}
+.trust{background:#141414;color:#ffd400;padding:30px 0}.trust small{color:#d9d2b0}.trust .ic{color:#ffd400}
+.alt{background:#ffd400}
+.card{box-shadow:7px 7px 0 #141414}.card:hover{box-shadow:11px 11px 0 #141414;transform:translate(-3px,-3px)}
+.card .ic{color:#d7141a}
+.alt .card{background:#fffdf5}
+.steps li{box-shadow:6px 6px 0 #141414}.steps li:before{color:#d7141a}
+.kicker{background:#d7141a;color:#fff;padding:4px 10px;display:inline-block}
+.btn{border:3px solid #141414;box-shadow:5px 5px 0 #141414;text-transform:uppercase;letter-spacing:.05em;font-family:var(--fb);font-weight:800}
+.btn.alt{background:#fffdf5;color:#141414}
+.season{display:grid;grid-template-columns:1fr 1fr;border:4px solid #141414;margin-top:28px}
+.season>div{padding:40px 32px}.season>div:first-child{background:#d7141a;color:#fffdf5}.season>div:last-child{background:#141414;color:#ffd400}
+.season h3{font-size:2.4rem!important;margin:10px 0}.season p{font-weight:500}.season .ic{width:56px;height:56px}
+@media(max-width:760px){.season{grid-template-columns:1fr}}
+</style></head>
+<body class="t-catal">
+<header class="nav"><div class="in"><a class="brand" href="#top">Catalogne Énergies</a>
+<nav class="menu" id="menu"><a href="#services">Prestations</a><a href="#apropos">À propos</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="cta" href="#contact">Demander un devis</a></nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hero" id="hero"><div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap hw2"><div class="ht"><span class="tag rv in">Perpignan · Pompe à chaleur · Climatisation</span>
+<h1><span>Catalogne</span><span>Énergies</span></h1>
+<p class="rv in">Pompes à chaleur et climatisation à Perpignan et dans les Pyrénées-Orientales. Du soleil catalan, on garde le meilleur : le confort.</p>
+<div class="btns"><a class="btn" href="#contact">Demander un devis</a><a class="btn alt" href="mailto:catalogne.energies66@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Écrire un e-mail</a></div></div>
+<div class="unit"><svg viewBox="0 0 360 300" role="img" aria-label="Unité extérieure de pompe à chaleur"><rect x="30" y="40" width="300" height="220" rx="18" fill="#fffdf5" stroke="#141414" stroke-width="6"/><circle cx="180" cy="150" r="82" fill="#141414"/><circle cx="180" cy="150" r="70" fill="#fffdf5" stroke="#141414" stroke-width="4"/>
+<g class="blades" fill="#d7141a" stroke="#141414" stroke-width="3"><path d="M180 150C150 120 150 80 180 80c20 20 20 50 0 70z"/><path d="M180 150C210 120 250 120 250 150c-20 20-50 20-70 0z"/><path d="M180 150C210 180 210 220 180 220c-20-20-20-50 0-70z"/><path d="M180 150C150 180 110 180 110 150c20-20 50-20 70 0z"/></g><circle cx="180" cy="150" r="12" fill="#141414"/>
+<g stroke="#141414" stroke-width="4"><path d="M54 70h26M54 86h26M54 102h26"/></g><circle cx="300" cy="70" r="8" fill="#ffd400" stroke="#141414" stroke-width="3"/></svg></div></div></section>
+<section class="trust" id="confiance"><div class="wrap"><ul><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><div><b>Pompe à chaleur</b><small>Spécialité de l’entreprise</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><div><b>Climatisation</b><small>Chaud et froid</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Perpignan</b><small>et Pyrénées-Orientales</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>Contact direct</b><small>par e-mail</small></div></li></ul></div></section>
+<section id="services"><div class="wrap"><span class="kicker rv">Nos prestations</span><h2 class="rv">Pompes à chaleur et climatisation</h2><p class="lead rv">Une spécialité claire, un contact simple, un devis détaillé.</p><div class="svc"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompe à chaleur air-air</h3><p>Chauffage et rafraîchissement avec un équipement discret et pilotable facilement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompe à chaleur air-eau</h3><p>Un chauffage central alimenté par l’énergie de l’air, selon votre logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Climatisation réversible</h3><p>Fraîcheur l’été, chaleur l’hiver : étude, pose et mise en service.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Entretien &amp; dépannage</h3><p>Nettoyage, contrôle et réparation pour garder un rendement régulier.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Étude de votre logement</h3><p>Pour choisir la puissance et l’emplacement adaptés avant d’installer.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Conseil &amp; devis</h3><p>Un devis clair, une explication honnête des options.</p></article></div></div></section>
+<section id="atouts" class="alt"><div class="wrap"><span class="kicker rv">Pourquoi nous choisir</span><h2 class="rv">Une spécialité, pas mille promesses</h2><div class="why" style="margin-top:30px"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Spécialiste PAC &amp; clim</h3><p>Un métier précis, pour des installations réfléchies.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h3>Pensé pour le Roussillon</h3><p>Étés chauds, hivers doux : la pompe à chaleur y a tout son sens.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><h3>Contact direct</h3><p>Un échange simple par e-mail, sans intermédiaire.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Conseil transparent</h3><p>On vous explique les options avant de parler prix.</p></article></div></div></section>
+<section id="etapes"><div class="wrap"><span class="kicker rv">Comment ça se passe</span><h2 class="rv">Simple, du premier appel à la mise en service</h2><ol class="steps" style="margin-top:30px"><li class="rv"><h3>Votre message</h3><p>Décrivez votre logement et votre besoin.</p></li><li class="rv"><h3>Étude</h3><p>Échange, puis visite si nécessaire.</p></li><li class="rv"><h3>Devis</h3><p>Proposition détaillée et transparente.</p></li><li class="rv"><h3>Installation</h3><p>Pose, essais et prise en main.</p></li></ol></div></section>
+<section id="apropos" class="alt"><div class="wrap about"><div class="rv"><span class="kicker">À propos</span><h2>Catalogne Énergies, à Perpignan</h2><p>Catalogne Énergies est une entreprise de Perpignan spécialisée dans les pompes à chaleur et la climatisation.</p><p>Cette maquette imagine un site direct et lisible : l’essentiel de l’offre, une façon simple de demander un devis et une identité qui assume ses racines catalanes.</p></div><ul class="facts rv"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><span>Perpignan (66)</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><span>Pompes à chaleur</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><span>Climatisation</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>catalogne.energies66@gmail.com</span></li></ul></div></section>
+<section id="special" class="spec"><div class="wrap"><span class="kicker rv">Chaud &amp; froid</span><h2 class="rv">Deux saisons, un seul équipement</h2>
+<div class="season rv"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h3>Été : fraîcheur</h3><p>La climatisation réversible rafraîchit la maison quand le soleil tape fort sur Perpignan.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Hiver : chaleur</h3><p>La pompe à chaleur chauffe votre logement en puisant l’énergie dans l’air extérieur.</p></div></div></div></section>
+<section id="avis" class="alt"><div class="wrap"><span class="kicker rv">Avis clients</span><h2 class="rv">Vos avis, bientôt ici</h2><p class="lead rv">Aucune note ni avis n’est affiché en ligne pour le moment. Sur un vrai site, les avis de vos clients seraient mis en avant ici.</p><a class="btn alt rv" href="https://www.google.com/search?q=Catalogne%20Energies%20Perpignan" target="_blank" rel="noopener">Voir les avis sur Google</a></div></section>
+<section id="faq" class="faq"><div class="wrap"><span class="kicker rv">Questions fréquentes</span><h2 class="rv">On vous répond</h2><div style="margin-top:26px;max-width:860px"><details class="rv"><summary>À quelle fréquence faire entretenir ma chaudière ?</summary><p>En général une fois par an. Pour les chaudières gaz et fioul, un entretien annuel est d’ailleurs prévu par la réglementation : l’artisan vous confirmera ce qui s’applique à votre installation.</p></details><details class="rv"><summary>Pompe à chaleur ou chaudière : que choisir ?</summary><p>Cela dépend de votre logement, de son isolation et de votre budget. Une visite sur place permet de comparer les solutions et de vous remettre un devis détaillé.</p></details><details class="rv"><summary>Existe-t-il des aides financières pour mes travaux ?</summary><p>Selon votre situation et les travaux, certaines aides peuvent exister. Elles demandent souvent des conditions précises : renseignez-vous directement auprès de l’entreprise avant de vous engager.</p></details><details class="rv"><summary>Que faire en cas de panne de chauffage ?</summary><p>Contactez-nous dès que possible en décrivant le symptôme (pas de chauffage, bruit, voyant d’erreur). Cela permet de préparer l’intervention.</p></details><details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Perpignan et ses environs dans les Pyrénées-Orientales. Précisez votre adresse pour confirmer.</p></details><details class="rv"><summary>Comment obtenir un devis ?</summary><p>Par le formulaire, par e-mail ou par téléphone : décrivez votre besoin et nous revenons vers vous pour fixer un rendez-vous si une visite est utile.</p></details></div></div></section>
+<section id="contact" class="alt"><div class="wrap"><span class="kicker rv">Contact &amp; horaires</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="contact" style="margin-top:28px"><div class="rv">
+<div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Perpignan et environs</b><br>Perpignan (66)<br>et Pyrénées-Orientales</div></div>
+<p style="margin:6px 0"></p><p style="margin:6px 0"><a href="mailto:catalogne.energies66@gmail.com">catalogne.energies66@gmail.com</a></p>
+<table class="hours"><tr><td>Lundi</td><td>Sur rendez-vous</td></tr><tr><td>Mardi</td><td>Sur rendez-vous</td></tr><tr><td>Mercredi</td><td>Sur rendez-vous</td></tr><tr><td>Jeudi</td><td>Sur rendez-vous</td></tr><tr><td>Vendredi</td><td>Sur rendez-vous</td></tr><tr><td>Samedi</td><td>Sur rendez-vous</td></tr><tr><td>Dimanche</td><td>Sur rendez-vous</td></tr></table><p class="note">Horaires indicatifs de la maquette : à confirmer avec l’entreprise.</p>
+<div class="btns" style="margin-top:20px"><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Perpignan%2066000" target="_blank" rel="noopener">Itinéraire</a></div></div>
+<form class="f rv" action="#" method="post"><label>Votre nom<input required name="nom" autocomplete="name"></label>
+<label>Téléphone ou e-mail<input required name="contact" autocomplete="email"></label>
+<label>Votre besoin<select name="b"><option>Pompe à chaleur air-air</option><option>Pompe à chaleur air-eau</option><option>Climatisation</option><option>Entretien / dépannage</option><option>Autre demande</option></select></label>
+<label>Message<textarea rows="4" name="m" placeholder="Décrivez brièvement votre projet…"></textarea></label>
+<button class="btn" type="submit">Demander un devis</button><div class="sent" role="status"></div></form></div></div></section>
+</main>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Catalogne Énergies</h4><p>Pompes à chaleur et climatisation à Perpignan et dans les Pyrénées-Orientales.</p></div>
+<div><h4>Coordonnées</h4><p>Perpignan (66)<br>et Pyrénées-Orientales</p><a href="mailto:catalogne.energies66@gmail.com">catalogne.energies66@gmail.com</a></div>
+<div><h4>Horaires</h4><p>Sur rendez-vous (à confirmer).</p></div>
+<div><h4>Navigation</h4><a href="#services">Prestations</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div>
+</div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+ var d=(new Date().getDay()+6)%7,rows=document.querySelectorAll('.hours tr');if(rows[d])rows[d].classList.add('today');
+ var f=document.querySelector('form.f');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.sent');s.style.display='block';s.textContent='Maquette de démonstration : ce formulaire n\u2019envoie rien pour le moment.'});
+})();
+</script></body></html>

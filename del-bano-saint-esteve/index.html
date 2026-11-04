@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Del Bano – Chauffagiste à Saint-Estève</title>
+<meta name="description" content="Del Bano, chauffagiste à Saint-Estève (66) : chaudières, pompes à chaleur, chauffe-eau thermodynamiques.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poiret+One&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--bg);color:var(--fg);line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative}
+section{padding:88px 0;position:relative}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;font-weight:var(--hw,700)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:14px}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px;display:block}
+.lead{color:var(--muted);max-width:640px;margin-bottom:38px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navbg);color:var(--navfg);backdrop-filter:blur(10px);border-bottom:1px solid var(--navline,transparent)}
+.nav .in{max-width:1160px;margin:auto;padding:0 20px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.15rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+.menu{display:flex;gap:24px;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;opacity:.85;transition:.2s}
+.menu a:hover{opacity:1;color:var(--accent)}
+.menu a.cta{background:var(--accent);color:var(--onaccent,#fff);padding:9px 18px;border-radius:var(--rb,999px);opacity:1;font-weight:700}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:block}
+ .menu{position:absolute;top:66px;left:0;right:0;background:var(--navbg);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:.3s}
+ .menu.open{max-height:520px;opacity:1;pointer-events:auto}
+ .menu a{padding:14px 0;border-bottom:1px solid rgba(128,128,128,.25);font-size:1rem}
+ .menu a.cta{text-align:center;margin-top:12px;border:0}
+ section{padding:64px 0}
+}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--rb,999px);font-weight:700;text-decoration:none;font-family:var(--fb);font-size:1rem;border:2px solid var(--accent);background:var(--accent);color:var(--onaccent,#fff);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.alt{background:transparent;color:inherit;border-color:currentColor}
+.btn .ic{width:20px;height:20px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.ic{width:34px;height:34px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important;scroll-behavior:auto!important}}
+.trust ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.trust li{display:flex;gap:14px;align-items:center}
+.trust b{display:block;font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.trust small{color:var(--muted);font-size:.85rem}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px;transition:transform .25s,box-shadow .25s;box-shadow:var(--sh,none)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shh,0 18px 40px rgba(0,0,0,.12))}
+.card .ic{color:var(--accent);margin-bottom:14px;width:40px;height:40px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.steps li{counter-increment:s;position:relative;padding:26px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px)}
+.steps li:before{content:counter(s,decimal-leading-zero);font-family:var(--fh);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:.96rem}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about p{margin-bottom:14px;color:var(--muted)}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{padding:16px 18px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);display:flex;gap:12px;align-items:center;font-weight:600}
+.facts .ic{width:26px;height:26px;color:var(--accent);flex:none}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.faq details{background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);margin-bottom:12px;padding:0 22px;transition:.2s}
+.faq summary{cursor:pointer;list-style:none;padding:20px 28px 20px 0;font-weight:700;font-family:var(--fh);font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--accent);transition:.25s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;margin:14px 0 20px}
+.hours td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:.96rem}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+.note{font-size:.82rem;color:var(--muted)}
+.addr{display:flex;gap:12px;align-items:flex-start;margin:12px 0}.addr .ic{width:24px;height:24px;color:var(--accent);flex:none;margin-top:3px}
+form.f{display:grid;gap:14px;background:var(--card);border:var(--cb,1px solid var(--line));border-radius:var(--r,16px);padding:28px}
+form.f label{font-size:.85rem;font-weight:700;display:grid;gap:6px}
+form.f input,form.f textarea,form.f select{font:inherit;padding:13px 14px;border-radius:calc(var(--r,16px)/2);border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.f input:focus,form.f textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.sent{display:none;padding:14px;border-radius:10px;background:var(--accent);color:var(--onaccent,#fff);font-weight:700}
+footer{padding:56px 0 30px;background:var(--fbg);color:var(--ffg)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-bottom:30px}
+footer h4{font-family:var(--fh);margin-bottom:10px;font-size:1.05rem}
+footer p,footer a{font-size:.94rem;opacity:.85;display:block;text-decoration:none;margin-bottom:6px}
+footer a:hover{opacity:1;text-decoration:underline}
+.demo{background:#111;color:#ddd;text-align:center;font-size:.8rem;padding:12px 16px}
+.callfab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--onaccent,#fff);align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.callfab .ic{width:26px;height:26px;color:inherit;margin:0}
+@media(max-width:860px){.callfab{display:flex}}
+.spec .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.gal figure{border-radius:var(--r,16px);overflow:hidden;background:var(--card);border:var(--cb,1px solid var(--line))}
+.gal figure svg{display:block;width:100%;height:auto}
+.gal figcaption{padding:14px 18px;font-weight:700;font-size:.95rem}
+.gal figcaption small{display:block;color:var(--muted);font-weight:400}
+
+:root{--bg:#f3ecda;--fg:#10312b;--muted:#4f625b;--accent:#a8791b;--card:#fbf6e8;--line:#d9c995;--navbg:rgba(16,49,43,.97);--navfg:#f3ecda;--fh:'Poiret One',sans-serif;--fb:'Josefin Sans',sans-serif;--hw:400;--r:2px;--rb:0;--fbg:#10312b;--ffg:#f3ecda;--cb:1px solid var(--line)}
+h1,h2,h3{letter-spacing:.06em}h3{font-weight:700}h2{text-transform:uppercase;font-weight:700}
+.hero{min-height:100vh;background:#10312b;color:#f3ecda;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 0 70px;position:relative;overflow:hidden}
+.fan{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(1100px,150vw);opacity:.55}
+.hc{position:relative;z-index:2}
+.frame{max-width:680px;margin:auto;padding:54px 40px;border:1px solid #c9a24b;outline:1px solid #c9a24b;outline-offset:8px;background:rgba(16,49,43,.86)}
+.hero h1{font-size:clamp(3.4rem,13vw,7.5rem);color:#e9c46a;font-weight:700;text-transform:uppercase;line-height:1}
+.sub{font-size:1.25rem;letter-spacing:.2em;text-transform:uppercase;margin:6px 0 16px;color:#e9c46a}
+.tag{display:block;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px;color:#d9c995}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0}.orn i{width:80px;height:1px;background:#c9a24b}.orn b{width:12px;height:12px;background:#c9a24b;transform:rotate(45deg)}
+.hero .btn{background:#e9c46a;border-color:#e9c46a;color:#10312b;text-transform:uppercase;letter-spacing:.12em;font-size:.9rem}.hero .btn.alt{background:transparent;color:#e9c46a}
+.trust{background:#f3ecda;border-bottom:1px solid #c9a24b}.trust .ic{color:#a8791b}
+.alt{background:#e9e0c4}
+.card{border:1px solid #c9a24b;outline:1px solid #d9c995;outline-offset:-8px;text-align:center;padding:36px 30px}
+.card .ic{margin-inline:auto}
+.steps li{text-align:center;outline:1px solid #d9c995;outline-offset:-8px;padding:34px 22px}
+.kicker{letter-spacing:.3em}
+.btn{text-transform:uppercase;letter-spacing:.1em;font-size:.88rem}
+.spec{background:#10312b;color:#f3ecda}.spec .lead,.spec .note{color:#cdd9c9}.spec .kicker{color:#e9c46a}
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid #c9a24b;margin-top:28px}
+.cal div{padding:28px 22px;border-right:1px solid #c9a24b;text-align:center}.cal div:last-child{border-right:0}
+.cal h3{color:#e9c46a;font-size:1.5rem;margin:10px 0 6px;text-transform:uppercase}.cal p{color:#cdd9c9;font-size:.95rem}.cal .ic{color:#e9c46a;margin:auto;display:block}
+@media(max-width:700px){.cal div{border-right:0;border-bottom:1px solid #c9a24b}.frame{padding:40px 22px}}
+</style></head>
+<body class="t-delbano">
+<header class="nav"><div class="in"><a class="brand" href="#top">Del Bano</a>
+<nav class="menu" id="menu"><a href="#services">Prestations</a><a href="#special">Calendrier</a><a href="#faq">Questions</a><a href="#contact">Contact</a><a class="cta" href="tel:0468926818">04 68 92 68 18</a></nav>
+<button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hero" id="hero"><svg class="fan" viewBox="0 0 800 400" aria-hidden="true"><g stroke="#c9a24b" stroke-width="2" fill="none"><path d="M400 400L20 400M400 400L60 250M400 400L140 120M400 400L270 40M400 400L400 20M400 400L530 40M400 400L660 120M400 400L740 250M400 400L780 400"/><path d="M110 400a290 290 0 0 1 580 0M180 400a220 220 0 0 1 440 0M250 400a150 150 0 0 1 300 0M320 400a80 80 0 0 1 160 0"/></g></svg>
+<div class="wrap hc"><div class="frame rv in"><span class="tag">Saint-Estève · Chauffage · Climatisation</span><h1>Del&nbsp;Bano</h1><div class="orn"><i></i><b></b><i></i></div>
+<p class="sub">L’élégance d’un chauffage bien pensé</p><p>Chaudières, pompes à chaleur, chauffe-eau thermodynamiques : une installation soignée à Saint-Estève et autour de Perpignan.</p>
+<div class="btns" style="justify-content:center"><a class="btn" href="tel:0468926818"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="#contact">Demander un devis</a></div></div></div></section>
+<section class="trust" id="confiance"><div class="wrap"><ul><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><div><b>QualiPAC chauffage</b><small>Qualification affichée</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><div><b>QualiPAC chauffe-eau</b><small>Qualification affichée</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Saint-Estève</b><small>et agglomération de Perpignan</small></div></li><li class="rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><div><b>Gaz &amp; fioul</b><small>Chaudières</small></div></li></ul></div></section>
+<section id="services"><div class="wrap"><span class="kicker rv">Nos prestations</span><h2 class="rv">Chaleur, fraîcheur et eau chaude</h2><p class="lead rv">Un savoir-faire de chauffagiste, présenté avec la sobriété qu’il mérite.</p><div class="svc"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><h3>Chaudières gaz et fioul</h3><p>Pose, remplacement et mise en service, avec attention portée aux réglages et à la sécurité.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Pompes à chaleur</h3><p>Étude du logement, installation et prise en main de votre pompe à chaleur.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Climatisation</h3><p>Solutions de climatisation adaptées aux étés catalans et à l’usage de la maison.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><h3>Chauffe-eau thermodynamique</h3><p>Production d’eau chaude économe, pose et raccordement soignés.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Entretien &amp; dépannage</h3><p>Contrôles réguliers et interventions en cas de panne.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Conseil personnalisé</h3><p>Un échange simple pour choisir l’équipement qui vous convient vraiment.</p></article></div></div></section>
+<section id="atouts" class="alt"><div class="wrap"><span class="kicker rv">Pourquoi nous choisir</span><h2 class="rv">Quatre raisons de nous faire confiance</h2><div class="why" style="margin-top:30px"><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Qualifications</h3><p>QualiPAC chauffage et chauffe-eau thermodynamique, affichées dans les annuaires professionnels.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><h3>Artisan de proximité</h3><p>Établi à Saint-Estève, à deux pas de Perpignan.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/></svg><h3>Solutions variées</h3><p>Chaudière, pompe à chaleur, clim, eau chaude : une réponse à chaque logement.</p></article><article class="card rv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><h3>Travail soigné</h3><p>Une pose propre, des explications claires, un suivi après la mise en service.</p></article></div></div></section>
+<section id="etapes"><div class="wrap"><span class="kicker rv">Comment ça se passe</span><h2 class="rv">Simple, du premier appel à la mise en service</h2><ol class="steps" style="margin-top:30px"><li class="rv"><h3>Premier contact</h3><p>Vous nous présentez votre besoin, par téléphone ou en ligne.</p></li><li class="rv"><h3>Étude</h3><p>Visite si nécessaire pour évaluer le logement et l’existant.</p></li><li class="rv"><h3>Proposition</h3><p>Devis clair avec les équipements, la pose et les délais.</p></li><li class="rv"><h3>Installation</h3><p>Pose, essais, mise en service et conseils d’utilisation.</p></li></ol></div></section>
+<section id="apropos" class="alt"><div class="wrap about"><div class="rv"><span class="kicker">À propos</span><h2>Del Bano, le chauffage à Saint-Estève</h2><p>Del Bano est une entreprise de chauffage installée à Saint-Estève, aux portes de Perpignan.</p><p>Elle installe et entretient chaudières gaz et fioul, pompes à chaleur, climatisations et chauffe-eau thermodynamiques, et affiche les qualifications QualiPAC chauffage et chauffe-eau.</p></div><ul class="facts rv"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><span>QualiPAC chauffage</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="16" rx="3"/><path d="M7 9h10M10 19v3M14 19v3"/></svg><span>QualiPAC chauffe-eau thermodynamique</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><span>Saint-Estève (66240)</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 4.5 4 8a4 4 0 0 1-8 0c0-1.5.7-2.5 1.5-3.5C10 9 11 7 12 3z"/></svg><span>Chauffage, pompe à chaleur, clim</span></li></ul></div></section>
+<section id="special" class="spec"><div class="wrap"><span class="kicker rv">Le calendrier du confort</span><h2 class="rv">Un rendez-vous par saison</h2><p class="lead rv">Quelques repères généraux pour prendre soin de vos équipements. Votre artisan adaptera selon votre installation.</p>
+<div class="cal rv"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19l8-8"/></svg><h3>Automne</h3><p>Avant la saison de chauffe : entretien de la chaudière, purge des radiateurs, contrôle général.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7L4 17M9 3l3 3 3-3M9 21l3-3 3 3"/></svg><h3>Hiver</h3><p>Surveillance de la pression, réglage des températures, dépannage rapide en cas de souci.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 4 17 3 18 6c.8 2.600-3 4-6 4zM14 12c6 0 7 5 4 6-2.600.8-4-3-4-6zM12 14c0 6-5 7-6 4-.8-2.600 3-4 6-4zM10 12C4 12 3 7 6 6c2.600-.8 4 3 4 6z"/></svg><h3>Printemps</h3><p>Moment idéal pour étudier une pompe à chaleur ou un chauffe-eau thermodynamique.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h3>Été</h3><p>Entretien de la climatisation et préparation des chantiers de remplacement.</p></div></div></div></section>
+<section id="avis" class="alt"><div class="wrap"><span class="kicker rv">Avis clients</span><h2 class="rv">Vos avis, bientôt ici</h2><p class="lead rv">Aucune note ni avis n’est affiché en ligne pour le moment. Sur un vrai site, les témoignages de vos clients seraient valorisés ici.</p><a class="btn alt rv" href="https://www.google.com/search?q=Del%20Bano%20Saint-Est%C3%A8ve%20chauffage" target="_blank" rel="noopener">Voir les avis sur Google</a></div></section>
+<section id="faq" class="faq"><div class="wrap"><span class="kicker rv">Questions fréquentes</span><h2 class="rv">On vous répond</h2><div style="margin-top:26px;max-width:860px"><details class="rv"><summary>À quelle fréquence faire entretenir ma chaudière ?</summary><p>En général une fois par an. Pour les chaudières gaz et fioul, un entretien annuel est d’ailleurs prévu par la réglementation : l’artisan vous confirmera ce qui s’applique à votre installation.</p></details><details class="rv"><summary>Pompe à chaleur ou chaudière : que choisir ?</summary><p>Cela dépend de votre logement, de son isolation et de votre budget. Une visite sur place permet de comparer les solutions et de vous remettre un devis détaillé.</p></details><details class="rv"><summary>Existe-t-il des aides financières pour mes travaux ?</summary><p>Selon votre situation et les travaux, certaines aides peuvent exister. Elles demandent souvent des conditions précises : renseignez-vous directement auprès de l’entreprise avant de vous engager.</p></details><details class="rv"><summary>Que faire en cas de panne de chauffage ?</summary><p>Contactez-nous dès que possible en décrivant le symptôme (pas de chauffage, bruit, voyant d’erreur). Cela permet de préparer l’intervention.</p></details><details class="rv"><summary>Dans quelle zone intervenez-vous ?</summary><p>Saint-Estève, Perpignan et les communes alentour. Précisez votre adresse pour confirmer.</p></details><details class="rv"><summary>Comment obtenir un devis ?</summary><p>Par le formulaire, par e-mail ou par téléphone : décrivez votre besoin et nous revenons vers vous pour fixer un rendez-vous si une visite est utile.</p></details></div></div></section>
+<section id="contact" class="alt"><div class="wrap"><span class="kicker rv">Contact &amp; horaires</span><h2 class="rv">Parlons de votre projet</h2>
+<div class="contact" style="margin-top:28px"><div class="rv">
+<div class="addr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="9" r="2.500"/></svg><div><b>Saint-Estève et environs</b><br>Saint-Estève (66240)<br>et agglomération de Perpignan</div></div>
+<p style="margin:6px 0"><a href="tel:0468926818">04 68 92 68 18</a></p><p style="margin:6px 0"><a href="mailto:jpdelbano@wanadoo.fr">jpdelbano@wanadoo.fr</a></p>
+<table class="hours"><tr><td>Lundi</td><td>Sur rendez-vous</td></tr><tr><td>Mardi</td><td>Sur rendez-vous</td></tr><tr><td>Mercredi</td><td>Sur rendez-vous</td></tr><tr><td>Jeudi</td><td>Sur rendez-vous</td></tr><tr><td>Vendredi</td><td>Sur rendez-vous</td></tr><tr><td>Samedi</td><td>Sur rendez-vous</td></tr><tr><td>Dimanche</td><td>Sur rendez-vous</td></tr></table><p class="note">Horaires indicatifs de la maquette : à confirmer avec l’entreprise.</p>
+<div class="btns" style="margin-top:20px"><a class="btn" href="tel:0468926818"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Appeler</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Saint-Est%C3%A8ve%2066240" target="_blank" rel="noopener">Itinéraire</a></div></div>
+<form class="f rv" action="#" method="post"><label>Votre nom<input required name="nom" autocomplete="name"></label>
+<label>Téléphone ou e-mail<input required name="contact" autocomplete="email"></label>
+<label>Votre besoin<select name="b"><option>Entretien / dépannage chaudière</option><option>Remplacement de chaudière</option><option>Pompe à chaleur / climatisation</option><option>Plomberie</option><option>Autre demande</option></select></label>
+<label>Message<textarea rows="4" name="m" placeholder="Décrivez brièvement votre projet…"></textarea></label>
+<button class="btn" type="submit">Demander un devis</button><div class="sent" role="status"></div></form></div></div></section>
+</main>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Del Bano</h4><p>Chauffage, pompes à chaleur et climatisation à Saint-Estève et autour de Perpignan.</p></div>
+<div><h4>Coordonnées</h4><p>Saint-Estève (66240)<br>et agglomération de Perpignan</p><a href="tel:0468926818">04 68 92 68 18</a><a href="mailto:jpdelbano@wanadoo.fr">jpdelbano@wanadoo.fr</a></div>
+<div><h4>Horaires</h4><p>Sur rendez-vous, du lundi au dimanche (à confirmer).</p></div>
+<div><h4>Navigation</h4><a href="#services">Prestations</a><a href="#faq">Questions</a><a href="#contact">Contact</a></div>
+</div></div></footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="callfab" href="tel:0468926818" aria-label="Appeler"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+<script>
+(function(){
+ var b=document.querySelector('.burger'),m=document.getElementById('menu');
+ b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+ var d=(new Date().getDay()+6)%7,rows=document.querySelectorAll('.hours tr');if(rows[d])rows[d].classList.add('today');
+ var f=document.querySelector('form.f');if(f)f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.sent');s.style.display='block';s.textContent='Maquette de démonstration : ce formulaire n\u2019envoie rien pour le moment.'});
+})();
+</script></body></html>
