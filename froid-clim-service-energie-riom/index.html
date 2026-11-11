@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Froid Clim Service Energie – Pompes à chaleur à Riom (63200)</title>
+<meta name="description" content="Froid Clim Service Energie, Route de Targnat à Riom : pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques, chaudières et climatisation. QualiPAC Chauffage et CET.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plan:#0b2a4a; --plan2:#0e3459; --plan3:#082038; --cyan:#5ad1ff; --white:#f2f7fb; --yellow:#ffcc33;
+  --muted:#a9c3d8; --line:rgba(90,209,255,.35); --grid:rgba(90,209,255,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Barlow",system-ui,sans-serif;background:var(--plan);color:var(--white);line-height:1.6;font-size:16px;overflow-x:hidden;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(rgba(90,209,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(90,209,255,.04) 1px,transparent 1px);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px}
+svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.mono{font-family:"Barlow Condensed";letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:18px;padding:14px 24px;border:1.5px solid var(--cyan);color:var(--white);text-decoration:none;position:relative;transition:background .2s,color .2s;background:transparent;cursor:pointer}
+.btn::before,.btn::after{content:"";position:absolute;width:8px;height:8px;border:2px solid var(--yellow)}
+.btn::before{top:-5px;left:-5px;border-right:0;border-bottom:0}
+.btn::after{bottom:-5px;right:-5px;border-left:0;border-top:0}
+.btn:hover{background:var(--cyan);color:var(--plan)}
+.btn.solid{background:var(--yellow);border-color:var(--yellow);color:var(--plan)}
+.btn.solid:hover{background:var(--white);border-color:var(--white)}
+.btn svg{width:20px;height:20px}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(8,32,56,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mark{width:42px;height:42px;border:1.5px solid var(--cyan);display:grid;place-items:center;font-family:"Barlow Condensed";font-weight:700;color:var(--yellow);font-size:16px;letter-spacing:.05em}
+.brand b{font-family:"Barlow Condensed";font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.06em;line-height:1.05}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.2em}
+.nav ul{display:flex;list-style:none;gap:26px}
+.nav ul a{text-decoration:none;font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.12em;font-size:15px;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--yellow)}
+.nav .btn{padding:9px 16px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border:1.5px solid var(--cyan);background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger span{width:22px;height:2px;background:var(--white);transition:.25s}
+.nav.open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* HERO */
+.hero{padding:130px 0 80px;position:relative;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center}
+.ref{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+.ref span{border:1px solid var(--line);padding:4px 10px}
+.hero h1{font-size:clamp(46px,5.6vw,78px);font-weight:700;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.5px var(--cyan)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap}
+.drawing{border:1.5px solid var(--cyan);background:rgba(8,32,56,.6);position:relative;padding:16px}
+.drawing .cartouche{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line);margin-top:10px;font-family:"Barlow Condensed";text-transform:uppercase;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.drawing .cartouche div{padding:8px 10px;border-right:1px solid var(--line)}
+.drawing .cartouche div:last-child{border-right:0}
+.drawing .cartouche b{display:block;color:var(--white);font-weight:600;font-size:14px}
+.drawing svg .flow{stroke-dasharray:6 8;animation:flow 1.6s linear infinite}
+.drawing svg .fan{transform-origin:394px 222px;animation:spin 3s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* TRUST */
+.trust{border-bottom:1px solid var(--line);background:var(--plan3)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust .t{padding:28px 22px;border-left:1px solid var(--line);position:relative}
+.trust .t:last-child{border-right:1px solid var(--line)}
+.trust .t .v{font-family:"Barlow Condensed";font-size:40px;font-weight:700;color:var(--yellow);line-height:1}
+.trust .t .v small{font-size:20px;color:var(--white)}
+.trust .t p{color:var(--muted);font-size:14px;margin-top:6px}
+.trust .t a{color:var(--cyan)}
+
+/* SECTIONS */
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:end;margin-bottom:48px}
+.head .idx{font-family:"Barlow Condensed";font-size:15px;letter-spacing:.2em;color:var(--plan);background:var(--cyan);padding:6px 10px;align-self:start;margin-top:8px}
+.head h2{font-size:clamp(40px,5.2vw,68px);font-weight:700}
+.head p{grid-column:2;color:var(--muted);max-width:620px}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc article{padding:32px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:background .25s}
+.svc article:hover{background:rgba(90,209,255,.07)}
+.svc article:hover .ico{border-color:var(--yellow)}
+.svc .ico{width:72px;height:72px;border:1.5px dashed var(--cyan);display:grid;place-items:center;margin-bottom:20px;transition:border-color .25s}
+.svc .ico svg{width:44px;height:44px}
+.svc .code{position:absolute;top:18px;right:20px;font-family:"Barlow Condensed";font-size:13px;letter-spacing:.15em;color:var(--muted)}
+.svc h3{font-size:28px;font-weight:600;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:15px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-grid div{border:1px solid var(--line);padding:28px 24px;position:relative;background:rgba(8,32,56,.5)}
+.why-grid div::before{content:"";position:absolute;top:-1px;left:-1px;width:22px;height:22px;border-top:3px solid var(--yellow);border-left:3px solid var(--yellow)}
+.why-grid h3{font-size:24px;font-weight:600;margin:14px 0 8px;color:var(--white)}
+.why-grid p{color:var(--muted);font-size:15px}
+.why-grid svg{width:40px;height:40px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;list-style:none}
+.steps::before{content:"";position:absolute;top:31px;left:6%;right:6%;border-top:1.5px dashed var(--cyan)}
+.steps li{padding:0 18px;text-align:center;position:relative}
+.steps .dot{width:64px;height:64px;margin:0 auto 18px;border:1.5px solid var(--cyan);border-radius:50%;display:grid;place-items:center;background:var(--plan);font-family:"Barlow Condensed";font-size:26px;font-weight:700;color:var(--yellow)}
+.steps h3{font-size:24px;font-weight:600;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:15px}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about p{color:var(--muted);margin-bottom:16px}
+.about p b{color:var(--white);font-weight:600}
+.spec{border:1.5px solid var(--cyan)}
+.spec h3{font-size:18px;letter-spacing:.15em;background:var(--cyan);color:var(--plan);padding:10px 16px;font-weight:600}
+.spec dl{display:grid;grid-template-columns:auto 1fr}
+.spec dt,.spec dd{padding:12px 16px;border-bottom:1px solid var(--line)}
+.spec dt{font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-size:14px;border-right:1px solid var(--line)}
+.spec dd{font-weight:500}
+.spec dl>*:nth-last-child(-n+2){border-bottom:0}
+
+/* COMPARATIF */
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cmp figure{border:1px solid var(--line);background:rgba(8,32,56,.55);transition:transform .25s,border-color .25s}
+.cmp figure:hover{transform:translateY(-6px);border-color:var(--yellow)}
+.cmp svg{width:100%;height:auto;border-bottom:1px solid var(--line)}
+.cmp figcaption{padding:20px}
+.cmp figcaption h3{font-size:24px;font-weight:600;margin-bottom:10px}
+.cmp ul{list-style:none;font-size:14.5px;color:var(--muted)}
+.cmp li{padding:6px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:12px}
+.cmp li b{color:var(--white);font-weight:500;text-align:right}
+
+/* REVIEWS */
+.reviews{background:var(--plan3)}
+.rv-card{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;border:1.5px solid var(--yellow);padding:40px}
+.score{font-family:"Barlow Condensed";font-size:110px;font-weight:700;line-height:.9;color:var(--yellow)}
+.score small{font-size:36px;color:var(--white)}
+.stars{display:flex;gap:6px;margin-bottom:12px}
+.stars svg{width:26px;height:26px}
+.rv-card h2{font-size:clamp(30px,3.6vw,46px);font-weight:700;margin-bottom:10px}
+.rv-card p{color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:880px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 56px 22px 0;font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.04em;font-size:23px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:18px;height:18px;border-right:2px solid var(--cyan);border-bottom:2px solid var(--cyan);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg);border-color:var(--yellow)}
+.faq details[open] summary{color:var(--yellow)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:760px}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.box{border:1.5px solid var(--cyan);padding:30px;background:rgba(8,32,56,.6)}
+.box h3{font-size:28px;font-weight:600;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;margin-bottom:16px}
+.hours td{padding:9px 6px;border-bottom:1px dashed var(--line);font-size:15px}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{color:var(--plan);background:var(--yellow);font-weight:600}
+.hours tr.today td:last-child{color:var(--plan)}
+.note{font-size:13.5px;color:var(--muted);border-left:3px solid var(--yellow);padding-left:12px;margin-bottom:20px}
+.line{display:flex;gap:14px;margin-bottom:14px;align-items:flex-start;word-break:break-word}
+.line svg{width:24px;height:24px;flex:none;margin-top:2px}
+form label{display:block;font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--cyan);margin:14px 0 6px}
+form input,form textarea,form select{width:100%;font:inherit;color:var(--white);background:var(--plan3);border:1px solid var(--line);padding:12px 14px;border-radius:0}
+form input::placeholder,form textarea::placeholder{color:#6f8ca5}
+form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--yellow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{margin-top:22px;width:100%;justify-content:center}
+.fmsg{display:none;margin-top:18px;border:1px solid var(--yellow);padding:12px;color:var(--yellow)}
+.fmsg.show{display:block}
+
+/* FOOTER */
+footer{background:var(--plan3);padding:60px 0 0}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding-bottom:40px}
+.foot h4{font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.16em;color:var(--cyan);font-size:15px;margin-bottom:12px;font-weight:600}
+.foot p,.foot li{color:var(--muted);font-size:14.5px}
+.foot ul{list-style:none}.foot li{margin-bottom:6px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--yellow)}
+.demo{border-top:1px solid var(--line);text-align:center;font-size:12.5px;color:#7f9bb3;padding:14px 16px}
+
+.float-call{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--yellow);align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(255,204,51,.25)}
+.float-call svg{width:26px;height:26px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:1000px){
+  .nav ul{display:none}.nav .btn.desk{display:none}.burger{display:flex}
+  .nav.open ul{display:flex;flex-direction:column;gap:0;position:absolute;top:70px;left:0;right:0;background:var(--plan3);border-bottom:1px solid var(--line);padding:10px 16px 20px}
+  .nav.open ul a{display:block;padding:14px 4px;border-bottom:1px dashed var(--line);font-size:20px;color:var(--white)}
+  .hero .wrap,.about,.contact{grid-template-columns:1fr}
+  .svc{grid-template-columns:1fr 1fr}
+  .why-grid,.steps{grid-template-columns:1fr 1fr}
+  .steps{row-gap:40px}.steps::before{display:none}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t{border-bottom:1px solid var(--line)}
+  .trust .t:nth-child(2){border-right:1px solid var(--line)}
+  .cmp{grid-template-columns:1fr}
+  .rv-card{grid-template-columns:auto 1fr}
+  .rv-card .btn{grid-column:1/-1;justify-self:start}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .hero{padding:110px 0 60px}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .head{grid-template-columns:1fr}.head p{grid-column:1}
+  .svc,.why-grid,.steps,.trust .wrap,.foot{grid-template-columns:1fr}
+  .trust .t{border-right:1px solid var(--line)}
+  section{padding:68px 0}
+  .rv-card{grid-template-columns:1fr;padding:26px;gap:16px}
+  .score{font-size:84px}
+  .row{grid-template-columns:1fr}
+  .box{padding:22px}
+  .drawing{padding:10px}
+  .drawing .cartouche{font-size:10px}.drawing .cartouche b{font-size:12px}
+  .float-call{display:flex}
+  .brand b{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="mark">FCSE</span><b>Froid Clim<br>Service Energie<small>RIOM · 63200</small></b></a>
+    <ul id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:+33668189372" class="btn desk">06 68 18 93 72</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="rv">
+      <div class="ref mono"><span>Réf. 63200-RIOM</span><span>QualiPAC Chauffage · CET</span></div>
+      <h1>La chaleur <em>du sol</em>,<br><span class="out">calculée</span> pour votre maison.</h1>
+      <p class="lead">Pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques, chaudières et climatisation : Froid Clim Service Energie dimensionne et installe votre système depuis Riom, Route de Targnat.</p>
+      <div class="hero-cta">
+        <a href="tel:+33668189372" class="btn solid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a>
+        <a href="#contact" class="btn">Demander un devis</a>
+      </div>
+    </div>
+    <div class="drawing rv" aria-hidden="true">
+      <svg viewBox="0 0 520 400" fill="none" stroke="#5ad1ff" stroke-width="1.5" font-family="Barlow Condensed" font-size="12" letter-spacing="1">
+        <!-- sol -->
+        <path d="M0 250h520" stroke-width="2"/>
+        <g stroke="#5ad1ff" stroke-opacity=".35"><path d="M10 262l12-12M40 262l12-12M70 262l12-12M100 262l12-12M130 262l12-12M160 262l12-12M190 262l12-12M220 262l12-12M250 262l12-12M280 262l12-12M310 262l12-12M340 262l12-12M370 262l12-12M400 262l12-12M430 262l12-12M460 262l12-12M490 262l12-12"/></g>
+        <!-- maison -->
+        <path d="M70 250V130l110-70 110 70v120" stroke-width="2"/>
+        <path d="M54 140 180 56l126 84" stroke-width="2.5" stroke="#f2f7fb"/>
+        <path d="M70 190h220" stroke-dasharray="4 4"/>
+        <rect x="96" y="150" width="40" height="30"/><path d="M116 150v30"/>
+        <rect x="220" y="150" width="40" height="30"/><path d="M240 150v30"/>
+        <rect x="160" y="200" width="36" height="50"/>
+        <!-- plancher chauffant -->
+        <path d="M78 242c10-6 20 6 30 0s20 6 30 0 20 6 30 0 20 6 30 0 20 6 30 0 20 6 30 0 20 6 20 0" stroke="#ffcc33"/>
+        <!-- radiateur -->
+        <rect x="90" y="214" width="34" height="18"/><path d="M98 214v18M106 214v18M114 214v18"/>
+        <!-- ballon CET -->
+        <rect x="248" y="200" width="28" height="44" rx="10" stroke="#ffcc33"/>
+        <text x="281" y="226" fill="#ffcc33" stroke="none">CET</text>
+        <!-- PAC unite exterieure -->
+        <rect x="350" y="196" width="88" height="54" stroke-width="2" stroke="#f2f7fb"/>
+        <circle cx="394" cy="222" r="18"/>
+        <g class="fan"><path d="M394 206v32M378 222h32M383 211l22 22M405 211l-22 22" stroke-width="1.2"/></g>
+        <text x="352" y="188" fill="#f2f7fb" stroke="none">PAC AIR-EAU</text>
+        <!-- liaisons -->
+        <path class="flow" d="M350 236h-60" stroke="#ffcc33" stroke-width="2"/>
+        <path class="flow" d="M350 244h-60" stroke="#5ad1ff" stroke-width="2"/>
+        <!-- forages geothermiques -->
+        <path class="flow" d="M200 250v130M212 250v130" stroke="#ffcc33" stroke-width="2"/>
+        <path d="M200 380a6 6 0 0 0 12 0"/>
+        <path class="flow" d="M140 250v110M152 250v110" stroke="#5ad1ff" stroke-width="2"/>
+        <path d="M140 360a6 6 0 0 0 12 0"/>
+        <text x="220" y="330" fill="#a9c3d8" stroke="none">SONDE GÉOTHERMIQUE</text>
+        <!-- cotes -->
+        <g stroke="#a9c3d8" stroke-width="1"><path d="M30 250v130M24 250h12M24 380h12"/><path d="M27 262l3-12 3 12M27 368l3 12 3-12" fill="#a9c3d8"/></g>
+        <text x="8" y="320" fill="#a9c3d8" stroke="none" transform="rotate(-90 14 316)">PROFONDEUR</text>
+        <g stroke="#a9c3d8" stroke-width="1"><path d="M70 40h220M70 34v12M290 34v12"/></g>
+        <text x="146" y="32" fill="#a9c3d8" stroke="none">EMPRISE HABITATION</text>
+        <!-- annotations -->
+        <circle cx="300" cy="240" r="4" fill="#ffcc33" stroke="none"/>
+        <path d="M300 240l40 -70h60" stroke="#ffcc33" stroke-width="1"/>
+        <circle cx="160" cy="242" r="4" fill="#ffcc33" stroke="none"/>
+        <path d="M160 242l-60 -150h-30" stroke="#ffcc33" stroke-width="1" stroke-opacity=".8"/>
+        <text x="20" y="86" fill="#ffcc33" stroke="none">ÉMETTEURS</text>
+        <text x="418" y="166" fill="#ffcc33" stroke="none">01</text>
+      </svg>
+      <div class="cartouche"><div>Projet<b>Chauffage PAC</b></div><div>Lieu<b>Riom 63200</b></div><div>Échelle<b>Sur mesure</b></div></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust" style="padding:0" aria-label="Repères">
+  <div class="wrap">
+    <div class="t"><div class="v">5,0<small>/5</small></div><p>Note moyenne sur <a href="https://www.effy.fr/artisans/pro/3184-froid-clim-service-energie" target="_blank" rel="noopener">10 avis Effy</a></p></div>
+    <div class="t"><div class="v">RGE</div><p>QualiPAC Chauffage et QualiPAC CET</p></div>
+    <div class="t"><div class="v">2</div><p>Technologies de PAC : géothermie et air-eau</p></div>
+    <div class="t"><div class="v">63</div><p>Riom, Route de Targnat, et alentours</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">01</span><h2>Prestations</h2><p>Un seul interlocuteur pour produire votre chaleur, votre eau chaude et votre fraîcheur d'été.</p></div>
+    <div class="svc">
+      <article class="rv"><span class="code">S-01</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M4 16h36"/><path d="M16 16v24M24 16v24" stroke="#ffcc33"/><path d="M16 40a4 4 0 0 0 8 0"/><path d="M12 10l10-6 10 6"/></svg></div><h3>PAC géothermique</h3><p>Captage des calories du sol par sondes ou réseau enterré. Une chaleur stable toute l'année, quelle que soit la météo.</p></article>
+      <article class="rv"><span class="code">S-02</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="4" y="10" width="36" height="24"/><circle cx="18" cy="22" r="8"/><path d="M18 14v16M10 22h16" stroke="#ffcc33"/><path d="M32 16h4M32 22h4M32 28h4"/></svg></div><h3>PAC air-eau</h3><p>Remplace une chaudière en se raccordant aux radiateurs ou au plancher chauffant existant, sans gros travaux.</p></article>
+      <article class="rv"><span class="code">S-03</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="12" y="4" width="20" height="36" rx="8"/><path d="M18 14h8" stroke="#ffcc33"/><path d="M17 30c0-4 5-4 5-8 0 4 5 4 5 8a5 5 0 0 1-10 0z" stroke="#ffcc33"/></svg></div><h3>Chauffe-eau thermo</h3><p>Ballon thermodynamique pour produire l'eau chaude sanitaire en consommant beaucoup moins d'électricité.</p></article>
+      <article class="rv"><span class="code">S-04</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="10" y="4" width="24" height="34"/><path d="M15 10h14"/><path d="M18 26c0-3 4-3 4-7 0 4 4 4 4 7a4 4 0 0 1-8 0z" stroke="#ffcc33"/><path d="M16 38v3M28 38v3"/></svg></div><h3>Chaudières</h3><p>Installation et remplacement de chaudières gaz ou fioul, avec conseil sur les alternatives possibles.</p></article>
+      <article class="rv"><span class="code">S-05</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="4" y="8" width="36" height="14" rx="2"/><path d="M8 18h28"/><path d="M12 28v6M22 28v10M32 28v6" stroke="#ffcc33"/></svg></div><h3>Climatisation</h3><p>Climatisation et PAC réversibles pour garder la maison fraîche pendant les étés chauds de la Limagne.</p></article>
+      <article class="rv"><span class="code">S-06</span><div class="ico"><svg viewBox="0 0 44 44" fill="none" stroke="#5ad1ff" stroke-width="2"><circle cx="22" cy="22" r="16"/><path d="M22 10v12l8 6" stroke="#ffcc33"/></svg></div><h3>Mise en service &amp; suivi</h3><p>Réglages, explications d'utilisation et suivi de l'installation pour garantir son rendement dans la durée.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="pourquoi">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">02</span><h2>Pourquoi nous</h2><p>Des installations pensées comme des plans : mesurées, justifiées, documentées.</p></div>
+    <div class="why-grid">
+      <div class="rv"><svg viewBox="0 0 40 40" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M20 4l14 6v10c0 9-6 14-14 16C12 34 6 29 6 20V10z"/><path d="M13 20l5 5 9-10" stroke="#ffcc33"/></svg><h3>Qualifié RGE</h3><p>QualiPAC Chauffage et CET : des qualifications utiles pour les aides à la rénovation, selon votre situation.</p></div>
+      <div class="rv"><svg viewBox="0 0 40 40" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M8 34l6-6 6 3 12-14"/><path d="M26 17h6v6" stroke="#ffcc33"/><path d="M4 4v32h32"/></svg><h3>5,0/5 sur Effy</h3><p>Une note moyenne de 5 sur 5 sur 10 avis publiés sur la plateforme Effy.</p></div>
+      <div class="rv"><svg viewBox="0 0 40 40" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="4" y="8" width="32" height="26"/><path d="M4 16h32M12 4v8M28 4v8"/><path d="M12 24h6" stroke="#ffcc33"/></svg><h3>Dimensionnement</h3><p>Puissance adaptée à la surface, à l'isolation et aux émetteurs : ni trop, ni trop peu.</p></div>
+      <div class="rv"><svg viewBox="0 0 40 40" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M20 36s12-10 12-20a12 12 0 0 0-24 0c0 10 12 20 12 20z"/><circle cx="20" cy="16" r="4" stroke="#ffcc33"/></svg><h3>Local</h3><p>Basé Route de Targnat à Riom, au plus près des chantiers du secteur.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">03</span><h2>Méthode</h2><p>Du relevé à la mise en service, chaque étape est cadrée.</p></div>
+    <ol class="steps">
+      <li class="rv"><div class="dot">1</div><h3>Prise de contact</h3><p>Vous présentez votre logement et votre chauffage actuel.</p></li>
+      <li class="rv"><div class="dot">2</div><h3>Relevé sur place</h3><p>Visite technique : surfaces, isolation, émetteurs, terrain.</p></li>
+      <li class="rv"><div class="dot">3</div><h3>Étude &amp; devis</h3><p>Solution dimensionnée et devis détaillé, sans engagement.</p></li>
+      <li class="rv"><div class="dot">4</div><h3>Pose &amp; réglages</h3><p>Installation, mise en service et prise en main expliquée.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap about">
+    <div class="rv">
+      <div class="head" style="margin-bottom:26px"><span class="idx">04</span><h2>L'entreprise</h2></div>
+      <p><b>Froid Clim Service Energie</b> est installée Route de Targnat, à Riom (63200). Sa spécialité : les systèmes de chauffage performants, à commencer par les <b>pompes à chaleur géothermiques et air-eau</b>.</p>
+      <p>L'entreprise réalise aussi des <b>chauffe-eau thermodynamiques</b>, des chaudières gaz ou fioul et de la climatisation. Elle est qualifiée <b>QualiPAC Chauffage</b> et <b>QualiPAC CET</b>.</p>
+      <p>Ses clients lui attribuent une note moyenne de <b>5,0/5 sur 10 avis</b> publiés sur Effy.</p>
+    </div>
+    <div class="spec rv">
+      <h3>Fiche technique</h3>
+      <dl>
+        <dt>Raison</dt><dd>Froid Clim Service Energie</dd>
+        <dt>Adresse</dt><dd>Route de Targnat, 63200 Riom</dd>
+        <dt>Qualifications</dt><dd>QualiPAC Chauffage · QualiPAC CET</dd>
+        <dt>Spécialités</dt><dd>PAC géothermique, PAC air-eau, CET</dd>
+        <dt>Aussi</dt><dd>Chaudières gaz/fioul, climatisation</dd>
+        <dt>Téléphone</dt><dd><a href="tel:+33668189372">06 68 18 93 72</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="solutions">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">05</span><h2>Quelle solution ?</h2><p>Repères généraux pour comparer les systèmes. Le bon choix dépend toujours de votre logement : tarifs sur devis.</p></div>
+    <div class="cmp">
+      <figure class="rv">
+        <svg viewBox="0 0 360 200" fill="none" stroke="#5ad1ff" stroke-width="1.5"><path d="M0 90h360" stroke-width="2"/><path d="M110 90V40l40-24 40 24v50"/><path d="M146 90v100M158 90v100M206 90v80M218 90v80" stroke="#ffcc33" stroke-dasharray="5 6"/><text x="236" y="150" fill="#a9c3d8" stroke="none" font-family="Barlow Condensed" font-size="13">SONDES VERTICALES</text></svg>
+        <figcaption><h3>PAC géothermique</h3><ul><li>Source<b>Sol</b></li><li>Stabilité<b>Très élevée</b></li><li>Terrain<b>Nécessaire</b></li><li>Tarif<b>Sur devis</b></li></ul></figcaption>
+      </figure>
+      <figure class="rv">
+        <svg viewBox="0 0 360 200" fill="none" stroke="#5ad1ff" stroke-width="1.5"><path d="M0 160h360" stroke-width="2"/><path d="M60 160V90l60-40 60 40v70"/><rect x="220" y="110" width="80" height="50" stroke="#f2f7fb" stroke-width="2"/><circle cx="260" cy="135" r="16"/><path d="M220 140h-40" stroke="#ffcc33" stroke-dasharray="5 6"/><path d="M310 70c10 8 10 20 0 28M326 60c16 14 16 34 0 48" stroke="#a9c3d8"/></svg>
+        <figcaption><h3>PAC air-eau</h3><ul><li>Source<b>Air extérieur</b></li><li>Travaux<b>Limités</b></li><li>Émetteurs<b>Radiateurs, plancher</b></li><li>Tarif<b>Sur devis</b></li></ul></figcaption>
+      </figure>
+      <figure class="rv">
+        <svg viewBox="0 0 360 200" fill="none" stroke="#5ad1ff" stroke-width="1.5"><path d="M0 180h360" stroke-width="2"/><rect x="150" y="30" width="60" height="150" rx="24" stroke="#f2f7fb" stroke-width="2"/><path d="M150 70h60" /><circle cx="180" cy="50" r="10" stroke="#ffcc33"/><path d="M168 140c0-10 12-10 12-22 0 12 12 12 12 22a12 12 0 0 1-24 0z" stroke="#ffcc33"/><path d="M110 120h40M210 120h40" stroke-dasharray="4 5"/></svg>
+        <figcaption><h3>Chauffe-eau thermo</h3><ul><li>Usage<b>Eau chaude</b></li><li>Principe<b>Pompe à chaleur</b></li><li>Pose<b>Garage, cellier…</b></li><li>Tarif<b>Sur devis</b></li></ul></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="avis">
+  <div class="wrap">
+    <div class="rv-card rv">
+      <div class="score">5,0<small>/5</small></div>
+      <div>
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="#ffcc33"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="#ffcc33"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="#ffcc33"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="#ffcc33"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg><svg viewBox="0 0 24 24" fill="#ffcc33"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+        <h2>10 avis clients sur Effy</h2>
+        <p>Note moyenne affichée sur la fiche Effy de l'entreprise. Consultez les avis complets directement à la source.</p>
+      </div>
+      <a class="btn" href="https://www.effy.fr/artisans/pro/3184-froid-clim-service-energie" target="_blank" rel="noopener">Lire les avis</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">06</span><h2>Questions fréquentes</h2><p>Réponses générales : chaque projet est étudié au cas par cas.</p></div>
+    <div class="faq">
+      <details class="rv"><summary>Géothermie ou PAC air-eau : laquelle choisir ?</summary><p>La géothermie offre une performance très stable mais demande un terrain et des travaux de forage ou de captage. La PAC air-eau est plus simple à installer. Le choix dépend du terrain, du budget et du logement.</p></details>
+      <details class="rv"><summary>Puis-je garder mes radiateurs actuels ?</summary><p>Souvent oui, une PAC air-eau peut se raccorder au circuit existant. Le type de radiateurs et la température d'eau nécessaire sont vérifiés lors de la visite technique.</p></details>
+      <details class="rv"><summary>Existe-t-il des aides pour une pompe à chaleur ?</summary><p>Des aides à la rénovation énergétique existent selon les dispositifs en vigueur et votre situation. Faire appel à une entreprise qualifiée RGE est généralement une condition pour en bénéficier.</p></details>
+      <details class="rv"><summary>Un chauffe-eau thermodynamique, c'est rentable ?</summary><p>Il consomme nettement moins d'électricité qu'un ballon classique pour produire la même eau chaude. L'emplacement du ballon et les besoins du foyer sont étudiés avant pose.</p></details>
+      <details class="rv"><summary>Une pompe à chaleur a-t-elle besoin d'entretien ?</summary><p>Oui, un entretien régulier est recommandé, et obligatoire pour certains équipements selon leur puissance et leur fluide. Il garantit le rendement et la durée de vie.</p></details>
+      <details class="rv"><summary>Combien de temps durent les travaux ?</summary><p>Cela dépend de la solution : une PAC air-eau se pose généralement en quelques jours, un chantier de géothermie demande plus de préparation. Le planning est précisé dans le devis.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="head rv"><span class="idx">07</span><h2>Contact</h2><p>Parlez-nous de votre projet, nous revenons vers vous rapidement.</p></div>
+    <div class="contact">
+      <div class="box rv">
+        <h3>Horaires</h3>
+        <table class="hours" id="hours">
+          <tr data-d="1"><td>Lundi</td><td>À confirmer</td></tr>
+          <tr data-d="2"><td>Mardi</td><td>À confirmer</td></tr>
+          <tr data-d="3"><td>Mercredi</td><td>À confirmer</td></tr>
+          <tr data-d="4"><td>Jeudi</td><td>À confirmer</td></tr>
+          <tr data-d="5"><td>Vendredi</td><td>À confirmer</td></tr>
+          <tr data-d="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-d="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </table>
+        <p class="note">Horaires à confirmer auprès de l'entreprise. Un appel reste le moyen le plus rapide.</p>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Route de Targnat<br>63200 Riom</div></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#5ad1ff" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+33668189372">06 68 18 93 72</a></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#5ad1ff" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg><a href="mailto:danton.marien@orange.fr">danton.marien@orange.fr</a></div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Route+de+Targnat+63200+Riom" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+      <form class="box rv" id="form">
+        <h3>Demande de devis</h3>
+        <div class="row">
+          <div><label for="n">Nom</label><input id="n" required placeholder="Votre nom"></div>
+          <div><label for="t">Téléphone</label><input id="t" type="tel" placeholder="06 …"></div>
+        </div>
+        <label for="c">Commune</label><input id="c" placeholder="Riom, Mozac, Ménétrol…">
+        <label for="s">Projet</label>
+        <select id="s"><option>Pompe à chaleur géothermique</option><option>Pompe à chaleur air-eau</option><option>Chauffe-eau thermodynamique</option><option>Chaudière</option><option>Climatisation</option><option>Autre</option></select>
+        <label for="m">Message</label><textarea id="m" rows="4" placeholder="Surface, chauffage actuel, radiateurs ou plancher…"></textarea>
+        <button class="btn solid" type="submit">Envoyer la demande</button>
+        <div class="fmsg" id="fmsg">Maquette de démonstration : votre messagerie va s'ouvrir vers danton.marien@orange.fr.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><h4>Froid Clim Service Energie</h4><p>Pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques, chaudières et climatisation à Riom. Qualifié QualiPAC Chauffage et CET.</p></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+33668189372">06 68 18 93 72</a></li><li><a href="mailto:danton.marien@orange.fr">danton.marien@orange.fr</a></li><li>Route de Targnat, 63200 Riom</li></ul></div>
+    <div><h4>Horaires</h4><ul><li>À confirmer</li><li>Devis sur demande</li></ul></div>
+    <div><h4>Liens</h4><ul><li><a href="https://www.effy.fr/artisans/pro/3184-froid-clim-service-energie" target="_blank" rel="noopener">Avis Effy (5,0/5)</a></li><li><a href="#faq">FAQ</a></li><li><a href="#services">Prestations</a></li></ul></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a href="tel:+33668189372" class="float-call" aria-label="Appeler Froid Clim Service Energie"><svg viewBox="0 0 24 24" fill="none" stroke="#0b2a4a" stroke-width="2.4"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),b=document.getElementById('burger');
+  b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');b.setAttribute('aria-expanded','false');});});
+  var r=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(r)r.classList.add('today');
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  }else els.forEach(function(e){e.classList.add('in');});
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('fmsg').classList.add('show');
+    var g=function(i){return document.getElementById(i).value;};
+    var body='Nom : '+g('n')+'\nTéléphone : '+g('t')+'\nCommune : '+g('c')+'\nProjet : '+g('s')+'\n\n'+g('m');
+    setTimeout(function(){location.href='mailto:danton.marien@orange.fr?subject='+encodeURIComponent('Demande de devis – '+g('s'))+'&body='+encodeURIComponent(body);},900);
+  });
+})();
+</script>
+</body>
+</html>

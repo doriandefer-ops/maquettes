@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mager – Chauffagiste à Clermont-Ferrand | Chaudières, pompes à chaleur, climatisation</title>
+<meta name="description" content="Mager, chauffagiste à Clermont-Ferrand : remplacement de chaudière gaz ou fioul (QUALIBAT), pompe à chaleur, climatisation et chauffe-eau thermodynamique. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --basalte:#121212; --basalte2:#1c1b1a; --basalte3:#262422;
+  --lave:#ff5b1f; --braise:#ffb347; --ivoire:#f1ece4; --gris:#a9a39b;
+  --ligne:rgba(241,236,228,.12);
+  --serif:'Italiana',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--basalte);color:var(--ivoire);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:.02em;line-height:1.1}
+h2{font-size:clamp(2.1rem,4.5vw,3.4rem)}
+.kicker{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--braise);font-weight:500;display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--lave)}
+section{padding:110px 0;position:relative}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:2px;text-decoration:none;font-weight:500;letter-spacing:.06em;font-size:.95rem;transition:.3s;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn-lave{background:linear-gradient(135deg,var(--lave),#e2400a);color:#fff;box-shadow:0 10px 30px -10px rgba(255,91,31,.7)}
+.btn-lave:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(255,91,31,.9)}
+.btn-ghost{border-color:rgba(241,236,228,.35);color:var(--ivoire)}
+.btn-ghost:hover{border-color:var(--braise);color:var(--braise)}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s;padding:18px 0}
+.nav.scrolled{background:rgba(18,18,18,.88);backdrop-filter:blur(12px);padding:12px 0;border-bottom:1px solid var(--ligne)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:38px;height:38px}
+.logo b{font-family:var(--serif);font-size:1.7rem;font-weight:400;letter-spacing:.14em}
+.logo small{display:block;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);margin-top:-4px}
+.menu{display:flex;gap:30px;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-size:.9rem;letter-spacing:.06em;color:#d8d2c8;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--lave);transition:.3s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:10px 18px}
+.burger{display:none;background:none;border:1px solid var(--ligne);width:46px;height:46px;border-radius:2px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:1.5px;background:var(--ivoire);transition:.3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;padding:0;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:radial-gradient(ellipse at 70% 20%,#2b1a12 0%,var(--basalte) 60%)}
+.hero-sky{position:absolute;inset:0;pointer-events:none}
+.hero-land{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;min-height:260px}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:start;padding:150px 0 230px}
+.hero h1{font-size:clamp(2.8rem,6vw,5.2rem);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--lave);display:block}
+.hero p.lead{text-shadow:0 2px 14px #121212;font-size:1.15rem;max-width:560px;color:#d9d3c9;margin-bottom:34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.contact-card{background:rgba(28,27,26,.82);backdrop-filter:blur(14px);border:1px solid var(--ligne);padding:34px;position:relative;box-shadow:0 30px 80px -30px #000}
+.contact-card::before{content:"";position:absolute;top:-1px;left:30px;right:30px;height:2px;background:linear-gradient(90deg,transparent,var(--lave),var(--braise),transparent)}
+.contact-card h3{font-size:1.8rem;margin-bottom:6px}
+.contact-card .sub{color:var(--gris);font-size:.88rem;margin-bottom:22px}
+.cc-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--ligne)}
+.cc-row svg{width:22px;height:22px;flex:none;color:var(--braise);margin-top:2px}
+.cc-row a{text-decoration:none;word-break:break-all}
+.cc-row a:hover{color:var(--braise)}
+.cc-row small{display:block;color:var(--gris);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+.glow{animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{opacity:.55}}
+
+/* TRUST */
+.trust{padding:0;background:var(--basalte2);border-block:1px solid var(--ligne)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:30px 24px;border-right:1px solid var(--ligne);display:flex;gap:16px;align-items:center}
+.trust-item:last-child{border-right:0}
+.trust-item svg{width:34px;height:34px;color:var(--lave);flex:none}
+.trust-item b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:400;letter-spacing:.03em}
+.trust-item span{font-size:.85rem;color:var(--gris)}
+
+/* SERVICES */
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:60px}
+.head p{color:#cfc8bd}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ligne);border:1px solid var(--ligne)}
+.svc{background:var(--basalte);padding:40px 34px;transition:.4s;position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--lave);transition:.5s}
+.svc:hover{background:var(--basalte2)}
+.svc:hover::after{width:100%}
+.svc .ic{width:56px;height:56px;margin-bottom:26px;color:var(--braise)}
+.svc .num{position:absolute;top:28px;right:30px;font-family:var(--serif);font-size:1.4rem;color:#3d3935}
+.svc h3{font-size:1.65rem;margin-bottom:12px}
+.svc p{color:#bfb8ad;font-size:.96rem}
+
+/* WHY */
+.why{background:var(--basalte2)}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.why-visual{aspect-ratio:4/5;position:relative;background:linear-gradient(160deg,#2a1d15,#121212);border:1px solid var(--ligne);overflow:hidden}
+.why-list{display:grid;gap:4px}
+.why-item{display:grid;grid-template-columns:60px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--ligne)}
+.why-item .n{font-family:var(--serif);font-size:2.4rem;color:var(--lave);line-height:1}
+.why-item h3{font-size:1.5rem;margin-bottom:6px}
+.why-item p{color:#bfb8ad}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.step{padding:34px 26px;border:1px solid var(--ligne);position:relative;transition:.4s;background:linear-gradient(180deg,rgba(255,91,31,.05),transparent)}
+.step:hover{border-color:rgba(255,91,31,.5);transform:translateY(-4px)}
+.step .big{font-family:var(--serif);font-size:4rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--braise);margin-bottom:18px}
+.step h3{font-size:1.4rem;margin-bottom:8px}
+.step p{color:#bfb8ad;font-size:.95rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.about p{color:#d0c9be;margin-bottom:16px;font-size:1.05rem}
+.quote-line{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;color:var(--ivoire);border-left:2px solid var(--lave);padding-left:26px;margin-bottom:30px}
+.badge-q{border:1px solid var(--ligne);padding:40px;text-align:center;background:var(--basalte2);position:relative}
+.badge-q svg{width:120px;height:120px;margin:0 auto 20px}
+.badge-q b{font-family:var(--serif);font-size:1.6rem;font-weight:400;display:block;margin-bottom:8px}
+.badge-q p{color:var(--gris);font-size:.92rem}
+
+/* REALISATIONS */
+.works{background:var(--basalte2)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.work{border:1px solid var(--ligne);background:var(--basalte);overflow:hidden;transition:.4s}
+.work:hover{transform:translateY(-5px);border-color:rgba(255,179,71,.45)}
+.work .art{aspect-ratio:4/3;background:linear-gradient(160deg,#241a14,#141313)}
+.work .art svg{width:100%;height:100%}
+.work .cap{padding:22px 24px}
+.work .cap small{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--braise)}
+.work .cap h3{font-size:1.4rem;margin-top:4px}
+.note{margin-top:24px;color:var(--gris);font-size:.85rem;font-style:italic}
+
+/* AVIS */
+.reviews-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ligne)}
+.reviews-box > div{padding:50px}
+.reviews-box > div:first-child{border-right:1px solid var(--ligne);background:radial-gradient(circle at 20% 20%,rgba(255,91,31,.12),transparent 60%)}
+.stars{display:flex;gap:6px;margin:18px 0}
+.stars svg{width:28px;height:28px;color:#3d3935}
+.reviews-box p{color:#cfc8bd;margin-bottom:18px}
+
+/* FAQ */
+.faq-list{max-width:860px;margin-inline:auto}
+.faq-item{border-bottom:1px solid var(--ligne)}
+.faq-item button{width:100%;background:none;border:0;color:var(--ivoire);text-align:left;padding:26px 50px 26px 0;font-family:var(--serif);font-size:1.4rem;cursor:pointer;position:relative;letter-spacing:.02em}
+.faq-item button::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:16px;border-right:1.5px solid var(--lave);border-bottom:1.5px solid var(--lave);transform:translateY(-70%) rotate(45deg);transition:.3s}
+.faq-item button[aria-expanded="true"]::after{transform:translateY(-30%) rotate(-135deg)}
+.faq-item .ans{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq-item .ans p{padding:0 0 26px;color:#bfb8ad;max-width:720px}
+
+/* HORAIRES / CONTACT */
+.contact{background:var(--basalte2)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+.hours{border:1px solid var(--ligne);padding:38px;background:var(--basalte)}
+.hours h3{font-size:1.8rem;margin-bottom:6px}
+.hours .sub{color:var(--gris);font-size:.88rem;margin-bottom:20px}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--ligne);font-size:.97rem;gap:10px}
+.hours li.today{background:linear-gradient(90deg,rgba(255,91,31,.2),transparent);border-left:2px solid var(--lave);font-weight:500}
+.hours li.today span:first-child::after{content:" · aujourd'hui";color:var(--braise);font-size:.8rem}
+.zone{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+.zone p{color:#cfc8bd}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px;border:1px solid var(--ligne);padding:38px;background:var(--basalte)}
+form h3{grid-column:1/-1;font-size:1.8rem}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gris)}
+input,select,textarea{background:var(--basalte2);border:1px solid var(--ligne);color:var(--ivoire);padding:14px;font-family:var(--sans);font-size:1rem;border-radius:2px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lave)}
+textarea{min-height:120px;resize:vertical}
+.form-msg{grid-column:1/-1;color:var(--braise);font-size:.95rem;min-height:1.2em}
+
+/* FOOTER */
+footer{padding:80px 0 30px;border-top:1px solid var(--ligne)}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.foot h4{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:16px;color:var(--braise)}
+.foot p,.foot li{color:#bfb8ad;font-size:.94rem;list-style:none;margin-bottom:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--lave)}
+.demo{border-top:1px solid var(--ligne);padding-top:24px;text-align:center;font-size:.82rem;color:var(--gris)}
+.demo span{display:inline-block;border:1px dashed rgba(255,179,71,.4);padding:8px 16px;border-radius:2px}
+
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--lave);display:none;align-items:center;justify-content:center;box-shadow:0 10px 30px -6px rgba(255,91,31,.8);animation:pulse 2.6s infinite}
+.fab svg{width:26px;height:26px;color:#fff}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,91,31,.6)}50%{box-shadow:0 0 0 14px rgba(255,91,31,0)}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero-in,.why-grid,.about-grid,.contact-grid,.head,.reviews-box{grid-template-columns:1fr}
+  .hero-in{padding:130px 0 200px;gap:40px}
+  .hero-land{height:30%}
+  .services,.gallery{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(2){border-right:0}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid var(--ligne)}
+  .foot{grid-template-columns:1fr 1fr}
+  .reviews-box > div:first-child{border-right:0;border-bottom:1px solid var(--ligne)}
+  .why-visual{aspect-ratio:16/10}
+}
+@media (max-width:820px){
+  .menu{position:fixed;top:0;left:0;width:100%;height:100vh;background:#121212;flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.4s;z-index:1}
+  .logo{position:relative;z-index:3}
+  .menu.open{transform:none}
+  .menu a{font-size:1.4rem;font-family:var(--serif)}
+  .burger{display:block;z-index:3}
+  .fab{display:flex}
+}
+@media (max-width:600px){
+  section{padding:80px 0}
+  .services,.gallery,.steps,.foot{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust-item{border-right:0;border-bottom:1px solid var(--ligne)}
+  form{grid-template-columns:1fr;padding:26px}
+  .reviews-box > div,.hours,.contact-card{padding:26px}
+  .svc{padding:32px 26px}
+  .hero .ctas .btn{flex:1;justify-content:center;padding:15px 14px;white-space:nowrap}
+  .kicker{letter-spacing:.2em;font-size:.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Mager – accueil">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M3 34 L14 14 L20 22 L26 10 L37 34 Z" stroke="#f1ece4" stroke-width="1.5"/><path d="M23 16 L26 10 L29 16" stroke="#ff5b1f" stroke-width="2"/><circle cx="26" cy="6" r="1.6" fill="#ffb347"/></svg>
+      <span><b>MAGER</b><small>Chauffage · Clermont</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn btn-lave">Devis gratuit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="hero-sky" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb347" stop-opacity=".55"/><stop offset="1" stop-color="#ff5b1f" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle class="glow" cx="1100" cy="560" r="380" fill="url(#sun)"/>
+    <g fill="#f1ece4" opacity=".5">
+      <circle cx="180" cy="120" r="1.2"/><circle cx="420" cy="80" r="1"/><circle cx="640" cy="170" r="1.4"/><circle cx="880" cy="60" r="1"/><circle cx="1220" cy="140" r="1.3"/><circle cx="1360" cy="90" r="1"/><circle cx="300" cy="240" r=".9"/><circle cx="760" cy="260" r=".8"/>
+    </g>
+  </svg>
+  <svg class="hero-land" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2e20"/><stop offset="1" stop-color="#1c1b1a"/></linearGradient>
+      <linearGradient id="l2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2320"/><stop offset="1" stop-color="#161514"/></linearGradient>
+      <linearGradient id="lava" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff5b1f" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M0 260 C120 240 180 200 260 210 C330 220 360 150 430 150 C500 150 520 210 600 220 C700 232 760 120 860 110 C900 106 930 140 960 140 C1000 140 1030 70 1100 70 C1170 70 1190 150 1250 160 C1330 172 1380 200 1440 190 L1440 420 L0 420Z" fill="url(#l1)"/>
+    <path d="M0 260 C120 240 180 200 260 210 C330 220 360 150 430 150 C500 150 520 210 600 220 C700 232 760 120 860 110 C900 106 930 140 960 140 C1000 140 1030 70 1100 70 C1170 70 1190 150 1250 160 C1330 172 1380 200 1440 190" stroke="#ff5b1f" stroke-opacity=".55" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"/><path d="M1078 76 L1100 70 L1122 76" stroke="#ffb347" stroke-width="3" fill="none" vector-effect="non-scaling-stroke"/>
+    <path d="M1100 72 C1096 40 1110 20 1104 0" stroke="url(#lava)" stroke-width="2" fill="none" opacity=".7" class="glow"/>
+    <path d="M0 330 C140 300 220 250 330 260 C420 268 470 300 560 290 C660 280 720 230 820 235 C930 240 980 300 1090 300 C1200 300 1300 260 1440 270 L1440 420 L0 420Z" fill="url(#l2)"/><path d="M0 330 C140 300 220 250 330 260 C420 268 470 300 560 290 C660 280 720 230 820 235 C930 240 980 300 1090 300 C1200 300 1300 260 1440 270" stroke="#f1ece4" stroke-opacity=".18" fill="none" vector-effect="non-scaling-stroke"/>
+    <path d="M0 380 C200 360 400 370 620 355 C860 340 1100 372 1440 350 L1440 420 L0 420Z" fill="#121212"/>
+  </svg>
+  <div class="wrap hero-in">
+    <div class="reveal">
+      <p class="kicker">Chauffagiste · Clermont-Ferrand</p>
+      <h1>La chaleur qui tient,<em>au pied des volcans.</em></h1>
+      <p class="lead">Mager remplace votre chaudière gaz ou fioul, installe pompes à chaleur, climatisations et chauffe-eau thermodynamiques dans tout le bassin clermontois. Un interlocuteur unique, du premier diagnostic à la mise en service.</p>
+      <div class="ctas">
+        <a href="tel:+33669565435" class="btn btn-lave"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a href="#contact" class="btn btn-ghost">Demander un devis</a>
+      </div>
+    </div>
+    <aside class="contact-card reveal" aria-label="Coordonnées">
+      <h3>Parlons de votre chauffage</h3>
+      <p class="sub">Réponse rapide, devis sans engagement.</p>
+      <div class="cc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Téléphone</small><a href="tel:+33669565435">06 69 56 54 35</a></div></div>
+      <div class="cc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><div><small>Email</small><a href="mailto:mager.auvergne@gmail.com">mager.auvergne@gmail.com</a></div></div>
+      <div class="cc-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-7.6 8-13a8 8 0 0 0-16 0c0 5.4 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><div><small>Zone</small>Clermont-Ferrand et agglomération</div></div>
+    </aside>
+  </div>
+</header>
+
+<section class="trust" aria-label="Points de confiance">
+  <div class="wrap">
+    <div class="trust-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 3 6 9v10c0 9 6 15 14 18 8-3 14-9 14-18V9z"/><path d="m13 20 5 5 9-10"/></svg><div><b>QUALIBAT</b><span>Remplacement chaudière</span></div></div>
+    <div class="trust-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="5" width="24" height="30" rx="2"/><path d="M14 26c0-4 6-5 6-10 3 3 6 6 6 10a6 6 0 0 1-12 0z"/></svg><div><b>Gaz, fioul &amp; PAC</b><span>Toutes énergies</span></div></div>
+    <div class="trust-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 37s13-11 13-21a13 13 0 0 0-26 0c0 10 13 21 13 21z"/><circle cx="20" cy="16" r="4"/></svg><div><b>Clermont &amp; alentours</b><span>Agglomération clermontoise</span></div></div>
+    <div class="trust-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 6h24v28H8z"/><path d="M13 13h14M13 19h14M13 25h8"/></svg><div><b>Devis gratuit</b><span>Sans engagement</span></div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="kicker">Prestations</p><h2>Le bon équipement,<br>posé dans les règles.</h2></div>
+      <p>Que votre vieille chaudière fatigue ou que vous pensiez à passer à la pompe à chaleur, Mager vous conseille la solution adaptée à votre logement, à votre budget et au climat auvergnat.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal"><span class="num">01</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="14" y="6" width="28" height="40" rx="3"/><rect x="20" y="12" width="16" height="8" rx="1"/><path d="M24 36c0-4 4-5 4-9 2 2 4 4 4 9a4 4 0 0 1-8 0z" stroke="#ff5b1f"/><path d="M20 46v5M36 46v5"/></svg>
+        <h3>Remplacement de chaudière</h3><p>Dépose de l'ancienne chaudière gaz ou fioul et pose d'un modèle récent, plus sobre. Qualification QUALIBAT dédiée.</p></article>
+      <article class="svc reveal"><span class="num">02</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="14" width="46" height="30" rx="3"/><circle cx="20" cy="29" r="9"/><path d="M20 20v18M11 29h18M14 23l12 12M26 23 14 35" stroke="#ff5b1f" stroke-width="1.2"/><path d="M36 22h10M36 28h10M36 34h10"/></svg>
+        <h3>Pompe à chaleur</h3><p>Étude et installation de pompes à chaleur pour remplacer ou épauler votre chauffage actuel, avec réglages adaptés à l'hiver.</p></article>
+      <article class="svc reveal"><span class="num">03</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="10" width="46" height="18" rx="3"/><path d="M11 22h34"/><path d="M16 34c0 4-3 4-3 8M28 34c0 4-3 4-3 8M40 34c0 4-3 4-3 8" stroke="#ff5b1f"/></svg>
+        <h3>Climatisation</h3><p>Climatisation réversible pour garder la fraîcheur l'été et un appoint de chaleur à la mi-saison, pose soignée des unités.</p></article>
+      <article class="svc reveal"><span class="num">04</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="16" y="4" width="24" height="46" rx="12"/><path d="M28 16v20" stroke="#ff5b1f"/><circle cx="28" cy="38" r="4" stroke="#ff5b1f"/><path d="M22 50v3M34 50v3"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3><p>Une eau chaude produite en captant les calories de l'air : moins d'électricité consommée pour vos douches.</p></article>
+      <article class="svc reveal"><span class="num">05</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="28" cy="28" r="20"/><path d="M28 14v14l9 6" stroke="#ff5b1f"/><path d="M8 28h4M44 28h4M28 8v2"/></svg>
+        <h3>Entretien &amp; mise en service</h3><p>Réglages, contrôle et conseils d'utilisation à la mise en route de votre installation pour qu'elle dure longtemps.</p></article>
+      <article class="svc reveal"><span class="num">06</span>
+        <svg class="ic" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 46V22L28 8l18 14v24z"/><path d="M22 46V32h12v14"/><path d="M38 14V6h5v12" stroke="#ff5b1f"/></svg>
+        <h3>Conseil rénovation</h3><p>Quel équipement pour quelle maison ? Un avis franc pour choisir entre chaudière, PAC ou solution combinée.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-visual reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+        <defs><radialGradient id="g2" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#ff5b1f" stop-opacity=".45"/><stop offset="1" stop-color="#ff5b1f" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="200" cy="300" r="200" fill="url(#g2)"/>
+        <rect x="130" y="120" width="140" height="230" rx="10" fill="#1c1b1a" stroke="#f1ece4" stroke-opacity=".4"/>
+        <rect x="150" y="145" width="100" height="40" rx="4" fill="#121212" stroke="#ffb347" stroke-opacity=".7"/>
+        <text x="200" y="172" text-anchor="middle" font-family="Jost" font-size="18" fill="#ffb347">21.5°</text>
+        <circle cx="170" cy="210" r="7" fill="none" stroke="#f1ece4" stroke-opacity=".5"/><circle cx="200" cy="210" r="7" fill="none" stroke="#f1ece4" stroke-opacity=".5"/><circle cx="230" cy="210" r="7" fill="#ff5b1f"/>
+        <path class="glow" d="M200 320c-20 0-30-14-30-30 0-20 20-28 22-50 14 14 38 26 38 50 0 16-10 30-30 30z" fill="#ff5b1f" opacity=".9"/>
+        <path d="M200 318c-9 0-14-7-14-15 0-10 9-14 10-24 7 7 18 13 18 24 0 8-5 15-14 15z" fill="#ffb347"/>
+        <path d="M160 350v40M240 350v40M160 390h-50M240 390h60" stroke="#f1ece4" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+        <path d="M0 470 C80 440 140 450 200 430 C270 410 330 440 400 420 L400 500 L0 500Z" fill="#121212"/>
+      </svg>
+    </div>
+    <div>
+      <p class="kicker reveal">Pourquoi Mager</p>
+      <h2 class="reveal" style="margin-bottom:30px">Un artisan,<br>pas un centre d'appels.</h2>
+      <div class="why-list">
+        <div class="why-item reveal"><span class="n">I</span><div><h3>Qualification reconnue</h3><p>QUALIBAT pour le remplacement de chaudière : un gage de compétence vérifié par un organisme indépendant.</p></div></div>
+        <div class="why-item reveal"><span class="n">II</span><div><h3>Toutes les énergies</h3><p>Gaz, fioul, pompe à chaleur, thermodynamique : on compare honnêtement, sans pousser un seul produit.</p></div></div>
+        <div class="why-item reveal"><span class="n">III</span><div><h3>Proximité clermontoise</h3><p>Basé à Clermont-Ferrand, Mager connaît les maisons de pierre comme les appartements récents de l'agglomération.</p></div></div>
+        <div class="why-item reveal"><span class="n">IV</span><div><h3>Devis clair</h3><p>Un chiffrage détaillé, poste par poste, pour décider en toute sérénité.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="kicker">Comment ça se passe</p><h2>Quatre étapes,<br>zéro mauvaise surprise.</h2></div>
+      <p>Du premier appel à la mise en service, vous savez toujours où en est votre projet.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="big">01</div><h3>Prise de contact</h3><p>Vous appelez ou écrivez : on échange sur votre logement et votre équipement actuel.</p></div>
+      <div class="step reveal"><div class="big">02</div><h3>Visite technique</h3><p>Passage sur place pour mesurer, vérifier les raccordements et cerner vos besoins.</p></div>
+      <div class="step reveal"><div class="big">03</div><h3>Devis détaillé</h3><p>Une proposition claire avec le matériel, la main d'œuvre et le délai prévu.</p></div>
+      <div class="step reveal"><div class="big">04</div><h3>Pose &amp; mise en service</h3><p>Installation propre, réglages et explications pour bien utiliser votre nouvel appareil.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="apropos" style="background:var(--basalte2)">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="kicker">À propos</p>
+      <h2 style="margin-bottom:30px">Mager, chauffagiste<br>clermontois.</h2>
+      <p class="quote-line">« Un chauffage bien choisi, c'est un hiver auvergnat qu'on ne redoute plus. »</p>
+      <p>Mager est une entreprise de chauffage installée à Clermont-Ferrand. Elle intervient sur trois grands domaines : les chaudières gaz ou fioul, les pompes à chaleur et la climatisation, et les chauffe-eau thermodynamiques.</p>
+      <p>Sa qualification QUALIBAT « remplacement de chaudière » atteste d'un savoir-faire contrôlé sur le cœur du métier. L'objectif est simple : vous proposer l'équipement juste, ni surdimensionné ni au rabais, et le poser proprement.</p>
+    </div>
+    <div class="badge-q reveal">
+      <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="56" stroke="#ff5b1f" stroke-width="1.5"/><circle cx="60" cy="60" r="46" stroke="#f1ece4" stroke-opacity=".3" stroke-dasharray="3 5"/><path d="M60 26 38 35v18c0 16 10 26 22 31 12-5 22-15 22-31V35z" stroke="#ffb347" stroke-width="1.8"/><path d="m48 56 8 8 16-17" stroke="#ff5b1f" stroke-width="2.4"/></svg>
+      <b>QUALIBAT</b>
+      <p>Qualification « Remplacement chaudière », mentionnée sur l'annuaire HelloWatt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="works" id="realisations" style="background:var(--basalte)">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><p class="kicker">Types de chantiers</p><h2>Ce que Mager<br>installe chez vous.</h2></div>
+      <p>Illustrations des interventions courantes. Les photos de chantiers réels pourront remplacer ces visuels sur le site définitif.</p>
+    </div>
+    <div class="gallery">
+      <figure class="work reveal"><div class="art"><svg viewBox="0 0 300 225"><rect x="110" y="30" width="80" height="140" rx="6" fill="#1c1b1a" stroke="#f1ece4" stroke-opacity=".5"/><rect x="122" y="44" width="56" height="22" rx="3" fill="#121212" stroke="#ffb347"/><path d="M150 140c-10 0-15-7-15-15 0-10 10-14 11-25 7 7 19 13 19 25 0 8-5 15-15 15z" fill="#ff5b1f"/><path d="M125 170v30M175 170v30M150 170v30" stroke="#a9a39b" stroke-width="5" stroke-linecap="round"/><path d="M0 205h300" stroke="#3d3935"/></svg></div><figcaption class="cap"><small>Chaudière</small><h3>Remplacement chaudière gaz</h3></figcaption></figure>
+      <figure class="work reveal"><div class="art"><svg viewBox="0 0 300 225"><path d="M40 190V100l70-50 70 50v90z" fill="#1c1b1a" stroke="#f1ece4" stroke-opacity=".4"/><rect x="190" y="140" width="80" height="55" rx="5" fill="#262422" stroke="#ffb347"/><circle cx="215" cy="167" r="17" fill="none" stroke="#ff5b1f"/><path d="M215 152v30M200 167h30" stroke="#ff5b1f" stroke-width="1"/><path d="M245 155h16M245 165h16M245 175h16" stroke="#a9a39b"/><path d="M180 170h10" stroke="#a9a39b" stroke-width="4"/><rect x="90" y="140" width="40" height="50" fill="#121212"/></svg></div><figcaption class="cap"><small>Pompe à chaleur</small><h3>PAC en maison individuelle</h3></figcaption></figure>
+      <figure class="work reveal"><div class="art"><svg viewBox="0 0 300 225"><rect x="40" y="40" width="220" height="150" fill="#1c1b1a" stroke="#f1ece4" stroke-opacity=".3"/><rect x="80" y="60" width="140" height="36" rx="6" fill="#262422" stroke="#f1ece4" stroke-opacity=".6"/><path d="M92 84h116" stroke="#a9a39b"/><path d="M110 110c0 10-8 10-8 22M150 110c0 10-8 10-8 22M190 110c0 10-8 10-8 22" stroke="#ffb347" fill="none" stroke-width="2"/></svg></div><figcaption class="cap"><small>Climatisation</small><h3>Split mural réversible</h3></figcaption></figure>
+    </div>
+    <p class="note">Visuels illustratifs créés pour la maquette – aucune photo de chantier n'a été reprise.</p>
+  </div>
+</section>
+
+<section id="avis" style="background:var(--basalte2)">
+  <div class="wrap">
+    <div class="reviews-box reveal">
+      <div>
+        <p class="kicker">Avis clients</p>
+        <h2>Votre avis<br>comptera ici.</h2>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 7 7 .6-5.3 4.7 1.6 7.2L12 17.8 5.7 21.5l1.6-7.2L2 9.6 9 9z"/></svg>
+        </div>
+      </div>
+      <div>
+        <p>Aucun avis en ligne n'a encore été relevé pour Mager. Cet espace affichera la note et le nombre d'avis réels de vos clients (Google ou autre plateforme), avec un lien vers la source.</p>
+        <p>En attendant, retrouvez Mager dans l'annuaire des chauffagistes de Clermont-Ferrand :</p>
+        <a class="btn btn-ghost" href="https://www.hellowatt.fr/chauffage/chauffagistes/puy-de-dome/clermont-ferrand" target="_blank" rel="noopener">Voir la fiche HelloWatt</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:50px" class="reveal"><p class="kicker" style="justify-content:center">Questions fréquentes</p><h2>Vos questions, nos réponses</h2></div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button aria-expanded="false">Quand faut-il remplacer sa chaudière ?</button><div class="ans"><p>Pannes à répétition, consommation qui grimpe, pièces devenues introuvables : ce sont les signes les plus courants. Un diagnostic sur place permet de savoir si une réparation suffit ou si le remplacement est plus raisonnable.</p></div></div>
+      <div class="faq-item reveal"><button aria-expanded="false">Une pompe à chaleur est-elle adaptée au climat auvergnat ?</button><div class="ans"><p>Les pompes à chaleur actuelles fonctionnent par temps froid, mais leur dimensionnement doit tenir compte de l'isolation et de l'altitude. C'est précisément l'objet de la visite technique.</p></div></div>
+      <div class="faq-item reveal"><button aria-expanded="false">Puis-je bénéficier d'aides financières ?</button><div class="ans"><p>Selon votre situation et l'équipement choisi, des aides publiques peuvent exister. Les conditions évoluent régulièrement : nous en parlons au moment du devis et vous orientons vers les dispositifs en vigueur.</p></div></div>
+      <div class="faq-item reveal"><button aria-expanded="false">Le devis est-il payant ?</button><div class="ans"><p>Non, la demande de devis est gratuite et sans engagement.</p></div></div>
+      <div class="faq-item reveal"><button aria-expanded="false">Combien de temps dure une installation ?</button><div class="ans"><p>Tout dépend du chantier : un remplacement de chaudière simple se fait généralement rapidement, une pompe à chaleur demande un peu plus de temps. Le délai exact est indiqué sur le devis.</p></div></div>
+      <div class="faq-item reveal"><button aria-expanded="false">Dans quelles communes intervenez-vous ?</button><div class="ans"><p>À Clermont-Ferrand et dans l'agglomération. Pour une commune plus éloignée, appelez simplement pour vérifier.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="hours">
+        <h3>Horaires</h3>
+        <p class="sub">Horaires indicatifs, à confirmer par téléphone.</p>
+        <ul id="hours">
+          <li data-d="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+          <li data-d="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+          <li data-d="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+          <li data-d="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+          <li data-d="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+          <li data-d="6"><span>Samedi</span><span>À confirmer</span></li>
+          <li data-d="0"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+      </div>
+      <div class="zone">
+        <p><strong style="font-weight:500">Zone d'intervention :</strong> Clermont-Ferrand et agglomération.</p>
+        <a class="btn btn-ghost" style="align-self:flex-start" href="https://www.google.com/maps/search/?api=1&query=Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+    <form class="reveal" id="form" novalidate>
+      <h3>Demander un devis</h3>
+      <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" required></div>
+      <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel"></div>
+      <div class="field full"><label for="mail">Email</label><input id="mail" name="mail" type="email"></div>
+      <div class="field full"><label for="type">Projet</label><select id="type" name="type"><option>Remplacement de chaudière</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Autre</option></select></div>
+      <div class="field full"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Décrivez votre logement et votre équipement actuel…"></textarea></div>
+      <button class="btn btn-lave" type="submit" style="grid-column:1/-1;justify-content:center">Envoyer la demande</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="#top" class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M3 34 L14 14 L20 22 L26 10 L37 34 Z" stroke="#f1ece4" stroke-width="1.5"/><path d="M23 16 L26 10 L29 16" stroke="#ff5b1f" stroke-width="2"/></svg><span><b>MAGER</b><small>Chauffage · Clermont</small></span></a><p style="margin-top:18px">Chaudières gaz et fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Clermont-Ferrand.</p></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33669565435">06 69 56 54 35</a></li><li><a href="mailto:mager.auvergne@gmail.com">mager.auvergne@gmail.com</a></li><li>Clermont-Ferrand et agglomération</li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Lun – Ven : sur rendez-vous</li><li>Horaires à confirmer</li></ul></div>
+      <div><h4>Liens</h4><ul><li><a href="#services">Prestations</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://www.hellowatt.fr/chauffage/chauffagistes/puy-de-dome/clermont-ferrand" target="_blank" rel="noopener">Fiche HelloWatt</a></li></ul></div>
+    </div>
+    <div class="demo"><span>Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+33669565435" aria-label="Appeler Mager"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+const nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false);document.body.style.overflow=''}));
+document.querySelectorAll('.faq-item button').forEach(b=>b.addEventListener('click',()=>{const a=b.nextElementSibling,o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);a.style.maxHeight=o?0:a.scrollHeight+'px'}));
+const d=new Date().getDay();document.querySelectorAll('#hours li').forEach(li=>{if(+li.dataset.d===d)li.classList.add('today')});
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formMsg').textContent="Maquette de démonstration : le formulaire n'envoie pas encore de message. Appelez le 06 69 56 54 35 ou écrivez à mager.auvergne@gmail.com.";});
+</script>
+</body>
+</html>
