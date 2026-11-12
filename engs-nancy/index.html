@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E.N.G.S. – chauffagiste à Nancy</title>
+<meta name="description" content="E.N.G.S., chauffagiste à Nancy : vente, installation et entretien de chaudières gaz et fioul à condensation, pompes à chaleur, climatisation et chauffe-eau thermodynamiques dans le Grand Nancy.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f4eedf;
+  --creme-clair:#fbf7ec;
+  --absinthe:#4f6b3a;
+  --absinthe-fonce:#3b5229;
+  --ambre:#c8862a;
+  --ambre-clair:#e7c27e;
+  --prune:#5a2a41;
+  --prune-fonce:#421d2f;
+  --encre:#23201a;
+  --encre-douce:#4a4438;
+  --or:#b8924a;
+  --filet:rgba(184,146,74,.55);
+  --ombre:0 18px 40px -22px rgba(35,32,26,.45);
+  --titre:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --texte:"Lato","Helvetica Neue",Arial,sans-serif;
+  --nav-h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--texte);font-size:1.03rem;line-height:1.65;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--prune)}
+a[href^="tel:"]{white-space:nowrap}
+h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.12;margin:0 0 .5em;color:var(--prune)}
+h2{font-size:clamp(2rem,4.2vw,3rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--prune);color:#fff;padding:8px 14px;z-index:200}
+.skip:focus{left:12px}
+:focus-visible{outline:3px solid var(--ambre);outline-offset:3px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;background:rgba(244,238,223,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--filet);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 8px 24px -18px rgba(35,32,26,.6)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100%;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--prune)}
+.logo svg{width:38px;height:38px;flex:none}
+.logo strong{font-family:var(--titre);font-size:1.7rem;letter-spacing:.08em;line-height:1}
+.logo small{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--absinthe);font-family:var(--texte);margin-top:3px}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+.menu a{display:block;padding:8px 12px;text-decoration:none;color:var(--encre);font-size:.93rem;border-radius:999px;transition:background .25s,color .25s}
+.menu a:hover{background:rgba(79,107,58,.12);color:var(--absinthe-fonce)}
+.menu .cta-nav{background:var(--prune);color:var(--creme-clair);padding:9px 18px;margin-left:6px}
+.menu .cta-nav:hover{background:var(--prune-fonce);color:#fff}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--filet);border-radius:50%;background:var(--creme-clair);cursor:pointer;padding:0;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:var(--prune);position:relative;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--prune);transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;padding:calc(var(--nav-h) + 18px) 16px 28px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 30%,#fbf6e8 0%,var(--creme) 55%,#ebe2cc 100%)}
+.hero-deco{position:absolute;inset:0;pointer-events:none}
+.hero-deco svg{position:absolute;top:0;height:100%;width:auto}
+.hero-deco .left{left:0}
+.hero-deco .right{right:0;transform:scaleX(-1)}
+.arch{position:relative;width:min(900px,100%);height:min(calc(100svh - var(--nav-h) - 46px),980px);min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:7%;text-align:center;filter:drop-shadow(0 30px 40px rgba(35,32,26,.22))}
+.arch-frame{position:absolute;inset:0;width:100%;height:100%}
+.arch-frame .glass path,.arch-frame .glass rect{stroke:var(--encre);stroke-width:2.2;vector-effect:non-scaling-stroke}
+.arch-frame .lead{fill:none;stroke:var(--encre);stroke-width:4;vector-effect:non-scaling-stroke}
+.arch-frame .gold{fill:none;stroke:var(--or);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.arch-frame .veil{fill:none;stroke:rgba(90,42,65,.14);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.rose{position:relative;z-index:2;display:block;width:min(24%,200px);height:auto;margin:0 auto 14px;flex:none}
+.rose .flame-in{transform-origin:100px 128px;animation:flicker 3.8s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1) rotate(0)}30%{transform:scale(1.04,.97) rotate(-1.5deg)}60%{transform:scale(.97,1.04) rotate(1.2deg)}}
+.arch-content{position:relative;z-index:2;padding:0 14% 2%;max-width:760px}
+.overline{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--absinthe-fonce);font-weight:700;margin-bottom:14px}
+.overline::before,.overline::after{content:"";width:28px;height:1px;background:var(--or)}
+.hero h1{font-size:clamp(3.2rem,8vw,6.2rem);letter-spacing:.06em;margin:0 0 .12em;color:var(--prune);font-weight:700}
+.hero .sous{font-family:var(--titre);font-style:italic;font-size:clamp(1.35rem,2.6vw,1.9rem);color:var(--absinthe-fonce);margin:0 0 14px}
+.hero .accroche{max-width:540px;margin:0 auto 24px;color:var(--encre-douce);font-size:1.02rem}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;letter-spacing:.02em;transition:transform .25s,box-shadow .25s,background .25s;border:2px solid transparent;cursor:pointer;font-family:var(--texte)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-prune{background:var(--prune);color:var(--creme-clair);box-shadow:0 10px 22px -12px rgba(90,42,65,.8)}
+.btn-prune:hover{background:var(--prune-fonce);transform:translateY(-2px)}
+.btn-ambre{background:var(--ambre);color:var(--encre);box-shadow:0 10px 22px -12px rgba(200,134,42,.9)}
+.btn-ambre:hover{background:#d6973f;transform:translateY(-2px)}
+.btn-ligne{border-color:var(--prune);color:var(--prune);background:transparent}
+.btn-ligne:hover{background:var(--prune);color:var(--creme-clair)}
+
+/* ---------- Dividers ---------- */
+.fouet{display:block;width:100%;height:60px;color:var(--or)}
+.fouet path{fill:none;stroke:currentColor;stroke-width:1.4}
+
+/* ---------- TRUST ---------- */
+.trust{background:var(--prune);color:var(--creme);position:relative}
+.trust::before,.trust::after{content:"";position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--ambre-clair),transparent)}
+.trust::before{top:6px}.trust::after{bottom:6px}
+.trust ul{list-style:none;margin:0 auto;padding:30px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust li{display:flex;align-items:center;gap:14px;font-size:.95rem;line-height:1.4}
+.trust li svg{width:42px;height:42px;flex:none}
+.trust strong{display:block;font-family:var(--titre);font-size:1.25rem;color:var(--ambre-clair);font-weight:600}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.sec{padding:96px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 54px}
+.sec-head .overline{justify-content:center}
+.sec-head p{color:var(--encre-douce)}
+.ombelle-title{display:block;width:70px;height:40px;margin:0 auto 6px;color:var(--absinthe)}
+
+/* Services : cadres vitrail arrondis */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc{position:relative;background:var(--creme-clair);border:1px solid var(--filet);border-radius:160px 160px 18px 18px;padding:34px 28px 28px;text-align:center;transition:transform .35s,box-shadow .35s,border-color .35s;box-shadow:var(--ombre)}
+.svc::before{content:"";position:absolute;inset:8px;border:1px solid rgba(184,146,74,.35);border-radius:152px 152px 12px 12px;pointer-events:none}
+.svc:hover{transform:translateY(-6px);border-color:var(--ambre);box-shadow:0 26px 46px -24px rgba(90,42,65,.5)}
+.svc .ico{width:104px;height:104px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#fff8e6,#efe2c2);border:2px solid var(--encre);box-shadow:inset 0 0 0 5px var(--creme-clair),inset 0 0 0 7px var(--ambre)}
+.svc .ico svg{width:56px;height:56px}
+.svc h3{margin-bottom:.35em}
+.svc p{margin:0;color:var(--encre-douce);font-size:.96rem}
+
+/* Pourquoi */
+.pourquoi{background:linear-gradient(180deg,#ece4cf,var(--creme));}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.atout{padding:28px 22px;border-top:3px solid var(--absinthe);background:rgba(251,247,236,.7);border-radius:0 0 14px 14px;transition:background .3s}
+.atout:hover{background:var(--creme-clair)}
+.atout svg{width:46px;height:46px;margin-bottom:10px}
+.atout h3{font-size:1.32rem;color:var(--absinthe-fonce)}
+.atout p{margin:0;font-size:.95rem;color:var(--encre-douce)}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:e;position:relative}
+.etape{position:relative;text-align:center;padding:0 10px}
+.etape .num{width:86px;height:86px;margin:0 auto 18px;display:grid;place-items:center;font-family:var(--titre);font-size:2.4rem;font-weight:700;color:var(--creme-clair);background:var(--absinthe);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;box-shadow:0 0 0 6px var(--creme),0 0 0 7px var(--or);position:relative;z-index:1}
+.etape:nth-child(2) .num{background:var(--ambre);color:var(--encre)}
+.etape:nth-child(3) .num{background:var(--prune)}
+.etape:nth-child(4) .num{background:var(--encre)}
+.etape p{color:var(--encre-douce);font-size:.96rem}
+.etapes-line{position:absolute;top:30px;left:10%;width:80%;height:50px;z-index:0;color:var(--or)}
+
+/* À propos */
+.apropos{background:var(--absinthe-fonce);color:var(--creme);overflow:hidden}
+.apropos h2{color:var(--creme-clair)}
+.apropos .overline{color:var(--ambre-clair)}
+.apropos-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.apropos p{color:#ebe4d2}
+.apropos .fiche{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
+.apropos .fiche li{display:flex;gap:12px;align-items:flex-start}
+.apropos .fiche svg{width:22px;height:22px;flex:none;margin-top:3px}
+.apropos a{color:var(--ambre-clair)}
+.nenuphar{width:100%;max-width:440px;margin:auto;display:block}
+
+/* Galerie */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.medaillon{text-align:center}
+.medaillon figure{margin:0}
+.medaillon .cadre{aspect-ratio:3/4;border-radius:999px 999px 16px 16px;border:3px solid var(--encre);overflow:hidden;position:relative;background:linear-gradient(180deg,#f9efd6,#e8dcbc);box-shadow:inset 0 0 0 6px var(--creme-clair),inset 0 0 0 8px var(--or),var(--ombre);transition:transform .4s}
+.medaillon:hover .cadre{transform:translateY(-6px) rotate(-.6deg)}
+.medaillon .cadre svg{width:100%;height:100%;display:block}
+.medaillon figcaption{margin-top:16px}
+.medaillon figcaption strong{display:block;font-family:var(--titre);font-size:1.35rem;color:var(--prune)}
+.medaillon figcaption span{font-size:.92rem;color:var(--encre-douce)}
+.tarif-note{text-align:center;margin-top:40px;font-family:var(--titre);font-size:1.3rem;font-style:italic;color:var(--absinthe-fonce)}
+
+/* Avis */
+.avis-box{max-width:820px;margin:auto;text-align:center;background:var(--creme-clair);border:1px solid var(--filet);border-radius:28px;padding:54px 40px;position:relative;box-shadow:var(--ombre)}
+.avis-box .ginkgo{width:70px;height:70px;margin:0 auto 10px;display:block}
+.avis-box p{color:var(--encre-douce);max-width:560px;margin:0 auto 22px}
+
+/* FAQ */
+.faq{max-width:860px;margin:auto}
+.faq details{border-bottom:1px solid var(--filet);padding:4px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 4px;font-family:var(--titre);font-size:1.38rem;font-weight:600;color:var(--prune)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .plus{width:30px;height:30px;flex:none;border-radius:50%;border:1px solid var(--or);display:grid;place-items:center;transition:transform .3s,background .3s}
+.faq summary .plus svg{width:14px;height:14px}
+.faq details[open] summary .plus{transform:rotate(45deg);background:var(--ambre-clair)}
+.faq summary:hover{color:var(--absinthe-fonce)}
+.faq .rep{padding:0 4px 18px;color:var(--encre-douce)}
+
+/* Horaires */
+.infos{background:linear-gradient(180deg,var(--creme),#ece4cf)}
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.carte{background:var(--creme-clair);border:1px solid var(--filet);border-radius:22px;padding:34px;box-shadow:var(--ombre)}
+.horaires{width:100%;border-collapse:collapse;font-size:1rem}
+.horaires td{padding:11px 14px;border-bottom:1px dashed rgba(184,146,74,.5)}
+.horaires td:last-child{text-align:right;font-weight:700}
+.horaires tr.ferme td:last-child{color:#7a6f5c;font-weight:400}
+.horaires tr.today td{background:rgba(79,107,58,.14);color:var(--absinthe-fonce)}
+.horaires tr.today td:first-child{border-left:4px solid var(--absinthe);font-weight:700}
+.horaires tr.today td:first-child::after{content:" · aujourd'hui";font-weight:400;font-size:.85rem}
+.etat{display:inline-block;margin-top:16px;padding:6px 14px;border-radius:999px;font-size:.9rem;font-weight:700;background:rgba(90,42,65,.1);color:var(--prune)}
+.adresse{font-family:var(--titre);font-size:1.5rem;color:var(--prune);line-height:1.3;margin-bottom:12px}
+.coord{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:12px}
+.coord li{display:flex;gap:12px;align-items:center}
+.coord svg{width:22px;height:22px;flex:none}
+.coord a{color:var(--encre);font-weight:700;text-decoration-color:var(--ambre);text-underline-offset:3px;word-break:break-word}
+.plan{margin:6px 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--filet)}
+.plan svg{display:block;width:100%;height:auto}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.contact-intro p{color:var(--encre-douce)}
+form.devis{background:var(--creme-clair);border-radius:26px;padding:36px;border:1px solid var(--filet);box-shadow:var(--ombre);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form.devis .full{grid-column:1/-1}
+form.devis label{display:block;font-size:.86rem;font-weight:700;margin-bottom:6px;color:var(--encre)}
+form.devis input,form.devis select,form.devis textarea{width:100%;padding:13px 15px;border:1px solid #cdbf9f;border-radius:12px;background:#fffdf6;font:inherit;color:var(--encre);transition:border-color .25s,box-shadow .25s}
+form.devis input:focus,form.devis select:focus,form.devis textarea:focus{outline:none;border-color:var(--absinthe);box-shadow:0 0 0 3px rgba(79,107,58,.2)}
+form.devis textarea{min-height:130px;resize:vertical}
+.form-msg{display:none;grid-column:1/-1;padding:16px 18px;border-radius:14px;background:rgba(79,107,58,.14);color:var(--absinthe-fonce);font-weight:700;border-left:4px solid var(--absinthe)}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{background:var(--encre);color:#d9d1bf;padding:70px 0 0;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--absinthe),var(--ambre),var(--prune))}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px}
+footer h3{color:var(--ambre-clair);font-size:1.3rem}
+footer a{color:#f1e7cf}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:.94rem}
+footer .logo strong{color:var(--creme-clair)}
+footer .logo small{color:var(--ambre-clair)}
+.mentions{border-top:1px solid rgba(231,194,126,.25);margin-top:48px;padding:22px 0;font-size:.85rem;color:#b5ab96;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.demo{background:#15130f;color:#a99f8a;text-align:center;font-size:.8rem;padding:12px 16px;letter-spacing:.02em}
+
+/* Floating call */
+.fab{position:fixed;right:16px;bottom:18px;z-index:90;display:none;transition:opacity .3s,transform .3s;align-items:center;gap:8px;background:var(--prune);color:var(--creme-clair);padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 14px 30px -10px rgba(90,42,65,.8);border:2px solid var(--ambre-clair)}
+.fab svg{width:20px;height:20px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.vu{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+@media (max-width:1020px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts,.galerie{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .etapes-line{display:none}
+  .trust ul{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-deco{opacity:.45}
+}
+@media (max-width:880px){
+  .burger{display:flex}
+  .menu{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;align-items:stretch;background:var(--creme-clair);padding:14px 16px 22px;gap:2px;border-bottom:2px solid var(--or);box-shadow:0 20px 30px -20px rgba(35,32,26,.5);transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.open{transform:none;opacity:1;visibility:visible}
+  .menu a{padding:13px 14px;font-size:1.05rem;border-radius:12px}
+  .menu .cta-nav{margin:8px 0 0;text-align:center}
+  .apropos-grid,.infos-grid,.contact-grid{grid-template-columns:1fr}
+  .nenuphar{max-width:320px}
+}
+@media (max-width:640px){
+  .sec{padding:72px 0}
+  .services,.atouts{grid-template-columns:1fr}
+  .galerie{grid-template-columns:1fr 1fr;gap:16px}
+  .medaillon figcaption strong{font-size:1.15rem}
+  .medaillon figcaption span{font-size:.85rem}
+  .etapes{grid-template-columns:1fr}
+  .trust ul{grid-template-columns:1fr;gap:16px}
+  .foot-grid{grid-template-columns:1fr}
+  form.devis{grid-template-columns:1fr;padding:24px}
+  .carte{padding:24px}
+  .fab{display:inline-flex}
+  .fab.cache{opacity:0;transform:translateY(20px);pointer-events:none}
+  .arch{min-height:700px;height:calc(100svh - var(--nav-h) - 30px)}
+  .arch-content{padding:0 12% 4%}
+  .rose{width:38%;margin-bottom:8px}
+  .hero .overline{letter-spacing:.16em;font-size:.72rem}
+  .hero .overline::before,.hero .overline::after{width:16px}
+  .hero{padding-left:10px;padding-right:10px}
+  .hero-deco{display:none}
+  .hero .accroche{font-size:.94rem;margin-bottom:18px}
+  .btn{padding:13px 20px;font-size:.93rem}
+  .avis-box{padding:40px 22px}
+  .demo{padding-bottom:84px}
+  .logo strong{font-size:1.45rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Aller au contenu</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="E.N.G.S., retour en haut">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 2 C10 10 6 18 6 25 a14 14 0 0 0 28 0 C34 18 30 10 20 2Z" fill="#5a2a41"/>
+        <path d="M20 12 C15 18 13 22 13 26 a7 7 0 0 0 14 0 C27 22 25 18 20 12Z" fill="#c8862a"/>
+        <path d="M20 20 c-2 3 -3 5 -3 7 a3 3 0 0 0 6 0 c0 -2 -1 -4 -3 -7Z" fill="#f4eedf"/>
+      </svg>
+      <span><strong>E.N.G.S.</strong><small>Chauffage · Nancy</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Savoir-faire</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">L'entreprise</a></li>
+      <li><a href="#installations">Installations</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#infos">Horaires</a></li>
+      <li><a href="#contact" class="cta-nav">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ HERO : arche de vitrail ============ -->
+<section class="hero" aria-labelledby="titre">
+  <div class="hero-deco" aria-hidden="true">
+    <svg class="left" viewBox="0 0 260 900" preserveAspectRatio="xMinYMid slice">
+      <g fill="none" stroke="#b8924a" stroke-width="1.3">
+        <path d="M-10 900 C 60 760, 10 640, 90 540 S 200 360, 120 240 S 40 60, 150 -10"/>
+        <path d="M-10 820 C 40 700, 0 600, 60 520 S 150 380, 90 280"/>
+        <path d="M30 900 C 110 780, 70 660, 140 580 S 230 430, 190 330"/>
+      </g>
+      <g fill="#4f6b3a" opacity=".75">
+        <path d="M90 540 c-30 -10 -48 -36 -44 -64 c28 4 46 30 44 64Z"/>
+        <path d="M120 240 c26 -16 56 -12 70 10 c-24 16 -54 12 -70 -10Z"/>
+        <path d="M140 580 c22 -22 52 -26 72 -8 c-20 22 -50 26 -72 8Z"/>
+      </g>
+      <g transform="translate(150 140)">
+        <g stroke="#4f6b3a" stroke-width="1.2" fill="none">
+          <path d="M0 60 L0 0 M0 60 L-26 8 M0 60 L26 8 M0 60 L-40 26 M0 60 L40 26 M0 60 L-14 -2 M0 60 L14 -2"/>
+        </g>
+        <g fill="#c8862a">
+          <circle cx="0" cy="0" r="5"/><circle cx="-26" cy="8" r="5"/><circle cx="26" cy="8" r="5"/><circle cx="-40" cy="26" r="4.5"/><circle cx="40" cy="26" r="4.5"/><circle cx="-14" cy="-2" r="4"/><circle cx="14" cy="-2" r="4"/>
+        </g>
+      </g>
+      <g transform="translate(70 760)" fill="#5a2a41" opacity=".8">
+        <path d="M0 0 c-20 -30 -60 -36 -70 -10 c20 10 46 12 70 10Z"/>
+        <path d="M0 0 c-6 -36 14 -64 36 -60 c-2 26 -16 48 -36 60Z"/>
+      </g>
+    </svg>
+    <svg class="right" viewBox="0 0 260 900" preserveAspectRatio="xMinYMid slice">
+      <g fill="none" stroke="#b8924a" stroke-width="1.3">
+        <path d="M-10 900 C 60 760, 10 640, 90 540 S 200 360, 120 240 S 40 60, 150 -10"/>
+        <path d="M30 900 C 110 780, 70 660, 140 580 S 230 430, 190 330"/>
+      </g>
+      <g transform="translate(120 330)" fill="#c8862a" opacity=".8">
+        <path d="M0 0 C -30 -10 -46 -40 -30 -62 C -18 -50 -6 -52 0 -64 C 6 -52 18 -50 30 -62 C 46 -40 30 -10 0 0Z"/>
+        <path d="M0 0 L0 46" stroke="#4f6b3a" stroke-width="2"/>
+      </g>
+      <g transform="translate(150 680)" fill="#4f6b3a" opacity=".75">
+        <path d="M0 0 C -30 -10 -46 -40 -30 -62 C -18 -50 -6 -52 0 -64 C 6 -52 18 -50 30 -62 C 46 -40 30 -10 0 0Z"/>
+        <path d="M0 0 L-6 56" stroke="#4f6b3a" stroke-width="2" fill="none"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="arch">
+    <svg class="arch-frame" viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="opale" cx="50%" cy="32%" r="70%">
+          <stop offset="0" stop-color="#fffaf0"/>
+          <stop offset=".55" stop-color="#f8efda"/>
+          <stop offset="1" stop-color="#efe1c1"/>
+        </radialGradient>
+        <linearGradient id="reflet" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+          <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+          <stop offset="1" stop-color="#000" stop-opacity=".12"/>
+        </linearGradient>
+      </defs>
+      <!-- verre opalescent intérieur -->
+      <path d="M8,140 L8,50 A42,42 0 0 1 92,50 L92,140 Z" fill="url(#opale)"/>
+      <!-- fines résilles du verre intérieur -->
+      <path class="veil" d="M8,92 C30,86 70,86 92,92 M8,118 C30,112 70,112 92,118 M30,140 C24,120 22,100 26,80 M70,140 C76,120 78,100 74,80"/>
+      <!-- verrières colorées -->
+      <g class="glass">
+        <path fill="#4f6b3a" d="M0.00,50.00A50,50 0 0 1 2.45,34.55L6.25,35.79A46,46 0 0 0 4.00,50.00Z"/>
+        <path fill="#c8862a" d="M2.45,34.55A50,50 0 0 1 9.55,20.61L12.79,22.96A46,46 0 0 0 6.25,35.79Z"/>
+        <path fill="#5a2a41" d="M9.55,20.61A50,50 0 0 1 20.61,9.55L22.96,12.79A46,46 0 0 0 12.79,22.96Z"/>
+        <path fill="#7d9a5e" d="M20.61,9.55A50,50 0 0 1 34.55,2.45L35.79,6.25A46,46 0 0 0 22.96,12.79Z"/>
+        <path fill="#e0b062" d="M34.55,2.45A50,50 0 0 1 50.00,0.00L50.00,4.00A46,46 0 0 0 35.79,6.25Z"/>
+        <path fill="#8a4a68" d="M50.00,0.00A50,50 0 0 1 65.45,2.45L64.21,6.25A46,46 0 0 0 50.00,4.00Z"/>
+        <path fill="#3d5a2c" d="M65.45,2.45A50,50 0 0 1 79.39,9.55L77.04,12.79A46,46 0 0 0 64.21,6.25Z"/>
+        <path fill="#d89a3c" d="M79.39,9.55A50,50 0 0 1 90.45,20.61L87.21,22.96A46,46 0 0 0 77.04,12.79Z"/>
+        <path fill="#4f6b3a" d="M90.45,20.61A50,50 0 0 1 97.55,34.55L93.75,35.79A46,46 0 0 0 87.21,22.96Z"/>
+        <path fill="#c8862a" d="M97.55,34.55A50,50 0 0 1 100.00,50.00L96.00,50.00A46,46 0 0 0 93.75,35.79Z"/>
+        <path fill="#5a2a41" d="M4.00,50.00A46,46 0 0 1 5.15,39.76L9.05,40.65A42,42 0 0 0 8.00,50.00Z"/>
+        <path fill="#8a4a68" d="M5.15,39.76A46,46 0 0 1 8.56,30.04L12.16,31.78A42,42 0 0 0 9.05,40.65Z"/>
+        <path fill="#4f6b3a" d="M8.56,30.04A46,46 0 0 1 14.04,21.32L17.16,23.81A42,42 0 0 0 12.16,31.78Z"/>
+        <path fill="#7d9a5e" d="M14.04,21.32A46,46 0 0 1 21.32,14.04L23.81,17.16A42,42 0 0 0 17.16,23.81Z"/>
+        <path fill="#3d5a2c" d="M21.32,14.04A46,46 0 0 1 30.04,8.56L31.78,12.16A42,42 0 0 0 23.81,17.16Z"/>
+        <path fill="#c8862a" d="M30.04,8.56A46,46 0 0 1 39.76,5.15L40.65,9.05A42,42 0 0 0 31.78,12.16Z"/>
+        <path fill="#e0b062" d="M39.76,5.15A46,46 0 0 1 50.00,4.00L50.00,8.00A42,42 0 0 0 40.65,9.05Z"/>
+        <path fill="#d89a3c" d="M50.00,4.00A46,46 0 0 1 60.24,5.15L59.35,9.05A42,42 0 0 0 50.00,8.00Z"/>
+        <path fill="#5a2a41" d="M60.24,5.15A46,46 0 0 1 69.96,8.56L68.22,12.16A42,42 0 0 0 59.35,9.05Z"/>
+        <path fill="#8a4a68" d="M69.96,8.56A46,46 0 0 1 78.68,14.04L76.19,17.16A42,42 0 0 0 68.22,12.16Z"/>
+        <path fill="#4f6b3a" d="M78.68,14.04A46,46 0 0 1 85.96,21.32L82.84,23.81A42,42 0 0 0 76.19,17.16Z"/>
+        <path fill="#7d9a5e" d="M85.96,21.32A46,46 0 0 1 91.44,30.04L87.84,31.78A42,42 0 0 0 82.84,23.81Z"/>
+        <path fill="#3d5a2c" d="M91.44,30.04A46,46 0 0 1 94.85,39.76L90.95,40.65A42,42 0 0 0 87.84,31.78Z"/>
+        <path fill="#c8862a" d="M94.85,39.76A46,46 0 0 1 96.00,50.00L92.00,50.00A42,42 0 0 0 90.95,40.65Z"/>
+        <rect fill="#4f6b3a" x="0" y="50" width="4" height="8"/>
+        <rect fill="#7d9a5e" x="4" y="50" width="4" height="8"/>
+        <rect fill="#3d5a2c" x="92" y="50" width="4" height="8"/>
+        <rect fill="#c8862a" x="96" y="50" width="4" height="8"/>
+        <rect fill="#5a2a41" x="0" y="58" width="4" height="10"/>
+        <rect fill="#8a4a68" x="4" y="58" width="4" height="10"/>
+        <rect fill="#4f6b3a" x="92" y="58" width="4" height="10"/>
+        <rect fill="#7d9a5e" x="96" y="58" width="4" height="10"/>
+        <rect fill="#e0b062" x="0" y="68" width="4" height="8"/>
+        <rect fill="#d89a3c" x="4" y="68" width="4" height="8"/>
+        <rect fill="#5a2a41" x="92" y="68" width="4" height="8"/>
+        <rect fill="#8a4a68" x="96" y="68" width="4" height="8"/>
+        <rect fill="#3d5a2c" x="0" y="76" width="4" height="10"/>
+        <rect fill="#c8862a" x="4" y="76" width="4" height="10"/>
+        <rect fill="#e0b062" x="92" y="76" width="4" height="10"/>
+        <rect fill="#d89a3c" x="96" y="76" width="4" height="10"/>
+        <rect fill="#4f6b3a" x="0" y="86" width="4" height="8"/>
+        <rect fill="#7d9a5e" x="4" y="86" width="4" height="8"/>
+        <rect fill="#3d5a2c" x="92" y="86" width="4" height="8"/>
+        <rect fill="#c8862a" x="96" y="86" width="4" height="8"/>
+        <rect fill="#5a2a41" x="0" y="94" width="4" height="10"/>
+        <rect fill="#8a4a68" x="4" y="94" width="4" height="10"/>
+        <rect fill="#4f6b3a" x="92" y="94" width="4" height="10"/>
+        <rect fill="#7d9a5e" x="96" y="94" width="4" height="10"/>
+        <rect fill="#e0b062" x="0" y="104" width="4" height="8"/>
+        <rect fill="#d89a3c" x="4" y="104" width="4" height="8"/>
+        <rect fill="#5a2a41" x="92" y="104" width="4" height="8"/>
+        <rect fill="#8a4a68" x="96" y="104" width="4" height="8"/>
+        <rect fill="#3d5a2c" x="0" y="112" width="4" height="10"/>
+        <rect fill="#c8862a" x="4" y="112" width="4" height="10"/>
+        <rect fill="#e0b062" x="92" y="112" width="4" height="10"/>
+        <rect fill="#d89a3c" x="96" y="112" width="4" height="10"/>
+        <rect fill="#4f6b3a" x="0" y="122" width="4" height="8"/>
+        <rect fill="#7d9a5e" x="4" y="122" width="4" height="8"/>
+        <rect fill="#3d5a2c" x="92" y="122" width="4" height="8"/>
+        <rect fill="#c8862a" x="96" y="122" width="4" height="8"/>
+        <rect fill="#5a2a41" x="0" y="130" width="4" height="10"/>
+        <rect fill="#8a4a68" x="4" y="130" width="4" height="10"/>
+        <rect fill="#4f6b3a" x="92" y="130" width="4" height="10"/>
+        <rect fill="#7d9a5e" x="96" y="130" width="4" height="10"/>
+      </g>
+      <path d="M0,140 L0,50 A50,50 0 0 1 100,50 L100,140 Z" fill="url(#reflet)"/>
+      <!-- plombs principaux -->
+      <path class="lead" d="M0,140 L0,50 A50,50 0 0 1 100,50 L100,140"/>
+      <path class="lead" d="M8,140 L8,50 A42,42 0 0 1 92,50 L92,140"/>
+      <path class="gold" d="M10.5,140 L10.5,50 A39.5,39.5 0 0 1 89.5,50 L89.5,140"/>
+      <path class="lead" d="M0,139.5 L100,139.5"/>
+    </svg>
+
+    <svg class="rose" viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <radialGradient id="feu" cx="50%" cy="70%" r="60%">
+          <stop offset="0" stop-color="#fff3c9"/>
+          <stop offset=".45" stop-color="#e7a443"/>
+          <stop offset="1" stop-color="#c8862a"/>
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="96" fill="#5a2a41" stroke="#23201a" stroke-width="4"/>
+      <g stroke="#23201a" stroke-width="2.5">
+        <path d="M100 100 L100 4" /><path d="M100 100 L168 32"/><path d="M100 100 L196 100"/><path d="M100 100 L168 168"/><path d="M100 100 L100 196"/><path d="M100 100 L32 168"/><path d="M100 100 L4 100"/><path d="M100 100 L32 32"/>
+      </g>
+      <g stroke="#23201a" stroke-width="2.5">
+        <path d="M100 4 A96 96 0 0 1 168 32 L100 100Z" fill="#4f6b3a"/>
+        <path d="M168 32 A96 96 0 0 1 196 100 L100 100Z" fill="#8a4a68"/>
+        <path d="M196 100 A96 96 0 0 1 168 168 L100 100Z" fill="#7d9a5e"/>
+        <path d="M168 168 A96 96 0 0 1 100 196 L100 100Z" fill="#5a2a41"/>
+        <path d="M100 196 A96 96 0 0 1 32 168 L100 100Z" fill="#4f6b3a"/>
+        <path d="M32 168 A96 96 0 0 1 4 100 L100 100Z" fill="#8a4a68"/>
+        <path d="M4 100 A96 96 0 0 1 32 32 L100 100Z" fill="#7d9a5e"/>
+        <path d="M32 32 A96 96 0 0 1 100 4 L100 100Z" fill="#5a2a41"/>
+      </g>
+      <circle cx="100" cy="100" r="64" fill="#f6ead0" stroke="#23201a" stroke-width="4"/>
+      <circle cx="100" cy="100" r="58" fill="none" stroke="#b8924a" stroke-width="1.5"/>
+      <g class="flame-in">
+        <path d="M100 40 C78 66 66 86 66 108 a34 34 0 0 0 68 0 C134 86 122 66 100 40Z" fill="url(#feu)" stroke="#23201a" stroke-width="3"/>
+        <path d="M100 74 C88 90 82 102 82 114 a18 18 0 0 0 36 0 C118 102 112 90 100 74Z" fill="#5a2a41" stroke="#23201a" stroke-width="2.5"/>
+        <path d="M100 98 c-6 8 -9 13 -9 18 a9 9 0 0 0 18 0 c0 -5 -3 -10 -9 -18Z" fill="#fff3c9"/>
+      </g>
+      <g fill="#c8862a" stroke="#23201a" stroke-width="1.5">
+        <circle cx="100" cy="18" r="6"/><circle cx="182" cy="100" r="6"/><circle cx="100" cy="182" r="6"/><circle cx="18" cy="100" r="6"/>
+      </g>
+    </svg>
+
+    <div class="arch-content">
+      <p class="overline">Nancy · Grand Nancy</p>
+      <h1 id="titre">E.N.G.S.</h1>
+      <p class="sous">La chaleur, façonnée avec soin</p>
+      <p class="accroche">Chaudières gaz et fioul à condensation, pompes à chaleur, climatisation et chauffe-eau thermodynamiques&nbsp;: E.N.G.S. vend, installe et entretient vos équipements, depuis la promenade Émilie du Châtelet jusqu'aux quatre coins du Grand Nancy.</p>
+      <div class="btns">
+        <a class="btn btn-prune" href="tel:+33614793872">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler
+        </a>
+        <a class="btn btn-ambre" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+          Demander un devis
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<div class="trust" role="region" aria-label="En bref">
+  <ul class="wrap">
+    <li>
+      <svg viewBox="0 0 48 48" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><path d="M24 44s14-13 14-25a14 14 0 0 0-28 0c0 12 14 25 14 25z"/><circle cx="24" cy="19" r="5"/></svg>
+      <span><strong>Nancy (54000)</strong>Basé promenade Émilie du Châtelet</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 48 48" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c6 6 8 12 8 18s-2 12-8 18c-6-6-8-12-8-18s2-12 8-18z"/></svg>
+      <span><strong>Grand Nancy</strong>Zone d'intervention</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 48 48" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M24 13v11l7 5"/></svg>
+      <span><strong>Lun → Ven</strong>De 8h30 à 18h00</span>
+    </li>
+    <li>
+      <svg viewBox="0 0 48 48" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><path d="M24 4c-8 10-12 17-12 24a12 12 0 0 0 24 0c0-7-4-14-12-24z"/><path d="M24 22c-3 4-4 7-4 9a4 4 0 0 0 8 0c0-2-1-5-4-9z"/></svg>
+      <span><strong>Gaz · fioul · PAC</strong>Clim &amp; chauffe-eau thermo</span>
+    </li>
+  </ul>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services" aria-labelledby="t-services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <svg class="ombelle-title" viewBox="0 0 70 40" aria-hidden="true"><g stroke="currentColor" stroke-width="1.4" fill="none"><path d="M35 40V14M35 40L18 10M35 40L52 10M35 40L8 20M35 40L62 20"/></g><g fill="#c8862a"><circle cx="35" cy="12" r="4"/><circle cx="18" cy="9" r="3.6"/><circle cx="52" cy="9" r="3.6"/><circle cx="8" cy="20" r="3.2"/><circle cx="62" cy="20" r="3.2"/></g></svg>
+      <p class="overline">Savoir-faire</p>
+      <h2 id="t-services">Du choix de l'appareil à son entretien</h2>
+      <p>Vente, installation et entretien&nbsp;: chaque équipement est choisi pour votre logement, posé proprement, puis suivi dans la durée.</p>
+    </div>
+    <div class="services">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="6" width="28" height="40" rx="4"/><path d="M14 16h28"/><circle cx="21" cy="11" r="1.6" fill="#c8862a" stroke="none"/><path d="M28 24c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z" fill="#e7c27e"/><path d="M20 46v6M36 46v6M28 46v6"/></svg></div>
+        <h3>Chaudières gaz à condensation</h3>
+        <p>Remplacement d'une chaudière ancienne ou première installation&nbsp;: une condensation bien réglée tire le meilleur de chaque mètre cube.</p>
+      </article>
+      <article class="svc reveal d1">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="12" width="26" height="34" rx="3"/><path d="M8 22h26"/><path d="M21 28c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z" fill="#e7c27e"/><path d="M34 32h6a4 4 0 0 1 4 4v10"/><ellipse cx="44" cy="20" rx="6" ry="8" fill="#4f6b3a" stroke="#5a2a41"/><path d="M44 28v4"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Installation et entretien de chaudières fioul à condensation, pour les maisons du Grand Nancy qui ne sont pas raccordées au gaz.</p>
+      </article>
+      <article class="svc reveal d2">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="46" height="28" rx="4"/><circle cx="20" cy="28" r="9"/><path d="M20 19v18M11 28h18M14 22l12 12M26 22l-12 12" stroke-width="1.4"/><path d="M36 22h10M36 28h10M36 34h10"/><path d="M12 42v6M44 42v6"/></svg></div>
+        <h3>Pompes à chaleur</h3>
+        <p>PAC air-eau raccordées à vos radiateurs ou à un plancher chauffant&nbsp;: l'énergie de l'air extérieur au service de votre confort.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="44" height="16" rx="5"/><path d="M12 20h32"/><path d="M16 32c0 4-3 4-3 8M28 32c0 4-3 4-3 8M40 32c0 4-3 4-3 8" stroke="#2a6f9e"/><path d="M28 40l2 3 3-1" stroke="#4f6b3a"/><circle cx="44" cy="15" r="1.4" fill="#4f6b3a" stroke="none"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs muraux ou multisplits, posés avec des liaisons discrètes pour garder la fraîcheur pendant les étés lorrains.</p>
+      </article>
+      <article class="svc reveal d1">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="4" width="24" height="44" rx="12"/><path d="M16 16h24"/><path d="M28 24v14" stroke="#c8862a"/><circle cx="28" cy="40" r="3" fill="#c8862a" stroke="#c8862a"/><path d="M22 48v4M34 48v4"/><path d="M8 18c2-2 2-4 0-6M48 18c-2-2-2-4 0-6" stroke="#4f6b3a"/></svg></div>
+        <h3>Chauffe-eau thermodynamiques</h3>
+        <p>Vente, installation et entretien d'un ballon qui chauffe l'eau sanitaire en puisant les calories de l'air ambiant.</p>
+      </article>
+      <article class="svc reveal d2">
+        <div class="ico"><svg viewBox="0 0 56 56" fill="none" stroke="#5a2a41" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M36 8a10 10 0 0 0-12 12L8 36a4 4 0 0 0 6 6l16-16a10 10 0 0 0 12-12l-6 6-5-1-1-5z"/><rect x="34" y="34" width="16" height="16" rx="3" stroke="#4f6b3a"/><path d="M38 42l3 3 6-6" stroke="#4f6b3a"/></svg></div>
+        <h3>Entretien &amp; suivi</h3>
+        <p>Visite d'entretien de chaudière, contrôle de PAC et de climatisation&nbsp;: un réglage régulier, et une attestation remise après chaque passage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="fouet" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C 200 30, 260 8, 420 12 S 560 52, 600 30 S 700 6, 800 14 S 1000 48, 1200 30"/><path d="M380 34 C 470 40, 540 20, 600 30 S 730 44, 820 26" opacity=".6"/></svg>
+
+<!-- ============ POURQUOI ============ -->
+<section class="sec pourquoi" id="pourquoi" aria-labelledby="t-pourquoi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="overline">Pourquoi E.N.G.S.</p>
+      <h2 id="t-pourquoi">Un interlocuteur, toutes les énergies</h2>
+      <p>Gaz, fioul, électricité, air&nbsp;: plutôt que de vous orienter vers un seul appareil, nous comparons les solutions avec vous.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout reveal">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#4f6b3a" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M23 40c-2-8-10-10-14-18 6-1 11 2 14 7 3-5 8-8 14-7-4 8-12 10-14 18z"/><path d="M23 40V18"/><path d="M23 18c-3-4-3-9 0-13 3 4 3 9 0 13z" fill="#e7c27e"/></svg>
+        <h3>Conseil sans parti pris</h3>
+        <p>Chaudière à condensation ou pompe à chaleur&nbsp;: la recommandation part de votre maison, de votre usage et de votre budget.</p>
+      </div>
+      <div class="atout reveal d1">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#4f6b3a" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M23 4l16 6v12c0 10-7 17-16 20C14 39 7 32 7 22V10z"/><path d="M16 23l5 5 9-10"/></svg>
+        <h3>De la vente au suivi</h3>
+        <p>Le même interlocuteur conseille, installe puis entretient&nbsp;: vous savez à qui vous adresser, aujourd'hui comme dans cinq hivers.</p>
+      </div>
+      <div class="atout reveal d2">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#4f6b3a" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M23 42s15-13 15-24a15 15 0 0 0-30 0c0 11 15 24 15 24z"/><circle cx="23" cy="18" r="5"/></svg>
+        <h3>Ancré à Nancy</h3>
+        <p>Une adresse promenade Émilie du Châtelet et des interventions dans le Grand Nancy&nbsp;: la proximité facilite chaque rendez-vous.</p>
+      </div>
+      <div class="atout reveal d3">
+        <svg viewBox="0 0 46 46" fill="none" stroke="#4f6b3a" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="7" y="9" width="32" height="30" rx="3"/><path d="M7 17h32M15 5v8M31 5v8M14 25h6M26 25h6M14 31h6"/></svg>
+        <h3>Joignable en semaine</h3>
+        <p>Du lundi au vendredi, de 8h30 à 18h00, par téléphone ou par email, pour un devis comme pour une question d'entretien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODE ============ -->
+<section class="sec" id="methode" aria-labelledby="t-methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="overline">Comment ça se passe</p>
+      <h2 id="t-methode">Quatre temps, sans surprise</h2>
+    </div>
+    <div class="etapes">
+      <svg class="etapes-line" viewBox="0 0 800 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 25 C 100 0, 166 50, 266 25 S 433 0, 533 25 S 700 50, 800 25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 6"/></svg>
+      <div class="etape reveal">
+        <div class="num">1</div>
+        <h3>Premier échange</h3>
+        <p>Vous appelez ou écrivez&nbsp;: type de logement, équipement actuel, ce qui ne vous convient plus.</p>
+      </div>
+      <div class="etape reveal d1">
+        <div class="num">2</div>
+        <h3>Visite &amp; conseil</h3>
+        <p>Nous regardons l'installation existante sur place et comparons avec vous les solutions adaptées.</p>
+      </div>
+      <div class="etape reveal d2">
+        <div class="num">3</div>
+        <h3>Devis détaillé</h3>
+        <p>Matériel, pose, mise en service&nbsp;: tout est chiffré poste par poste, pour décider sereinement.</p>
+      </div>
+      <div class="etape reveal d3">
+        <div class="num">4</div>
+        <h3>Pose &amp; entretien</h3>
+        <p>Installation, réglages, explications d'usage, puis visites d'entretien pour faire durer l'appareil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A PROPOS ============ -->
+<section class="sec apropos" id="apropos" aria-labelledby="t-apropos">
+  <div class="wrap apropos-grid">
+    <div class="reveal">
+      <p class="overline">L'entreprise</p>
+      <h2 id="t-apropos">Un chauffagiste nancéien, au service de toutes les énergies</h2>
+      <p>E.N.G.S. est installée au 4 bis promenade Émilie du Châtelet, à Nancy. L'entreprise vend, installe et entretient chaudières gaz et fioul à condensation, pompes à chaleur, climatiseurs et chauffe-eau thermodynamiques.</p>
+      <p>Cette double compétence, combustion d'un côté et thermodynamique de l'autre, permet de vous conseiller sans œillères&nbsp;: moderniser une chaudière existante, passer à la pompe à chaleur ou associer les deux.</p>
+      <p>Nos interventions couvrent Nancy et le Grand Nancy, du lundi au vendredi.</p>
+      <ul class="fiche">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><path d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>4 bis promenade Émilie du Châtelet, 54000 Nancy</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.7 2.7-1.8 3.4a16 16 0 0 0 6 6l3.4-1.8 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33614793872">06 14 79 38 72</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#e7c27e" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:energenius54000@gmail.com">energenius54000@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="reveal d2">
+      <svg class="nenuphar" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <radialGradient id="eau" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6c8a54"/><stop offset="1" stop-color="#3b5229"/></radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="url(#eau)" stroke="#b8924a" stroke-width="2"/>
+        <circle cx="200" cy="200" r="176" fill="none" stroke="#e7c27e" stroke-width="1" stroke-dasharray="2 6"/>
+        <g fill="none" stroke="#9bb17f" stroke-width="1.2" opacity=".6">
+          <ellipse cx="200" cy="250" rx="150" ry="40"/><ellipse cx="200" cy="250" rx="110" ry="28"/><ellipse cx="200" cy="250" rx="70" ry="16"/>
+        </g>
+        <path d="M90 270 A70 40 0 1 1 170 300 L130 265Z" fill="#4f6b3a" stroke="#23201a" stroke-width="2"/>
+        <path d="M250 300 A60 34 0 1 1 320 270 L282 268Z" fill="#7d9a5e" stroke="#23201a" stroke-width="2"/>
+        <g stroke="#23201a" stroke-width="2">
+          <path d="M200 250 C170 230 150 190 160 150 C185 170 198 205 200 250Z" fill="#f6dbe3"/>
+          <path d="M200 250 C230 230 250 190 240 150 C215 170 202 205 200 250Z" fill="#f6dbe3"/>
+          <path d="M200 250 C185 210 185 160 200 120 C215 160 215 210 200 250Z" fill="#fbeef2"/>
+          <path d="M200 250 C160 245 125 220 115 190 C150 190 180 215 200 250Z" fill="#d9a5b8"/>
+          <path d="M200 250 C240 245 275 220 285 190 C250 190 220 215 200 250Z" fill="#d9a5b8"/>
+          <path d="M200 250 C165 262 130 258 110 240 C140 228 178 235 200 250Z" fill="#8a4a68"/>
+          <path d="M200 250 C235 262 270 258 290 240 C260 228 222 235 200 250Z" fill="#8a4a68"/>
+        </g>
+        <circle cx="200" cy="222" r="9" fill="#e7c27e" stroke="#23201a" stroke-width="2"/>
+        <path d="M200 120 C196 92 208 70 200 40" fill="none" stroke="#e7c27e" stroke-width="1.5" opacity=".7"/>
+        <path d="M184 126 C176 100 188 84 180 60" fill="none" stroke="#e7c27e" stroke-width="1.2" opacity=".5"/>
+        <path d="M216 126 C224 100 212 84 220 60" fill="none" stroke="#e7c27e" stroke-width="1.2" opacity=".5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTALLATIONS (section métier) ============ -->
+<section class="sec" id="installations" aria-labelledby="t-install">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <svg class="ombelle-title" viewBox="0 0 70 40" aria-hidden="true"><g stroke="currentColor" stroke-width="1.4" fill="none"><path d="M35 40V14M35 40L18 10M35 40L52 10M35 40L8 20M35 40L62 20"/></g><g fill="#5a2a41"><circle cx="35" cy="12" r="4"/><circle cx="18" cy="9" r="3.6"/><circle cx="52" cy="9" r="3.6"/><circle cx="8" cy="20" r="3.2"/><circle cx="62" cy="20" r="3.2"/></g></svg>
+      <p class="overline">Types d'installations</p>
+      <h2 id="t-install">Quatre façons de chauffer, quatre vitraux</h2>
+      <p>Chaque logement nancéien a son histoire&nbsp;: appartement haussmannien, maison de ville, pavillon. Voici les équipements que nous installons et entretenons.</p>
+    </div>
+    <div class="galerie">
+      <div class="medaillon reveal">
+        <figure>
+          <div class="cadre">
+            <svg viewBox="0 0 240 320" aria-hidden="true">
+              <rect x="0" y="230" width="240" height="90" fill="#d8c9a6"/>
+              <path d="M0 230 H240" stroke="#23201a" stroke-width="2"/>
+              <rect x="76" y="70" width="88" height="150" rx="10" fill="#fbf7ec" stroke="#23201a" stroke-width="3"/>
+              <rect x="76" y="70" width="88" height="30" rx="10" fill="#5a2a41" stroke="#23201a" stroke-width="3"/>
+              <rect x="94" y="120" width="52" height="34" rx="4" fill="#23201a"/>
+              <text x="120" y="143" font-family="Lato,Arial" font-size="15" fill="#e7c27e" text-anchor="middle">55°</text>
+              <path d="M120 168 c-9 12 -13 18 -13 24 a13 13 0 0 0 26 0 c0 -6 -4 -12 -13 -24z" fill="#c8862a" stroke="#23201a" stroke-width="2"/>
+              <path d="M96 220 V250 M120 220 V250 M144 220 V250" stroke="#4f6b3a" stroke-width="5"/>
+              <path d="M120 70 V30" stroke="#7a6f5c" stroke-width="10"/>
+              <path d="M110 22 c4 -8 16 -8 20 0" fill="none" stroke="#b8924a" stroke-width="2"/>
+            </svg>
+          </div>
+          <figcaption><strong>Chaudière à condensation</strong><span>Gaz ou fioul, murale ou au sol</span></figcaption>
+        </figure>
+      </div>
+      <div class="medaillon reveal d1">
+        <figure>
+          <div class="cadre">
+            <svg viewBox="0 0 240 320" aria-hidden="true">
+              <rect x="0" y="230" width="240" height="90" fill="#cfd8b9"/>
+              <path d="M0 230 H240" stroke="#23201a" stroke-width="2"/>
+              <rect x="40" y="130" width="160" height="100" rx="8" fill="#fbf7ec" stroke="#23201a" stroke-width="3"/>
+              <circle cx="96" cy="180" r="36" fill="#e8dcbc" stroke="#23201a" stroke-width="3"/>
+              <g class="pale" stroke="#4f6b3a" stroke-width="7" stroke-linecap="round"><path d="M96 152 V208 M68 180 H124 M76 160 L116 200 M116 160 L76 200"/></g>
+              <circle cx="96" cy="180" r="6" fill="#23201a"/>
+              <path d="M150 154 H184 M150 170 H184 M150 186 H184 M150 202 H184" stroke="#5a2a41" stroke-width="3"/>
+              <path d="M30 100 c20 -10 40 10 60 0 s40 10 60 0 s40 10 60 0" fill="none" stroke="#2a6f9e" stroke-width="2" opacity=".6"/>
+              <path d="M30 80 c20 -10 40 10 60 0 s40 10 60 0 s40 10 60 0" fill="none" stroke="#2a6f9e" stroke-width="2" opacity=".35"/>
+              <rect x="56" y="230" width="16" height="12" fill="#23201a"/><rect x="168" y="230" width="16" height="12" fill="#23201a"/>
+            </svg>
+          </div>
+          <figcaption><strong>Pompe à chaleur air-eau</strong><span>Sur radiateurs ou plancher chauffant</span></figcaption>
+        </figure>
+      </div>
+      <div class="medaillon reveal d2">
+        <figure>
+          <div class="cadre">
+            <svg viewBox="0 0 240 320" aria-hidden="true">
+              <rect x="0" y="0" width="240" height="320" fill="#efe4c9"/>
+              <rect x="0" y="250" width="240" height="70" fill="#c9b48a"/>
+              <path d="M0 250 H240" stroke="#23201a" stroke-width="2"/>
+              <rect x="30" y="80" width="180" height="56" rx="16" fill="#fbf7ec" stroke="#23201a" stroke-width="3"/>
+              <path d="M44 122 H196" stroke="#7a6f5c" stroke-width="3"/>
+              <circle cx="190" cy="98" r="4" fill="#4f6b3a"/>
+              <g fill="none" stroke="#2a6f9e" stroke-width="3" stroke-linecap="round" opacity=".8">
+                <path d="M70 150 c0 20 -12 20 -12 40"/><path d="M120 150 c0 20 -12 20 -12 40"/><path d="M170 150 c0 20 -12 20 -12 40"/>
+              </g>
+              <g fill="#2a6f9e" opacity=".5"><path d="M95 220 l6 -10 6 10 -6 10z"/><path d="M140 228 l5 -8 5 8 -5 8z"/></g>
+              <path d="M0 40 H240" stroke="#b8924a" stroke-width="1"/>
+            </svg>
+          </div>
+          <figcaption><strong>Climatisation</strong><span>Mono ou multisplit</span></figcaption>
+        </figure>
+      </div>
+      <div class="medaillon reveal d3">
+        <figure>
+          <div class="cadre">
+            <svg viewBox="0 0 240 320" aria-hidden="true">
+              <rect x="0" y="260" width="240" height="60" fill="#d8c9a6"/>
+              <path d="M0 260 H240" stroke="#23201a" stroke-width="2"/>
+              <rect x="80" y="70" width="80" height="190" rx="40" fill="#fbf7ec" stroke="#23201a" stroke-width="3"/>
+              <path d="M80 112 H160" stroke="#23201a" stroke-width="3"/>
+              <rect x="80" y="70" width="80" height="42" rx="20" fill="#4f6b3a" stroke="#23201a" stroke-width="3"/>
+              <path d="M98 92 h44" stroke="#e7c27e" stroke-width="3" stroke-dasharray="4 4"/>
+              <rect x="112" y="140" width="16" height="90" rx="8" fill="#efe1c1" stroke="#23201a" stroke-width="2"/>
+              <rect x="114" y="178" width="12" height="50" rx="6" fill="#c8862a"/>
+              <circle cx="120" cy="236" r="12" fill="#c8862a" stroke="#23201a" stroke-width="2"/>
+              <path d="M40 120 c10 -10 10 -20 0 -30 M200 120 c-10 -10 -10 -20 0 -30" fill="none" stroke="#5a2a41" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M28 130 c14 -14 14 -36 0 -50 M212 130 c-14 -14 -14 -36 0 -50" fill="none" stroke="#5a2a41" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <figcaption><strong>Chauffe-eau thermodynamique</strong><span>L'eau chaude puisée dans l'air</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="tarif-note reveal">Tarifs&nbsp;: sur devis, après visite de votre installation.</p>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec" id="avis" aria-labelledby="t-avis" style="padding-top:20px">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <svg class="ginkgo" viewBox="0 0 70 70" aria-hidden="true">
+        <path d="M35 62 C33 50 34 42 35 36" stroke="#4f6b3a" stroke-width="2.5" fill="none"/>
+        <path d="M35 36 C18 34 6 22 8 8 C18 12 26 10 33 6 L35 20 L37 6 C44 10 52 12 62 8 C64 22 52 34 35 36Z" fill="#c8862a" stroke="#23201a" stroke-width="2"/>
+        <path d="M35 36 L35 20 M35 36 L20 16 M35 36 L50 16" stroke="#23201a" stroke-width="1" opacity=".5"/>
+      </svg>
+      <p class="overline">Avis clients</p>
+      <h2 id="t-avis">Vos avis comptent</h2>
+      <p>Cette page est toute neuve et ne contient encore aucun avis. Vous avez fait appel à E.N.G.S. pour une chaudière, une pompe à chaleur ou un entretien&nbsp;? Votre retour aidera vos voisins du Grand Nancy à choisir sereinement.</p>
+      <a class="btn btn-ligne" href="mailto:energenius54000@gmail.com?subject=Mon%20avis%20sur%20E.N.G.S.">Partager mon expérience</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec pourquoi" id="faq" aria-labelledby="t-faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="overline">Questions fréquentes</p>
+      <h2 id="t-faq">Ce que l'on nous demande souvent</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>L'entretien de ma chaudière est-il obligatoire&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">Oui&nbsp;: en France, les chaudières gaz, fioul ou bois d'une puissance comprise entre 4 et 400&nbsp;kW doivent être entretenues chaque année par un professionnel, qui vous remet une attestation. C'est aussi la meilleure façon de garder un appareil sûr et économe.</div>
+      </details>
+      <details>
+        <summary>Sous quel délai puis-je obtenir un devis&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">Tout dépend du projet et de la saison. Le plus simple est d'appeler ou d'envoyer un message décrivant votre logement et votre équipement actuel&nbsp;: nous convenons ensemble d'une visite, puis le devis détaillé vous est transmis.</div>
+      </details>
+      <details>
+        <summary>Puis-je bénéficier d'aides comme MaPrimeRénov' ou les CEE&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">Certaines installations, comme les pompes à chaleur ou les chauffe-eau thermodynamiques, peuvent ouvrir droit à des aides (MaPrimeRénov', primes CEE…), selon votre éligibilité et à condition de faire appel à un artisan RGE. Les conditions évoluent régulièrement&nbsp;: renseignez-vous sur France Rénov' avant de vous engager.</div>
+      </details>
+      <details>
+        <summary>Intervenez-vous en cas de panne&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">Appelez-nous au 06&nbsp;14&nbsp;79&nbsp;38&nbsp;72 aux heures d'ouverture, du lundi au vendredi de 8h30 à 18h00. Décrivez le symptôme (code erreur, bruit, absence d'eau chaude)&nbsp;: nous vous indiquons la suite à donner et le délai possible.</div>
+      </details>
+      <details>
+        <summary>Quelle zone couvrez-vous&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">E.N.G.S. est basée à Nancy et intervient à Nancy et dans le Grand Nancy. Pour une commune voisine, posez simplement la question lors de votre appel.</div>
+      </details>
+      <details>
+        <summary>Une pompe à chaleur convient-elle à ma maison&nbsp;?<span class="plus"><svg viewBox="0 0 14 14" stroke="#5a2a41" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></summary>
+        <div class="rep">Souvent, mais pas toujours&nbsp;: l'isolation, le type d'émetteurs (radiateurs, plancher chauffant) et la place disponible pour l'unité extérieure comptent beaucoup. Une visite permet de vérifier si une PAC est pertinente ou si une chaudière à condensation reste le meilleur choix.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORAIRES & ACCES ============ -->
+<section class="sec infos" id="infos" aria-labelledby="t-infos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="overline">Horaires &amp; accès</p>
+      <h2 id="t-infos">Où et quand nous joindre</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="carte reveal">
+        <h3>Horaires d'ouverture</h3>
+        <table class="horaires" id="horaires">
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>8h30 – 18h00</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>8h30 – 18h00</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>8h30 – 18h00</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>8h30 – 18h00</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>8h30 – 18h00</td></tr>
+            <tr data-j="6" class="ferme"><td>Samedi</td><td>Fermé</td></tr>
+            <tr data-j="0" class="ferme"><td>Dimanche</td><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <span class="etat" id="etat">Horaires communiqués par PagesJaunes</span>
+      </div>
+      <div class="carte reveal d1">
+        <h3>Adresse</h3>
+        <p class="adresse">4 bis promenade Émilie du Châtelet<br>54000 Nancy</p>
+        <div class="plan" aria-hidden="true">
+          <svg viewBox="0 0 400 130">
+            <rect width="400" height="130" fill="#ece4cf"/>
+            <path d="M0 90 C 80 70, 140 110, 220 84 S 340 60, 400 74" stroke="#fbf7ec" stroke-width="16" fill="none"/>
+            <path d="M120 0 C 130 40, 110 90, 130 130" stroke="#fbf7ec" stroke-width="10" fill="none"/>
+            <path d="M300 0 C 290 50, 320 90, 300 130" stroke="#fbf7ec" stroke-width="10" fill="none"/>
+            <path d="M0 30 C 100 40, 200 20, 400 34" stroke="#9bb17f" stroke-width="5" fill="none" opacity=".7"/>
+            <g transform="translate(215 30)"><path d="M0 46 C -14 30 -20 20 -20 12 a20 20 0 0 1 40 0 c0 8 -6 18 -20 34z" fill="#5a2a41" stroke="#23201a" stroke-width="2"/><circle cx="0" cy="12" r="7" fill="#e7c27e"/></g>
+          </svg>
+        </div>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4f6b3a" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.7 2.7-1.8 3.4a16 16 0 0 0 6 6l3.4-1.8 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33614793872">06 14 79 38 72</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4f6b3a" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:energenius54000@gmail.com">energenius54000@gmail.com</a></li>
+        </ul>
+        <a class="btn btn-prune" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=4%20bis%20promenade%20%C3%89milie%20du%20Ch%C3%A2telet%2054000%20Nancy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Itinéraire
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact" aria-labelledby="t-contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro reveal">
+      <p class="overline">Devis</p>
+      <h2 id="t-contact">Parlons de votre confort</h2>
+      <p>Décrivez votre projet en quelques lignes&nbsp;: remplacement de chaudière, installation d'une pompe à chaleur, climatisation, chauffe-eau ou entretien. Nous revenons vers vous pour convenir d'une visite.</p>
+      <p>Vous préférez de vive voix&nbsp;? Appelez le <a href="tel:+33614793872"><strong>06 14 79 38 72</strong></a>, du lundi au vendredi de 8h30 à 18h00, ou écrivez à <a href="mailto:energenius54000@gmail.com">energenius54000@gmail.com</a>.</p>
+    </div>
+    <form class="devis reveal d1" id="form" novalidate>
+      <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+      <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+      <div class="full"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+      <div><label for="projet">Projet</label>
+        <select id="projet" name="projet">
+          <option>Chaudière gaz à condensation</option>
+          <option>Chaudière fioul</option>
+          <option>Pompe à chaleur</option>
+          <option>Climatisation</option>
+          <option>Chauffe-eau thermodynamique</option>
+          <option>Entretien</option>
+          <option>Autre demande</option>
+        </select>
+      </div>
+      <div><label for="commune">Commune</label><input id="commune" name="commune" placeholder="Nancy, Vandœuvre…"></div>
+      <div class="full"><label for="msg">Votre message</label><textarea id="msg" name="msg" placeholder="Type de logement, équipement actuel, ce que vous souhaitez…"></textarea></div>
+      <div class="full"><button class="btn btn-prune" type="submit">Envoyer ma demande</button></div>
+      <p class="form-msg" id="form-msg" role="status">Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C10 10 6 18 6 25 a14 14 0 0 0 28 0 C34 18 30 10 20 2Z" fill="#8a4a68"/><path d="M20 12 C15 18 13 22 13 26 a7 7 0 0 0 14 0 C27 22 25 18 20 12Z" fill="#c8862a"/><path d="M20 20 c-2 3 -3 5 -3 7 a3 3 0 0 0 6 0 c0 -2 -1 -4 -3 -7Z" fill="#f4eedf"/></svg>
+        <span><strong>E.N.G.S.</strong><small>Chauffage · Nancy</small></span>
+      </a>
+      <p style="margin-top:16px;font-size:.94rem">Vente, installation et entretien de chaudières, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Nancy et dans le Grand Nancy.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>4 bis promenade Émilie du Châtelet<br>54000 Nancy</li>
+        <li><a href="tel:+33614793872">06 14 79 38 72</a></li>
+        <li><a href="mailto:energenius54000@gmail.com">energenius54000@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi – vendredi&nbsp;: 8h30 – 18h00</li>
+        <li>Samedi, dimanche&nbsp;: fermé</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#services">Savoir-faire</a></li>
+        <li><a href="#installations">Installations</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+        <li><a href="#contact">Demander un devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap mentions">
+    <span>© <span id="annee">2026</span> E.N.G.S. — Nancy</span>
+    <span>Mentions légales : à compléter · Aucune donnée collectée par ce site</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab cache" id="fab" href="tel:+33614793872" aria-label="Appeler E.N.G.S. au 06 14 79 38 72">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  Appeler
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){
+    var o=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',o?'true':'false');
+    burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  var fab=document.getElementById('fab');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20);fab.classList.toggle('cache',window.scrollY<window.innerHeight*.6);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Jour courant + état ouvert/fermé
+  var now=new Date(),j=now.getDay(),row=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(row)row.classList.add('today');
+  var m=now.getHours()*60+now.getMinutes(),etat=document.getElementById('etat');
+  var ouvre=(j>=1&&j<=5);
+  if(ouvre&&m>=510&&m<1080){etat.textContent='Ouvert en ce moment · jusqu\u2019à 18h00';}
+  else if(ouvre&&m<510){etat.textContent='Fermé pour l\u2019instant · ouverture à 8h30';}
+  else if(j>=1&&j<=4){etat.textContent='Fermé pour l\u2019instant · réouverture demain à 8h30';}
+  else{etat.textContent='Fermé le week-end · réouverture lundi à 8h30';}
+
+  // Formulaire de démonstration
+  var f=document.getElementById('form'),msg=document.getElementById('form-msg');
+  f.addEventListener('submit',function(e){e.preventDefault();msg.classList.add('show');msg.scrollIntoView({behavior:'smooth',block:'nearest'});});
+
+  document.getElementById('annee').textContent=now.getFullYear();
+
+  // Apparitions au défilement
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('vu');});return;}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('vu');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

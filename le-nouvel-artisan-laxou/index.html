@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Nouvel Artisan – plombier chauffagiste à Laxou</title>
+<meta name="description" content="Le Nouvel Artisan, plombier chauffagiste au 74 rue de Maréville à Laxou : plomberie, chaudières gaz ou fioul, entretien et dépannage à Laxou et dans le Grand Nancy. Tarifs sur devis.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --menthe:#e3f6ee;
+  --menthe-2:#c7ecdc;
+  --peche:#ffcfb3;
+  --peche-2:#ffe6d7;
+  --corail:#ff7f5c;
+  --corail-fonce:#ad3c1f;
+  --canard:#126e82;
+  --canard-fonce:#0c5160;
+  --encre:#1c2b33;
+  --encre-doux:#3f525c;
+  --blanc:#ffffff;
+  --rond:32px;
+  --ombre:0 18px 40px -18px rgba(18,110,130,.35);
+  --titre:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --texte:"Nunito","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:90px;}
+body{
+  margin:0;
+  background:#fbfefc;
+  color:var(--encre);
+  font-family:var(--texte);
+  font-size:17px;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+svg{display:block;max-width:100%;}
+a{color:inherit;}
+h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.12;margin:0 0 .5em;}
+h2{font-size:clamp(2rem,4.4vw,3rem);}
+h3{font-size:1.3rem;}
+p{margin:0 0 1em;}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto;}
+.centre{text-align:center;margin-inline:auto;}
+.etiquette{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  background:var(--peche-2);
+  color:var(--corail-fonce);
+  font-weight:800;
+  font-size:.82rem;
+  letter-spacing:.04em;
+  padding:.35rem .9rem;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.etiquette::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--corail);}
+.section{padding:100px 0;position:relative;}
+.tete{max-width:680px;margin-bottom:52px;}
+.tete p{font-size:1.08rem;color:var(--encre-doux);}
+:focus-visible{outline:3px solid var(--corail);outline-offset:3px;border-radius:8px;}
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.6rem;
+  font-family:var(--titre);
+  font-weight:600;
+  font-size:1.08rem;
+  text-decoration:none;
+  padding:.95rem 1.7rem;
+  border-radius:999px;
+  border:0;
+  cursor:pointer;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s,background .2s;
+}
+.btn svg{width:21px;height:21px;flex:none;}
+.btn:hover{transform:translateY(-3px) scale(1.03);}
+.btn-canard{background:var(--canard);color:#fff;box-shadow:0 12px 24px -10px rgba(18,110,130,.7);}
+.btn-canard:hover{background:var(--canard-fonce);}
+.btn-corail{background:var(--corail);color:var(--encre);box-shadow:0 12px 24px -10px rgba(255,127,92,.8);}
+.btn-blanc{background:#fff;color:var(--canard-fonce);box-shadow:0 10px 22px -12px rgba(28,43,51,.4);}
+/* ---------- Navigation ---------- */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:50;}
+.nav-boite{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-radius:999px;
+  padding:8px 10px 8px 18px;
+  box-shadow:0 10px 30px -14px rgba(18,110,130,.45);
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:.55rem;
+  text-decoration:none;
+  font-family:var(--titre);
+  font-weight:700;
+  font-size:1.2rem;
+  color:var(--canard-fonce);
+  line-height:1.05;
+}
+.logo svg{width:38px;height:38px;}
+.logo small{display:block;font-family:var(--texte);font-weight:700;font-size:.68rem;color:var(--encre-doux);letter-spacing:.06em;}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0;}
+.menu a{
+  display:block;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.95rem;
+  padding:.55rem .95rem;
+  border-radius:999px;
+  transition:background .2s,color .2s;
+}
+.menu a:not(.btn):hover{background:var(--menthe);color:var(--canard-fonce);}
+.menu .btn{padding:.6rem 1.2rem;font-size:.98rem;}
+.burger{
+  display:none;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:0;
+  background:var(--menthe);
+  cursor:pointer;
+  position:relative;
+}
+.burger span{
+  position:absolute;
+  left:14px;
+  right:14px;
+  height:3px;
+  border-radius:3px;
+  background:var(--canard-fonce);
+  transition:transform .3s,opacity .2s;
+}
+.burger span:nth-child(1){top:16px}
+.burger span:nth-child(2){top:22.5px}
+.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+/* ---------- En-tête ---------- */
+.hero{
+  min-height:100vh;
+  padding:130px 0 90px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 20%, var(--peche-2) 0 120px, transparent 121px),
+    radial-gradient(circle at 92% 78%, var(--peche-2) 0 160px, transparent 161px),
+    #fbfefc;
+}
+.hero .wrap{position:relative;z-index:2;}
+.scene{position:relative;width:min(440px,90vw);margin:0 auto 8px;}
+.scene .blob{position:absolute;inset:-8% -14%;z-index:-1;animation:respire 9s ease-in-out infinite;}
+@keyframes respire{
+  0%,100%{transform:scale(1) rotate(0)}
+  50%{transform:scale(1.05) rotate(4deg)}
+}
+.goutte-flotte{animation:flotte 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center;}
+.goutte-flotte.d2{animation-delay:-1.3s}
+.goutte-flotte.d3{animation-delay:-2.6s}
+@keyframes flotte{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+.clin{animation:clin 5s infinite;transform-box:fill-box;transform-origin:center;}
+@keyframes clin{
+  0%,92%,100%{transform:scaleY(1)}
+  95%{transform:scaleY(.1)}
+}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.8rem);font-weight:700;color:var(--encre);max-width:15ch;margin:10px auto 14px;}
+.hero h1 .surligne{color:var(--canard);position:relative;white-space:nowrap;}
+.hero h1 .surligne::after{
+  content:"";
+  position:absolute;
+  left:-4px;
+  right:-4px;
+  bottom:.06em;
+  height:.28em;
+  background:var(--peche);
+  border-radius:999px;
+  z-index:-1;
+}
+.hero .chapo{font-size:1.18rem;max-width:40em;margin:0 auto 30px;color:var(--encre-doux);}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+.bulles-info{
+  margin:34px auto 0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  list-style:none;
+  padding:0;
+}
+.bulles-info li{
+  background:#fff;
+  border-radius:999px;
+  padding:.45rem 1rem;
+  font-weight:700;
+  font-size:.92rem;
+  box-shadow:0 8px 20px -12px rgba(18,110,130,.5);
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+}
+.bulles-info svg{width:18px;height:18px;}
+.vague{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:80px;
+  width:100%;
+  z-index:1;
+}
+/* ---------- Bandeau confiance ---------- */
+.confiance{background:var(--menthe);padding:34px 0 46px;}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.confiance li{
+  background:#fff;
+  border-radius:24px;
+  padding:18px 20px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  font-size:.95rem;
+  line-height:1.35;
+}
+.confiance li .pt{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none;}
+.confiance li .pt svg{width:24px;height:24px;}
+.confiance strong{display:block;font-family:var(--titre);font-weight:600;font-size:1.05rem;color:var(--canard-fonce);}
+/* ---------- Services ---------- */
+.services{background:var(--menthe);padding-top:40px;}
+.grille-services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.service{background:#fff;border-radius:var(--rond);padding:30px 24px 28px;box-shadow:var(--ombre);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;position:relative;}
+.service:hover{transform:translateY(-8px);box-shadow:0 26px 46px -20px rgba(18,110,130,.5);}
+.service .ico{
+  width:76px;
+  height:76px;
+  margin-bottom:18px;
+  border-radius:42% 58% 55% 45% / 50% 44% 56% 50%;
+  display:grid;
+  place-items:center;
+  transition:border-radius .6s;
+}
+.service:hover .ico{border-radius:58% 42% 45% 55% / 44% 56% 50% 50%;}
+.service .ico svg{width:44px;height:44px;}
+.service:nth-child(4n+1) .ico{background:var(--peche)}
+.service:nth-child(4n+2) .ico{background:var(--menthe-2)}
+.service:nth-child(4n+3) .ico{background:#d6eef3}
+.service:nth-child(4n) .ico{background:var(--peche-2)}
+.service p{margin:0;font-size:.97rem;color:var(--encre-doux);}
+/* ---------- Pourquoi ---------- */
+.pourquoi-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;}
+.pourquoi-illu{position:relative;width:100%;}
+.pourquoi-illu svg{width:100%;height:auto;}
+.pourquoi-liste{display:grid;gap:18px;}
+.atout{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  background:var(--peche-2);
+  border-radius:28px;
+  padding:22px 24px;
+  transition:transform .3s;
+}
+.atout:nth-child(even){background:var(--menthe);margin-left:34px;}
+.atout:hover{transform:translateX(6px);}
+.atout .bulle{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  flex:none;
+  box-shadow:0 8px 16px -10px rgba(28,43,51,.5);
+}
+.atout .bulle svg{width:28px;height:28px;}
+.atout h3{margin-bottom:.25em;}
+.atout p{margin:0;color:var(--encre-doux);font-size:.97rem;}
+/* ---------- Étapes ---------- */
+.etapes{background:var(--canard);color:#fff;overflow:hidden;}
+.etapes .etiquette{background:rgba(255,255,255,.14);color:#fff;}
+.etapes .tete p{color:#d9f0f3;}
+.etapes-liste{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:26px;
+  position:relative;
+}
+.etape{text-align:center;position:relative;z-index:1;}
+.etape .rond{
+  width:96px;
+  height:96px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:var(--peche);
+  color:var(--encre);
+  display:grid;
+  place-items:center;
+  font-family:var(--titre);
+  font-weight:700;
+  font-size:2.4rem;
+  box-shadow:0 0 0 10px rgba(255,255,255,.12);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+.etape:nth-child(even) .rond{background:var(--menthe);}
+.etape:hover .rond{transform:scale(1.08) rotate(-6deg);}
+.etape p{color:#e4f4f6;font-size:.97rem;margin:0;}
+.etapes-liste::before{
+  content:"";
+  position:absolute;
+  left:8%;
+  right:8%;
+  top:48px;
+  height:4px;
+  border-top:4px dashed rgba(255,255,255,.35);
+  z-index:0;
+}
+.bulles-fond circle{fill:rgba(255,255,255,.07);}
+/* ---------- À propos ---------- */
+.apropos-boite{
+  background:linear-gradient(135deg,var(--peche-2),#fff 70%);
+  border-radius:48px;
+  padding:56px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:48px;
+  align-items:center;
+  box-shadow:var(--ombre);
+}
+.apropos-boite p{font-size:1.06rem;}
+.fiche{background:#fff;border-radius:var(--rond);padding:28px;box-shadow:0 14px 30px -18px rgba(28,43,51,.45);}
+.fiche h3{color:var(--canard-fonce);}
+.fiche ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.fiche li{display:flex;gap:12px;align-items:flex-start;overflow-wrap:anywhere;}
+.fiche li svg{width:24px;height:24px;flex:none;margin-top:2px;}
+.fiche a{font-weight:700;color:var(--canard-fonce);}
+/* ---------- Section métier : saisons ---------- */
+.saisons{background:var(--menthe);}
+.saisons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.saison{
+  background:#fff;
+  border-radius:var(--rond);
+  overflow:hidden;
+  box-shadow:var(--ombre);
+  display:flex;
+  flex-direction:column;
+  transition:transform .3s;
+}
+.saison:hover{transform:translateY(-6px) rotate(-.6deg);}
+.saison-illu{height:150px;display:grid;place-items:center;}
+.saison-illu svg{height:120px;width:auto;}
+.saison:nth-child(1) .saison-illu{background:var(--peche)}
+.saison:nth-child(2) .saison-illu{background:#d6eef3}
+.saison:nth-child(3) .saison-illu{background:var(--peche-2)}
+.saison:nth-child(4) .saison-illu{background:var(--menthe-2)}
+.saison-corps{padding:22px 22px 26px;}
+.saison-corps .mois{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--corail-fonce);}
+.saison-corps p{margin:0;font-size:.96rem;color:var(--encre-doux);}
+.tarif-bulle{
+  margin:40px auto 0;
+  max-width:760px;
+  background:#fff;
+  border-radius:999px;
+  padding:18px 28px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  justify-content:center;
+  text-align:left;
+  box-shadow:var(--ombre);
+}
+.tarif-bulle svg{width:42px;height:42px;flex:none;}
+.tarif-bulle p{margin:0;}
+/* ---------- Avis ---------- */
+.avis-boite{
+  max-width:820px;
+  margin:0 auto;
+  text-align:center;
+  position:relative;
+  padding:60px 48px;
+  background:var(--peche-2);
+  border-radius:60px 60px 60px 12px;
+}
+.avis-boite svg.bulles-avis{width:120px;height:120px;margin:0 auto 10px;}
+.avis-boite p{color:var(--encre-doux);max-width:34em;margin-inline:auto;}
+.avis-boite .btn{margin-top:10px;}
+/* ---------- FAQ ---------- */
+.faq{background:linear-gradient(180deg,#fbfefc,var(--menthe));}
+.faq-liste{max-width:840px;margin:0 auto;display:grid;gap:14px;}
+.faq-item{background:#fff;border-radius:26px;box-shadow:0 10px 24px -18px rgba(18,110,130,.6);overflow:hidden;}
+.faq-q{
+  width:100%;
+  border:0;
+  background:none;
+  text-align:left;
+  font-family:var(--titre);
+  font-weight:500;
+  font-size:1.12rem;
+  color:var(--encre);
+  padding:20px 70px 20px 26px;
+  cursor:pointer;
+  position:relative;
+}
+.faq-q::after{
+  content:"";
+  position:absolute;
+  right:20px;
+  top:50%;
+  width:36px;
+  height:36px;
+  margin-top:-18px;
+  border-radius:50%;
+  background:var(--menthe) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23126e82' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center/20px no-repeat;
+  transition:transform .3s,background-color .3s;
+}
+.faq-q[aria-expanded="true"]::after{transform:rotate(180deg);background-color:var(--peche);}
+.faq-r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;}
+.faq-r > div{overflow:hidden;}
+.faq-r p{margin:0;padding:0 26px 22px;color:var(--encre-doux);}
+.faq-item.ouvert .faq-r{grid-template-rows:1fr;}
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:start;}
+.carte{background:#fff;border-radius:36px;padding:34px;box-shadow:var(--ombre);}
+.carte-horaires{background:var(--canard);color:#fff;}
+.carte-horaires h3{color:#fff;}
+.horaires{width:100%;border-collapse:separate;border-spacing:0 6px;margin:6px 0 10px;}
+.horaires td{padding:9px 14px;background:rgba(255,255,255,.08);}
+.horaires td:first-child{border-radius:999px 0 0 999px;font-weight:700;}
+.horaires td:last-child{border-radius:0 999px 999px 0;text-align:right;}
+.horaires tr.aujourdhui td{background:var(--peche);color:var(--encre);}
+.horaires tr.aujourdhui td:first-child::after{content:" · aujourd'hui";font-weight:600;font-size:.85rem;}
+.note{font-size:.9rem;color:#d9f0f3;font-style:italic;}
+.adresse{margin:22px 0 18px;padding:18px 20px;border-radius:24px;background:rgba(255,255,255,.1);overflow-wrap:anywhere;}
+.adresse a{color:#fff;font-weight:700;}
+form{display:grid;gap:16px;}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+label{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px;color:var(--canard-fonce);}
+input,
+select,
+textarea{
+  width:100%;
+  font:inherit;
+  font-size:1rem;
+  padding:.85rem 1.1rem;
+  border:2px solid transparent;
+  border-radius:20px;
+  background:var(--menthe);
+  color:var(--encre);
+  transition:border-color .2s,background .2s;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--canard);background:#fff;}
+textarea{min-height:130px;resize:vertical;}
+.msg-demo{
+  display:none;
+  margin:0;
+  background:var(--peche);
+  color:var(--encre);
+  border-radius:20px;
+  padding:14px 18px;
+  font-weight:800;
+}
+.msg-demo.visible{display:block;}
+/* ---------- Pied de page ---------- */
+footer{background:var(--encre);color:#dfe9ec;padding:80px 0 0;position:relative;}
+.vague-foot{position:absolute;top:-59px;left:0;width:100%;height:60px;}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:34px;}
+footer h3{font-size:1.15rem;color:var(--peche);}
+footer p,footer li{font-size:.95rem;}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
+footer a{color:#fff;overflow-wrap:anywhere;}
+footer a:hover{color:var(--peche);}
+footer .logo{color:#fff;}
+footer .logo small{color:#b9cdd3;}
+.foot-bas{
+  margin-top:50px;
+  padding:22px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:space-between;
+  font-size:.86rem;
+  color:#b9cdd3;
+}
+.bandeau-demo{background:#121d22;color:#a9bcc2;text-align:center;font-size:.8rem;padding:10px 16px;}
+.appel-flottant{
+  display:none;
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:60;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:var(--corail);
+  color:var(--encre);
+  place-items:center;
+  box-shadow:0 12px 26px -8px rgba(196,73,42,.7);
+}
+.appel-flottant svg{width:28px;height:28px;}
+.appel-flottant::before{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--corail);animation:onde 2.4s ease-out infinite;}
+@keyframes onde{
+  from{transform:scale(1);opacity:.8}
+  to{transform:scale(1.6);opacity:0}
+}
+/* ---------- Animations ---------- */
+.reveal{opacity:0;transform:translateY(30px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.34,1.3,.64,1);}
+.reveal.vu{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,  *::before,  *::after{animation:none!important;transition:none!important;}
+  .reveal{opacity:1;transform:none;}
+}
+/* ---------- Responsive ---------- */
+@media (max-width:1060px){
+  .grille-services,  .saisons-grid{grid-template-columns:repeat(2,1fr);}
+  .confiance ul{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{
+    position:fixed;
+    top:84px;
+    left:16px;
+    right:16px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:4px;
+    background:#fff;
+    border-radius:28px;
+    padding:14px;
+    box-shadow:0 24px 50px -20px rgba(18,110,130,.6);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-10px) scale(.97);
+    transition:opacity .25s,transform .25s,visibility .25s;
+  }
+  .menu.ouvert{opacity:1;visibility:visible;transform:none;}
+  .menu a{padding:.85rem 1rem;font-size:1.08rem;}
+  .menu .btn{margin-top:6px;}
+  .pourquoi-grid,  .apropos-boite,  .contact-grid{grid-template-columns:1fr;}
+  .pourquoi-illu{max-width:360px;margin:0 auto;}
+  .etapes-liste{grid-template-columns:repeat(2,1fr);row-gap:40px;}
+  .etapes-liste::before{display:none}
+  .apropos-boite{padding:40px 32px}
+  .appel-flottant{display:grid}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .section{padding:76px 0}
+  .hero{padding:118px 0 100px;min-height:auto}
+  .hero-cta .btn{flex:1 1 100%}
+  .grille-services,  .saisons-grid,  .confiance ul,  .etapes-liste,  .champs,  .foot-grid{grid-template-columns:1fr;}
+  .atout:nth-child(even){margin-left:0}
+  .apropos-boite{padding:30px 20px;border-radius:32px}
+  .carte{padding:24px 20px;border-radius:28px}
+  .avis-boite{padding:40px 22px}
+  .tarif-bulle{border-radius:28px;flex-direction:column;text-align:center}
+  .logo small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-boite">
+    <a class="logo" href="#accueil" aria-label="Le Nouvel Artisan, retour en haut">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#e3f6ee"/><path d="M20 7c-6 8-10 13-10 18a10 10 0 0 0 20 0c0-5-4-10-10-18z" fill="#126e82"/><circle cx="16" cy="24" r="3" fill="#ffcfb3"/></svg>
+      <span>Le Nouvel Artisan<small>Plomberie · chauffage · Laxou</small></span>
+    </a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#saisons">Entretien</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-canard" href="tel:+33383280401">03 83 28 04 01</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="accueil">
+  <!-- EN-TÊTE -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="scene reveal" role="img" aria-label="Chaudière ronde et souriante entourée de gouttes d'eau et de tuyaux courbes">
+        <svg class="blob" viewBox="0 0 500 500" aria-hidden="true"><path fill="#e3f6ee" d="M421 140c38 52 47 128 18 190s-97 112-171 120-150-22-191-80-40-140-6-200 104-104 177-112 135 30 173 82z"/><path fill="#c7ecdc" opacity=".6" d="M380 110c30 30 20 70 0 90s-60 10-70-20 40-100 70-70z"/></svg>
+        <svg viewBox="0 0 440 380" aria-hidden="true">
+          <!-- tuyaux courbes -->
+          <g fill="none" stroke-linecap="round">
+            <path d="M150 300c0 40-40 40-80 40s-60 10-60 30" stroke="#126e82" stroke-width="16"/>
+            <path d="M290 300c0 40 40 40 80 40s50-20 50-50V180" stroke="#ff7f5c" stroke-width="16"/>
+            <path d="M190 310v40" stroke="#126e82" stroke-width="14"/>
+            <path d="M250 310v40" stroke="#ff7f5c" stroke-width="14"/>
+          </g>
+          <circle cx="190" cy="348" r="10" fill="#1c2b33"/><circle cx="250" cy="348" r="10" fill="#1c2b33"/>
+          <!-- chaudière ronde -->
+          <ellipse cx="220" cy="322" rx="110" ry="10" fill="#1c2b33" opacity=".08"/>
+          <rect x="110" y="70" width="220" height="245" rx="100" fill="#ffffff" stroke="#1c2b33" stroke-width="6"/>
+          <rect x="132" y="92" width="176" height="200" rx="86" fill="#ffcfb3"/>
+          <!-- visage simple -->
+          <g fill="#1c2b33">
+            <ellipse class="clin" cx="188" cy="160" rx="8" ry="10"/>
+            <ellipse class="clin" cx="252" cy="160" rx="8" ry="10"/>
+          </g>
+          <path d="M196 190c14 14 34 14 48 0" fill="none" stroke="#1c2b33" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="168" cy="186" r="9" fill="#ff7f5c" opacity=".55"/><circle cx="272" cy="186" r="9" fill="#ff7f5c" opacity=".55"/>
+          <!-- écran / flamme -->
+          <rect x="178" y="220" width="84" height="44" rx="22" fill="#126e82"/>
+          <path d="M220 256c-10-6-10-16-2-26 2 6 10 6 10 14s-4 14-8 12z" fill="#ffcfb3"/>
+          <circle cx="198" cy="242" r="5" fill="#e3f6ee"/><circle cx="242" cy="242" r="5" fill="#e3f6ee"/>
+          <!-- gouttes -->
+          <path class="goutte-flotte" d="M62 120c-12 16-18 26-18 34a18 18 0 0 0 36 0c0-8-6-18-18-34z" fill="#126e82"/>
+          <path class="goutte-flotte d2" d="M378 70c-9 12-14 20-14 26a14 14 0 0 0 28 0c0-6-5-14-14-26z" fill="#ff7f5c"/>
+          <path class="goutte-flotte d3" d="M396 250c-7 9-10 14-10 18a10 10 0 0 0 20 0c0-4-3-9-10-18z" fill="#126e82"/>
+          <!-- bulles -->
+          <g fill="none" stroke="#126e82" stroke-width="4">
+            <circle class="goutte-flotte d2" cx="70" cy="230" r="14"/>
+            <circle class="goutte-flotte" cx="100" cy="40" r="9"/>
+            <circle class="goutte-flotte d3" cx="340" cy="30" r="7"/>
+          </g>
+          <circle cx="92" cy="190" r="6" fill="#ff7f5c"/>
+        </svg>
+      </div>
+      <span class="etiquette reveal">Plombier chauffagiste · 74 rue de Maréville, Laxou</span>
+      <h1 class="reveal">Du nouveau dans vos <span class="surligne">tuyaux</span></h1>
+      <p class="chapo reveal">Le Nouvel Artisan redonne le sourire aux chaudières gaz ou fioul et remet de l'ordre dans la plomberie, à Laxou et partout dans le Grand Nancy. Une panne, un entretien, un projet&nbsp;? On en parle.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-canard" href="tel:+33383280401">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler
+        </a>
+        <a class="btn btn-corail" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H7l-3 4z"/><path d="M8 9h8M8 12h5"/></svg>
+          Demander un devis
+        </a>
+      </div>
+      <ul class="bulles-info reveal" aria-label="En bref">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z" fill="#126e82"/></svg>Plomberie</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-5 6-4 10-2 12-2-1-3-3-3-5-2 3-2 6 0 8a7 7 0 0 0 10 0c3-3 2-9-5-15z" fill="#ff7f5c"/></svg>Chaudières gaz ou fioul</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="4" fill="#126e82"/><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z" fill="none" stroke="#126e82" stroke-width="2"/></svg>Laxou &amp; Grand Nancy</li>
+      </ul>
+    </div>
+    <svg class="vague" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c160-40 320-40 480 0s320 40 480 0 320-40 480 0v40H0z" fill="#e3f6ee"/></svg>
+  </section>
+
+  <!-- CONFIANCE -->
+  <section class="confiance" aria-label="Ce qu'il faut savoir">
+    <div class="wrap">
+      <ul>
+        <li><span class="pt" style="background:var(--peche)"><svg viewBox="0 0 24 24" fill="none" stroke="#1c2b33" stroke-width="2.2" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span><span><strong>Implanté à Laxou</strong>74 rue de Maréville</span></li>
+        <li><span class="pt" style="background:var(--menthe-2)"><svg viewBox="0 0 24 24" fill="none" stroke="#1c2b33" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><span><strong>Grand Nancy</strong>Laxou et communes voisines</span></li>
+        <li><span class="pt" style="background:#d6eef3"><svg viewBox="0 0 24 24" fill="none" stroke="#1c2b33" stroke-width="2.2" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="5"/><path d="M12 15c-2-1-2-3 0-5 1 2 2 2 2 3s-1 2-2 2z"/></svg></span><span><strong>Gaz ou fioul</strong>Chaudières des deux énergies</span></li>
+        <li><span class="pt" style="background:var(--peche-2)"><svg viewBox="0 0 24 24" fill="none" stroke="#1c2b33" stroke-width="2.2" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M10 13h6M10 17h4"/></svg></span><span><strong>Tarifs sur devis</strong>Chiffrage avant toute intervention</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="tete centre reveal">
+        <span class="etiquette">Nos services</span>
+        <h2>Ce qu'on fait (avec le sourire)</h2>
+        <p>De la chaudière qui boude au robinet qui goutte, voici les interventions les plus courantes. Votre besoin n'y figure pas&nbsp;? Demandez quand même.</p>
+      </div>
+      <div class="grille-services">
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="5" width="24" height="34" rx="12" fill="#fff"/><path d="M24 30c-4-2-4-6 0-10 2 4 4 4 4 6s-2 4-4 4z" fill="#ff7f5c"/><path d="M19 39v5M29 39v5" stroke-linecap="round"/></svg></div>
+          <h3>Chaudière gaz</h3>
+          <p>Installation, remplacement et réglage de chaudières gaz, pour un confort stable dans toute la maison.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="14" width="26" height="28" rx="8" fill="#fff"/><rect x="33" y="24" width="9" height="18" rx="4" fill="#ffcfb3"/><path d="M14 14V8h12v6"/><path d="M13 30h14" stroke-linecap="round"/></svg></div>
+          <h3>Chaudière fioul</h3>
+          <p>Dépannage, entretien et remplacement de chaudières fioul, brûleur compris, avec conseils sur la cuve.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="#fff"/><path d="M24 14v10l7 5"/><path d="M38 8l4 4"/></svg></div>
+          <h3>Entretien annuel</h3>
+          <p>La visite obligatoire de votre chaudière&nbsp;: nettoyage, contrôles, réglages et attestation remise.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6l12 12-6 6-12-12z" fill="#fff"/><path d="M24 12L8 28a6 6 0 0 0 8 8l16-16"/><circle cx="12" cy="32" r="2" fill="#1c2b33"/></svg></div>
+          <h3>Dépannage</h3>
+          <p>Plus d'eau chaude, chauffage froid, code erreur&nbsp;: diagnostic de la panne et remise en route.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16h16v-6h6v6h14"/><path d="M22 16v6h6v-6"/><path d="M25 28c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z" fill="#fff"/></svg></div>
+          <h3>Fuites &amp; canalisations</h3>
+          <p>Recherche et réparation de fuites, remplacement de tuyauterie abîmée, raccords remis à neuf.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 24V12a5 5 0 0 1 10 0"/><path d="M20 14h7"/><path d="M6 24h36v4a12 12 0 0 1-12 12H18A12 12 0 0 1 6 28z" fill="#fff"/></svg></div>
+          <h3>Salle de bains</h3>
+          <p>Pose de lavabo, douche, WC et robinetterie, et raccordements pour une rénovation de salle d'eau.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="4" width="20" height="38" rx="10" fill="#fff"/><path d="M20 30h8M20 36h8"/><path d="M24 12c-2 3-3 4-3 6a3 3 0 0 0 6 0c0-2-1-3-3-6z"/></svg></div>
+          <h3>Eau chaude sanitaire</h3>
+          <p>Remplacement ou installation de ballon d'eau chaude, adapté au nombre de personnes du foyer.</p>
+        </article>
+        <article class="service reveal">
+          <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#1c2b33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="8" fill="#fff"/><path d="M15 12v24M24 12v24M33 12v24"/></svg></div>
+          <h3>Radiateurs</h3>
+          <p>Ajout, remplacement, purge ou désembouage de radiateurs pour une chaleur mieux répartie.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI -->
+  <section class="section" id="pourquoi">
+    <div class="wrap pourquoi-grid">
+      <div class="pourquoi-illu reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <path fill="#ffe6d7" d="M340 90c40 50 50 130 10 190s-120 90-190 70S40 270 40 200 80 60 160 40s140 0 180 50z"/>
+          <g fill="none" stroke="#126e82" stroke-width="18" stroke-linecap="round">
+            <path d="M80 300c0-60 40-80 80-80h40c40 0 60-20 60-60V90"/>
+          </g>
+          <g fill="none" stroke="#ff7f5c" stroke-width="18" stroke-linecap="round">
+            <path d="M320 320c0-40-30-60-70-60h-30"/>
+          </g>
+          <circle cx="260" cy="90" r="24" fill="#fff" stroke="#1c2b33" stroke-width="6"/>
+          <path d="M260 76v14l10 6" stroke="#1c2b33" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M210 262c-14 18-20 28-20 36a20 20 0 0 0 40 0c0-8-6-18-20-36z" fill="#126e82"/>
+          <circle cx="120" cy="120" r="16" fill="#fff" stroke="#126e82" stroke-width="5"/>
+          <circle cx="90" cy="170" r="9" fill="#ff7f5c"/>
+          <circle cx="330" cy="200" r="12" fill="none" stroke="#ff7f5c" stroke-width="5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="tete reveal" style="margin-bottom:30px">
+          <span class="etiquette">Pourquoi nous</span>
+          <h2>Un artisan, des réflexes tout neufs</h2>
+          <p>Nouvel Artisan, mais pas nouveau venu dans l'idée qu'on se fait du travail bien fait.</p>
+        </div>
+        <div class="pourquoi-liste">
+          <div class="atout reveal"><span class="bulle"><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.4" aria-hidden="true"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><h3>Tout près de chez vous</h3><p>Basé rue de Maréville, à Laxou&nbsp;: le Grand Nancy, c'est le quartier.</p></div></div>
+          <div class="atout reveal"><span class="bulle"><svg viewBox="0 0 24 24" fill="none" stroke="#ad3c1f" stroke-width="2.4" aria-hidden="true"><path d="M12 3c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/></svg></span><div><h3>Eau et chaleur, même main</h3><p>Plomberie et chaudière vont ensemble&nbsp;: un seul interlocuteur pour les deux.</p></div></div>
+          <div class="atout reveal"><span class="bulle"><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.4" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M10 13h6M10 17h4"/></svg></span><div><h3>Un devis, puis on agit</h3><p>Le prix est posé noir sur blanc avant le premier coup de clé.</p></div></div>
+          <div class="atout reveal"><span class="bulle"><svg viewBox="0 0 24 24" fill="none" stroke="#ad3c1f" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 12h4l3-7 3 14 3-7h3"/></svg></span><div><h3>Des explications claires</h3><p>Vous savez ce qui a été fait, pourquoi, et comment garder votre installation en forme.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉTAPES -->
+  <section class="section etapes" id="etapes">
+    <svg class="bulles-fond" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="80" cy="90" r="70"/><circle cx="1360" cy="120" r="110"/><circle cx="1200" cy="520" r="60"/><circle cx="260" cy="540" r="40"/></svg>
+    <div class="wrap" style="position:relative">
+      <div class="tete centre reveal">
+        <span class="etiquette">Comment ça se passe</span>
+        <h2>Simple comme une goutte d'eau</h2>
+        <p>Quatre étapes, sans jargon ni surprise sur la facture.</p>
+      </div>
+      <ol class="etapes-liste">
+        <li class="etape reveal"><div class="rond">1</div><h3>Le premier contact</h3><p>Un appel au 03 83 28 04 01 ou un e-mail pour expliquer votre besoin.</p></li>
+        <li class="etape reveal"><div class="rond">2</div><h3>La visite</h3><p>On vient voir l'installation chez vous pour comprendre la situation.</p></li>
+        <li class="etape reveal"><div class="rond">3</div><h3>Le devis</h3><p>Une proposition écrite et détaillée, à valider à votre rythme.</p></li>
+        <li class="etape reveal"><div class="rond">4</div><h3>L'intervention</h3><p>Travail soigné, chantier rangé, et les bons gestes pour la suite.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="section" id="apropos">
+    <div class="wrap">
+      <div class="apropos-boite reveal">
+        <div>
+          <span class="etiquette">À propos</span>
+          <h2>Le Nouvel Artisan, c'est qui&nbsp;?</h2>
+          <p>Le Nouvel Artisan est une entreprise de plomberie et de chauffage installée au 74 rue de Maréville, à Laxou.</p>
+          <p>Elle s'occupe des chaudières gaz ou fioul — installation, entretien, dépannage — et de la plomberie de la maison, de la cuisine à la salle de bains.</p>
+          <p>Son terrain&nbsp;: Laxou et le Grand Nancy. Sa méthode&nbsp;: écouter, se déplacer, chiffrer clairement, puis faire.</p>
+        </div>
+        <div class="fiche">
+          <h3>En un coup d'œil</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.2" aria-hidden="true"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>74 rue de Maréville<br>54520 Laxou</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33383280401">03 83 28 04 01</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 6 10-6"/></svg><a href="mailto:tcerimele@hotmail.fr">tcerimele@hotmail.fr</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#126e82" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg><span>Laxou et Grand Nancy</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION MÉTIER : CALENDRIER D'ENTRETIEN -->
+  <section class="section saisons" id="saisons">
+    <div class="wrap">
+      <div class="tete centre reveal">
+        <span class="etiquette">Conseils d'entretien</span>
+        <h2>Le petit calendrier de votre chaudière</h2>
+        <p>Quelques gestes au fil des saisons suffisent souvent à éviter la panne au pire moment. Gardez cette page sous le coude&nbsp;!</p>
+      </div>
+      <div class="saisons-grid">
+        <article class="saison reveal">
+          <div class="saison-illu"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="26" fill="#ff7f5c"/><g stroke="#ff7f5c" stroke-width="6" stroke-linecap="round"><path d="M60 14v12M60 94v12M14 60h12M94 60h12M28 28l8 8M84 84l8 8M28 92l8-8M84 36l8-8"/></g></svg></div>
+          <div class="saison-corps"><span class="mois">Été</span><h3>Le bon moment pour l'entretien</h3><p>Moins de demandes, plus de souplesse&nbsp;: programmez la visite annuelle avant la rentrée.</p></div>
+        </article>
+        <article class="saison reveal">
+          <div class="saison-illu"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 20c22 20 30 40 20 60s-40 24-50 4 8-44 30-64z" fill="#126e82"/><path d="M58 40v60" stroke="#e3f6ee" stroke-width="5" stroke-linecap="round"/></svg></div>
+          <div class="saison-corps"><span class="mois">Automne</span><h3>Purge des radiateurs</h3><p>Un radiateur tiède en haut cache souvent de l'air&nbsp;: une purge et c'est reparti.</p></div>
+        </article>
+        <article class="saison reveal">
+          <div class="saison-illu"><svg viewBox="0 0 120 120" aria-hidden="true"><g stroke="#126e82" stroke-width="6" stroke-linecap="round"><path d="M60 16v88M22 38l76 44M22 82l76-44"/><path d="M50 22l10 8 10-8M50 98l10-8 10 8"/></g></svg></div>
+          <div class="saison-corps"><span class="mois">Hiver</span><h3>Œil sur la pression</h3><p>Une pression qui baisse régulièrement mérite un appel&nbsp;: mieux vaut prévenir.</p></div>
+        </article>
+        <article class="saison reveal">
+          <div class="saison-illu"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 100V54" stroke="#126e82" stroke-width="6" stroke-linecap="round"/><path d="M60 64c-20 0-30-14-30-30 20 0 30 14 30 30zM60 56c0-18 12-30 30-30 0 18-12 30-30 30z" fill="#ff7f5c"/></svg></div>
+          <div class="saison-corps"><span class="mois">Printemps</span><h3>On pense à la suite</h3><p>Chaudière fatiguée&nbsp;? C'est la saison idéale pour étudier un remplacement sans urgence.</p></div>
+        </article>
+      </div>
+      <div class="tarif-bulle reveal">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#ffcfb3"/><path d="M16 14h12l6 6v16H16z" fill="#fff" stroke="#1c2b33" stroke-width="3" stroke-linejoin="round"/><path d="M20 26h10M20 31h7" stroke="#1c2b33" stroke-width="3" stroke-linecap="round"/></svg>
+        <p><strong>Tarifs&nbsp;: sur devis.</strong> Chaque logement est différent&nbsp;; le prix est établi après avoir vu votre installation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="section" id="avis">
+    <div class="wrap">
+      <div class="avis-boite reveal">
+        <svg class="bulles-avis" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 30a14 14 0 0 1 14-14h52a14 14 0 0 1 14 14v34a14 14 0 0 1-14 14H52l-20 18V78a14 14 0 0 1-12-14z" fill="#fff"/><circle cx="44" cy="47" r="6" fill="#126e82"/><circle cx="60" cy="47" r="6" fill="#ff7f5c"/><circle cx="76" cy="47" r="6" fill="#126e82"/><circle cx="100" cy="96" r="10" fill="#ff7f5c"/></svg>
+        <span class="etiquette">Avis clients</span>
+        <h2>Vos avis comptent</h2>
+        <p>Le Nouvel Artisan est passé chez vous&nbsp;? Racontez comment ça s'est passé&nbsp;: votre retour aide d'autres habitants du Grand Nancy à trouver leur artisan. Aucun avis n'est encore affiché ici — à vous de lancer le mouvement.</p>
+        <a class="btn btn-canard" href="mailto:tcerimele@hotmail.fr?subject=Mon%20avis%20sur%20Le%20Nouvel%20Artisan">Donner mon avis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="tete centre reveal">
+        <span class="etiquette">FAQ</span>
+        <h2>Les questions qui reviennent</h2>
+      </div>
+      <div class="faq-liste">
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">L'entretien annuel de la chaudière est-il obligatoire&nbsp;?</button><div class="faq-r"><div><p>Oui&nbsp;: les chaudières gaz et fioul de 4 à 400 kW doivent être entretenues chaque année par un professionnel. Une attestation vous est remise à l'issue de la visite&nbsp;; conservez-la, votre assureur peut la demander.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Combien de temps pour obtenir un devis&nbsp;?</button><div class="faq-r"><div><p>Tout dépend de la saison et du projet. Le plus rapide est d'appeler ou d'écrire&nbsp;: une visite est fixée pour évaluer l'installation, puis le devis détaillé vous est envoyé.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Existe-t-il des aides (MaPrimeRénov', CEE)&nbsp;?</button><div class="faq-r"><div><p>Des aides peuvent exister pour certains travaux de chauffage, selon votre éligibilité (ressources, logement, équipement) et à condition de passer par un artisan RGE. Consultez france-renov.gouv.fr avant de vous engager&nbsp;; nous pourrons en discuter lors de la visite.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Ma chaudière ne démarre plus, que faire&nbsp;?</button><div class="faq-r"><div><p>Vérifiez la pression, le disjoncteur et, pour le fioul, le niveau de la cuve. Notez le code erreur s'il y en a un, puis appelez le 03 83 28 04 01. Si vous sentez une odeur de gaz, coupez le compteur, aérez et contactez les urgences gaz.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Où intervenez-vous&nbsp;?</button><div class="faq-r"><div><p>À Laxou et dans le Grand Nancy. Pour une commune plus éloignée, posez la question&nbsp;: la réponse dépend de la nature de l'intervention.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" type="button" aria-expanded="false">Une pompe à chaleur, c'est fait pour moi&nbsp;?</button><div class="faq-r"><div><p>Ça dépend surtout de l'isolation et des émetteurs de chauffage. Notre cœur de métier reste la chaudière gaz ou fioul et la plomberie&nbsp;; on vous donnera un avis honnête sur ce qui semble adapté à votre logement.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="tete centre reveal">
+        <span class="etiquette">Contact</span>
+        <h2>On se parle&nbsp;?</h2>
+        <p>Un projet, une panne, une question&nbsp;: choisissez le canal qui vous arrange.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="carte carte-horaires reveal">
+          <h3>Horaires</h3>
+          <table class="horaires" aria-label="Horaires indicatifs">
+            <tbody>
+              <tr data-jour="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+              <tr data-jour="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+              <tr data-jour="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-jour="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+              <tr data-jour="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-jour="6"><td>Samedi</td><td>À confirmer</td></tr>
+              <tr data-jour="0"><td>Dimanche</td><td>À confirmer</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Indicatif : sur rendez-vous, du lundi au vendredi (à confirmer).</p>
+          <div class="adresse">
+            <strong>74 rue de Maréville, 54520 Laxou</strong><br>
+            <a href="tel:+33383280401">03 83 28 04 01</a><br>
+            <a href="mailto:tcerimele@hotmail.fr">tcerimele@hotmail.fr</a>
+          </div>
+          <a class="btn btn-blanc" href="https://www.google.com/maps/search/?api=1&amp;query=74+rue+de+Mar%C3%A9ville+54520+Laxou" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+            Itinéraire
+          </a>
+        </div>
+        <div class="carte reveal">
+          <h3>Demande de devis</h3>
+          <form id="form-contact" novalidate>
+            <div class="champs">
+              <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+              <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+            </div>
+            <div class="champs">
+              <div><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+              <div><label for="objet">Objet</label>
+                <select id="objet" name="objet">
+                  <option>Entretien de chaudière</option>
+                  <option>Dépannage chauffage</option>
+                  <option>Remplacement de chaudière</option>
+                  <option>Plomberie / fuite</option>
+                  <option>Salle de bains</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+            <div><label for="message">Votre message</label><textarea id="message" name="message" placeholder="Votre commune, votre équipement (gaz, fioul), ce qui se passe…"></textarea></div>
+            <button class="btn btn-corail" type="submit">Envoyer</button>
+            <p class="msg-demo" id="msg-demo" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="vague-foot" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c240-40 480-40 720 0s480 40 720 0v30H0z" fill="#1c2b33"/></svg>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#e3f6ee"/><path d="M20 7c-6 8-10 13-10 18a10 10 0 0 0 20 0c0-5-4-10-10-18z" fill="#126e82"/><circle cx="16" cy="24" r="3" fill="#ffcfb3"/></svg>
+        <span>Le Nouvel Artisan<small>Plomberie · chauffage · Laxou</small></span>
+      </a>
+      <p style="margin-top:16px">Plomberie et chaudières gaz ou fioul à Laxou et dans le Grand Nancy.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>74 rue de Maréville, 54520 Laxou</li>
+        <li><a href="tel:+33383280401">03 83 28 04 01</a></li>
+        <li><a href="mailto:tcerimele@hotmail.fr">tcerimele@hotmail.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <p>Sur rendez-vous, du lundi au vendredi (indicatif, à confirmer).</p>
+      <h3>Zone</h3>
+      <p>Laxou et Grand Nancy</p>
+    </div>
+    <div>
+      <h3>Raccourcis</h3>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#saisons">Conseils d'entretien</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Demander un devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bas">
+    <span>© <span id="annee">2026</span> Le Nouvel Artisan · Laxou (54)</span>
+    <span>Mentions légales · Aucune donnée collectée sur cette maquette</span>
+  </div>
+  <div class="bandeau-demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33383280401" aria-label="Appeler Le Nouvel Artisan au 03 83 28 04 01">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+</a>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger');
+  var menu=document.getElementById('menu');
+
+  function fermer(){
+    menu.classList.remove('ouvert');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Ouvrir le menu');
+  }
+
+  burger.addEventListener('click',function(){
+    var ouvert=menu.classList.toggle('ouvert');
+    burger.setAttribute('aria-expanded',ouvert?'true':'false');
+    burger.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');
+  });
+
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',fermer);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){fermer();}
+  });
+
+  // Accordéon FAQ
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      var ouvert=item.classList.toggle('ouvert');
+      q.setAttribute('aria-expanded',ouvert?'true':'false');
+    });
+  });
+
+  // Jour courant mis en évidence
+  var jour=new Date().getDay();
+  var ligne=document.querySelector('.horaires tr[data-jour="'+jour+'"]');
+  if(ligne){ligne.classList.add('aujourdhui');}
+
+  // Formulaire (démo)
+  document.getElementById('form-contact').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('msg-demo');
+    m.textContent='Maquette de démonstration — ce formulaire n\'envoie rien pour l\'instant.';
+    m.classList.add('visible');
+  });
+
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  // Apparition au défilement
+  var els=document.querySelectorAll('.reveal');
+  var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduit||!('IntersectionObserver' in window)){
+    els.forEach(function(el){el.classList.add('vu');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entrees){
+    entrees.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('vu');
+        io.unobserve(en.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

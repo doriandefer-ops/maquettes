@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ke Watts Energy – chauffagiste à Houdemont | Bois, pompe à chaleur, eau chaude</title>
+<meta name="description" content="Ke Watts Energy, chauffagiste à Houdemont (54180) au sud de Nancy : chauffage et eau chaude au bois, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Tarifs sur devis.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#1a1446;
+  --indigo-deep:#110d33;
+  --violet:#4b2a8a;
+  --orange:#ff8a3d;
+  --jaune:#ffd23f;
+  --blanc:#ffffff;
+  --texte:#ece9f7;
+  --texte-doux:#c9c3e6;
+  --verre:rgba(255,255,255,.08);
+  --verre-fort:rgba(255,255,255,.13);
+  --verre-sombre:rgba(26,20,70,.55);
+  --bord-verre:rgba(255,255,255,.18);
+  --halo-orange:rgba(255,138,61,.45);
+  --halo-violet:rgba(120,70,210,.45);
+  --rayon:22px;
+  --titre:'Urbanist','Segoe UI',system-ui,sans-serif;
+  --corps:'Inter',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--corps);
+  color:var(--texte);
+  background:var(--indigo-deep);
+  line-height:1.65;
+  font-size:16px;
+  overflow-x:hidden;
+}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--titre);color:var(--blanc);line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800}
+h3{font-weight:700}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--titre);font-weight:700;font-size:.82rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--jaune);
+  padding:7px 14px;border-radius:99px;
+  background:rgba(255,210,63,.08);border:1px solid rgba(255,210,63,.28);
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange)}
+.lead{color:var(--texte-doux);font-size:1.08rem;max-width:620px}
+section{padding:110px 0;position:relative;overflow-x:clip}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;flex-wrap:wrap}
+.sec-head .lead{max-width:440px}
+
+/* boutons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 26px;border-radius:99px;text-decoration:none;
+  font-family:var(--titre);font-weight:700;font-size:1.02rem;letter-spacing:.01em;
+  border:1px solid transparent;cursor:pointer;transition:transform .3s,box-shadow .3s,background .3s;
+}
+.btn svg{width:19px;height:19px}
+.btn-sun{
+  background:linear-gradient(120deg,var(--jaune),var(--orange));
+  color:var(--indigo);
+  box-shadow:0 12px 34px -10px var(--halo-orange);
+}
+.btn-sun:hover{transform:translateY(-3px);box-shadow:0 18px 44px -8px rgba(255,138,61,.7)}
+.btn-glass{
+  background:var(--verre);color:var(--blanc);border-color:var(--bord-verre);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+.btn-glass:hover{background:var(--verre-fort);transform:translateY(-3px)}
+
+/* carte verre générique */
+.glass{
+  background:linear-gradient(150deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  border:1px solid var(--bord-verre);
+  border-radius:var(--rayon);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 20px 50px -24px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+/* halos d'arrière-plan */
+.halo{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+.halo.o{background:var(--halo-orange)}
+.halo.v{background:var(--halo-violet)}
+section>.wrap{position:relative;z-index:1}
+
+/* NAV */
+.nav{position:fixed;inset:14px 0 auto 0;z-index:60;transition:inset .3s}
+.nav-in{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:10px 12px 10px 20px;border-radius:99px;
+  background:rgba(26,20,70,.35);border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  transition:background .3s;
+}
+.nav.scrolled .nav-in{background:rgba(17,13,51,.82)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:800;font-size:1.2rem;color:var(--blanc)}
+.logo svg{width:34px;height:34px}
+.logo small{display:block;font-weight:600;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jaune);margin-top:1px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none}
+.menu a{display:block;padding:9px 14px;border-radius:99px;text-decoration:none;font-weight:500;font-size:.94rem;color:var(--texte);transition:background .25s,color .25s}
+.menu a:hover{background:rgba(255,255,255,.1);color:var(--blanc)}
+.menu .cta a{background:linear-gradient(120deg,var(--jaune),var(--orange));color:var(--indigo);font-weight:700;font-family:var(--titre)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--bord-verre);background:var(--verre);cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:2px;border-radius:2px;background:var(--blanc);transition:.3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{
+  min-height:100vh;min-height:100svh;padding:150px 0 90px;display:flex;align-items:center;overflow:hidden;
+  background:
+    radial-gradient(60% 55% at 78% 88%,rgba(255,210,63,.55),transparent 60%),
+    radial-gradient(70% 70% at 82% 100%,rgba(255,138,61,.85),transparent 65%),
+    radial-gradient(60% 60% at 10% 10%,rgba(75,42,138,.7),transparent 70%),
+    linear-gradient(170deg,var(--indigo-deep) 0%,var(--indigo) 30%,var(--violet) 62%,#b4487a 84%,var(--orange) 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 5px);
+  mask-image:linear-gradient(to top,#000,transparent 50%);-webkit-mask-image:linear-gradient(to top,#000,transparent 50%);
+}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to bottom,transparent,var(--indigo-deep));z-index:1;pointer-events:none}
+.stars-bg{position:absolute;inset:0 0 40% 0;pointer-events:none;opacity:.8}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.5rem);font-weight:800;letter-spacing:-.025em;margin-bottom:24px}
+.hero h1 .glow{
+  background:linear-gradient(100deg,var(--jaune),var(--orange) 70%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 22px rgba(255,138,61,.35));
+}
+.hero .lead{font-size:1.15rem;color:#e4def7;margin-bottom:34px;max-width:560px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;font-size:.88rem;background:rgba(17,13,51,.45);border:1px solid rgba(255,255,255,.16);color:#f1eefb;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.chip svg{width:16px;height:16px;color:var(--jaune)}
+
+/* éventail de cartes */
+.fan{position:relative;height:560px;width:100%;max-width:520px;justify-self:end}
+.sun{position:absolute;width:340px;height:340px;right:-60px;bottom:-80px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,#fff3c4 0%,var(--jaune) 30%,var(--orange) 62%,rgba(255,138,61,0) 72%);
+  filter:blur(2px);animation:pulse 7s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.06);opacity:1}}
+.fcard{
+  position:absolute;width:340px;padding:24px 24px 22px;left:0;top:0;
+  background:linear-gradient(150deg,rgba(40,28,100,.78),rgba(26,20,70,.62));
+  display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:start;
+  border:1px solid rgba(255,255,255,.22);border-radius:26px;
+  backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);
+  box-shadow:0 30px 60px -25px rgba(10,6,40,.8), inset 0 1px 0 rgba(255,255,255,.25);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.fcard .ico{grid-row:span 2;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,210,63,.25),rgba(255,138,61,.15));border:1px solid rgba(255,210,63,.35)}
+.fcard .ico svg{width:34px;height:34px}
+.fcard h3{font-size:1.3rem;margin:4px 0 6px;padding-right:22px}
+.fcard p{font-size:.92rem;color:#e2dcf6;line-height:1.5}
+.fcard .tag{position:absolute;top:22px;right:22px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--jaune)}
+.fcard.c1{transform:translate(0,40px) rotate(-7deg);z-index:1}
+.fcard.c2{transform:translate(90px,200px) rotate(-1deg);z-index:2}
+.fcard.c3{transform:translate(170px,360px) rotate(5deg);z-index:3}
+.fan:hover .c1{transform:translate(-8px,30px) rotate(-9deg)}
+.fan:hover .c3{transform:translate(180px,370px) rotate(7deg)}
+.fcard:hover{z-index:5!important}
+
+/* bandeau de confiance */
+.trust{padding:0;margin-top:-46px;position:relative;z-index:5}
+.trust-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:8px;border-radius:26px;background:linear-gradient(150deg,rgba(40,28,100,.82),rgba(26,20,70,.78))}
+.trust-item{display:flex;align-items:center;gap:14px;padding:18px 20px;border-right:1px solid rgba(255,255,255,.1)}
+.trust-item:last-child{border-right:0}
+.trust-item svg{width:30px;height:30px;flex:none;color:var(--orange)}
+.trust-item b{display:block;font-family:var(--titre);font-size:1.06rem;color:var(--blanc)}
+.trust-item span{font-size:.86rem;color:var(--texte-doux)}
+
+/* services */
+.services{background:linear-gradient(180deg,var(--indigo-deep),var(--indigo))}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{padding:30px 28px;transition:transform .35s,border-color .35s,background .35s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;width:180px;height:180px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,61,.35),transparent 70%);opacity:.0;transition:opacity .4s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(255,210,63,.45)}
+.svc:hover::before{opacity:1}
+.svc .ico{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
+.svc .ico svg{width:34px;height:34px}
+.svc h3{font-size:1.32rem;margin-bottom:10px}
+.svc p{color:var(--texte-doux);font-size:.96rem}
+.svc .kind{display:inline-block;margin-top:18px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--jaune)}
+
+/* pourquoi */
+.why{background:var(--indigo)}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why-card{padding:26px}
+.why-card .n{font-family:var(--titre);font-weight:800;font-size:.9rem;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(130deg,var(--jaune),var(--orange));color:var(--indigo);margin-bottom:16px}
+.why-card h3{font-size:1.14rem;margin-bottom:8px}
+.why-card p{font-size:.93rem;color:var(--texte-doux)}
+.why-visual{position:relative;aspect-ratio:1/1;max-width:440px}
+
+/* étapes */
+.steps{background:linear-gradient(180deg,var(--indigo),#22175a)}
+.step-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;counter-reset:s}
+.step-row::before{content:"";position:absolute;left:5%;right:5%;top:38px;height:2px;background:linear-gradient(90deg,transparent,var(--orange),var(--jaune),transparent);opacity:.6}
+.step{padding:0 6px;position:relative;text-align:center}
+.step .dot{width:76px;height:76px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;font-family:var(--titre);font-weight:800;font-size:1.6rem;color:var(--blanc);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.25),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 0 0 8px rgba(255,138,61,.08),0 0 40px -6px var(--halo-orange)}
+.step h3{font-size:1.2rem;margin-bottom:8px}
+.step p{color:var(--texte-doux);font-size:.94rem}
+
+/* à propos */
+.about{background:#22175a}
+.about-card{display:grid;grid-template-columns:1fr 1.2fr;gap:0;overflow:hidden;padding:0}
+.about-art{background:linear-gradient(160deg,var(--violet),#a2457c 70%,var(--orange));position:relative;min-height:360px}
+.about-art svg{position:absolute;inset:0;width:100%;height:100%}
+.about-txt{padding:52px 50px}
+.about-txt p{color:var(--texte-doux);margin-bottom:16px}
+.about-txt p strong{color:var(--blanc);font-weight:600}
+.about-txt .sign{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+/* comparatif */
+.compare{background:linear-gradient(180deg,#22175a,var(--indigo))}
+.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cmp{padding:32px 28px;display:flex;flex-direction:column}
+.cmp-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.cmp-head svg{width:44px;height:44px}
+.cmp-head h3{font-size:1.32rem}
+.cmp-head small{display:block;color:var(--jaune);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--corps)}
+.cmp .ideal{font-size:.96rem;color:var(--texte);margin-bottom:18px}
+.cmp ul{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+.cmp li{display:flex;gap:10px;font-size:.93rem;color:var(--texte-doux)}
+.cmp li svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--orange)}
+.cmp .price{margin-top:auto;padding-top:18px;border-top:1px dashed rgba(255,255,255,.18);display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--texte-doux)}
+.cmp .price b{font-family:var(--titre);color:var(--jaune);font-size:1.05rem}
+.cmp.featured{background:linear-gradient(160deg,rgba(255,138,61,.22),rgba(75,42,138,.25));border-color:rgba(255,210,63,.4)}
+.cmp-note{margin-top:26px;font-size:.9rem;color:var(--texte-doux);text-align:center}
+
+/* avis */
+.reviews{background:var(--indigo)}
+.rev-box{padding:56px;display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center}
+.rev-badge{width:170px;height:170px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(255,210,63,.25),rgba(255,138,61,.05) 70%);border:1px solid rgba(255,210,63,.35)}
+.rev-badge svg{width:84px;height:84px}
+.rev-box p{color:var(--texte-doux);margin:14px 0 24px;max-width:620px}
+
+/* FAQ */
+.faq{background:linear-gradient(180deg,var(--indigo),var(--indigo-deep))}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq-list{display:grid;gap:14px}
+.qa{border-radius:18px;overflow:hidden}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;text-align:left;padding:20px 24px;background:none;border:0;cursor:pointer;color:var(--blanc);font-family:var(--titre);font-weight:700;font-size:1.08rem}
+.qa button .pm{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--bord-verre);position:relative;transition:transform .3s,background .3s}
+.qa button .pm::before,.qa button .pm::after{content:"";position:absolute;left:8px;right:8px;top:14px;height:2px;background:var(--jaune);border-radius:2px}
+.qa button .pm::after{transform:rotate(90deg);transition:transform .3s}
+.qa button[aria-expanded="true"] .pm{background:rgba(255,138,61,.2)}
+.qa button[aria-expanded="true"] .pm::after{transform:rotate(0)}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa .ans p{padding:0 24px 22px;color:var(--texte-doux);font-size:.96rem}
+
+/* contact */
+.contact{background:var(--indigo-deep);overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.info{padding:34px;display:grid;gap:26px}
+.info h3{font-size:1.3rem;margin-bottom:4px}
+.line{display:flex;gap:14px;align-items:flex-start}
+.line svg{width:22px;height:22px;flex:none;color:var(--orange);margin-top:3px}
+.line a{text-decoration:none;color:var(--blanc);font-weight:600;word-break:break-word}
+.line a:hover{color:var(--jaune)}
+.line span{display:block;font-size:.86rem;color:var(--texte-doux)}
+.hours{list-style:none;display:grid;gap:4px}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;border-radius:12px;font-size:.93rem;color:var(--texte-doux)}
+.hours li.today{background:linear-gradient(110deg,rgba(255,210,63,.18),rgba(255,138,61,.12));color:var(--blanc);font-weight:600;border:1px solid rgba(255,210,63,.35)}
+.hours li.today span:first-child::after{content:" · aujourd'hui";color:var(--jaune);font-weight:500;font-size:.82rem}
+.hours-note{font-size:.84rem;color:var(--texte-doux);margin-top:8px}
+form.glass{padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form h3{grid-column:1/-1;font-size:1.5rem}
+form .sub{grid-column:1/-1;color:var(--texte-doux);font-size:.94rem;margin-top:-8px;margin-bottom:6px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.86rem;font-weight:600;color:#e4def7}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:.96rem;color:var(--blanc);
+  padding:13px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.2);
+  background:rgba(17,13,51,.5);transition:border-color .25s,box-shadow .25s;
+}
+.field select option{background:var(--indigo);color:var(--blanc)}
+.field textarea{min-height:120px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#a9a2cf}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--jaune);box-shadow:0 0 0 4px rgba(255,210,63,.15)}
+form .btn{grid-column:1/-1}
+.form-msg{grid-column:1/-1;font-size:.94rem;color:var(--jaune);min-height:1.2em}
+.form-msg.show{padding:14px 16px;border-radius:14px;background:rgba(255,210,63,.1);border:1px solid rgba(255,210,63,.3)}
+
+/* footer */
+footer{background:#0b0824;padding:70px 0 0;border-top:1px solid rgba(255,255,255,.08)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:46px}
+.foot p,.foot li{font-size:.92rem;color:var(--texte-doux)}
+.foot h4{font-size:1rem;margin-bottom:14px;color:var(--blanc)}
+.foot ul{list-style:none;display:grid;gap:8px}
+.foot a{text-decoration:none;word-break:break-word}
+.foot a:hover{color:var(--jaune)}
+.legal{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;font-size:.84rem;color:#a9a2cf;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.demo{background:#06041a;text-align:center;padding:12px 20px 14px;font-size:.8rem;color:#b6b0d6}
+
+/* bouton flottant */
+.fab{display:none;position:fixed;right:18px;bottom:18px;z-index:70;width:60px;height:60px;border-radius:50%;place-items:center;background:linear-gradient(130deg,var(--jaune),var(--orange));color:var(--indigo);box-shadow:0 14px 30px -8px rgba(255,138,61,.75)}
+.fab svg{width:26px;height:26px}
+
+/* animations */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+.flame-flicker{transform-origin:50% 100%;animation:flick 2.6s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scaleY(1)}40%{transform:scaleY(1.06) skewX(-2deg)}70%{transform:scaleY(.96) skewX(2deg)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* responsive */
+@media (max-width:1060px){
+  .hero-grid{grid-template-columns:1fr}
+  .fan{height:560px;max-width:520px;width:100%;margin:0 auto;justify-self:center}
+  .svc-grid,.cmp-grid{grid-template-columns:1fr 1fr}
+  .why-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}
+  .why-visual{margin:0 auto;max-width:340px}
+  .trust-in{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(2){border-right:0}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{
+    position:fixed;left:16px;right:16px;top:84px;flex-direction:column;align-items:stretch;gap:4px;padding:14px;
+    border-radius:24px;background:rgba(17,13,51,.94);border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    opacity:0;visibility:hidden;transform:translateY(-10px);transition:.3s;
+  }
+  .menu.open{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:14px 18px;font-size:1.05rem}
+  .menu .cta a{text-align:center;margin-top:6px}
+  .step-row{grid-template-columns:1fr 1fr;row-gap:40px}
+  .step-row::before{display:none}
+  .about-card{grid-template-columns:1fr}
+  .about-art{min-height:260px}
+  .rev-box{grid-template-columns:1fr;text-align:center;justify-items:center;padding:40px 28px}
+  .rev-box p{margin-inline:auto}
+}
+@media (max-width:640px){
+  section{padding:80px 0}
+  .wrap{width:calc(100% - 32px)}
+  .hero{padding:120px 0 90px}
+  .fan{height:470px}
+  .fcard{width:270px;padding:18px;column-gap:12px}
+  .fcard h3{font-size:1.15rem}
+  .fcard p{font-size:.84rem}
+  .fcard .ico{width:46px;height:46px}
+  .fcard .ico svg{width:28px;height:28px}
+  .fcard.c1{transform:translate(0,10px) rotate(-6deg)}
+  .fcard.c2{transform:translate(40px,160px) rotate(-1deg)}
+  .fcard.c3{transform:translate(80px,305px) rotate(4deg)}
+  .fan:hover .c1{transform:translate(0,10px) rotate(-6deg)}
+  .fan:hover .c3{transform:translate(80px,305px) rotate(4deg)}
+  .sun{width:240px;height:240px;right:-40px;bottom:-10px}
+  .hero-actions .btn{flex:1 1 100%}
+  .svc-grid,.cmp-grid,.why-list{grid-template-columns:1fr}
+  .trust-in{grid-template-columns:1fr}
+  .trust-item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)}
+  .trust-item:last-child{border-bottom:0}
+  .step-row{grid-template-columns:1fr}
+  .about-txt{padding:34px 26px}
+  form.glass{grid-template-columns:1fr;padding:26px 20px}
+  .info{padding:26px 22px}
+  .foot{grid-template-columns:1fr}
+  .fab{display:grid}
+  .demo{padding-bottom:90px}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Ke Watts Energy, retour en haut">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
+        <circle cx="20" cy="20" r="18" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.3)"/>
+        <path d="M22 7 12 22h7l-2 11 11-16h-7z" fill="url(#lg)"/>
+      </svg>
+      <span>Ke Watts<small>Energy · Houdemont</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#equipement">Quel équipement ?</a></li>
+      <li><a href="#etapes">Déroulé</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="cta"><a href="#contact">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <svg class="stars-bg" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="#fff">
+      <circle cx="120" cy="80" r="1.4" opacity=".7"/><circle cx="260" cy="40" r="1" opacity=".5"/><circle cx="420" cy="120" r="1.6" opacity=".6"/>
+      <circle cx="610" cy="60" r="1" opacity=".5"/><circle cx="780" cy="30" r="1.3" opacity=".7"/><circle cx="930" cy="110" r="1" opacity=".4"/>
+      <circle cx="1080" cy="50" r="1.5" opacity=".7"/><circle cx="1240" cy="90" r="1" opacity=".5"/><circle cx="1380" cy="40" r="1.3" opacity=".6"/>
+      <circle cx="200" cy="200" r="1" opacity=".4"/><circle cx="520" cy="230" r="1.2" opacity=".4"/><circle cx="1320" cy="210" r="1" opacity=".4"/>
+    </g>
+  </svg>
+  <div class="halo v" style="width:420px;height:420px;left:-140px;top:120px"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Chauffagiste · Houdemont (54)</span>
+      <h1 id="h1">La chaleur du soir,<br><span class="glow">tout l'hiver</span><br>au sud de Nancy.</h1>
+      <p class="lead">Ke Watts Energy installe chez vous un chauffage qui vous ressemble : flamme du bois, pompe à chaleur discrète ou eau chaude qui puise ses calories dans l'air. Un interlocuteur basé à Houdemont, pour les maisons de Heillecourt, Vandœuvre, Nancy et du sud de l'agglomération.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sun" href="tel:+33372610536">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler · 03 72 61 05 36
+        </a>
+        <a class="btn btn-glass" href="#contact">Demander un devis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Houdemont 54180</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Tarifs sur devis</span>
+      </div>
+    </div>
+
+    <div class="fan" aria-label="Les trois spécialités de Ke Watts Energy">
+      <div class="sun" aria-hidden="true"></div>
+      <article class="fcard c1">
+        <span class="tag">01</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path class="flame-flicker" d="M20 34c-6 0-9.5-4-9.5-9 0-6 5-8.5 6-15 4 3.5 6.5 6.5 6.5 10 1.5-1 2.3-2.6 2.5-4.5 2.7 2.5 4 5.6 4 9.5 0 5-3.5 9-9.5 9z" fill="#ff8a3d"/><path d="M20 34c-3 0-4.8-2-4.8-4.6 0-3 2.6-4.3 3.3-7.4 2.6 2 4.6 4.3 4.6 7.2 0 3-1.5 4.8-3.1 4.8z" fill="#ffd23f"/><path d="M8 36h24" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Bois &amp; granulés</h3>
+        <p>Chauffage et eau chaude au bois : la flamme comme source principale de chaleur.</p>
+      </article>
+      <article class="fcard c2">
+        <span class="tag">02</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="10" width="32" height="22" rx="4" stroke="#fff" stroke-width="2"/><circle cx="16" cy="21" r="7" stroke="#ffd23f" stroke-width="2"/><path d="M16 14v14M9 21h14M11 16l10 10M21 16 11 26" stroke="#ffd23f" stroke-width="1.2"/><path d="M27 16h5M27 21h5M27 26h5" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/><path d="M10 32v3M30 32v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>PAC et climatisation : chauffer l'hiver, rafraîchir les étés lorrains.</p>
+      </article>
+      <article class="fcard c3">
+        <span class="tag">03</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="12" y="4" width="16" height="30" rx="8" stroke="#fff" stroke-width="2"/><path d="M12 22h16" stroke="#fff" stroke-width="1.4" stroke-dasharray="2 2"/><path d="M20 10c-2 2.5-3 4-3 5.5a3 3 0 0 0 6 0c0-1.5-1-3-3-5.5z" fill="#ffd23f"/><path d="M16 34v3M24 34v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M4 14c2-1.5 3 1.5 5 0M31 14c2-1.5 3 1.5 5 0M4 20c2-1.5 3 1.5 5 0M31 20c2-1.5 3 1.5 5 0" stroke="#ff8a3d" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Eau chaude</h3>
+        <p>Chauffe-eau thermodynamique : l'eau chaude sanitaire chauffée par l'air ambiant.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="trust" aria-label="En bref">
+  <div class="wrap">
+    <div class="glass trust-in reveal">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><b>Basé à Houdemont</b><span>54180, au sud de Nancy</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+        <div><b>Sud de l'agglomération</b><span>Heillecourt, Vandœuvre, Nancy…</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4 0-6-2.6-6-6 0-4 3.5-5.5 4-10 2.8 2.4 4.5 4.6 4.5 7 1-.7 1.6-1.8 1.7-3 1.8 1.7 1.8 4 1.8 6 0 3.4-2 6-6 6z"/></svg>
+        <div><b>3 spécialités</b><span>Bois · PAC &amp; clim · eau chaude</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <div><b>Tarifs sur devis</b><span>Selon votre logement</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="halo o" style="width:380px;height:380px;right:-120px;top:120px;opacity:.5"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Trois énergies,<br>un seul interlocuteur.</h2></div>
+      <p class="lead">Du feu de bois à la pompe à chaleur, Ke Watts Energy conçoit, pose et suit des installations pensées pour les maisons du Grand Nancy.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="glass svc reveal">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><rect x="9" y="8" width="22" height="26" rx="3" stroke="#fff" stroke-width="2"/><rect x="13" y="17" width="14" height="12" rx="2" stroke="#ffd23f" stroke-width="1.6"/><path d="M20 27c-2.4 0-3.6-1.6-3.6-3.5 0-2.4 2-3 2.4-5.5 1.6 1.3 3.6 3 3.6 5.2 0 2.3-1 3.8-2.4 3.8z" fill="#ff8a3d"/><path d="M17 8V4h6v4" stroke="#fff" stroke-width="2"/><path d="M12 34v2M28 34v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Poêles &amp; chaudières bois</h3>
+        <p>Bûches ou granulés : un chauffage au bois dimensionné pour votre maison, raccordé et mis en service dans les règles.</p>
+        <span class="kind">Chauffage au bois</span>
+      </article>
+      <article class="glass svc reveal d1">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="5" width="18" height="30" rx="3" stroke="#fff" stroke-width="2"/><path d="M13 12h8M13 16h8" stroke="#ffd23f" stroke-width="1.6" stroke-linecap="round"/><path d="M26 22h4a3 3 0 0 1 3 3v8" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/><path d="M33 33c-1.4 1.6-3.6 1.6-5 0" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/><path d="M17 28c-1.6 0-2.4-1-2.4-2.3 0-1.6 1.4-2 1.6-3.7 1 .8 2.4 2 2.4 3.5 0 1.5-.6 2.5-1.6 2.5z" fill="#ff8a3d"/></svg></div>
+        <h3>Eau chaude au bois</h3>
+        <p>Votre installation bois peut aussi produire l'eau chaude sanitaire, avec un ballon adapté au foyer.</p>
+        <span class="kind">Bois · eau chaude</span>
+      </article>
+      <article class="glass svc reveal d2">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="10" width="32" height="22" rx="4" stroke="#fff" stroke-width="2"/><circle cx="16" cy="21" r="7" stroke="#ffd23f" stroke-width="2"/><path d="M16 14v14M9 21h14" stroke="#ffd23f" stroke-width="1.2"/><path d="M27 16h5M27 21h5M27 26h5" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude, pose et mise en service d'une PAC adaptée à votre isolation, à vos émetteurs et à votre confort.</p>
+        <span class="kind">PAC</span>
+      </article>
+      <article class="glass svc reveal">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="13" rx="4" stroke="#fff" stroke-width="2"/><path d="M9 16h22" stroke="#ffd23f" stroke-width="1.6" stroke-linecap="round"/><path d="M12 26c0 3-2 3-2 6M20 26c0 3-2 3-2 6M28 26c0 3-2 3-2 6" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Une climatisation réversible pour garder la fraîcheur sous les toits pendant les épisodes de chaleur.</p>
+        <span class="kind">Clim réversible</span>
+      </article>
+      <article class="glass svc reveal d1">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><rect x="12" y="4" width="16" height="30" rx="8" stroke="#fff" stroke-width="2"/><path d="M20 11c-2 2.5-3 4-3 5.5a3 3 0 0 0 6 0c0-1.5-1-3-3-5.5z" fill="#ffd23f"/><path d="M12 24h16" stroke="#fff" stroke-width="1.4" stroke-dasharray="2 2"/><path d="M4 16c2-1.5 3 1.5 5 0M31 16c2-1.5 3 1.5 5 0" stroke="#ff8a3d" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Remplacer un vieux cumulus électrique par un ballon qui récupère les calories de l'air.</p>
+        <span class="kind">Eau chaude sanitaire</span>
+      </article>
+      <article class="glass svc reveal d2">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#fff" stroke-width="2"/><path d="M20 11v9l6 4" stroke="#ffd23f" stroke-width="2" stroke-linecap="round"/><path d="M33 8l3-3M7 8 4 5" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Entretien &amp; suivi</h3>
+        <p>Contrôles, réglages et nettoyage de vos équipements pour qu'ils durent et consomment au plus juste.</p>
+        <span class="kind">Maintenance</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why" id="pourquoi">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Pourquoi Ke Watts</span>
+      <h2>Le bon équipement,<br>pas le plus cher.</h2>
+      <p class="lead" style="margin:20px 0 30px">Une maison des années 70 à Vandœuvre ne se chauffe pas comme un pavillon neuf à Heillecourt. Ici, chaque projet commence par votre logement, pas par un catalogue.</p>
+      <div class="why-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <defs>
+            <radialGradient id="sunG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient>
+            <linearGradient id="houseG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b2a8a"/><stop offset="1" stop-color="#1a1446"/></linearGradient>
+          </defs>
+          <circle cx="200" cy="230" r="170" fill="url(#sunG)" opacity=".75"/>
+          <path d="M40 300h320" stroke="#ffd23f" stroke-opacity=".5"/>
+          <path d="M120 300V200l80-62 80 62v100z" fill="url(#houseG)" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+          <rect x="182" y="240" width="36" height="60" rx="4" fill="#110d33" stroke="#ffd23f" stroke-opacity=".6"/>
+          <rect x="140" y="215" width="28" height="26" rx="3" fill="#ffd23f" opacity=".85"/>
+          <rect x="232" y="215" width="28" height="26" rx="3" fill="#ff8a3d" opacity=".85"/>
+          <rect x="238" y="136" width="16" height="34" fill="#1a1446" stroke="#fff" stroke-opacity=".5"/>
+          <path d="M246 128c-6-10 6-14 0-26M256 120c-4-8 4-12 0-20" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+          <rect x="290" y="268" width="50" height="32" rx="5" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-opacity=".6"/>
+          <circle cx="306" cy="284" r="10" stroke="#ffd23f"/>
+          <path d="M322 278h12M322 284h12M322 290h12" stroke="#fff" stroke-opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+    <div class="why-list">
+      <div class="glass why-card reveal"><div class="n">01</div><h3>Trois énergies maîtrisées</h3><p>Bois, pompe à chaleur, eau chaude thermodynamique : un conseil comparé, sans parti pris pour une seule technologie.</p></div>
+      <div class="glass why-card reveal d1"><div class="n">02</div><h3>Un artisan de proximité</h3><p>Installé à Houdemont, Ke Watts Energy connaît les quartiers et l'habitat du sud de Nancy.</p></div>
+      <div class="glass why-card reveal d2"><div class="n">03</div><h3>Un devis lisible</h3><p>Matériel, pose, mise en service : chaque ligne est expliquée avant toute décision de votre part.</p></div>
+      <div class="glass why-card reveal d3"><div class="n">04</div><h3>Une seule porte d'entrée</h3><p>Un même interlocuteur du premier appel à la mise en route, puis pour l'entretien de l'installation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPES -->
+<section class="steps" id="etapes">
+  <div class="halo v" style="width:500px;height:300px;left:30%;top:40%;opacity:.4"></div>
+  <div class="wrap">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center">
+      <div><span class="eyebrow">Comment ça se passe</span><h2>De l'appel à la première flambée</h2></div>
+    </div>
+    <div class="step-row">
+      <div class="step reveal"><div class="dot">1</div><h3>On échange</h3><p>Par téléphone ou par email, vous décrivez votre logement, votre chauffage actuel et vos envies.</p></div>
+      <div class="step reveal d1"><div class="dot">2</div><h3>Visite sur place</h3><p>Surface, isolation, émetteurs, conduit, emplacement possible d'une unité extérieure : tout est vérifié.</p></div>
+      <div class="step reveal d2"><div class="dot">3</div><h3>Devis détaillé</h3><p>Une proposition claire, avec l'équipement conseillé et, si besoin, une alternative pour comparer.</p></div>
+      <div class="step reveal d3"><div class="dot">4</div><h3>Pose &amp; mise en route</h3><p>Installation propre, mise en service et prise en main expliquée avant le départ de l'équipe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="about" id="apropos">
+  <div class="wrap">
+    <div class="glass about-card reveal">
+      <div class="about-art" aria-hidden="true">
+        <svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice" fill="none">
+          <circle cx="200" cy="250" r="110" fill="#ffd23f" opacity=".85"/>
+          <circle cx="200" cy="250" r="150" fill="#ffd23f" opacity=".18"/>
+          <path d="M0 270c60-20 120-26 200-12s140 10 200-6v108H0z" fill="#1a1446" opacity=".85"/>
+          <path d="M0 300c80-16 150-14 220-2s120 6 180-4v66H0z" fill="#110d33"/>
+          <g stroke="#fff" stroke-opacity=".35" stroke-width="1.4">
+            <path d="M200 110v-30M140 128l-18-22M260 128l18-22M110 180l-26-8M290 180l26-8"/>
+          </g>
+          <g transform="translate(150 212)">
+            <path d="M50 70c-18 0-28-12-28-26 0-18 15-24 18-44 12 10 20 20 20 30 4-3 7-8 7-13 8 7 11 17 11 27 0 14-10 26-28 26z" fill="#ff8a3d" class="flame-flicker"/>
+          </g>
+        </svg>
+      </div>
+      <div class="about-txt">
+        <span class="eyebrow">À propos</span>
+        <h2 style="margin-bottom:22px">Ke Watts Energy,<br>chauffagiste à Houdemont.</h2>
+        <p><strong>Ke Watts Energy</strong> est une entreprise de chauffage installée à Houdemont (54180), aux portes sud de Nancy.</p>
+        <p>Elle s'est spécialisée dans trois familles d'équipements : le <strong>chauffage et l'eau chaude au bois</strong>, les <strong>pompes à chaleur et la climatisation</strong>, et les <strong>chauffe-eau thermodynamiques</strong>.</p>
+        <p>Elle intervient à Houdemont, Heillecourt, Vandœuvre-lès-Nancy, Nancy et dans les communes du sud de l'agglomération, pour des projets de rénovation comme de remplacement.</p>
+        <div class="sign">
+          <span class="chip">Houdemont · 54180</span>
+          <span class="chip">Bois · PAC · Thermodynamique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIF -->
+<section class="compare" id="equipement">
+  <div class="halo o" style="width:420px;height:420px;left:-160px;bottom:120px;opacity:.45"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Quel équipement pour votre logement ?</span><h2>Bois, PAC ou<br>thermodynamique ?</h2></div>
+      <p class="lead">Un repère rapide pour préparer l'échange. Le bon choix dépend toujours de la visite : isolation, émetteurs, place disponible et habitudes.</p>
+    </div>
+    <div class="cmp-grid">
+      <article class="glass cmp reveal">
+        <div class="cmp-head">
+          <svg viewBox="0 0 44 44" fill="none"><path d="M22 38c-7 0-11-4.6-11-10.4 0-7 5.8-9.8 7-17.6 4.6 4 7.6 7.6 7.6 11.6 1.8-1.2 2.6-3 2.8-5.2 3.2 3 4.6 6.6 4.6 11.2 0 5.8-4 10.4-11 10.4z" fill="#ff8a3d"/><path d="M22 38c-3.4 0-5.4-2.3-5.4-5.2 0-3.4 3-4.9 3.7-8.4 3 2.3 5.2 4.9 5.2 8.2 0 3.4-1.7 5.4-3.5 5.4z" fill="#ffd23f"/></svg>
+          <div><small>Option 1</small><h3>Chauffage au bois</h3></div>
+        </div>
+        <p class="ideal">Idéal si vous aimez la flamme, disposez d'un conduit ou d'un emplacement pour en créer un, et d'un peu de place pour stocker.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Chaleur rayonnante très agréable</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Énergie renouvelable, bûches ou granulés</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Peut aussi produire l'eau chaude</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 8v5M12 16v.5"/></svg>À prévoir : approvisionnement et ramonage</li>
+        </ul>
+        <div class="price"><span>Tarif</span><b>Sur devis</b></div>
+      </article>
+      <article class="glass cmp featured reveal d1">
+        <div class="cmp-head">
+          <svg viewBox="0 0 44 44" fill="none"><rect x="4" y="11" width="36" height="24" rx="5" stroke="#fff" stroke-width="2"/><circle cx="17" cy="23" r="8" stroke="#ffd23f" stroke-width="2"/><path d="M17 15v16M9 23h16" stroke="#ffd23f" stroke-width="1.3"/><path d="M30 17h6M30 23h6M30 29h6" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round"/></svg>
+          <div><small>Option 2</small><h3>Pompe à chaleur</h3></div>
+        </div>
+        <p class="ideal">Idéal pour remplacer un chauffage existant sans changer vos habitudes, avec en bonus la possibilité de rafraîchir en été.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Fonctionnement automatique, sans stockage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Version réversible pour la climatisation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Se combine avec vos radiateurs ou un plancher</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 8v5M12 16v.5"/></svg>À prévoir : emplacement de l'unité extérieure</li>
+        </ul>
+        <div class="price"><span>Tarif</span><b>Sur devis</b></div>
+      </article>
+      <article class="glass cmp reveal d2">
+        <div class="cmp-head">
+          <svg viewBox="0 0 44 44" fill="none"><rect x="14" y="4" width="16" height="34" rx="8" stroke="#fff" stroke-width="2"/><path d="M22 12c-2 2.5-3 4-3 5.5a3 3 0 0 0 6 0c0-1.5-1-3-3-5.5z" fill="#ffd23f"/><path d="M14 26h16" stroke="#fff" stroke-width="1.4" stroke-dasharray="2 2"/><path d="M4 18c2-1.5 3 1.5 5 0M35 18c2-1.5 3 1.5 5 0M4 25c2-1.5 3 1.5 5 0M35 25c2-1.5 3 1.5 5 0" stroke="#ff8a3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><small>Option 3</small><h3>Chauffe-eau thermo</h3></div>
+        </div>
+        <p class="ideal">Idéal si votre ballon électrique arrive en fin de vie et que vous disposez d'un garage, d'une buanderie ou d'un cellier.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Récupère les calories de l'air</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Remplace un cumulus classique</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4 10-10"/></svg>Complète bien un chauffage au bois</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 8v5M12 16v.5"/></svg>À prévoir : un local d'un volume suffisant</li>
+        </ul>
+        <div class="price"><span>Tarif</span><b>Sur devis</b></div>
+      </article>
+    </div>
+    <p class="cmp-note reveal">Repères généraux donnés à titre indicatif : seule une visite permet de confirmer l'équipement adapté.</p>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="reviews" id="avis">
+  <div class="wrap">
+    <div class="glass rev-box reveal">
+      <div class="rev-badge" aria-hidden="true">
+        <svg viewBox="0 0 84 84" fill="none"><path d="M14 18h56a6 6 0 0 1 6 6v28a6 6 0 0 1-6 6H38l-14 12V58H14a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M42 26l3.4 7 7.6 1-5.5 5.3 1.3 7.6L42 43.3l-6.8 3.6 1.3-7.6-5.5-5.3 7.6-1z" fill="#ffd23f"/></svg>
+      </div>
+      <div>
+        <span class="eyebrow">Avis clients</span>
+        <h2>Vos avis comptent.</h2>
+        <p>Ke Watts Energy ne publie pas d'avis tant qu'ils ne sont pas réels. Vous avez fait appel à l'entreprise pour un poêle, une pompe à chaleur ou un chauffe-eau ? Votre retour aidera vos voisins du sud de Nancy à choisir. Cet espace affichera prochainement la note et le nombre d'avis vérifiés, avec un lien vers leur source.</p>
+        <a class="btn btn-sun" href="mailto:kewattenergy54@gmail.com?subject=Mon%20avis%20sur%20Ke%20Watts%20Energy">Partager mon expérience</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Les questions<br>qu'on nous pose.</h2>
+      <p class="lead" style="margin-top:18px">Des réponses générales pour y voir clair. Pour votre cas précis, un appel au 03 72 61 05 36 reste le plus simple.</p>
+    </div>
+    <div class="faq-list">
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a1" id="q1">L'entretien annuel est-il obligatoire ?<span class="pm"></span></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><p>Oui pour la plupart des chaudières (gaz, fioul, bois) d'une puissance comprise entre 4 et 400 kW, et un entretien régulier est également prévu pour certaines pompes à chaleur. Pour un appareil au bois, pensez aussi au ramonage du conduit. Au-delà de l'obligation, c'est ce qui garde votre installation sûre et économe.</p></div></div>
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a2" id="q2">Combien de temps pour obtenir un devis ?<span class="pm"></span></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><p>Le délai dépend de la période et du projet. Une visite est en général nécessaire pour dimensionner l'équipement correctement ; le devis est ensuite établi sur cette base. Contactez Ke Watts Energy pour connaître les disponibilités du moment.</p></div></div>
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a3" id="q3">Puis-je bénéficier de MaPrimeRénov' ou des CEE ?<span class="pm"></span></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><p>Les pompes à chaleur, le chauffage au bois et les chauffe-eau thermodynamiques peuvent ouvrir droit à des aides, selon votre éligibilité (revenus, logement, équipement) et à condition de passer par un artisan RGE. Les règles changent régulièrement : renseignez-vous sur France Rénov' et parlons-en au moment du devis.</p></div></div>
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a4" id="q4">Intervenez-vous en cas de panne ?<span class="pm"></span></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><p>Appelez pour décrire le problème : selon l'équipement et l'agenda, une intervention peut être proposée. Les délais ne peuvent pas être garantis à l'avance, surtout en plein hiver.</p></div></div>
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a5" id="q5">Quelle est votre zone d'intervention ?<span class="pm"></span></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><p>Houdemont, Heillecourt, Vandœuvre-lès-Nancy, Nancy et les communes du sud de l'agglomération. Pour une adresse un peu plus éloignée, le plus simple est de poser la question par téléphone ou par email.</p></div></div>
+      <div class="glass qa reveal"><button aria-expanded="false" aria-controls="a6" id="q6">Une pompe à chaleur fonctionne-t-elle en hiver lorrain ?<span class="pm"></span></button><div class="ans" id="a6" role="region" aria-labelledby="q6"><p>Les pompes à chaleur actuelles sont conçues pour fonctionner par temps froid, mais leur rendement baisse quand la température extérieure chute. D'où l'importance d'un bon dimensionnement selon l'isolation du logement, et parfois d'un appoint, comme un poêle à bois.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="halo o" style="width:520px;height:520px;right:-180px;bottom:40px;opacity:.55"></div>
+  <div class="halo v" style="width:400px;height:400px;left:-160px;top:0;opacity:.5"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Contact &amp; devis</span><h2>Parlons de<br>votre chaleur.</h2></div>
+      <p class="lead">Un projet de poêle, de pompe à chaleur ou de chauffe-eau ? Décrivez-le en quelques lignes, Ke Watts Energy revient vers vous.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="glass info reveal">
+        <div>
+          <h3>Coordonnées</h3>
+        </div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+33372610536">03 72 61 05 36</a><span>Téléphone</span></div></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><a href="mailto:kewattenergy54@gmail.com">kewattenergy54@gmail.com</a><span>Email</span></div></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b style="color:#fff">Houdemont (54180)</b><span>Houdemont, Heillecourt, Vandœuvre, Nancy et sud de l'agglomération</span></div></div>
+        <a class="btn btn-glass" href="https://www.google.com/maps/search/?api=1&query=Ke+Watts+Energy+Houdemont+54180" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8z"/></svg>Itinéraire
+        </a>
+        <div>
+          <h3 style="margin-bottom:12px">Horaires</h3>
+          <ul class="hours" id="hours">
+            <li data-d="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+            <li data-d="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+            <li data-d="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+            <li data-d="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+            <li data-d="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+            <li data-d="6"><span>Samedi</span><span>À confirmer</span></li>
+            <li data-d="0"><span>Dimanche</span><span>À confirmer</span></li>
+          </ul>
+          <p class="hours-note">Horaires : sur rendez-vous, du lundi au vendredi. Indicatif, à confirmer par téléphone.</p>
+        </div>
+      </div>
+
+      <form class="glass reveal d1" id="form" novalidate>
+        <h3>Demander un devis</h3>
+        <p class="sub">Réponse par téléphone ou par email, selon votre préférence.</p>
+        <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="field"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+        <div class="field"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Houdemont, Vandœuvre…"></div>
+        <div class="field full"><label for="projet">Votre projet</label>
+          <select id="projet" name="projet">
+            <option>Poêle ou chaudière bois / granulés</option>
+            <option>Eau chaude au bois</option>
+            <option>Pompe à chaleur</option>
+            <option>Climatisation</option>
+            <option>Chauffe-eau thermodynamique</option>
+            <option>Entretien / autre demande</option>
+          </select>
+        </div>
+        <div class="field full"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Surface, année de la maison, chauffage actuel…"></textarea></div>
+        <button class="btn btn-sun" type="submit">Envoyer ma demande
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.3)"/><path d="M22 7 12 22h7l-2 11 11-16h-7z" fill="#ff8a3d"/></svg>
+          <span>Ke Watts<small>Energy · Houdemont</small></span>
+        </a>
+        <p>Chauffage et eau chaude au bois, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Houdemont et au sud de Nancy.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33372610536">03 72 61 05 36</a></li>
+          <li><a href="mailto:kewattenergy54@gmail.com">kewattenergy54@gmail.com</a></li>
+          <li>Houdemont (54180)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Lun – Ven : sur rendez-vous</li>
+          <li>Indicatif, à confirmer</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#equipement">Quel équipement ?</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© Ke Watts Energy · Houdemont (54180)</span>
+      <span>Mentions légales : à compléter · Aucune donnée collectée sur cette maquette</span>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33372610536" aria-label="Appeler Ke Watts Energy au 03 72 61 05 36">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>30)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  function closeMenu(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu')}
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+
+  document.querySelectorAll('.qa button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var ans=b.nextElementSibling,open=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded',open?'false':'true');
+      ans.style.maxHeight=open?'0px':ans.scrollHeight+'px';
+    });
+  });
+
+  var today=new Date().getDay();
+  document.querySelectorAll('#hours li').forEach(function(li){if(+li.dataset.d===today)li.classList.add('today')});
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('formMsg');
+    m.textContent="Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.";
+    m.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

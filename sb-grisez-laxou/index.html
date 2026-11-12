@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S.B. Grisez – chauffagiste à Laxou</title>
+<meta name="description" content="S.B. Grisez, chauffagiste, plombier et climaticien à Laxou (54520). Qualification QUALIBAT Remplacement chaudière. Chaudières gaz ou fioul, entretien et dépannage dans l'agglomération de Nancy.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ardoise:#14181e;
+  --ardoise-2:#181d24;
+  --nuit:#1d2733;
+  --nuit-2:#243142;
+  --or:#c9a45c;
+  --or-clair:#e0c48a;
+  --or-pale:rgba(201,164,92,.28);
+  --ivoire:#efe8da;
+  --gris:#9aa3ad;
+  --flamme:#5aa9ff;
+  --titre:'Marcellus','Cormorant Garamond','Didot','Bodoni MT',Georgia,serif;
+  --texte:'Mulish','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--ardoise);color:var(--ivoire);font-family:var(--texte);font-size:17px;line-height:1.7;font-weight:400;overflow-x:hidden}
+svg{display:block;max-width:100%}
+a{color:var(--or-clair)}
+h1,h2,h3{font-family:var(--titre);font-weight:400;margin:0;line-height:1.15;letter-spacing:.02em}
+h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:1px solid var(--or);outline-offset:4px}
+
+/* Motif de fond Art déco (éventails) */
+.motif{background-color:var(--ardoise);background-image:
+  radial-gradient(circle at 50% 100%,transparent 0 18px,rgba(201,164,92,.075) 18px 19px,transparent 19px 28px,rgba(201,164,92,.075) 28px 29px,transparent 29px 38px,rgba(201,164,92,.075) 38px 39px,transparent 39px);
+  background-size:80px 40px}
+
+/* Titres de section */
+.ornement{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--or);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.ornement::before,.ornement::after{content:"";width:56px;height:7px;border-top:1px solid var(--or);border-bottom:1px solid var(--or)}
+.ornement--g{justify-content:flex-start}
+.ornement--g::before{display:none}
+.tete{text-align:center;max-width:720px;margin:0 auto 64px}
+.tete p{color:var(--gris);margin-top:18px;font-size:1.06rem}
+.losange{display:block;width:120px;height:14px;margin:22px auto 0}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7em;font-family:var(--texte);font-weight:700;font-size:.86rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1.05em 2em;border:1px solid var(--or);position:relative;transition:background .3s,color .3s,letter-spacing .3s;cursor:pointer}
+.btn::after{content:"";position:absolute;inset:4px;border:1px solid currentColor;opacity:.45;pointer-events:none;transition:inset .3s}
+.btn:hover::after{inset:-6px;opacity:.6}
+.btn--or{background:var(--or);color:var(--ardoise)}
+.btn--or:hover{background:var(--or-clair)}
+.btn--ligne{background:transparent;color:var(--or-clair)}
+.btn--ligne:hover{background:rgba(201,164,92,.12)}
+.btn svg{width:18px;height:18px}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(20,24,30,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--or-pale)}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-4px;border-bottom:1px solid rgba(201,164,92,.14)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ivoire)}
+.logo svg{width:40px;height:40px}
+.logo b{font-family:var(--titre);font-weight:400;font-size:1.35rem;letter-spacing:.12em;display:block;line-height:1}
+.logo small{display:block;font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--or)}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:6px;align-items:center}
+.menu a{color:var(--ivoire);text-decoration:none;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:.6em 1em;position:relative;transition:color .25s}
+.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:2px;height:1px;background:var(--or);transition:left .3s,right .3s}
+.menu a:hover{color:var(--or-clair)}
+.menu a:hover::after{left:1em;right:1em}
+.menu .cta a{border:1px solid var(--or);color:var(--or-clair);margin-left:8px}
+.burger{display:none;width:48px;height:48px;background:transparent;border:1px solid var(--or);position:relative;cursor:pointer;padding:0}
+.burger span{position:absolute;left:12px;right:12px;height:1px;background:var(--or-clair);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100vh;padding:120px 0 80px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,var(--nuit-2) 0%,var(--nuit) 30%,var(--ardoise) 72%)}
+.hero__rayons{position:absolute;left:50%;top:44%;width:1500px;height:1500px;transform:translate(-50%,-50%);pointer-events:none;opacity:.55}
+.hero__cadre{position:absolute;inset:96px 24px 28px;border:1px solid var(--or-pale);pointer-events:none}
+.hero__cadre::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,164,92,.16)}
+.coin{position:absolute;width:54px;height:54px}
+.coin--hg{top:-1px;left:-1px}.coin--hd{top:-1px;right:-1px;transform:scaleX(-1)}
+.coin--bg{bottom:-1px;left:-1px;transform:scaleY(-1)}.coin--bd{bottom:-1px;right:-1px;transform:scale(-1,-1)}
+.hero__in{position:relative;z-index:2;max-width:860px;padding:0 16px}
+.hero__chaudiere{width:min(300px,64vw);margin:0 auto 8px}
+.hero__chaudiere .fl{transform-origin:150px 268px;animation:flamme 3.2s ease-in-out infinite}
+@keyframes flamme{0%,100%{transform:scaleY(1);opacity:.9}50%{transform:scaleY(1.12);opacity:1}}
+.hero .ornement{margin-top:4px}
+.hero h1{font-size:clamp(3rem,9vw,6.8rem);letter-spacing:.08em;line-height:1;color:var(--ivoire)}
+.hero h1 em{font-style:normal;color:var(--or)}
+.hero__sous{font-family:var(--titre);font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--or-clair);letter-spacing:.06em;margin:18px 0 10px}
+.hero__accroche{color:#cfd4da;max-width:600px;margin:0 auto 38px;font-size:1.08rem}
+.hero__btns{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
+
+/* Bandeau confiance */
+.confiance{background:var(--nuit);border-block:1px solid var(--or-pale);position:relative}
+.confiance::before,.confiance::after{content:"";position:absolute;left:0;right:0;border-top:1px solid rgba(201,164,92,.13)}
+.confiance::before{top:5px}.confiance::after{bottom:5px}
+.confiance__in{display:grid;grid-template-columns:repeat(4,1fr)}
+.cf{padding:34px 22px;text-align:center;border-right:1px solid var(--or-pale)}
+.cf:last-child{border-right:0}
+.cf svg{width:44px;height:44px;margin:0 auto 12px}
+.cf b{display:block;font-family:var(--titre);font-weight:400;font-size:1.12rem;color:var(--ivoire);letter-spacing:.04em}
+.cf span{font-size:.86rem;color:var(--gris)}
+
+/* Sections */
+.sec{padding:clamp(80px,10vw,130px) 0;position:relative}
+.sec--nuit{background:var(--nuit)}
+
+/* Services : liste 2 colonnes */
+.liste{display:grid;grid-template-columns:1fr 1fr;column-gap:72px;list-style:none;margin:0;padding:0;position:relative}
+.liste::before{content:"";position:absolute;top:10px;bottom:10px;left:50%;border-left:1px solid var(--or-pale)}
+.liste li{display:grid;grid-template-columns:62px 1fr;gap:22px;padding:30px 0;border-bottom:1px solid rgba(201,164,92,.18);transition:padding .3s}
+.liste li:hover{padding-left:10px}
+.liste li:hover .ico{background:rgba(201,164,92,.12)}
+.ico{width:62px;height:62px;border:1px solid var(--or);display:grid;place-items:center;position:relative;transform:rotate(45deg);transition:background .3s}
+.ico::after{content:"";position:absolute;inset:4px;border:1px solid var(--or-pale)}
+.ico svg{width:30px;height:30px;transform:rotate(-45deg)}
+.liste h3{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.liste h3 small{font-family:var(--texte);font-size:.72rem;color:var(--or);letter-spacing:.2em}
+.liste p{margin:0;color:var(--gris);font-size:.98rem}
+
+/* Atouts */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.atout{border:1px solid var(--or-pale);padding:40px 26px 32px;text-align:center;position:relative;background:linear-gradient(180deg,rgba(201,164,92,.05),transparent 60%);transition:border-color .3s,transform .3s}
+.atout::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,164,92,.12);pointer-events:none}
+.atout:hover{border-color:var(--or);transform:translateY(-4px)}
+.atout svg{width:58px;height:58px;margin:0 auto 20px}
+.atout h3{font-size:1.2rem;margin-bottom:10px}
+.atout p{color:var(--gris);font-size:.95rem;margin:0}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.etapes::before{content:"";position:absolute;top:44px;left:12%;right:12%;border-top:1px dashed var(--or-pale)}
+.etape{text-align:center;padding:0 18px;position:relative}
+.etape__n{width:88px;height:88px;margin:0 auto 24px;display:grid;place-items:center;font-family:var(--titre);font-size:2rem;color:var(--or);background:var(--ardoise);position:relative}
+.etape__n svg{position:absolute;inset:0;width:88px;height:88px}
+.sec--nuit .etape__n{background:var(--nuit)}
+.etape h3{margin-bottom:8px;font-size:1.18rem}
+.etape p{color:var(--gris);font-size:.95rem;margin:0}
+
+/* À propos */
+.apropos{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.apropos__art{position:relative;border:1px solid var(--or);padding:10px}
+.apropos__art::before{content:"";position:absolute;inset:4px;border:1px solid var(--or-pale);pointer-events:none}
+.apropos__art svg{width:100%;height:auto;background:var(--nuit)}
+.apropos p{color:#d6d9dd}
+.apropos h2{margin-bottom:24px}
+.qualif{display:flex;gap:18px;align-items:center;border:1px solid var(--or);padding:18px 22px;margin-top:28px;position:relative}
+.qualif::after{content:"";position:absolute;inset:4px;border:1px solid var(--or-pale);pointer-events:none}
+.qualif svg{width:52px;height:52px;flex:none}
+.qualif b{font-family:var(--titre);font-weight:400;font-size:1.15rem;display:block;color:var(--or-clair)}
+.qualif span{font-size:.86rem;color:var(--gris)}
+
+/* Entretien (section métier) */
+.entretien{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+.cal{border:1px solid var(--or-pale);position:relative}
+.cal::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,164,92,.12);pointer-events:none}
+.cal__l{display:grid;grid-template-columns:110px 1fr;border-bottom:1px solid var(--or-pale)}
+.cal__l:last-child{border-bottom:0}
+.cal__q{padding:24px 16px;border-right:1px solid var(--or-pale);font-family:var(--titre);color:var(--or);text-align:center;font-size:1.05rem;display:grid;place-items:center}
+.cal__t{padding:22px 26px}
+.cal__t b{font-family:var(--titre);font-weight:400;font-size:1.12rem;display:block;margin-bottom:4px}
+.cal__t span{color:var(--gris);font-size:.95rem}
+.conseils{list-style:none;margin:0;padding:0}
+.conseils li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(201,164,92,.16)}
+.conseils li svg{width:22px;height:22px;flex:none;margin-top:4px}
+.conseils li span{color:#d6d9dd}
+.sur-devis{margin-top:30px;text-align:center;font-family:var(--titre);font-size:1.2rem;color:var(--or-clair);padding:20px;border-block:1px solid var(--or)}
+.sur-devis small{display:block;font-family:var(--texte);font-size:.84rem;color:var(--gris);letter-spacing:.04em;margin-top:4px}
+
+/* Avis */
+.avis{max-width:820px;margin:0 auto;text-align:center;border:1px solid var(--or);padding:60px clamp(22px,6vw,70px);position:relative}
+.avis::before{content:"";position:absolute;inset:7px;border:1px solid var(--or-pale);pointer-events:none}
+.avis svg.eventail{width:150px;margin:0 auto 18px}
+.avis p{color:#d6d9dd}
+.avis .btn{margin-top:14px}
+
+/* FAQ */
+.faq{max-width:880px;margin:0 auto}
+.q{border-bottom:1px solid var(--or-pale)}
+.q:first-child{border-top:1px solid var(--or-pale)}
+.q button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;font-family:var(--titre);font-size:1.2rem;color:var(--ivoire);transition:color .25s}
+.q button:hover{color:var(--or-clair)}
+.q button:focus-visible{outline:1px solid var(--or);outline-offset:2px}
+.q__s{flex:none;width:30px;height:30px;border:1px solid var(--or);transform:rotate(45deg);display:grid;place-items:center;transition:background .3s}
+.q__s::before{content:"+";transform:rotate(-45deg);color:var(--or);font-family:var(--texte);font-size:1.1rem;line-height:1;transition:transform .3s}
+.q button[aria-expanded="true"] .q__s{background:var(--or)}
+.q button[aria-expanded="true"] .q__s::before{color:var(--ardoise);content:"–"}
+.q__r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q__r>div{overflow:hidden}
+.q__r p{color:var(--gris);padding:0 4px 24px;margin:0;max-width:760px}
+.q.ouvert .q__r{grid-template-rows:1fr}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
+.cadre{border:1px solid var(--or);padding:34px;position:relative;background:rgba(20,24,30,.55)}
+.cadre::before{content:"";position:absolute;inset:6px;border:1px solid var(--or-pale);pointer-events:none}
+.cadre>*{position:relative}
+.cadre + .cadre{margin-top:28px}
+.cadre h3{margin-bottom:18px;color:var(--or-clair)}
+.coord{list-style:none;margin:0 0 24px;padding:0}
+.coord li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(201,164,92,.16)}
+.coord li:last-child{border-bottom:0}
+.coord svg{width:22px;height:22px;flex:none;margin-top:4px}
+.coord small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gris)}
+.coord a{color:var(--ivoire);text-decoration:none;font-weight:600;word-break:break-word}
+.coord a:hover{color:var(--or-clair)}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:9px 6px;border-bottom:1px solid rgba(201,164,92,.13);font-size:.96rem}
+.horaires td:last-child{text-align:right;color:var(--gris)}
+.horaires tr.auj td{color:var(--ardoise);background:var(--or);font-weight:700}
+.horaires tr.auj td:first-child{padding-left:12px}
+.horaires tr.auj td:last-child{color:var(--ardoise);padding-right:12px}
+.indicatif{font-size:.85rem;color:var(--gris);margin:14px 0 0;font-style:italic}
+form{display:grid;gap:20px}
+.l2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or);margin-bottom:8px;font-weight:600}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--ivoire);background:transparent;border:0;border-bottom:1px solid var(--gris);padding:10px 2px;border-radius:0;transition:border-color .25s}
+select option{background:var(--nuit);color:var(--ivoire)}
+input::placeholder,textarea::placeholder{color:#7d8690}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--or)}
+textarea{min-height:120px;resize:vertical}
+.msg{display:none;border:1px solid var(--or);padding:14px 18px;color:var(--or-clair);text-align:center}
+.msg.vu{display:block}
+
+/* Footer */
+footer{background:#0f1217;border-top:1px solid var(--or-pale);padding-top:70px}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px}
+footer h3{font-size:.76rem;font-family:var(--texte);font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin-bottom:16px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px;color:#c8cdd2;font-size:.95rem}
+footer a{color:#e7e1d4;text-decoration:none;border-bottom:1px solid var(--or-pale)}
+footer a:hover{color:var(--or-clair)}
+.pied__nom{font-family:var(--titre);font-size:1.9rem;letter-spacing:.12em;margin-bottom:10px}
+.pied p{color:var(--gris);font-size:.95rem}
+.mentions{border-top:1px solid rgba(201,164,92,.16);padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--gris)}
+.demo{text-align:center;font-size:.8rem;color:var(--gris);padding:12px 16px;border-top:1px solid rgba(201,164,92,.12);background:#0b0d11;letter-spacing:.03em}
+
+/* Appel flottant */
+.flottant{display:none;position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;background:var(--or);transform:rotate(45deg);place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.flottant::after{content:"";position:absolute;inset:4px;border:1px solid var(--ardoise);opacity:.5}
+.flottant svg{width:26px;height:26px;transform:rotate(-45deg);color:var(--ardoise)}
+
+/* Révélations */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1040px){
+  .atouts{grid-template-columns:1fr 1fr}
+  .confiance__in{grid-template-columns:1fr 1fr}
+  .cf:nth-child(2){border-right:0}
+  .cf:nth-child(-n+2){border-bottom:1px solid var(--or-pale)}
+  .pied{grid-template-columns:1fr 1fr}
+  .liste{column-gap:44px}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:74px;left:0;right:0;flex-direction:column;gap:0;background:var(--ardoise);border-bottom:1px solid var(--or);padding:16px 16px 26px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.ouvert{opacity:1;transform:none;visibility:visible}
+  .menu li{width:100%;text-align:center;border-bottom:1px solid rgba(201,164,92,.16)}
+  .menu li:last-child{border-bottom:0}
+  .menu a{display:block;padding:16px;font-size:.88rem}
+  .menu .cta a{margin:16px 0 0}
+  .liste{grid-template-columns:1fr}
+  .liste::before{display:none}
+  .etapes{grid-template-columns:1fr 1fr;row-gap:50px}
+  .etapes::before{display:none}
+  .apropos,.entretien,.contact{grid-template-columns:1fr;gap:44px}
+  .flottant{display:grid}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .hero{padding:110px 0 70px}
+  .hero__cadre{inset:86px 10px 14px}
+  .coin{width:38px;height:38px}
+  .hero__btns .btn{width:100%}
+  .atouts,.etapes,.pied,.l2{grid-template-columns:1fr}
+  .cf{padding:26px 10px}
+  .cf b{font-size:1rem}
+  .ornement{letter-spacing:.2em;gap:10px}
+  .ornement::before,.ornement::after{width:26px}
+  .liste h3{display:block}
+  .liste h3 small{margin-left:6px}
+  .cadre{padding:24px 20px}
+  .cal__l{grid-template-columns:84px 1fr}
+  .cal__t{padding:18px 16px}
+  .cal__q{font-size:.92rem;padding:18px 8px}
+  .liste li{grid-template-columns:52px 1fr;gap:18px}
+  .ico{width:50px;height:50px}
+  .ico svg{width:24px;height:24px}
+  .q button{font-size:1.06rem}
+  .logo b{font-size:1.15rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5.2 2.8h3.6l1.7 4.6-2.3 1.5a12 12 0 0 0 6.9 6.9l1.5-2.3 4.6 1.7v3.6a2.4 2.4 0 0 1-2.6 2.4A18.5 18.5 0 0 1 2.8 5.4a2.4 2.4 0 0 1 2.4-2.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m3 5.5 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.1 7-12.5A7 7 0 0 0 5 9.5C5 14.9 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M5 6l7 6-7 6M12 6l7 6-7 6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 54 54"><path d="M1 53V1h52" fill="none" stroke="#c9a45c" stroke-width="1.5"/><path d="M8 53V8h45" fill="none" stroke="#c9a45c" stroke-width="1"/><path d="M1 22a21 21 0 0 1 21-21" fill="none" stroke="#c9a45c" stroke-width="1"/><path d="M1 14a13 13 0 0 1 13-13" fill="none" stroke="#c9a45c" stroke-width="1"/><rect x="12" y="12" width="6" height="6" transform="rotate(45 15 15)" fill="#c9a45c"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#accueil" aria-label="S.B. Grisez, retour en haut">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="6" width="28" height="28" transform="rotate(45 20 20)" fill="none" stroke="#c9a45c" stroke-width="1.2"/><rect x="10" y="10" width="20" height="20" transform="rotate(45 20 20)" fill="none" stroke="#c9a45c" stroke-width=".8"/><path d="M20 12c3 4 5 6 5 10a5 5 0 0 1-10 0c0-3 2-5 5-10z" fill="none" stroke="#5aa9ff" stroke-width="1.3"/></svg>
+      <span><b>S.B. GRISEZ</b><small>Chauffage · Laxou</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#services">Savoir-faire</a></li>
+        <li><a href="#entretien">Entretien</a></li>
+        <li><a href="#maison">La maison</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li class="cta"><a href="#contact">Devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="accueil">
+  <svg class="hero__rayons" viewBox="0 0 1500 1500" aria-hidden="true">
+    <g stroke="#c9a45c" stroke-width="1" fill="none" opacity=".5">
+      <circle cx="750" cy="750" r="250"/><circle cx="750" cy="750" r="262"/>
+      <circle cx="750" cy="750" r="420" opacity=".6"/><circle cx="750" cy="750" r="600" opacity=".35"/>
+    </g>
+    <g stroke="#c9a45c" stroke-width=".8" opacity=".28">
+      <line x1="750" y1="750" x2="750" y2="0"/><line x1="750" y1="750" x2="944" y2="25"/><line x1="750" y1="750" x2="1125" y2="100"/><line x1="750" y1="750" x2="1280" y2="220"/><line x1="750" y1="750" x2="1400" y2="375"/><line x1="750" y1="750" x2="1475" y2="556"/><line x1="750" y1="750" x2="1500" y2="750"/>
+      <line x1="750" y1="750" x2="556" y2="25"/><line x1="750" y1="750" x2="375" y2="100"/><line x1="750" y1="750" x2="220" y2="220"/><line x1="750" y1="750" x2="100" y2="375"/><line x1="750" y1="750" x2="25" y2="556"/><line x1="750" y1="750" x2="0" y2="750"/>
+    </g>
+  </svg>
+  <div class="hero__cadre" aria-hidden="true">
+    <svg class="coin coin--hg"><use href="#i-coin"/></svg><svg class="coin coin--hd"><use href="#i-coin"/></svg>
+    <svg class="coin coin--bg"><use href="#i-coin"/></svg><svg class="coin coin--bd"><use href="#i-coin"/></svg>
+  </div>
+  <div class="hero__in">
+    <svg class="hero__chaudiere" viewBox="0 0 300 330" role="img" aria-label="Chaudière murale stylisée en trait doré dans un éventail Art déco">
+      <!-- éventail -->
+      <g fill="none" stroke="#c9a45c">
+        <path d="M10 210a140 140 0 0 1 280 0" stroke-width="1.2"/>
+        <path d="M24 210a126 126 0 0 1 252 0" stroke-width=".8" opacity=".7"/>
+        <path d="M44 210a106 106 0 0 1 212 0" stroke-width=".6" opacity=".45"/>
+        <g stroke-width=".7" opacity=".55">
+          <line x1="150" y1="210" x2="150" y2="70"/><line x1="150" y1="210" x2="80" y2="89"/><line x1="150" y1="210" x2="220" y2="89"/><line x1="150" y1="210" x2="29" y2="140"/><line x1="150" y1="210" x2="271" y2="140"/><line x1="150" y1="210" x2="111" y2="75"/><line x1="150" y1="210" x2="189" y2="75"/><line x1="150" y1="210" x2="49" y2="111"/><line x1="150" y1="210" x2="251" y2="111"/>
+        </g>
+      </g>
+      <!-- conduit -->
+      <g fill="none" stroke="#c9a45c" stroke-width="1.4"><rect x="134" y="12" width="32" height="40"/><line x1="134" y1="22" x2="166" y2="22"/><line x1="140" y1="0" x2="140" y2="12"/><line x1="160" y1="0" x2="160" y2="12"/></g>
+      <!-- corps -->
+      <rect x="88" y="52" width="124" height="190" fill="#14181e" stroke="#c9a45c" stroke-width="1.8"/>
+      <rect x="95" y="59" width="110" height="176" fill="none" stroke="#c9a45c" stroke-width=".8" opacity=".6"/>
+      <!-- chevrons haut -->
+      <g fill="none" stroke="#c9a45c" stroke-width="1"><path d="M110 76l40 18 40-18"/><path d="M110 86l40 18 40-18" opacity=".6"/><path d="M110 96l40 18 40-18" opacity=".35"/></g>
+      <!-- écran -->
+      <rect x="118" y="128" width="64" height="30" fill="none" stroke="#c9a45c" stroke-width="1.2"/>
+      <text x="150" y="149" text-anchor="middle" font-family="Marcellus, Georgia, serif" font-size="15" fill="#e0c48a" letter-spacing="2">60°</text>
+      <!-- boutons -->
+      <g fill="none" stroke="#c9a45c" stroke-width="1.1"><circle cx="122" cy="182" r="8"/><circle cx="150" cy="182" r="8"/><circle cx="178" cy="182" r="8"/></g>
+      <g stroke="#c9a45c" stroke-width="1.1"><line x1="122" y1="182" x2="126" y2="177"/><line x1="150" y1="182" x2="150" y2="175"/><line x1="178" y1="182" x2="173" y2="178"/></g>
+      <!-- hublot flamme -->
+      <path d="M128 242v-24a22 22 0 0 1 44 0v24" fill="none" stroke="#c9a45c" stroke-width="1"/>
+      <!-- tuyaux -->
+      <g fill="none" stroke="#c9a45c" stroke-width="1.4"><path d="M108 242v34q0 8-8 8H60"/><path d="M130 242v54"/><path d="M170 242v54"/><path d="M192 242v34q0 8 8 8h40"/></g>
+      <g fill="#c9a45c"><rect x="124" y="296" width="12" height="6"/><rect x="164" y="296" width="12" height="6"/></g>
+      <!-- flamme bleue -->
+      <g class="fl">
+        <path d="M150 240c-9-8-12-15-8-24 2 6 5 8 6 3 1-6 3-10 8-15-2 9 6 12 6 22 0 7-5 12-12 14z" fill="#5aa9ff" opacity=".85"/>
+        <path d="M150 238c-4-4-5-8-3-12 1 3 3 3 4 0 1-3 2-5 4-7 0 5 3 7 3 11 0 4-3 7-8 8z" fill="#cfe6ff"/>
+      </g>
+      <!-- losanges base -->
+      <g fill="#c9a45c"><rect x="146" y="314" width="8" height="8" transform="rotate(45 150 318)"/><rect x="118" y="316" width="4" height="4" transform="rotate(45 120 318)"/><rect x="178" y="316" width="4" height="4" transform="rotate(45 180 318)"/></g>
+      <line x1="40" y1="318" x2="110" y2="318" stroke="#c9a45c" stroke-width=".8"/><line x1="190" y1="318" x2="260" y2="318" stroke="#c9a45c" stroke-width=".8"/>
+    </svg>
+    <p class="ornement">Chauffagiste · Laxou</p>
+    <h1>S.B. <em>Grisez</em></h1>
+    <p class="hero__sous">La chaleur bien tenue, de la chaudière au robinet.</p>
+    <p class="hero__accroche">Remplacement de chaudière gaz ou fioul, entretien, plomberie et climatisation : un chauffagiste qualifié QUALIBAT, installé à Laxou, au service des foyers de l'agglomération de Nancy.</p>
+    <div class="hero__btns">
+      <a class="btn btn--or" href="tel:+33608833746"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+      <a class="btn btn--ligne" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<section class="confiance" aria-label="En bref">
+  <div class="wrap confiance__in">
+    <div class="cf reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 3 38 9v12c0 10-7 17-16 20C13 38 6 31 6 21V9z" fill="none" stroke="#c9a45c" stroke-width="1.3"/><path d="M15 22l5 5 9-10" fill="none" stroke="#c9a45c" stroke-width="1.5"/></svg>
+      <b>QUALIBAT</b><span>Remplacement chaudière</span>
+    </div>
+    <div class="cf reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6c6 8 10 12 10 20a10 10 0 0 1-20 0c0-6 4-11 10-20z" fill="none" stroke="#5aa9ff" stroke-width="1.4"/><path d="M22 22c2 3 4 4 4 7a4 4 0 0 1-8 0c0-2 2-4 4-7z" fill="none" stroke="#c9a45c" stroke-width="1.2"/></svg>
+      <b>Gaz &amp; fioul</b><span>Spécialité chaudières</span>
+    </div>
+    <div class="cf reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 41s13-13 13-23a13 13 0 0 0-26 0c0 10 13 23 13 23z" fill="none" stroke="#c9a45c" stroke-width="1.3"/><circle cx="22" cy="18" r="4.5" fill="none" stroke="#c9a45c" stroke-width="1.3"/></svg>
+      <b>Laxou (54520)</b><span>et agglomération de Nancy</span>
+    </div>
+    <div class="cf reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="17" fill="none" stroke="#c9a45c" stroke-width="1.3"/><g stroke="#c9a45c" stroke-width="1.2"><line x1="22" y1="9" x2="22" y2="35"/><line x1="9" y1="22" x2="35" y2="22"/><line x1="13" y1="13" x2="31" y2="31"/><line x1="31" y1="13" x2="13" y2="31"/></g><circle cx="22" cy="22" r="4" fill="#14181e" stroke="#c9a45c" stroke-width="1.2"/></svg>
+      <b>Trois métiers</b><span>Chauffage · plomberie · clim</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec motif" id="services">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Savoir-faire</p>
+      <h2>Prestations</h2>
+      <svg class="losange" viewBox="0 0 120 14" aria-hidden="true"><line x1="0" y1="7" x2="48" y2="7" stroke="#c9a45c"/><line x1="72" y1="7" x2="120" y2="7" stroke="#c9a45c"/><rect x="54" y="1" width="12" height="12" transform="rotate(45 60 7)" fill="none" stroke="#c9a45c"/><rect x="57" y="4" width="6" height="6" transform="rotate(45 60 7)" fill="#c9a45c"/></svg>
+      <p>Le cœur du métier : la chaudière. Autour d'elle, tout ce qui fait circuler la chaleur et l'eau dans la maison.</p>
+    </div>
+    <ul class="liste">
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="7" y="3" width="16" height="22" fill="none" stroke="#c9a45c" stroke-width="1.3"/><rect x="11" y="8" width="8" height="4" fill="none" stroke="#c9a45c"/><path d="M15 22c-2-2-3-3-2-5 1 1 1 1 2 0 0-1 1-2 2-3 0 2 1 3 1 5 0 2-1 3-3 3z" fill="#5aa9ff"/><line x1="11" y1="25" x2="11" y2="28" stroke="#c9a45c"/><line x1="19" y1="25" x2="19" y2="28" stroke="#c9a45c"/></svg></span>
+        <div><h3>Remplacement de chaudière <small>I</small></h3><p>Dépose de l'ancien générateur, choix d'un modèle adapté au logement et mise en service soignée, dans le cadre de la qualification QUALIBAT.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 3c5 6 8 10 8 15a8 8 0 0 1-16 0c0-5 3-9 8-15z" fill="none" stroke="#5aa9ff" stroke-width="1.4"/><path d="M15 15c2 2 3 3 3 5a3 3 0 0 1-6 0c0-2 1-3 3-5z" fill="none" stroke="#c9a45c" stroke-width="1.2"/></svg></span>
+        <div><h3>Chaudières gaz <small>II</small></h3><p>Installation et suivi de chaudières gaz, notamment à condensation, pour un chauffage central et une eau chaude réguliers.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 3c-5 7-8 11-8 16a8 8 0 0 0 16 0c0-5-3-9-8-16z" fill="none" stroke="#c9a45c" stroke-width="1.3"/><line x1="10" y1="19" x2="20" y2="19" stroke="#c9a45c"/><line x1="11" y1="23" x2="19" y2="23" stroke="#c9a45c"/></svg></span>
+        <div><h3>Chaudières fioul <small>III</small></h3><p>Remplacement, réglage et maintenance des installations au fioul, avec un regard sur les solutions de remplacement possibles.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="10" fill="none" stroke="#c9a45c" stroke-width="1.3"/><path d="M15 15 21 9" stroke="#c9a45c" stroke-width="1.3"/><g stroke="#c9a45c"><line x1="15" y1="5" x2="15" y2="8"/><line x1="25" y1="15" x2="22" y2="15"/><line x1="5" y1="15" x2="8" y2="15"/></g><circle cx="15" cy="15" r="1.6" fill="#c9a45c"/></svg></span>
+        <div><h3>Entretien annuel <small>IV</small></h3><p>Nettoyage, contrôle de combustion et des organes de sécurité, remise de l'attestation d'entretien prévue par la réglementation.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M17 3l2 6-4 2 6 9-10-5 3-3-4-5z" fill="none" stroke="#c9a45c" stroke-width="1.2" stroke-linejoin="round"/><path d="M6 26h18" stroke="#c9a45c"/></svg></span>
+        <div><h3>Dépannage chauffage <small>V</small></h3><p>Chaudière en sécurité, perte de pression, radiateurs froids : diagnostic de la panne et remise en route dans les meilleurs délais.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 9h12v6h6v10" fill="none" stroke="#c9a45c" stroke-width="1.4"/><rect x="2" y="6" width="4" height="6" fill="none" stroke="#c9a45c"/><path d="M23 25c-1.5 1.5-1.5 3 0 3s1.5-1.5 0-3z" fill="#5aa9ff"/></svg></span>
+        <div><h3>Plomberie <small>VI</small></h3><p>Réseaux d'eau, remplacement de robinetterie, recherche de fuite et raccordements sanitaires, réalisés avec la même rigueur.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="3" y="7" width="24" height="10" fill="none" stroke="#c9a45c" stroke-width="1.3"/><line x1="6" y1="14" x2="24" y2="14" stroke="#c9a45c"/><g stroke="#5aa9ff" stroke-width="1.2"><path d="M9 20v6"/><path d="M15 20v6"/><path d="M21 20v6"/></g></svg></span>
+        <div><h3>Climatisation <small>VII</small></h3><p>Pose et entretien de climatiseurs pour garder un intérieur tempéré l'été, avec un dimensionnement pièce par pièce.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="ico"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="8" width="22" height="14" fill="none" stroke="#c9a45c" stroke-width="1.3"/><g stroke="#c9a45c"><line x1="9" y1="8" x2="9" y2="22"/><line x1="14" y1="8" x2="14" y2="22"/><line x1="19" y1="8" x2="19" y2="22"/></g><path d="M2 12h2M26 12h2" stroke="#c9a45c"/></svg></span>
+        <div><h3>Radiateurs &amp; circuit <small>VIII</small></h3><p>Ajout ou remplacement de radiateurs, désembouage et équilibrage du réseau pour que chaque pièce reçoive sa part de chaleur.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ POURQUOI ============ -->
+<section class="sec sec--nuit" id="pourquoi">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Pourquoi nous choisir</p>
+      <h2>L'exigence d'un artisan</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout reveal">
+        <svg viewBox="0 0 58 58" aria-hidden="true"><path d="M29 4 50 12v16c0 13-9 22-21 26C17 50 8 41 8 28V12z" fill="none" stroke="#c9a45c" stroke-width="1.3"/><path d="M29 10 44 16v12c0 9-6 15-15 18" fill="none" stroke="#c9a45c" stroke-width=".7" opacity=".6"/><path d="M20 29l6 6 12-13" fill="none" stroke="#e0c48a" stroke-width="1.6"/></svg>
+        <h3>Qualifié QUALIBAT</h3><p>Une qualification Remplacement chaudière : un savoir-faire évalué sur le cœur du métier.</p>
+      </div>
+      <div class="atout reveal">
+        <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="22" fill="none" stroke="#c9a45c" stroke-width="1.3"/><circle cx="29" cy="29" r="15" fill="none" stroke="#c9a45c" stroke-width=".7" opacity=".6"/><path d="M29 18c4 5 6 8 6 12a6 6 0 0 1-12 0c0-4 2-7 6-12z" fill="none" stroke="#5aa9ff" stroke-width="1.4"/></svg>
+        <h3>Spécialiste chaudières</h3><p>Gaz ou fioul : des équipements que l'on connaît de l'intérieur, de la pose au réglage.</p>
+      </div>
+      <div class="atout reveal">
+        <svg viewBox="0 0 58 58" aria-hidden="true"><g fill="none" stroke="#c9a45c" stroke-width="1.3"><rect x="8" y="8" width="18" height="18"/><rect x="32" y="8" width="18" height="18"/><rect x="8" y="32" width="18" height="18"/><rect x="32" y="32" width="18" height="18"/></g><rect x="25" y="25" width="8" height="8" transform="rotate(45 29 29)" fill="#c9a45c"/></svg>
+        <h3>Une seule entreprise</h3><p>Chauffage, plomberie, climatisation : un interlocuteur pour l'ensemble de vos équipements.</p>
+      </div>
+      <div class="atout reveal">
+        <svg viewBox="0 0 58 58" aria-hidden="true"><path d="M29 52s18-17 18-30a18 18 0 0 0-36 0c0 13 18 30 18 30z" fill="none" stroke="#c9a45c" stroke-width="1.3"/><circle cx="29" cy="22" r="6" fill="none" stroke="#c9a45c" stroke-width="1.3"/></svg>
+        <h3>Proximité</h3><p>Installé à Laxou, aux portes de Nancy : un artisan du coin, joignable directement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉTAPES ============ -->
+<section class="sec" id="etapes">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Comment ça se passe</p>
+      <h2>Quatre temps, une méthode</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal"><div class="etape__n"><svg viewBox="0 0 88 88" aria-hidden="true"><rect x="14" y="14" width="60" height="60" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c"/><rect x="20" y="20" width="48" height="48" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c" stroke-width=".6" opacity=".6"/></svg>I</div><h3>L'appel</h3><p>Vous exposez votre besoin ou votre panne ; un rendez-vous est convenu.</p></div>
+      <div class="etape reveal"><div class="etape__n"><svg viewBox="0 0 88 88" aria-hidden="true"><rect x="14" y="14" width="60" height="60" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c"/><rect x="20" y="20" width="48" height="48" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c" stroke-width=".6" opacity=".6"/></svg>II</div><h3>La visite</h3><p>État de l'installation, conduit, réseau de radiateurs, besoins en eau chaude.</p></div>
+      <div class="etape reveal"><div class="etape__n"><svg viewBox="0 0 88 88" aria-hidden="true"><rect x="14" y="14" width="60" height="60" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c"/><rect x="20" y="20" width="48" height="48" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c" stroke-width=".6" opacity=".6"/></svg>III</div><h3>Le devis</h3><p>Une proposition écrite et détaillée, matériel et main-d'œuvre, sans engagement.</p></div>
+      <div class="etape reveal"><div class="etape__n"><svg viewBox="0 0 88 88" aria-hidden="true"><rect x="14" y="14" width="60" height="60" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c"/><rect x="20" y="20" width="48" height="48" transform="rotate(45 44 44)" fill="none" stroke="#c9a45c" stroke-width=".6" opacity=".6"/></svg>IV</div><h3>L'installation</h3><p>Pose, mise en service, réglages et conseils d'utilisation avant de partir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTRETIEN (section métier) ============ -->
+<section class="sec sec--nuit" id="entretien">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Conseils d'entretien</p>
+      <h2>Une chaudière qui dure</h2>
+      <p>Quelques repères simples pour garder une installation sûre, économe et fidèle au fil des saisons.</p>
+    </div>
+    <div class="entretien">
+      <div class="cal reveal">
+        <div class="cal__l"><div class="cal__q">Chaque année</div><div class="cal__t"><b>L'entretien réglementaire</b><span>Obligatoire pour les chaudières gaz et fioul de 4 à 400 kW, avec remise d'une attestation.</span></div></div>
+        <div class="cal__l"><div class="cal__q">Avant l'hiver</div><div class="cal__t"><b>La remise en route</b><span>Purger les radiateurs, vérifier la pression du circuit, tester la programmation.</span></div></div>
+        <div class="cal__l"><div class="cal__q">Au quotidien</div><div class="cal__t"><b>L'œil sur le manomètre</b><span>Une pression qui chute régulièrement peut signaler une fuite à faire vérifier.</span></div></div>
+        <div class="cal__l"><div class="cal__q">Le moment venu</div><div class="cal__t"><b>Le remplacement</b><span>Pannes répétées, pièces introuvables, consommation en hausse : il est temps d'étudier un nouvel équipement.</span></div></div>
+      </div>
+      <div class="reveal">
+        <ul class="conseils">
+          <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-chevron"/></svg><span>Ne masquez jamais les grilles d'aération du local où se trouve la chaudière.</span></li>
+          <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-chevron"/></svg><span>Une flamme jaune ou une odeur inhabituelle : coupez l'appareil et appelez un professionnel.</span></li>
+          <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-chevron"/></svg><span>Un détecteur de monoxyde de carbone près des appareils à combustion est une sage précaution.</span></li>
+          <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-chevron"/></svg><span>Un thermostat d'ambiance bien réglé évite de chauffer inutilement les pièces inoccupées.</span></li>
+          <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-chevron"/></svg><span>Conservez vos attestations d'entretien : elles peuvent vous être demandées par votre assureur.</span></li>
+        </ul>
+        <p class="sur-devis">Entretien, remplacement, dépannage : sur devis<small>Chaque installation est différente, le tarif est établi après visite.</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="sec motif" id="maison">
+  <div class="wrap apropos">
+    <div class="apropos__art reveal">
+      <svg viewBox="0 0 400 320" role="img" aria-label="Composition Art déco : soleil levant et réseau de chauffage">
+        <rect width="400" height="320" fill="#1d2733"/>
+        <g fill="none" stroke="#c9a45c">
+          <path d="M60 230a140 140 0 0 1 280 0" stroke-width="1.2"/>
+          <path d="M90 230a110 110 0 0 1 220 0" stroke-width=".9" opacity=".7"/>
+          <path d="M120 230a80 80 0 0 1 160 0" stroke-width=".8" opacity=".5"/>
+          <path d="M150 230a50 50 0 0 1 100 0" stroke-width="1"/>
+        </g>
+        <g stroke="#c9a45c" stroke-width=".6" opacity=".45">
+          <line x1="200" y1="230" x2="200" y2="40"/><line x1="200" y1="230" x2="105" y2="65"/><line x1="200" y1="230" x2="295" y2="65"/><line x1="200" y1="230" x2="35" y2="135"/><line x1="200" y1="230" x2="365" y2="135"/>
+        </g>
+        <path d="M200 224c-10-9-13-17-9-27 2 7 6 9 7 3 1-7 3-11 9-17-2 10 7 13 7 24 0 8-6 14-14 17z" fill="#5aa9ff" opacity=".8"/>
+        <line x1="20" y1="230" x2="380" y2="230" stroke="#c9a45c" stroke-width="1.2"/>
+        <g fill="none" stroke="#c9a45c" stroke-width="1"><path d="M40 260h320"/><path d="M40 270h320" opacity=".5"/></g>
+        <g fill="none" stroke="#c9a45c" stroke-width="1"><path d="M60 290l20-12 20 12 20-12 20 12 20-12 20 12 20-12 20 12 20-12 20 12 20-12 20 12 20-12 20 12"/></g>
+        <text x="200" y="22" text-anchor="middle" font-family="Marcellus, Georgia, serif" font-size="13" letter-spacing="6" fill="#c9a45c">LAXOU · 54520</text>
+      </svg>
+    </div>
+    <div class="reveal">
+      <p class="ornement ornement--g">La maison</p>
+      <h2>S.B. Grisez,<br>chauffagiste à Laxou</h2>
+      <p>S.B. Grisez est une entreprise de chauffage installée à Laxou, dans l'agglomération de Nancy. Elle exerce trois métiers complémentaires : chauffagiste, plombier et climaticien.</p>
+      <p>Sa spécialité, ce sont les chaudières gaz ou fioul, et elle détient la qualification QUALIBAT Remplacement chaudière. Une même main pour installer, entretenir et dépanner : c'est l'assurance d'un suivi cohérent de votre installation, année après année.</p>
+      <div class="qualif">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23" fill="none" stroke="#c9a45c" stroke-width="1.2"/><circle cx="26" cy="26" r="18" fill="none" stroke="#c9a45c" stroke-width=".7" opacity=".6"/><path d="M17 27l6 6 12-13" fill="none" stroke="#e0c48a" stroke-width="1.6"/></svg>
+        <div><b>QUALIBAT · Remplacement chaudière</b><span>Qualification mentionnée par HelloWatt</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec sec--nuit" id="avis">
+  <div class="wrap">
+    <div class="avis reveal">
+      <svg class="eventail" viewBox="0 0 150 80" aria-hidden="true"><g fill="none" stroke="#c9a45c"><path d="M5 75a70 70 0 0 1 140 0" stroke-width="1.2"/><path d="M25 75a50 50 0 0 1 100 0" stroke-width=".8" opacity=".6"/><path d="M45 75a30 30 0 0 1 60 0"/></g><g stroke="#c9a45c" stroke-width=".7" opacity=".6"><line x1="75" y1="75" x2="75" y2="5"/><line x1="75" y1="75" x2="25" y2="25"/><line x1="75" y1="75" x2="125" y2="25"/><line x1="75" y1="75" x2="8" y2="55"/><line x1="75" y1="75" x2="142" y2="55"/></g></svg>
+      <p class="ornement">Vos avis comptent</p>
+      <h2>Votre retour, notre plus belle carte de visite</h2>
+      <p style="margin-top:20px">Aucun avis n'est encore publié sur ce site. Si S.B. Grisez a installé, entretenu ou dépanné votre chaudière, quelques mots sur votre expérience aideront d'autres familles de Laxou et de Nancy à choisir sereinement leur chauffagiste.</p>
+      <a class="btn btn--ligne" href="#contact">Laisser un mot</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Questions fréquentes</p>
+      <h2>Bon à savoir</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="q"><button aria-expanded="false" aria-controls="r1" id="b1">L'entretien annuel de la chaudière est-il obligatoire ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r1" role="region" aria-labelledby="b1"><div><p>Oui : pour les chaudières gaz, fioul ou bois d'une puissance de 4 à 400 kW, un entretien annuel par un professionnel est obligatoire. Il donne lieu à une attestation à conserver, et contribue à la sécurité comme aux économies d'énergie.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r2" id="b2">Sous quel délai puis-je recevoir un devis ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r2" role="region" aria-labelledby="b2"><div><p>Pour un remplacement de chaudière, le devis est établi après une visite de l'installation. Le délai dépend de la période (l'automne est souvent chargé) : appelez le 06 08 83 37 46 pour convenir d'un rendez-vous.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r3" id="b3">Puis-je obtenir des aides (MaPrimeRénov', CEE) ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r3" role="region" aria-labelledby="b3"><div><p>Des aides existent pour certains travaux de rénovation énergétique, selon éligibilité, avec un artisan RGE. Les conditions évoluent régulièrement : le plus sûr est de vous renseigner auprès de France Rénov' avant de signer un devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r4" id="b4">Intervenez-vous en cas de panne ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r4" role="region" aria-labelledby="b4"><div><p>Oui, le dépannage de chaudière fait partie des prestations. Décrivez les symptômes au téléphone (code erreur, bruit, perte de pression) : cela aide à préparer l'intervention.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r5" id="b5">Quelle zone desservez-vous ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r5" role="region" aria-labelledby="b5"><div><p>Laxou et l'agglomération de Nancy. Pour une commune voisine, n'hésitez pas à poser la question.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r6" id="b6">Faut-il remplacer ma chaudière fioul par une pompe à chaleur ?<span class="q__s" aria-hidden="true"></span></button><div class="q__r" id="r6" role="region" aria-labelledby="b6"><div><p>Cela dépend du logement : isolation, type d'émetteurs, budget. Une pompe à chaleur peut être pertinente, une chaudière récente aussi. L'important est d'étudier la situation au cas par cas avant de décider.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec sec--nuit" id="contact">
+  <div class="wrap">
+    <div class="tete reveal">
+      <p class="ornement">Contact</p>
+      <h2>Parlons de votre chauffage</h2>
+      <p>Un appel suffit pour fixer une visite. Vous préférez écrire ? Le formulaire ou l'email sont là pour ça.</p>
+    </div>
+    <div class="contact">
+      <div class="reveal">
+        <div class="cadre">
+          <h3>Coordonnées</h3>
+          <ul class="coord">
+            <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-tel"/></svg><div><small>Téléphone</small><a href="tel:+33608833746">06 08 83 37 46</a></div></li>
+            <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-mail"/></svg><div><small>Email</small><a href="mailto:sbgrisez@orange.fr">sbgrisez@orange.fr</a></div></li>
+            <li><svg aria-hidden="true" style="color:#c9a45c"><use href="#i-pin"/></svg><div><small>Zone</small>Laxou et agglomération de Nancy</div></li>
+          </ul>
+          <a class="btn btn--ligne" href="https://www.google.com/maps/search/?api=1&amp;query=Laxou%2054520" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+        <div class="cadre">
+          <h3>Horaires</h3>
+          <table class="horaires" id="horaires"><tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+          </tbody></table>
+          <p class="indicatif">Horaires indicatifs, à confirmer : sur rendez-vous, du lundi au vendredi.</p>
+        </div>
+      </div>
+      <div class="cadre reveal">
+        <h3>Demande de devis</h3>
+        <form id="form" novalidate>
+          <div class="l2">
+            <div><label for="nom">Nom</label><input id="nom" autocomplete="name"></div>
+            <div><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div><label for="email">Email</label><input id="email" type="email" autocomplete="email"></div>
+          <div><label for="objet">Votre demande</label>
+            <select id="objet">
+              <option>Remplacement de chaudière</option>
+              <option>Entretien annuel</option>
+              <option>Dépannage chauffage</option>
+              <option>Plomberie</option>
+              <option>Climatisation</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div><label for="energie">Énergie actuelle</label>
+            <select id="energie"><option>Gaz</option><option>Fioul</option><option>Autre / je ne sais pas</option></select>
+          </div>
+          <div><label for="message">Message</label><textarea id="message" placeholder="Commune, âge et marque de la chaudière, ce que vous constatez…"></textarea></div>
+          <button class="btn btn--or" type="submit">Envoyer la demande</button>
+          <p class="msg" id="msg" role="status">Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap pied">
+    <div>
+      <div class="pied__nom">S.B. GRISEZ</div>
+      <p>Chauffagiste, plombier et climaticien à Laxou (54520). Chaudières gaz ou fioul. QUALIBAT Remplacement chaudière.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul><li><a href="tel:+33608833746">06 08 83 37 46</a></li><li><a href="mailto:sbgrisez@orange.fr">sbgrisez@orange.fr</a></li><li>Laxou et agglomération de Nancy</li></ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul><li>Sur rendez-vous</li><li>Du lundi au vendredi</li><li>(indicatif, à confirmer)</li></ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul><li><a href="#services">Prestations</a></li><li><a href="#entretien">Entretien</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Devis</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap mentions">
+    <span>© <span id="annee">2026</span> S.B. Grisez · Laxou (54)</span>
+    <span>Mentions légales · Aucune donnée collectée sur cette maquette</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33608833746" aria-label="Appeler S.B. Grisez au 06 08 83 37 46"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function fermer(){menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){
+    if(burger.getAttribute('aria-expanded')==='true'){fermer();}
+    else{menu.classList.add('ouvert');burger.setAttribute('aria-expanded','true');burger.setAttribute('aria-label','Fermer le menu');}
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var o=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded',String(!o));b.parentNode.classList.toggle('ouvert',!o);
+    });
+  });
+
+  var tr=document.querySelector('#horaires tr[data-j="'+new Date().getDay()+'"]');
+  if(tr)tr.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu');});
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('vu');});}
+})();
+</script>
+</body>
+</html>

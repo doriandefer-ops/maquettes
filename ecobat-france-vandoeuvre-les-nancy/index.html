@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ecobat France (EBF) – chauffagiste à Vandœuvre-lès-Nancy</title>
+<meta name="description" content="Ecobat France (EBF), SARL créée en 2009 à Vandœuvre-lès-Nancy : chaudières gaz, fioul et électriques, radiateurs électriques. Installation, entretien et dépannage dans l'agglomération de Nancy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --beton:#e9e9e6;
+  --beton-2:#dcdcd8;
+  --anthracite:#23262b;
+  --anthracite-2:#17191d;
+  --jaune:#ffc300;
+  --gris:#8a8f96;
+  --gris-txt:#555a61;
+  --blanc:#ffffff;
+  --trait:#c4c5c1;
+  --cond:"Oswald","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --sans:"Roboto",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --max:1280px;
+  --gut:clamp(16px,3.5vw,40px);
+  --hazard:repeating-linear-gradient(-45deg,var(--jaune) 0 14px,var(--anthracite) 14px 28px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--beton);color:var(--anthracite);font-family:var(--sans);font-size:16.5px;line-height:1.6;overflow-x:hidden;
+  background-image:linear-gradient(rgba(35,38,43,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(35,38,43,.035) 1px,transparent 1px);background-size:32px 32px}
+svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--cond);font-weight:600;text-transform:uppercase;line-height:1.02;margin:0;letter-spacing:.01em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:2px}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--anthracite);color:var(--blanc);border-bottom:4px solid var(--jaune)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{background:var(--jaune);color:var(--anthracite);font-family:var(--cond);font-size:1.15rem;padding:2px 8px;letter-spacing:.06em}
+.logo span{font-family:var(--cond);font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase}
+.menu{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:4px}
+.menu a{display:block;text-decoration:none;font-family:var(--cond);font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;border:1px solid transparent;transition:border-color .2s,color .2s}
+.menu a small{font-family:var(--mono);font-size:.62rem;color:var(--jaune);margin-right:6px}
+.menu a:hover{border-color:var(--gris);color:var(--jaune)}
+.menu .cta{background:var(--jaune);color:var(--anthracite);margin-left:8px}
+.menu .cta:hover{background:var(--blanc);color:var(--anthracite);border-color:var(--blanc)}
+.burger{display:none;width:48px;height:44px;background:var(--jaune);border:0;cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:3px;background:var(--anthracite);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- HERO BENTO ---------- */
+.hero{padding:92px 0 40px}
+.bento{display:grid;grid-template-columns:1.25fr 1.05fr .9fr 1fr;grid-template-rows:auto auto auto;gap:12px}
+.tile{position:relative;border:2px solid var(--anthracite);background:var(--blanc);padding:24px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.tile:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--anthracite)}
+.tile-id{position:absolute;top:10px;right:12px;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--gris-txt)}
+.screw{position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d7d8d5,#8a8f96);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.screw::after{content:"";position:absolute;left:1px;right:1px;top:4px;height:1px;background:rgba(0,0,0,.45);transform:rotate(35deg)}
+.s1{top:8px;left:8px}.s2{top:8px;right:8px}.s3{bottom:8px;left:8px}.s4{bottom:8px;right:8px}
+
+.t-title{grid-column:1/3;grid-row:1/3;background:var(--anthracite);color:var(--blanc);padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px}
+.t-title .tile-id{color:var(--gris)}
+.plaque{display:inline-flex;align-items:center;gap:12px;align-self:flex-start;border:2px solid var(--jaune);padding:7px 14px;font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;color:var(--jaune);text-transform:uppercase}
+.plaque i{width:8px;height:8px;background:var(--jaune);border-radius:50%;box-shadow:0 0 0 3px rgba(255,195,0,.25);animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.35}}
+.t-title h1{font-size:clamp(3rem,7.4vw,6.6rem);line-height:.9;letter-spacing:.005em}
+.t-title h1 span{display:block;color:var(--jaune)}
+.t-title h1 small{display:block;font-family:var(--mono);font-size:clamp(.7rem,1vw,.82rem);letter-spacing:.2em;color:var(--gris);font-weight:500;margin-top:14px}
+.t-title .lead{font-size:1.08rem;color:#d7d9dc;max-width:520px;margin:0}
+.t-title .lead strong{color:var(--blanc)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--cond);font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 22px;border:2px solid var(--anthracite);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-y{background:var(--jaune);color:var(--anthracite);border-color:var(--jaune)}
+.btn-y:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--blanc)}
+.btn-o{background:transparent;color:var(--blanc);border-color:var(--blanc)}
+.btn-o:hover{background:var(--blanc);color:var(--anthracite)}
+.btn-d{background:var(--anthracite);color:var(--blanc)}
+.btn-d:hover{background:var(--jaune);color:var(--anthracite);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--anthracite)}
+
+.t-year{grid-column:3/4;grid-row:1/2;background:var(--jaune);display:flex;flex-direction:column;justify-content:flex-end;min-height:220px}
+.t-year .tile-id{color:var(--anthracite)}
+.t-year .lbl{font-family:var(--cond);font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase}
+.t-year .yr{font-family:var(--cond);font-weight:700;font-size:clamp(4rem,7vw,6rem);line-height:.85}
+.t-year p{font-size:.84rem;margin:10px 0 0;font-weight:500}
+.t-boiler{grid-column:4/5;grid-row:1/3;display:flex;flex-direction:column;justify-content:space-between;
+  background-color:var(--blanc);background-image:linear-gradient(#eef0f2 1px,transparent 1px),linear-gradient(90deg,#eef0f2 1px,transparent 1px);background-size:16px 16px}
+.t-boiler svg{width:100%;max-width:260px;margin:auto;height:auto;padding-top:24px}
+.cap{display:flex;flex-direction:column;align-items:flex-start;border-top:2px solid var(--anthracite);padding-top:10px;margin-top:12px;gap:8px}
+.cap b{font-family:var(--cond);font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.cap span{font-family:var(--mono);font-size:.66rem;color:var(--gris-txt)}
+.t-rad{grid-column:3/4;grid-row:2/3;background:var(--beton-2)}
+.t-rad svg{width:100%;max-width:230px;margin:18px auto 0;height:auto}
+.t-rad .heat{animation:rise 3s ease-in-out infinite}
+.t-rad .heat:nth-of-type(2){animation-delay:.6s}.t-rad .heat:nth-of-type(3){animation-delay:1.2s}
+@keyframes rise{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-5px);opacity:1}}
+.t-boiler .fl{transform-origin:50% 100%;animation:flick 1.8s ease-in-out infinite}
+@keyframes flick{50%{transform:scale(1.08,1.12)}}
+.t-call{grid-column:1/3;grid-row:3/4;background:var(--jaune);border-color:var(--anthracite);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0;text-decoration:none}
+.t-call::before{content:"";align-self:stretch;width:42px;background:var(--hazard);flex:none;border-right:2px solid var(--anthracite)}
+.t-call .in{flex:1;padding:20px 0}
+.t-call .in small{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.t-call .in b{font-family:var(--cond);font-size:clamp(2rem,4vw,3.3rem);line-height:1;font-weight:700;letter-spacing:.02em}
+.t-call .arrow{width:74px;height:74px;margin-right:22px;border:2px solid var(--anthracite);display:grid;place-items:center;flex:none;transition:background .2s,color .2s}
+.t-call:hover .arrow{background:var(--anthracite);color:var(--jaune)}
+.t-call .arrow svg{width:32px;height:32px}
+.t-zone{grid-column:3/5;grid-row:3/4;background:var(--anthracite);color:var(--blanc);display:flex;gap:18px;align-items:center}
+.t-zone .tile-id{color:var(--gris)}
+.t-zone svg{width:56px;height:56px;color:var(--jaune);flex:none}
+.t-zone b{font-family:var(--cond);font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em;display:block;line-height:1.15;font-weight:500}
+.t-zone span{font-size:.86rem;color:#c9ccd0}
+
+/* ---------- TRUST STRIP ---------- */
+.hazard{height:14px;background:var(--hazard);border-top:2px solid var(--anthracite);border-bottom:2px solid var(--anthracite)}
+.trust{background:var(--anthracite);color:var(--blanc)}
+.trust ul{list-style:none;margin:0 auto;padding:0 var(--gut);max-width:var(--max);display:grid;grid-template-columns:repeat(4,1fr)}
+.trust li{display:flex;align-items:center;gap:14px;padding:20px 16px;border-left:1px solid #3a3e45}
+.trust li:first-child{border-left:0}
+.trust svg{width:34px;height:34px;color:var(--jaune);flex:none}
+.trust b{display:block;font-family:var(--cond);font-weight:500;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;line-height:1.15}
+.trust span{font-size:.82rem;color:#c3c6cb}
+
+/* ---------- SECTIONS ---------- */
+.sec{padding:clamp(64px,8vw,110px) 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px;margin-bottom:42px}
+.code{display:inline-flex;align-items:stretch;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;border:2px solid var(--anthracite)}
+.code b{background:var(--anthracite);color:var(--jaune);padding:5px 10px;font-weight:500}
+.code span{padding:5px 10px;background:var(--blanc)}
+.sec-head h2{font-size:clamp(2.2rem,5.4vw,4.4rem);max-width:720px}
+.sec-head h2 mark{background:linear-gradient(transparent 58%,var(--jaune) 58%);color:inherit;padding:0 .08em}
+.sec-head p{flex:0 1 380px;color:var(--gris-txt);margin:0}
+.dark{background:var(--anthracite);color:var(--blanc);background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:32px 32px}
+.dark .sec-head p{color:#c3c6cb}
+.dark .code{border-color:var(--jaune)}
+.dark .code b{background:var(--jaune);color:var(--anthracite)}
+.dark .code span{background:transparent;color:var(--jaune)}
+.dark .sec-head h2 mark{background:none;color:var(--jaune)}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.svc{background:var(--blanc);border:2px solid var(--anthracite);padding:26px 24px 24px;position:relative;transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--jaune),8px 8px 0 2px var(--anthracite)}
+.svc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+.svc-ico{width:64px;height:64px;background:var(--beton);border:2px solid var(--anthracite);display:grid;place-items:center;transition:background .25s}
+.svc:hover .svc-ico{background:var(--jaune)}
+.svc-ico svg{width:40px;height:40px}
+.svc .ref{font-family:var(--mono);font-size:.68rem;color:var(--gris-txt);letter-spacing:.08em}
+.svc h3{font-size:1.5rem;margin-bottom:8px}
+.svc p{font-size:.94rem;color:#3a3e45;margin:0}
+.svc .spec{margin-top:16px;padding-top:12px;border-top:1px dashed var(--trait);font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--anthracite);display:flex;gap:8px;align-items:center}
+.svc .spec::before{content:"";width:10px;height:10px;background:var(--jaune);border:1.5px solid var(--anthracite)}
+
+/* Pourquoi */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--jaune)}
+.why-item{padding:30px 26px;border-left:1px solid #43474f;position:relative}
+.why-item:first-child{border-left:0}
+.why-item .n{font-family:var(--cond);font-size:3.4rem;line-height:1;color:var(--jaune);font-weight:700}
+.why-item .n small{font-family:var(--mono);font-size:.7rem;color:var(--gris);margin-left:6px;font-weight:500;vertical-align:top}
+.why-item h3{font-size:1.4rem;margin:14px 0 10px;color:var(--blanc)}
+.why-item p{font-size:.94rem;color:#c9ccd0;margin:0}
+
+/* Process */
+.process{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process::before{content:"";position:absolute;left:0;right:0;top:35px;height:6px;background:var(--hazard);border-top:1px solid var(--anthracite);border-bottom:1px solid var(--anthracite);opacity:.9}
+.step{position:relative;padding:0 18px 0 0}
+.step .num{position:relative;z-index:1;width:76px;height:76px;background:var(--anthracite);color:var(--jaune);display:grid;place-items:center;font-family:var(--cond);font-size:2rem;font-weight:700;border:4px solid var(--beton);outline:2px solid var(--anthracite);transition:background .25s,color .25s}
+.step:hover .num{background:var(--jaune);color:var(--anthracite)}
+.step .mono{display:block;margin:20px 0 6px;color:var(--gris-txt)}
+.step h3{font-size:1.45rem;margin-bottom:8px}
+.step p{font-size:.94rem;color:#3a3e45;margin:0}
+
+/* A propos */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+.idplate{background:linear-gradient(135deg,#f4f4f2,#cfd0cc);border:2px solid var(--anthracite);padding:34px 30px 30px;position:relative;box-shadow:8px 8px 0 var(--anthracite)}
+.idplate h3{font-size:1.1rem;letter-spacing:.16em;border-bottom:2px solid var(--anthracite);padding-bottom:12px;margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
+.idplate h3 span{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;align-self:center}
+.idplate dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.idplate dt,.idplate dd{margin:0;padding:11px 0;border-bottom:1px solid rgba(35,38,43,.25)}
+.idplate dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris-txt);padding-right:18px;padding-top:14px}
+.idplate dd{font-weight:500}
+.idplate .src{font-size:.74rem;color:var(--gris-txt);margin:14px 0 0}
+.about-txt h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:20px;line-height:1.25}
+.about-txt h3 mark{background:var(--jaune);color:var(--anthracite);padding:0 .15em}
+.about-txt p{font-size:1.02rem;color:#30343a}
+
+/* Equipement */
+.equip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fiche{background:var(--blanc);border:2px solid var(--anthracite);display:flex;flex-direction:column}
+.fiche-top{background:var(--anthracite);color:var(--blanc);padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.fiche-top h3{font-size:1.25rem;font-weight:500}
+.fiche-top span{font-family:var(--mono);font-size:.66rem;color:var(--jaune)}
+.fiche-ill{height:130px;display:grid;place-items:center;border-bottom:2px solid var(--anthracite);background-image:linear-gradient(#eef0f2 1px,transparent 1px),linear-gradient(90deg,#eef0f2 1px,transparent 1px);background-size:14px 14px}
+.fiche-ill svg{width:96px;height:96px}
+.fiche ul{list-style:none;margin:0;padding:6px 18px 18px;flex:1}
+.fiche li{padding:10px 0;border-bottom:1px dashed var(--trait);font-size:.9rem}
+.fiche li b{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris-txt);font-weight:500}
+.fiche li:last-child{border-bottom:0}
+.devis-bar{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--jaune);border:2px solid var(--anthracite);padding:18px 22px}
+.devis-bar p{margin:0;font-family:var(--cond);font-size:1.5rem;text-transform:uppercase;letter-spacing:.03em}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.tip{border:2px dashed var(--anthracite);padding:18px 20px;background:rgba(255,255,255,.5)}
+.tip h4{font-size:1.1rem;margin-bottom:6px;display:flex;gap:10px;align-items:center}
+.tip h4 i{font-style:normal;font-family:var(--mono);font-size:.7rem;background:var(--anthracite);color:var(--jaune);padding:2px 6px}
+.tip p{margin:0;font-size:.9rem;color:#3a3e45}
+
+/* Avis */
+.avis{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--blanc);border:2px solid var(--anthracite);padding:30px;position:relative}
+.avis::before{content:"";position:absolute;left:-2px;right:-2px;top:-12px;height:10px;background:var(--hazard)}
+.avis-ico{width:96px;height:96px;background:var(--jaune);border:2px solid var(--anthracite);display:grid;place-items:center}
+.avis-ico svg{width:54px;height:54px}
+.avis h3{font-size:2rem;margin-bottom:6px}
+.avis p{margin:0;color:#3a3e45}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:960px}
+.faq-item{border:2px solid var(--anthracite);background:var(--blanc)}
+.faq-q{width:100%;display:flex;gap:16px;align-items:center;background:none;border:0;padding:18px 20px;text-align:left;cursor:pointer;font-family:var(--cond);font-size:1.18rem;text-transform:uppercase;letter-spacing:.03em;color:var(--anthracite)}
+.faq-q .k{font-family:var(--mono);font-size:.7rem;background:var(--beton);border:1px solid var(--anthracite);padding:3px 7px;flex:none}
+.faq-q .pm{margin-left:auto;width:30px;height:30px;flex:none;border:2px solid var(--anthracite);position:relative;transition:background .2s}
+.faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--anthracite);transform:translate(-50%,-50%);transition:transform .3s}
+.faq-q .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-q[aria-expanded="true"] .pm{background:var(--jaune)}
+.faq-q[aria-expanded="true"] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-q:hover .k{background:var(--jaune)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.faq-a > div{overflow:hidden}
+.faq-a p{margin:0;padding:0 20px 20px 20px;color:#3a3e45;border-top:1px dashed transparent}
+.faq-q[aria-expanded="true"] + .faq-a{grid-template-rows:1fr}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:24px}
+.panel{border:2px solid var(--jaune);padding:28px}
+.c-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #43474f}
+.c-row:first-of-type{padding-top:0}
+.c-row svg{width:30px;height:30px;color:var(--jaune);flex:none;margin-top:4px}
+.c-row .mono{display:block;color:var(--gris)}
+.c-row a,.c-row .v{font-family:var(--cond);font-size:1.35rem;letter-spacing:.02em;text-decoration:none;color:var(--blanc);word-break:break-word}
+.c-row a:hover{color:var(--jaune)}
+.hours{list-style:none;padding:0;margin:18px 0 0;font-family:var(--mono);font-size:.78rem}
+.hours li{display:flex;justify-content:space-between;padding:8px 10px;border-bottom:1px dashed #43474f;text-transform:uppercase;letter-spacing:.06em;color:#d7d9dc}
+.hours li.today{background:var(--jaune);color:var(--anthracite);font-weight:500}
+.hours li.today span:first-child::after{content:" ◂ aujourd'hui"}
+.note{font-size:.8rem;color:#c3c6cb;margin:10px 0 0}
+.panel .btn{margin-top:20px}
+form{background:var(--blanc);color:var(--anthracite);border:2px solid var(--blanc);padding:28px;position:relative}
+form h3{font-size:1.8rem;margin-bottom:4px}
+form > p{color:var(--gris-txt);font-size:.9rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-top:14px}
+label{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px;border:2px solid var(--anthracite);background:var(--beton);color:var(--anthracite);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;background:var(--blanc);box-shadow:4px 4px 0 var(--jaune)}
+textarea{min-height:120px;resize:vertical}
+form .btn{margin-top:20px;width:100%}
+.form-msg{display:none;margin:16px 0 0;padding:14px 16px;background:var(--jaune);border:2px solid var(--anthracite);font-weight:500}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{background:var(--anthracite-2);color:#c9ccd0;padding-top:0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:56px 0 36px}
+.foot-grid h4{font-size:1rem;color:var(--jaune);letter-spacing:.12em;margin-bottom:12px;font-weight:500}
+.foot-grid p,.foot-grid li{font-size:.9rem;margin:0 0 6px}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid a{text-decoration:none;border-bottom:1px solid #4a4e55}
+.foot-grid a:hover{color:var(--jaune);border-color:var(--jaune)}
+.foot-logo{font-family:var(--cond);font-size:2.4rem;text-transform:uppercase;color:var(--blanc);line-height:1;margin-bottom:10px}
+.foot-logo b{background:var(--jaune);color:var(--anthracite);padding:0 8px;margin-right:8px}
+.mentions{border-top:1px solid #33363c;padding:16px 0;font-size:.78rem;color:#a7abb1}
+.demo{background:#0e0f12;color:#a7abb1;text-align:center;font-size:.76rem;padding:12px 16px;border-top:3px solid var(--jaune)}
+
+.float-call{display:none;position:fixed;right:16px;bottom:18px;z-index:60;height:58px;padding:0 20px 0 16px;gap:10px;align-items:center;background:var(--jaune);color:var(--anthracite);border:2px solid var(--anthracite);box-shadow:4px 4px 0 var(--anthracite);text-decoration:none;font-family:var(--cond);font-size:1.1rem;text-transform:uppercase;letter-spacing:.06em}
+.float-call svg{width:24px;height:24px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1100px){
+  .menu a small{display:none}
+  .bento{grid-template-columns:1fr 1fr 1fr}
+  .t-title{grid-column:1/3;grid-row:1/3}
+  .t-year{grid-column:3/4;grid-row:1/2}
+  .t-rad{grid-column:3/4;grid-row:2/3}
+  .t-boiler{grid-column:1/2;grid-row:3/4}
+  .t-boiler svg{max-width:150px;padding-top:16px}
+  .t-call{grid-column:2/4;grid-row:3/4}
+  .t-zone{grid-column:1/4;grid-row:4/5}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .why-item:nth-child(3){border-left:0}
+  .why-item:nth-child(n+3){border-top:1px solid #43474f}
+  .equip{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:66px;left:0;right:0;bottom:0;flex-direction:column;align-items:stretch;gap:0;background:var(--anthracite);padding:16px var(--gut);transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.open{opacity:1;transform:none;visibility:visible}
+  .menu a{font-size:1.4rem;padding:16px 4px;border:0;border-bottom:1px solid #3a3e45}
+  .menu a small{display:inline}
+  .menu .cta{margin:20px 0 0;text-align:center;border:0}
+  .process{grid-template-columns:repeat(2,1fr);gap:36px 0}
+  .process::before{display:none}
+  .about,.contact{grid-template-columns:1fr}
+  .tips{grid-template-columns:1fr}
+  .avis{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .trust ul{grid-template-columns:1fr 1fr;padding:0}
+  .trust li:nth-child(3){border-left:0}
+  .trust li:nth-child(n+3){border-top:1px solid #3a3e45}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{padding-top:80px}
+  .bento{grid-template-columns:1fr 1fr;gap:10px}
+  .t-title{grid-column:1/3;grid-row:auto}
+  .t-year{grid-column:1/3;grid-row:auto;min-height:0}
+  .t-boiler{grid-column:1/2;grid-row:auto}
+  .t-rad{grid-column:2/3;grid-row:auto}
+  .t-call{grid-column:1/3;grid-row:auto}
+  .t-zone{grid-column:1/3;grid-row:auto}
+  .tile{padding:18px}
+  .t-zone{padding-top:36px}
+  .plaque{letter-spacing:.06em;font-size:.68rem}
+  .t-title h1 small{letter-spacing:.08em}
+  .t-title{padding:26px 20px}
+  .btns .btn{flex:1 1 100%}
+  .t-boiler svg,.t-rad svg{margin-top:20px}
+  .cap b{font-size:1rem}
+  .t-call::before{width:22px}
+  .t-call .arrow{width:52px;height:52px;margin-right:14px}
+  .t-call .in b{font-size:1.75rem}
+  .svc-grid,.why,.equip{grid-template-columns:1fr}
+  .why-item{border-left:0!important}
+  .why-item + .why-item{border-top:1px solid #43474f}
+  .process{grid-template-columns:1fr;gap:28px}
+  .row{grid-template-columns:1fr;gap:0}
+  .panel,form{padding:22px 18px}
+  .foot-grid{grid-template-columns:1fr}
+  .trust li{padding:14px 12px;gap:10px}
+  .trust svg{width:26px;height:26px}
+  .trust b{font-size:.98rem}
+  .faq-q{font-size:1.02rem;padding:16px 14px;gap:12px}
+  .faq-q .k{display:none}
+  .faq-a p{padding:0 14px 16px}
+  .float-call{display:inline-flex}
+  .demo{padding-bottom:90px}
+  .idplate{box-shadow:5px 5px 0 var(--anthracite);padding:28px 20px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo" aria-label="Ecobat France, accueil"><b>EBF</b><span>Ecobat France</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services"><small>01</small>Services</a></li>
+      <li><a href="#equipement"><small>04</small>Équipements</a></li>
+      <li><a href="#entreprise"><small>05</small>L'entreprise</a></li>
+      <li><a href="#faq"><small>07</small>FAQ</a></li>
+      <li><a href="#contact" class="cta">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO BENTO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="bento">
+      <div class="tile t-title reveal">
+        <span class="tile-id">T-01 / IDENT.</span>
+        <span class="plaque"><i></i>Chauffage · Vandœuvre-lès-Nancy</span>
+        <h1 id="h1">Ecobat<span>France</span><small>EBF — chauffagiste à Vandœuvre-lès-Nancy</small></h1>
+        <p class="lead">Gaz, fioul ou électrique : <strong>une seule équipe pour toutes vos chaudières et vos radiateurs</strong>, installés, entretenus et remis en route avec la rigueur d'un chantier bien tenu.</p>
+        <div class="btns">
+          <a class="btn btn-y" href="tel:+33659330001"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+          <a class="btn btn-o" href="#contact">Demander un devis</a>
+        </div>
+        <span class="screw s3"></span><span class="screw s4"></span>
+      </div>
+
+      <div class="tile t-year reveal d1">
+        <span class="tile-id">T-02 / REG.</span>
+        <span class="lbl">Depuis</span>
+        <span class="yr">2009</span>
+        <p>SARL créée le 4 février 2009.</p>
+      </div>
+
+      <div class="tile t-boiler reveal d2">
+        <span class="tile-id">T-03 / CH.</span>
+        <svg viewBox="0 0 200 250" fill="none" stroke="#23262b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 14 H180" stroke-dasharray="6 6" stroke-width="1.5" stroke="#8a8f96"/>
+          <rect x="40" y="24" width="120" height="160" rx="6" fill="#fff"/>
+          <rect x="40" y="24" width="120" height="26" fill="#23262b"/>
+          <rect x="56" y="62" width="60" height="22" rx="2" fill="#23262b"/>
+          <text x="62" y="78" font-family="Roboto Mono,monospace" font-size="13" fill="#ffc300" stroke="none">55°C</text>
+          <circle cx="134" cy="73" r="9"/>
+          <circle cx="100" cy="132" r="28" fill="#e9e9e6"/>
+          <path class="fl" d="M100 150c-10 0-14-9-8-17 2 4 4 4 5 2 0-6 3-11 8-13-1 7 6 10 4 18-1 6-4 10-9 10z" fill="#ffc300"/>
+          <path d="M60 184v30M85 184v40M115 184v40M140 184v30" />
+          <rect x="78" y="200" width="14" height="10" fill="#ffc300"/><rect x="108" y="200" width="14" height="10" fill="#ffc300"/>
+          <path d="M20 236 H60 M140 236 H180" stroke-width="1.5" stroke="#8a8f96"/>
+          <path d="M40 236 v-6 M160 236 v-6" stroke-width="1.5" stroke="#8a8f96"/>
+        </svg>
+        <div class="cap"><b>Chaudières</b><span>GAZ · FIOUL · ÉLEC.</span></div>
+      </div>
+
+      <div class="tile t-rad reveal d1">
+        <span class="tile-id">T-04 / RAD.</span>
+        <svg viewBox="0 0 220 150" fill="none" stroke="#23262b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path class="heat" d="M60 30c-6-6 6-12 0-18" stroke="#23262b" stroke-width="2.5"/>
+          <path class="heat" d="M110 30c-6-6 6-12 0-18" stroke="#23262b" stroke-width="2.5"/>
+          <path class="heat" d="M160 30c-6-6 6-12 0-18" stroke="#23262b" stroke-width="2.5"/>
+          <rect x="24" y="42" width="172" height="80" rx="6" fill="#fff"/>
+          <path d="M48 52v60M70 52v60M92 52v60M114 52v60M136 52v60M158 52v60M180 52v60" stroke-width="2.5"/>
+          <rect x="150" y="46" width="34" height="14" rx="2" fill="#ffc300"/>
+          <path d="M40 122v14M180 122v14"/>
+          <path d="M10 140H210" stroke="#8a8f96" stroke-width="1.5"/>
+        </svg>
+        <div class="cap"><b>Radiateurs</b><span>ÉLECTRIQUES</span></div>
+      </div>
+
+      <a class="tile t-call reveal" href="tel:+33659330001" aria-label="Appeler Ecobat France au 06 59 33 00 01">
+        <span class="in"><small>Ligne directe — appel</small><b>06 59 33 00 01</b></span>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></span>
+      </a>
+
+      <div class="tile t-zone reveal d1">
+        <span class="tile-id">T-06 / ZONE</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M24 44s14-12.4 14-24a14 14 0 0 0-28 0c0 11.6 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg>
+        <div><b>Vandœuvre-lès-Nancy (Brabois)</b><span>et agglomération de Nancy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard" aria-hidden="true"></div>
+<section class="trust" aria-label="Repères">
+  <ul>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="6" width="22" height="22" rx="1"/><path d="M5 12h22M11 3v6M21 3v6M10 18h4M10 23h8"/></svg><div><b>Depuis 2009</b><span>SARL immatriculée</span></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 29s10-8.7 10-17a10 10 0 0 0-20 0c0 8.3 10 17 10 17z"/><circle cx="16" cy="12" r="3.5"/></svg><div><b>Vandœuvre</b><span>Technopole de Brabois</span></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24"/></svg><div><b>Agglo de Nancy</b><span>Zone d'intervention</span></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 3L7 18h8l-2 11 11-15h-8z"/></svg><div><b>Gaz · fioul · élec.</b><span>Chaudières &amp; radiateurs</span></div></li>
+  </ul>
+</section>
+<div class="hazard" aria-hidden="true"></div>
+
+<!-- 01 SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 01</b><span>Prestations</span></div>
+      <h2>Toutes les énergies, <mark>un seul interlocuteur.</mark></h2></div>
+      <p>Chaudière gaz, fioul ou électrique, radiateurs électriques : EBF couvre l'ensemble de votre installation de chauffage, de la pose à l'entretien.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="9" y="4" width="22" height="28" rx="2"/><path d="M20 26c-3.5 0-5-3-3-6 .8 1.4 1.6 1.4 2 .6 0-2.4 1.4-4.2 3-5-.4 2.8 2.4 4 1.6 7-.4 2-1.6 3.4-3.6 3.4z" fill="#ffc300"/><path d="M15 32v5M25 32v5"/></svg></div><span class="ref">REF. CH-GAZ</span></div>
+        <h3>Chaudière gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, raccordement et mise en service. Un appareil adapté à la taille de votre logement.</p>
+        <div class="spec">Pose · remplacement</div>
+      </article>
+      <article class="svc reveal d1">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="10" width="18" height="26" rx="2"/><path d="M4 18h18"/><circle cx="13" cy="27" r="4" fill="#ffc300"/><ellipse cx="31" cy="12" rx="5" ry="2.5"/><path d="M26 12v20c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5V12"/></svg></div><span class="ref">REF. CH-FIO</span></div>
+        <h3>Chaudière fioul</h3>
+        <p>Pose, entretien et dépannage de chaudières fioul, du brûleur au circuit, dans le respect de la réglementation en vigueur.</p>
+        <div class="spec">Entretien · dépannage</div>
+      </article>
+      <article class="svc reveal d2">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="9" y="4" width="22" height="30" rx="2"/><path d="M22 11l-5 8h6l-4 8" stroke="#23262b" fill="none"/><path d="M22 11l-5 8h6l-4 8" stroke="#ffc300" stroke-width="1.2"/><path d="M15 34v3M25 34v3"/></svg></div><span class="ref">REF. CH-ELC</span></div>
+        <h3>Chaudière électrique</h3>
+        <p>Une solution compacte, sans conduit ni combustible. Installation et raccordement à votre réseau de radiateurs à eau.</p>
+        <div class="spec">Sans conduit de fumée</div>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="12" width="32" height="18" rx="2"/><path d="M10 15v12M16 15v12M22 15v12M28 15v12"/><rect x="27" y="8" width="7" height="4" fill="#ffc300"/><path d="M8 30v4M32 30v4"/></svg></div><span class="ref">REF. RAD-ELC</span></div>
+        <h3>Radiateurs électriques</h3>
+        <p>Pose et remplacement de radiateurs électriques, pièce par pièce ou pour tout le logement, avec des conseils de puissance.</p>
+        <div class="spec">Pièce par pièce</div>
+      </article>
+      <article class="svc reveal d1">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M26 4a8 8 0 0 0-7.4 10.8L5 28.4a3.4 3.4 0 0 0 4.8 4.8l13.6-13.6A8 8 0 0 0 34 12l-4.6 2.6-4-1.4-1.4-4z"/><circle cx="8" cy="30" r="1.2" fill="#ffc300"/></svg></div><span class="ref">REF. ENT-AN</span></div>
+        <h3>Entretien annuel</h3>
+        <p>Visite d'entretien obligatoire des chaudières gaz et fioul : nettoyage, contrôles, réglages et attestation remise.</p>
+        <div class="spec">Attestation remise</div>
+      </article>
+      <article class="svc reveal d2">
+        <div class="svc-head"><div class="svc-ico"><svg viewBox="0 0 40 40" fill="none" stroke="#23262b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M20 4L3 34h34z" fill="#ffc300"/><path d="M20 15v9M20 29v.5"/></svg></div><span class="ref">REF. DEP-01</span></div>
+        <h3>Dépannage</h3>
+        <p>Chaudière en défaut, plus d'eau chaude, radiateur qui ne chauffe plus : diagnostic, explication, puis réparation.</p>
+        <div class="spec">Gaz · fioul · électrique</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 POURQUOI -->
+<section class="sec dark" id="pourquoi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 02</b><span>Atouts</span></div>
+      <h2>Pourquoi <mark>EBF ?</mark></h2></div>
+      <p>Pas de grandes promesses, des repères concrets.</p>
+    </div>
+    <div class="why reveal">
+      <div class="why-item"><div class="n">A<small>/04</small></div><h3>Polyvalence</h3><p>Gaz, fioul, électrique : une entreprise qui connaît toutes les énergies vous conseille sans parti pris.</p></div>
+      <div class="why-item"><div class="n">B<small>/04</small></div><h3>Ancrage local</h3><p>Établie à Vandœuvre-lès-Nancy, côté Brabois : l'agglomération de Nancy, c'est son terrain quotidien.</p></div>
+      <div class="why-item"><div class="n">C<small>/04</small></div><h3>Depuis 2009</h3><p>Une SARL créée en février 2009 : une structure établie, avec un interlocuteur identifié.</p></div>
+      <div class="why-item"><div class="n">D<small>/04</small></div><h3>Chantier net</h3><p>Devis détaillé avant travaux, intervention organisée, logement rendu propre. Simple et carré.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PROCESS -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 03</b><span>Procédure</span></div>
+      <h2>Comment <mark>ça se passe</mark></h2></div>
+      <p>Quatre étapes, du premier appel à la remise en chauffe.</p>
+    </div>
+    <ol class="process">
+      <li class="step reveal"><div class="num">01</div><span class="mono">Étape 01 — Contact</span><h3>Vous appelez</h3><p>Par téléphone au 06 59 33 00 01 ou par e-mail : vous décrivez votre équipement et votre besoin.</p></li>
+      <li class="step reveal d1"><div class="num">02</div><span class="mono">Étape 02 — Relevé</span><h3>Visite technique</h3><p>Passage sur place pour examiner l'installation, le logement et les contraintes d'accès.</p></li>
+      <li class="step reveal d2"><div class="num">03</div><span class="mono">Étape 03 — Chiffrage</span><h3>Devis détaillé</h3><p>Une proposition poste par poste, sans engagement. Vous validez quand vous êtes prêt.</p></li>
+      <li class="step reveal d3"><div class="num">04</div><span class="mono">Étape 04 — Exécution</span><h3>Intervention</h3><p>Travaux, essais, réglages et explications d'usage. Le chantier est nettoyé avant le départ.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 04 EQUIPEMENT -->
+<section class="sec" id="equipement" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 04</b><span>Fiches techniques</span></div>
+      <h2>Quel équipement <mark>pour votre logement ?</mark></h2></div>
+      <p>Des repères généraux pour comparer. Le bon choix dépend de votre logement, de votre isolation et de vos usages : EBF vous oriente lors de la visite.</p>
+    </div>
+    <div class="equip">
+      <div class="fiche reveal">
+        <div class="fiche-top"><h3>Chaudière gaz</h3><span>FT-01</span></div>
+        <div class="fiche-ill"><svg viewBox="0 0 64 64" fill="none" stroke="#23262b" stroke-width="2.6" stroke-linejoin="round"><rect x="16" y="6" width="32" height="44" rx="3" fill="#fff"/><path d="M32 42c-5 0-7-4-4-8 1 2 2 2 2.5 1 0-3 2-5.5 4-6.5-.5 3.5 3 5 2 9-.5 2.5-2 4.5-4.5 4.5z" fill="#ffc300"/><path d="M24 50v8M40 50v8"/></svg></div>
+        <ul><li><b>Énergie</b>Gaz naturel (réseau)</li><li><b>Stockage</b>Aucun</li><li><b>Idéal pour</b>Maison ou appartement raccordé au gaz</li><li><b>Entretien</b>Annuel obligatoire</li></ul>
+      </div>
+      <div class="fiche reveal d1">
+        <div class="fiche-top"><h3>Chaudière fioul</h3><span>FT-02</span></div>
+        <div class="fiche-ill"><svg viewBox="0 0 64 64" fill="none" stroke="#23262b" stroke-width="2.6" stroke-linejoin="round"><rect x="6" y="16" width="28" height="40" rx="3" fill="#fff"/><path d="M6 28h28"/><circle cx="20" cy="42" r="6" fill="#ffc300"/><ellipse cx="49" cy="20" rx="9" ry="4" fill="#fff"/><path d="M40 20v30c0 2.2 4 4 9 4s9-1.8 9-4V20"/></svg></div>
+        <ul><li><b>Énergie</b>Fioul domestique</li><li><b>Stockage</b>Cuve à prévoir</li><li><b>Idéal pour</b>Maison hors réseau de gaz</li><li><b>Entretien</b>Annuel obligatoire + ramonage</li></ul>
+      </div>
+      <div class="fiche reveal d2">
+        <div class="fiche-top"><h3>Chaudière élec.</h3><span>FT-03</span></div>
+        <div class="fiche-ill"><svg viewBox="0 0 64 64" fill="none" stroke="#23262b" stroke-width="2.6" stroke-linejoin="round"><rect x="16" y="6" width="32" height="46" rx="3" fill="#fff"/><path d="M35 16l-8 13h9l-6 13" fill="none" stroke="#23262b"/><path d="M35 16l-8 13h9l-6 13" stroke="#ffc300" stroke-width="1.2"/><path d="M24 52v6M40 52v6"/></svg></div>
+        <ul><li><b>Énergie</b>Électricité</li><li><b>Stockage</b>Aucun, sans conduit</li><li><b>Idéal pour</b>Petites surfaces avec radiateurs à eau</li><li><b>Entretien</b>Contrôle périodique conseillé</li></ul>
+      </div>
+      <div class="fiche reveal d3">
+        <div class="fiche-top"><h3>Radiateurs élec.</h3><span>FT-04</span></div>
+        <div class="fiche-ill"><svg viewBox="0 0 64 64" fill="none" stroke="#23262b" stroke-width="2.6" stroke-linejoin="round"><rect x="6" y="18" width="52" height="30" rx="3" fill="#fff"/><path d="M15 23v20M24 23v20M33 23v20M42 23v20"/><rect x="46" y="21" width="9" height="6" fill="#ffc300"/><path d="M12 48v6M52 48v6"/></svg></div>
+        <ul><li><b>Énergie</b>Électricité</li><li><b>Stockage</b>Aucun, sans réseau d'eau</li><li><b>Idéal pour</b>Pièce par pièce, rénovation légère</li><li><b>Entretien</b>Très limité</li></ul>
+      </div>
+    </div>
+    <div class="tips">
+      <div class="tip reveal"><h4><i>CHK-1</i>Avant l'hiver</h4><p>Programmez l'entretien de la chaudière dès la fin de l'été pour démarrer la saison sereinement.</p></div>
+      <div class="tip reveal d1"><h4><i>CHK-2</i>Pression</h4><p>Sur une chaudière murale, une pression qui baisse souvent mérite un contrôle (fuite, vase d'expansion).</p></div>
+      <div class="tip reveal d2"><h4><i>CHK-3</i>Radiateurs</h4><p>Un radiateur électrique bien dimensionné et piloté consomme mieux qu'un appareil poussé au maximum.</p></div>
+    </div>
+    <div class="devis-bar reveal">
+      <p>Tarifs : sur devis, après visite technique</p>
+      <a class="btn btn-d" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 ENTREPRISE -->
+<section class="sec" id="entreprise" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 05</b><span>Entreprise</span></div>
+      <h2>Plaque <mark>d'identité</mark></h2></div>
+    </div>
+    <div class="about">
+      <div class="idplate reveal">
+        <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
+        <h3>Ecobat France <span>ID / EBF</span></h3>
+        <dl>
+          <dt>Sigle</dt><dd>EBF</dd>
+          <dt>Forme</dt><dd>SARL</dd>
+          <dt>Création</dt><dd>4 février 2009</dd>
+          <dt>Implantation</dt><dd>Vandœuvre-lès-Nancy (Brabois)</dd>
+          <dt>Secteur</dt><dd>Agglomération de Nancy</dd>
+          <dt>Spécialités</dt><dd>Chaudières gaz, fioul et électriques · radiateurs électriques</dd>
+        </dl>
+        <p class="src">Sources : annuaire-entreprises.data.gouv.fr, HelloWatt.</p>
+      </div>
+      <div class="about-txt reveal d1">
+        <h3>Une entreprise de Vandœuvre, <mark>depuis 2009.</mark></h3>
+        <p>Ecobat France, ou EBF, est une SARL créée le 4 février 2009 et établie à Vandœuvre-lès-Nancy, du côté de la Technopole de Brabois. Depuis, elle intervient sur le chauffage des logements de l'agglomération de Nancy.</p>
+        <p>Sa particularité : ne pas choisir entre les énergies. Chaudières gaz ou fioul, chaudières électriques, radiateurs électriques : EBF peut comparer les solutions avec vous et intervenir sur l'ensemble de votre installation.</p>
+        <p>Une demande, un devis, un chantier mené proprement : c'est la méthode. Pour en discuter, un appel au 06 59 33 00 01 suffit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 AVIS -->
+<section class="sec" id="avis" style="padding-top:0">
+  <div class="wrap">
+    <div class="avis reveal">
+      <div class="avis-ico"><svg viewBox="0 0 48 48" fill="none" stroke="#23262b" stroke-width="2.6" stroke-linejoin="round"><path d="M6 8h36v24H20l-9 8v-8H6z" fill="#fff"/><path d="M14 17h20M14 23h12"/></svg></div>
+      <div>
+        <div class="code"><b>SEC. 06</b><span>Retours clients</span></div>
+        <h3>Vos avis comptent</h3>
+        <p>EBF est intervenu chez vous ? Votre retour aide d'autres habitants de l'agglomération de Nancy à choisir leur chauffagiste. Racontez votre expérience en quelques lignes : il pourra être publié ici avec votre accord.</p>
+      </div>
+      <a class="btn btn-d" href="mailto:ebf54@hotmail.fr?subject=Mon%20avis%20sur%20Ecobat%20France">Donner mon avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- 07 FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 07</b><span>Questions</span></div>
+      <h2>Questions <mark>fréquentes</mark></h2></div>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-01</span>L'entretien de ma chaudière est-il obligatoire ?<span class="pm"></span></button><div class="faq-a"><div><p>Oui pour les chaudières gaz et fioul (de 4 à 400 kW) : l'entretien est annuel et obligatoire, généralement à la charge de l'occupant. Une attestation vous est remise après la visite ; gardez-la, votre assureur peut la demander.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-02</span>Combien de temps pour obtenir un devis ?<span class="pm"></span></button><div class="faq-a"><div><p>Cela dépend de la période et du projet. Pour une installation ou un remplacement, une visite technique est souvent nécessaire. Contactez EBF : un rendez-vous vous sera proposé.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-03</span>Ma chaudière ne démarre plus, que faire ?<span class="pm"></span></button><div class="faq-a"><div><p>Relevez le code erreur affiché, contrôlez la pression et l'alimentation (gaz, fioul ou électricité). Si le problème persiste, appelez le 06 59 33 00 01. En cas d'odeur de gaz : quittez le logement et appelez le numéro d'urgence gaz.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-04</span>Existe-t-il des aides pour changer de chauffage ?<span class="pm"></span></button><div class="faq-a"><div><p>MaPrimeRénov' et les primes CEE peuvent financer une partie de certains travaux, selon votre éligibilité et à condition de passer par un artisan RGE pour les travaux concernés. Les règles changent souvent : vérifiez sur france-renov.gouv.fr avant de signer.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-05</span>Chaudière électrique ou radiateurs électriques ?<span class="pm"></span></button><div class="faq-a"><div><p>Si votre logement a déjà des radiateurs à eau, une chaudière électrique peut les alimenter. Sinon, des radiateurs électriques posés pièce par pièce sont souvent plus simples. EBF vous conseille selon votre configuration.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="k">Q-06</span>Où intervenez-vous ?<span class="pm"></span></button><div class="faq-a"><div><p>Depuis Vandœuvre-lès-Nancy (Brabois), EBF intervient dans l'agglomération de Nancy. Pour une commune voisine, posez simplement la question par téléphone ou par e-mail.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CONTACT -->
+<div class="hazard" aria-hidden="true"></div>
+<section class="sec dark" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="code"><b>SEC. 08</b><span>Contact</span></div>
+      <h2>Lancer <mark>votre chantier</mark></h2></div>
+      <p>Une question, un entretien, un projet de remplacement ? Appelez ou laissez un message.</p>
+    </div>
+    <div class="contact">
+      <div class="panel reveal">
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><div><span class="mono">Téléphone</span><a href="tel:+33659330001">06 59 33 00 01</a></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><div><span class="mono">E-mail</span><a href="mailto:ebf54@hotmail.fr">ebf54@hotmail.fr</a></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="mono">Implantation</span><span class="v">Vandœuvre-lès-Nancy (Brabois) et agglomération de Nancy</span></div></div>
+        <span class="mono" style="display:block;margin-top:20px;color:var(--jaune)">Horaires — indicatifs, à confirmer</span>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Lundi</span><span>Sur RDV</span></li>
+          <li data-d="2"><span>Mardi</span><span>Sur RDV</span></li>
+          <li data-d="3"><span>Mercredi</span><span>Sur RDV</span></li>
+          <li data-d="4"><span>Jeudi</span><span>Sur RDV</span></li>
+          <li data-d="5"><span>Vendredi</span><span>Sur RDV</span></li>
+          <li data-d="6"><span>Samedi</span><span>—</span></li>
+          <li data-d="0"><span>Dimanche</span><span>—</span></li>
+        </ul>
+        <p class="note">Horaires : sur rendez-vous, du lundi au vendredi (à confirmer).</p>
+        <a class="btn btn-y" href="https://www.google.com/maps/search/?api=1&amp;query=Technopole%20de%20Brabois%2C%20Vand%C5%93uvre-l%C3%A8s-Nancy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+      <form id="form" class="reveal d1" novalidate>
+        <h3>Demande de devis</h3>
+        <p>Formulaire technique — remplissez ce que vous savez.</p>
+        <div class="row">
+          <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name"></div>
+          <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
+          <div class="field"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Vandœuvre, Nancy…"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="equip">Équipement</label><select id="equip" name="equip"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chaudière électrique</option><option>Radiateurs électriques</option><option>Je ne sais pas</option></select></div>
+          <div class="field"><label for="besoin">Besoin</label><select id="besoin" name="besoin"><option>Entretien</option><option>Dépannage</option><option>Installation / remplacement</option><option>Conseil</option></select></div>
+        </div>
+        <div class="field"><label for="msg">Détails</label><textarea id="msg" name="msg" placeholder="Marque, âge de l'appareil, surface du logement…"></textarea></div>
+        <button class="btn btn-d" type="submit">Envoyer la demande</button>
+        <p class="form-msg" id="formMsg" role="status">Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="hazard" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="foot-logo"><b>EBF</b>Ecobat France</div><p>SARL créée en 2009. Chaudières gaz, fioul et électriques, radiateurs électriques : installation, entretien, dépannage.</p></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33659330001">06 59 33 00 01</a></li><li><a href="mailto:ebf54@hotmail.fr">ebf54@hotmail.fr</a></li></ul></div>
+      <div><h4>Zone &amp; horaires</h4><p>Vandœuvre-lès-Nancy (Brabois) et agglomération de Nancy</p><p>Sur rendez-vous, du lundi au vendredi (indicatif).</p></div>
+      <div><h4>Navigation</h4><ul><li><a href="#services">Services</a></li><li><a href="#equipement">Équipements</a></li><li><a href="#entreprise">L'entreprise</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="mentions">© 2026 Ecobat France (EBF), SARL — Vandœuvre-lès-Nancy. Mentions légales à compléter (SIREN, siège, hébergeur). Données publiques : annuaire-entreprises.data.gouv.fr, HelloWatt.</div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="float-call" href="tel:+33659330001" aria-label="Appeler Ecobat France au 06 59 33 00 01"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function setMenu(open){burger.setAttribute('aria-expanded',open?'true':'false');burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');menu.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){q.setAttribute('aria-expanded',q.getAttribute('aria-expanded')==='true'?'false':'true');});
+  });
+
+  var li=document.querySelector('#hours li[data-d="'+new Date().getDay()+'"]');if(li)li.classList.add('today');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formMsg').classList.add('show');});
+
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tihay Électricité – électricien et chauffage électrique à Vandœuvre-lès-Nancy</title>
+<meta name="description" content="Tihay Électricité, EURL d'Arnaud Tihay à Vandœuvre-lès-Nancy : chauffage électrique (radiateurs à inertie, chaudières électriques), installation, mise en conformité de tableau et dépannage dans l'agglomération nancéienne.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanc:#fafaf7;
+  --violet:#6b2bff;
+  --violet-fonce:#4b14d6;
+  --vert:#b6ff3b;
+  --noir:#111111;
+  --rose:#ff5c8a;
+  --gris:#4a4a4a;
+  --trait:3px solid var(--noir);
+  --ombre:6px 6px 0 var(--noir);
+  --ombre-l:10px 10px 0 var(--noir);
+  --titre:'Rubik Mono One','Arial Black','Helvetica Neue',Impact,sans-serif;
+  --texte:'Rubik',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--blanc);color:var(--noir);font-family:var(--texte);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.05;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4.6vw,3.4rem);text-transform:uppercase}
+h3{font-size:1.08rem;text-transform:uppercase;line-height:1.2}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--titre);font-size:.92rem;text-transform:uppercase;text-decoration:none;padding:.95em 1.4em;border:var(--trait);box-shadow:var(--ombre);background:var(--vert);color:var(--noir);cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--noir)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--noir)}
+.btn--violet{background:var(--violet);color:#fff}
+.btn--blanc{background:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--blanc);border-bottom:var(--trait)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-size:1.05rem;text-transform:uppercase}
+.logo__m{width:42px;height:42px;background:var(--vert);border:var(--trait);display:grid;place-items:center;box-shadow:3px 3px 0 var(--noir);transform:rotate(-6deg)}
+.logo__m svg{width:22px;height:22px}
+.logo small{display:block;font-family:var(--texte);font-weight:700;font-size:.66rem;letter-spacing:.14em;color:var(--violet)}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+.menu a{display:block;text-decoration:none;font-weight:700;font-size:.95rem;padding:.45em .8em;border:3px solid transparent;transition:background .15s,border-color .15s}
+.menu a:hover{background:var(--vert);border-color:var(--noir)}
+.menu .menu__cta a{background:var(--violet);color:#fff;border-color:var(--noir);box-shadow:3px 3px 0 var(--noir)}
+.menu .menu__cta a:hover{background:var(--rose);color:var(--noir)}
+.burger{display:none;width:50px;height:46px;background:var(--vert);border:var(--trait);box-shadow:3px 3px 0 var(--noir);cursor:pointer;padding:0;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:3px;background:var(--noir);transition:transform .2s,opacity .2s}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Hero écran coupé ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:100vh;padding-top:70px;border-bottom:var(--trait)}
+.hero__g{padding:clamp(40px,6vw,90px) clamp(16px,4vw,64px);display:flex;flex-direction:column;justify-content:center;position:relative;background:
+  radial-gradient(var(--noir) 1.2px,transparent 1.4px) 0 0/22px 22px,var(--blanc);background-blend-mode:normal}
+.hero__g::before{content:"";position:absolute;inset:0;background:var(--blanc);opacity:.86;pointer-events:none}
+.hero__g>*{position:relative}
+.etiquette{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:var(--rose);border:var(--trait);padding:.35em .8em;font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;box-shadow:4px 4px 0 var(--noir);transform:rotate(-2deg);margin-bottom:26px}
+.hero h1{font-size:clamp(2.4rem,6vw,5.4rem);text-transform:uppercase;line-height:.92}
+.hero h1 .surligne{display:inline-block;background:var(--vert);border:var(--trait);padding:0 .12em;margin:.06em 0;box-shadow:var(--ombre);transform:rotate(-1.5deg)}
+.hero h1 .violet{color:var(--violet)}
+.hero__accroche{font-size:clamp(1.08rem,1.6vw,1.3rem);max-width:34em;margin:28px 0 32px;font-weight:500}
+.hero__accroche strong{background:linear-gradient(transparent 60%,var(--vert) 60%)}
+.hero__btns{display:flex;flex-wrap:wrap;gap:18px}
+.hero__d{background:var(--violet);border-left:var(--trait);position:relative;overflow:hidden;display:grid;place-items:center;padding:60px 24px 80px}
+.hero__d::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,rgba(255,255,255,.07) 26px 52px)}
+.hero__illu{position:relative;width:min(440px,92%)}
+.hero__illu .eclair-anim{transform-origin:center;animation:zap 2.6s infinite}
+@keyframes zap{0%,86%,100%{opacity:1}88%{opacity:.25}90%{opacity:1}92%{opacity:.4}}
+.carte-infos{position:absolute;right:clamp(12px,3vw,40px);bottom:clamp(18px,4vw,46px);background:#fff;border:var(--trait);box-shadow:var(--ombre-l);padding:16px 18px;transform:rotate(3deg);max-width:270px;font-size:.92rem;z-index:2}
+.carte-infos h3{font-size:.82rem;margin-bottom:8px;color:var(--violet)}
+.carte-infos ul{list-style:none;margin:0;padding:0}
+.carte-infos li{display:flex;gap:8px;align-items:flex-start;padding:3px 0;font-weight:500}
+.carte-infos li::before{content:"";flex:none;width:10px;height:10px;margin-top:7px;background:var(--vert);border:2px solid var(--noir)}
+.pastille{position:absolute;top:96px;left:22px;width:104px;height:104px;border-radius:50%;background:var(--vert);border:var(--trait);display:grid;place-items:center;text-align:center;font-family:var(--titre);font-size:.7rem;line-height:1.15;text-transform:uppercase;transform:rotate(-12deg);box-shadow:4px 4px 0 var(--noir);z-index:2}
+
+/* ---------- Bandeau défilant ---------- */
+.defile{background:var(--noir);color:var(--vert);border-bottom:var(--trait);overflow:hidden;white-space:nowrap}
+.defile__piste{display:inline-flex;animation:defile 32s linear infinite;padding:14px 0}
+.defile__piste span{font-family:var(--titre);font-size:1.05rem;text-transform:uppercase;display:inline-flex;align-items:center;gap:22px;padding-right:22px}
+.defile__piste svg{width:22px;height:22px}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ---------- Confiance ---------- */
+.confiance{padding:44px 0;border-bottom:var(--trait);background:var(--blanc)}
+.confiance__grille{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.conf{border:var(--trait);background:#fff;padding:18px;display:flex;gap:14px;align-items:center;box-shadow:4px 4px 0 var(--noir)}
+.conf:nth-child(2){background:var(--vert)}
+.conf:nth-child(3){background:var(--rose)}
+.conf svg{width:38px;height:38px;flex:none}
+.conf b{display:block;font-family:var(--titre);font-size:.82rem;text-transform:uppercase;line-height:1.2}
+.conf span{font-size:.9rem;font-weight:500}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.sec{padding:clamp(70px,9vw,120px) 0;border-bottom:var(--trait)}
+.sec__tete{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:50px;flex-wrap:wrap}
+.sec__tete p{max-width:30em;margin:0;font-size:1.08rem}
+.surtitre{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;background:var(--noir);color:var(--vert);padding:.3em .7em;margin-bottom:16px}
+.sec--violet{background:var(--violet);color:#fff}
+.sec--violet .surtitre{background:var(--vert);color:var(--noir)}
+.sec--vert{background:var(--vert)}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.srv{background:#fff;border:var(--trait);box-shadow:var(--ombre);padding:26px 22px 24px;transition:transform .18s,box-shadow .18s,background .18s;position:relative}
+.srv:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:var(--ombre-l);background:#fffdf0}
+.srv__ico{width:66px;height:66px;border:var(--trait);background:var(--vert);display:grid;place-items:center;margin-bottom:20px;box-shadow:3px 3px 0 var(--noir)}
+.srv:nth-child(3n+2) .srv__ico{background:var(--rose)}
+.srv:nth-child(3n) .srv__ico{background:#d9caff}
+.srv__ico svg{width:38px;height:38px}
+.srv h3{margin-bottom:10px}
+.srv p{margin:0;font-size:.96rem;color:var(--gris)}
+.srv__num{position:absolute;top:14px;right:16px;font-family:var(--titre);font-size:.8rem;color:var(--violet)}
+
+/* Pourquoi */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:var(--trait);background:#fff;color:var(--noir);box-shadow:var(--ombre-l)}
+.atout{padding:30px 24px;border-right:var(--trait)}
+.atout:last-child{border-right:0}
+.atout svg{width:48px;height:48px;margin-bottom:16px}
+.atout h3{margin-bottom:10px}
+.atout p{margin:0;font-size:.96rem}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:e}
+.etape{border:var(--trait);background:#fff;padding:24px;position:relative;box-shadow:var(--ombre)}
+.etape__n{font-family:var(--titre);font-size:3.4rem;line-height:1;color:var(--violet);-webkit-text-stroke:2px var(--noir);display:block;margin-bottom:12px}
+.etape:nth-child(even){transform:translateY(26px)}
+.etape h3{margin-bottom:8px}
+.etape p{margin:0;font-size:.96rem}
+
+/* À propos */
+.apropos{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.apropos__visuel{border:var(--trait);background:var(--rose);box-shadow:var(--ombre-l);padding:30px;transform:rotate(-2deg)}
+.apropos__visuel svg{width:100%;height:auto;background:#fff;border:var(--trait)}
+.apropos__txt p{font-size:1.1rem}
+.fiche{display:grid;grid-template-columns:1fr 1fr;border:var(--trait);margin-top:26px;background:#fff}
+.fiche div{padding:14px 16px;border-bottom:var(--trait)}
+.fiche div:nth-child(odd){border-right:var(--trait)}
+.fiche div:nth-last-child(-n+2){border-bottom:0}
+.fiche dt{font-weight:800;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--violet)}
+.fiche dd{margin:2px 0 0;font-weight:600}
+
+/* Comparatif chauffage */
+.compar{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cmp{background:#fff;border:var(--trait);box-shadow:var(--ombre);display:flex;flex-direction:column}
+.cmp__visu{border-bottom:var(--trait);background:var(--blanc);padding:20px;display:grid;place-items:center;height:190px;background-image:linear-gradient(var(--noir) 1px,transparent 1px),linear-gradient(90deg,var(--noir) 1px,transparent 1px);background-size:24px 24px;background-color:#f1efe6;background-blend-mode:normal}
+.cmp__visu svg{height:150px;width:auto;background:transparent}
+.cmp__corps{padding:22px}
+.cmp__corps h3{margin-bottom:6px}
+.cmp__pour{font-weight:800;color:var(--violet);font-size:.9rem;margin-bottom:10px}
+.cmp ul{margin:0 0 14px;padding-left:1.1em;font-size:.95rem}
+.cmp ul li{margin-bottom:4px}
+.tarif{margin-top:auto;display:inline-block;background:var(--noir);color:var(--vert);font-family:var(--titre);font-size:.78rem;padding:.5em .8em;text-transform:uppercase}
+.cmp__pied{padding:0 22px 22px;margin-top:auto}
+.astuce{margin-top:34px;border:var(--trait);background:var(--vert);padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--ombre)}
+.astuce svg{width:44px;height:44px;flex:none}
+.astuce p{margin:0;font-weight:500}
+
+/* Avis */
+.avis{display:grid;grid-template-columns:1.2fr .8fr;gap:0;border:var(--trait);box-shadow:var(--ombre-l);background:#fff}
+.avis__g{padding:40px;border-right:var(--trait)}
+.avis__g h2{font-size:clamp(1.6rem,3.6vw,2.6rem);margin-bottom:18px}
+.avis__d{background:var(--rose);display:grid;place-items:center;padding:30px}
+.avis__d svg{width:min(260px,100%)}
+
+/* FAQ */
+.faq{display:grid;gap:16px;max-width:900px}
+.q{border:var(--trait);background:#fff;box-shadow:4px 4px 0 var(--noir)}
+.q button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 20px;cursor:pointer;font-weight:800;font-size:1.04rem}
+.q button:focus-visible{outline:3px solid var(--rose);outline-offset:-6px}
+.q__plus{flex:none;width:34px;height:34px;border:var(--trait);background:var(--vert);display:grid;place-items:center;font-family:var(--titre);font-size:1rem;transition:transform .2s,background .2s}
+.q button[aria-expanded="true"] .q__plus{transform:rotate(45deg);background:var(--rose)}
+.q__r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s}
+.q__r>div{overflow:hidden}
+.q__r p{padding:0 20px 18px;margin:0}
+.q.ouvert .q__r{grid-template-rows:1fr}
+.q.ouvert{background:#f6f1ff}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:.95fr 1.05fr;gap:36px;align-items:start}
+.bloc{border:var(--trait);background:#fff;box-shadow:var(--ombre);padding:28px;color:var(--noir)}
+.bloc + .bloc{margin-top:24px}
+.bloc h3{margin-bottom:14px}
+.coord{list-style:none;margin:0 0 20px;padding:0}
+.coord li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:2px dashed var(--noir)}
+.coord li:last-child{border-bottom:0}
+.coord svg{width:24px;height:24px;flex:none;margin-top:2px}
+.coord a{font-weight:700;word-break:break-word}
+.horaires{width:100%;border-collapse:collapse;font-size:.96rem}
+.horaires td{padding:8px 10px;border-bottom:2px solid #e3e0d6}
+.horaires td:last-child{text-align:right;font-weight:600}
+.horaires tr.auj td{background:var(--vert);border-bottom-color:var(--noir);font-weight:800}
+.horaires tr.auj td:first-child::after{content:" · aujourd'hui";font-weight:500;font-size:.85em}
+.indicatif{font-size:.86rem;color:var(--gris);margin:12px 0 0}
+form{display:grid;gap:16px}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:800;font-size:.86rem;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px 14px;border:var(--trait);background:var(--blanc);color:var(--noir);border-radius:0;transition:box-shadow .15s,background .15s}
+input:focus,select:focus,textarea:focus{outline:none;background:#fff;box-shadow:4px 4px 0 var(--violet)}
+textarea{min-height:130px;resize:vertical}
+.msg{display:none;border:var(--trait);background:var(--vert);padding:14px 16px;font-weight:700}
+.msg.vu{display:block}
+
+/* Footer */
+footer{background:var(--noir);color:#f2f2ec;padding:70px 0 0}
+.pied{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding-bottom:50px}
+footer h3{color:var(--vert);font-size:.9rem;margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px}
+footer a{color:#fff;text-decoration-color:var(--vert);text-underline-offset:3px}
+footer a:hover{color:var(--vert)}
+.pied__logo{font-family:var(--titre);font-size:1.6rem;text-transform:uppercase;line-height:1;margin-bottom:14px}
+.pied__logo span{color:var(--vert)}
+.mentions{border-top:2px solid #333;padding:20px 0;font-size:.85rem;color:#bdbdb5;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.demo{background:var(--rose);color:var(--noir);text-align:center;font-size:.84rem;font-weight:600;padding:10px 16px;border-top:var(--trait)}
+
+/* Appel flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:62px;height:62px;border:var(--trait);background:var(--vert);box-shadow:4px 4px 0 var(--noir);place-items:center;border-radius:50%}
+.flottant svg{width:28px;height:28px}
+
+/* Révélations */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vu{opacity:1;transform:none}
+.etape.reveal.vu:nth-child(even){transform:translateY(26px)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:1fr 1fr}
+  .atout:nth-child(2){border-right:0}
+  .atout:nth-child(-n+2){border-bottom:var(--trait)}
+  .etapes{grid-template-columns:1fr 1fr}
+  .confiance__grille{grid-template-columns:1fr 1fr}
+  .pied{grid-template-columns:1fr 1fr}
+  .compar{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--vert);border-bottom:var(--trait);padding:10px 16px 20px;transform:translateY(-120%);visibility:hidden;transition:transform .25s,visibility .25s}
+  .menu.ouvert{transform:none;visibility:visible}
+  .menu a{font-family:var(--titre);font-size:1.05rem;text-transform:uppercase;padding:14px 6px;border:0;border-bottom:3px solid var(--noir)}
+  .menu a:hover{background:#fff}
+  .menu .menu__cta a{margin-top:14px;text-align:center;border:var(--trait)}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero__d{border-left:0;border-top:var(--trait);padding:56px 16px 44px;gap:30px}
+  .pastille{top:20px;left:16px;width:88px;height:88px;font-size:.6rem}
+  .carte-infos{position:relative;right:auto;bottom:auto;transform:rotate(2deg);max-width:340px;width:100%}
+  .apropos,.contact,.avis{grid-template-columns:1fr}
+  .avis__g{border-right:0;border-bottom:var(--trait)}
+  .compar{grid-template-columns:1fr}
+  .flottant{display:grid}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .services,.etapes,.confiance__grille,.atouts,.pied,.ligne2{grid-template-columns:1fr}
+  .atout{border-right:0;border-bottom:var(--trait)}
+  .atout:last-child{border-bottom:0}
+  .etape:nth-child(even),.etape.reveal.vu:nth-child(even){transform:none}
+  .avis__g,.bloc{padding:22px}
+  .fiche{grid-template-columns:1fr}
+  .fiche div{border-right:0!important;border-bottom:var(--trait)!important}
+  .fiche div:last-child{border-bottom:0!important}
+  .hero__btns .btn{width:100%;justify-content:center}
+  .mentions{flex-direction:column}
+  .logo{font-size:.9rem}
+  .apropos__visuel{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Sprites SVG -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-eclair" viewBox="0 0 24 24"><path d="M13.5 1.5 4 13.5h6.5L9 22.5l10-12.5h-6.6z" fill="currentColor" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5.2 2.8h3.6l1.7 4.6-2.3 1.5a12 12 0 0 0 6.9 6.9l1.5-2.3 4.6 1.7v3.6a2.4 2.4 0 0 1-2.6 2.4A18.5 18.5 0 0 1 2.8 5.4a2.4 2.4 0 0 1 2.4-2.6z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="m3 5.5 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.1 7-12.5A7 7 0 0 0 5 9.5C5 14.9 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+  <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav__in">
+    <a href="#accueil" class="logo" aria-label="Tihay Électricité, retour en haut">
+      <span class="logo__m"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-eclair" fill="#6b2bff" color="#6b2bff"/></svg></span>
+      <span>Tihay<small>Électricité · Vandœuvre</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#chauffage">Chauffage</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#apropos">L'entreprise</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="menu__cta"><a href="#contact">Devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="accueil">
+  <div class="hero__g">
+    <span class="etiquette"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-eclair" color="#b6ff3b"/></svg> Électricien · Vandœuvre-lès-Nancy</span>
+    <h1>Tihay<br><span class="surligne">Électri&shy;cité</span><br><span class="violet">sous tension.</span></h1>
+    <p class="hero__accroche">Radiateurs à inertie, chaudière électrique, tableau à remettre aux normes : <strong>Arnaud Tihay remet du courant propre et de la chaleur douce</strong> dans les maisons et appartements de Vandœuvre et de l'agglomération nancéienne.</p>
+    <div class="hero__btns">
+      <a class="btn" href="tel:+33383190350"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+      <a class="btn btn--violet" href="#contact">Demander un devis <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </div>
+  </div>
+  <div class="hero__d">
+    <div class="pastille" aria-hidden="true">Chauffage<br>électrique<br>⚡ 54</div>
+    <svg class="hero__illu" viewBox="0 0 420 440" role="img" aria-label="Illustration : tableau électrique, radiateur et éclair">
+      <!-- ombre tableau -->
+      <rect x="62" y="34" width="210" height="250" fill="#111"/>
+      <rect x="50" y="22" width="210" height="250" fill="#fafaf7" stroke="#111" stroke-width="4"/>
+      <rect x="50" y="22" width="210" height="36" fill="#b6ff3b" stroke="#111" stroke-width="4"/>
+      <text x="155" y="47" text-anchor="middle" font-family="Rubik Mono One, Arial Black, sans-serif" font-size="15" fill="#111">TABLEAU</text>
+      <!-- rail 1 -->
+      <rect x="70" y="76" width="170" height="8" fill="#111"/>
+      <g stroke="#111" stroke-width="3">
+        <rect x="74" y="86" width="26" height="56" fill="#fff"/><rect x="103" y="86" width="26" height="56" fill="#fff"/><rect x="132" y="86" width="26" height="56" fill="#fff"/><rect x="161" y="86" width="26" height="56" fill="#fff"/><rect x="190" y="86" width="44" height="56" fill="#ff5c8a"/>
+      </g>
+      <g fill="#111"><rect x="81" y="98" width="12" height="16"/><rect x="110" y="110" width="12" height="16"/><rect x="139" y="98" width="12" height="16"/><rect x="168" y="98" width="12" height="16"/><rect x="204" y="98" width="16" height="16"/></g>
+      <!-- rail 2 -->
+      <rect x="70" y="158" width="170" height="8" fill="#111"/>
+      <g stroke="#111" stroke-width="3">
+        <rect x="74" y="168" width="26" height="56" fill="#fff"/><rect x="103" y="168" width="26" height="56" fill="#fff"/><rect x="132" y="168" width="26" height="56" fill="#6b2bff"/><rect x="161" y="168" width="26" height="56" fill="#fff"/><rect x="190" y="168" width="26" height="56" fill="#fff"/>
+      </g>
+      <g fill="#111"><rect x="81" y="180" width="12" height="16"/><rect x="110" y="180" width="12" height="16"/><rect x="139" y="192" width="12" height="16" fill="#b6ff3b"/><rect x="168" y="180" width="12" height="16"/><rect x="197" y="192" width="12" height="16"/></g>
+      <rect x="74" y="238" width="160" height="18" fill="#fff" stroke="#111" stroke-width="3"/>
+      <g stroke="#111" stroke-width="2"><line x1="84" y1="247" x2="120" y2="247"/><line x1="130" y1="247" x2="170" y2="247"/><line x1="180" y1="247" x2="222" y2="247"/></g>
+      <!-- câbles -->
+      <path d="M155 272 v38 q0 18 22 18 h70" fill="none" stroke="#111" stroke-width="7"/>
+      <path d="M155 272 v38 q0 18 22 18 h70" fill="none" stroke="#b6ff3b" stroke-width="3"/>
+      <!-- radiateur -->
+      <rect x="168" y="300" width="232" height="120" fill="#111"/>
+      <rect x="156" y="288" width="232" height="120" fill="#fafaf7" stroke="#111" stroke-width="4"/>
+      <g stroke="#111" stroke-width="3" fill="#fff">
+        <rect x="172" y="304" width="22" height="88"/><rect x="200" y="304" width="22" height="88"/><rect x="228" y="304" width="22" height="88"/><rect x="256" y="304" width="22" height="88"/><rect x="284" y="304" width="22" height="88"/><rect x="312" y="304" width="22" height="88"/>
+      </g>
+      <rect x="344" y="304" width="30" height="40" fill="#b6ff3b" stroke="#111" stroke-width="3"/>
+      <circle cx="359" cy="324" r="8" fill="#fff" stroke="#111" stroke-width="3"/>
+      <line x1="359" y1="324" x2="364" y2="318" stroke="#111" stroke-width="3"/>
+      <rect x="344" y="352" width="30" height="10" fill="#ff5c8a" stroke="#111" stroke-width="2"/>
+      <rect x="176" y="408" width="14" height="14" fill="#111"/><rect x="354" y="408" width="14" height="14" fill="#111"/>
+      <!-- ondes de chaleur -->
+      <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round">
+        <path d="M200 276 q-10 -14 0 -28 q10 -14 0 -28"/>
+        <path d="M246 276 q-10 -14 0 -28 q10 -14 0 -28" opacity=".7"/>
+        <path d="M292 276 q-10 -14 0 -28 q10 -14 0 -28"/>
+      </g>
+      <!-- éclair -->
+      <g class="eclair-anim">
+        <path d="M330 6 268 128h44l-30 104 98-142h-52l36-84z" fill="#111" transform="translate(8 8)"/>
+        <path d="M330 6 268 128h44l-30 104 98-142h-52l36-84z" fill="#b6ff3b" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+      </g>
+      <!-- étincelles -->
+      <g stroke="#ff5c8a" stroke-width="5" stroke-linecap="round"><line x1="404" y1="150" x2="416" y2="140"/><line x1="404" y1="168" x2="418" y2="170"/><line x1="24" y1="300" x2="10" y2="292"/><line x1="26" y1="318" x2="10" y2="322"/></g>
+    </svg>
+    <div class="carte-infos">
+      <h3>Fiche express</h3>
+      <ul>
+        <li>EURL dirigée par Arnaud Tihay</li>
+        <li>1 rue du Beaujolais, Vandœuvre</li>
+        <li>Tél. 03 83 19 03 50</li>
+        <li>Intervention sur rendez-vous</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DÉFILANT ================= -->
+<div class="defile" aria-hidden="true">
+  <div class="defile__piste">
+    <span>Radiateurs à inertie <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Chaudière électrique <svg><use href="#i-eclair" color="#ff5c8a"/></svg> Tableau électrique <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Mise en conformité <svg><use href="#i-eclair" color="#ff5c8a"/></svg> Dépannage <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Chauffe-eau électrique <svg><use href="#i-eclair" color="#ff5c8a"/></svg></span>
+    <span>Radiateurs à inertie <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Chaudière électrique <svg><use href="#i-eclair" color="#ff5c8a"/></svg> Tableau électrique <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Mise en conformité <svg><use href="#i-eclair" color="#ff5c8a"/></svg> Dépannage <svg><use href="#i-eclair" color="#b6ff3b"/></svg> Chauffe-eau électrique <svg><use href="#i-eclair" color="#ff5c8a"/></svg></span>
+  </div>
+</div>
+
+<!-- ================= CONFIANCE ================= -->
+<section class="confiance" aria-label="En bref">
+  <div class="wrap confiance__grille">
+    <div class="conf reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 37s12-12 12-21a12 12 0 0 0-24 0c0 9 12 21 12 21z" fill="#6b2bff" stroke="#111" stroke-width="3"/><circle cx="20" cy="16" r="4.5" fill="#fafaf7" stroke="#111" stroke-width="3"/></svg>
+      <div><b>Basé à Vandœuvre</b><span>1 rue du Beaujolais, 54500</span></div>
+    </div>
+    <div class="conf reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="20" cy="20" r="8" fill="none" stroke="#111" stroke-width="3"/><circle cx="20" cy="20" r="2.5" fill="#111"/></svg>
+      <div><b>Agglo nancéienne</b><span>Vandœuvre, Nancy et alentours</span></div>
+    </div>
+    <div class="conf reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="9" width="28" height="24" fill="#fff" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3"><line x1="13" y1="13" x2="13" y2="29"/><line x1="20" y1="13" x2="20" y2="29"/><line x1="27" y1="13" x2="27" y2="29"/></g></svg>
+      <div><b>Chauffage électrique</b><span>Radiateurs et chaudières électriques</span></div>
+    </div>
+    <div class="conf reveal">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="30" height="30" fill="#b6ff3b" stroke="#111" stroke-width="3"/><path d="M22 8 13 22h7l-2 10 9-14h-7z" fill="#111"/></svg>
+      <div><b>Électricité générale</b><span>Installation, tableau, dépannage</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Ce qu'on branche</span><h2>Six métiers,<br>un seul câble.</h2></div>
+      <p>Du radiateur qui chauffe enfin toute la pièce au tableau qui ne disjoncte plus quand le four et le lave-linge tournent ensemble : un interlocuteur unique pour tout ce qui passe par le compteur.</p>
+    </div>
+    <div class="services">
+      <article class="srv reveal"><span class="srv__num">01</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="10" width="32" height="22" fill="#fff" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3"><line x1="11" y1="14" x2="11" y2="28"/><line x1="17" y1="14" x2="17" y2="28"/><line x1="23" y1="14" x2="23" y2="28"/></g><rect x="27" y="14" width="5" height="6" fill="#111"/><line x1="8" y1="32" x2="8" y2="36" stroke="#111" stroke-width="3"/><line x1="32" y1="32" x2="32" y2="36" stroke="#111" stroke-width="3"/></svg></div>
+        <h3>Radiateurs à inertie</h3>
+        <p>Remplacement des vieux convecteurs « grille-pain » par des radiateurs à inertie programmables, pour une chaleur plus homogène pièce par pièce.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">02</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="4" width="22" height="30" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="20" cy="15" r="5" fill="none" stroke="#111" stroke-width="3"/><path d="M21 11.5 18 16h3l-1 3" fill="none" stroke="#111" stroke-width="2"/><rect x="13" y="24" width="14" height="5" fill="#111"/><g stroke="#111" stroke-width="3"><line x1="15" y1="34" x2="15" y2="38"/><line x1="25" y1="34" x2="25" y2="38"/></g></svg></div>
+        <h3>Chaudière électrique</h3>
+        <p>Pose et raccordement de chaudières électriques murales, une solution sans gaz ni conduit de fumée pour le chauffage central et l'eau chaude.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">03</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="4" width="30" height="32" fill="#fff" stroke="#111" stroke-width="3"/><line x1="9" y1="13" x2="31" y2="13" stroke="#111" stroke-width="3"/><g fill="#111"><rect x="10" y="16" width="4" height="7"/><rect x="16" y="16" width="4" height="7"/><rect x="22" y="16" width="4" height="7"/></g><line x1="9" y1="26" x2="31" y2="26" stroke="#111" stroke-width="3"/><path d="m12 31 3 2 6-5" fill="none" stroke="#111" stroke-width="3"/></svg></div>
+        <h3>Tableau &amp; conformité</h3>
+        <p>Rénovation de tableau électrique, ajout de différentiels 30 mA et mise en conformité avec la norme NF C 15-100 après diagnostic.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">04</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 36V16L20 6l12 10v20z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M22 14 15 25h5l-2 8 8-11h-5z" fill="#111"/></svg></div>
+        <h3>Installation électrique</h3>
+        <p>Électricité complète en rénovation ou extension : circuits, gaines, prises et points lumineux, pensés pour l'usage réel de chaque pièce.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">05</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M26 5 34 13 20 27l-8-8z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="m14 21-8 8 5 5 8-8" fill="none" stroke="#111" stroke-width="3"/><line x1="29" y1="9" x2="33" y2="5" stroke="#111" stroke-width="3"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Disjoncteur qui saute, prise morte, radiateur qui ne chauffe plus : recherche de panne méthodique et réparation durable, pas un simple contournement.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">06</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4a10 10 0 0 0-6 18v5h12v-5a10 10 0 0 0-6-18z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/><line x1="15" y1="31" x2="25" y2="31" stroke="#111" stroke-width="3"/><line x1="17" y1="35" x2="23" y2="35" stroke="#111" stroke-width="3"/></svg></div>
+        <h3>Prises &amp; éclairage</h3>
+        <p>Ajout de prises, spots encastrés, éclairage extérieur ou va-et-vient : les petits travaux qui changent le quotidien, faits proprement.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">07</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="11" y="3" width="18" height="32" rx="9" fill="#fff" stroke="#111" stroke-width="3"/><path d="M15 26h10" stroke="#111" stroke-width="3"/><path d="M21 9 17 16h4l-2 5" fill="none" stroke="#111" stroke-width="2.4"/><g stroke="#111" stroke-width="3"><line x1="16" y1="35" x2="16" y2="38"/><line x1="24" y1="35" x2="24" y2="38"/></g></svg></div>
+        <h3>Chauffe-eau électrique</h3>
+        <p>Remplacement de ballon d'eau chaude, raccordement au tableau et programmation heures creuses pour chauffer l'eau au meilleur moment.</p>
+      </article>
+      <article class="srv reveal"><span class="srv__num">08</span>
+        <div class="srv__ico"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="5" width="26" height="30" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="20" cy="18" r="7" fill="none" stroke="#111" stroke-width="3"/><path d="M20 18l4-4" stroke="#111" stroke-width="3"/><line x1="12" y1="30" x2="28" y2="30" stroke="#111" stroke-width="3"/></svg></div>
+        <h3>Programmation &amp; régulation</h3>
+        <p>Thermostats, fil pilote et gestionnaire d'énergie : chaque pièce à la bonne température, au bon moment, sans y penser.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="sec sec--violet" id="pourquoi">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Pourquoi Tihay</span><h2>Courant direct,<br>sans détour.</h2></div>
+      <p>Une petite structure locale, c'est un seul nom au bout du fil, et quelqu'un qui connaît les logements du secteur.</p>
+    </div>
+    <div class="atouts reveal">
+      <div class="atout">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="16" r="9" fill="#b6ff3b" stroke="#111" stroke-width="3"/><path d="M8 44c0-9 7-15 16-15s16 6 16 15z" fill="#fff" stroke="#111" stroke-width="3"/></svg>
+        <h3>Un seul interlocuteur</h3>
+        <p>Vous échangez directement avec Arnaud Tihay, du premier appel à la mise en service.</p>
+      </div>
+      <div class="atout">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="26" fill="#ff5c8a" stroke="#111" stroke-width="3"/><path d="M26 15 17 29h7l-2 7 9-13h-7z" fill="#111"/></svg>
+        <h3>Double compétence</h3>
+        <p>Électricien et spécialiste du chauffage électrique : le radiateur et le circuit qui l'alimente sont pensés ensemble.</p>
+      </div>
+      <div class="atout">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44s14-14 14-25a14 14 0 0 0-28 0c0 11 14 25 14 25z" fill="#6b2bff" stroke="#111" stroke-width="3"/><circle cx="24" cy="19" r="5" fill="#fafaf7" stroke="#111" stroke-width="3"/></svg>
+        <h3>Ancré à Vandœuvre</h3>
+        <p>Basé rue du Beaujolais : Nancy, Villers, Laxou ou Jarville sont à quelques minutes.</p>
+      </div>
+      <div class="atout">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="5" width="28" height="38" fill="#fff" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="3"><line x1="16" y1="15" x2="32" y2="15"/><line x1="16" y1="22" x2="32" y2="22"/><line x1="16" y1="29" x2="26" y2="29"/></g><circle cx="34" cy="36" r="8" fill="#b6ff3b" stroke="#111" stroke-width="3"/><path d="m30 36 3 3 5-6" fill="none" stroke="#111" stroke-width="2.6"/></svg>
+        <h3>Devis clair</h3>
+        <p>Un chiffrage détaillé poste par poste, après visite : vous savez ce que vous payez, et pourquoi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTHODE ================= -->
+<section class="sec" id="methode">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Comment ça se passe</span><h2>Quatre étapes,<br>zéro court-circuit.</h2></div>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal"><span class="etape__n">01</span><h3>Premier contact</h3><p>Un appel ou un message : vous décrivez le besoin, on fixe ensemble un créneau de visite.</p></div>
+      <div class="etape reveal"><span class="etape__n">02</span><h3>Visite &amp; diagnostic</h3><p>Relevé du tableau, des pièces à chauffer et de l'isolation pour dimensionner juste.</p></div>
+      <div class="etape reveal"><span class="etape__n">03</span><h3>Devis détaillé</h3><p>Matériel, main-d'œuvre, options : tout est écrit noir sur blanc, sans engagement.</p></div>
+      <div class="etape reveal"><span class="etape__n">04</span><h3>Pose &amp; mise en service</h3><p>Chantier propre, essais, réglage de la programmation et explications avant de partir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAUFFAGE (section métier) ================= -->
+<section class="sec sec--vert" id="chauffage">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Quel chauffage électrique ?</span><h2>Choisir son<br>équipement.</h2></div>
+      <p>Trois familles d'équipements, trois usages. Le bon choix dépend de votre logement, de son isolation et de votre façon d'y vivre : on en parle lors de la visite.</p>
+    </div>
+    <div class="compar">
+      <article class="cmp reveal">
+        <div class="cmp__visu"><svg viewBox="0 0 160 130" aria-hidden="true"><rect x="14" y="20" width="140" height="92" fill="#111"/><rect x="6" y="12" width="140" height="92" fill="#fff" stroke="#111" stroke-width="4"/><g stroke="#111" stroke-width="3" fill="#d9caff"><rect x="18" y="24" width="16" height="66"/><rect x="40" y="24" width="16" height="66"/><rect x="62" y="24" width="16" height="66"/><rect x="84" y="24" width="16" height="66"/></g><rect x="110" y="24" width="26" height="30" fill="#b6ff3b" stroke="#111" stroke-width="3"/><circle cx="123" cy="39" r="6" fill="#fff" stroke="#111" stroke-width="2.5"/></svg></div>
+        <div class="cmp__corps">
+          <h3>Radiateur à inertie</h3>
+          <p class="cmp__pour">Pièces de vie, séjour, chambres</p>
+          <ul><li>Cœur de chauffe qui restitue la chaleur en douceur</li><li>Programmation et détection d'ouverture selon modèles</li><li>Pose sur circuit existant si le tableau le permet</li></ul>
+        </div>
+        <div class="cmp__pied"><span class="tarif">Tarif : sur devis</span></div>
+      </article>
+      <article class="cmp reveal">
+        <div class="cmp__visu"><svg viewBox="0 0 160 130" aria-hidden="true"><rect x="52" y="12" width="72" height="110" fill="#111"/><rect x="44" y="4" width="72" height="110" fill="#fff" stroke="#111" stroke-width="4"/><rect x="56" y="18" width="48" height="26" fill="#6b2bff" stroke="#111" stroke-width="3"/><path d="M83 22 74 34h7l-2 7" fill="none" stroke="#b6ff3b" stroke-width="3"/><circle cx="68" cy="62" r="7" fill="#ff5c8a" stroke="#111" stroke-width="3"/><circle cx="92" cy="62" r="7" fill="#fff" stroke="#111" stroke-width="3"/><g stroke="#111" stroke-width="4"><line x1="60" y1="114" x2="60" y2="126"/><line x1="80" y1="114" x2="80" y2="126"/><line x1="100" y1="114" x2="100" y2="126"/></g></svg></div>
+        <div class="cmp__corps">
+          <h3>Chaudière électrique</h3>
+          <p class="cmp__pour">Maison avec radiateurs à eau ou plancher</p>
+          <ul><li>Conserve le réseau de radiateurs à eau existant</li><li>Aucun conduit de fumée ni arrivée de gaz</li><li>Puissance à adapter à l'abonnement et au tableau</li></ul>
+        </div>
+        <div class="cmp__pied"><span class="tarif">Tarif : sur devis</span></div>
+      </article>
+      <article class="cmp reveal">
+        <div class="cmp__visu"><svg viewBox="0 0 160 130" aria-hidden="true"><rect x="64" y="12" width="48" height="112" rx="24" fill="#111"/><rect x="56" y="4" width="48" height="112" rx="24" fill="#fff" stroke="#111" stroke-width="4"/><path d="M58 64h44v26a22 22 0 0 1-44 0z" fill="#ff5c8a" opacity=".9"/><rect x="56" y="4" width="48" height="112" rx="24" fill="none" stroke="#111" stroke-width="4"/><path d="M84 24 74 40h8l-3 10" fill="none" stroke="#111" stroke-width="3.5"/></svg></div>
+        <div class="cmp__corps">
+          <h3>Chauffe-eau électrique</h3>
+          <p class="cmp__pour">Eau chaude sanitaire</p>
+          <ul><li>Capacité choisie selon le nombre d'occupants</li><li>Asservissement heures creuses au tableau</li><li>Dépose et évacuation de l'ancien ballon</li></ul>
+        </div>
+        <div class="cmp__pied"><span class="tarif">Tarif : sur devis</span></div>
+      </article>
+    </div>
+    <div class="astuce reveal">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="#fff" stroke="#111" stroke-width="3"/><path d="M22 12v13" stroke="#111" stroke-width="4"/><circle cx="22" cy="32" r="2.6" fill="#111"/></svg>
+      <p>Avant de changer vos radiateurs, un coup d'œil au tableau s'impose : des circuits trop anciens ou sous-dimensionnés peuvent limiter les nouveaux équipements. Le diagnostic fait partie de la visite.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="sec" id="apropos">
+  <div class="wrap apropos">
+    <div class="apropos__visuel reveal">
+      <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'une maison alimentée par un éclair">
+        <rect width="400" height="300" fill="#fafaf7"/>
+        <g stroke="#111" stroke-width="1" opacity=".12"><path d="M0 50h400M0 100h400M0 150h400M0 200h400M0 250h400M50 0v300M100 0v300M150 0v300M200 0v300M250 0v300M300 0v300M350 0v300"/></g>
+        <rect x="0" y="252" width="400" height="48" fill="#111"/>
+        <rect x="98" y="132" width="180" height="128" fill="#111"/>
+        <rect x="86" y="120" width="180" height="128" fill="#fff" stroke="#111" stroke-width="4"/>
+        <path d="M70 128 176 48l106 80" fill="#6b2bff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+        <rect x="112" y="150" width="44" height="40" fill="#b6ff3b" stroke="#111" stroke-width="4"/>
+        <line x1="134" y1="150" x2="134" y2="190" stroke="#111" stroke-width="3"/>
+        <rect x="196" y="176" width="44" height="72" fill="#ff5c8a" stroke="#111" stroke-width="4"/>
+        <circle cx="230" cy="214" r="3.5" fill="#111"/>
+        <path d="M302 20 268 92h26l-18 60 58-84h-30l22-48z" fill="#b6ff3b" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M316 200h40v52h-40z" fill="#fff" stroke="#111" stroke-width="4"/>
+        <path d="M336 210 328 226h7l-3 12 10-16h-7l3-12z" fill="#111"/>
+        <text x="20" y="282" font-family="Rubik Mono One, Arial Black, sans-serif" font-size="16" fill="#b6ff3b">VANDŒUVRE · 54500</text>
+      </svg>
+    </div>
+    <div class="apropos__txt reveal">
+      <span class="surtitre">L'entreprise</span>
+      <h2>Arnaud Tihay,<br>électricien.</h2>
+      <p style="margin-top:22px">Tihay Électricité est une EURL dirigée par Arnaud Tihay, installée au 1 rue du Beaujolais à Vandœuvre-lès-Nancy. L'entreprise intervient en électricité générale et s'est fait une spécialité du chauffage électrique : radiateurs et chaudières électriques.</p>
+      <p>Concrètement, cela veut dire un artisan qui regarde à la fois l'appareil et l'installation qui le fait tourner, pour que le confort ne se paie pas en disjonctions. Particuliers, propriétaires ou bailleurs de l'agglomération nancéienne : chaque chantier commence par une visite et un devis écrit.</p>
+      <dl class="fiche">
+        <div><dt>Forme</dt><dd>EURL</dd></div>
+        <div><dt>Dirigeant</dt><dd>Arnaud Tihay</dd></div>
+        <div><dt>Siège</dt><dd>Vandœuvre-lès-Nancy</dd></div>
+        <div><dt>Secteur</dt><dd>Agglomération nancéienne</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="sec" id="avis" style="padding-top:0;border-top:0">
+  <div class="wrap">
+    <div class="avis reveal">
+      <div class="avis__g">
+        <span class="surtitre">Vos avis comptent</span>
+        <h2>Vous avez fait appel à Tihay ?</h2>
+        <p>Cette page démarre tout juste : aucun avis n'y est encore publié. Si Arnaud est déjà intervenu chez vous, votre retour aidera vos voisins de Vandœuvre et de Nancy à choisir leur électricien en confiance.</p>
+        <p>Quelques lignes suffisent : le type de travaux, le déroulement, le résultat.</p>
+        <a class="btn btn--violet" href="#contact">Partager mon expérience <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+      </div>
+      <div class="avis__d" aria-hidden="true">
+        <svg viewBox="0 0 260 220"><rect x="20" y="20" width="220" height="140" fill="#111"/><rect x="10" y="10" width="220" height="140" fill="#fff" stroke="#111" stroke-width="4"/><path d="M50 150v50l40-50" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/><g stroke="#111" stroke-width="5" stroke-linecap="square"><line x1="40" y1="50" x2="190" y2="50"/><line x1="40" y1="80" x2="170" y2="80"/><line x1="40" y1="110" x2="130" y2="110"/></g><path d="M200 86 180 120h14l-6 26 24-36h-14l8-24z" fill="#b6ff3b" stroke="#111" stroke-width="3" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq" style="background:#f1efe6">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Questions fréquentes</span><h2>On vous<br>éclaire.</h2></div>
+      <p>Les réponses ci-dessous sont générales : chaque logement est différent, la visite permet de préciser.</p>
+    </div>
+    <div class="faq">
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r1" id="b1">Faut-il un entretien annuel pour un chauffage électrique ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r1" role="region" aria-labelledby="b1"><div><p>L'entretien annuel obligatoire concerne les chaudières à combustible (gaz, fioul, bois) de 4 à 400 kW. Un radiateur ou une chaudière électrique n'y est pas soumis, mais une vérification régulière (connexions, organes de sécurité, programmation) reste conseillée pour la durée de vie de l'équipement.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r2" id="b2">Sous quel délai puis-je obtenir un devis ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r2" role="region" aria-labelledby="b2"><div><p>Le devis est établi après une visite sur place, le temps de relever le tableau et les pièces concernées. Le délai dépend du planning du moment : le plus simple est d'appeler au 03 83 19 03 50 pour convenir d'un rendez-vous.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r3" id="b3">Puis-je bénéficier d'aides comme MaPrimeRénov' ou les CEE ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r3" role="region" aria-labelledby="b3"><div><p>Certaines aides publiques (MaPrimeRénov', certificats d'économies d'énergie) existent pour des travaux d'amélioration énergétique, selon éligibilité, et sont généralement conditionnées à l'intervention d'un artisan RGE. Les règles évoluent souvent : renseignez-vous auprès de France Rénov' avant de signer un devis.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r4" id="b4">Intervenez-vous en dépannage ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r4" role="region" aria-labelledby="b4"><div><p>Oui, pour les pannes électriques et de chauffage électrique : disjonctions répétées, circuit hors service, radiateur ou chauffe-eau qui ne chauffe plus. Appelez pour décrire la situation ; un créneau est proposé selon les disponibilités.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r5" id="b5">Quelle zone couvrez-vous ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r5" role="region" aria-labelledby="b5"><div><p>Vandœuvre-lès-Nancy et l'agglomération nancéienne. Pour une commune un peu plus éloignée, posez simplement la question au téléphone.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false" aria-controls="r6" id="b6">Radiateurs électriques ou pompe à chaleur : que choisir ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r" id="r6" role="region" aria-labelledby="b6"><div><p>Une pompe à chaleur peut réduire la consommation mais demande un investissement plus important et un logement adapté. Des radiateurs à inertie récents sont plus simples à installer, notamment en appartement. Le bon choix dépend de l'isolation, de la surface et du budget : on vous aide à y voir clair, sans parti pris.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec sec--violet" id="contact">
+  <div class="wrap">
+    <div class="sec__tete reveal">
+      <div><span class="surtitre">Contact &amp; devis</span><h2>On se<br>branche ?</h2></div>
+      <p>Décrivez votre projet en quelques lignes, ou appelez directement : la visite et le devis sont la première étape.</p>
+    </div>
+    <div class="contact">
+      <div class="reveal">
+        <div class="bloc">
+          <h3>Coordonnées</h3>
+          <ul class="coord">
+            <li><svg aria-hidden="true"><use href="#i-tel"/></svg><div>Téléphone<br><a href="tel:+33383190350">03 83 19 03 50</a></div></li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg><div>Email<br><a href="mailto:tihayelectricite@gmail.com">tihayelectricite@gmail.com</a></div></li>
+            <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div>Adresse<br><b>1 rue du Beaujolais<br>54500 Vandœuvre-lès-Nancy</b></div></li>
+          </ul>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=1%20rue%20du%20Beaujolais%2054500%20Vand%C5%93uvre-l%C3%A8s-Nancy" target="_blank" rel="noopener">Itinéraire <svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        </div>
+        <div class="bloc">
+          <h3>Horaires</h3>
+          <table class="horaires" id="horaires">
+            <tbody>
+              <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+              <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+            </tbody>
+          </table>
+          <p class="indicatif">Horaires indicatifs, à confirmer : sur rendez-vous, du lundi au vendredi.</p>
+        </div>
+      </div>
+      <div class="bloc reveal">
+        <h3>Demande de devis</h3>
+        <form id="form" novalidate>
+          <div class="ligne2">
+            <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+            <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div><label for="type">Type de travaux</label>
+            <select id="type" name="type">
+              <option>Radiateurs électriques / inertie</option>
+              <option>Chaudière électrique</option>
+              <option>Tableau / mise en conformité</option>
+              <option>Installation électrique</option>
+              <option>Dépannage</option>
+              <option>Chauffe-eau électrique</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div><label for="ville">Commune</label><input id="ville" name="ville" placeholder="ex. Vandœuvre-lès-Nancy"></div>
+          <div><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Nombre de pièces, équipement actuel, ce qui ne va pas…"></textarea></div>
+          <button class="btn" type="submit">Envoyer la demande <svg aria-hidden="true"><use href="#i-fleche"/></svg></button>
+          <p class="msg" id="msg" role="status">Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap pied">
+    <div>
+      <div class="pied__logo">Tihay<br><span>Électricité</span></div>
+      <p>Électricien et chauffage électrique à Vandœuvre-lès-Nancy. EURL dirigée par Arnaud Tihay.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+33383190350">03 83 19 03 50</a></li>
+        <li><a href="mailto:tihayelectricite@gmail.com">tihayelectricite@gmail.com</a></li>
+        <li>1 rue du Beaujolais<br>54500 Vandœuvre-lès-Nancy</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul><li>Sur rendez-vous</li><li>Du lundi au vendredi</li><li>(indicatif, à confirmer)</li></ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul><li><a href="#services">Services</a></li><li><a href="#chauffage">Chauffage électrique</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Demander un devis</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap mentions">
+    <span>© <span id="annee">2026</span> Tihay Électricité — EURL · Vandœuvre-lès-Nancy (54)</span>
+    <span>Mentions légales · Données personnelles : aucune collecte sur cette maquette</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33383190350" aria-label="Appeler Tihay Électricité au 03 83 19 03 50"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function fermer(){menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){
+    var o=burger.getAttribute('aria-expanded')==='true';
+    if(o){fermer();}else{menu.classList.add('ouvert');burger.setAttribute('aria-expanded','true');burger.setAttribute('aria-label','Fermer le menu');}
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var q=b.parentNode,o=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded',String(!o));q.classList.toggle('ouvert',!o);
+    });
+  });
+
+  var j=new Date().getDay(),tr=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(tr)tr.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('msg').classList.add('vu');
+  });
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('vu');});}
+})();
+</script>
+</body>
+</html>

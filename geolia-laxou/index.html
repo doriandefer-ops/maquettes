@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geolia – chauffagiste à Laxou | Chaudières, pompes à chaleur, climatisation</title>
+<meta name="description" content="Sarl Geolia, chauffagiste et climaticien à Laxou (54520) et dans l'agglomération de Nancy : chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Tarifs sur devis.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanc:#faf8f4;
+  --blanc-2:#f3efe7;
+  --bouleau:#d9c7a7;
+  --bouleau-clair:#e9dcc4;
+  --bouleau-fonce:#c4ad87;
+  --sapin:#1f4d3f;
+  --sapin-2:#173b30;
+  --pierre:#6f6a62;
+  --encre:#1d1d1b;
+  --trait:#e3ddd2;
+  --trait-fort:#cfc7b8;
+  --titre:'Epilogue','Helvetica Neue',Arial,sans-serif;
+  --corps:'Lora',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--blanc);color:var(--encre);font-family:var(--corps);font-size:17px;line-height:1.7;overflow-x:hidden}
+a{color:inherit}
+svg{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--titre);font-weight:600;letter-spacing:-.02em;line-height:1.1;color:var(--encre)}
+h2{font-size:clamp(2rem,4vw,3rem)}
+em,.it{font-style:italic;font-family:var(--corps);font-weight:400;color:var(--sapin)}
+.label{font-family:var(--titre);font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--pierre);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.label::before{content:"";width:28px;height:1px;background:var(--sapin)}
+.muted{color:var(--pierre)}
+section{padding:120px 0;position:relative}
+.rule{border:0;border-top:1px solid var(--trait);margin:0}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;font-family:var(--titre);font-weight:600;font-size:.98rem;text-decoration:none;border:1.5px solid var(--sapin);border-radius:2px;cursor:pointer;transition:background .3s,color .3s,transform .3s}
+.btn svg{width:18px;height:18px}
+.btn-plein{background:var(--sapin);color:var(--blanc)}
+.btn-plein:hover{background:var(--sapin-2);transform:translateY(-2px)}
+.btn-ligne{background:transparent;color:var(--sapin)}
+.btn-ligne:hover{background:var(--sapin);color:var(--blanc)}
+.lien{font-family:var(--titre);font-weight:600;font-size:.95rem;color:var(--sapin);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.lien:hover{color:var(--encre)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(250,248,244,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--trait)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:36px;height:36px}
+.logo b{font-family:var(--titre);font-weight:700;font-size:1.25rem;letter-spacing:.08em}
+.logo i{display:block;font-size:.78rem;color:var(--pierre);margin-top:-2px}
+.menu{display:flex;gap:30px;list-style:none;align-items:center}
+.menu a{font-family:var(--titre);font-size:.95rem;font-weight:500;text-decoration:none;color:var(--encre);position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--sapin);transition:width .3s}
+.menu a:hover::after{width:100%}
+.menu .cta a{border:1.5px solid var(--sapin);padding:9px 18px;color:var(--sapin)}
+.menu .cta a::after{display:none}
+.menu .cta a:hover{background:var(--sapin);color:var(--blanc)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:var(--encre);transition:.3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:27px;left:18px}
+.burger[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){top:21px;left:10px;transform:rotate(-45deg)}
+
+/* HERO écran coupé */
+.hero{padding:0;min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1fr 1fr}
+.hero-txt{padding:150px 64px 80px max(24px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(2.6rem,5vw,4.4rem);font-weight:600;letter-spacing:-.035em;margin-bottom:28px}
+.hero h1 em{display:block;font-weight:400;letter-spacing:-.01em}
+.hero p.intro{font-size:1.14rem;max-width:520px;margin-bottom:38px;color:#3a3833}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-facts{display:flex;gap:0;border-top:1px solid var(--trait);padding-top:22px;flex-wrap:wrap}
+.hero-facts div{padding-right:28px;margin-right:28px;border-right:1px solid var(--trait)}
+.hero-facts div:last-child{border:0;margin:0;padding:0}
+.hero-facts small{display:block;font-family:var(--titre);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pierre)}
+.hero-facts span{font-family:var(--titre);font-weight:600;font-size:1rem}
+.hero-art{
+  position:relative;display:flex;align-items:flex-end;justify-content:center;padding:120px 40px 0;overflow:hidden;
+  background:
+    repeating-linear-gradient(90deg,
+      var(--bouleau) 0 58px,
+      var(--bouleau-fonce) 58px 59px,
+      var(--bouleau-clair) 59px 120px,
+      var(--bouleau-fonce) 120px 121px,
+      #dfcfb2 121px 176px,
+      var(--bouleau-fonce) 176px 177px);
+}
+.hero-art::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 13px,rgba(120,90,50,.06) 13px 14px,transparent 14px 31px,rgba(120,90,50,.05) 31px 32px),
+    linear-gradient(180deg,rgba(250,248,244,.25),rgba(250,248,244,0) 40%);
+}
+.hero-art svg{position:relative;width:100%;max-width:560px;height:auto}
+.hero-art .tag{position:absolute;top:110px;right:32px;background:var(--blanc);padding:10px 16px;font-family:var(--titre);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sapin);border:1px solid var(--trait-fort)}
+.steam{animation:steam 5s ease-in-out infinite}
+.fan-rot{transform-box:fill-box;transform-origin:center;animation:spin 6s linear infinite}
+@keyframes steam{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:.9;transform:translateY(-4px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* bandeau confiance */
+.trust{padding:0;border-bottom:1px solid var(--trait)}
+.trust-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:30px 26px;border-right:1px solid var(--trait);display:flex;gap:16px;align-items:flex-start}
+.trust-item:first-child{padding-left:0}
+.trust-item:last-child{border-right:0}
+.trust-item svg{width:30px;height:30px;flex:none;color:var(--sapin)}
+.trust-item b{display:block;font-family:var(--titre);font-weight:600;font-size:1rem}
+.trust-item span{font-size:.92rem;color:var(--pierre)}
+
+/* services */
+.svc-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:64px}
+.svc-head p{color:var(--pierre);font-size:1.06rem}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--trait-fort);border-left:1px solid var(--trait)}
+.svc{padding:40px 34px 38px;border-right:1px solid var(--trait);border-bottom:1px solid var(--trait);position:relative;transition:background .35s}
+.svc:hover{background:var(--blanc-2)}
+.svc .num{position:absolute;top:30px;right:30px;font-family:var(--titre);font-size:.8rem;color:var(--pierre);letter-spacing:.1em}
+.svc svg{width:56px;height:56px;margin-bottom:28px;color:var(--sapin);transition:transform .4s}
+.svc:hover svg{transform:translateY(-4px)}
+.svc h3{font-size:1.24rem;margin-bottom:10px}
+.svc p{font-size:.98rem;color:var(--pierre)}
+
+/* pourquoi */
+.why{background:var(--blanc-2)}
+.why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}
+.why-intro p{color:var(--pierre);margin-top:20px}
+.why-intro blockquote{margin-top:36px;padding-left:22px;border-left:2px solid var(--bouleau);font-style:italic;font-size:1.16rem;color:var(--sapin)}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:48px 44px}
+.why-item svg{width:44px;height:44px;color:var(--sapin);margin-bottom:18px}
+.why-item h3{font-size:1.14rem;margin-bottom:8px}
+.why-item p{font-size:.98rem;color:var(--pierre)}
+
+/* étapes */
+.steps-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.steps-grid .sticky{position:sticky;top:120px}
+.steps-grid .sticky p{color:var(--pierre);margin-top:18px}
+.timeline{list-style:none;border-left:1px solid var(--trait-fort);margin-left:22px}
+.timeline li{position:relative;padding:0 0 52px 48px}
+.timeline li:last-child{padding-bottom:0}
+.timeline .n{position:absolute;left:-23px;top:-4px;width:46px;height:46px;border-radius:50%;background:var(--blanc);border:1.5px solid var(--sapin);display:grid;place-items:center;font-family:var(--titre);font-weight:600;color:var(--sapin);transition:background .3s,color .3s}
+.timeline li:hover .n{background:var(--sapin);color:var(--blanc)}
+.timeline h3{font-size:1.24rem;margin-bottom:8px}
+.timeline p{color:var(--pierre);max-width:520px}
+
+/* à propos */
+.about{background:var(--sapin);color:#eef0ea}
+.about h2,.about h3{color:var(--blanc)}
+.about .label{color:#cdd8d0}
+.about .label::before{background:var(--bouleau)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about p{margin-bottom:18px;color:#e3e8e2}
+.about p strong{color:var(--blanc);font-weight:500}
+.about em{color:var(--bouleau-clair)}
+.about-art{border:1px solid rgba(217,199,167,.4);padding:30px;position:relative}
+.about-art::before{content:"";position:absolute;inset:12px;border:1px solid rgba(217,199,167,.18);pointer-events:none}
+.about-art svg{width:100%;height:auto}
+.note-box{margin-top:28px;padding:18px 22px;border:1px solid rgba(217,199,167,.45);font-size:.95rem;color:#e3e8e2}
+.note-box b{font-family:var(--titre);font-weight:600;color:var(--bouleau-clair)}
+
+/* saisons */
+.season-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.season-head p{max-width:460px;color:var(--pierre)}
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.season{background:#fff;border:1px solid var(--trait);padding:0 0 30px;transition:transform .35s,box-shadow .35s}
+.season:hover{transform:translateY(-6px);box-shadow:0 22px 40px -28px rgba(29,29,27,.35)}
+.season .art{height:150px;border-bottom:1px solid var(--trait);display:grid;place-items:center;background:var(--blanc-2)}
+.season .art svg{width:120px;height:110px;color:var(--sapin)}
+.season .body{padding:24px 24px 0}
+.season small{font-family:var(--titre);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pierre)}
+.season h3{font-size:1.18rem;margin:6px 0 12px}
+.season ul{list-style:none;display:grid;gap:8px}
+.season li{font-size:.93rem;color:#3a3833;padding-left:18px;position:relative}
+.season li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:1px;background:var(--sapin)}
+.price-band{margin-top:50px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 34px;border:1px solid var(--trait-fort);flex-wrap:wrap}
+.price-band p{font-size:1.06rem}
+.price-band b{font-family:var(--titre);font-weight:600;color:var(--sapin)}
+
+/* avis */
+.reviews{background:var(--blanc-2);text-align:center}
+.reviews .box{max-width:760px;margin:0 auto}
+.reviews svg{width:90px;height:90px;margin:0 auto 26px;color:var(--sapin)}
+.reviews p{color:var(--pierre);margin:20px auto 32px;max-width:600px}
+.reviews .label{justify-content:center}
+.reviews .label::after{content:"";width:28px;height:1px;background:var(--sapin)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}
+.faq-grid .intro p{color:var(--pierre);margin-top:18px}
+.faq-list{border-top:1px solid var(--trait-fort)}
+.faq-list details{border-bottom:1px solid var(--trait-fort)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:26px 0;font-family:var(--titre);font-weight:600;font-size:1.1rem}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .pm{flex:none;width:22px;height:22px;position:relative}
+.faq-list summary .pm::before,.faq-list summary .pm::after{content:"";position:absolute;left:0;right:0;top:10px;height:1.5px;background:var(--sapin);transition:transform .3s}
+.faq-list summary .pm::after{transform:rotate(90deg)}
+.faq-list details[open] summary .pm::after{transform:rotate(0)}
+.faq-list summary:hover{color:var(--sapin)}
+.faq-list details p{padding:0 40px 28px 0;color:var(--pierre)}
+.faq-list details[open] p{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* contact */
+.contact{background:var(--blanc);border-top:1px solid var(--trait)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px}
+.coord{display:grid;gap:30px;margin-top:34px}
+.coord .row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--trait)}
+.coord .row small{font-family:var(--titre);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pierre);padding-top:4px}
+.coord .row a{font-family:var(--titre);font-weight:600;font-size:1.1rem;color:var(--sapin);text-decoration:none;word-break:break-word}
+.coord .row a:hover{text-decoration:underline}
+.coord .row p{font-size:1rem}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;font-size:.96rem;color:var(--pierre);border-bottom:1px dotted var(--trait-fort)}
+.hours li:last-child{border-bottom:0}
+.hours li.today{color:var(--sapin);font-weight:500}
+.hours li.today span:first-child{font-family:var(--titre);font-weight:600}
+.hours li.today span:first-child::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--sapin);margin-right:9px;vertical-align:middle}
+.hours-note{font-style:italic;font-size:.9rem;color:var(--pierre);margin-top:10px}
+form{background:#fff;border:1px solid var(--trait);padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;position:relative}
+form::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--bouleau) 0 40px,var(--bouleau-clair) 40px 80px)}
+form h3{grid-column:1/-1;font-size:1.6rem}
+form .sub{grid-column:1/-1;margin-top:-12px;color:var(--pierre);font-style:italic}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-family:var(--titre);font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--encre)}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:1.5px solid var(--trait-fort);padding:10px 0;border-radius:0;transition:border-color .3s}
+.field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--sapin) 50%),linear-gradient(135deg,var(--sapin) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 6px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.field textarea{min-height:110px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#8f897f;font-style:italic}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--sapin)}
+form .btn{grid-column:1/-1;justify-self:start}
+.form-msg{grid-column:1/-1;font-style:italic;color:var(--sapin);min-height:1.2em}
+.form-msg.show{padding:14px 18px;background:#eef3ef;border-left:2px solid var(--sapin)}
+
+/* footer */
+footer{background:var(--encre);color:#d8d3ca;padding:80px 0 0}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px}
+.foot h4{color:var(--blanc);font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot li,.foot p{font-size:.95rem}
+.foot a{text-decoration:none;word-break:break-word}
+.foot a:hover{color:var(--bouleau)}
+.foot .logo b{color:var(--blanc)}
+.foot .logo i{color:#bdb6aa}
+.legal{border-top:1px solid #3a3936;padding:22px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.86rem;color:#b3ada3}
+.demo{background:#121211;color:#b3ada3;text-align:center;font-size:.82rem;padding:12px 20px 14px;font-style:italic}
+
+.fab{display:none;position:fixed;right:18px;bottom:18px;z-index:70;width:58px;height:58px;border-radius:50%;background:var(--sapin);color:var(--blanc);place-items:center;box-shadow:0 12px 26px -10px rgba(31,77,63,.7);border:3px solid var(--blanc)}
+.fab svg{width:24px;height:24px}
+
+/* animations */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* responsive */
+@media (max-width:1080px){
+  .hero{grid-template-columns:1fr}
+  .hero-txt{padding:140px 24px 70px}
+  .hero-art{min-height:520px;padding-top:70px}
+  .hero-art .tag{top:24px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .seasons{grid-template-columns:1fr 1fr}
+  .why-grid,.steps-grid,.faq-grid,.contact-grid,.about-grid,.svc-head{grid-template-columns:1fr;gap:48px}
+  .steps-grid .sticky{position:static}
+  .trust-in{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(2){border-right:0}
+  .trust-item:nth-child(3){padding-left:0}
+  .trust-item:nth-child(-n+2){border-bottom:1px solid var(--trait)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--blanc);border-bottom:1px solid var(--trait);padding:10px 24px 26px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.3s}
+  .menu.open{opacity:1;visibility:visible;transform:none}
+  .menu li{border-bottom:1px solid var(--trait)}
+  .menu li.cta{border:0;margin-top:18px}
+  .menu a{display:block;padding:16px 0;font-size:1.08rem}
+  .menu .cta a{text-align:center;padding:14px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:84px 0}
+  .wrap{width:calc(100% - 32px)}
+  .hero-txt{padding:120px 16px 56px}
+  .hero-art{min-height:380px;padding:70px 16px 0}
+  .hero-art .tag{right:16px;font-size:.7rem}
+  .hero-actions .btn{flex:1 1 100%}
+  .hero-facts div{border:0;margin:0 0 12px;padding:0;width:50%}
+  .svc-grid,.seasons,.why-list{grid-template-columns:1fr}
+  .svc{padding:32px 24px}
+  .trust-in{grid-template-columns:1fr}
+  .trust-item{padding:20px 0!important;border-right:0!important;border-bottom:1px solid var(--trait)}
+  .trust-item:last-child{border-bottom:0}
+  .timeline li{padding-left:40px}
+  .coord .row{grid-template-columns:1fr;gap:6px}
+  form{grid-template-columns:1fr;padding:34px 20px 28px}
+  form .btn{justify-self:stretch}
+  .price-band{padding:22px 20px}
+  .foot{grid-template-columns:1fr}
+  .fab{display:grid}
+  .demo{padding-bottom:90px}
+  .about-art{padding:18px}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Geolia, retour en haut">
+      <svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 31V15L18 5l13 10v16z" stroke="#1f4d3f" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 26c-3 0-4.6-2-4.6-4.4 0-3 2.6-4.2 3.2-7.6 2.4 2 4.4 4.2 4.4 7 0 3.2-1.4 5-3 5z" stroke="#1f4d3f" stroke-width="1.4"/><path d="M2 31h32" stroke="#d9c7a7" stroke-width="2"/></svg>
+      <span><b>GEOLIA</b><i>chauffage &amp; climatisation · Laxou</i></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#saisons">Entretien</a></li>
+      <li><a href="#apropos">Geolia</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li class="cta"><a href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-txt">
+    <p class="label reveal">Chauffagiste · climaticien · Laxou 54520</p>
+    <h1 id="h1" class="reveal d1">Une maison tempérée,<em>simplement.</em></h1>
+    <p class="intro reveal d2">Chaudière gaz ou fioul à remplacer, pompe à chaleur à poser, chauffe-eau à moderniser : Sarl Geolia accompagne les foyers de Laxou et de l'agglomération nancéienne vers un confort <span class="it">juste</span>, sans excès ni superflu.</p>
+    <div class="hero-actions reveal d2">
+      <a class="btn btn-plein" href="tel:+33354410080">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        Appeler le 03 54 41 00 80
+      </a>
+      <a class="btn btn-ligne" href="#contact">Demander un devis</a>
+    </div>
+    <div class="hero-facts reveal d3">
+      <div><small>Secteur</small><span>Laxou &amp; Grand Nancy</span></div>
+      <div><small>Métiers</small><span>Chauffage · Clim</span></div>
+      <div><small>Tarifs</small><span>Sur devis</span></div>
+    </div>
+  </div>
+
+  <div class="hero-art" aria-hidden="true">
+    <span class="tag">Gaz · Fioul · PAC · Eau chaude</span>
+    <svg viewBox="0 0 560 520" fill="none" stroke="#1d1d1b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <!-- sol -->
+      <path d="M0 500h560" stroke-width="1.8"/>
+      <path d="M30 512h60M130 512h30M420 512h90" stroke="#6f6a62" stroke-width="1"/>
+      <!-- sapins -->
+      <g stroke="#1f4d3f">
+        <path d="M60 500V440M60 360l-34 50h16l-22 32h80l-22-32h16z"/>
+        <path d="M505 500V456M505 392l-26 38h12l-18 26h64l-18-26h12z"/>
+      </g>
+      <!-- maison -->
+      <path d="M130 500V250l130-120 130 120v250" fill="#faf8f4"/>
+      <path d="M110 268 260 130l150 138" stroke-width="2.2"/>
+      <!-- bardage vertical -->
+      <g stroke="#d9c7a7" stroke-width="1.2">
+        <path d="M160 240v260M190 212v288M330 212v288M360 240v260"/>
+      </g>
+      <!-- cheminée -->
+      <path d="M320 170v-52h26v76"/>
+      <path class="steam" d="M333 104c-8-10 8-16 0-28M343 98c-6-8 6-12 0-20" stroke="#6f6a62" stroke-width="1.2"/>
+      <!-- fenêtre étage -->
+      <path d="M232 196h56v44h-56z"/>
+      <path d="M260 196v44M232 218h56" stroke-width="1"/>
+      <!-- fenêtres rdc -->
+      <rect x="160" y="300" width="64" height="76" fill="#fff"/>
+      <path d="M192 300v76M160 338h64" stroke-width="1"/>
+      <!-- porte -->
+      <path d="M296 500V390a22 22 0 0 1 44 0v110"/>
+      <circle cx="330" cy="448" r="2.4" fill="#1d1d1b"/>
+      <!-- intérieur : chauffe-eau visible par fenêtre buanderie -->
+      <rect x="228" y="410" width="52" height="90" fill="#fff"/>
+      <g stroke="#1f4d3f">
+        <rect x="240" y="418" width="28" height="74" rx="14"/>
+        <path d="M240 436h28" stroke-width="1"/>
+        <circle cx="254" cy="427" r="3"/>
+        <path d="M254 492v8"/>
+        <path d="M250 456c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" stroke-width="1.2"/>
+      </g>
+      <!-- tuyaux vers pac -->
+      <path d="M390 462h38M390 470h38" stroke="#1f4d3f" stroke-width="1.4"/>
+      <!-- PAC extérieure -->
+      <g stroke="#1f4d3f">
+        <rect x="428" y="420" width="104" height="72" rx="4" fill="#faf8f4"/>
+        <circle cx="468" cy="456" r="26"/>
+        <g class="fan-rot">
+          <path d="M468 456c0-12 8-18 14-14M468 456c12 0 18 8 14 14M468 456c0 12-8 18-14 14M468 456c-12 0-18-8-14-14" stroke-width="1.2"/>
+          <circle cx="468" cy="456" r="3" fill="#1f4d3f"/>
+        </g>
+        <path d="M504 432h18M504 442h18M504 452h18M504 462h18M504 472h18" stroke-width="1"/>
+        <path d="M438 492v8M522 492v8"/>
+      </g>
+      <!-- souffle d'air -->
+      <path d="M440 404c10-6 20 6 30 0s20 6 30 0" stroke="#6f6a62" stroke-width="1" class="steam"/>
+      <!-- soleil bas -->
+      <circle cx="450" cy="110" r="30" stroke="#1f4d3f" stroke-width="1.2"/>
+      <path d="M450 62v14M450 144v14M402 110h14M484 110h14M416 76l10 10M474 134l10 10M484 76l-10 10M426 134l-10 10" stroke="#1f4d3f" stroke-width="1"/>
+      <!-- oiseaux -->
+      <path d="M110 120c6-6 10-6 14 0 4-6 8-6 14 0M160 90c4-4 7-4 10 0 3-4 6-4 10 0" stroke-width="1.2"/>
+    </svg>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="trust" aria-label="En bref">
+  <div class="wrap trust-in">
+    <div class="trust-item reveal">
+      <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 27s9-8 9-15a9 9 0 0 0-18 0c0 7 9 15 9 15z"/><circle cx="15" cy="12" r="3"/></svg>
+      <div><b>Laxou (54520)</b><span>Entreprise implantée à Laxou</span></div>
+    </div>
+    <div class="trust-item reveal d1">
+      <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="15" cy="15" r="11"/><path d="M4 15h22M15 4c4 4 4 18 0 22M15 4c-4 4-4 18 0 22"/></svg>
+      <div><b>Agglomération de Nancy</b><span>Interventions dans le Grand Nancy</span></div>
+    </div>
+    <div class="trust-item reveal d2">
+      <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 26c-5 0-8-3.4-8-7.6 0-5.2 4.4-7 5.2-12.4 3.6 3 5.8 6 5.8 9.2 1.3-.9 2-2.3 2.2-3.8 2.4 2.2 2.8 5 2.8 7 0 4.2-3 7.6-8 7.6z"/></svg>
+      <div><b>Chauffagiste &amp; climaticien</b><span>Chaudières, PAC, clim, eau chaude</span></div>
+    </div>
+    <div class="trust-item reveal d3">
+      <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="4" width="18" height="22"/><path d="M10 10h10M10 15h10M10 20h6"/></svg>
+      <div><b>Tarifs sur devis</b><span>Établis après visite</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div class="reveal"><p class="label">Prestations</p><h2>Six savoir-faire,<br><em>une même exigence.</em></h2></div>
+      <p class="reveal d1">Le chauffage d'une maison se pense comme un ensemble : la production de chaleur, l'eau chaude, le rafraîchissement l'été. Geolia couvre chacun de ces postes, du remplacement à l'entretien.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <span class="num">01</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="14" y="6" width="28" height="40"/><rect x="20" y="12" width="16" height="8"/><path d="M28 38c-3.4 0-5-2.2-5-4.8 0-3.2 2.8-4.4 3.4-8 2.4 2 4.6 4.4 4.6 7.2 0 3.6-1.4 5.6-3 5.6z"/><path d="M20 46v5M36 46v5M28 46v5"/></svg>
+        <h3>Chaudière gaz</h3>
+        <p>Remplacement d'une chaudière ancienne par un modèle à condensation, raccordement et mise en service.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="num">02</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="10" y="10" width="26" height="36"/><path d="M16 18h14M16 24h14"/><path d="M36 34h6a4 4 0 0 1 4 4v8"/><path d="M42 20c-3 4-4.4 6.4-4.4 8.4a4.4 4.4 0 0 0 8.8 0c0-2-1.4-4.4-4.4-8.4z"/><path d="M6 50h44"/></svg>
+        <h3>Chaudière fioul</h3>
+        <p>Entretien, dépannage ou remplacement de votre chaudière fioul, avec un conseil honnête sur la suite.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="num">03</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="4" y="14" width="48" height="30"/><circle cx="22" cy="29" r="10"/><path d="M22 19c4 2 4 8 0 10s-4 8 0 10M12 29c2-4 8-4 10 0s8 4 10 0"/><path d="M38 20h9M38 26h9M38 32h9M38 38h9"/><path d="M10 44v5M46 44v5"/></svg>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et pose d'une PAC dimensionnée pour votre logement, en remplacement ou en complément d'une chaudière.</p>
+      </article>
+      <article class="svc reveal">
+        <span class="num">04</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="6" y="10" width="44" height="16" rx="2"/><path d="M12 20h32"/><path d="M18 32c0 4-3 4-3 8M28 32c0 4-3 4-3 8M38 32c0 4-3 4-3 8"/><path d="M42 15h2"/></svg>
+        <h3>Climatisation</h3>
+        <p>Climatisation réversible pour rafraîchir les étages l'été et compléter le chauffage à la mi-saison.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="num">05</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="18" y="4" width="20" height="44" rx="10"/><path d="M18 20h20"/><circle cx="28" cy="12" r="3"/><path d="M28 28c-3 4-4.4 6-4.4 8a4.4 4.4 0 0 0 8.8 0c0-2-1.4-4-4.4-8z"/><path d="M24 48v5M32 48v5"/><path d="M6 22c3-2 4 2 7 0M43 22c3-2 4 2 7 0"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon qui chauffe l'eau sanitaire en captant les calories de l'air, à la place d'un cumulus classique.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="num">06</span>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M34 8a10 10 0 0 0-12 13L8 35a4 4 0 0 0 6 6l14-14a10 10 0 0 0 13-12l-6 6-5-1-1-5z"/><path d="M40 38l8 8M44 34l-8 8"/></svg>
+        <h3>Entretien &amp; dépannage</h3>
+        <p>Visites d'entretien, diagnostics de panne et réglages pour chaudières, pompes à chaleur et climatiseurs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why" id="pourquoi">
+  <div class="wrap why-grid">
+    <div class="why-intro reveal">
+      <p class="label">Pourquoi Geolia</p>
+      <h2>Moins de bruit,<br><em>plus de justesse.</em></h2>
+      <p>Pas de discours commercial ni de solution unique pour tout le monde : chaque logement a son équilibre, et c'est cet équilibre que Geolia cherche à trouver avec vous.</p>
+      <blockquote>« Le bon chauffage est celui qu'on oublie, parce qu'il fait simplement son travail. »</blockquote>
+    </div>
+    <div class="why-list">
+      <div class="why-item reveal">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 22h10l4-10 6 20 4-10h8"/></svg>
+        <h3>Toutes les énergies</h3>
+        <p>Gaz, fioul, pompe à chaleur, thermodynamique : un conseil comparé, pas une préférence imposée.</p>
+      </div>
+      <div class="why-item reveal d1">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M22 40s14-12 14-23a14 14 0 0 0-28 0c0 11 14 23 14 23z"/><circle cx="22" cy="17" r="5"/></svg>
+        <h3>Ancré à Laxou</h3>
+        <p>Une entreprise du secteur, qui connaît les maisons et les immeubles de l'ouest nancéien.</p>
+      </div>
+      <div class="why-item reveal d2">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="8" y="6" width="28" height="32"/><path d="M14 14h16M14 20h16M14 26h10"/><path d="m24 32 3 3 6-7"/></svg>
+        <h3>Des devis clairs</h3>
+        <p>Matériel, pose et mise en service détaillés ligne par ligne, pour décider sereinement.</p>
+      </div>
+      <div class="why-item reveal d3">
+        <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="22" cy="22" r="15"/><path d="M22 13v9l6 5"/></svg>
+        <h3>Un suivi dans la durée</h3>
+        <p>Après la pose, l'entretien reste entre les mêmes mains : celles qui connaissent votre installation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPES -->
+<section id="methode">
+  <div class="wrap steps-grid">
+    <div class="sticky reveal">
+      <p class="label">Comment ça se passe</p>
+      <h2>Quatre temps,<br><em>sans surprise.</em></h2>
+      <p>Un déroulé simple, qui laisse le temps de comprendre avant de choisir.</p>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="n">1</span><h3>Premier contact</h3><p>Un appel ou un message : vous présentez votre logement, votre équipement actuel et ce qui ne vous convient plus.</p></li>
+      <li class="reveal"><span class="n">2</span><h3>Visite technique</h3><p>Relevé des surfaces, de l'isolation, des radiateurs ou du plancher, de l'emplacement possible d'une unité extérieure ou d'un ballon.</p></li>
+      <li class="reveal"><span class="n">3</span><h3>Proposition chiffrée</h3><p>Un devis détaillé, avec la solution recommandée et ses raisons, parfois une variante pour comparer.</p></li>
+      <li class="reveal"><span class="n">4</span><h3>Installation &amp; mise en service</h3><p>Pose soignée, essais, réglages, puis explication du fonctionnement et des gestes d'entretien.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="about" id="apropos">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="label">À propos</p>
+      <h2 style="margin-bottom:26px">Sarl Geolia,<br><em>à Laxou.</em></h2>
+      <p><strong>Sarl Geolia</strong> est une entreprise de chauffage et de climatisation installée à <strong>Laxou</strong> (54520), à l'ouest de Nancy.</p>
+      <p>Elle intervient sur les <strong>chaudières gaz ou fioul</strong>, les <strong>pompes à chaleur et la climatisation</strong>, ainsi que les <strong>chauffe-eau thermodynamiques</strong>.</p>
+      <p>Son secteur couvre Laxou et l'agglomération de Nancy, pour l'entretien, le remplacement ou la modernisation d'installations existantes.</p>
+      <div class="note-box"><b>En un mot :</b> un chauffagiste-climaticien de proximité, pour <em>toutes</em> les énergies de la maison.</div>
+    </div>
+    <div class="about-art reveal d1" aria-hidden="true">
+      <svg viewBox="0 0 420 320" fill="none" stroke="#e9dcc4" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 290h400"/>
+        <!-- colline de Laxou stylisée -->
+        <path d="M10 290c60-50 120-70 190-60s130-30 210-10" stroke="#d9c7a7" stroke-opacity=".6"/>
+        <!-- immeuble -->
+        <rect x="40" y="150" width="70" height="140"/>
+        <path d="M55 170h14M81 170h14M55 195h14M81 195h14M55 220h14M81 220h14M55 245h14M81 245h14" stroke-width="1"/>
+        <!-- maison -->
+        <path d="M150 290V200l60-50 60 50v90"/>
+        <path d="M140 208l70-60 70 60"/>
+        <rect x="190" y="235" width="40" height="55"/>
+        <path d="M170 215h22v22h-22zM228 215h22v22h-22z" stroke-width="1"/>
+        <!-- radiateur -->
+        <g transform="translate(300 230)">
+          <path d="M0 60V10M14 60V10M28 60V10M42 60V10M56 60V10M70 60V10" />
+          <path d="M-6 16h82M-6 54h82" stroke-width="1"/>
+          <path d="M20 -6c-4-6 4-8 0-14M40 -6c-4-6 4-8 0-14" stroke="#d9c7a7"/>
+        </g>
+        <!-- sapins -->
+        <path d="M120 290v-24M120 230l-14 22h7l-10 14h34l-10-14h7z" stroke="#d9c7a7"/>
+        <path d="M390 290v-20M390 240l-12 18h6l-8 12h28l-8-12h6z" stroke="#d9c7a7"/>
+        <circle cx="330" cy="70" r="22" stroke="#d9c7a7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SAISONS -->
+<section id="saisons">
+  <div class="wrap">
+    <div class="season-head">
+      <div class="reveal"><p class="label">Conseils d'entretien</p><h2>Au fil des saisons,<br><em>les bons gestes.</em></h2></div>
+      <p class="reveal d1">Un calendrier simple pour garder chaudière, pompe à chaleur et chauffe-eau en forme. Ces conseils sont généraux : votre notice et votre technicien restent les références.</p>
+    </div>
+    <div class="seasons">
+      <article class="season reveal">
+        <div class="art"><svg viewBox="0 0 120 110" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M60 95V60"/><path d="M60 20c-24 8-30 34-14 46 6 4 10 2 14-6 4 8 8 10 14 6 16-12 10-38-14-46z"/><path d="M60 26v40M60 44l-12-8M60 52l12-8"/><path d="M20 98h80" stroke-width="1"/></svg></div>
+        <div class="body"><small>Automne</small><h3>Avant la relance</h3><ul><li>Planifier l'entretien annuel de la chaudière</li><li>Purger les radiateurs qui chauffent mal</li><li>Vérifier la pression du circuit</li></ul></div>
+      </article>
+      <article class="season reveal d1">
+        <div class="art"><svg viewBox="0 0 120 110" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M60 15v80M25 35l70 40M95 35 25 75"/><path d="M52 22l8 8 8-8M52 88l8-8 8 8M28 46l11-3-3-11M92 64l-11 3 3 11M92 46l-11-3 3-11M28 64l11 3-3 11"/></svg></div>
+        <div class="body"><small>Hiver</small><h3>En plein régime</h3><ul><li>Dégager l'unité extérieure de la PAC (neige, feuilles)</li><li>Éviter les à-coups de thermostat</li><li>Surveiller tout bruit inhabituel</li></ul></div>
+      </article>
+      <article class="season reveal d2">
+        <div class="art"><svg viewBox="0 0 120 110" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M60 95V50"/><circle cx="60" cy="38" r="8"/><path d="M60 22c6-8 16-6 16 4s-10 12-16 12M60 22c-6-8-16-6-16 4s10 12 16 12M60 54c-8 0-14 4-16 10 8 2 14-2 16-10zM60 64c8 0 14 4 16 10-8 2-14-2-16-10z"/><path d="M20 98h80" stroke-width="1"/></svg></div>
+        <div class="body"><small>Printemps</small><h3>Préparer l'été</h3><ul><li>Faire contrôler la climatisation avant les chaleurs</li><li>Nettoyer ou faire nettoyer les filtres</li><li>Repenser un équipement vieillissant</li></ul></div>
+      </article>
+      <article class="season reveal d3">
+        <div class="art"><svg viewBox="0 0 120 110" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="60" cy="52" r="18"/><path d="M60 18v10M60 76v10M26 52h10M84 52h10M36 28l7 7M77 69l7 7M84 28l-7 7M43 69l-7 7"/><path d="M20 98h80" stroke-width="1"/></svg></div>
+        <div class="body"><small>Été</small><h3>Le bon moment</h3><ul><li>Programmer un remplacement hors saison de chauffe</li><li>Contrôler le chauffe-eau thermodynamique</li><li>Régler la clim sans trop d'écart avec l'extérieur</li></ul></div>
+      </article>
+    </div>
+    <div class="price-band reveal">
+      <p>Entretien, remplacement ou installation neuve : <b>tarifs sur devis</b>, <em>après visite du logement.</em></p>
+      <a class="btn btn-ligne" href="#contact">Planifier une visite</a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="reviews" id="avis">
+  <div class="wrap box reveal">
+    <svg viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M14 18h62v40H42L26 72V58H14z"/><path d="M45 26l3.6 7.4 8 1.2-5.8 5.6 1.4 8-7.2-3.8-7.2 3.8 1.4-8-5.8-5.6 8-1.2z"/></svg>
+    <p class="label">Avis clients</p>
+    <h2>Vos avis <em>comptent.</em></h2>
+    <p>Aucun avis n'est affiché ici tant qu'il n'est pas authentique. Vous avez confié votre chaudière, votre pompe à chaleur ou votre climatisation à Geolia ? Quelques mots de votre part aideront d'autres foyers de l'agglomération à se décider. La note et le nombre d'avis vérifiés apparaîtront ici, avec un lien vers leur source.</p>
+    <a class="btn btn-plein" href="mailto:geolia54@outlook.com?subject=Mon%20avis%20sur%20Geolia">Laisser un avis</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="intro reveal">
+      <p class="label">Questions fréquentes</p>
+      <h2>Bon à savoir<br><em>avant d'appeler.</em></h2>
+      <p>Des réponses générales et prudentes. Pour votre situation, le 03 54 41 00 80 reste le plus direct.</p>
+    </div>
+    <div class="faq-list reveal d1">
+      <details><summary>L'entretien annuel de ma chaudière est-il obligatoire ?<span class="pm"></span></summary><p>Oui : les chaudières gaz, fioul ou bois d'une puissance comprise entre 4 et 400 kW doivent être entretenues chaque année par un professionnel, qui vous remet une attestation. Certaines pompes à chaleur sont aussi soumises à un entretien périodique.</p></details>
+      <details><summary>Sous quel délai puis-je obtenir un devis ?<span class="pm"></span></summary><p>Cela dépend de la saison et de la nature du projet. Pour un remplacement ou une installation, une visite est généralement nécessaire avant de chiffrer. Contactez Geolia pour connaître les disponibilités actuelles.</p></details>
+      <details><summary>Ai-je droit à MaPrimeRénov' ou aux primes CEE ?<span class="pm"></span></summary><p>Une pompe à chaleur ou un chauffe-eau thermodynamique peuvent ouvrir droit à des aides, selon votre éligibilité (ressources, logement, équipement) et à condition de faire appel à un artisan RGE. Les conditions évoluent souvent : France Rénov' est la source officielle, et le sujet peut être abordé lors du devis.</p></details>
+      <details><summary>Intervenez-vous en dépannage ?<span class="pm"></span></summary><p>Oui, sur les équipements de chauffage et de climatisation. Appelez pour décrire la panne : le délai d'intervention dépend du planning et de la période, il ne peut pas être garanti à l'avance.</p></details>
+      <details><summary>Quelle zone couvrez-vous ?<span class="pm"></span></summary><p>Laxou et l'agglomération de Nancy. Si votre commune est un peu à l'écart, posez simplement la question par téléphone ou par email.</p></details>
+      <details><summary>Faut-il remplacer ma chaudière fioul par une pompe à chaleur ?<span class="pm"></span></summary><p>Pas forcément : tout dépend de l'isolation, des radiateurs, de la place disponible et de votre budget. Une visite permet de comparer honnêtement les options, y compris le maintien d'une chaudière bien entretenue.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <p class="label">Contact</p>
+      <h2>Parlons de<br><em>votre logement.</em></h2>
+      <div class="coord">
+        <div class="row"><small>Téléphone</small><div><a href="tel:+33354410080">03 54 41 00 80</a></div></div>
+        <div class="row"><small>Email</small><div><a href="mailto:geolia54@outlook.com">geolia54@outlook.com</a></div></div>
+        <div class="row"><small>Secteur</small><div><p>Laxou et agglomération de Nancy</p><p style="margin-top:10px"><a class="lien" href="https://www.google.com/maps/search/?api=1&query=Sarl+Geolia+Laxou+54520" target="_blank" rel="noopener">Itinéraire →</a></p></div></div>
+        <div class="row"><small>Horaires</small>
+          <div>
+            <ul class="hours" id="hours">
+              <li data-d="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+              <li data-d="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+              <li data-d="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+              <li data-d="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+              <li data-d="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+              <li data-d="6"><span>Samedi</span><span>À confirmer</span></li>
+              <li data-d="0"><span>Dimanche</span><span>À confirmer</span></li>
+            </ul>
+            <p class="hours-note">Horaires : sur rendez-vous, du lundi au vendredi — indicatif, à confirmer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="form" class="reveal d1" novalidate>
+      <h3>Demande de devis</h3>
+      <p class="sub">Quelques lignes suffisent pour commencer.</p>
+      <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+      <div class="field"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+      <div class="field"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+      <div class="field"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Laxou, Villers, Nancy…"></div>
+      <div class="field full"><label for="projet">Objet</label>
+        <select id="projet" name="projet">
+          <option>Chaudière gaz</option>
+          <option>Chaudière fioul</option>
+          <option>Pompe à chaleur</option>
+          <option>Climatisation</option>
+          <option>Chauffe-eau thermodynamique</option>
+          <option>Entretien ou dépannage</option>
+        </select>
+      </div>
+      <div class="field full"><label for="msg">Votre message</label><textarea id="msg" name="msg" placeholder="Type de logement, équipement actuel, projet…"></textarea></div>
+      <button class="btn btn-plein" type="submit">Envoyer la demande</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:18px">
+          <svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 31V15L18 5l13 10v16z" stroke="#d9c7a7" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 26c-3 0-4.6-2-4.6-4.4 0-3 2.6-4.2 3.2-7.6 2.4 2 4.4 4.2 4.4 7 0 3.2-1.4 5-3 5z" stroke="#d9c7a7" stroke-width="1.4"/></svg>
+          <span><b>GEOLIA</b><i>chauffage &amp; climatisation · Laxou</i></span>
+        </a>
+        <p>Chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Laxou et dans l'agglomération de Nancy.</p>
+      </div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33354410080">03 54 41 00 80</a></li><li><a href="mailto:geolia54@outlook.com">geolia54@outlook.com</a></li><li>Laxou (54520)</li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Lun – Ven : sur rendez-vous</li><li><i>Indicatif, à confirmer</i></li></ul></div>
+      <div><h4>Plan du site</h4><ul><li><a href="#services">Prestations</a></li><li><a href="#saisons">Entretien</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Devis</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© Sarl Geolia · Laxou (54520)</span><span>Mentions légales : à compléter · Aucune donnée collectée sur cette maquette</span></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33354410080" aria-label="Appeler Geolia au 03 54 41 00 80">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  function closeMenu(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu')}
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+
+  /* accordéon : une seule réponse ouverte à la fois */
+  var items=document.querySelectorAll('.faq-list details');
+  items.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)items.forEach(function(o){if(o!==d)o.open=false})})});
+
+  var today=new Date().getDay();
+  document.querySelectorAll('#hours li').forEach(function(li){if(+li.dataset.d===today)li.classList.add('today')});
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('formMsg');
+    m.textContent="Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.";
+    m.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

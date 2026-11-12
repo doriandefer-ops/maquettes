@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TP Rénovation – chauffagiste à Nancy</title>
+<meta name="description" content="TP Rénovation, à Nancy : fourniture et installation de pompes à chaleur géothermiques, air-eau et hybrides, chauffe-eau thermodynamiques et chaudières gaz ou fioul. Qualification QUALIBAT PAC.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sable:#f1ebe1;
+  --sable-2:#e7ddcc;
+  --sable-3:#fbf8f2;
+  --terre:#7a4b2a;
+  --terre-2:#5e3a20;
+  --argile:#b9875a;
+  --vert:#2f7d5b;
+  --vert-2:#236247;
+  --nappe:#2a6f9e;
+  --nappe-2:#1f5880;
+  --anthracite:#1e2422;
+  --gris:#4c5450;
+  --chaud:#e08a3c;
+  --trait:rgba(30,36,34,.14);
+  --titre:"Space Grotesk","Segoe UI",system-ui,sans-serif;
+  --texte:"Work Sans","Segoe UI",system-ui,sans-serif;
+  --nav-h:68px;
+  --r:6px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 10px)}
+body{margin:0;background:var(--sable);color:var(--anthracite);font-family:var(--texte);font-size:1rem;line-height:1.65;overflow-x:hidden}
+svg{max-width:100%}
+a{color:var(--nappe-2)}
+a[href^="tel:"]{white-space:nowrap}
+h1,h2,h3{font-family:var(--titre);line-height:1.08;margin:0 0 .5em;letter-spacing:-.02em;font-weight:700}
+h2{font-size:clamp(1.9rem,4vw,3rem)}
+h3{font-size:1.2rem;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--anthracite);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:12px}
+:focus-visible{outline:3px solid var(--nappe);outline-offset:3px}
+.mono{font-family:var(--titre);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);z-index:100;background:rgba(241,235,225,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--trait)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--anthracite)}
+.logo svg{width:36px;height:36px;flex:none}
+.logo b{font-family:var(--titre);font-size:1.22rem;letter-spacing:-.02em}
+.logo b span{color:var(--vert)}
+.menu{list-style:none;display:flex;gap:2px;margin:0;padding:0;align-items:center}
+.menu a{display:block;padding:8px 12px;color:var(--anthracite);text-decoration:none;font-size:.93rem;font-weight:500;border-radius:var(--r);position:relative}
+.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--vert);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .cta-nav{background:var(--anthracite);color:var(--sable);margin-left:8px;padding:10px 16px}
+.menu .cta-nav::after{display:none}
+.menu .cta-nav:hover{background:var(--vert-2)}
+.burger{display:none;width:46px;height:46px;border-radius:var(--r);border:1px solid var(--anthracite);background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.burger i{display:block;width:20px;height:2px;background:var(--anthracite);transition:transform .3s,opacity .3s}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding-top:calc(var(--nav-h) + 34px);
+  background:
+   linear-gradient(var(--trait) 1px,transparent 1px) 0 0/48px 48px,
+   linear-gradient(90deg,var(--trait) 1px,transparent 1px) 0 0/48px 48px,
+   linear-gradient(180deg,#f6f1e8,var(--sable));
+  background-blend-mode:normal}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,235,225,0) 0%,rgba(241,235,225,.85) 60%);pointer-events:none}
+.hero-txt{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:end}
+.hero .mono{color:var(--vert-2);display:inline-flex;align-items:center;gap:10px}
+.hero .mono::before{content:"";width:10px;height:10px;background:var(--vert);border-radius:50%;box-shadow:0 0 0 4px rgba(47,125,91,.2)}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5.2rem);margin:.25em 0 .12em;line-height:.95}
+.hero h1 em{font-style:normal;color:var(--terre)}
+.hero .tag{font-family:var(--titre);font-size:clamp(1.25rem,2.4vw,1.75rem);font-weight:500;color:var(--nappe-2);margin-bottom:.7em;letter-spacing:-.01em}
+.hero .lead{max-width:560px;color:var(--gris);font-size:1.06rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:var(--r);font-family:var(--titre);font-weight:600;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-vert{background:var(--vert);color:#fff;box-shadow:0 10px 24px -14px rgba(47,125,91,.9)}
+.btn-vert:hover{background:var(--vert-2);transform:translateY(-2px)}
+.btn-noir{background:var(--anthracite);color:var(--sable)}
+.btn-noir:hover{background:#000;transform:translateY(-2px)}
+.btn-ligne{border-color:var(--anthracite);color:var(--anthracite);background:transparent}
+.btn-ligne:hover{background:var(--anthracite);color:var(--sable)}
+.hero-side{display:grid;gap:12px;justify-self:end;width:100%;max-width:330px}
+.chip{display:flex;align-items:center;gap:14px;background:var(--sable-3);border:1px solid var(--trait);border-radius:var(--r);padding:14px 16px;box-shadow:0 12px 30px -24px rgba(30,36,34,.6)}
+.chip svg{width:34px;height:34px;flex:none}
+.chip b{display:block;font-family:var(--titre);font-size:1.05rem}
+.chip span{font-size:.86rem;color:var(--gris)}
+.chip a{color:inherit}
+.coupe{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:1440/436;min-height:300px;margin-top:auto}
+.coupe .flux-froid{stroke-dasharray:6 14;animation:descend 2.6s linear infinite}
+.coupe .flux-chaud{stroke-dasharray:6 14;animation:descend 2.6s linear infinite reverse}
+@keyframes descend{to{stroke-dashoffset:-40}}
+.coupe .onde{animation:onde 6s ease-in-out infinite}
+@keyframes onde{0%,100%{transform:translateX(0)}50%{transform:translateX(-24px)}}
+.coupe .pulse{animation:pulse 3s ease-in-out infinite}
+.coupe .pulse.p2{animation-delay:1s}.coupe .pulse.p3{animation-delay:2s}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
+.coupe .fumee{animation:monte 4s ease-in-out infinite}
+@keyframes monte{0%{opacity:0;transform:translateY(6px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}
+.coupe text{font-family:var(--titre);font-size:13px;letter-spacing:.12em;font-weight:600}
+
+/* Bandeau confiance */
+.trust{background:var(--anthracite);color:var(--sable)}
+.trust ul{list-style:none;margin:0 auto;padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust li{display:flex;align-items:center;gap:12px;padding:6px 20px;border-left:1px solid rgba(241,235,225,.18)}
+.trust li:first-child{border-left:0;padding-left:0}
+.trust svg{width:30px;height:30px;flex:none}
+.trust b{font-family:var(--titre);display:block;font-size:1.05rem}
+.trust span{font-size:.85rem;color:#c9c2b5}
+.trust a{color:#9fd3bb}
+
+/* Sections */
+.sec{padding:100px 0}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:52px;align-items:start}
+.sec-head .idx{font-family:var(--titre);font-weight:600;color:var(--terre);font-size:.95rem;letter-spacing:.1em;padding-top:12px;border-top:2px solid var(--terre)}
+.sec-head p{color:var(--gris);max-width:640px;margin:0}
+.sec-head h2{margin-bottom:.35em}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--trait);border:1px solid var(--trait)}
+.svc{background:var(--sable-3);padding:32px 28px;position:relative;transition:background .3s}
+.svc::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--vert);transition:width .4s}
+.svc:hover{background:#fff}
+.svc:hover::after{width:100%}
+.svc .ico{width:58px;height:58px;margin-bottom:18px}
+.svc .num{position:absolute;top:24px;right:24px;font-family:var(--titre);color:#776c5c;font-size:.85rem}
+.svc p{margin:0;color:var(--gris);font-size:.96rem}
+
+/* Pourquoi */
+.pourquoi{background:var(--sable-2)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.atout{background:var(--sable);border-radius:var(--r);padding:26px 22px;border:1px solid var(--trait);transition:transform .3s,box-shadow .3s}
+.atout:hover{transform:translateY(-4px);box-shadow:0 18px 32px -24px rgba(30,36,34,.6)}
+.atout svg{width:40px;height:40px;margin-bottom:14px}
+.atout p{margin:0;color:var(--gris);font-size:.95rem}
+
+/* Etapes : forage vertical */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;border-top:2px dashed var(--terre)}
+.etape{padding:34px 24px 0 0;position:relative}
+.etape::before{content:"";position:absolute;top:-9px;left:0;width:16px;height:16px;border-radius:50%;background:var(--sable);border:3px solid var(--terre)}
+.etape .n{font-family:var(--titre);font-size:3.2rem;font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--terre);display:block;margin-bottom:12px}
+.etape p{color:var(--gris);font-size:.96rem;margin:0}
+
+/* A propos */
+.apropos{background:var(--vert-2);color:#eef3ef;position:relative;overflow:hidden}
+.apropos h2{color:#fff}
+.apropos .sec-head .idx{color:#bfe3d1;border-color:#bfe3d1}
+.apropos .sec-head p{color:#d9e9e0}
+.apropos-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.apropos p{color:#e3eee8}
+.fiche{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.2)}
+.fiche li{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:.96rem}
+.fiche li b{font-family:var(--titre);font-weight:600;color:#bfe3d1;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
+.fiche a{color:#fff}
+.carotte{display:block;margin:auto;width:100%;max-width:300px}
+
+/* Comparatif */
+.comp{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.carte{background:var(--sable-3);border:1px solid var(--trait);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 24px 40px -28px rgba(30,36,34,.7)}
+.carte .vis{height:150px;display:block;width:100%;border-bottom:1px solid var(--trait)}
+.carte .corps{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.carte .type{color:var(--terre)}
+.carte h3{font-size:1.35rem;margin:.3em 0 .5em}
+.carte dl{margin:0 0 16px;font-size:.92rem}
+.carte dt{font-family:var(--titre);font-weight:600;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-top:12px}
+.carte dd{margin:2px 0 0;color:var(--anthracite)}
+.carte .prix{margin-top:auto;padding-top:14px;border-top:1px dashed var(--trait);display:flex;justify-content:space-between;font-family:var(--titre);font-weight:600;font-size:.95rem}
+.carte .prix span:last-child{color:var(--vert-2)}
+.carte.geo{border-top:4px solid var(--terre)}
+.carte.air{border-top:4px solid var(--nappe)}
+.carte.hyb{border-top:4px solid var(--chaud)}
+.carte.cet{border-top:4px solid var(--vert)}
+.comp-note{margin-top:28px;color:var(--gris);font-size:.94rem;max-width:760px}
+
+/* Avis */
+.avis{background:var(--sable-2)}
+.note-box{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;background:var(--sable-3);border:1px solid var(--trait);border-radius:var(--r);padding:40px 44px}
+.note-big{font-family:var(--titre);font-size:clamp(4rem,9vw,6.5rem);font-weight:700;line-height:.9;color:var(--anthracite);letter-spacing:-.04em}
+.note-big small{font-size:.32em;color:var(--gris);letter-spacing:0}
+.etoiles{display:flex;gap:4px;margin-bottom:8px}
+.etoiles svg{width:26px;height:26px}
+.note-box p{margin:0;color:var(--gris)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:290px 1fr;gap:40px}
+#t-faq{font-size:clamp(1.9rem,3.2vw,2.6rem)}
+.faq details{border-top:1px solid var(--trait)}
+.faq details:last-child{border-bottom:1px solid var(--trait)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:var(--titre);font-weight:600;font-size:1.12rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--vert-2)}
+.faq .pm{width:30px;height:30px;flex:none;border-radius:var(--r);background:var(--anthracite);position:relative;transition:background .3s}
+.faq .pm::before,.faq .pm::after{content:"";position:absolute;left:8px;right:8px;top:14px;height:2px;background:var(--sable);transition:transform .3s}
+.faq .pm::after{transform:rotate(90deg)}
+.faq details[open] .pm{background:var(--vert)}
+.faq details[open] .pm::after{transform:rotate(0)}
+.faq .rep{padding:0 50px 22px 0;color:var(--gris)}
+
+/* Infos */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--sable-3);border:1px solid var(--trait);border-radius:var(--r);padding:32px}
+.semaine{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:18px 0 14px}
+.semaine div{text-align:center;padding:12px 2px;border-radius:var(--r);background:var(--sable-2);font-family:var(--titre);font-weight:600;font-size:.88rem;color:var(--gris)}
+.semaine div.ouv{background:#dcebe2;color:var(--vert-2)}
+.semaine div.today{background:var(--anthracite);color:var(--sable);box-shadow:0 0 0 3px rgba(47,125,91,.4)}
+.indic{font-size:.92rem;color:var(--gris);margin:0}
+.indic b{color:var(--anthracite)}
+.adr{font-family:var(--titre);font-size:1.45rem;font-weight:600;line-height:1.25;margin:.2em 0 .8em}
+.coord{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
+.coord li{display:flex;gap:12px;align-items:center}
+.coord svg{width:22px;height:22px;flex:none}
+.coord a{color:var(--anthracite);font-weight:600;text-decoration-color:var(--vert);text-underline-offset:3px;word-break:break-word}
+
+/* Contact */
+.contact{background:var(--anthracite);color:var(--sable)}
+.contact h2{color:#fff}
+.contact .sec-head .idx{color:#e9b98b;border-color:#e9b98b}
+.contact .sec-head p{color:#cfc8bb}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.contact-side p{color:#cfc8bb}
+.contact-side a{color:#9fd3bb}
+form.devis{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:#262d2a;border:1px solid rgba(241,235,225,.12);border-radius:var(--r);padding:32px}
+form.devis .full{grid-column:1/-1}
+form.devis label{display:block;font-family:var(--titre);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;color:#d6cfc2}
+form.devis input,form.devis select,form.devis textarea{width:100%;padding:13px 14px;border-radius:var(--r);border:1px solid #4a5450;background:#1a1f1d;color:#f1ebe1;font:inherit;transition:border-color .2s}
+form.devis input::placeholder,form.devis textarea::placeholder{color:#8f978f}
+form.devis input:focus,form.devis select:focus,form.devis textarea:focus{outline:none;border-color:#5fbf93;box-shadow:0 0 0 3px rgba(47,125,91,.35)}
+form.devis textarea{min-height:130px;resize:vertical}
+.radios{display:flex;flex-wrap:wrap;gap:8px}
+form.devis .radios label{margin:0;text-transform:none;letter-spacing:0;font-family:var(--texte);font-size:.9rem;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid #4a5450;border-radius:999px;cursor:pointer;color:#e6e0d4}
+form.devis .radios input{width:auto;padding:0;accent-color:var(--vert)}
+.form-msg{display:none;grid-column:1/-1;margin:0;padding:14px 16px;border-radius:var(--r);background:rgba(47,125,91,.25);border-left:4px solid #5fbf93;color:#e9f6ef;font-weight:600}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{background:#151a18;color:#c9c2b5;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h3{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.93rem}
+footer a{color:#e7e1d6}
+footer .logo{color:#fff}
+.mentions{margin-top:46px;border-top:1px solid rgba(241,235,225,.12);padding:20px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:#a39c90}
+.demo{background:#0e1211;color:#a39c90;text-align:center;font-size:.8rem;padding:12px 16px}
+
+.fab{position:fixed;left:16px;right:16px;bottom:14px;z-index:90;display:none;justify-content:center;align-items:center;gap:10px;background:var(--vert);color:#fff;font-family:var(--titre);font-weight:600;padding:15px;border-radius:var(--r);text-decoration:none;box-shadow:0 14px 30px -12px rgba(30,36,34,.8);transition:opacity .3s,transform .3s}
+.fab svg{width:20px;height:20px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.vu{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+
+@media (max-width:1060px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .atouts,.comp{grid-template-columns:repeat(2,1fr)}
+  .trust ul{grid-template-columns:repeat(2,1fr);row-gap:14px}
+  .trust li:nth-child(3){border-left:0;padding-left:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .burger{display:flex}
+  .menu{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sable);padding:8px 16px 20px;border-bottom:1px solid var(--trait);box-shadow:0 24px 30px -24px rgba(30,36,34,.6);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .35s ease,visibility .35s}
+  .menu.open{clip-path:inset(0 0 0 0);visibility:visible}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--trait);font-size:1.05rem;border-radius:0}
+  .menu a::after{display:none}
+  .menu .cta-nav{margin:14px 0 0;text-align:center;border-radius:var(--r);border:0}
+  .hero-txt{grid-template-columns:1fr;gap:26px}
+  .hero-side{justify-self:start;max-width:none;grid-template-columns:1fr 1fr}
+  .sec-head,.faq-grid{grid-template-columns:1fr;gap:14px}
+  .sec-head .idx{width:max-content;padding-right:30px}
+  .apropos-grid,.infos-grid,.contact-grid{grid-template-columns:1fr}
+  .etapes{grid-template-columns:1fr 1fr;row-gap:40px;border-top:0}
+  .etape{border-top:2px dashed var(--terre)}
+  .note-box{grid-template-columns:1fr;gap:18px;padding:30px 24px}
+}
+@media (max-width:620px){
+  .sec{padding:72px 0}
+  .hero{padding-top:calc(var(--nav-h) + 30px)}
+  .hero-side{grid-template-columns:1fr}
+  .svc-grid,.atouts,.comp,.etapes{grid-template-columns:1fr}
+  .trust ul{grid-template-columns:1fr}
+  .trust li{border-left:0;padding-left:0}
+  .foot-grid{grid-template-columns:1fr}
+  form.devis{grid-template-columns:1fr;padding:22px}
+  .panel{padding:24px}
+  .fiche li{grid-template-columns:1fr;gap:2px}
+  .faq .rep{padding-right:0}
+  .fab{display:flex}
+  .fab.cache{opacity:0;transform:translateY(24px);pointer-events:none}
+  .demo{padding-bottom:86px}
+  .coupe{height:300px;aspect-ratio:auto;margin-top:28px}
+  .coupe .lbl{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Aller au contenu</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="TP Rénovation, retour en haut">
+      <svg viewBox="0 0 36 36" aria-hidden="true">
+        <rect x="1" y="1" width="34" height="34" rx="6" fill="#1e2422"/>
+        <path d="M6 14 L18 6 L30 14" fill="none" stroke="#f1ebe1" stroke-width="2.4" stroke-linejoin="round"/>
+        <rect x="6" y="18" width="24" height="4" fill="#7a4b2a"/>
+        <rect x="6" y="24" width="24" height="3" fill="#2a6f9e"/>
+        <path d="M14 14 V31 M22 14 V31" stroke="#2f7d5b" stroke-width="2.4"/>
+      </svg>
+      <b>TP <span>Rénovation</span></b>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#comparatif">Comparatif</a></li>
+      <li><a href="#apropos">L'entreprise</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#infos">Accès</a></li>
+      <li><a href="#contact" class="cta-nav">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO : texte en haut à gauche + coupe géologique -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-txt">
+    <div>
+      <p class="mono">Pompes à chaleur · Nancy et environs</p>
+      <h1 id="h1">TP <em>Rénovation</em></h1>
+      <p class="tag">La chaleur est déjà sous vos pieds. On va la chercher.</p>
+      <p class="lead">Géothermie, pompe à chaleur air-eau ou hybride, chauffe-eau thermodynamique&nbsp;: TP Rénovation fournit et installe l'équipement qui capte l'énergie du sol, de l'eau ou de l'air pour chauffer votre maison nancéienne.</p>
+      <div class="btns">
+        <a class="btn btn-vert" href="tel:+33695613753">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler
+        </a>
+        <a class="btn btn-ligne" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Demander un devis
+        </a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="chip">
+        <svg viewBox="0 0 34 34" fill="none" stroke="#2f7d5b" stroke-width="2" aria-hidden="true"><path d="M17 3l11 4v9c0 7-5 12-11 15C11 28 6 23 6 16V7z"/><path d="M12 17l4 4 7-8"/></svg>
+        <div><b>QUALIBAT PAC</b><span>Qualification pompes à chaleur</span></div>
+      </div>
+      <div class="chip">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 3l4.2 8.6 9.4 1.4-6.8 6.6 1.6 9.4L17 24.6 8.6 29l1.6-9.4L3.4 13l9.4-1.4z" fill="#e08a3c"/></svg>
+        <div><b>4,8/5 · 5 avis</b><span>sur <a href="https://www.effy.fr/artisans/pro/1749-tp-renovation" target="_blank" rel="noopener">Effy</a> · partenaire Effy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="coupe" viewBox="0 0 1440 436" preserveAspectRatio="xMidYMin slice" role="img" aria-label="Coupe du sol : une maison, sa pompe à chaleur et des sondes géothermiques qui descendent à travers les couches de terrain jusqu'à la nappe et la roche">
+    <defs>
+      <pattern id="pCalc" width="22" height="16" patternUnits="userSpaceOnUse"><rect width="22" height="16" fill="#d9c8a5"/><circle cx="5" cy="5" r="1.6" fill="#b8a27a"/><circle cx="16" cy="11" r="1.2" fill="#b8a27a"/></pattern>
+      <pattern id="pArg" width="40" height="12" patternUnits="userSpaceOnUse"><rect width="40" height="12" fill="#b9875a"/><path d="M0 6 h14 M22 6 h12" stroke="#a5754b" stroke-width="1.4"/></pattern>
+      <pattern id="pRoc" width="36" height="28" patternUnits="userSpaceOnUse"><rect width="36" height="28" fill="#6b4126"/><path d="M0 28 L18 0 M18 28 L36 0" stroke="#5a361f" stroke-width="1.5"/></pattern>
+      <linearGradient id="gNappe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d86b8"/><stop offset="1" stop-color="#2a6f9e"/></linearGradient>
+      <linearGradient id="gVeg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c6a3a"/><stop offset="1" stop-color="#5b4630"/></linearGradient>
+      <radialGradient id="gFen" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#ffd9a3"/><stop offset="1" stop-color="#e08a3c"/></radialGradient>
+    </defs>
+
+    <!-- strates -->
+    <g transform="translate(0 170) scale(1 .72) translate(0 -170)">
+    <path d="M0 170 C 240 162, 480 176, 720 170 S 1200 164, 1440 172 V540 H0Z" fill="url(#gVeg)"/>
+    <path d="M0 210 C 260 202, 520 220, 760 212 S 1180 204, 1440 214 V540 H0Z" fill="url(#pArg)"/>
+    <path d="M0 290 C 300 280, 560 300, 800 290 S 1200 282, 1440 294 V540 H0Z" fill="url(#pCalc)"/>
+    <path d="M0 372 C 300 362, 600 382, 860 370 S 1240 364, 1440 376 V540 H0Z" fill="url(#gNappe)"/>
+    <g class="onde" fill="none" stroke="#9cc9e6" stroke-width="2" opacity=".6">
+      <path d="M-40 396 c30 -8 60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0"/>
+      <path d="M-20 418 c30 -8 60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0 s60 8 90 0"/>
+    </g>
+    <path d="M0 444 C 320 434, 640 454, 900 442 S 1260 436, 1440 448 V540 H0Z" fill="url(#pRoc)"/>
+    <path d="M0 170 C 240 162, 480 176, 720 170 S 1200 164, 1440 172" fill="none" stroke="#1e2422" stroke-width="2"/>
+
+    </g>
+    <!-- herbe -->
+    <g stroke="#2f7d5b" stroke-width="2" stroke-linecap="round">
+      <path d="M40 168 l-4 -10 M48 168 l2 -12 M120 166 l-3 -9 M300 170 l4 -10 M420 172 l-3 -9 M1120 168 l3 -10 M1260 170 l-4 -9 M1380 171 l3 -10"/>
+    </g>
+
+    <!-- arbre -->
+    <g transform="translate(330 170)">
+      <rect x="-6" y="-70" width="12" height="70" fill="#5e3a20"/>
+      <circle cx="0" cy="-96" r="40" fill="#2f7d5b"/><circle cx="-26" cy="-78" r="24" fill="#3a8d68"/><circle cx="28" cy="-80" r="26" fill="#286b4e"/>
+      <path d="M-4 0 C -20 20 -30 26 -48 30 M4 0 C 18 18 30 22 44 30" stroke="#5e3a20" stroke-width="3" fill="none" opacity=".6"/>
+    </g>
+    <g transform="translate(1260 170)">
+      <rect x="-5" y="-50" width="10" height="50" fill="#5e3a20"/>
+      <path d="M0 -120 L36 -40 H-36Z" fill="#236247"/><path d="M0 -96 L30 -30 H-30Z" fill="#2f7d5b"/>
+    </g>
+
+    <!-- maison -->
+    <g transform="translate(460 0)">
+      <rect x="0" y="70" width="200" height="100" fill="#fbf8f2" stroke="#1e2422" stroke-width="2.5"/>
+      <path d="M-14 74 L100 6 L214 74" fill="#7a4b2a" stroke="#1e2422" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="146" y="20" width="18" height="36" fill="#5e3a20" stroke="#1e2422" stroke-width="2"/>
+      <circle class="fumee" cx="155" cy="12" r="6" fill="#cfc6b6"/>
+      <rect x="22" y="94" width="44" height="40" fill="url(#gFen)" stroke="#1e2422" stroke-width="2"/>
+      <path d="M44 94 V134 M22 114 H66" stroke="#1e2422" stroke-width="1.5"/>
+      <rect x="132" y="94" width="44" height="40" fill="url(#gFen)" stroke="#1e2422" stroke-width="2"/>
+      <path d="M154 94 V134 M132 114 H176" stroke="#1e2422" stroke-width="1.5"/>
+      <rect x="84" y="112" width="34" height="58" fill="#2f7d5b" stroke="#1e2422" stroke-width="2"/>
+      <circle cx="110" cy="142" r="2.4" fill="#f1ebe1"/>
+      <!-- plancher chauffant -->
+      <path class="flux-chaud" d="M6 164 h188" stroke="#e08a3c" stroke-width="4" fill="none"/>
+    </g>
+
+    <!-- local technique + PAC -->
+    <g transform="translate(680 112)">
+      <rect x="0" y="0" width="76" height="58" fill="#e7ddcc" stroke="#1e2422" stroke-width="2.5"/>
+      <rect x="14" y="10" width="48" height="44" rx="4" fill="#fbf8f2" stroke="#1e2422" stroke-width="2"/>
+      <circle cx="38" cy="30" r="11" fill="none" stroke="#2f7d5b" stroke-width="2.5"/>
+      <path d="M38 22 v16 M30 30 h16" stroke="#2f7d5b" stroke-width="2"/>
+      <rect x="22" y="44" width="32" height="5" fill="#1e2422"/>
+      <text x="38" y="-10" text-anchor="middle" fill="#1e2422">PAC</text>
+    </g>
+
+    <!-- liaison PAC → maison -->
+    <path d="M680 160 H654" stroke="#e08a3c" stroke-width="5"/>
+    <g transform="translate(-60 170) scale(1 .72) translate(0 -170)">
+    <!-- collecteur horizontal -->
+    <path d="M790 170 V186 H1010" fill="none" stroke="#1e2422" stroke-width="7" stroke-linecap="round"/>
+    <path d="M790 170 V186 H1010" fill="none" stroke="#2a6f9e" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- sondes verticales (U) -->
+    <g fill="none" stroke-linecap="round">
+      <g stroke="#1e2422" stroke-width="8">
+        <path d="M850 186 V500 M866 186 V500"/><path d="M920 186 V512 M936 186 V512"/><path d="M990 186 V494 M1006 186 V494"/>
+      </g>
+      <g stroke="#3d86b8" stroke-width="4">
+        <path class="flux-froid" d="M850 186 V500"/><path class="flux-froid" d="M920 186 V512"/><path class="flux-froid" d="M990 186 V494"/>
+      </g>
+      <g stroke="#e08a3c" stroke-width="4">
+        <path class="flux-chaud" d="M866 186 V500"/><path class="flux-chaud" d="M936 186 V512"/><path class="flux-chaud" d="M1006 186 V494"/>
+      </g>
+      <g stroke="#1e2422" stroke-width="8"><path d="M850 500 a8 8 0 0 0 16 0 M920 512 a8 8 0 0 0 16 0 M990 494 a8 8 0 0 0 16 0"/></g>
+    </g>
+
+    <!-- chaleur du sol vers les sondes -->
+    <g fill="#e08a3c">
+      <path class="pulse" d="M890 320 l10 6 -10 6z"/><path class="pulse p2" d="M896 320 l-10 6 10 6z" transform="translate(70 30)"/>
+      <path class="pulse p3" d="M890 420 l10 6 -10 6z"/><path class="pulse" d="M966 400 l-10 6 10 6z" transform="translate(-30 60)"/>
+      <path class="pulse p2" d="M1030 340 l-10 6 10 6z"/><path class="pulse p3" d="M1030 460 l-10 6 10 6z"/>
+      <path class="pulse" d="M820 380 l10 6 -10 6z"/><path class="pulse p2" d="M820 260 l10 6 -10 6z"/>
+    </g>
+
+    </g>
+    <!-- étiquettes de strates -->
+    <g class="lbl">
+      <g fill="#f1ebe1"><text x="60" y="190">TERRE VÉGÉTALE</text></g>
+      <g fill="#1e2422"><text x="60" y="232">ARGILES</text><text x="60" y="290">CALCAIRE</text></g>
+      <g fill="#fff"><text x="60" y="346">NAPPE PHRÉATIQUE</text><text x="60" y="408">SOCLE ROCHEUX</text></g>
+      <g stroke="#1e2422" stroke-width="1" fill="none" opacity=".7"><path d="M960 230 H1110 M960 230 l-14 -10"/></g>
+      <text x="1120" y="234" fill="#1e2422">SONDES VERTICALES</text>
+      <g fill="#fff"><text x="1120" y="346">ÉCHANGE DE CHALEUR</text></g>
+      <path d="M970 342 H1110" stroke="#fff" stroke-width="1" opacity=".8"/>
+    </g>
+  </svg>
+</section>
+
+<!-- CONFIANCE -->
+<div class="trust" role="region" aria-label="En bref">
+  <ul class="wrap">
+    <li><svg viewBox="0 0 30 30" fill="none" stroke="#9fd3bb" stroke-width="2" aria-hidden="true"><path d="M15 2l10 4v8c0 7-5 11-10 14C10 25 5 21 5 14V6z"/><path d="M10 15l4 4 6-7"/></svg><div><b>QUALIBAT PAC</b><span>Qualification (source HelloWatt)</span></div></li>
+    <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 2l3.8 7.6 8.4 1.2-6.1 5.9 1.4 8.4L15 21.2 7.5 25.1l1.4-8.4L2.8 10.8l8.4-1.2z" fill="#e08a3c"/></svg><div><b>4,8/5 sur 5 avis</b><span><a href="https://www.effy.fr/artisans/pro/1749-tp-renovation" target="_blank" rel="noopener">Voir sur Effy</a></span></div></li>
+    <li><svg viewBox="0 0 30 30" fill="none" stroke="#9fd3bb" stroke-width="2" aria-hidden="true"><path d="M4 16l6-6 5 3 5-5 6 6"/><path d="M4 22h22"/><circle cx="15" cy="13" r="2"/></svg><div><b>Partenaire Effy</b><span>Rénovation énergétique</span></div></li>
+    <li><svg viewBox="0 0 30 30" fill="none" stroke="#9fd3bb" stroke-width="2" aria-hidden="true"><path d="M15 28s9-8 9-15a9 9 0 0 0-18 0c0 7 9 15 9 15z"/><circle cx="15" cy="13" r="3"/></svg><div><b>Nancy (54000)</b><span>Nancy et environs</span></div></li>
+  </ul>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services" aria-labelledby="t-svc">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">01 — PRESTATIONS</span>
+      <div>
+        <h2 id="t-svc">Fourniture et installation, de la sonde au radiateur</h2>
+        <p>Chaque projet commence par une question simple&nbsp;: d'où viendra votre chaleur&nbsp;? Sol, air ou combustion, nous fournissons l'équipement et nous l'installons.</p>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <span class="num">01</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h50" stroke="#1e2422"/><path d="M4 30h50" stroke="#7a4b2a" stroke-dasharray="3 4"/><path d="M4 42h50" stroke="#2a6f9e" stroke-dasharray="3 4"/><path d="M22 10v42a3 3 0 0 0 6 0V10" stroke="#2f7d5b"/><path d="M36 10v38a3 3 0 0 0 6 0V10" stroke="#e08a3c"/></svg>
+        <h3>PAC géothermique</h3>
+        <p>Fourniture et installation de pompes à chaleur qui puisent les calories du sol, à température stable toute l'année.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="num">02</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="14" width="48" height="32" rx="4" stroke="#1e2422"/><circle cx="22" cy="30" r="10" stroke="#2a6f9e"/><path d="M22 20v20M12 30h20" stroke="#2a6f9e" stroke-width="1.6"/><path d="M38 22h9M38 30h9M38 38h9" stroke="#1e2422"/></svg>
+        <h3>PAC air-eau</h3>
+        <p>Une unité extérieure capte l'énergie de l'air et alimente vos radiateurs ou votre plancher chauffant.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="num">03</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="18" width="24" height="28" rx="3" stroke="#2a6f9e"/><circle cx="16" cy="32" r="7" stroke="#2a6f9e"/><rect x="32" y="10" width="22" height="36" rx="3" stroke="#7a4b2a"/><path d="M43 24c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z" stroke="#e08a3c"/><path d="M28 32h4" stroke="#1e2422"/></svg>
+        <h3>PAC hybride</h3>
+        <p>Pompe à chaleur et chaudière réunies&nbsp;: le système bascule vers la source la plus pertinente selon la météo.</p>
+      </article>
+      <article class="svc reveal">
+        <span class="num">04</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="17" y="4" width="24" height="46" rx="12" stroke="#1e2422"/><path d="M17 16h24" stroke="#2f7d5b"/><path d="M29 24v14" stroke="#e08a3c"/><circle cx="29" cy="41" r="3" stroke="#e08a3c"/><path d="M9 20c3-3 3-6 0-9M49 20c-3-3-3-6 0-9" stroke="#2a6f9e"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon équipé d'une petite pompe à chaleur&nbsp;: votre eau chaude sanitaire produite à partir de l'air.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="num">05</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="13" y="5" width="32" height="42" rx="4" stroke="#1e2422"/><path d="M13 15h32" stroke="#1e2422"/><path d="M29 22c-4 5-7 8-7 12a7 7 0 0 0 14 0c0-4-3-7-7-12z" stroke="#e08a3c"/><path d="M21 47v6M37 47v6" stroke="#7a4b2a"/></svg>
+        <h3>Chaudières gaz ou fioul</h3>
+        <p>Installation de chaudières gaz ou fioul, en remplacement d'un modèle ancien ou en appoint d'une PAC hybride.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="num">06</span>
+        <svg class="ico" viewBox="0 0 58 58" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="29" cy="29" r="22" stroke="#1e2422"/><path d="M29 29l10-8" stroke="#2f7d5b"/><circle cx="29" cy="29" r="3" stroke="#2f7d5b"/><path d="M14 36h6M38 36h6M29 12v5" stroke="#7a4b2a"/></svg>
+        <h3>Mise en service &amp; réglages</h3>
+        <p>Raccordement, mise en eau, réglage des températures et explications d'usage avant de vous laisser les clés.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="sec pourquoi" id="pourquoi" aria-labelledby="t-pq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">02 — POURQUOI NOUS</span>
+      <div>
+        <h2 id="t-pq">Une spécialité&nbsp;: la pompe à chaleur</h2>
+        <p>Géothermique, air-eau ou hybride&nbsp;: la PAC n'est pas une option parmi d'autres chez TP Rénovation, c'est le cœur du métier.</p>
+      </div>
+    </div>
+    <div class="atouts">
+      <div class="atout reveal">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#2f7d5b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 3l14 5v10c0 9-6 15-14 19C12 33 6 27 6 18V8z"/><path d="M13 20l5 5 9-10"/></svg>
+        <h3>Qualifié QUALIBAT PAC</h3>
+        <p>Une qualification dédiée à l'installation de pompes à chaleur, gage d'un savoir-faire contrôlé.</p>
+      </div>
+      <div class="atout reveal d1">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#7a4b2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h32M4 22h32M4 32h32"/><path d="M14 6v30M26 6v30" stroke="#2a6f9e"/></svg>
+        <h3>Toutes les sources</h3>
+        <p>Sol, air, combustion&nbsp;: nous comparons géothermie, air-eau et hybride avant de recommander quoi que ce soit.</p>
+      </div>
+      <div class="atout reveal d2">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3l5 10.4 11.4 1.6-8.2 8 1.9 11.3L20 29l-10.1 5.3 1.9-11.3-8.2-8 11.4-1.6z" fill="none" stroke="#e08a3c" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <h3>Clients satisfaits</h3>
+        <p>4,8/5 sur 5 avis publiés sur Effy, dont TP Rénovation est partenaire.</p>
+      </div>
+      <div class="atout reveal d3">
+        <svg viewBox="0 0 40 40" fill="none" stroke="#2a6f9e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 37s12-10 12-20a12 12 0 0 0-24 0c0 10 12 20 12 20z"/><circle cx="20" cy="17" r="4"/></svg>
+        <h3>Basé à Nancy</h3>
+        <p>Rue Gabriel Pierné, à Nancy&nbsp;: des chantiers à Nancy et dans ses environs, suivis de près.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPES -->
+<section class="sec" id="methode" aria-labelledby="t-et">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">03 — DÉROULÉ</span>
+      <div>
+        <h2 id="t-et">Comment ça se passe</h2>
+        <p>Quatre étapes, du premier appel à la première soirée au chaud.</p>
+      </div>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal"><span class="n">01</span><h3>Prise de contact</h3><p>Par téléphone ou email&nbsp;: votre logement, votre chauffage actuel, vos attentes.</p></div>
+      <div class="etape reveal d1"><span class="n">02</span><h3>Étude sur place</h3><p>Surface, isolation, émetteurs, terrain disponible&nbsp;: on vérifie quelle source de chaleur est réaliste.</p></div>
+      <div class="etape reveal d2"><span class="n">03</span><h3>Devis détaillé</h3><p>Équipement, travaux, mise en service&nbsp;: un chiffrage clair, ligne par ligne.</p></div>
+      <div class="etape reveal d3"><span class="n">04</span><h3>Installation</h3><p>Fourniture, pose, raccordement et réglages, puis prise en main expliquée sur place.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="sec apropos" id="apropos" aria-labelledby="t-ap">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">04 — L'ENTREPRISE</span>
+      <div><h2 id="t-ap">TP Rénovation, artisan des énergies renouvelables à Nancy</h2></div>
+    </div>
+    <div class="apropos-grid">
+      <div class="reveal">
+        <p>TP Rénovation est installée au 12 rue Gabriel Pierné, à Nancy. L'entreprise fournit et installe des pompes à chaleur géothermiques, hybrides et air-eau, ainsi que des chauffe-eau thermodynamiques et des chaudières gaz ou fioul.</p>
+        <p>Titulaire de la qualification QUALIBAT PAC et partenaire Effy, elle affiche une note de 4,8/5 sur 5 avis clients publiés sur cette plateforme.</p>
+        <p>Ses chantiers se concentrent sur Nancy et ses environs, pour rester disponible du devis jusqu'à la mise en service.</p>
+        <ul class="fiche">
+          <li><b>Adresse</b><span>12 rue Gabriel Pierné, 54000 Nancy</span></li>
+          <li><b>Téléphone</b><a href="tel:+33695613753">06 95 61 37 53</a></li>
+          <li><b>Email</b><a href="mailto:tomparizot@gmail.com">tomparizot@gmail.com</a></li>
+          <li><b>Qualification</b><span>QUALIBAT PAC</span></li>
+        </ul>
+      </div>
+      <div class="reveal d2">
+        <svg class="carotte" viewBox="0 0 300 420" aria-hidden="true">
+          <ellipse cx="150" cy="40" rx="90" ry="22" fill="#4c6a3a" stroke="#fff" stroke-width="2"/>
+          <path d="M60 40 V70 A90 22 0 0 0 240 70 V40" fill="#5b4630"/>
+          <path d="M60 70 V140 A90 22 0 0 0 240 140 V70 A90 22 0 0 1 60 70Z" fill="#b9875a"/>
+          <path d="M60 140 V230 A90 22 0 0 0 240 230 V140 A90 22 0 0 1 60 140Z" fill="#d9c8a5"/>
+          <path d="M60 230 V300 A90 22 0 0 0 240 300 V230 A90 22 0 0 1 60 230Z" fill="#3d86b8"/>
+          <path d="M60 300 V380 A90 22 0 0 0 240 380 V300 A90 22 0 0 1 60 300Z" fill="#6b4126"/>
+          <path d="M60 40 V380 M240 40 V380" stroke="#fff" stroke-width="2"/>
+          <path d="M60 380 A90 22 0 0 0 240 380" fill="none" stroke="#fff" stroke-width="2"/>
+          <g fill="none" stroke="#fff" stroke-width="1.2" opacity=".45">
+            <path d="M60 70 A90 22 0 0 0 240 70"/><path d="M60 140 A90 22 0 0 0 240 140"/><path d="M60 230 A90 22 0 0 0 240 230"/><path d="M60 300 A90 22 0 0 0 240 300"/>
+          </g>
+          <g fill="#a5754b"><circle cx="100" cy="100" r="3"/><circle cx="170" cy="120" r="2.5"/><circle cx="210" cy="90" r="2"/></g>
+          <g fill="#b8a27a"><circle cx="90" cy="180" r="3"/><circle cx="140" cy="200" r="2"/><circle cx="200" cy="170" r="3"/><circle cx="120" cy="160" r="2"/></g>
+          <g class="onde-c" fill="none" stroke="#9cc9e6" stroke-width="2"><path d="M70 262 c20 -6 40 6 60 0 s40 6 60 0 s30 6 40 0"/><path d="M70 280 c20 -6 40 6 60 0 s40 6 60 0 s30 6 40 0"/></g>
+          <path d="M150 18 V400" stroke="#e08a3c" stroke-width="3" stroke-dasharray="6 8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIF (section métier) -->
+<section class="sec" id="comparatif" aria-labelledby="t-cmp">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">05 — COMPARATIF</span>
+      <div>
+        <h2 id="t-cmp">Géothermie, air-eau, hybride ou chauffe-eau thermo&nbsp;?</h2>
+        <p>Quatre technologies, quatre logiques. Ce comparatif donne les grandes lignes&nbsp;; l'étude sur place tranche pour votre maison.</p>
+      </div>
+    </div>
+    <div class="comp">
+      <article class="carte geo reveal">
+        <svg class="vis" viewBox="0 0 280 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+          <rect width="280" height="40" fill="#f6f1e8"/><rect y="40" width="280" height="30" fill="#b9875a"/><rect y="70" width="280" height="40" fill="#d9c8a5"/><rect y="110" width="280" height="40" fill="#6b4126"/>
+          <rect x="112" y="22" width="56" height="18" fill="#fbf8f2" stroke="#1e2422" stroke-width="1.5"/><path d="M104 24 L140 4 L176 24Z" fill="#7a4b2a" stroke="#1e2422" stroke-width="1.5"/><rect x="134" y="28" width="10" height="12" fill="#2f7d5b"/>
+          <path d="M150 40 V140 M160 40 V140" stroke="#1e2422" stroke-width="5"/>
+          <path class="flux-froid" d="M150 40 V140" stroke="#3d86b8" stroke-width="2.4"/><path class="flux-chaud" d="M160 40 V140" stroke="#e08a3c" stroke-width="2.4"/>
+        </svg>
+        <div class="corps">
+          <span class="mono type">Source&nbsp;: le sol</span>
+          <h3>PAC géothermique</h3>
+          <dl>
+            <dt>Principe</dt><dd>Des capteurs enterrés (sondes verticales ou réseau horizontal) récupèrent la chaleur stable du sous-sol.</dd>
+            <dt>Idéale pour</dt><dd>Maison avec terrain accessible, projet de long terme, recherche de performance régulière en hiver.</dd>
+            <dt>À prévoir</dt><dd>Travaux de forage ou de terrassement, étude du terrain.</dd>
+          </dl>
+          <p class="prix"><span>Tarif</span><span>Sur devis</span></p>
+        </div>
+      </article>
+      <article class="carte air reveal d1">
+        <svg class="vis" viewBox="0 0 280 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="280" height="150" fill="#e6eff5"/>
+          <g fill="none" stroke="#2a6f9e" stroke-width="2" opacity=".6"><path d="M10 40 c20 -8 40 8 60 0 s40 8 60 0"/><path d="M10 60 c20 -8 40 8 60 0 s40 8 60 0"/><path d="M10 80 c20 -8 40 8 60 0 s40 8 60 0"/></g>
+          <rect x="140" y="50" width="100" height="70" rx="6" fill="#fbf8f2" stroke="#1e2422" stroke-width="2.5"/>
+          <circle cx="178" cy="85" r="24" fill="none" stroke="#2a6f9e" stroke-width="2.5"/>
+          <g class="fan"><path d="M178 63 V107 M156 85 H200 M162 69 L194 101 M194 69 L162 101" stroke="#2a6f9e" stroke-width="2"/></g>
+          <path d="M214 66 h16 M214 80 h16 M214 94 h16" stroke="#1e2422" stroke-width="2"/>
+          <rect y="120" width="280" height="30" fill="#c9b48a"/>
+        </svg>
+        <div class="corps">
+          <span class="mono type">Source&nbsp;: l'air extérieur</span>
+          <h3>PAC air-eau</h3>
+          <dl>
+            <dt>Principe</dt><dd>Une unité extérieure capte les calories de l'air et chauffe l'eau de vos radiateurs ou plancher chauffant.</dd>
+            <dt>Idéale pour</dt><dd>Remplacement d'une chaudière sur circuit d'eau existant, sans travaux de sol.</dd>
+            <dt>À prévoir</dt><dd>Emplacement de l'unité extérieure, émetteurs adaptés aux basses températures.</dd>
+          </dl>
+          <p class="prix"><span>Tarif</span><span>Sur devis</span></p>
+        </div>
+      </article>
+      <article class="carte hyb reveal d2">
+        <svg class="vis" viewBox="0 0 280 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="280" height="150" fill="#f7ecdf"/>
+          <rect x="40" y="46" width="80" height="62" rx="5" fill="#fbf8f2" stroke="#1e2422" stroke-width="2.5"/>
+          <circle cx="72" cy="77" r="18" fill="none" stroke="#2a6f9e" stroke-width="2.5"/>
+          <rect x="164" y="30" width="70" height="90" rx="5" fill="#fbf8f2" stroke="#1e2422" stroke-width="2.5"/>
+          <path d="M199 58c-9 11-13 17-13 24a13 13 0 0 0 26 0c0-7-4-13-13-24z" fill="#e08a3c" stroke="#1e2422" stroke-width="2"/>
+          <path d="M120 77 H164" stroke="#1e2422" stroke-width="4"/><path d="M120 77 H164" stroke="#e08a3c" stroke-width="2" class="flux-chaud"/>
+          <rect y="120" width="280" height="30" fill="#c9b48a"/>
+        </svg>
+        <div class="corps">
+          <span class="mono type">Source&nbsp;: air + combustion</span>
+          <h3>PAC hybride</h3>
+          <dl>
+            <dt>Principe</dt><dd>Une pompe à chaleur associée à une chaudière&nbsp;: la régulation choisit la source la plus adaptée selon la température extérieure.</dd>
+            <dt>Idéale pour</dt><dd>Maison peu isolée ou grands volumes, transition en douceur vers la PAC.</dd>
+            <dt>À prévoir</dt><dd>Raccordement gaz ou fioul conservé, place pour les deux appareils.</dd>
+          </dl>
+          <p class="prix"><span>Tarif</span><span>Sur devis</span></p>
+        </div>
+      </article>
+      <article class="carte cet reveal d3">
+        <svg class="vis" viewBox="0 0 280 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="280" height="150" fill="#e4efe8"/>
+          <rect x="110" y="14" width="60" height="122" rx="28" fill="#fbf8f2" stroke="#1e2422" stroke-width="2.5"/>
+          <rect x="110" y="14" width="60" height="32" rx="16" fill="#2f7d5b" stroke="#1e2422" stroke-width="2.5"/>
+          <rect x="134" y="60" width="12" height="60" rx="6" fill="#efe5d4" stroke="#1e2422" stroke-width="1.5"/>
+          <rect x="136" y="84" width="8" height="34" rx="4" fill="#e08a3c"/>
+          <path d="M80 50 c8 -8 8 -16 0 -24 M200 50 c-8 -8 -8 -16 0 -24" fill="none" stroke="#2a6f9e" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="corps">
+          <span class="mono type">Usage&nbsp;: eau chaude</span>
+          <h3>Chauffe-eau thermodynamique</h3>
+          <dl>
+            <dt>Principe</dt><dd>Un ballon d'eau chaude équipé d'une petite pompe à chaleur qui récupère les calories de l'air.</dd>
+            <dt>Idéal pour</dt><dd>Remplacer un cumulus électrique, compléter une installation de chauffage existante.</dd>
+            <dt>À prévoir</dt><dd>Un local adapté (cellier, garage, buanderie) ou une prise d'air.</dd>
+          </dl>
+          <p class="prix"><span>Tarif</span><span>Sur devis</span></p>
+        </div>
+      </article>
+    </div>
+    <p class="comp-note reveal">Les performances réelles dépendent de l'isolation, des émetteurs, du terrain et des usages&nbsp;: aucun chiffre n'a de sens sans étude. C'est précisément l'objet de la visite.</p>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="sec avis" id="avis" aria-labelledby="t-avis">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">06 — AVIS</span>
+      <div><h2 id="t-avis">Ce qu'en disent les clients</h2><p>Une note publiée sur une plateforme indépendante, consultable en un clic.</p></div>
+    </div>
+    <div class="note-box reveal">
+      <div class="note-big">4,8<small>/5</small></div>
+      <div>
+        <div class="etoiles" aria-label="Note de 4,8 sur 5">
+          <svg viewBox="0 0 26 26"><path d="M13 1l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L13 19.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#e08a3c"/></svg>
+          <svg viewBox="0 0 26 26"><path d="M13 1l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L13 19.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#e08a3c"/></svg>
+          <svg viewBox="0 0 26 26"><path d="M13 1l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L13 19.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#e08a3c"/></svg>
+          <svg viewBox="0 0 26 26"><path d="M13 1l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L13 19.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="#e08a3c"/></svg>
+          <svg viewBox="0 0 26 26"><defs><linearGradient id="demi"><stop offset=".8" stop-color="#e08a3c"/><stop offset=".8" stop-color="#d8cdbb"/></linearGradient></defs><path d="M13 1l3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L13 19.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z" fill="url(#demi)"/></svg>
+        </div>
+        <p><b>Note de 4,8/5 sur 5 avis</b> publiés sur Effy, plateforme de rénovation énergétique dont TP Rénovation est partenaire.</p>
+      </div>
+      <a class="btn btn-noir" href="https://www.effy.fr/artisans/pro/1749-tp-renovation" target="_blank" rel="noopener">Lire les avis sur Effy
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" aria-labelledby="t-faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal" style="display:block;margin:0">
+      <span class="idx" style="display:block;margin-bottom:16px">07 — FAQ</span>
+      <h2 id="t-faq">Questions fréquentes</h2>
+    </div>
+    <div class="faq reveal d1">
+      <details>
+        <summary>Une pompe à chaleur géothermique, est-ce possible chez moi&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">Cela dépend du terrain (surface disponible, accès pour une foreuse, nature du sous-sol) et de la réglementation locale. L'étude sur place permet de dire si des sondes verticales ou un capteur horizontal sont envisageables, ou si une PAC air-eau est plus raisonnable.</div>
+      </details>
+      <details>
+        <summary>L'entretien d'une chaudière ou d'une PAC est-il obligatoire&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">L'entretien annuel est obligatoire pour les chaudières gaz, fioul ou bois de 4 à 400&nbsp;kW. Pour les pompes à chaleur, un entretien périodique est également imposé selon la puissance et la quantité de fluide frigorigène&nbsp;; dans tous les cas, il est recommandé pour préserver les performances.</div>
+      </details>
+      <details>
+        <summary>Quelles aides pour installer une PAC&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">Des dispositifs comme MaPrimeRénov' ou les primes CEE peuvent financer une partie des travaux, selon votre éligibilité et à condition de faire appel à un artisan RGE. Les règles changent souvent&nbsp;: vérifiez votre situation sur France Rénov' avant de signer un devis.</div>
+      </details>
+      <details>
+        <summary>Combien de temps pour recevoir un devis&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">Une pompe à chaleur se dimensionne sur place&nbsp;: après un premier échange, une visite est programmée, puis le devis détaillé vous est envoyé. Le délai dépend de la complexité du projet et de la saison.</div>
+      </details>
+      <details>
+        <summary>Intervenez-vous en dépannage&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">Appelez le 06&nbsp;95&nbsp;61&nbsp;37&nbsp;53 en décrivant le problème (code erreur, absence de chauffage ou d'eau chaude)&nbsp;: nous vous dirons rapidement ce qu'il est possible de faire et dans quel délai.</div>
+      </details>
+      <details>
+        <summary>Quelle zone couvrez-vous&nbsp;?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="rep">TP Rénovation est basée à Nancy et intervient à Nancy et dans ses environs. Pour une commune plus éloignée, il suffit de poser la question.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS -->
+<section class="sec pourquoi" id="infos" aria-labelledby="t-inf">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">08 — ACCÈS</span>
+      <div><h2 id="t-inf">Horaires et adresse</h2></div>
+    </div>
+    <div class="infos-grid">
+      <div class="panel reveal">
+        <h3>Horaires</h3>
+        <p class="indic"><b>Sur rendez-vous, du lundi au vendredi</b> — horaires indicatifs, à confirmer par téléphone.</p>
+        <div class="semaine" id="semaine">
+          <div class="ouv" data-j="1">Lun</div><div class="ouv" data-j="2">Mar</div><div class="ouv" data-j="3">Mer</div><div class="ouv" data-j="4">Jeu</div><div class="ouv" data-j="5">Ven</div><div data-j="6">Sam</div><div data-j="0">Dim</div>
+        </div>
+        <p class="indic" id="jour">Le jour en noir correspond à aujourd'hui.</p>
+      </div>
+      <div class="panel reveal d1">
+        <h3>Adresse</h3>
+        <p class="adr">12 rue Gabriel Pierné<br>54000 Nancy</p>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f7d5b" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.7 2.7-1.8 3.4a16 16 0 0 0 6 6l3.4-1.8 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33695613753">06 95 61 37 53</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f7d5b" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:tomparizot@gmail.com">tomparizot@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f7d5b" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9z"/></svg><span>Nancy et environs</span></li>
+        </ul>
+        <a class="btn btn-noir" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=12%20rue%20Gabriel%20Piern%C3%A9%2054000%20Nancy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Itinéraire
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact" aria-labelledby="t-ct">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">09 — DEVIS</span>
+      <div><h2 id="t-ct">Parlons de votre projet</h2><p>Quelques informations suffisent pour préparer la visite.</p></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-side reveal">
+        <p>Vous envisagez une pompe à chaleur, souhaitez remplacer une vieille chaudière ou un cumulus&nbsp;? Décrivez votre maison et votre installation actuelle, nous revenons vers vous.</p>
+        <p>Par téléphone&nbsp;: <a href="tel:+33695613753"><b>06 95 61 37 53</b></a><br>Par email&nbsp;: <a href="mailto:tomparizot@gmail.com">tomparizot@gmail.com</a></p>
+        <p>12 rue Gabriel Pierné, 54000 Nancy</p>
+      </div>
+      <form class="devis reveal d1" id="form" novalidate>
+        <div><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="full"><label for="mail">Email</label><input id="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+        <fieldset class="full" style="border:0;padding:0;margin:0">
+          <legend style="font-family:var(--titre);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;color:#d6cfc2">Projet</legend>
+          <div class="radios">
+            <label><input type="radio" name="p" checked> PAC géothermique</label>
+            <label><input type="radio" name="p"> PAC air-eau</label>
+            <label><input type="radio" name="p"> PAC hybride</label>
+            <label><input type="radio" name="p"> Chauffe-eau thermo</label>
+            <label><input type="radio" name="p"> Chaudière</label>
+          </div>
+        </fieldset>
+        <div class="full"><label for="commune">Commune</label><input id="commune" placeholder="Nancy, Villers-lès-Nancy…"></div>
+        <div class="full"><label for="msg">Message</label><textarea id="msg" placeholder="Surface, année de construction, chauffage actuel, terrain disponible…"></textarea></div>
+        <div class="full"><button class="btn btn-vert" type="submit">Envoyer ma demande</button></div>
+        <p class="form-msg" id="form-msg" role="status">Maquette de démonstration — ce formulaire n'envoie rien pour l'instant.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="1" y="1" width="34" height="34" rx="6" fill="#2f7d5b"/><path d="M6 14 L18 6 L30 14" fill="none" stroke="#f1ebe1" stroke-width="2.4" stroke-linejoin="round"/><rect x="6" y="18" width="24" height="4" fill="#7a4b2a"/><rect x="6" y="24" width="24" height="3" fill="#2a6f9e"/><path d="M14 14 V31 M22 14 V31" stroke="#1e2422" stroke-width="2.4"/></svg>
+        <b>TP Rénovation</b>
+      </a>
+      <p style="margin-top:14px;font-size:.93rem">Pompes à chaleur géothermiques, air-eau et hybrides, chauffe-eau thermodynamiques et chaudières à Nancy et environs. QUALIBAT PAC · partenaire Effy.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>12 rue Gabriel Pierné<br>54000 Nancy</li>
+        <li><a href="tel:+33695613753">06 95 61 37 53</a></li>
+        <li><a href="mailto:tomparizot@gmail.com">tomparizot@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Sur rendez-vous, du lundi au vendredi</li>
+        <li>(indicatif, à confirmer)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#services">Prestations</a></li>
+        <li><a href="#comparatif">Comparatif</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#contact">Devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap mentions">
+    <span>© <span id="annee">2026</span> TP Rénovation — Nancy</span>
+    <span>Mentions légales : à compléter · Note et avis : source Effy</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab cache" id="fab" href="tel:+33695613753" aria-label="Appeler TP Rénovation au 06 95 61 37 53">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  Appeler · 06 95 61 37 53
+</a>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu'),fab=document.getElementById('fab');
+  function fermer(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){
+    var o=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',o?'true':'false');
+    burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function onScroll(){fab.classList.toggle('cache',window.scrollY<window.innerHeight*.6);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Jour courant
+  var jours=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  var d=new Date().getDay(),c=document.querySelector('#semaine [data-j="'+d+'"]');
+  if(c){c.classList.add('today');c.setAttribute('aria-current','date');}
+  document.getElementById('jour').textContent='Aujourd’hui, '+jours[d]+' : '+((d>=1&&d<=5)?'jour ouvré, rendez-vous possible (à confirmer).':'week-end, laissez un message ou écrivez-nous.');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  // Formulaire de démonstration
+  var f=document.getElementById('form'),m=document.getElementById('form-msg');
+  f.addEventListener('submit',function(e){e.preventDefault();m.classList.add('show');m.scrollIntoView({behavior:'smooth',block:'nearest'});});
+
+  // Apparitions
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('vu');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
