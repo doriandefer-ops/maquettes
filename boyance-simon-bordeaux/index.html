@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boyance Simon – chauffagiste à Bordeaux</title>
+<meta name="description" content="Entreprise Simon Boyance, chauffagiste à Bordeaux et Talence : installation, remplacement, entretien et dépannage de chaudières gaz ou fioul, radiateurs et chaudières électriques. Devis sur demande au 06 84 30 88 67.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pierre:#efe6d2;
+  --papier:#faf6ec;
+  --encre:#1f1b16;
+  --encre-2:#4a4239;
+  --garonne:#2b4c6f;
+  --garonne-d:#1f3a56;
+  --ocre:#b8863b;
+  --ocre-t:#85581c; /* ocre assombri pour texte AA */
+  --filet:#cdbf9f;
+  --serif:"Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--garonne)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.sc{font-variant:small-caps;letter-spacing:.12em;text-transform:lowercase;font-weight:600;font-size:.95rem}
+.skip{position:absolute;left:-999px;top:0;background:var(--encre);color:var(--papier);padding:8px 14px;z-index:999}
+.skip:focus{left:12px;top:12px}
+:focus-visible{outline:2px solid var(--garonne);outline-offset:3px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(250,246,236,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--filet);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 6px 24px -18px rgba(31,27,22,.5)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--encre)}
+.brand b{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1}
+.brand span{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ocre-t);font-weight:600}
+.nav ul{display:flex;list-style:none;margin:0;padding:0;gap:26px;align-items:center}
+.nav ul a{text-decoration:none;color:var(--encre);font-size:.92rem;font-weight:500;position:relative;padding:4px 0}
+.nav ul a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--ocre);transition:right .3s}
+.nav ul a:not(.btn):hover::after{right:0}
+.burger{display:none;background:none;border:1px solid var(--encre);width:46px;height:42px;cursor:pointer;position:relative;color:var(--encre)}
+.burger i{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s}
+.burger i:nth-child(1){top:13px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:27px}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- BUTTONS ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-family:var(--sans);font-weight:600;font-size:.98rem;text-decoration:none;border:1.5px solid var(--encre);cursor:pointer;transition:background .25s,color .25s,transform .25s,box-shadow .25s;line-height:1.2}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-ink{background:var(--encre);color:var(--papier)}
+.btn-ink:hover{background:var(--garonne);border-color:var(--garonne);transform:translateY(-2px);box-shadow:0 10px 22px -14px var(--garonne)}
+.btn-line{background:transparent;color:var(--encre)}
+.btn-line:hover{background:var(--pierre);transform:translateY(-2px)}
+.nav .btn{padding:9px 16px;font-size:.86rem}
+.nav ul a.btn-ink{color:var(--papier)}
+
+/* ---------- HERO ---------- */
+.hero{padding-top:68px;background:var(--pierre);position:relative;border-bottom:1px solid var(--filet);overflow:hidden}
+.masthead{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--encre);padding:18px 0 10px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--encre-2)}
+.masthead span:nth-child(2){color:var(--ocre-t)}
+.stage{position:relative;margin-top:10px}
+.frieze{width:100%;height:auto;color:var(--encre)}
+.frieze .ochre{stroke:var(--ocre)}
+.frieze .blue{stroke:var(--garonne)}
+.bigword{position:absolute;left:-0.04em;right:0;bottom:-.17em;font-family:var(--serif);font-weight:400;font-size:clamp(5.2rem,24.5vw,22.5rem);line-height:.8;letter-spacing:-.035em;color:var(--encre);margin:0;pointer-events:none;white-space:nowrap;text-shadow:3px 0 0 var(--pierre),-3px 0 0 var(--pierre),0 3px 0 var(--pierre),0 -3px 0 var(--pierre),2px 2px 0 var(--pierre),-2px -2px 0 var(--pierre),2px -2px 0 var(--pierre),-2px 2px 0 var(--pierre)}
+.bigword em{font-style:normal;-webkit-text-stroke:0;color:var(--garonne)}
+.bigword small{display:block;font-family:var(--sans);font-size:clamp(.7rem,1.1vw,.9rem);letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--ocre-t);line-height:1;margin:0 0 .7em calc(max(24px,(100vw - 1240px)/2 + 24px) + .04 * clamp(5.2rem,24.5vw,22.5rem));text-shadow:none;background:var(--pierre);display:table;padding:4px 8px 4px 0}
+.ground{height:1px;background:var(--encre)}
+.hero-cols{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;padding:56px 0 64px;border-top:1px solid var(--encre);margin-top:clamp(40px,7.5vw,112px)}
+.hero-cols .kicker{color:var(--ocre-t);margin-bottom:14px;display:block}
+.hero-cols h2{font-size:clamp(1.9rem,3.6vw,3.2rem);line-height:1.08}
+.hero-cols h2 i{font-style:italic;color:var(--garonne)}
+.hero-right{border-left:1px solid var(--filet);padding-left:40px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.hero-right p{color:var(--encre-2);font-size:1.05rem;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-tel{font-family:var(--serif);font-size:1.5rem;color:var(--encre);text-decoration:none;border-bottom:1px solid var(--ocre);align-self:flex-start}
+.hero-tel:hover{color:var(--garonne)}
+
+/* ---------- TRUST ---------- */
+.trust{background:var(--encre);color:var(--papier)}
+.trust ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust li{padding:26px 22px;border-right:1px solid rgba(250,246,236,.18);display:flex;gap:14px;align-items:flex-start}
+.trust li:last-child{border-right:0}
+.trust svg{width:30px;height:30px;flex:none;color:#d9b57a}
+.trust strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;line-height:1.15}
+.trust small{display:block;font-size:.86rem;color:#d8cfbd;margin-top:4px;line-height:1.4}
+
+/* ---------- SECTIONS ---------- */
+section{position:relative}
+.sec{padding:110px 0}
+.sec-alt{background:var(--pierre)}
+.rubrique{display:grid;grid-template-columns:140px 1fr;gap:28px;border-top:1px solid var(--encre);padding-top:18px;margin-bottom:56px;align-items:start}
+.rubrique .num{font-family:var(--serif);font-size:3.4rem;line-height:.9;color:var(--ocre)}
+.rubrique .num small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre-t);font-weight:600;margin-bottom:8px}
+.rubrique h2{font-size:clamp(2.2rem,5vw,4.2rem)}
+.rubrique p{max-width:60ch;color:var(--encre-2);margin:16px 0 0}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--filet);border-left:1px solid var(--filet)}
+.svc{padding:34px 30px 30px;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);background:var(--papier);transition:background .3s;position:relative}
+.svc:hover{background:#fffdf7}
+.svc:hover .ico{transform:translateY(-3px);color:var(--garonne)}
+.svc .ico{width:56px;height:56px;color:var(--encre);transition:transform .3s,color .3s;margin-bottom:22px}
+.svc .tag{position:absolute;top:30px;right:28px;font-size:.72rem;letter-spacing:.18em;font-weight:600;color:var(--ocre-t)}
+.svc h3{font-size:1.55rem;margin-bottom:10px}
+.svc p{margin:0;color:var(--encre-2);font-size:.98rem}
+
+/* pourquoi */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.why article{padding:0 28px;border-left:1px solid var(--filet)}
+.why article:first-child{border-left:0;padding-left:0}
+.why .roman{font-family:var(--serif);font-size:2.4rem;color:var(--garonne);line-height:1;display:block;margin-bottom:16px}
+.why h3{font-size:1.45rem;margin-bottom:10px}
+.why p{color:var(--encre-2);font-size:.98rem;margin:0}
+
+/* étapes */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;border-top:1px solid var(--encre)}
+.steps li{padding:28px 26px 10px 0;position:relative;counter-increment:s}
+.steps li+li{padding-left:26px;border-left:1px solid var(--filet)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--serif);font-size:4.4rem;line-height:1;color:var(--encre);display:block;margin-bottom:14px}
+.steps h3{font-size:1.35rem;margin-bottom:8px}
+.steps p{font-size:.97rem;color:var(--encre-2);margin:0}
+
+/* à propos */
+.about{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.about aside{border:1px solid var(--encre);padding:30px;background:var(--papier)}
+.about aside dl{margin:0}
+.about aside dt{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ocre-t);font-weight:600;margin-top:18px}
+.about aside dt:first-child{margin-top:0}
+.about aside dd{margin:4px 0 0;font-family:var(--serif);font-size:1.3rem;line-height:1.25;overflow-wrap:anywhere}
+.about aside dd a{color:var(--encre);text-decoration-color:var(--ocre)}
+.cols2{columns:2;column-gap:48px;column-rule:1px solid var(--filet)}
+.cols2 p{break-inside:avoid-column}
+.lettrine::first-letter{font-family:var(--serif);float:left;font-size:5.6rem;line-height:.82;padding:6px 12px 0 0;color:var(--garonne)}
+.pull{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.2;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre);padding:22px 0;margin:36px 0 0;color:var(--encre)}
+.pull span{color:var(--ocre-t)}
+
+/* carnet */
+.carnet{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 48px}
+.plate{margin:0}
+.plate .frame{background:var(--papier);border:1px solid var(--encre);padding:18px;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.plate:hover .frame{transform:translateY(-4px);box-shadow:0 22px 40px -28px rgba(31,27,22,.6)}
+.plate .frame svg{width:100%;height:auto;color:var(--encre)}
+.plate .pl{position:absolute;top:12px;left:14px;font-size:.7rem;letter-spacing:.2em;font-weight:600;color:var(--ocre-t);text-transform:uppercase;background:var(--papier);padding:2px 6px}
+.plate figcaption{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding-top:16px;border-bottom:1px solid var(--filet);padding-bottom:16px}
+.plate figcaption .n{font-family:var(--serif);font-size:2.2rem;line-height:1;color:var(--ocre);grid-row:span 2}
+.plate figcaption h3{font-size:1.4rem}
+.plate figcaption p{grid-column:2;margin:0;font-size:.95rem;color:var(--encre-2)}
+.plate figcaption .sc{grid-column:2;color:var(--ocre-t);font-size:.85rem;margin-top:4px}
+.note-devis{margin-top:48px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;border:1px dashed var(--encre);padding:24px 28px;background:var(--papier)}
+.note-devis p{margin:0;font-family:var(--serif);font-size:1.4rem;line-height:1.25}
+
+/* avis */
+.avis{text-align:center;max-width:760px;margin:0 auto}
+.avis .orn{width:120px;margin:0 auto 26px;color:var(--ocre)}
+.avis h2{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:18px}
+.avis p{color:var(--encre-2);font-size:1.08rem;margin-bottom:28px}
+
+/* FAQ */
+.faq{max-width:900px}
+.faq details{border-top:1px solid var(--filet)}
+.faq details:last-child{border-bottom:1px solid var(--filet)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px 1fr 30px;gap:14px;align-items:center;padding:24px 0;font-family:var(--serif);font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.2;transition:color .25s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--garonne)}
+.faq summary .q{font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;font-weight:600;color:var(--ocre-t)}
+.faq summary .pm{width:30px;height:30px;border:1px solid var(--encre);border-radius:50%;position:relative}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:8px;right:8px;top:50%;height:1.5px;background:var(--encre);transform:translateY(-50%);transition:transform .3s}
+.faq summary .pm::after{transform:translateY(-50%) rotate(90deg)}
+.faq details[open] summary .pm::after{transform:translateY(-50%) rotate(0)}
+.faq .a{padding:0 44px 26px 66px;color:var(--encre-2)}
+.faq .a p{margin:0}
+
+/* horaires */
+.hours{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start}
+.hours table{width:100%;border-collapse:collapse;font-size:1rem}
+.hours caption{text-align:left;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--ocre-t);padding-bottom:12px}
+.hours th,.hours td{padding:14px 12px;border-bottom:1px solid var(--filet);text-align:left}
+.hours th{font-family:var(--serif);font-weight:400;font-size:1.2rem}
+.hours td{color:var(--encre-2)}
+.hours tr.today{background:var(--encre);color:var(--papier)}
+.hours tr.today th,.hours tr.today td{color:var(--papier);border-color:var(--encre)}
+.hours tr.today td::after{content:"Aujourd’hui";margin-left:10px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;background:#d9b57a;color:var(--encre);padding:2px 7px;font-weight:700;white-space:nowrap}
+.zone{border:1px solid var(--encre);background:var(--papier);padding:0;overflow:hidden}
+.zone>svg{width:100%;height:auto;border-bottom:1px solid var(--encre);background:var(--pierre)}
+.zone .in{padding:26px 28px}
+.zone h3{font-size:1.7rem;margin-bottom:8px}
+.zone p{color:var(--encre-2)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.contact .direct a.big{display:block;font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:var(--encre);text-decoration:none;line-height:1.1;margin:8px 0 22px}
+.contact .direct a.big:hover{color:var(--garonne)}
+.contact .direct a.mail{font-size:1.05rem;overflow-wrap:anywhere}
+form{background:var(--papier);border:1px solid var(--encre);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+form .full{grid-column:1/-1}
+label{display:block;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--encre-2);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:1.5px solid var(--encre-2);padding:10px 2px;border-radius:0;transition:border-color .25s,background .25s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--garonne);background:rgba(43,76,111,.05)}
+textarea{min-height:120px;resize:vertical}
+.form-msg{grid-column:1/-1;display:none;padding:16px 18px;background:var(--garonne);color:#fff;font-size:.98rem}
+.form-msg.show{display:block}
+.form-msg a{color:#fff;font-weight:700}
+
+/* footer */
+footer{background:var(--encre);color:#e9e1cf;padding:80px 0 0}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px}
+.foot .fname{font-family:var(--serif);font-size:3rem;line-height:.95;color:var(--papier);margin-bottom:14px}
+.foot h4{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#d9b57a;margin:0 0 14px;font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:8px;font-size:.95rem}
+.foot a{color:#e9e1cf;text-decoration:none;overflow-wrap:anywhere}
+.foot a:hover{color:#fff;text-decoration:underline;text-decoration-color:#d9b57a}
+.foot p{font-size:.95rem;color:#cfc6b3}
+.foot-bot{border-top:1px solid rgba(233,225,207,.2);padding:18px 0;font-size:.85rem;color:#bfb6a3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo{background:#14110d;color:#bfb6a3;text-align:center;font-size:.8rem;padding:12px 16px 14px;letter-spacing:.02em}
+
+/* floating call */
+.fab{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{transition:none!important;animation:none!important}
+}
+.smoke{animation:smoke 6s ease-in-out infinite}
+@keyframes smoke{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:.8;transform:translateY(-6px)}}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .nav ul{gap:18px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr);gap:40px 0}
+  .why article:nth-child(3){border-left:0;padding-left:0}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps li:nth-child(3){padding-left:0;border-left:0}
+  .foot{grid-template-columns:1fr 1fr}
+  .trust ul{grid-template-columns:repeat(2,1fr)}
+  .trust li:nth-child(2){border-right:0}
+  .trust li:nth-child(-n+2){border-bottom:1px solid rgba(250,246,236,.18)}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .nav ul{position:fixed;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--papier);border-bottom:1px solid var(--encre);padding:8px 24px 24px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .nav ul.open{transform:none;opacity:1;visibility:visible}
+  .nav ul li{border-bottom:1px solid var(--filet)}
+  .nav ul li:last-child{border-bottom:0;padding-top:16px}
+  .nav ul a{display:block;padding:14px 0;font-family:var(--serif);font-size:1.4rem;font-weight:400}
+  .nav ul a.btn{font-family:var(--sans);font-size:1rem;font-weight:600;padding:14px}
+  .hero-cols{grid-template-columns:1fr;gap:28px}
+  .hero-right{border-left:0;padding-left:0;border-top:1px solid var(--filet);padding-top:24px}
+  .about,.hours,.contact{grid-template-columns:1fr;gap:40px}
+  .carnet{grid-template-columns:1fr}
+}
+@media (max-width:767px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .sec{padding:76px 0}
+  .masthead{font-size:.66rem;letter-spacing:.1em}
+  .masthead span:nth-child(3){display:none}
+  .frieze{height:250px}
+  .bigword{font-size:29vw}
+  .bigword small{margin-left:calc(16px + .04 * 29vw)}
+  .rubrique{grid-template-columns:1fr;gap:10px;margin-bottom:38px}
+  .rubrique .num{font-size:2.6rem}
+  .rubrique h2{hyphens:auto;overflow-wrap:break-word}
+  .services{grid-template-columns:1fr}
+  .svc{padding:28px 22px}
+  .why{grid-template-columns:1fr;gap:30px}
+  .why article{border-left:0;padding:0;border-top:1px solid var(--filet);padding-top:22px}
+  .why article:first-child{border-top:0;padding-top:0}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li+li{padding:24px 0 18px;border-left:0;border-bottom:1px solid var(--filet)}
+  .steps li::before{font-size:3.2rem}
+  .cols2{columns:1}
+  .lettrine::first-letter{font-size:4.4rem}
+  .trust ul{grid-template-columns:1fr}
+  .trust li{border-right:0;border-bottom:1px solid rgba(250,246,236,.18);padding:18px 16px}
+  .faq summary{grid-template-columns:34px 1fr 30px;gap:10px}
+  .faq .a{padding:0 0 22px 44px}
+  form{grid-template-columns:1fr;padding:24px 18px}
+  .foot{grid-template-columns:1fr}
+  .hours th,.hours td{padding:12px 8px}
+  .hours td{font-size:.92rem}
+  .hours tr.today td::after{display:block;width:max-content;margin:6px 0 0;}
+  .note-devis{padding:20px}
+  .fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--garonne);color:#fff;align-items:center;justify-content:center;box-shadow:0 12px 26px -10px rgba(31,27,22,.6);border:2px solid var(--papier)}
+  .fab svg{width:26px;height:26px}
+  .demo{padding-bottom:90px}
+  .cta .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Boyance Simon, retour en haut"><b>Boyance</b><span>Chauffage</span></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <nav aria-label="Navigation principale">
+      <ul id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#carnet">Le carnet</a></li>
+        <li><a href="#apropos">L’artisan</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#horaires">Zone</a></li>
+        <li><a href="#contact" class="btn btn-ink">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" aria-label="Présentation">
+  <div class="wrap">
+    <div class="masthead"><span>Bordeaux · Talence</span><span>Chauffagiste</span><span>Gaz · Fioul · Électrique</span></div>
+  </div>
+  <div class="stage">
+    <svg class="frieze" viewBox="0 0 1440 400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" preserveAspectRatio="xMinYMax slice">
+      <defs>
+        <g id="win">
+          <rect x="0" y="0" width="44" height="92"/>
+          <path d="M0 0 Q22 -16 44 0"/>
+          <line x1="22" y1="0" x2="22" y2="92"/><line x1="0" y1="34" x2="44" y2="34"/><line x1="0" y1="64" x2="44" y2="64"/>
+        </g>
+        <g id="balc">
+          <line x1="-8" y1="0" x2="52" y2="0"/><line x1="-8" y1="26" x2="52" y2="26"/>
+          <path d="M-2 26 V4 M8 26 c-6 -6 -6 -14 0 -20 c6 6 6 14 0 20 M22 26 c-6 -6 -6 -14 0 -20 c6 6 6 14 0 20 M36 26 c-6 -6 -6 -14 0 -20 c6 6 6 14 0 20 M46 26 V4"/>
+        </g>
+        <g id="masc">
+          <path d="M-12 -4 Q0 -14 12 -4 Q14 8 0 16 Q-14 8 -12 -4Z"/>
+          <circle cx="-4" cy="1" r="1.4" fill="currentColor"/><circle cx="4" cy="1" r="1.4" fill="currentColor"/>
+          <path d="M-3 8 Q0 10 3 8"/><path d="M-12 -4 q-8 -2 -10 6 M12 -4 q8 -2 10 6"/>
+        </g>
+      </defs>
+      <!-- Ground -->
+      <line x1="0" y1="398" x2="1440" y2="398"/>
+      <!-- Building 1 -->
+      <g>
+        <path d="M20 398 V120 H300 V398"/>
+        <path d="M10 120 H310 M14 112 H306 V120"/>
+        <path d="M20 160 H300 M20 270 H300" opacity=".5"/>
+        <use href="#win" x="52" y="150"/><use href="#win" x="138" y="150"/><use href="#win" x="224" y="150"/>
+        <use href="#masc" x="74" y="136"/><use href="#masc" x="160" y="136"/><use href="#masc" x="246" y="136"/>
+        <use href="#balc" x="52" y="218"/><use href="#balc" x="138" y="218"/><use href="#balc" x="224" y="218"/>
+        <use href="#win" x="52" y="282"/><use href="#win" x="224" y="282"/>
+        <path d="M138 398 V300 Q160 278 182 300 V398"/><line x1="160" y1="290" x2="160" y2="398"/>
+        <!-- roof + chimney -->
+        <path d="M30 112 L60 70 H260 L290 112"/>
+        <rect x="210" y="34" width="26" height="40" class="ochre"/><line x1="206" y1="34" x2="240" y2="34" class="ochre"/>
+        <path class="smoke ochre" d="M223 26 c-8 -8 8 -12 0 -20 c-8 -8 8 -12 0 -18" opacity=".7"/>
+      </g>
+      <!-- Building 2 -->
+      <g>
+        <path d="M300 398 V90 H560 V398"/>
+        <path d="M292 90 H568 M296 82 H564 V90"/>
+        <use href="#win" x="330" y="118"/><use href="#win" x="408" y="118"/><use href="#win" x="486" y="118"/>
+        <use href="#balc" x="330" y="186"/><use href="#balc" x="408" y="186"/><use href="#balc" x="486" y="186"/>
+        <path d="M322 212 H538"/>
+        <use href="#win" x="330" y="232"/><use href="#win" x="408" y="232"/><use href="#win" x="486" y="232"/>
+        <use href="#masc" x="430" y="352"/>
+        <path d="M398 398 V330 H462 V398"/>
+        <!-- radiator in window (discret) -->
+        <g class="blue" stroke-width="1.3"><rect x="412" y="304" width="36" height="16" rx="2"/><path d="M418 306 V318 M424 306 V318 M430 306 V318 M436 306 V318 M442 306 V318"/></g>
+        <path d="M316 82 L340 50 H520 L544 82"/>
+        <rect x="350" y="22" width="22" height="32"/><rect x="480" y="22" width="22" height="32"/>
+      </g>
+      <!-- Building 3 (échoppe basse) -->
+      <g>
+        <path d="M560 398 V230 H780 V398"/>
+        <path d="M552 230 H788 M556 222 H784 V230"/>
+        <path d="M580 222 Q670 196 760 222" />
+        <use href="#masc" x="670" y="210"/>
+        <use href="#win" x="594" y="270"/>
+        <path d="M648 398 V280 Q670 258 692 280 V398"/>
+        <use href="#win" x="704" y="270"/>
+        <path d="M560 380 H780" opacity=".5"/>
+      </g>
+      <!-- Building 4 -->
+      <g>
+        <path d="M780 398 V100 H1060 V398"/>
+        <path d="M772 100 H1068 M776 92 H1064 V100"/>
+        <use href="#win" x="814" y="130"/><use href="#win" x="898" y="130"/><use href="#win" x="982" y="130"/>
+        <use href="#masc" x="836" y="116"/><use href="#masc" x="920" y="116"/><use href="#masc" x="1004" y="116"/>
+        <path d="M800 236 H1040 M800 262 H1040"/>
+        <path d="M806 262 V240 M1034 262 V240"/>
+        <path d="M830 262 c-8 -8 -8 -18 0 -22 c8 4 8 14 0 22 M870 262 c-8 -8 -8 -18 0 -22 c8 4 8 14 0 22 M910 262 c-8 -8 -8 -18 0 -22 c8 4 8 14 0 22 M950 262 c-8 -8 -8 -18 0 -22 c8 4 8 14 0 22 M990 262 c-8 -8 -8 -18 0 -22 c8 4 8 14 0 22"/>
+        <use href="#win" x="814" y="282"/><use href="#win" x="982" y="282"/>
+        <path d="M898 398 V306 Q920 286 942 306 V398"/>
+        <path d="M800 92 L826 60 H1014 L1040 92"/>
+        <rect x="846" y="30" width="24" height="34" class="ochre"/><line x1="842" y1="30" x2="874" y2="30" class="ochre"/>
+      </g>
+      <!-- Building 5 -->
+      <g>
+        <path d="M1060 398 V140 H1310 V398"/>
+        <path d="M1052 140 H1318 M1056 132 H1314 V140"/>
+        <use href="#win" x="1090" y="168"/><use href="#win" x="1164" y="168"/><use href="#win" x="1238" y="168"/>
+        <use href="#balc" x="1164" y="236"/>
+        <use href="#win" x="1090" y="290"/><use href="#win" x="1238" y="290"/>
+        <path d="M1164 398 V312 H1208 V398"/>
+        <use href="#masc" x="1186" y="296"/>
+        <path d="M1074 132 L1098 104 H1272 L1296 132"/>
+        <rect x="1230" y="76" width="22" height="32"/>
+      </g>
+      <!-- Building 6 -->
+      <g>
+        <path d="M1310 398 V200 H1440"/>
+        <path d="M1302 200 H1440"/>
+        <use href="#win" x="1340" y="232"/>
+        <use href="#balc" x="1340" y="300"/>
+        <use href="#masc" x="1362" y="218"/>
+      </g>
+    </svg>
+    <h1 class="bigword"><small>Entreprise Simon</small>Boyance</h1>
+  </div>
+  <div class="wrap">
+    <div class="hero-cols">
+      <div class="rv">
+        <span class="sc kicker">N° 00 — l’éditorial</span>
+        <h2>Derrière les façades de pierre blonde, un chauffage qui <i>tient sa promesse</i> tout l’hiver.</h2>
+      </div>
+      <div class="hero-right rv">
+        <p>Simon Boyance installe, remplace, entretient et dépanne chaudières gaz ou fioul, radiateurs et chaudières électriques, de Bordeaux à Talence. Vous échangez directement avec l’artisan.</p>
+        <a class="hero-tel" href="tel:+33684308867">06 84 30 88 67</a>
+        <div class="cta">
+          <a class="btn btn-ink" href="tel:+33684308867"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+          <a class="btn btn-line" href="#contact">Demander un devis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="trust" aria-label="En bref">
+  <ul class="wrap" style="padding:0">
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 29s-9-9.5-9-16a9 9 0 0 1 18 0c0 6.5-9 16-9 16z"/><circle cx="16" cy="13" r="3.2"/></svg><div><strong>Bordeaux, Talence</strong><small>et environs</small></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 4c3 5 7 8 7 14a7 7 0 0 1-14 0c0-3 1.5-5 3-6.5 0 3 1.5 4.5 3 4.5 0-4-1-8 1-12z"/></svg><div><strong>Gaz &amp; fioul</strong><small>chaudières</small></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M18 3 8 18h7l-2 11 11-16h-7z"/></svg><div><strong>Électrique</strong><small>radiateurs et chaudières</small></div></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="1"/><path d="M11 10h10M11 15h10M11 20h6"/></svg><div><strong>Devis sur demande</strong><small>au 06 84 30 88 67</small></div></li>
+  </ul>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>01</div>
+      <div><h2>Les services</h2><p>Deux familles d’équipements, un même soin : les chaudières à combustible — gaz ou fioul — et le chauffage électrique, des radiateurs à la chaudière.</p></div>
+    </div>
+    <div class="services">
+      <article class="svc rv">
+        <span class="tag">GAZ</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="6" width="32" height="40" rx="3"/><rect x="18" y="12" width="20" height="9" rx="1"/><circle cx="22" cy="30" r="2.5"/><circle cx="34" cy="30" r="2.5"/><path d="M20 46v5M28 46v5M36 46v5"/><path d="M28 38c-2 2-2 4 0 5 2-1 2-3 0-5z"/></svg>
+        <h3>Chaudière gaz</h3>
+        <p>Installation et remplacement de chaudières murales ou au sol, raccordement et mise en service soignée.</p>
+      </article>
+      <article class="svc rv">
+        <span class="tag">FIOUL</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="14" width="28" height="36" rx="2"/><path d="M10 24h28"/><circle cx="24" cy="36" r="5"/><path d="M38 20h6v-12M44 8h-4"/><path d="M14 50v3M34 50v3"/></svg>
+        <h3>Chaudière fioul</h3>
+        <p>Pose, remplacement et suivi de chaudières fioul, avec un regard attentif sur le brûleur et les réglages.</p>
+      </article>
+      <article class="svc rv">
+        <span class="tag">ENTRETIEN</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M34 8a9 9 0 0 0-8 12L9 37a4 4 0 0 0 6 6l17-17a9 9 0 0 0 12-8l-6 3-4-4 3-6a9 9 0 0 0-3 0z"/><path d="M40 38l8 8M44 34l4 4-6 6-4-4"/></svg>
+        <h3>Entretien annuel</h3>
+        <p>Nettoyage, contrôle et réglage de votre chaudière gaz ou fioul, avec remise de l’attestation d’entretien.</p>
+      </article>
+      <article class="svc rv">
+        <span class="tag">DÉPANNAGE</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="28" cy="30" r="18"/><path d="M28 18v12l8 5"/><path d="M22 6h12M28 6v6"/><path d="M44 14l4-4"/></svg>
+        <h3>Dépannage</h3>
+        <p>Panne, mise en sécurité, eau tiède : diagnostic de l’origine du problème et remise en route dès que possible.</p>
+      </article>
+      <article class="svc rv">
+        <span class="tag">ÉLECTRIQUE</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="16" width="44" height="26" rx="3"/><path d="M14 20v18M22 20v18M30 20v18M38 20v18"/><path d="M10 42v5M46 42v5"/><circle cx="45" cy="21" r="1.6"/></svg>
+        <h3>Radiateurs électriques</h3>
+        <p>Remplacement d’anciens convecteurs par des radiateurs plus confortables, pose et branchement propres.</p>
+      </article>
+      <article class="svc rv">
+        <span class="tag">ÉLECTRIQUE</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="6" width="28" height="38" rx="3"/><path d="M30 14l-6 10h6l-3 9 8-12h-6l3-7z"/><path d="M20 44v6M36 44v6M28 44v6"/></svg>
+        <h3>Chaudière électrique</h3>
+        <p>Une solution compacte, sans conduit ni combustible : installation, remplacement et entretien.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="sec sec-alt" id="pourquoi">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>02</div>
+      <div><h2>Pourquoi l’appeler</h2><p>Quelques principes simples, ceux d’un artisan qui travaille en direct avec ses clients.</p></div>
+    </div>
+    <div class="why">
+      <article class="rv"><span class="roman">I.</span><h3>Un interlocuteur direct</h3><p>Une entreprise à son nom : vous échangez directement avec l’artisan, sans plateforme intermédiaire.</p></article>
+      <article class="rv"><span class="roman">II.</span><h3>Plusieurs énergies</h3><p>Gaz, fioul ou électrique : un regard ouvert pour vous orienter vers l’équipement adapté à votre logement.</p></article>
+      <article class="rv"><span class="roman">III.</span><h3>Un devis clair</h3><p>Les travaux sont chiffrés avant intervention, poste par poste, pour décider en connaissance de cause.</p></article>
+      <article class="rv"><span class="roman">IV.</span><h3>Proche de chez vous</h3><p>Basé à Bordeaux, il intervient aussi à Talence et dans les communes voisines.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÉTAPES ================= -->
+<section class="sec" id="etapes">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>03</div>
+      <div><h2>Comment ça se passe</h2><p>De votre premier appel à la remise en chauffe, quatre temps.</p></div>
+    </div>
+    <ol class="steps">
+      <li class="rv"><h3>L’appel</h3><p>Vous décrivez votre équipement et votre besoin au 06 84 30 88 67 ou par e-mail.</p></li>
+      <li class="rv"><h3>La visite</h3><p>Un passage sur place pour voir l’installation, les contraintes du logement et vos attentes.</p></li>
+      <li class="rv"><h3>Le devis</h3><p>Une proposition écrite et détaillée, sans engagement, que vous prenez le temps d’étudier.</p></li>
+      <li class="rv"><h3>L’intervention</h3><p>Travaux réalisés, mise en service, explications sur l’utilisation et chantier laissé propre.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="sec sec-alt" id="apropos">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>04</div>
+      <div><h2>Portrait d’artisan</h2></div>
+    </div>
+    <div class="about">
+      <aside class="rv">
+        <dl>
+          <dt>Entreprise</dt><dd>Entreprise Simon Boyance</dd>
+          <dt>Métier</dt><dd>Chauffagiste</dd>
+          <dt>Secteur</dt><dd>Bordeaux, Talence et environs</dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33684308867">06 84 30 88 67</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:entreprise.boyance@gmail.com">entreprise.boyance@gmail.com</a></dd>
+        </dl>
+      </aside>
+      <div class="rv">
+        <div class="cols2">
+          <p class="lettrine">Simon Boyance dirige l’Entreprise Boyance, installée à Bordeaux. Son métier : le chauffage, sous ses formes les plus courantes dans les maisons et appartements de la métropole — les chaudières gaz ou fioul, les radiateurs et les chaudières électriques.</p>
+          <p>Il intervient à Bordeaux, à Talence et dans les environs, pour une installation neuve, un remplacement, l’entretien d’un appareil existant ou un dépannage.</p>
+          <p>Le plus simple pour le joindre reste le téléphone : vous exposez votre situation, il vous dit comment il peut vous aider et convient avec vous d’un passage.</p>
+        </div>
+        <p class="pull">Installer, remplacer, entretenir, dépanner <span>— gaz, fioul &amp; électrique.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARNET ================= -->
+<section class="sec" id="carnet">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>05</div>
+      <div><h2>Le carnet de l’artisan</h2><p>Quatre planches, quatre interventions types. Des illustrations, pas des photos de chantiers : elles montrent le genre de travaux réalisés, chaque projet faisant l’objet d’un devis.</p></div>
+    </div>
+    <div class="carnet">
+      <!-- Planche I -->
+      <figure class="plate rv">
+        <div class="frame">
+          <span class="pl">Planche I</span>
+          <svg viewBox="0 0 520 320" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="0" y="0" width="520" height="320" fill="#efe6d2" stroke="none"/>
+            <path d="M0 250 H520" opacity=".5"/>
+            <!-- carrelage -->
+            <path d="M40 60h120v160H40z M40 100h120 M40 140h120 M40 180h120 M80 60v160 M120 60v160" opacity=".3"/>
+            <!-- chaudière murale -->
+            <rect x="210" y="50" width="120" height="160" rx="6" fill="#faf6ec"/>
+            <rect x="228" y="70" width="84" height="34" rx="2"/>
+            <text x="270" y="93" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="13" fill="#2b4c6f" stroke="none">55°</text>
+            <circle cx="245" cy="132" r="9"/><circle cx="295" cy="132" r="9"/>
+            <path d="M245 132l4-5M295 132l-4-5"/>
+            <path d="M270 178c-7 7-7 13 0 16 7-3 7-9 0-16z" stroke="#b8863b"/>
+            <!-- conduit ventouse -->
+            <path d="M250 50V24h30V50" /><path d="M280 34h60" />
+            <!-- tuyaux -->
+            <path d="M232 210v60M252 210v60M288 210v60M308 210v60" stroke="#2b4c6f"/>
+            <path d="M232 270h-30M308 270h40" stroke="#2b4c6f"/>
+            <!-- plan de travail -->
+            <path d="M360 200h140v12H360z M376 212v38M484 212v38"/>
+            <path d="M400 200v-24h20v24 M430 186h40v14" opacity=".6"/>
+            <!-- annotation -->
+            <path d="M340 92 h40" stroke="#b8863b" stroke-dasharray="3 4"/><circle cx="384" cy="92" r="3" fill="#b8863b" stroke="none"/>
+            <text x="392" y="96" font-family="Public Sans, sans-serif" font-size="12" fill="#85581c" stroke="none" letter-spacing="1.5">FIG. A</text>
+          </svg>
+        </div>
+        <figcaption>
+          <span class="n">I</span>
+          <h3>La chaudière murale de cuisine</h3>
+          <p>Remplacement d’une ancienne chaudière gaz dans un placard de cuisine : dépose, pose, raccordements, réglages.</p>
+          <span class="sc">gaz · remplacement</span>
+        </figcaption>
+      </figure>
+      <!-- Planche II -->
+      <figure class="plate rv">
+        <div class="frame">
+          <span class="pl">Planche II</span>
+          <svg viewBox="0 0 520 320" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="0" y="0" width="520" height="320" fill="#efe6d2" stroke="none"/>
+            <!-- voûte de cave en pierre -->
+            <path d="M20 280 V120 Q260 -10 500 120 V280" />
+            <path d="M60 280V140 M460 280V140" opacity=".3"/>
+            <path d="M20 160h40M20 200h40M20 240h40M460 160h40M460 200h40M460 240h40" opacity=".35"/>
+            <path d="M0 280H520"/>
+            <!-- chaudière fioul au sol -->
+            <rect x="150" y="130" width="110" height="150" rx="4" fill="#faf6ec"/>
+            <path d="M150 170h110"/>
+            <rect x="170" y="142" width="40" height="16" rx="2"/>
+            <circle cx="240" cy="150" r="5"/>
+            <circle cx="205" cy="225" r="22"/><circle cx="205" cy="225" r="10" stroke="#b8863b"/>
+            <!-- conduit -->
+            <path d="M190 130V80h30v50" /><path d="M205 80V40"/>
+            <!-- cuve -->
+            <rect x="320" y="180" width="110" height="100" rx="14"/>
+            <path d="M320 210h110" opacity=".4"/>
+            <path d="M260 250h60" stroke="#2b4c6f"/>
+            <path d="M375 180v-16h12v16"/>
+                        <text x="300" y="300" font-family="Public Sans, sans-serif" font-size="12" fill="#85581c" stroke="none" letter-spacing="1.5">FIG. B</text>
+          </svg>
+        </div>
+        <figcaption>
+          <span class="n">II</span>
+          <h3>Le fioul sous la voûte</h3>
+          <p>Entretien d’une chaudière fioul installée en cave : nettoyage, contrôle du brûleur, vérification des réglages.</p>
+          <span class="sc">fioul · entretien</span>
+        </figcaption>
+      </figure>
+      <!-- Planche III -->
+      <figure class="plate rv">
+        <div class="frame">
+          <span class="pl">Planche III</span>
+          <svg viewBox="0 0 520 320" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="0" y="0" width="520" height="320" fill="#efe6d2" stroke="none"/>
+            <!-- haute fenêtre -->
+            <path d="M170 40 Q260 10 350 40 V190 H170Z" fill="#faf6ec"/>
+            <path d="M260 26V190 M170 90h180 M170 140h180"/>
+            <path d="M150 190h220v10H150z"/>
+            <!-- moulures parquet -->
+            <path d="M0 286H520"/>
+            <path d="M0 300h520" opacity=".3"/><path d="M40 286l-20 34M120 286l-20 34M200 286l-20 34M280 286l-20 34M360 286l-20 34M440 286l-20 34" opacity=".25"/>
+            <!-- radiateur électrique -->
+            <rect x="160" y="216" width="200" height="56" rx="6" fill="#faf6ec" stroke="#2b4c6f"/>
+            <path d="M184 224v40M208 224v40M232 224v40M256 224v40M280 224v40M304 224v40M328 224v40" stroke="#2b4c6f"/>
+            <path d="M180 272v14M340 272v14"/>
+            <circle cx="350" cy="226" r="3" fill="#b8863b" stroke="none"/>
+            <!-- chaleur -->
+            <path class="smoke" d="M210 206c-6-6 6-10 0-16M260 206c-6-6 6-10 0-16M310 206c-6-6 6-10 0-16" stroke="#b8863b"/>
+            <!-- moulure murale -->
+            <path d="M40 60h90v180H40z M390 60h90v180h-90z" opacity=".3"/>
+            <text x="400" y="276" font-family="Public Sans, sans-serif" font-size="12" fill="#85581c" stroke="none" letter-spacing="1.5">FIG. C</text>
+          </svg>
+        </div>
+        <figcaption>
+          <span class="n">III</span>
+          <h3>Le radiateur sous la fenêtre haute</h3>
+          <p>Remplacement d’un vieux convecteur par un radiateur électrique plus doux, dans un appartement ancien.</p>
+          <span class="sc">électrique · pose</span>
+        </figcaption>
+      </figure>
+      <!-- Planche IV -->
+      <figure class="plate rv">
+        <div class="frame">
+          <span class="pl">Planche IV</span>
+          <svg viewBox="0 0 520 320" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="0" y="0" width="520" height="320" fill="#efe6d2" stroke="none"/>
+            <path d="M0 286H520"/>
+            <!-- cellier: étagères -->
+            <path d="M40 80h110M40 150h110M40 220h110" opacity=".35"/>
+            <path d="M60 80v-22h20v22M100 150v-30h26v30" opacity=".35"/>
+            <!-- chaudière électrique compacte -->
+            <rect x="200" y="60" width="100" height="150" rx="6" fill="#faf6ec"/>
+            <rect x="216" y="76" width="68" height="26" rx="2"/>
+            <path d="M256 120l-12 20h12l-6 18 16-24h-12l6-14z" stroke="#b8863b"/>
+            <circle cx="232" cy="185" r="6"/><circle cx="268" cy="185" r="6"/>
+            <path d="M220 210v76M240 210v76" stroke="#2b4c6f"/>
+            <path d="M240 260h140v-120h30" stroke="#2b4c6f"/>
+            <!-- tableau électrique -->
+            <rect x="340" y="50" width="120" height="80" rx="3"/>
+            <path d="M352 70h96M352 90h96M352 110h96" opacity=".5"/>
+            <path d="M364 64v12M380 64v12M396 64v12M412 64v12M364 84v12M380 84v12" />
+            <path d="M300 90h40" stroke-dasharray="3 4"/>
+            <!-- radiateur relié -->
+            <rect x="410" y="200" width="80" height="50" rx="4"/>
+            <path d="M424 206v38M440 206v38M456 206v38M472 206v38"/>
+            <path d="M410 140v60" stroke="#2b4c6f"/>
+            <text x="40" y="276" font-family="Public Sans, sans-serif" font-size="12" fill="#85581c" stroke="none" letter-spacing="1.5">FIG. D</text>
+          </svg>
+        </div>
+        <figcaption>
+          <span class="n">IV</span>
+          <h3>La chaudière électrique du cellier</h3>
+          <p>Installation d’une chaudière électrique compacte raccordée au circuit de radiateurs existant.</p>
+          <span class="sc">électrique · installation</span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="note-devis rv">
+      <p>Chaque logement est différent : tarifs <em>sur devis</em>.</p>
+      <a class="btn btn-ink" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="sec sec-alt" id="avis">
+  <div class="wrap">
+    <div class="avis rv">
+      <svg class="orn" viewBox="0 0 120 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 12h44M76 12h44"/><path d="M60 3l9 9-9 9-9-9z"/><circle cx="60" cy="12" r="2" fill="currentColor"/></svg>
+      <span class="sc" style="color:var(--ocre-t)">Rubrique 06 — courrier des lecteurs</span>
+      <h2>Votre avis compte</h2>
+      <p>Simon Boyance est intervenu chez vous ? Quelques mots sur Google aident d’autres habitants de Bordeaux et de Talence à trouver un chauffagiste de confiance.</p>
+      <a class="btn btn-line" href="https://www.google.com/search?q=Entreprise+Boyance+chauffagiste+Bordeaux" target="_blank" rel="noopener">Laisser un avis sur Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>07</div>
+      <div><h2>Questions fréquentes</h2></div>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary><span class="q">Q.01</span>L’entretien annuel de ma chaudière est-il obligatoire ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Pour les chaudières gaz et fioul, un entretien annuel par un professionnel est prévu par la réglementation. Il permet de vérifier la sécurité, d’optimiser la combustion et donne lieu à une attestation à conserver.</p></div>
+      </details>
+      <details>
+        <summary><span class="q">Q.02</span>Puis-je bénéficier d’aides comme MaPrimeRénov’ ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Certaines aides publiques existent pour la rénovation énergétique, mais leurs conditions (équipements éligibles, ressources, qualifications exigées de l’entreprise) évoluent régulièrement. Le plus sûr est de vérifier votre situation sur le site officiel France Rénov’ avant de vous engager.</p></div>
+      </details>
+      <details>
+        <summary><span class="q">Q.03</span>Quels sont les délais pour une intervention ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Ils dépendent de la période — l’automne et l’hiver sont plus chargés — et de la nature des travaux. Appelez pour connaître les disponibilités du moment.</p></div>
+      </details>
+      <details>
+        <summary><span class="q">Q.04</span>Ma chaudière est en panne, que faire ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Notez le code ou le voyant affiché, vérifiez la pression et l’alimentation, puis appelez le 06 84 30 88 67. En cas d’odeur de gaz, coupez l’arrivée, aérez, ne touchez à aucun interrupteur et contactez les services d’urgence gaz.</p></div>
+      </details>
+      <details>
+        <summary><span class="q">Q.05</span>Chaudière ou chauffage électrique : comment choisir ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Tout dépend du logement : surface, isolation, présence d’un réseau de radiateurs à eau, accès au gaz, usage de l’eau chaude. Une visite permet de comparer les options réalistes pour votre cas.</p></div>
+      </details>
+      <details>
+        <summary><span class="q">Q.06</span>Le devis est-il payant ?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="a"><p>Les conditions du devis vous sont précisées au téléphone, avant tout déplacement. Les tarifs des travaux sont établis sur devis, selon votre installation.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HORAIRES ================= -->
+<section class="sec sec-alt" id="horaires">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>08</div>
+      <div><h2>Horaires &amp; secteur</h2></div>
+    </div>
+    <div class="hours">
+      <div class="rv">
+        <table>
+          <caption>Horaires à confirmer par téléphone</caption>
+          <tbody id="hours">
+            <tr data-d="1"><th scope="row">Lundi</th><td>Sur rendez-vous</td></tr>
+            <tr data-d="2"><th scope="row">Mardi</th><td>Sur rendez-vous</td></tr>
+            <tr data-d="3"><th scope="row">Mercredi</th><td>Sur rendez-vous</td></tr>
+            <tr data-d="4"><th scope="row">Jeudi</th><td>Sur rendez-vous</td></tr>
+            <tr data-d="5"><th scope="row">Vendredi</th><td>Sur rendez-vous</td></tr>
+            <tr data-d="6"><th scope="row">Samedi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-d="0"><th scope="row">Dimanche</th><td>À confirmer par téléphone</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:18px;color:var(--encre-2);font-size:.95rem">Les horaires ne sont pas encore publiés : le plus simple est d’appeler le <a href="tel:+33684308867">06 84 30 88 67</a>.</p>
+      </div>
+      <div class="zone rv">
+        <svg viewBox="0 0 400 200" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M300 -10 C250 40 330 80 270 120 S300 180 360 210" stroke="#2b4c6f" stroke-width="16" opacity=".18"/>
+          <path d="M300 -10 C250 40 330 80 270 120 S300 180 360 210" stroke="#2b4c6f" stroke-width="1.5"/>
+          <text x="306" y="96" font-family="Public Sans, sans-serif" font-size="10" letter-spacing="2" fill="#2b4c6f">LA GARONNE</text>
+          <circle cx="140" cy="110" r="62" stroke="#b8863b" stroke-dasharray="3 5"/>
+          <circle cx="140" cy="88" r="5" fill="#1f1b16"/>
+          <text x="152" y="94" font-family="Libre Caslon Display, Georgia, serif" font-size="18" fill="#1f1b16">Bordeaux</text>
+          <circle cx="126" cy="140" r="4" fill="#1f1b16"/>
+          <text x="136" y="146" font-family="Libre Caslon Display, Georgia, serif" font-size="16" fill="#1f1b16">Talence</text>
+          <text x="20" y="190" font-family="Public Sans, sans-serif" font-size="10" letter-spacing="2" fill="#85581c">ET ENVIRONS</text>
+        </svg>
+        <div class="in">
+          <h3>Bordeaux, Talence et environs</h3>
+          <p>L’entreprise est basée à Bordeaux et intervient également à Talence et dans les communes voisines. Indiquez votre adresse lors de l’appel.</p>
+          <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&amp;query=Bordeaux%2C%20Talence%2C%20Gironde" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="rubrique rv">
+      <div class="num"><small>Rubrique</small>09</div>
+      <div><h2>Demander un devis</h2><p>Décrivez votre projet en quelques lignes : type d’équipement, énergie, commune. Simon Boyance vous recontacte.</p></div>
+    </div>
+    <div class="contact">
+      <div class="direct rv">
+        <span class="sc" style="color:var(--ocre-t)">Par téléphone</span>
+        <a class="big" href="tel:+33684308867">06 84 30 88 67</a>
+        <span class="sc" style="color:var(--ocre-t)">Par e-mail</span>
+        <p><a class="mail" href="mailto:entreprise.boyance@gmail.com">entreprise.boyance@gmail.com</a></p>
+        <p style="color:var(--encre-2);margin-top:24px">Secteur : Bordeaux, Talence et environs.<br>Horaires à confirmer par téléphone.</p>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <div><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+        <div><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Bordeaux, Talence…"></div>
+        <div><label for="f-type">Demande</label>
+          <select id="f-type" name="type">
+            <option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chaudière électrique</option><option>Radiateurs électriques</option><option>Entretien</option><option>Dépannage</option><option>Autre</option>
+          </select></div>
+        <div class="full"><label for="f-msg">Votre message</label><textarea id="f-msg" name="msg" placeholder="Équipement actuel, besoin, disponibilités…"></textarea></div>
+        <div class="full"><button class="btn btn-ink" type="submit">Envoyer la demande</button></div>
+        <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera activé à la mise en ligne. Appelez le <a href="tel:+33684308867">06 84 30 88 67</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="fname">Boyance</div>
+        <p>Entreprise Simon Boyance — chauffagiste à Bordeaux. Chaudières gaz ou fioul, radiateurs et chaudières électriques.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:+33684308867">06 84 30 88 67</a></li>
+          <li><a href="mailto:entreprise.boyance@gmail.com">entreprise.boyance@gmail.com</a></li>
+          <li>Bordeaux, Talence et environs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>Sur rendez-vous</li><li>À confirmer par téléphone</li></ul>
+      </div>
+      <div>
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#carnet">Le carnet de l’artisan</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
+          <li><a href="#contact">Demander un devis</a></li>
+          <li><a href="https://france-renov.gouv.fr" target="_blank" rel="noopener">France Rénov’ (aides)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot"><span>© <span id="y"></span> Entreprise Simon Boyance</span><a href="#top" style="color:inherit">Retour en haut ↑</a></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33684308867" aria-label="Appeler le 06 84 30 88 67"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function setMenu(o){burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');menu.classList.toggle('open',o);}
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  var nav=document.querySelector('.nav');
+  function onS(){nav.classList.toggle('scrolled',window.scrollY>10);}
+  window.addEventListener('scroll',onS,{passive:true});onS();
+
+  var d=new Date().getDay(),row=document.querySelector('#hours tr[data-d="'+d+'"]');
+  if(row)row.classList.add('today');
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  var f=document.getElementById('form');
+  f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show');});
+
+  var els=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>

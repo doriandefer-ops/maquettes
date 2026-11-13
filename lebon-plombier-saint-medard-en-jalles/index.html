@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lebon Plombier – plombier chauffagiste à Saint-Médard-en-Jalles</title>
+<meta name="description" content="Lebon Plombier, M. Lebon et son équipe à Saint-Médard-en-Jalles : plomberie, dépannage de fuites, salle de bains, pompes à chaleur, climatisation et chauffe-eau. Devis sur demande au 06 84 10 25 34.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#e9dcc3;
+  --kraft-d:#dccaa8;
+  --papier:#fbf6ec;
+  --brun:#4a3222;
+  --brun-2:#6b4c37;
+  --terre:#c2603a;
+  --terre-d:#a2461f;
+  --encre:#2f4a6b;
+  --ligne:rgba(47,74,107,.16);
+  --marge:rgba(194,96,58,.45);
+  --ombre:0 2px 0 rgba(74,50,34,.08), 0 10px 24px -10px rgba(74,50,34,.35);
+  --hand:'Kalam', 'Comic Sans MS', cursive;
+  --serif:'Source Serif 4', Georgia, serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .29 0 0 0 0 .2 0 0 0 0 .13 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;font-family:var(--serif);font-size:1.05rem;line-height:1.65;color:var(--brun);
+  background-color:var(--kraft);
+  background-image:var(--grain), radial-gradient(ellipse at 20% 0%, rgba(255,255,255,.35), transparent 60%);
+  overflow-x:hidden;
+}
+img,svg{max-width:100%}
+a{color:var(--encre)}
+h1,h2,h3{font-family:var(--hand);font-weight:700;line-height:1.15;margin:0 0 .5em;color:var(--brun);overflow-wrap:break-word;hyphens:auto}
+h2{font-size:clamp(2rem,5vw,3rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--papier);padding:.5em 1em;z-index:200}
+.skip:focus{left:16px;top:16px}
+:focus-visible{outline:3px dashed var(--encre);outline-offset:3px}
+
+/* ---------- doodle underline ---------- */
+.surligne{position:relative;display:inline-block;white-space:nowrap}
+.surligne svg{position:absolute;left:-4%;bottom:-.28em;width:108%;height:.5em;overflow:visible}
+.kicker{font-family:var(--hand);font-size:1.15rem;color:var(--terre-d);display:inline-flex;align-items:center;gap:.4em;margin-bottom:.3em}
+.kicker::before{content:"";width:34px;height:10px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 10'%3E%3Cpath d='M1 6c5-3 9 2 14-1s9-3 18 0' fill='none' stroke='%23a2461f' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+.section{padding:clamp(64px,9vw,110px) 0;position:relative}
+.section-head{max-width:720px;margin-bottom:clamp(32px,5vw,56px)}
+.section-head p{font-size:1.1rem;color:var(--brun-2)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .3s, box-shadow .3s}
+.nav.scrolled{background:rgba(251,246,236,.94);backdrop-filter:blur(6px);box-shadow:0 1px 0 rgba(74,50,34,.12), 0 8px 20px -14px rgba(74,50,34,.5)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--brun);font-family:var(--hand);font-weight:700;font-size:1.45rem;line-height:1}
+.logo small{display:block;font-family:var(--serif);font-weight:400;font-size:.72rem;letter-spacing:.06em;color:var(--brun-2);margin-top:3px}
+.logo svg{flex:none}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{font-family:var(--hand);font-size:1.12rem;text-decoration:none;color:var(--brun);padding:6px 10px;border-radius:6px;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;background:var(--terre);transform:scaleX(0);transform-origin:left;transition:transform .25s;border-radius:2px}
+.menu a:not(.btn):hover::after{transform:scaleX(1)}
+.burger{display:none;background:none;border:2px solid var(--brun);border-radius:10px 12px 9px 13px;width:48px;height:44px;cursor:pointer;padding:0;color:var(--brun)}
+.burger span{display:block;width:22px;height:2.5px;background:currentColor;margin:4px auto;border-radius:2px;transition:transform .3s, opacity .3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--hand);font-weight:700;font-size:1.2rem;line-height:1;text-decoration:none;padding:.8em 1.3em;border:2.5px solid var(--brun);border-radius:14px 10px 16px 9px / 10px 15px 9px 14px;cursor:pointer;transition:transform .2s, box-shadow .2s, background .2s;box-shadow:3px 4px 0 var(--brun)}
+.btn:hover{transform:translate(-2px,-2px) rotate(-.6deg);box-shadow:5px 6px 0 var(--brun)}
+.btn:active{transform:translate(1px,1px);box-shadow:1px 2px 0 var(--brun)}
+.btn-terre{background:var(--terre-d);color:#fff}
+.btn-papier{background:var(--papier);color:var(--brun)}
+.btn-encre{background:var(--encre);color:#fff}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.menu a.btn{color:#fff}
+.menu .btn{font-size:1.05rem;padding:.55em 1em;box-shadow:2px 3px 0 var(--brun)}
+
+/* ---------- hero ---------- */
+.hero{padding:120px 0 80px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.02;margin-bottom:.35em}
+.hero h1 .encre{color:var(--encre)}
+.hero .lead{font-size:clamp(1.1rem,1.6vw,1.25rem);max-width:34em;color:var(--brun-2)}
+.hero .lead strong{color:var(--brun)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 22px}
+.hero-note{font-family:var(--hand);font-size:1.1rem;color:var(--encre);display:flex;align-items:center;gap:8px}
+.hero-note svg{flex:none}
+
+/* carnet page */
+.carnet{position:relative;transform:rotate(1.6deg);margin:20px 8px 10px}
+.carnet-page{
+  position:relative;background-color:var(--papier);border-radius:3px 6px 4px 5px;padding:28px 22px 22px 46px;box-shadow:var(--ombre), 0 30px 50px -30px rgba(74,50,34,.6);
+  background-image:
+    linear-gradient(90deg, transparent 34px, var(--marge) 34px, var(--marge) 36px, transparent 36px),
+    repeating-linear-gradient(180deg, transparent 0 29px, var(--ligne) 29px 30px),
+    var(--grain);
+}
+.carnet::before{content:"";position:absolute;inset:8px -8px -8px 8px;background:#f3ead8;border-radius:4px;transform:rotate(-2.6deg);box-shadow:var(--ombre);z-index:-1}
+.carnet-titre{font-family:var(--hand);font-size:1.05rem;color:var(--brun-2);display:flex;justify-content:space-between;gap:10px;margin:-4px 0 4px;flex-wrap:wrap}
+.carnet svg.croquis{display:block;width:100%;height:auto}
+.trous{position:absolute;left:12px;top:30px;bottom:30px;display:flex;flex-direction:column;justify-content:space-around}
+.trous i{width:12px;height:12px;border-radius:50%;background:var(--kraft-d);box-shadow:inset 1px 2px 2px rgba(74,50,34,.35)}
+
+/* tape */
+.tape{position:absolute;width:118px;height:34px;background:rgba(236,222,180,.78);box-shadow:0 1px 3px rgba(74,50,34,.18);z-index:3;
+  -webkit-mask:linear-gradient(90deg,transparent 0 2px,#000 2px calc(100% - 2px),transparent calc(100% - 2px)),
+  conic-gradient(from 45deg at 50% 0,#000 0 0);
+  clip-path:polygon(0 8%,6% 0,12% 10%,18% 2%,25% 8%,32% 0,40% 7%,48% 1%,56% 9%,64% 0,72% 8%,80% 1%,88% 9%,94% 0,100% 7%,100% 93%,94% 100%,88% 91%,80% 99%,72% 92%,64% 100%,56% 91%,48% 99%,40% 92%,32% 100%,25% 92%,18% 98%,12% 90%,6% 100%,0 92%);
+  background-image:linear-gradient(90deg,rgba(255,255,255,.25),transparent 40%,rgba(255,255,255,.18));
+}
+.tape.t1{top:-14px;left:28%;transform:rotate(-4deg)}
+.tape.t2{bottom:-12px;right:10%;transform:rotate(6deg)}
+.tape.t3{top:22%;right:-34px;transform:rotate(80deg);width:92px}
+
+.annot{font-family:var(--hand);fill:var(--encre)}
+.annot.terre{fill:var(--terre-d)}
+
+/* ---------- confiance ---------- */
+.confiance{position:relative;z-index:2;margin-top:-20px}
+.bande{background:var(--papier);background-image:var(--grain);border-radius:6px;box-shadow:var(--ombre);padding:22px clamp(16px,3vw,34px);display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;transform:rotate(-.4deg)}
+.bande .tape{top:-15px;left:calc(50% - 59px);transform:rotate(2deg)}
+.bande-item{display:flex;align-items:center;gap:12px;min-width:0}
+.bande-item svg{flex:none;width:44px;height:44px}
+.bande-item b{display:block;font-family:var(--hand);font-size:1.2rem;line-height:1.15}
+.bande-item span{font-size:.93rem;color:var(--brun-2);line-height:1.35;display:block}
+.bande-item a{color:var(--encre)}
+.stars{color:var(--terre-d);letter-spacing:2px;font-size:1rem}
+
+/* ---------- services ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,36px)}
+.card{position:relative;background:var(--papier);background-image:var(--grain);padding:34px 26px 26px;border-radius:4px 7px 5px 6px;box-shadow:var(--ombre);transition:transform .3s, box-shadow .3s}
+.card:nth-child(odd){transform:rotate(-.8deg)}
+.card:nth-child(even){transform:rotate(.7deg)}
+.card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 4px 0 rgba(74,50,34,.06),0 22px 34px -14px rgba(74,50,34,.45)}
+.card::before{content:"";position:absolute;top:-13px;left:calc(50% - 46px);width:92px;height:28px;background:rgba(236,222,180,.8);transform:rotate(-3deg);box-shadow:0 1px 2px rgba(74,50,34,.18);
+  clip-path:polygon(0 10%,8% 0,16% 9%,25% 1%,34% 9%,43% 0,52% 8%,61% 0,70% 9%,79% 1%,88% 9%,100% 2%,100% 90%,92% 100%,84% 91%,75% 99%,66% 90%,57% 100%,48% 91%,39% 99%,30% 90%,21% 100%,12% 91%,0 98%)}
+.card:nth-child(3n+2)::before{transform:rotate(4deg);left:calc(50% - 30px)}
+.card:nth-child(3n)::before{transform:rotate(-6deg);left:calc(50% - 60px)}
+.card .ico{width:74px;height:74px;margin-bottom:10px}
+.card h3{margin-bottom:.3em}
+.card p{margin:0;color:var(--brun-2);font-size:1rem}
+.card .tag{display:inline-block;margin-top:14px;font-family:var(--hand);color:var(--terre-d);font-size:1.05rem}
+
+/* ---------- établi ---------- */
+.etabli{background:
+  linear-gradient(180deg, rgba(74,50,34,.06), transparent 30%),
+  repeating-linear-gradient(90deg, rgba(74,50,34,.05) 0 2px, transparent 2px 140px),
+  #d8c29c;background-image:var(--grain), repeating-linear-gradient(90deg, rgba(120,80,45,.08) 0 3px, transparent 3px 61px, rgba(120,80,45,.05) 61px 63px, transparent 63px 170px), linear-gradient(180deg,#dcc7a1,#d3bb92);
+  border-block:3px solid rgba(74,50,34,.25)}
+.etabli::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent 0 46px, rgba(74,50,34,.06) 46px 48px);pointer-events:none}
+.etabli .wrap{position:relative}
+.etabli .section-head p{color:var(--brun)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.6vw,34px)}
+.polaroid{position:relative;background:var(--papier);padding:14px 14px 18px;box-shadow:var(--ombre), 0 18px 26px -18px rgba(0,0,0,.5);transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+.polaroid:nth-child(1){transform:rotate(-2.4deg)}
+.polaroid:nth-child(2){transform:rotate(1.8deg) translateY(14px)}
+.polaroid:nth-child(3){transform:rotate(-1.2deg)}
+.polaroid:nth-child(4){transform:rotate(2.6deg) translateY(10px)}
+.polaroid:hover{transform:rotate(0) translateY(-6px) scale(1.02);z-index:2}
+.pin{position:absolute;top:-10px;left:calc(50% - 11px);width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f2a184,var(--terre) 45%,#7d321a 100%);box-shadow:2px 5px 5px -1px rgba(0,0,0,.4);z-index:3}
+.pin::after{content:"";position:absolute;left:9px;top:18px;width:3px;height:8px;background:linear-gradient(#9a9a9a,#555);border-radius:0 0 2px 2px;z-index:-1}
+.polaroid:nth-child(even) .pin{background:radial-gradient(circle at 35% 30%,#a8bfdc,var(--encre) 45%,#16263a 100%)}
+.polaroid .dessin{background-color:#fffdf7;background-image:repeating-linear-gradient(0deg, transparent 0 19px, rgba(47,74,107,.09) 19px 20px), repeating-linear-gradient(90deg, transparent 0 19px, rgba(47,74,107,.09) 19px 20px);border:1px solid rgba(74,50,34,.12);aspect-ratio:1/1;display:grid;place-items:center}
+.polaroid .dessin svg{width:92%;height:92%}
+.polaroid h3{font-size:1.3rem;margin:12px 0 2px}
+.polaroid p{font-size:.95rem;margin:0;color:var(--brun-2);line-height:1.5}
+.polaroid .mention{display:inline-block;margin-top:8px;font-family:var(--hand);font-size:.98rem;color:var(--encre)}
+.etabli-note{margin-top:46px;font-family:var(--hand);font-size:1.15rem;text-align:center;color:var(--brun)}
+
+/* ---------- pourquoi ---------- */
+.pourquoi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,34px)}
+.atout{position:relative;padding:22px 6px 0 0}
+.atout .num{font-family:var(--hand);font-weight:700;font-size:3.2rem;line-height:1;color:var(--terre-d);opacity:.9}
+.atout svg.bulle{position:absolute;left:-18px;top:2px;width:96px;height:88px;pointer-events:none}
+.atout h3{margin-top:.5em}
+.atout p{color:var(--brun-2);font-size:1rem}
+
+/* ---------- étapes ---------- */
+.etapes-bg{background:var(--papier);background-image:linear-gradient(90deg, transparent 54px, var(--marge) 54px, var(--marge) 56px, transparent 56px),repeating-linear-gradient(180deg, transparent 0 31px, var(--ligne) 31px 32px), var(--grain);border-block:1px solid rgba(74,50,34,.12)}
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,36px);counter-reset:e;position:relative}
+.etapes li{position:relative;padding-top:8px}
+.etapes .rond{position:relative;width:76px;height:76px;display:grid;place-items:center;font-family:var(--hand);font-weight:700;font-size:2.2rem;color:var(--encre);margin-bottom:12px}
+.etapes .rond svg{position:absolute;inset:0;width:100%;height:100%}
+.etapes h3{font-size:1.35rem}
+.etapes p{font-size:1rem;color:var(--brun-2)}
+.etapes .fleche{position:absolute;top:22px;left:88px;right:-28px;height:34px;pointer-events:none}
+.etapes li:last-child .fleche{display:none}
+
+/* ---------- à propos ---------- */
+.apropos-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,72px);align-items:center}
+.fiche{position:relative;background:var(--papier);background-image:var(--grain);padding:34px 30px 30px;box-shadow:var(--ombre);transform:rotate(-1.8deg);border-radius:3px}
+.fiche .tape{top:-15px;left:20px;transform:rotate(-8deg)}
+.fiche .tape.t2{left:auto;right:16px;top:-12px;bottom:auto;transform:rotate(7deg)}
+.fiche dl{margin:0;display:grid;gap:14px}
+.fiche dt{font-family:var(--hand);color:var(--terre-d);font-size:1.05rem;line-height:1}
+.fiche dd{margin:2px 0 0;font-size:1.05rem;border-bottom:1.5px dashed rgba(74,50,34,.25);padding-bottom:8px;overflow-wrap:anywhere}
+.fiche dd a{color:var(--encre);font-weight:600}
+.apropos-texte p{font-size:1.1rem}
+.signature{font-family:var(--hand);font-size:1.7rem;color:var(--encre);margin-top:6px;display:inline-block;transform:rotate(-3deg)}
+
+/* ---------- avis ---------- */
+.avis-box{position:relative;max-width:780px;margin:0 auto;text-align:center;background:var(--papier);background-image:var(--grain);padding:clamp(36px,5vw,56px) clamp(20px,4vw,56px);box-shadow:var(--ombre);border-radius:4px;transform:rotate(.6deg)}
+.avis-box .tape.t1{left:calc(50% - 59px);top:-15px}
+.avis-box .kicker{display:flex}
+.note-grande{font-family:var(--hand);font-weight:700;font-size:clamp(3.4rem,9vw,5.4rem);line-height:1;color:var(--brun);position:relative;display:inline-block}
+.note-grande svg{max-width:none;position:absolute;inset:-18% -24%;width:148%;height:136%;pointer-events:none}
+.avis-etoiles{display:flex;justify-content:center;gap:6px;margin:14px 0 8px}
+.avis-etoiles svg{width:38px;height:38px}
+.avis-box p{font-size:1.1rem;color:var(--brun-2);max-width:34em;margin-inline:auto}
+
+/* ---------- FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.faq-list{display:grid;gap:14px}
+.faq-list details{background:var(--papier);background-image:var(--grain);border-radius:4px 8px 5px 7px;box-shadow:0 1px 0 rgba(74,50,34,.1),0 6px 14px -8px rgba(74,50,34,.4);border-left:4px solid var(--terre);transition:border-color .25s}
+.faq-list details[open]{border-left-color:var(--encre)}
+.faq-list summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-family:var(--hand);font-weight:700;font-size:1.22rem;line-height:1.3;position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:var(--hand);font-size:2rem;color:var(--terre-d);transition:transform .3s;line-height:1}
+.faq-list details[open] summary::after{transform:translateY(-50%) rotate(45deg);color:var(--encre)}
+.faq-list .rep{padding:0 20px 18px;color:var(--brun-2)}
+.faq-list .rep p{margin:0}
+.faq-aside{position:sticky;top:96px}
+.faq-aside svg{width:100%;max-width:300px;height:auto;display:block;margin-top:10px}
+
+/* ---------- horaires ---------- */
+.horaires-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.panneau{position:relative;background:var(--papier);background-image:var(--grain);padding:30px clamp(18px,3vw,32px);box-shadow:var(--ombre);border-radius:4px}
+.panneau .tape.t1{top:-15px;left:30px;transform:rotate(-5deg)}
+.horaires{width:100%;border-collapse:collapse;font-size:1.02rem}
+.horaires caption{text-align:left;font-family:var(--hand);font-size:1.6rem;font-weight:700;margin-bottom:10px}
+.horaires th,.horaires td{padding:10px 10px;text-align:left;border-bottom:1.5px dashed rgba(74,50,34,.22)}
+.horaires th{font-weight:600;font-family:var(--serif);width:38%}
+.horaires td{color:var(--brun-2)}
+.horaires tr.today{background:rgba(194,96,58,.13)}
+.horaires tr.today th{color:var(--terre-d)}
+.horaires tr.today th::after{content:" · aujourd'hui";font-family:var(--hand);font-weight:400;font-size:.95rem}
+.horaires-note{margin:14px 0 0;font-family:var(--hand);font-size:1.1rem;color:var(--encre)}
+.plan{position:relative;padding:30px clamp(18px,3vw,32px)}
+.plan > svg{width:100%;height:auto;display:block;margin:8px 0 18px}
+.adresse{font-size:1.15rem;margin-bottom:18px}
+.adresse b{font-family:var(--hand);font-size:1.4rem;display:block}
+
+/* ---------- contact ---------- */
+.contact{background:var(--brun);color:var(--papier);background-image:var(--grain);position:relative}
+.contact h2,.contact h3{color:var(--papier)}
+.contact .kicker{color:#f0b597}
+.contact .kicker::before{filter:brightness(2.2) saturate(.6)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.contact-info p{color:#eadfcb}
+.contact-lignes{display:grid;gap:14px;margin:24px 0}
+.contact-lignes a{display:flex;align-items:center;gap:14px;color:var(--papier);text-decoration:none;font-size:1.12rem;padding:12px 14px;border:2px dashed rgba(251,246,236,.3);border-radius:12px;transition:border-color .2s, background .2s;overflow-wrap:anywhere;min-width:0}
+.contact-lignes a:hover{border-color:#f0b597;background:rgba(251,246,236,.06)}
+.contact-lignes svg{flex:none;width:34px;height:34px}
+.contact-lignes b{font-family:var(--hand);font-size:1.25rem;display:block;line-height:1.1}
+.contact-lignes span{min-width:0}
+.form{position:relative;background:var(--papier);color:var(--brun);background-image:linear-gradient(90deg, transparent 30px, var(--marge) 30px, var(--marge) 32px, transparent 32px), var(--grain);padding:34px clamp(18px,3vw,34px) 30px clamp(44px,5vw,56px);box-shadow:0 20px 40px -18px rgba(0,0,0,.6);border-radius:4px;transform:rotate(.8deg)}
+.form .tape.t1{top:-15px;left:40%;transform:rotate(-3deg)}
+.form h3{color:var(--brun);font-size:1.7rem}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:block;font-family:var(--hand);font-size:1.12rem;margin:12px 0 2px;color:var(--brun)}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:1rem;color:var(--brun);background:transparent;border:0;border-bottom:2px solid rgba(74,50,34,.4);padding:8px 2px;border-radius:0;transition:border-color .2s, background .2s}
+.form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234a3222' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;background-size:12px;padding-right:22px}
+.form textarea{min-height:110px;resize:vertical;background-image:repeating-linear-gradient(180deg, transparent 0 29px, var(--ligne) 29px 30px);line-height:30px;border:1.5px solid rgba(74,50,34,.25);padding:6px 8px;border-radius:4px}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--encre);background-color:rgba(47,74,107,.05)}
+.form .btn{margin-top:22px}
+.form-msg{display:none;margin-top:18px;padding:14px 16px;border:2px dashed var(--encre);border-radius:10px;background:rgba(47,74,107,.08);color:var(--encre);font-weight:600}
+.form-msg.show{display:block}
+.form-msg a{color:var(--encre)}
+
+/* ---------- footer ---------- */
+footer{background:#3a271a;color:#e6d9c2;background-image:var(--grain);padding:64px 0 0;font-size:.98rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+footer h3{color:var(--papier);font-size:1.35rem}
+footer a{color:#f3e7d2}
+footer a:hover{color:#f0b597}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer .logo{color:var(--papier);margin-bottom:14px}
+footer .logo small{color:#d8c9b0}
+.foot-bas{margin-top:48px;border-top:1px dashed rgba(230,217,194,.3);padding:18px 0;font-size:.9rem;color:#d3c4aa;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.demo{background:#2a1c12;color:#d9cbb2;text-align:center;font-size:.85rem;padding:12px 16px;font-family:var(--serif);font-style:italic}
+
+/* ---------- floating call ---------- */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:90;width:62px;height:62px;border-radius:50% 46% 52% 48%;background:var(--terre-d);color:#fff;border:2.5px solid var(--brun);box-shadow:3px 4px 0 var(--brun);place-items:center;text-decoration:none}
+.fab svg{width:28px;height:28px}
+.fab::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--terre);opacity:0;animation:onde 2.4s infinite}
+@keyframes onde{0%{transform:scale(.85);opacity:.8}100%{transform:scale(1.3);opacity:0}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;translate:0 22px;transition:opacity .7s ease, translate .7s ease, transform .3s, box-shadow .3s}
+.reveal.vu{opacity:1;translate:none}
+.draw path.trace{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease .2s}
+.draw.vu path.trace{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;translate:none;transition:none}
+  .draw path.trace{stroke-dashoffset:0;transition:none}
+  .fab::after{animation:none}
+  .card,.polaroid,.btn{transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .gallery{grid-template-columns:repeat(2,1fr);row-gap:44px}
+  .pourquoi-grid,.etapes{grid-template-columns:repeat(2,1fr)}
+  .etapes .fleche{display:none}
+  .bande{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--papier);background-image:var(--grain);padding:10px 16px 22px;box-shadow:0 18px 30px -16px rgba(74,50,34,.55);border-top:2px dashed rgba(74,50,34,.2);transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .25s, transform .25s, visibility .25s}
+  .menu.open{transform:none;opacity:1;visibility:visible}
+  .menu a{display:block;font-size:1.35rem;padding:12px 6px;border-bottom:1.5px dashed rgba(74,50,34,.18)}
+  .menu a:not(.btn)::after{display:none}
+  .menu li:last-child a{border:2.5px solid var(--brun);margin-top:14px;display:flex;justify-content:center;padding:14px;font-size:1.3rem}
+  .nav{background:rgba(251,246,236,.94)}
+  .hero-grid,.apropos-grid,.faq-grid,.horaires-grid,.contact-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .faq-aside{position:static}
+  .faq-aside svg{max-width:220px}
+  .hero{padding-top:104px}
+}
+@media (max-width:767px){
+  .fab{display:grid}
+  body{font-size:1rem}
+}
+@media (max-width:620px){
+  .services-grid,.gallery,.pourquoi-grid,.etapes,.bande,.foot-grid{grid-template-columns:1fr}
+  .polaroid:nth-child(n){transform:rotate(-1.2deg)}
+  .polaroid:nth-child(even){transform:rotate(1.4deg)}
+  .gallery{max-width:360px;margin-inline:auto}
+  .form .row{grid-template-columns:1fr;gap:0}
+  .hero-cta .btn{flex:1 1 100%;justify-content:center}
+  .carnet{margin:14px 6px 6px}
+  .carnet-page{padding:22px 12px 16px 34px}
+  .carnet-page{background-image:linear-gradient(90deg, transparent 24px, var(--marge) 24px, var(--marge) 26px, transparent 26px),repeating-linear-gradient(180deg, transparent 0 29px, var(--ligne) 29px 30px),var(--grain)}
+  .trous{left:6px}
+  .trous i{width:10px;height:10px}
+  .tape.t3{display:none}
+  .etapes-bg{background-image:repeating-linear-gradient(180deg, transparent 0 31px, var(--ligne) 31px 32px), var(--grain)}
+  .logo{font-size:1.25rem}
+  .hide-s{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<!-- Filtres SVG partagés : trait irrégulier "fait main" -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rough2" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="11" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="pointe" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1 1.5 L10 6 L1.5 10.5" fill="none" stroke="#2f4a6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="pointeT" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M1 1.5 L10 6 L1.5 10.5" fill="none" stroke="#a2461f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <pattern id="hachure" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#c2603a" stroke-width="1.4" opacity=".55"/>
+    </pattern>
+    <pattern id="hachureB" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#2f4a6b" stroke-width="1.2" opacity=".4"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Lebon Plombier – retour en haut">
+      <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5c-6 9-12 16-12 24a12 12 0 0 0 24 0c0-8-6-15-12-24z" fill="#c2603a" fill-opacity=".18"/><path d="M18 30c0 4 3 7 6 7" stroke="#2f4a6b"/></g></svg>
+      <span>Lebon Plombier<small>Saint-Médard-en-Jalles</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#etabli">Sur l'établi</a></li>
+      <li><a href="#apropos">L'équipe</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#horaires">Nous trouver</a></li>
+      <li><a class="btn btn-terre" href="#contact">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="kicker">M. Lebon &amp; son équipe<span class="hide-s">&nbsp;· Saint-Médard-en-Jalles</span></p>
+      <h1>Lebon Plombier,<br>le bon geste <span class="encre surligne">au bon tuyau
+        <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" class="draw"><path class="trace" pathLength="1" d="M3 13c30-8 62-9 96-5s66 3 98-4" fill="none" stroke="#c2603a" stroke-width="4" stroke-linecap="round"/></svg></span>.</h1>
+      <p class="lead">Une fuite sous l'évier, une salle de bains à refaire, une <strong>pompe à chaleur</strong> ou une <strong>climatisation</strong> à installer&nbsp;? On vient voir, on vous explique simplement, et on s'y met avec soin – à Saint-Médard-en-Jalles et alentour.</p>
+      <div class="hero-cta">
+        <a class="btn btn-terre" href="tel:+33684102534"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.7 2 2 0 0 1 5 3.5z"/></svg>Appeler</a>
+        <a class="btn btn-papier" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 3.5l6 6L9 21H3v-6z"/><path d="M12.5 5.5l6 6"/></svg>Demander un devis</a>
+      </div>
+      <p class="hero-note"><svg width="40" height="28" viewBox="0 0 40 28" aria-hidden="true"><path d="M3 4c4 10 14 17 30 16" fill="none" stroke="#2f4a6b" stroke-width="2" stroke-linecap="round" marker-end="url(#pointe)" filter="url(#rough)"/></svg>06 84 10 25 34 – un appel suffit pour en parler.</p>
+    </div>
+
+    <div class="carnet reveal" aria-label="Page de carnet : croquis d'un robinet, d'une pompe à chaleur et d'une clé">
+      <span class="tape t1" aria-hidden="true"></span>
+      <span class="tape t2" aria-hidden="true"></span>
+      <span class="tape t3" aria-hidden="true"></span>
+      <div class="carnet-page">
+        <div class="trous" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="carnet-titre"><span>Carnet d'atelier – p. 1</span><span>« les outils du métier »</span></div>
+        <svg class="croquis draw" viewBox="0 0 520 440" role="img" aria-label="Croquis au trait d'un robinet, d'une pompe à chaleur et d'une clé à molette, avec annotations manuscrites">
+          <!-- ROBINET -->
+          <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <!-- plan de vasque -->
+            <path d="M18 196c40-3 120-2 196 1"/>
+            <path d="M24 204c40 2 110 2 180-1" stroke-width="1.6" opacity=".6"/>
+            <!-- corps -->
+            <path d="M78 196V122c0-6 4-10 10-10h22c6 0 10 4 10 10v74"/>
+            <path d="M82 196V128" stroke-width="1.4" opacity=".5"/>
+            <!-- bec -->
+            <path d="M92 112c-2-34 12-54 44-56 30-2 52 16 54 46v12"/>
+            <path d="M106 112c0-24 10-38 30-40 22-1 38 12 40 32v10"/>
+            <path d="M174 114h18" />
+            <!-- manette -->
+            <path d="M86 112c-2-14 2-22 8-26M112 112c2-14-2-22-8-26"/>
+            <path d="M94 86h10"/>
+            <path d="M99 86V70"/>
+            <path d="M74 66c14-6 36-6 50 0" stroke-width="3.4"/>
+            <circle cx="99" cy="66" r="4" fill="#4a3222"/>
+          </g>
+          <!-- gouttes -->
+          <g filter="url(#rough)" fill="#2f4a6b" fill-opacity=".2" stroke="#2f4a6b" stroke-width="2.2" stroke-linecap="round">
+            <path d="M183 130c-4 7-6 10-6 13a6 6 0 0 0 12 0c0-3-2-6-6-13z"/>
+            <path d="M183 160c-3 5-4.5 7-4.5 9.5a4.5 4.5 0 0 0 9 0c0-2.5-1.5-4.5-4.5-9.5z"/>
+          </g>
+          <!-- hachures ombre robinet -->
+          <path d="M112 196V124h-6v72z" fill="url(#hachure)"/>
+
+          <!-- PAC -->
+          <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M262 64c70-2 150-1 236 1l-1 140c-80 2-160 2-236 0z" fill="#fbf6ec"/>
+            <path d="M268 72c62-1 140-1 222 1" stroke-width="1.4" opacity=".5"/>
+            <!-- grille ventilateur -->
+            <circle cx="342" cy="134" r="52"/>
+            <circle cx="342" cy="134" r="40" stroke-width="1.6"/>
+            <circle cx="342" cy="134" r="28" stroke-width="1.3" opacity=".7"/>
+            <path d="M290 134h104M342 82v104" stroke-width="1.3" opacity=".7"/>
+            <!-- pales -->
+            <path d="M342 134c8-18 22-22 30-14M342 134c-8 18-22 22-30 14M342 134c18 6 22 20 14 28M342 134c-18-6-22-20-14-28" stroke="#2f4a6b" stroke-width="2.4"/>
+            <circle cx="342" cy="134" r="6" fill="#4a3222"/>
+            <!-- ailettes côté -->
+            <path d="M414 92h66M414 106h66M414 120h66M414 134h66M414 148h66M414 162h66M414 176h66" stroke-width="1.8"/>
+            <!-- pieds -->
+            <path d="M282 206v14h36v-14M440 206v14h36v-14"/>
+            <!-- tuyaux -->
+            <path d="M498 150c12 0 16 8 16 20v54" stroke="#c2603a"/>
+            <path d="M498 170c6 0 8 4 8 10v44" stroke="#2f4a6b"/>
+          </g>
+          <path d="M414 92h66v92h-66z" fill="url(#hachureB)" opacity=".7"/>
+
+          <!-- CLÉ À MOLETTE -->
+          <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-24 250 340)">
+            <path d="M120 326h190c8 0 12 5 12 14s-4 14-12 14H120c-8 0-12-5-12-14s4-14 12-14z" fill="#fbf6ec"/>
+            <ellipse cx="128" cy="340" rx="5" ry="7"/>
+            <path d="M322 324c4-16 22-26 40-24l14 2-4 18-22 0 0 40 22 0 4 18-14 2c-18 2-36-8-40-24" fill="#fbf6ec"/>
+            <path d="M334 334h12M334 340h12M334 346h12" stroke-width="1.6"/>
+            <path d="M180 333h110" stroke-width="1.2" opacity=".5"/>
+          </g>
+          <path d="M150 386c50-16 110-38 170-62" stroke="url(#hachure)" stroke-width="0"/>
+
+          <!-- ANNOTATIONS -->
+          <g class="annot-g">
+            <path class="trace" pathLength="1" d="M222 44c-14-10-36-8-52 6" fill="none" stroke="#2f4a6b" stroke-width="2" stroke-linecap="round" marker-end="url(#pointe)" filter="url(#rough2)"/>
+            <text class="annot" font-size="19" x="218" y="34" transform="rotate(-4 218 34)">fuite ? on la trouve.</text>
+
+            <path class="trace" pathLength="1" d="M470 252c6-8 4-18-6-28" fill="none" stroke="#a2461f" stroke-width="2" stroke-linecap="round" marker-end="url(#pointeT)" filter="url(#rough2)"/>
+            <text class="annot terre" x="396" y="274" font-size="17" transform="rotate(-3 396 274)">PAC bien réglée</text>
+            <text class="annot terre" x="404" y="295" font-size="15" transform="rotate(-3 404 295)">= confort &amp; calme</text>
+
+            <path class="trace" pathLength="1" d="M76 410c-8-24 2-42 26-52" fill="none" stroke="#2f4a6b" stroke-width="2" stroke-linecap="round" marker-end="url(#pointe)" filter="url(#rough2)"/>
+            <text class="annot" font-size="19" x="20" y="432" transform="rotate(-2 20 432)">toujours dans la caisse</text>
+
+            <text class="annot terre" x="376" y="414" font-size="22" transform="rotate(-6 376 414)">✓ devis clair</text>
+            <path d="M372 422c30 4 70 2 108-6" fill="none" stroke="#a2461f" stroke-width="2" stroke-linecap="round" filter="url(#rough2)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONFIANCE ================= -->
+<section class="confiance" aria-label="Points de confiance">
+  <div class="wrap">
+    <div class="bande reveal">
+      <span class="tape" aria-hidden="true"></span>
+      <div class="bande-item">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44S9 29 9 19a15 15 0 0 1 30 0c0 10-15 25-15 25z" fill="#c2603a" fill-opacity=".18"/><circle cx="24" cy="19" r="5"/></g></svg>
+        <div><b>Saint-Médard-en-Jalles</b><span>et ses environs, métropole bordelaise</span></div>
+      </div>
+      <div class="bande-item">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5l5.6 12 13 1.4-9.7 8.8 2.8 12.8L24 33.6 12.3 40l2.8-12.8L5.4 18.4l13-1.4z" fill="#c2603a" fill-opacity=".3"/></g></svg>
+        <div><b>Noté 5/5 sur GoWork</b><span><a href="https://gowork.fr/lebon-plombier-saint-medard-en-jalles" target="_blank" rel="noopener">Voir la fiche GoWork</a></span></div>
+      </div>
+      <div class="bande-item">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="16" r="6"/><circle cx="32" cy="18" r="5"/><path d="M5 40c0-8 5-13 12-13s12 5 12 13"/><path d="M28 30c2-2 4-3 6-3 6 0 9 5 9 12"/></g></svg>
+        <div><b>M. Lebon &amp; son équipe</b><span>un interlocuteur que vous connaissez</span></div>
+      </div>
+      <div class="bande-item">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h18l8 8v28H12z" fill="#fbf6ec"/><path d="M30 6v8h8"/><path d="M17 22h15M17 28h15M17 34h9"/></g></svg>
+        <div><b>Devis sur demande</b><span>clair, détaillé, avant tout travaux</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Ce qu'on fait</p>
+      <h2>De l'eau qui coule <span class="surligne">juste<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" class="draw"><path class="trace" pathLength="1" d="M3 12c40-7 90-8 194-3" fill="none" stroke="#2f4a6b" stroke-width="4" stroke-linecap="round"/></svg></span> à l'air bien tempéré</h2>
+      <p>Plomberie du quotidien et équipements de confort : on s'occupe de l'installation comme du dépannage, toujours avec un devis préalable.</p>
+    </div>
+    <div class="services-grid">
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30h26c6 0 10 4 10 10v4" /><path d="M8 40h20c3 0 6 3 6 6"/><path d="M30 26v18"/><path d="M50 50c-5 9-8 13-8 17a8 8 0 0 0 16 0c0-4-3-8-8-17z" fill="#2f4a6b" fill-opacity=".22" stroke="#2f4a6b"/><path d="M62 30l6-6M66 38h8M58 22v-8" stroke="#c2603a"/></g></svg>
+        <h3>Plomberie &amp; fuites</h3>
+        <p>Recherche et réparation de fuites, remplacement de raccords, robinetterie et évacuations qui coincent.</p>
+        <span class="tag">→ dépannage</span>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 44h64v6c0 10-8 18-18 18H26c-10 0-18-8-18-18z" fill="#c2603a" fill-opacity=".14"/><path d="M14 44V16c0-5 4-8 8-8s8 3 8 8v2"/><path d="M24 22h12"/><path d="M22 68l-3 6M58 68l3 6"/><path d="M26 30v3M33 32v3M28 37v3" stroke="#2f4a6b"/></g></svg>
+        <h3>Salle de bains &amp; sanitaires</h3>
+        <p>Pose de douche, baignoire, lavabo ou WC, et rénovation de salle de bains, de l'alimentation aux finitions.</p>
+        <span class="tag">→ rénovation</span>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h68v44H6z" fill="#fbf6ec"/><circle cx="30" cy="40" r="15"/><path d="M30 40c3-7 9-8 11-5M30 40c-3 7-9 8-11 5M30 40c7 3 8 9 5 11M30 40c-7-3-8-9-5-11" stroke="#2f4a6b"/><path d="M52 28h16M52 36h16M52 44h16M52 52h16" stroke-width="1.8"/><path d="M12 62v6M66 62v6"/></g></svg>
+        <h3>Pompes à chaleur</h3>
+        <p>Étude, installation et mise en service de pompes à chaleur pour chauffer votre logement plus sobrement.</p>
+        <span class="tag">→ chauffage</span>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h68v24c0 2-2 4-4 4H10c-2 0-4-2-4-4z" fill="#fbf6ec"/><path d="M14 34h52" stroke-width="1.8"/><circle cx="64" cy="24" r="2" fill="#4a3222"/><path d="M22 52c-2 6 2 8 0 14M40 52c-2 6 2 8 0 14M58 52c-2 6 2 8 0 14" stroke="#2f4a6b"/></g></svg>
+        <h3>Climatisation</h3>
+        <p>Installation de climatiseurs adaptés à vos pièces, pour garder la fraîcheur quand l'été girondin s'installe.</p>
+        <span class="tag">→ confort d'été</span>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="6" width="36" height="60" rx="16" fill="#fbf6ec"/><path d="M22 30h36" stroke-width="1.6"/><path d="M34 66v8M46 66v8"/><path d="M34 74h-8M46 74h8" stroke="#c2603a"/><path d="M40 40v12" stroke="#c2603a" stroke-width="3"/><circle cx="40" cy="54" r="4" fill="#c2603a" stroke="#c2603a"/></g></svg>
+        <h3>Chauffe-eau</h3>
+        <p>Remplacement ou installation de chauffe-eau et ballons d'eau chaude, dimensionnés selon votre foyer.</p>
+        <span class="tag">→ eau chaude</span>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 80 80" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h40l8 8v56H14z" fill="#fbf6ec"/><path d="M22 26l5 5 9-10M22 44l5 5 9-10" stroke="#2f4a6b"/><path d="M42 28h12M42 46h12M22 62h30" stroke-width="1.8"/><path d="M60 54l10 10-4 4-10-10z" fill="#c2603a" fill-opacity=".25"/></g></svg>
+        <h3>Entretien</h3>
+        <p>Vérifications et entretien de vos équipements (PAC, climatisation, chauffe-eau) pour qu'ils durent dans le temps.</p>
+        <span class="tag">→ suivi</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUR L'ÉTABLI ================= -->
+<section class="section etabli" id="etabli">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Croquis épinglés</p>
+      <h2>Sur l'établi</h2>
+      <p>Quatre chantiers types, croqués comme on les prépare avant d'intervenir. Des illustrations pour vous donner une idée – chaque projet est étudié au cas par cas, <strong>tarifs sur devis</strong>.</p>
+    </div>
+    <div class="gallery">
+      <figure class="polaroid reveal" style="margin:0">
+        <span class="pin" aria-hidden="true"></span>
+        <div class="dessin">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Croquis d'une douche à l'italienne avec paroi vitrée">
+            <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M30 170h150"/>
+              <path d="M40 30v140M40 30h100"/>
+              <path d="M40 60h100M40 90h100M40 120h100M40 150h100M70 30v140M100 30v140M130 30v140" stroke-width="1" opacity=".35"/>
+              <path d="M150 40v128" stroke="#2f4a6b" stroke-width="2"/>
+              <path d="M154 48l8 22M156 90l8 22" stroke="#2f4a6b" stroke-width="1.4" opacity=".6"/>
+              <path d="M78 38v18c0 4 3 6 6 6h16"/>
+              <path d="M92 62h22c2 0 3 1 3 3v2H89v-2c0-2 1-3 3-3z" fill="#fbf6ec"/>
+              <path d="M95 74l-3 10M103 74v12M111 74l3 10M99 92v6M107 92v6" stroke="#2f4a6b" stroke-width="1.8"/>
+              <path d="M84 166h40" stroke="#c2603a" stroke-width="3"/>
+            </g>
+            <text class="annot" x="70" y="192" font-size="15" transform="rotate(-3 70 192)">siphon de sol</text>
+          </svg>
+        </div>
+        <figcaption>
+          <h3>Douche à l'italienne</h3>
+          <p>Dépose de la baignoire, reprise des évacuations, pose du receveur et de la paroi.</p>
+          <span class="mention">réalisation type · sur devis</span>
+        </figcaption>
+      </figure>
+      <figure class="polaroid reveal" style="margin:0">
+        <span class="pin" aria-hidden="true"></span>
+        <div class="dessin">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Croquis d'une pompe à chaleur extérieure posée contre un mur">
+            <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M150 20v160" stroke-width="2"/>
+              <path d="M150 40h30M150 70h30M150 100h30M150 130h30M150 160h30" stroke-width="1" opacity=".4"/>
+              <path d="M24 70h116v80H24z" fill="#fbf6ec"/>
+              <circle cx="66" cy="110" r="30"/>
+              <circle cx="66" cy="110" r="20" stroke-width="1.4"/>
+              <path d="M66 110c5-10 12-12 16-8M66 110c-5 10-12 12-16 8M66 110c10 4 12 12 8 16M66 110c-10-4-12-12-8-16" stroke="#2f4a6b" stroke-width="2"/>
+              <path d="M104 82h28M104 94h28M104 106h28M104 118h28M104 130h28" stroke-width="1.6"/>
+              <path d="M30 150v14h20v-14M114 150v14h20v-14"/>
+              <path d="M16 178h170" />
+              <path d="M140 92c6 0 10-4 10-10" stroke="#c2603a"/>
+              <path d="M140 102c8 0 10 0 10 0" stroke="#2f4a6b"/>
+            </g>
+            <path d="M104 82h28v48h-28z" fill="url(#hachureB)"/>
+            <text class="annot terre" x="18" y="52" font-size="15" transform="rotate(-4 18 52)">sur silent-blocs</text>
+          </svg>
+        </div>
+        <figcaption>
+          <h3>Pompe à chaleur air/eau</h3>
+          <p>Unité extérieure posée au calme, raccordée au circuit de chauffage existant.</p>
+          <span class="mention">réalisation type · sur devis</span>
+        </figcaption>
+      </figure>
+      <figure class="polaroid reveal" style="margin:0">
+        <span class="pin" aria-hidden="true"></span>
+        <div class="dessin">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Croquis d'un climatiseur mural dans une chambre">
+            <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M30 44h140c4 0 6 2 6 6v22c0 4-4 8-8 8H32c-4 0-8-4-8-8V50c0-4 2-6 6-6z" fill="#fbf6ec"/>
+              <path d="M34 68h132" stroke-width="1.6"/>
+              <circle cx="158" cy="56" r="2.4" fill="#4a3222"/>
+              <path d="M60 94c-4 10 4 14 0 24M100 94c-4 10 4 14 0 24M140 94c-4 10 4 14 0 24" stroke="#2f4a6b" stroke-width="2.2"/>
+              <path d="M40 176v-30h60v30M30 176h150"/>
+              <path d="M46 146v-10h48v10" />
+              <path d="M130 176v-46h34v46" />
+              <path d="M136 140h22" stroke-width="1.4"/>
+              <path d="M176 60h10v116" stroke="#c2603a" stroke-width="2"/>
+            </g>
+            <text class="annot" x="118" y="32" font-size="16" transform="rotate(-5 118 32)">❄ fraîcheur</text>
+          </svg>
+        </div>
+        <figcaption>
+          <h3>Climatisation murale</h3>
+          <p>Split posé en chambre, liaisons discrètes vers l'unité extérieure, réglages expliqués.</p>
+          <span class="mention">réalisation type · sur devis</span>
+        </figcaption>
+      </figure>
+      <figure class="polaroid reveal" style="margin:0">
+        <span class="pin" aria-hidden="true"></span>
+        <div class="dessin">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Croquis d'un chauffe-eau vertical avec groupe de sécurité">
+            <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M30 14v172" stroke-width="2"/>
+              <rect x="62" y="20" width="76" height="126" rx="30" fill="#fbf6ec"/>
+              <path d="M62 60h76" stroke-width="1.4"/>
+              <path d="M30 40h32M30 120h32" stroke-width="2"/>
+              <circle cx="100" cy="98" r="12"/>
+              <path d="M100 98l6-6" stroke="#c2603a"/>
+              <path d="M86 146v18M114 146v18"/>
+              <path d="M86 164v8c0 4-2 6-6 6h-14" stroke="#2f4a6b"/>
+              <path d="M114 164v8c0 4 2 6 6 6h14" stroke="#c2603a"/>
+              <path d="M76 160h20v10H76z" fill="#2f4a6b" fill-opacity=".2"/>
+            </g>
+            <text class="annot terre" x="138" y="182" font-size="15">chaud</text>
+            <text class="annot" x="20" y="198" font-size="15">froid</text>
+            <path d="M146 92c-10 0-18 2-26 6" fill="none" stroke="#2f4a6b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#pointe)"/>
+            <text class="annot" x="146" y="90" font-size="15" transform="rotate(-6 146 90)">réglage</text>
+          </svg>
+        </div>
+        <figcaption>
+          <h3>Remplacement de chauffe-eau</h3>
+          <p>Dépose de l'ancien ballon, pose du neuf avec groupe de sécurité et mise en eau.</p>
+          <span class="mention">réalisation type · sur devis</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="etabli-note reveal">Votre projet ne ressemble à aucun de ces croquis&nbsp;? Tant mieux, on le dessine ensemble → <a href="#contact">demander un devis</a></p>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="section" id="pourquoi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Pourquoi nous appeler</p>
+      <h2>Ce qui compte pour nous</h2>
+    </div>
+    <div class="pourquoi-grid">
+      <div class="atout reveal">
+        <svg class="bulle" viewBox="0 0 96 88" aria-hidden="true"><path d="M48 8c24-2 40 14 38 36-2 24-22 38-44 36C20 78 6 62 10 40 13 20 28 9 50 10" fill="none" stroke="#c2603a" stroke-width="2" stroke-linecap="round" opacity=".55" filter="url(#rough2)"/></svg>
+        <span class="num">1</span>
+        <h3>Un artisan du coin</h3>
+        <p>Installés route de Saint-Aubin, à Saint-Médard-en-Jalles : on connaît le secteur et on n'est jamais bien loin.</p>
+      </div>
+      <div class="atout reveal">
+        <svg class="bulle" viewBox="0 0 96 88" aria-hidden="true"><path d="M48 8c24-2 40 14 38 36-2 24-22 38-44 36C20 78 6 62 10 40 13 20 28 9 50 10" fill="none" stroke="#c2603a" stroke-width="2" stroke-linecap="round" opacity=".55" filter="url(#rough2)"/></svg>
+        <span class="num">2</span>
+        <h3>Plombier et frigoriste</h3>
+        <p>Une même équipe pour l'eau, le chauffage et la clim : moins d'intermédiaires, une vision d'ensemble.</p>
+      </div>
+      <div class="atout reveal">
+        <svg class="bulle" viewBox="0 0 96 88" aria-hidden="true"><path d="M48 8c24-2 40 14 38 36-2 24-22 38-44 36C20 78 6 62 10 40 13 20 28 9 50 10" fill="none" stroke="#c2603a" stroke-width="2" stroke-linecap="round" opacity=".55" filter="url(#rough2)"/></svg>
+        <span class="num">3</span>
+        <h3>Des explications claires</h3>
+        <p>On vous montre ce qui ne va pas, ce qu'on propose et pourquoi, avant de sortir les outils.</p>
+      </div>
+      <div class="atout reveal">
+        <svg class="bulle" viewBox="0 0 96 88" aria-hidden="true"><path d="M48 8c24-2 40 14 38 36-2 24-22 38-44 36C20 78 6 62 10 40 13 20 28 9 50 10" fill="none" stroke="#c2603a" stroke-width="2" stroke-linecap="round" opacity=".55" filter="url(#rough2)"/></svg>
+        <span class="num">4</span>
+        <h3>Un chantier laissé propre</h3>
+        <p>Protection des sols, évacuation des anciens équipements : on repart en laissant la pièce comme on l'a trouvée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÉTAPES ================= -->
+<section class="section etapes-bg" id="etapes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Comment ça se passe</p>
+      <h2>Quatre étapes, sans surprise</h2>
+    </div>
+    <ol class="etapes">
+      <li class="reveal">
+        <div class="rond"><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M38 6c20-1 32 14 31 32-1 20-16 32-33 31C18 68 6 54 7 36 8 18 22 7 41 8" fill="none" stroke="#2f4a6b" stroke-width="2.4" stroke-linecap="round" filter="url(#rough2)"/></svg>1</div>
+        <svg class="fleche" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22c40-16 120-18 180-4" fill="none" stroke="#a2461f" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round" marker-end="url(#pointeT)"/></svg>
+        <h3>Vous appelez</h3>
+        <p>Un coup de fil au 06 84 10 25 34 ou un message via le formulaire pour nous décrire la situation.</p>
+      </li>
+      <li class="reveal">
+        <div class="rond"><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M38 6c20-1 32 14 31 32-1 20-16 32-33 31C18 68 6 54 7 36 8 18 22 7 41 8" fill="none" stroke="#2f4a6b" stroke-width="2.4" stroke-linecap="round" filter="url(#rough2)"/></svg>2</div>
+        <svg class="fleche" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22c40-16 120-18 180-4" fill="none" stroke="#a2461f" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round" marker-end="url(#pointeT)"/></svg>
+        <h3>On vient voir</h3>
+        <p>Diagnostic sur place : on observe, on mesure, on écoute vos besoins et vos contraintes.</p>
+      </li>
+      <li class="reveal">
+        <div class="rond"><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M38 6c20-1 32 14 31 32-1 20-16 32-33 31C18 68 6 54 7 36 8 18 22 7 41 8" fill="none" stroke="#2f4a6b" stroke-width="2.4" stroke-linecap="round" filter="url(#rough2)"/></svg>3</div>
+        <svg class="fleche" viewBox="0 0 200 34" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22c40-16 120-18 180-4" fill="none" stroke="#a2461f" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round" marker-end="url(#pointeT)"/></svg>
+        <h3>Devis détaillé</h3>
+        <p>Vous recevez une proposition écrite et lisible. Rien ne démarre sans votre accord.</p>
+      </li>
+      <li class="reveal">
+        <div class="rond"><svg viewBox="0 0 76 76" aria-hidden="true"><path d="M38 6c20-1 32 14 31 32-1 20-16 32-33 31C18 68 6 54 7 36 8 18 22 7 41 8" fill="none" stroke="#2f4a6b" stroke-width="2.4" stroke-linecap="round" filter="url(#rough2)"/></svg>4</div>
+        <h3>Travaux &amp; conseils</h3>
+        <p>Intervention soignée, test de bon fonctionnement, puis quelques conseils pour bien utiliser l'installation.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="section" id="apropos">
+  <div class="wrap apropos-grid">
+    <div class="fiche reveal">
+      <span class="tape t1" aria-hidden="true"></span>
+      <span class="tape t2" aria-hidden="true"></span>
+      <h3>Fiche atelier</h3>
+      <dl>
+        <div><dt>Entreprise</dt><dd>Lebon Plombier</dd></div>
+        <div><dt>Qui</dt><dd>M. Lebon et son équipe</dd></div>
+        <div><dt>Adresse</dt><dd>10 route de Saint-Aubin<br>33160 Saint-Médard-en-Jalles</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33684102534">06 84 10 25 34</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:lebonplombier33@gmail.com">lebonplombier33@gmail.com</a></dd></div>
+      </dl>
+    </div>
+    <div class="apropos-texte reveal">
+      <p class="kicker">À propos</p>
+      <h2>Qui se cache derrière la clé à molette&nbsp;?</h2>
+      <p>Lebon Plombier, c'est M. Lebon et son équipe, installés au 10 route de Saint-Aubin à Saint-Médard-en-Jalles. Plombiers avant tout, ils interviennent aussi bien pour une fuite à réparer que pour l'installation de pompes à chaleur et de climatisations.</p>
+      <p>Leur façon de travailler tient en peu de mots : écouter, expliquer, faire proprement. Et c'est sans doute pour cela que l'entreprise est notée 5/5 sur GoWork.</p>
+      <span class="signature">— l'équipe Lebon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="section" id="avis" style="padding-top:0">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <span class="tape t1" aria-hidden="true"></span>
+      <p class="kicker" style="justify-content:center">Ce qu'en disent les clients</p>
+      <div class="note-grande">5/5
+        <svg viewBox="0 0 200 130" preserveAspectRatio="none" aria-hidden="true" class="draw"><path class="trace" pathLength="1" d="M100 8c56-2 94 22 92 56-2 36-46 60-96 58C46 120 6 96 8 62 10 30 46 8 110 12" fill="none" stroke="#c2603a" stroke-width="3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="avis-etoiles" role="img" aria-label="5 étoiles sur 5">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4.7 10 10.8 1.2-8 7.3 2.3 10.7L20 27.8l-9.8 5.4 2.3-10.7-8-7.3L15.3 14z" fill="#c2603a" fill-opacity=".85" stroke="#4a3222" stroke-width="1.8" stroke-linejoin="round" filter="url(#rough)"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4.7 10 10.8 1.2-8 7.3 2.3 10.7L20 27.8l-9.8 5.4 2.3-10.7-8-7.3L15.3 14z" fill="#c2603a" fill-opacity=".85" stroke="#4a3222" stroke-width="1.8" stroke-linejoin="round" filter="url(#rough)"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4.7 10 10.8 1.2-8 7.3 2.3 10.7L20 27.8l-9.8 5.4 2.3-10.7-8-7.3L15.3 14z" fill="#c2603a" fill-opacity=".85" stroke="#4a3222" stroke-width="1.8" stroke-linejoin="round" filter="url(#rough)"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4.7 10 10.8 1.2-8 7.3 2.3 10.7L20 27.8l-9.8 5.4 2.3-10.7-8-7.3L15.3 14z" fill="#c2603a" fill-opacity=".85" stroke="#4a3222" stroke-width="1.8" stroke-linejoin="round" filter="url(#rough)"/></svg>
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l4.7 10 10.8 1.2-8 7.3 2.3 10.7L20 27.8l-9.8 5.4 2.3-10.7-8-7.3L15.3 14z" fill="#c2603a" fill-opacity=".85" stroke="#4a3222" stroke-width="1.8" stroke-linejoin="round" filter="url(#rough)"/></svg>
+      </div>
+      <h3>Noté 5/5 sur GoWork</h3>
+      <p>Les avis sont consultables directement sur la fiche GoWork de l'entreprise. Vous avez fait appel à nous&nbsp;? Votre retour aide d'autres habitants à choisir leur artisan.</p>
+      <a class="btn btn-encre" href="https://gowork.fr/lebon-plombier-saint-medard-en-jalles" target="_blank" rel="noopener">Lire les avis sur GoWork ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section etapes-bg" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-aside reveal">
+      <p class="kicker">Questions fréquentes</p>
+      <h2>On nous demande souvent…</h2>
+      <p>Une autre question&nbsp;? Le plus simple reste de nous appeler au <a href="tel:+33684102534">06 84 10 25 34</a>.</p>
+      <svg viewBox="0 0 300 160" aria-hidden="true">
+        <g filter="url(#rough)" fill="none" stroke="#4a3222" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M30 20h170c10 0 16 6 16 16v54c0 10-6 16-16 16H90l-34 26 6-26H30c-10 0-16-6-16-16V36c0-10 6-16 16-16z" fill="#fbf6ec"/>
+        </g>
+        <text x="62" y="78" font-family="Kalam, cursive" font-size="44" font-weight="700" fill="#2f4a6b">? ? ?</text>
+        <path d="M230 50c30 0 50 20 50 50" fill="none" stroke="#a2461f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 6" filter="url(#rough2)"/>
+      </svg>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Intervenez-vous en urgence pour une fuite&nbsp;?</summary>
+        <div class="rep"><p>Appelez-nous dès que possible au 06 84 10 25 34 : nous voyons ensemble le délai d'intervention selon notre planning. En attendant, coupez l'arrivée d'eau générale pour limiter les dégâts.</p></div>
+      </details>
+      <details>
+        <summary>Pompe à chaleur ou chaudière : que choisir&nbsp;?</summary>
+        <div class="rep"><p>Tout dépend de votre logement (isolation, émetteurs de chaleur, surface) et de vos habitudes. Une pompe à chaleur peut réduire la consommation d'énergie dans de nombreux cas, mais nous préférons étudier votre situation avant de conseiller une solution.</p></div>
+      </details>
+      <details>
+        <summary>Existe-t-il des aides pour installer une pompe à chaleur&nbsp;?</summary>
+        <div class="rep"><p>Des dispositifs comme MaPrimeRénov' ou les certificats d'économies d'énergie peuvent exister, selon vos revenus, votre logement et l'équipement choisi. Les conditions évoluent régulièrement : renseignez-vous sur france-renov.gouv.fr avant de signer, et nous vous indiquerons ce que nous savons pour votre projet.</p></div>
+      </details>
+      <details>
+        <summary>Faut-il entretenir une pompe à chaleur ou une climatisation&nbsp;?</summary>
+        <div class="rep"><p>Oui, un entretien régulier aide à conserver de bonnes performances et à prolonger la durée de vie de l'appareil. Selon le type et la puissance de l'équipement, un entretien périodique par un professionnel peut aussi être obligatoire.</p></div>
+      </details>
+      <details>
+        <summary>Combien coûte une intervention&nbsp;?</summary>
+        <div class="rep"><p>Chaque situation est différente : les tarifs sont établis sur devis, après avoir compris votre besoin. Vous savez à quoi vous attendre avant le début des travaux.</p></div>
+      </details>
+      <details>
+        <summary>Mon chauffe-eau fait de l'eau tiède, que faire&nbsp;?</summary>
+        <div class="rep"><p>Cela peut venir du thermostat, de la résistance, du calcaire ou d'un appareil en fin de vie. Évitez de démonter vous-même la partie électrique : appelez-nous pour un diagnostic et, si besoin, un remplacement.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HORAIRES ================= -->
+<section class="section" id="horaires">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Nous trouver</p>
+      <h2>Horaires &amp; adresse</h2>
+    </div>
+    <div class="horaires-grid">
+      <div class="panneau reveal">
+        <span class="tape t1" aria-hidden="true"></span>
+        <table class="horaires" id="tableHoraires">
+          <caption>Horaires d'ouverture</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Lundi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="2"><th scope="row">Mardi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="3"><th scope="row">Mercredi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="4"><th scope="row">Jeudi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="5"><th scope="row">Vendredi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="6"><th scope="row">Samedi</th><td>À confirmer par téléphone</td></tr>
+            <tr data-day="0"><th scope="row">Dimanche</th><td>À confirmer par téléphone</td></tr>
+          </tbody>
+        </table>
+        <p class="horaires-note">Horaires à confirmer par téléphone : 06 84 10 25 34.</p>
+      </div>
+      <div class="panneau plan reveal">
+        <span class="tape t1" aria-hidden="true"></span>
+        <div class="adresse"><b>Lebon Plombier</b>10 route de Saint-Aubin<br>33160 Saint-Médard-en-Jalles</div>
+        <svg viewBox="0 0 400 190" role="img" aria-label="Plan schématique dessiné à la main">
+          <g filter="url(#rough2)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M0 120c80-14 160-20 240-10s120 6 160-6" stroke="#4a3222" stroke-width="10" opacity=".14"/>
+            <path d="M0 120c80-14 160-20 240-10s120 6 160-6" stroke="#4a3222" stroke-width="2"/>
+            <path d="M140 0c10 50 20 100 10 190" stroke="#4a3222" stroke-width="1.6" opacity=".5"/>
+            <path d="M350 0c-10 60-20 110 0 190" stroke="#4a3222" stroke-width="1.6" opacity=".5"/>
+            <path d="M20 30c40 10 60 40 60 60" stroke="#2f4a6b" stroke-width="1.6" stroke-dasharray="4 6"/>
+            <path d="M226 52c-8-14 0-28 14-28s22 14 14 28l-14 22z" stroke="#a2461f" stroke-width="2.6" fill="#c2603a" fill-opacity=".25"/>
+            <circle cx="240" cy="42" r="5" stroke="#a2461f" stroke-width="2.4"/>
+          </g>
+          <text class="annot" x="168" y="160" font-size="16" transform="rotate(-3 168 160)">route de Saint-Aubin</text>
+          <text class="annot terre" x="266" y="40" font-size="17" transform="rotate(-4 266 40)">c'est ici !</text>
+        </svg>
+        <a class="btn btn-encre" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=10%20route%20de%20Saint-Aubin%2C%2033160%20Saint-M%C3%A9dard-en-Jalles">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <p class="kicker">Contact</p>
+      <h2>Parlons de votre projet</h2>
+      <p>Décrivez-nous votre besoin : une fuite, une salle de bains, une pompe à chaleur, une clim… Nous revenons vers vous pour en discuter et, si besoin, passer voir sur place.</p>
+      <div class="contact-lignes">
+        <a href="tel:+33684102534"><svg viewBox="0 0 40 40" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#f0b597" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h6l3 8-4 3a19 19 0 0 0 9 9l3-4 8 3v6a3 3 0 0 1-3 3C17 34 6 23 6 9a3 3 0 0 1 3-3z"/></g></svg><span><b>06 84 10 25 34</b>Appeler directement</span></a>
+        <a href="mailto:lebonplombier33@gmail.com"><svg viewBox="0 0 40 40" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#f0b597" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h30v22H5z"/><path d="M5 11l15 12 15-12"/></g></svg><span><b>Écrire un e-mail</b>lebonplombier33@gmail.com</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=10%20route%20de%20Saint-Aubin%2C%2033160%20Saint-M%C3%A9dard-en-Jalles" target="_blank" rel="noopener"><svg viewBox="0 0 40 40" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#f0b597" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 36S8 24 8 16a12 12 0 0 1 24 0c0 8-12 20-12 20z"/><circle cx="20" cy="16" r="4"/></g></svg><span><b>10 route de Saint-Aubin</b>33160 Saint-Médard-en-Jalles</span></a>
+      </div>
+    </div>
+    <form class="form reveal" id="form" novalidate>
+      <span class="tape t1" aria-hidden="true"></span>
+      <h3>Demande de devis</h3>
+      <div class="row">
+        <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" required></div>
+        <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row">
+        <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="commune">Commune</label><input id="commune" name="commune" autocomplete="address-level2"></div>
+      </div>
+      <label for="besoin">Votre besoin</label>
+      <select id="besoin" name="besoin">
+        <option>Fuite / dépannage plomberie</option>
+        <option>Salle de bains / sanitaires</option>
+        <option>Pompe à chaleur</option>
+        <option>Climatisation</option>
+        <option>Chauffe-eau</option>
+        <option>Entretien</option>
+        <option>Autre</option>
+      </select>
+      <label for="msg">Quelques mots sur votre projet</label>
+      <textarea id="msg" name="msg" rows="4"></textarea>
+      <button class="btn btn-terre" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>Envoyer ma demande</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite">Maquette de démonstration – le formulaire sera activé à la mise en ligne. Appelez le <a href="tel:+33684102534">06 84 10 25 34</a>.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="#top">
+        <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><g filter="url(#rough)" fill="none" stroke="#fbf6ec" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5c-6 9-12 16-12 24a12 12 0 0 0 24 0c0-8-6-15-12-24z" fill="#c2603a" fill-opacity=".35"/><path d="M18 30c0 4 3 7 6 7" stroke="#f0b597"/></g></svg>
+        <span>Lebon Plombier<small>M. Lebon et son équipe</small></span>
+      </a>
+      <p>Plomberie, salle de bains, pompes à chaleur, climatisation et chauffe-eau à Saint-Médard-en-Jalles et alentour.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>10 route de Saint-Aubin<br>33160 Saint-Médard-en-Jalles</li>
+        <li><a href="tel:+33684102534">06 84 10 25 34</a></li>
+        <li><a href="mailto:lebonplombier33@gmail.com" style="overflow-wrap:anywhere">lebonplombier33@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Horaires à confirmer par téléphone</li>
+        <li>Devis sur demande</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="#services">Nos services</a></li>
+        <li><a href="#etabli">Sur l'établi</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+        <li><a href="#contact">Demander un devis</a></li>
+        <li><a href="https://gowork.fr/lebon-plombier-saint-medard-en-jalles" target="_blank" rel="noopener">Avis GoWork ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bas">
+    <span>© <span id="annee">2026</span> Lebon Plombier – Saint-Médard-en-Jalles</span>
+    <span>Croquis et illustrations dessinés pour ce site</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33684102534" aria-label="Appeler Lebon Plombier au 06 84 10 25 34">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.2l1.6 4.2-2.2 1.5a11.5 11.5 0 0 0 7.2 7.2l1.5-2.2 4.2 1.6V19a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.7 2 2 0 0 1 5 3.5z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  function setMenu(open){menu.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu')}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // Reveal
+  var els=document.querySelectorAll('.reveal, .draw');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('vu')})}
+  else{
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('vu');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }
+
+  // Jour courant
+  var d=new Date().getDay();
+  var row=document.querySelector('#tableHoraires tr[data-day="'+d+'"]');
+  if(row){row.classList.add('today');row.setAttribute('aria-current','date')}
+
+  // FAQ : un seul ouvert
+  var dets=document.querySelectorAll('.faq-list details');
+  dets.forEach(function(x){x.addEventListener('toggle',function(){if(x.open){dets.forEach(function(y){if(y!==x)y.open=false})}})});
+
+  // Formulaire
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formMsg').classList.add('show')});
+
+  document.getElementById('annee').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

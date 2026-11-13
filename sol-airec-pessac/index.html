@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol'Airec' – chauffagiste à Pessac</title>
+<meta name="description" content="Sol'Airec', SARL à Pessac : chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Entreprise QUALIPAC Chauffage et QUALIPAC CET, référencée Qualit'EnR (RGE).">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f7f2e4;
+  --creme-2:#efe6cf;
+  --vigne:#2e5a3a;
+  --vigne-2:#234a2e;
+  --vigne-3:#183722;
+  --tendre:#9bbf6a;
+  --soleil:#f0b43c;
+  --soleil-2:#f7d27a;
+  --raisin:#5b2c4f;
+  --encre:#1e2a20;
+  --encre-2:#3d4a3f;
+  --blanc:#fffdf6;
+  --r-xl:40px;
+  --r-l:28px;
+  --r-m:20px;
+  --ombre:0 24px 60px -24px rgba(30,42,32,.35);
+  --serif:"Young Serif", Georgia, serif;
+  --sans:"Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0 0 .5em;overflow-wrap:break-word;hyphens:manual}
+h2{font-size:clamp(1.9rem,4.4vw,3rem);color:var(--vigne)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--raisin);margin-bottom:.9rem}
+.eyebrow svg{width:18px;height:18px;flex:none}
+.lead{font-size:1.12rem;color:var(--encre-2);max-width:62ch}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:.95em 1.5em;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;cursor:pointer;font-family:var(--sans)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-sun{background:var(--soleil);color:var(--encre);box-shadow:0 10px 24px -10px rgba(176,112,10,.7)}
+.btn-sun:hover{transform:translateY(-3px);box-shadow:0 16px 30px -12px rgba(176,112,10,.8);background:#f4bf55}
+.btn-vigne{background:var(--vigne);color:var(--creme)}
+.btn-vigne:hover{transform:translateY(-3px);background:var(--vigne-2)}
+.btn-ghost{background:transparent;border-color:var(--vigne);color:var(--vigne)}
+.btn-ghost:hover{background:var(--vigne);color:var(--creme);transform:translateY(-3px)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s, box-shadow .3s}
+.nav.scrolled{background:rgba(247,242,228,.94);backdrop-filter:blur(10px);box-shadow:0 6px 24px -14px rgba(30,42,32,.4)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-size:1.45rem;color:var(--vigne)}
+.logo svg{width:40px;height:40px;flex:none}
+.nav-links{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.96rem;padding:.5em .85em;border-radius:999px;transition:background .2s,color .2s}
+.nav-links a:hover{background:rgba(46,90,58,.1);color:var(--vigne)}
+.nav-links .nav-cta{background:var(--vigne);color:var(--creme);margin-left:6px}
+.nav-links .nav-cta:hover{background:var(--vigne-2);color:var(--creme)}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:0;background:var(--vigne);cursor:pointer;position:relative}
+.burger span{position:absolute;left:14px;right:14px;height:2px;background:var(--creme);border-radius:2px;transition:transform .3s, opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(180deg,#fbf5e3 0%,#fbecc2 38%,#f8d98c 64%,#f3c766 100%);border-radius:0 0 50% 50% / 0 0 90px 90px;overflow:hidden;padding-top:118px;min-height:min(880px,100svh);display:flex;flex-direction:column}
+.hero-text{position:relative;z-index:3}
+.hero-text > *{max-width:640px}
+.hero h1{font-size:clamp(2.6rem,7.4vw,5.4rem);color:var(--vigne-3);margin-bottom:.25em;letter-spacing:-.01em}
+.hero h1 .apo{color:var(--raisin)}
+.hero .tagline{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.85rem);color:var(--raisin);line-height:1.25;margin-bottom:.7em}
+.hero .sub{font-size:1.08rem;color:var(--encre);max-width:52ch}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.landscape{position:absolute;left:0;right:0;bottom:0;height:72%;z-index:1;pointer-events:none}
+.landscape svg{width:100%;height:100%;display:block}
+.rays{transform-box:view-box;transform-origin:930px 360px;animation:spin 90s linear infinite}
+.sun-glow{transform-box:view-box;transform-origin:930px 360px;animation:pulse 7s ease-in-out infinite}
+.fan{transform-box:fill-box;transform-origin:center;animation:spin 2.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{transform:scale(1.06);opacity:.75}}
+.leaf-float{animation:sway 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(6deg)}}
+
+/* floating contact card */
+.contact-card{position:relative;z-index:5;margin-top:-86px}
+.contact-card .card{background:var(--blanc);border-radius:var(--r-xl);box-shadow:var(--ombre);padding:26px;display:grid;grid-template-columns:1fr 1.3fr 1fr 1fr;gap:8px;border:1px solid rgba(46,90,58,.12)}
+.cc-item{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:var(--r-m);text-decoration:none;transition:background .2s;min-width:0}
+a.cc-item:hover{background:#f3eedd}
+.cc-ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none;background:#e7efd9;color:var(--vigne)}
+.cc-ico svg{width:22px;height:22px}
+.cc-item:nth-child(2) .cc-ico{background:#f8e7c0;color:#7a4e00}
+.cc-item:nth-child(3) .cc-ico{background:#efe0ea;color:var(--raisin)}
+.cc-label,.cc-val{display:block}
+.cc-label{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--encre-2)}
+.cc-val{font-weight:600;font-size:.98rem;color:var(--encre);overflow-wrap:anywhere;line-height:1.35}
+.cc-val small{display:block;font-weight:400;color:var(--encre-2);font-size:.86rem}
+
+/* Trust band */
+.trust{padding:46px 0 10px}
+.trust ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.trust li{display:flex;align-items:center;gap:10px;padding:.7em 1.2em;border-radius:999px;background:#e9efdb;color:var(--vigne-3);font-weight:600;font-size:.95rem}
+.trust li svg{width:20px;height:20px;flex:none;color:var(--vigne)}
+
+/* Sections */
+section{position:relative}
+.sec{padding:96px 0}
+.sec-head{max-width:720px;margin-bottom:46px}
+.sec-head.center{text-align:center;margin-inline:auto}
+.sec-head.center .lead{margin-inline:auto}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--blanc);border-radius:var(--r-l);padding:30px 28px;border:1px solid rgba(46,90,58,.12);transition:transform .35s ease, box-shadow .35s ease;position:relative;overflow:hidden}
+.svc::after{content:"";position:absolute;right:-50px;bottom:-50px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(240,180,60,.22),transparent 70%);transition:transform .5s}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--ombre)}
+.svc:hover::after{transform:scale(1.6)}
+.svc-ico{width:68px;height:68px;border-radius:24px;background:#e7efd9;display:grid;place-items:center;margin-bottom:18px;color:var(--vigne)}
+.svc-ico svg{width:40px;height:40px}
+.svc h3{color:var(--vigne-3)}
+.svc p{color:var(--encre-2);margin:0}
+
+/* Wave separators */
+.wave{display:block;width:100%;height:70px}
+.wave.flip{transform:scaleY(-1)}
+
+/* Le soleil dans l'air */
+.air{background:var(--vigne);color:var(--creme);padding:40px 0 100px}
+.air h2{color:var(--creme)}
+.air .eyebrow{color:var(--soleil-2)}
+.air .lead{color:#e5ecd8}
+.schema-box{background:linear-gradient(180deg,#24492f,#1d3d27);border-radius:var(--r-xl);padding:28px 28px 0;overflow:hidden;border:1px solid rgba(155,191,106,.25)}
+.schema-box svg{width:100%;height:auto;display:block}
+.flow{stroke-dasharray:10 12;animation:flow 2.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-44}}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.st3{background:rgba(247,242,228,.07);border:1px solid rgba(155,191,106,.25);border-radius:var(--r-l);padding:26px;transition:background .3s, transform .3s}
+.st3:hover{background:rgba(247,242,228,.12);transform:translateY(-4px)}
+.st3 .num{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--soleil);color:var(--encre);font-family:var(--serif);font-size:1.3rem;margin-bottom:14px}
+.st3 h3{color:var(--creme)}
+.st3 p{color:#dfe7d1;margin:0}
+.real-title{margin:72px 0 26px;display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px}
+.real-title h3{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--creme);margin:0}
+.real-title p{margin:0;color:#dfe7d1;max-width:46ch}
+.reals{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.real{background:var(--creme);color:var(--encre);border-radius:var(--r-l);overflow:hidden;transition:transform .35s, box-shadow .35s}
+.real:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.real .pic{aspect-ratio:4/3;background:linear-gradient(180deg,#fbecc2,#f6dc96);display:block}
+.real .pic svg{width:100%;height:100%;display:block}
+.real .body{padding:22px 24px 26px}
+.real .tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:#efe0ea;color:var(--raisin);padding:.3em .8em;border-radius:999px;margin-bottom:10px}
+.real h4{font-family:var(--serif);font-weight:400;font-size:1.25rem;margin:0 0 .4em;color:var(--vigne-3)}
+.real p{margin:0 0 .8em;color:var(--encre-2);font-size:.97rem}
+.real .price{font-weight:600;color:var(--vigne)}
+
+/* Why */
+.why-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.why-list{display:grid;gap:16px}
+.why{display:flex;gap:18px;align-items:flex-start;background:var(--blanc);border-radius:var(--r-l);padding:22px 24px;border:1px solid rgba(46,90,58,.12);transition:transform .3s, border-color .3s}
+.why:hover{transform:translateX(6px);border-color:var(--tendre)}
+.why .ico{width:52px;height:52px;border-radius:18px;background:var(--vigne);color:var(--soleil-2);display:grid;place-items:center;flex:none}
+.why .ico svg{width:28px;height:28px}
+.why h3{font-size:1.15rem;margin-bottom:.25em;color:var(--vigne-3)}
+.why p{margin:0;color:var(--encre-2);font-size:.98rem}
+.why-art{border-radius:var(--r-xl);background:radial-gradient(circle at 70% 30%,#fbe3a3,#f3c766 55%,#e8a93a);overflow:hidden;aspect-ratio:1/1}
+.why-art svg{width:100%;height:100%;display:block}
+
+/* Process */
+.process{background:var(--creme-2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;position:relative}
+.step{background:var(--blanc);border-radius:var(--r-l);padding:28px 24px;position:relative;transition:transform .3s, box-shadow .3s}
+.step:hover{transform:translateY(-5px);box-shadow:var(--ombre)}
+.step .n{font-family:var(--serif);font-size:2.8rem;line-height:1;color:var(--raisin);display:block;margin-bottom:10px}
+.step h3{font-size:1.18rem;color:var(--vigne-3)}
+.step p{margin:0;color:var(--encre-2);font-size:.97rem}
+.steps-vine{display:block;width:100%;height:46px;margin-bottom:12px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.about-card{background:var(--vigne);color:var(--creme);border-radius:var(--r-xl);padding:36px;position:relative;overflow:hidden}
+.about-card h3{color:var(--soleil-2);font-size:1.5rem}
+.about-card dl{margin:0;display:grid;gap:14px}
+.about-card dt{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#cfe0b8;font-weight:600}
+.about-card dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.about-card a{color:var(--creme)}
+.about-card .leafbg{position:absolute;right:-30px;bottom:-30px;width:180px;opacity:.16}
+.about-text p{color:var(--encre-2);font-size:1.06rem}
+.about-text p.eyebrow{color:var(--raisin);font-size:.82rem}
+.about-text strong{color:var(--encre)}
+
+/* Avis */
+.avis-box{background:linear-gradient(135deg,#5b2c4f,#43203b);color:var(--creme);border-radius:var(--r-xl);padding:56px 48px;display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center;position:relative;overflow:hidden}
+.avis-box h2{color:var(--creme)}
+.avis-box p{color:#ecdde7}
+.avis-box .eyebrow{color:var(--soleil-2)}
+.grapes{width:100%;max-width:260px;justify-self:center}
+
+/* FAQ */
+.faq-list{max-width:860px;margin-inline:auto;display:grid;gap:14px}
+.faq-item{background:var(--blanc);border-radius:var(--r-m);border:1px solid rgba(46,90,58,.14);overflow:hidden;transition:border-color .3s}
+.faq-item.open{border-color:var(--tendre)}
+.faq-q{width:100%;text-align:left;background:none;border:0;padding:22px 24px;font:600 1.06rem/1.4 var(--sans);color:var(--encre);display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer}
+.faq-q:hover{color:var(--vigne)}
+.faq-q .pm{width:34px;height:34px;flex:none;border-radius:50%;background:#e7efd9;display:grid;place-items:center;transition:transform .35s, background .3s}
+.faq-q .pm svg{width:16px;height:16px;color:var(--vigne)}
+.faq-item.open .pm{transform:rotate(45deg);background:var(--soleil)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a > div{overflow:hidden}
+.faq-a p{padding:0 24px 22px;margin:0;color:var(--encre-2)}
+
+/* Horaires */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--blanc);border-radius:var(--r-xl);padding:34px;border:1px solid rgba(46,90,58,.12)}
+.panel h3{color:var(--vigne-3);font-size:1.45rem}
+table{width:100%;border-collapse:separate;border-spacing:0 6px}
+td{padding:.65em .9em}
+td:first-child{font-weight:600;border-radius:14px 0 0 14px}
+td:last-child{text-align:right;color:var(--encre-2);border-radius:0 14px 14px 0}
+tr.today td{background:var(--vigne);color:var(--creme)}
+tr.today td:last-child{color:var(--creme)}
+tr.today td:first-child::after{content:" · aujourd'hui";font-weight:400;font-size:.85em;color:var(--soleil-2)}
+.note{font-size:.95rem;color:var(--encre-2);margin-top:12px}
+.map-art{border-radius:var(--r-l);overflow:hidden;margin:18px 0 20px;background:#e7efd9}
+.map-art svg{display:block;width:100%;height:auto}
+
+/* Contact */
+.contact{background:var(--creme-2)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.contact-aside{background:var(--vigne);color:var(--creme);border-radius:var(--r-xl);padding:36px}
+.contact-aside h3{color:var(--soleil-2);font-size:1.5rem}
+.contact-aside p{color:#e2ead5}
+.contact-aside a{color:var(--creme);font-weight:600;overflow-wrap:anywhere}
+.contact-aside .big{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.1rem);text-decoration:none;display:inline-block;margin:6px 0 14px}
+.contact-aside .big:hover{color:var(--soleil-2)}
+form{background:var(--blanc);border-radius:var(--r-xl);padding:36px;box-shadow:var(--ombre)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--encre)}
+.field{margin-bottom:16px}
+input,select,textarea{width:100%;padding:.85em 1em;border-radius:16px;border:1.5px solid #c9cfbd;background:#fdfbf3;font:inherit;color:var(--encre);transition:border-color .2s, box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--vigne);box-shadow:0 0 0 4px rgba(155,191,106,.35)}
+textarea{min-height:130px;resize:vertical}
+.form-msg{display:none;margin-top:16px;padding:16px 18px;border-radius:18px;background:#e7efd9;color:var(--vigne-3);font-weight:500}
+.form-msg.show{display:block}
+.form-msg a{color:var(--vigne-3);font-weight:700}
+
+/* Footer */
+footer{background:var(--vigne-3);color:#dbe5cc;padding:70px 0 0;margin-top:-1px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding-bottom:46px}
+footer h4{font-family:var(--serif);font-weight:400;color:var(--soleil-2);font-size:1.15rem;margin:0 0 14px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{color:#eef3e6;text-decoration:none;overflow-wrap:anywhere}
+footer a:hover{color:var(--soleil-2);text-decoration:underline}
+footer .logo{color:var(--creme);margin-bottom:14px}
+footer p{font-size:.96rem}
+.demo{background:#10261a;color:#b9c8aa;text-align:center;font-size:.85rem;padding:14px 16px}
+
+/* Floating call (mobile) */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--soleil);color:var(--encre);place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);text-decoration:none}
+.fab svg{width:26px;height:26px}
+.fab::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--soleil);animation:ring 2.4s ease-out infinite}
+@keyframes ring{from{transform:scale(.85);opacity:1}to{transform:scale(1.35);opacity:0}}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease, transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1024px){
+  .contact-card .card{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .nav-links{position:fixed;top:72px;left:16px;right:16px;flex-direction:column;align-items:stretch;background:var(--blanc);border-radius:var(--r-l);padding:14px;box-shadow:var(--ombre);gap:2px;opacity:0;transform:translateY(-12px);pointer-events:none;transition:opacity .3s, transform .3s}
+  .nav-links.open{opacity:1;transform:none;pointer-events:auto}
+  .nav-links a{display:block;padding:.85em 1em;font-size:1.05rem}
+  .nav-links .nav-cta{margin:6px 0 0;text-align:center}
+  .burger{display:block}
+  .why-grid,.about-grid,.hours-grid,.contact-grid{grid-template-columns:1fr}
+  .why-art{max-width:520px;width:100%;margin-inline:auto;aspect-ratio:4/3}
+  .steps3,.reals{grid-template-columns:1fr}
+  .reals{max-width:560px;margin-inline:auto}
+  .avis-box{grid-template-columns:1fr;padding:40px 28px}
+  .grapes{max-width:170px;order:-1}
+}
+@media (max-width:767px){
+  body{font-size:16px}
+  .fab{display:grid}
+  .sec{padding:70px 0}
+  .hero{min-height:760px;padding-top:100px;border-radius:0 0 50% 50% / 0 0 50px 50px}
+  .landscape{height:46%}
+  .hero-btns .btn{flex:1 1 100%}
+  .contact-card{margin-top:-60px}
+  .contact-card .card{grid-template-columns:1fr;padding:12px;border-radius:var(--r-l)}
+  .services-grid,.steps,.frow,.foot-grid{grid-template-columns:1fr}
+  .schema-box{padding:14px;border-radius:var(--r-l)}
+  .panel,form,.contact-aside,.about-card{padding:26px 22px;border-radius:var(--r-l)}
+  .wave{height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2 1.4a11 11 0 0 0 7.1 7.1l1.4-2 4.2 1.6V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9.5 9 1.8 1.8L14.8 7.3M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 64 64"><g fill="currentColor"><circle cx="32" cy="34" r="13"/><ellipse cx="32" cy="17" rx="10" ry="14"/><ellipse cx="32" cy="17" rx="9" ry="13" transform="rotate(-62 32 34)"/><ellipse cx="32" cy="17" rx="9" ry="13" transform="rotate(62 32 34)"/><ellipse cx="32" cy="19" rx="7.5" ry="11" transform="rotate(-120 32 34)"/><ellipse cx="32" cy="19" rx="7.5" ry="11" transform="rotate(120 32 34)"/></g><g fill="none" stroke="#000" stroke-opacity=".22" stroke-width="1.6" stroke-linecap="round"><path d="M32 46V8M32 36 12 24M32 36l20-12M32 38 17 48M32 38l15 10"/></g><path d="M32 44v18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M8 2v12M2 8h12"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Sol'Airec' – accueil">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#2e5a3a"/><circle cx="24" cy="27" r="9" fill="#f0b43c"/><g stroke="#f0b43c" stroke-width="2.4" stroke-linecap="round"><path d="M24 11v4M13 16l3 3M35 16l-3 3M9 27h4M35 27h4"/></g><path d="M5 34c7-4 13-4 19 0s12 4 19 0v6a23 23 0 0 1-38 0z" fill="#9bbf6a"/></svg>
+      <span>Sol'Airec'</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#soleil">Le soleil dans l'air</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#contact" class="nav-cta">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-text">
+    <p class="eyebrow"><svg aria-hidden="true"><use href="#i-sun"/></svg>Chauffage &amp; climatisation · Pessac</p>
+    <h1 id="h1">Sol<span class="apo">'</span>Airec<span class="apo">'</span></h1>
+    <p class="tagline">La douceur des Graves, chez vous, toute l'année.</p>
+    <p class="sub">Pompes à chaleur, climatisation, chauffe-eau thermodynamiques et chaudières gaz ou fioul : une SARL de Pessac qui puise la chaleur là où elle est, dans l'air, pour la mettre dans votre maison.</p>
+    <div class="hero-btns">
+      <a class="btn btn-vigne" href="tel:+33676011886"><svg aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 06 76 01 18 86</a>
+      <a class="btn btn-sun" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+
+  <div class="landscape" aria-hidden="true">
+    <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <radialGradient id="sunG" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#fff1c4"/><stop offset=".55" stop-color="#f7cf6e"/><stop offset="1" stop-color="#f0b43c"/></radialGradient>
+        <radialGradient id="glowG"><stop offset="0" stop-color="#fff3cf" stop-opacity=".9"/><stop offset="1" stop-color="#fff3cf" stop-opacity="0"/></radialGradient>
+        <linearGradient id="h1G" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9d38b"/><stop offset="1" stop-color="#9bbf6a"/></linearGradient>
+        <linearGradient id="h2G" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f9a4e"/><stop offset="1" stop-color="#4f7d3f"/></linearGradient>
+        <linearGradient id="h3G" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e5a3a"/><stop offset="1" stop-color="#1f4229"/></linearGradient>
+        <clipPath id="c2"><path d="M0 400 C220 330 420 330 640 370 S1100 420 1440 340 V560 H0Z"/></clipPath>
+        <clipPath id="c3"><path d="M0 470 C260 420 520 440 760 470 S1220 500 1440 440 V560 H0Z"/></clipPath>
+      </defs>
+      <!-- sun -->
+      <circle class="sun-glow" cx="930" cy="360" r="260" fill="url(#glowG)"/>
+      <g class="rays" fill="#f0b43c" opacity=".55">
+        <path d="M930 60 l14 120 h-28z"/><path d="M930 660 l14 -120 h-28z"/>
+        <path d="M630 360 l120 14 v-28z"/><path d="M1230 360 l-120 14 v-28z"/>
+        <path d="M718 148 l95 75 -20 20z"/><path d="M1142 572 l-95 -75 20 -20z"/>
+        <path d="M1142 148 l-75 95 -20 -20z"/><path d="M718 572 l75 -95 20 20z"/>
+        <path d="M815 83 l60 105 -26 10z" opacity=".7"/><path d="M1045 83 l-34 115 -26 -10z" opacity=".7"/>
+        <path d="M653 245 l112 45 -10 26z" opacity=".7"/><path d="M1207 245 l-112 45 10 26z" opacity=".7"/>
+        <path d="M653 475 l112 -45 -10 -26z" opacity=".7"/><path d="M1207 475 l-112 -45 10 -26z" opacity=".7"/>
+        <path d="M815 637 l60 -105 -26 -10z" opacity=".7"/><path d="M1045 637 l-34 -115 -26 10z" opacity=".7"/>
+      </g>
+      <circle cx="930" cy="360" r="128" fill="url(#sunG)"/>
+      <!-- far hill -->
+      <path d="M0 360 C180 300 380 290 560 330 S940 360 1100 320 S1340 290 1440 310 V560 H0Z" fill="url(#h1G)"/>
+      <g fill="none" stroke="#86ad57" stroke-width="3" stroke-linecap="round" opacity=".8">
+        <path d="M0 378 C180 320 380 312 560 350 S940 380 1100 342 S1340 312 1440 330"/>
+        <path d="M0 396 C180 340 380 332 560 370 S940 400 1100 362 S1340 332 1440 350"/>
+      </g>
+      <!-- middle hill with vine rows -->
+      <path d="M0 400 C220 330 420 330 640 370 S1100 420 1440 340 V560 H0Z" fill="url(#h2G)"/>
+      <g clip-path="url(#c2)" fill="none" stroke="#3e6b33" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 13">
+        <path d="M0 418 C220 350 420 350 640 390 S1100 440 1440 360"/>
+        <path d="M0 438 C220 372 420 372 640 412 S1100 462 1440 382"/>
+        <path d="M0 460 C220 396 420 396 640 436 S1100 486 1440 406"/>
+        <path d="M0 484 C220 422 420 422 640 462 S1100 512 1440 432"/>
+      </g>
+      <!-- house with PAC -->
+      <g transform="translate(560 262)">
+        <rect x="0" y="40" width="120" height="74" rx="6" fill="#fbf3dc"/>
+        <path d="M-12 46 L60 -6 L132 46 Z" fill="#5b2c4f"/>
+        <rect x="88" y="-2" width="14" height="30" fill="#7a3d6a"/>
+        <rect x="16" y="60" width="26" height="24" rx="4" fill="#f7d27a" stroke="#2e5a3a" stroke-width="3"/>
+        <path d="M29 60v24M16 72h26" stroke="#2e5a3a" stroke-width="2"/>
+        <rect x="64" y="64" width="28" height="50" rx="5" fill="#2e5a3a"/>
+        <circle cx="86" cy="90" r="2.4" fill="#f0b43c"/>
+        <!-- PAC unit -->
+        <rect x="128" y="76" width="58" height="40" rx="7" fill="#fffdf6" stroke="#2e5a3a" stroke-width="3"/>
+        <circle cx="149" cy="96" r="13" fill="#e7efd9" stroke="#2e5a3a" stroke-width="2.5"/>
+        <g class="fan" fill="#2e5a3a"><path d="M149 96 l0 -11 a5 5 0 0 1 4 6z"/><path d="M149 96 l11 0 a5 5 0 0 1 -6 4z"/><path d="M149 96 l0 11 a5 5 0 0 1 -4 -6z"/><path d="M149 96 l-11 0 a5 5 0 0 1 6 -4z"/></g>
+        <path d="M168 86h12M168 93h12M168 100h12M168 107h12" stroke="#2e5a3a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M120 96 h8" stroke="#2e5a3a" stroke-width="3"/>
+        <!-- warm air waves -->
+        <g fill="none" stroke="#f0b43c" stroke-width="3" stroke-linecap="round" opacity=".9">
+          <path d="M200 92 q8 -6 16 0 t16 0"/><path d="M204 104 q8 -6 16 0 t16 0"/>
+        </g>
+      </g>
+      <!-- trees -->
+      <g fill="#2e5a3a"><ellipse cx="470" cy="336" rx="22" ry="30"/><rect x="467" y="350" width="6" height="26"/><ellipse cx="1240" cy="352" rx="18" ry="24"/><rect x="1237" y="364" width="5" height="18"/></g>
+      <!-- front hill -->
+      <path d="M0 470 C260 420 520 440 760 470 S1220 500 1440 440 V560 H0Z" fill="url(#h3G)"/>
+      <g clip-path="url(#c3)" fill="none" stroke="#4a7a45" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 18">
+        <path d="M0 492 C260 442 520 462 760 492 S1220 522 1440 462"/>
+        <path d="M0 520 C260 472 520 492 760 522 S1220 552 1440 492"/>
+        <path d="M0 552 C260 506 520 526 760 556 S1220 586 1440 526"/>
+      </g>
+      <!-- vine leaves -->
+      <g class="leaf-float"><use href="#i-leaf" x="240" y="414" width="54" height="54" color="#9bbf6a"/></g>
+      <use href="#i-leaf" x="1310" y="400" width="44" height="44" color="#9bbf6a"/>
+      <g fill="#5b2c4f"><circle cx="296" cy="468" r="6"/><circle cx="306" cy="476" r="6"/><circle cx="292" cy="480" r="6"/><circle cx="302" cy="488" r="6"/><circle cx="298" cy="498" r="5"/></g>
+    </svg>
+  </div>
+</section>
+
+<div class="wrap contact-card">
+  <div class="card reveal">
+    <a class="cc-item" href="tel:+33676011886"><span class="cc-ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span><span class="cc-label">Téléphone</span><span class="cc-val">06 76 01 18 86<small>Appel direct</small></span></span></a>
+    <a class="cc-item" href="mailto:sarl.solairec@gmail.com"><span class="cc-ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span><span class="cc-label">Email</span><span class="cc-val">sarl.solairec@gmail.com<small>Réponse par retour de mail</small></span></span></a>
+    <div class="cc-item"><span class="cc-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><span class="cc-label">Zone</span><span class="cc-val">Pessac &amp; alentours<small>30 av. du Dauphiné, 33600</small></span></span></div>
+    <div class="cc-item"><span class="cc-ico"><svg aria-hidden="true"><use href="#i-badge"/></svg></span><span><span class="cc-label">Labels</span><span class="cc-val">QUALIPAC · RGE<small>Chauffage &amp; CET – Qualit'EnR</small></span></span></div>
+  </div>
+</div>
+
+<section class="trust" aria-label="Éléments de confiance">
+  <div class="wrap">
+    <ul class="reveal">
+      <li><svg aria-hidden="true"><use href="#i-badge"/></svg>QUALIPAC Chauffage</li>
+      <li><svg aria-hidden="true"><use href="#i-badge"/></svg>QUALIPAC CET</li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg>Entreprise RGE – référencée Qualit'EnR</li>
+      <li><svg aria-hidden="true"><use href="#i-pin"/></svg>Basée à Pessac (33600)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="t-services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Nos savoir-faire</p>
+      <h2 id="t-services">Du chaud, du frais et de l'eau chaude</h2>
+      <p class="lead">Trois familles d'équipements, une même exigence : un système bien choisi, bien posé et bien réglé pour votre logement.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="36" height="24" rx="5"/><circle cx="19" cy="26" r="7"/><path d="M19 19v14M12 26h14M31 20h6M31 26h6M31 32h6"/><path d="M14 8c2-2 4 2 6 0M26 8c2-2 4 2 6 0"/></g></svg></div>
+        <h3>Pompes à chaleur air/eau</h3>
+        <p>Une PAC qui alimente radiateurs ou plancher chauffant en captant les calories de l'air extérieur. Étude et dimensionnement adaptés à votre maison.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="38" height="16" rx="5"/><path d="M11 21h26"/><path d="M14 32v6M24 32v8M34 32v6"/><path d="M24 34l-3 3M24 34l3 3"/></g></svg></div>
+        <h3>Climatisation</h3>
+        <p>Splits muraux ou systèmes réversibles pour garder la fraîcheur pendant les étés girondins, et souvent un appoint de chaleur l'hiver.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="20" height="40" rx="10"/><circle cx="24" cy="14" r="4"/><path d="M19 26c3 3 7-3 10 0M19 33c3 3 7-3 10 0"/></g></svg></div>
+        <h3>Chauffe-eau thermodynamiques</h3>
+        <p>Un ballon d'eau chaude couplé à une petite pompe à chaleur : l'air ambiant fait une grande partie du travail pour chauffer votre eau.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="5" width="28" height="32" rx="5"/><path d="M16 13h16"/><path d="M24 30c-4 0-5-3-4-6 1 1 2 1 2-1 0-3 2-4 2-5 2 2 6 5 6 8 0 2-2 4-6 4z"/><path d="M17 37v6M24 37v6M31 37v6"/></g></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, avec un réglage soigné pour un confort stable et une consommation maîtrisée.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="26" height="30" rx="5"/><path d="M12 20h14M12 27h14"/><path d="M19 34v2"/><path d="M32 20h6a4 4 0 0 1 4 4v10"/><path d="M42 34c-2 3-2 5 0 6 2-1 2-3 0-6z"/><path d="M14 6h10v6H14z"/></g></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Vous chauffez au fioul ? Intervention sur votre installation et conseil pour envisager, si vous le souhaitez, un passage vers une solution plus récente.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="svc-ico"><svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40V24L24 12l14 12v16z"/><path d="M19 40V30h10v10"/><path d="M33 8l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z"/></g></svg></div>
+        <h3>Conseil &amp; devis</h3>
+        <p>Visite, écoute de vos besoins et proposition claire. Chaque projet est chiffré sur devis, selon votre logement et vos usages.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V40 C180 10 360 10 540 34 S900 66 1080 40 S1320 8 1440 26 V70Z" fill="#2e5a3a"/></svg>
+<section class="air" id="soleil" aria-labelledby="t-air">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-sun"/></svg>Notre spécialité</p>
+      <h2 id="t-air">Le soleil dans l'air</h2>
+      <p class="lead">Même par une matinée fraîche de novembre sur les vignes, l'air extérieur contient de l'énergie, entretenue en grande partie par le soleil. Une pompe à chaleur sait la récupérer. Voici comment, en trois temps.</p>
+    </div>
+
+    <div class="schema-box reveal">
+      <svg viewBox="0 0 1100 340" role="img" aria-labelledby="schema-t">
+        <title id="schema-t">Schéma : l'air extérieur cède ses calories à la pompe à chaleur, qui les concentre puis les diffuse dans la maison.</title>
+        <defs>
+          <linearGradient id="warm" x1="0" x2="1"><stop offset="0" stop-color="#9bbf6a"/><stop offset=".5" stop-color="#f0b43c"/><stop offset="1" stop-color="#f08a3c"/></linearGradient>
+        </defs>
+        <!-- ground curve -->
+        <path d="M0 300 C200 270 380 290 550 296 S900 280 1100 300 V340 H0Z" fill="#9bbf6a" opacity=".14"/>
+        <!-- 1: sun + air -->
+        <circle cx="150" cy="110" r="46" fill="#f0b43c"/>
+        <g stroke="#f0b43c" stroke-width="5" stroke-linecap="round"><path d="M150 40v-18M150 180v18M80 110H62M220 110h18M100 60 88 48M200 60l12-12M100 160l-12 12M200 160l12 12"/></g>
+        <g fill="none" stroke="#cfe0b8" stroke-width="4" stroke-linecap="round" opacity=".9">
+          <path d="M60 230 q25 -18 50 0 t50 0 t50 0"/><path d="M80 258 q25 -18 50 0 t50 0 t50 0"/>
+        </g>
+        <use href="#i-leaf" x="40" y="160" width="40" height="40" color="#9bbf6a"/>
+        <!-- 2: PAC -->
+        <rect x="455" y="150" width="180" height="120" rx="20" fill="#fffdf6"/>
+        <circle cx="515" cy="210" r="38" fill="#e7efd9" stroke="#2e5a3a" stroke-width="4"/>
+        <g class="fan" fill="#2e5a3a"><path d="M515 210 l0 -32 a14 14 0 0 1 12 18z"/><path d="M515 210 l32 0 a14 14 0 0 1 -18 12z"/><path d="M515 210 l0 32 a14 14 0 0 1 -12 -18z"/><path d="M515 210 l-32 0 a14 14 0 0 1 18 -12z"/></g>
+        <circle cx="515" cy="210" r="6" fill="#f0b43c"/>
+        <g stroke="#2e5a3a" stroke-width="4" stroke-linecap="round"><path d="M572 180h44M572 196h44M572 212h44M572 228h44M572 244h44"/></g>
+        <!-- 3: house -->
+        <path d="M850 160 L950 90 L1050 160 V280 H850Z" fill="#fbf3dc"/>
+        <path d="M836 166 L950 84 L1064 166" fill="none" stroke="#5b2c4f" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+        <rect x="880" y="200" width="80" height="44" rx="8" fill="none" stroke="#c0392b" stroke-width="0"/>
+        <g fill="none" stroke="#e08a2c" stroke-width="5" stroke-linecap="round"><path d="M880 210v40M896 210v40M912 210v40M928 210v40M944 210v40"/><path d="M874 254h76"/></g>
+        <g fill="none" stroke="#f0b43c" stroke-width="4" stroke-linecap="round"><path d="M900 196 q-8 -10 0 -20 t0 -20"/><path d="M928 196 q-8 -10 0 -20 t0 -20"/></g>
+        <rect x="980" y="210" width="44" height="70" rx="6" fill="#2e5a3a"/>
+        <!-- flows -->
+        <path class="flow" d="M230 200 C300 120 380 120 450 190" fill="none" stroke="url(#warm)" stroke-width="8" stroke-linecap="round"/>
+        <path class="flow" d="M640 190 C710 100 790 100 850 190" fill="none" stroke="#f08a3c" stroke-width="8" stroke-linecap="round"/>
+        <!-- labels -->
+        <g font-family="Young Serif, Georgia, serif" font-size="40" fill="#1e2a20" text-anchor="middle">
+          <circle cx="340" cy="92" r="34" fill="#f0b43c"/><text x="340" y="106">1</text>
+          <circle cx="545" cy="104" r="34" fill="#f0b43c"/><text x="545" y="118">2</text>
+          <circle cx="745" cy="74" r="34" fill="#f0b43c"/><text x="745" y="88">3</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="steps3">
+      <article class="st3 reveal"><span class="num">1</span><h3>Capter les calories de l'air</h3><p>Le ventilateur de l'unité extérieure fait passer l'air sur un échangeur. Un fluide frigorigène très froid y prélève la chaleur disponible, même quand il ne fait pas chaud dehors.</p></article>
+      <article class="st3 reveal"><span class="num">2</span><h3>Les concentrer</h3><p>Le compresseur comprime ce fluide : sa température monte nettement. C'est l'étape qui transforme une chaleur «&nbsp;diffuse&nbsp;» en chaleur utile pour la maison.</p></article>
+      <article class="st3 reveal"><span class="num">3</span><h3>Les diffuser</h3><p>La chaleur passe dans l'eau du circuit de chauffage (radiateurs, plancher) ou dans le ballon d'eau chaude. En mode réversible, le cycle s'inverse pour rafraîchir.</p></article>
+    </div>
+
+    <div class="real-title reveal">
+      <h3>Trois réalisations types</h3>
+      <p>Illustrations d'installations que nous réalisons couramment. Chaque chantier est différent : tarifs sur devis.</p>
+    </div>
+    <div class="reals">
+      <article class="real reveal">
+        <div class="pic"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <path d="M0 230 C120 210 260 220 400 205 V300 H0Z" fill="#9bbf6a"/>
+          <path d="M0 260 C140 240 260 250 400 238 V300 H0Z" fill="#6f9a4e"/>
+          <rect x="40" y="60" width="160" height="170" fill="#fbf3dc"/><rect x="40" y="60" width="160" height="14" fill="#5b2c4f"/>
+          <rect x="70" y="100" width="44" height="40" rx="4" fill="#f7d27a" stroke="#2e5a3a" stroke-width="3"/>
+          <rect x="224" y="150" width="130" height="86" rx="12" fill="#fffdf6" stroke="#2e5a3a" stroke-width="4"/>
+          <circle cx="270" cy="193" r="30" fill="#e7efd9" stroke="#2e5a3a" stroke-width="3"/>
+          <g class="fan" fill="#2e5a3a"><path d="M270 193 l0 -24 a10 10 0 0 1 9 13z"/><path d="M270 193 l24 0 a10 10 0 0 1 -13 9z"/><path d="M270 193 l0 24 a10 10 0 0 1 -9 -13z"/><path d="M270 193 l-24 0 a10 10 0 0 1 13 -9z"/></g>
+          <path d="M314 172h28M314 184h28M314 196h28M314 208h28" stroke="#2e5a3a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M200 200 h24" stroke="#2e5a3a" stroke-width="5"/>
+          <rect x="236" y="236" width="10" height="12" fill="#2e5a3a"/><rect x="332" y="236" width="10" height="12" fill="#2e5a3a"/>
+          <circle cx="340" cy="60" r="28" fill="#f0b43c"/>
+          <use href="#i-leaf" x="20" y="220" width="40" height="40" color="#9bbf6a"/>
+        </svg></div>
+        <div class="body"><span class="tag">Réalisation type</span><h4>PAC air/eau en extérieur</h4><p>Unité posée au sol sur supports, reliée au circuit de chauffage existant de la maison.</p><span class="price">Sur devis</span></div>
+      </article>
+      <article class="real reveal">
+        <div class="pic"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="0" y="240" width="400" height="60" fill="#e9dcb8"/>
+          <path d="M0 240h400" stroke="#c9b884" stroke-width="3"/>
+          <rect x="150" y="30" width="100" height="216" rx="50" fill="#fffdf6" stroke="#2e5a3a" stroke-width="4"/>
+          <path d="M150 90h100" stroke="#2e5a3a" stroke-width="3"/>
+          <circle cx="200" cy="62" r="18" fill="#e7efd9" stroke="#2e5a3a" stroke-width="3"/>
+          <g class="fan" fill="#2e5a3a"><path d="M200 62 l0 -13 a6 6 0 0 1 5 7z"/><path d="M200 62 l13 0 a6 6 0 0 1 -7 5z"/><path d="M200 62 l0 13 a6 6 0 0 1 -5 -7z"/><path d="M200 62 l-13 0 a6 6 0 0 1 7 -5z"/></g>
+          <rect x="176" y="120" width="48" height="24" rx="6" fill="#2e5a3a"/><text x="200" y="138" font-family="Onest, sans-serif" font-size="16" font-weight="700" fill="#f7d27a" text-anchor="middle">55°</text>
+          <path d="M175 170c10 10 40 -10 50 0M175 195c10 10 40 -10 50 0" fill="none" stroke="#f0b43c" stroke-width="4" stroke-linecap="round"/>
+          <path d="M260 210 h50 v-120" fill="none" stroke="#5b2c4f" stroke-width="6" stroke-linecap="round"/>
+          <path d="M140 220 h-50 v-110" fill="none" stroke="#2e5a3a" stroke-width="6" stroke-linecap="round"/>
+          <use href="#i-leaf" x="320" y="30" width="50" height="50" color="#9bbf6a"/>
+        </svg></div>
+        <div class="body"><span class="tag">Réalisation type</span><h4>Chauffe-eau thermodynamique</h4><p>Ballon posé en garage ou cellier, pour une eau chaude produite en grande partie grâce à l'air ambiant.</p><span class="price">Sur devis</span></div>
+      </article>
+      <article class="real reveal">
+        <div class="pic"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="0" y="0" width="400" height="300" fill="#f3e6c4"/>
+          <g stroke="#e4d3a6" stroke-width="2"><path d="M0 60h400M0 120h400M0 180h400M0 240h400"/></g>
+          <rect x="130" y="40" width="140" height="170" rx="18" fill="#fffdf6" stroke="#2e5a3a" stroke-width="4"/>
+          <rect x="150" y="62" width="100" height="34" rx="8" fill="#2e5a3a"/>
+          <circle cx="170" cy="79" r="6" fill="#9bbf6a"/><rect x="186" y="74" width="50" height="10" rx="5" fill="#f7d27a"/>
+          <path d="M200 176c-14 0-20-10-14-20 3 3 6 2 6-3 0-7 6-10 6-14 7 6 16 14 16 22 0 9-6 15-14 15z" fill="#f0b43c"/>
+          <g stroke="#2e5a3a" stroke-width="6" stroke-linecap="round"><path d="M160 210v50M185 210v50M215 210v50M240 210v50"/></g>
+          <rect x="300" y="190" width="70" height="70" rx="10" fill="none" stroke="#5b2c4f" stroke-width="5"/>
+          <g stroke="#5b2c4f" stroke-width="5"><path d="M314 196v58M328 196v58M342 196v58M356 196v58"/></g>
+          <path d="M240 250 h50 v-20 h10" fill="none" stroke="#5b2c4f" stroke-width="4"/>
+          <use href="#i-leaf" x="30" y="200" width="56" height="56" color="#9bbf6a"/>
+        </svg></div>
+        <div class="body"><span class="tag">Réalisation type</span><h4>Chaudière murale gaz</h4><p>Remplacement d'une ancienne chaudière par un modèle mural, raccordé aux radiateurs de la maison.</p><span class="price">Sur devis</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+<svg class="wave flip" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V40 C180 10 360 10 540 34 S900 66 1080 40 S1320 8 1440 26 V70Z" fill="#2e5a3a"/></svg>
+
+<section class="sec" id="pourquoi" aria-labelledby="t-why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:28px">
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Pourquoi nous choisir</p>
+        <h2 id="t-why">Une entreprise qualifiée, à deux pas de chez vous</h2>
+      </div>
+      <div class="why-list">
+        <div class="why reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-badge"/></svg></span><div><h3>Qualifiée QUALIPAC</h3><p>QUALIPAC Chauffage et QUALIPAC CET : des qualifications dédiées aux pompes à chaleur et aux chauffe-eau thermodynamiques.</p></div></div>
+        <div class="why reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-check"/></svg></span><div><h3>Référencée RGE</h3><p>Une mention souvent demandée pour certaines aides publiques à la rénovation énergétique, sous conditions d'éligibilité.</p></div></div>
+        <div class="why reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-sun"/></svg></span><div><h3>Toutes les énergies</h3><p>Gaz, fioul, pompe à chaleur ou climatisation : un conseil qui part de votre logement, pas d'une solution unique.</p></div></div>
+        <div class="why reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Une adresse à Pessac</h3><p>Une SARL installée avenue du Dauphiné, joignable directement par téléphone ou par email.</p></div></div>
+      </div>
+    </div>
+    <div class="why-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="270" cy="120" r="60" fill="#fff1c4" opacity=".9"/>
+        <path d="M0 250 C100 210 200 220 300 240 S380 250 400 230 V400 H0Z" fill="#9bbf6a"/>
+        <path d="M0 300 C120 260 240 280 400 270 V400 H0Z" fill="#2e5a3a"/>
+        <g fill="none" stroke="#4a7a45" stroke-width="6" stroke-linecap="round" stroke-dasharray="3 16"><path d="M0 322 C120 282 240 302 400 292"/><path d="M0 350 C120 312 240 332 400 322"/><path d="M0 380 C120 344 240 364 400 354"/></g>
+        <!-- big vine branch -->
+        <path d="M60 0 C80 60 70 110 120 150" fill="none" stroke="#5b3a1e" stroke-width="7" stroke-linecap="round"/>
+        <g class="leaf-float"><use href="#i-leaf" x="40" y="40" width="120" height="120" color="#2e5a3a"/></g>
+        <use href="#i-leaf" x="120" y="110" width="80" height="80" color="#6f9a4e"/>
+        <path d="M150 180 c10 10 0 20 10 30" fill="none" stroke="#2e5a3a" stroke-width="3"/>
+        <g fill="#5b2c4f">
+          <circle cx="120" cy="170" r="12"/><circle cx="144" cy="170" r="12"/><circle cx="96" cy="170" r="12"/>
+          <circle cx="108" cy="192" r="12"/><circle cx="132" cy="192" r="12"/><circle cx="156" cy="192" r="11"/>
+          <circle cx="120" cy="214" r="12"/><circle cx="144" cy="214" r="11"/><circle cx="132" cy="236" r="11"/>
+        </g>
+        <g fill="#fff" opacity=".35"><circle cx="116" cy="166" r="3"/><circle cx="140" cy="166" r="3"/><circle cx="104" cy="188" r="3"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V30 C240 0 480 60 720 34 S1200 6 1440 36 V70Z" fill="#efe6cf"/></svg>
+<section class="sec process" id="etapes" aria-labelledby="t-steps" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Comment ça se passe</p>
+      <h2 id="t-steps">Du premier appel à la mise en service</h2>
+    </div>
+    <svg class="steps-vine reveal" viewBox="0 0 1180 46" preserveAspectRatio="none" aria-hidden="true"><path d="M10 23 C150 0 290 46 440 23 S740 0 890 23 S1080 46 1170 23" fill="none" stroke="#9bbf6a" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/></svg>
+    <div class="steps">
+      <div class="step reveal"><span class="n">01</span><h3>Vous nous appelez</h3><p>Au 06 76 01 18 86 ou par email : vous décrivez votre logement, votre équipement actuel et votre projet.</p></div>
+      <div class="step reveal"><span class="n">02</span><h3>Visite &amp; conseil</h3><p>Nous venons voir l'installation, les contraintes d'emplacement et vos usages pour orienter le choix.</p></div>
+      <div class="step reveal"><span class="n">03</span><h3>Devis détaillé</h3><p>Une proposition écrite et claire : matériel, travaux, et informations utiles sur les aides éventuelles.</p></div>
+      <div class="step reveal"><span class="n">04</span><h3>Pose &amp; mise en service</h3><p>Installation, réglages, explication du fonctionnement : vous savez piloter votre nouvel équipement.</p></div>
+    </div>
+  </div>
+</section>
+<svg class="wave flip" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V30 C240 0 480 60 720 34 S1200 6 1440 36 V70Z" fill="#efe6cf"/></svg>
+
+<section class="sec" id="apropos" aria-labelledby="t-about">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>À propos</p>
+      <h2 id="t-about">Sol'Airec', le chauffage côté Graves</h2>
+      <p><strong>Sol'Airec' est une SARL installée au 30 avenue du Dauphiné, à Pessac</strong>, au cœur d'une commune connue pour ses vignobles des Graves.</p>
+      <p>L'entreprise intervient sur les chaudières gaz ou fioul, les pompes à chaleur et la climatisation, ainsi que les chauffe-eau thermodynamiques.</p>
+      <p>Elle est titulaire des qualifications <strong>QUALIPAC Chauffage</strong> et <strong>QUALIPAC CET</strong>, et figure à l'annuaire Qualit'EnR des professionnels RGE.</p>
+      <p>Le plus simple pour parler de votre projet : un coup de fil.</p>
+      <a class="btn btn-ghost" href="tel:+33676011886"><svg aria-hidden="true"><use href="#i-phone"/></svg>06 76 01 18 86</a>
+    </div>
+    <aside class="about-card reveal" aria-label="Fiche entreprise">
+      <h3>En bref</h3>
+      <dl>
+        <div><dt>Raison sociale</dt><dd>Sol'Airec' (SARL)</dd></div>
+        <div><dt>Adresse</dt><dd>30 avenue du Dauphiné, 33600 Pessac</dd></div>
+        <div><dt>Qualifications</dt><dd>QUALIPAC Chauffage · QUALIPAC CET</dd></div>
+        <div><dt>Référencement</dt><dd>Annuaire Qualit'EnR (RGE)</dd></div>
+        <div><dt>Contact</dt><dd><a href="tel:+33676011886">06 76 01 18 86</a> · <a href="mailto:sarl.solairec@gmail.com">sarl.solairec@gmail.com</a></dd></div>
+      </dl>
+      <svg class="leafbg" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-leaf" color="#9bbf6a"/></svg>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="avis" aria-labelledby="t-avis" style="padding-top:0">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Votre avis compte</p>
+        <h2 id="t-avis">Vous avez fait appel à nous ?</h2>
+        <p>Votre retour aide d'autres habitants de Pessac et des environs à choisir leur chauffagiste. Quelques mots sur Google suffisent : merci d'avance pour le temps que vous y consacrerez.</p>
+        <a class="btn btn-sun" href="https://www.google.com/maps/search/?api=1&amp;query=Sol%27Airec%27%2030%20avenue%20du%20Dauphin%C3%A9%2033600%20Pessac" target="_blank" rel="noopener">Laisser un avis sur Google</a>
+      </div>
+      <svg class="grapes" viewBox="0 0 200 220" aria-hidden="true">
+        <path d="M100 10 C104 30 100 40 100 52" stroke="#9bbf6a" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <use href="#i-leaf" x="96" y="0" width="80" height="80" color="#9bbf6a"/>
+        <g fill="#f7d27a" opacity=".95">
+          <circle cx="70" cy="70" r="20"/><circle cx="110" cy="66" r="20"/><circle cx="150" cy="74" r="18"/>
+          <circle cx="88" cy="104" r="20"/><circle cx="128" cy="104" r="20"/>
+          <circle cx="70" cy="138" r="18"/><circle cx="108" cy="140" r="20"/><circle cx="144" cy="136" r="17"/>
+          <circle cx="90" cy="172" r="18"/><circle cx="126" cy="172" r="17"/><circle cx="108" cy="202" r="16"/>
+        </g>
+        <g fill="#fff" opacity=".45"><circle cx="64" cy="64" r="5"/><circle cx="104" cy="60" r="5"/><circle cx="82" cy="98" r="5"/><circle cx="122" cy="98" r="5"/><circle cx="102" cy="134" r="5"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="t-faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Questions fréquentes</p>
+      <h2 id="t-faq">Vos questions, nos réponses</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Une pompe à chaleur fonctionne-t-elle quand il fait froid ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>Oui : une PAC air/eau continue de capter des calories dans l'air même par temps froid, avec un rendement qui baisse quand la température chute. Le dimensionnement et, si besoin, un appoint sont étudiés selon votre logement et le climat local.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Pompe à chaleur ou chaudière gaz : que choisir ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>Cela dépend de l'isolation, des émetteurs (radiateurs, plancher), de la place disponible et de votre budget. Il n'y a pas de réponse universelle : c'est justement l'objet de la visite et du devis de comparer les options pour votre maison.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">L'entretien de la chaudière est-il obligatoire ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>En règle générale, les chaudières (gaz, fioul…) d'une certaine puissance doivent faire l'objet d'un entretien annuel par un professionnel, avec remise d'une attestation. Les pompes à chaleur ont aussi des obligations d'entretien selon leur puissance. Renseignez-vous sur votre cas ou appelez-nous.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Puis-je bénéficier de MaPrimeRénov' ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>Des aides publiques comme MaPrimeRénov' peuvent exister pour certains travaux (pompe à chaleur, chauffe-eau thermodynamique…), sous conditions de ressources, de logement et de recours à un professionnel RGE. Les règles évoluent régulièrement : vérifiez votre éligibilité sur france-renov.gouv.fr avant de vous engager.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Quels sont les délais pour une installation ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>Ils varient selon la saison, la disponibilité du matériel et l'ampleur des travaux. Le délai prévisionnel vous est indiqué au moment du devis.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Ma chaudière ou ma PAC est en panne, que faire ?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button><div class="faq-a"><div><p>Appelez le 06 76 01 18 86 en décrivant le problème (code erreur, bruit, absence d'eau chaude…). Nous vous dirons rapidement ce qu'il est possible de faire et sous quel délai. En cas d'odeur de gaz, coupez l'arrivée de gaz, aérez et contactez d'abord le numéro d'urgence de votre distributeur.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="horaires" aria-labelledby="t-hours" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Horaires &amp; accès</p>
+      <h2 id="t-hours">Où et quand nous joindre</h2>
+    </div>
+    <div class="hours-grid">
+      <div class="panel reveal">
+        <h3>Horaires</h3>
+        <table aria-describedby="hours-note">
+          <tbody id="hours">
+            <tr data-d="1"><td>Lundi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="2"><td>Mardi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="3"><td>Mercredi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="4"><td>Jeudi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="5"><td>Vendredi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="6"><td>Samedi</td><td>À confirmer par téléphone</td></tr>
+            <tr data-d="0"><td>Dimanche</td><td>À confirmer par téléphone</td></tr>
+          </tbody>
+        </table>
+        <p class="note" id="hours-note">Horaires à confirmer par téléphone au <a href="tel:+33676011886">06 76 01 18 86</a>. Interventions sur rendez-vous.</p>
+      </div>
+      <div class="panel reveal">
+        <h3>Adresse</h3>
+        <p style="margin:0"><strong>Sol'Airec'</strong><br>30 avenue du Dauphiné<br>33600 Pessac</p>
+        <div class="map-art" aria-hidden="true">
+          <svg viewBox="0 0 500 220">
+            <rect width="500" height="220" fill="#e7efd9"/>
+            <g fill="none" stroke="#c9dbab" stroke-width="10" stroke-dasharray="2 14" stroke-linecap="round"><path d="M0 40 C120 20 240 60 360 40 S480 20 500 30"/><path d="M0 70 C120 50 240 90 360 70 S480 50 500 60"/><path d="M0 190 C140 170 260 200 500 180"/></g>
+            <path d="M-10 140 C120 120 220 160 330 120 S470 90 510 100" fill="none" stroke="#fffdf6" stroke-width="18" stroke-linecap="round"/>
+            <path d="M200 -10 C210 80 240 140 230 230" fill="none" stroke="#fffdf6" stroke-width="12" stroke-linecap="round"/>
+            <path d="M380 -10 C360 70 400 160 390 230" fill="none" stroke="#fffdf6" stroke-width="8"/>
+            <g transform="translate(260 72)"><path d="M0 52 C-4 38 -22 28 -22 12 a22 22 0 0 1 44 0 C22 28 4 38 0 52z" fill="#5b2c4f"/><circle cy="12" r="8" fill="#f0b43c"/></g>
+            <text x="20" y="208" font-family="Onest, sans-serif" font-size="14" font-weight="600" fill="#2e5a3a">Pessac · Gironde</text>
+          </svg>
+        </div>
+        <a class="btn btn-vigne" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=30%20avenue%20du%20Dauphin%C3%A9%2C%2033600%20Pessac"><svg aria-hidden="true"><use href="#i-pin"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 V40 C200 10 420 60 720 30 S1220 10 1440 40 V70Z" fill="#efe6cf"/></svg>
+<section class="sec contact" id="contact" aria-labelledby="t-contact" style="padding-top:50px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#i-sun"/></svg>Contact</p>
+      <h2 id="t-contact">Parlons de votre projet</h2>
+      <p class="lead">Décrivez-nous votre besoin : nous revenons vers vous pour en discuter et établir un devis.</p>
+    </div>
+    <div class="contact-grid">
+      <aside class="contact-aside reveal">
+        <h3>En direct</h3>
+        <p>Le moyen le plus rapide :</p>
+        <a class="big" href="tel:+33676011886">06 76 01 18 86</a>
+        <p>Par email :<br><a href="mailto:sarl.solairec@gmail.com">sarl.solairec@gmail.com</a></p>
+        <p style="margin:0">Adresse :<br>30 avenue du Dauphiné, 33600 Pessac</p>
+      </aside>
+      <form id="form" class="reveal" novalidate>
+        <div class="frow">
+          <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="field"><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Pessac, Talence…"></div>
+        </div>
+        <div class="field"><label for="f-objet">Votre projet</label>
+          <select id="f-objet" name="objet">
+            <option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Autre demande</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Surface, équipement actuel, ce que vous souhaitez…"></textarea></div>
+        <button class="btn btn-sun" type="submit">Envoyer ma demande</button>
+        <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera activé à la mise en ligne. Appelez le <a href="tel:+33676011886">06 76 01 18 86</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="background:#efe6cf"><path d="M0 70 V36 C260 6 520 60 780 30 S1240 10 1440 34 V70Z" fill="#183722"/></svg>
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a href="#top" class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f7f2e4"/><circle cx="24" cy="27" r="9" fill="#f0b43c"/><g stroke="#f0b43c" stroke-width="2.4" stroke-linecap="round"><path d="M24 11v4M13 16l3 3M35 16l-3 3M9 27h4M35 27h4"/></g><path d="M5 34c7-4 13-4 19 0s12 4 19 0v6a23 23 0 0 1-38 0z" fill="#2e5a3a"/></svg><span>Sol'Airec'</span></a>
+      <p>SARL à Pessac : pompes à chaleur, climatisation, chauffe-eau thermodynamiques, chaudières gaz ou fioul. QUALIPAC Chauffage &amp; QUALIPAC CET – RGE.</p>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul>
+        <li><a href="tel:+33676011886">06 76 01 18 86</a></li>
+        <li><a href="mailto:sarl.solairec@gmail.com">sarl.solairec@gmail.com</a></li>
+        <li>30 avenue du Dauphiné<br>33600 Pessac</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <p>Horaires à confirmer par téléphone.<br>Interventions sur rendez-vous.</p>
+    </div>
+    <div>
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="#services">Nos services</a></li>
+        <li><a href="#soleil">Le soleil dans l'air</a></li>
+        <li><a href="#faq">Questions fréquentes</a></li>
+        <li><a href="#contact">Demander un devis</a></li>
+        <li><a href="https://www.qualit-enr.org" target="_blank" rel="noopener">Qualit'EnR</a></li>
+        <li><a href="https://france-renov.gouv.fr" target="_blank" rel="noopener">France Rénov'</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33676011886" aria-label="Appeler Sol'Airec' au 06 76 01 18 86"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  function setMenu(open){menu.classList.toggle('open',open);burger.setAttribute('aria-expanded',open?'true':'false');burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');if(open)nav.classList.add('scrolled');else onScroll();}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  // FAQ
+  document.querySelectorAll('.faq-q').forEach(function(b){
+    b.addEventListener('click',function(){
+      var item=b.parentElement,open=!item.classList.contains('open');
+      item.classList.toggle('open',open);b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  // Today
+  var d=new Date().getDay(),row=document.querySelector('#hours tr[data-d="'+d+'"]');
+  if(row)row.classList.add('today');
+
+  // Form
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('form-msg').classList.add('show');
+  });
+
+  // Reveal
+  var els=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

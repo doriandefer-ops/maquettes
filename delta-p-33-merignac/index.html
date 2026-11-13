@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delta P 33 – chauffagiste à Mérignac</title>
+<meta name="description" content="Delta P 33, chauffagiste à Mérignac (33700) : chaudières gaz ou fioul, chauffage et eau chaude au bois, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. RGE QualiPAC et Qualibois.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cockpit:#121a23;
+  --cockpit-2:#0d141b;
+  --panel:#1d2833;
+  --panel-2:#243240;
+  --line:#2f3e4c;
+  --steel:#8b98a5;
+  --steel-2:#a9b4bf;
+  --green:#6ee7a8;
+  --amber:#ffb020;
+  --white:#eef3f7;
+  --red:#ff6b5e;
+  --cond:"Saira Condensed","Arial Narrow",sans-serif;
+  --text:"Saira",system-ui,sans-serif;
+  --r:6px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--cockpit);color:var(--white);font-family:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(139,152,165,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,152,165,.05) 1px,transparent 1px);
+  background-size:32px 32px}
+main,header,footer,nav{position:relative;z-index:1}
+a{color:inherit}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--cond);line-height:1.05;margin:0;letter-spacing:.01em;overflow-wrap:break-word;hyphens:auto}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 16px}
+@media(min-width:768px){.wrap{padding:0 32px}}
+.code{font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel)}
+.code b{color:var(--green);font-weight:700}
+.led{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 2px rgba(110,231,168,.18),0 0 10px var(--green);vertical-align:middle}
+.led.amber{background:var(--amber);box-shadow:0 0 0 2px rgba(255,176,32,.18),0 0 10px var(--amber)}
+.led.off{background:#44525f;box-shadow:none}
+.blink{animation:blink 2.4s steps(1) infinite}
+@keyframes blink{50%{opacity:.25}}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,20,27,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-txt{font-family:var(--cond);font-weight:800;font-size:1.35rem;letter-spacing:.04em;line-height:1}
+.brand-txt small{display:block;font-weight:600;font-size:.66rem;letter-spacing:.2em;color:var(--steel);margin-top:3px}
+.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{display:block;text-decoration:none;font-family:var(--cond);font-weight:600;font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-2);padding:8px 10px;border-radius:4px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--white);background:var(--panel)}
+.nav-links .nav-call{color:var(--cockpit);background:var(--green);margin-left:8px}
+.nav-links .nav-call:hover{background:#8ff0bd;color:var(--cockpit)}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);background:var(--panel);border-radius:6px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:2px;background:var(--white);transition:transform .25s,opacity .25s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1023px){
+  .burger{display:block}
+  .nav-links{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--cockpit-2);border-bottom:1px solid var(--line);padding:8px 16px 20px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:.25s}
+  .nav-links.open{transform:none;opacity:1;visibility:visible}
+  .nav-links a{padding:14px 6px;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .nav-links li:last-child a{border:0;margin:14px 0 0;text-align:center;padding:14px}
+}
+
+/* ---------- BUTTONS (interrupteurs) ---------- */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.switch{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--cond);font-weight:700;font-size:1.08rem;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px 10px 10px;border-radius:6px;border:1px solid var(--line);background:linear-gradient(180deg,#2a3946,#1b2530);color:var(--white);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 3px 0 #0a1016;transition:transform .15s,box-shadow .15s,border-color .2s}
+.switch:hover{border-color:var(--green)}
+.switch:active{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 1px 0 #0a1016}
+.switch .toggle{position:relative;width:46px;height:26px;border-radius:13px;background:#0b1117;border:1px solid #3a4a58;flex:none}
+.switch .toggle::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:var(--steel);transition:left .2s,background .2s,box-shadow .2s}
+.switch:hover .toggle::after,.switch.on .toggle::after{left:23px;background:var(--green);box-shadow:0 0 10px var(--green)}
+.switch.primary{background:linear-gradient(180deg,#7cf0b4,#4fd18f);color:#0b1a12;border-color:#7cf0b4;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #2a8a5a}
+.switch.primary .toggle{background:#0e2a1c;border-color:#0e2a1c}
+.switch.primary .toggle::after{left:23px;background:#eafff3;box-shadow:none}
+.switch.amber:hover{border-color:var(--amber)}
+.switch.amber:hover .toggle::after{background:var(--amber);box-shadow:0 0 10px var(--amber)}
+
+/* ---------- HERO ---------- */
+.hero{padding:96px 0 40px}
+.mosaic{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.mosaic .title-panel{grid-column:1/-1}
+@media(min-width:1024px){
+  .mosaic{grid-template-columns:1fr 2.1fr 1fr;grid-template-rows:auto auto}
+  .mosaic .title-panel{grid-column:2;grid-row:1/3}
+  .g1{grid-column:1;grid-row:1}.g2{grid-column:1;grid-row:2}
+  .g3{grid-column:3;grid-row:1}.g4{grid-column:3;grid-row:2}
+}
+.inst{position:relative;background:linear-gradient(180deg,var(--panel),#18222c);border:1px solid var(--line);border-radius:var(--r);padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.inst::before,.inst::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#6b7a88,#2b3742);top:8px}
+.inst::before{left:8px}.inst::after{right:8px}
+.inst-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 10px 6px;border-bottom:1px dashed var(--line);margin-bottom:8px}
+.inst-head .code{font-size:.72rem;letter-spacing:.14em}
+.inst svg.dial{display:block;width:100%;height:auto;max-width:240px;margin:0 auto}
+.inst-foot{text-align:center;font-family:var(--cond);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--steel-2);margin-top:4px}
+.title-panel{padding:28px 22px 26px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;
+  background:radial-gradient(120% 80% at 80% 0%,rgba(110,231,168,.08),transparent 60%),linear-gradient(180deg,#1f2b37,#17212b)}
+@media(min-width:768px){.title-panel{padding:40px 40px 34px}}
+.title-panel .scale{position:absolute;left:0;right:0;bottom:0;height:16px;opacity:.5;
+  background:repeating-linear-gradient(90deg,var(--steel) 0 1px,transparent 1px 10px) bottom/100% 8px no-repeat,
+  repeating-linear-gradient(90deg,var(--steel) 0 1px,transparent 1px 50px) bottom/100% 16px no-repeat}
+.status-row{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-bottom:22px}
+.status-row span{display:inline-flex;align-items:center;gap:8px}
+.hero h1{font-size:clamp(3rem,13.5vw,6.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+.hero h1 .delta{color:var(--green);font-weight:700}
+.hero h1 .n{color:var(--amber)}
+.hero .tagline{font-family:var(--cond);font-weight:600;font-size:clamp(1.25rem,3.2vw,1.85rem);line-height:1.2;margin:18px 0 10px;max-width:30ch}
+.hero .tagline em{font-style:normal;color:var(--green)}
+.hero .lead{color:var(--steel-2);max-width:52ch;margin-bottom:24px}
+.hero-schema{display:block;width:100%;height:auto;margin:6px 0 22px;max-width:620px}
+.readout{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.readout div{font-family:var(--cond);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:4px;padding:4px 10px;background:rgba(13,20,27,.5)}
+.readout div strong{color:var(--white);font-weight:700}
+
+/* gauge animations */
+.needle{transform-origin:100px 100px;animation:needle 6s ease-in-out infinite}
+@keyframes needle{0%,100%{transform:rotate(-18deg)}30%{transform:rotate(6deg)}55%{transform:rotate(-4deg)}75%{transform:rotate(12deg)}}
+.mercury{animation:merc 7s ease-in-out infinite;transform-origin:0 150px;transform-box:view-box}
+@keyframes merc{0%,100%{transform:scaleY(.82)}50%{transform:scaleY(1)}}
+.fan{transform-origin:100px 92px;animation:spin 2.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.flame{transform-origin:100px 118px;animation:flick 1.6s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scale(1,1)}50%{transform:scale(.94,1.06)}}
+.needle2{transform-origin:100px 120px;animation:needle2 9s ease-in-out infinite}
+@keyframes needle2{0%,100%{transform:rotate(28deg)}50%{transform:rotate(40deg)}}
+.sweep{transform-origin:100px 100px;animation:spin 5s linear infinite}
+
+/* ---------- SECTIONS ---------- */
+section{padding:72px 0}
+@media(min-width:1024px){section{padding:96px 0}}
+.sec-head{margin-bottom:36px;max-width:760px}
+.sec-head .code{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-head .code::after{content:"";flex:1;max-width:120px;height:1px;background:linear-gradient(90deg,var(--steel),transparent)}
+.sec-head h2{font-size:clamp(2rem,5.4vw,3.4rem);font-weight:800;text-transform:uppercase}
+.sec-head h2 span{color:var(--green)}
+.sec-head p{color:var(--steel-2);margin:14px 0 0;font-size:1.05rem}
+
+/* trust */
+.trust{padding:0 0 24px}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.trust-item{background:var(--cockpit-2);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+.trust-item svg{flex:none;width:34px;height:34px}
+.trust-item strong{display:block;font-family:var(--cond);font-weight:700;font-size:1.15rem;letter-spacing:.04em;text-transform:uppercase;line-height:1.15}
+.trust-item span{color:var(--steel-2);font-size:.9rem;line-height:1.4;display:block;margin-top:3px}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+@media(min-width:1024px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px 22px;transition:transform .25s,border-color .25s,box-shadow .25s;overflow:hidden}
+.card::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--green);transition:width .35s}
+.card:hover{transform:translateY(-4px);border-color:#3f5263;box-shadow:0 16px 36px -18px rgba(0,0,0,.7)}
+.card:hover::after{width:100%}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px}
+.card-top svg{width:58px;height:58px}
+.card h3{font-size:1.5rem;font-weight:700;text-transform:uppercase;margin-bottom:8px;letter-spacing:.02em}
+.card p{color:var(--steel-2);margin:0;font-size:.98rem}
+
+/* why */
+.why{background:linear-gradient(180deg,transparent,rgba(13,20,27,.6) 20%,rgba(13,20,27,.6) 80%,transparent)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.why-item{border-left:2px solid var(--green);background:linear-gradient(90deg,rgba(110,231,168,.06),transparent 70%);padding:6px 0 6px 20px}
+.why-item .code{display:block;margin-bottom:6px}
+.why-item h3{font-size:1.45rem;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.why-item p{color:var(--steel-2);margin:0}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;counter-reset:s;list-style:none;padding:0;margin:0}
+.step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.step-num{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.step-num b{font-family:var(--cond);font-weight:800;font-size:2.6rem;line-height:1;color:var(--amber);font-variant-numeric:tabular-nums}
+.step-num .bar{flex:1;height:6px;border-radius:3px;background:#0b1117;overflow:hidden;border:1px solid var(--line)}
+.step-num .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--amber),var(--green))}
+.step h3{font-size:1.4rem;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.step p{color:var(--steel-2);margin:0;font-size:.98rem}
+
+/* about */
+.about-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr;gap:56px}}
+.about-txt p{color:var(--steel-2);font-size:1.06rem}
+.about-txt p strong{color:var(--white);font-weight:600}
+.plate{background:linear-gradient(160deg,#283644,#1a242e);border:1px solid #3a4a58;border-radius:10px;padding:26px;position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.plate .rivet{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#7f8e9c,#2b3742)}
+.plate dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.plate dt{font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:var(--steel);padding-top:3px}
+.plate dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.plate dd a{color:var(--green);text-decoration:none}
+.plate dd a:hover{text-decoration:underline}
+.plate-title{font-family:var(--cond);font-weight:800;font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid #3a4a58;padding-bottom:12px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+/* energies screen */
+.screen{background:#0a1015;border:1px solid #33475a;border-radius:10px;padding:8px;box-shadow:0 0 0 6px #18222c,0 0 0 7px var(--line),inset 0 0 60px rgba(110,231,168,.04)}
+.screen-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:10px 14px;border-bottom:1px solid #1f2c38;font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--steel)}
+.screen-bar span{display:inline-flex;align-items:center;gap:8px}
+.etable{width:100%;border-collapse:collapse;font-size:.96rem}
+.etable th,.etable td{text-align:left;padding:16px 14px;border-bottom:1px solid #1a2631;vertical-align:top}
+.etable thead th{font-family:var(--cond);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel)}
+.etable tbody tr{transition:background .2s}
+.etable tbody tr:hover{background:rgba(110,231,168,.05)}
+.etable tbody th{font-family:var(--cond);font-weight:700;font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.etable tbody th small{display:block;font-size:.72rem;letter-spacing:.18em;color:var(--green);font-weight:600}
+.etable td{color:#c9d3dc}
+.etable .tags{display:flex;flex-wrap:wrap;gap:6px}
+.etable .tag{font-family:var(--cond);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid #2c3d4c;padding:2px 8px;border-radius:3px;color:var(--steel-2);white-space:nowrap}
+.etable .tag.on{border-color:rgba(110,231,168,.5);color:var(--green)}
+.etable .price{font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);white-space:nowrap}
+.e-ico{width:34px;height:34px;display:block;margin-bottom:6px}
+.screen-foot{padding:12px 14px;color:var(--steel-2);font-size:.9rem;display:flex;gap:10px;align-items:flex-start}
+@media(max-width:860px){
+  .etable thead{display:none}
+  .etable,.etable tbody,.etable tr,.etable th,.etable td{display:block;width:100%}
+  .etable tbody tr{border-bottom:1px solid #22313e;padding:14px 6px}
+  .etable tbody th,.etable td{border:0;padding:6px 8px}
+  .etable td::before{content:attr(data-l);display:block;font-family:var(--cond);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-bottom:2px}
+  .etable tbody th{white-space:normal}
+}
+
+/* avis */
+.avis-box{display:grid;gap:24px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:28px 22px}
+@media(min-width:860px){.avis-box{grid-template-columns:auto 1fr auto;padding:36px 40px;gap:36px}}
+.avis-box h2{font-size:clamp(1.8rem,4.5vw,2.6rem);text-transform:uppercase;font-weight:800}
+.avis-box p{color:var(--steel-2);margin:10px 0 0}
+.avis-box svg{width:96px;height:96px}
+
+/* faq */
+.faq-list{display:grid;gap:10px;max-width:900px}
+.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:#3f5263}
+.faq-q{width:100%;display:flex;align-items:center;gap:14px;justify-content:space-between;background:none;border:0;color:var(--white);text-align:left;padding:18px 20px;cursor:pointer;font-family:var(--cond);font-weight:700;font-size:1.2rem;letter-spacing:.02em}
+.faq-q:hover{color:var(--green)}
+.faq-q .ind{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid #3a4a58;position:relative;transition:transform .25s,border-color .25s}
+.faq-q .ind::before,.faq-q .ind::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--green);transform:translate(-50%,-50%)}
+.faq-q .ind::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s}
+.faq-item.open .ind::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-a p{padding:0 20px 18px;margin:0;color:var(--steel-2)}
+
+/* horaires */
+.hours-grid{display:grid;gap:18px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1.2fr 1fr}}
+.htable{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.htable td{padding:13px 18px;border-bottom:1px solid var(--line);font-family:var(--cond);font-size:1.12rem;letter-spacing:.04em}
+.htable tr:last-child td{border-bottom:0}
+.htable td:first-child{text-transform:uppercase;font-weight:700;letter-spacing:.1em}
+.htable td:last-child{text-align:right;color:var(--steel-2);font-variant-numeric:tabular-nums}
+.htable tr.closed td:last-child{color:var(--steel)}
+.htable tr.today{background:rgba(110,231,168,.09)}
+.htable tr.today td:first-child{color:var(--green)}
+.htable tr.today td:first-child::after{content:"Aujourd’hui";margin-left:10px;font-size:.7rem;letter-spacing:.14em;border:1px solid var(--green);border-radius:3px;padding:1px 6px;vertical-align:middle}
+.htable tr.today td:last-child{color:var(--white)}
+.loc{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:16px}
+.loc svg{width:100%;height:auto;border-radius:4px;background:#0f171e}
+.loc address{font-style:normal;font-size:1.1rem}
+.loc address strong{font-family:var(--cond);font-size:1.4rem;text-transform:uppercase;letter-spacing:.04em;display:block}
+.now-status{font-family:var(--cond);letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;display:flex;align-items:center;gap:10px;color:var(--steel-2)}
+
+/* contact */
+.contact-grid{display:grid;gap:24px}
+@media(min-width:960px){.contact-grid{grid-template-columns:.85fr 1.15fr;gap:40px}}
+.direct{display:flex;flex-direction:column;gap:12px}
+.direct a.big{display:flex;align-items:center;gap:16px;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;transition:border-color .2s,transform .2s}
+.direct a.big:hover{border-color:var(--green);transform:translateX(4px)}
+.direct a.big svg{width:38px;height:38px;flex:none}
+.direct a.big span{display:block;font-family:var(--cond);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel)}
+.direct a.big strong{display:block;font-family:var(--cond);font-weight:700;font-size:clamp(1.2rem,4.6vw,1.6rem);letter-spacing:.03em;overflow-wrap:anywhere;line-height:1.2}
+form.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px}
+@media(min-width:768px){form.panel{padding:32px}}
+.frow{display:grid;gap:14px;margin-bottom:14px}
+@media(min-width:640px){.frow.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-2);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;color:var(--white);background:#0f171e;border:1px solid #34444f;border-radius:4px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(110,231,168,.18)}
+textarea{min-height:130px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;cursor:pointer}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-flex;align-items:center;gap:8px;border:1px solid #34444f;border-radius:4px;padding:8px 12px;font-size:.85rem;letter-spacing:.1em;color:var(--steel-2);transition:.2s;background:#0f171e}
+.chips span::before{content:"";width:8px;height:8px;border-radius:50%;background:#44525f}
+.chips input:checked+span{border-color:var(--green);color:var(--white)}
+.chips input:checked+span::before{background:var(--green);box-shadow:0 0 8px var(--green)}
+.chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(110,231,168,.3)}
+button.switch{cursor:pointer;font-size:1.08rem}
+.form-msg{display:none;margin-top:16px;border:1px solid var(--amber);background:rgba(255,176,32,.08);color:var(--white);border-radius:4px;padding:14px 16px}
+.form-msg.show{display:flex;gap:12px;align-items:flex-start}
+.form-msg a{color:var(--amber);font-weight:600}
+
+/* footer */
+footer{background:var(--cockpit-2);border-top:1px solid var(--line);padding:56px 0 0}
+.foot-grid{display:grid;gap:30px;grid-template-columns:1fr}
+@media(min-width:768px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr 1fr}}
+footer h3{font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-bottom:12px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none;color:var(--steel-2);transition:color .2s}
+footer a:hover{color:var(--green)}
+footer .brand-txt{color:var(--white)}
+footer p{color:var(--steel-2);margin:0 0 6px;overflow-wrap:anywhere}
+.foot-bottom{margin-top:44px;border-top:1px solid var(--line);padding:18px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.88rem;color:var(--steel)}
+.demo-band{background:#0a0f14;color:var(--steel-2);text-align:center;font-size:.82rem;padding:12px 16px;border-top:1px solid #1a242e;position:relative;z-index:1}
+@media(max-width:767px){.demo-band{padding-bottom:88px}}
+
+/* floating call */
+.fab{display:none}
+@media(max-width:767px){
+  .fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;align-items:center;gap:10px;text-decoration:none;background:var(--green);color:#0b1a12;font-family:var(--cond);font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:14px 20px;border-radius:40px;box-shadow:0 10px 26px -6px rgba(0,0,0,.7),0 0 0 4px rgba(110,231,168,.2)}
+  .fab svg{width:20px;height:20px}
+}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Delta P 33 – accueil">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#1d2833" stroke="#8b98a5" stroke-width="1.5"/>
+        <g stroke="#8b98a5" stroke-width="1.2"><path d="M8 27l2-1M6.5 20h2.3M8 13l2 1M13 8l1 2M20 6.5v2.3M27 8l-1 2M32 13l-2 1M33.5 20h-2.3M32 27l-2-1"/></g>
+        <path d="M20 12l7 13H13z" fill="none" stroke="#6ee7a8" stroke-width="2.2" stroke-linejoin="round"/>
+        <line x1="20" y1="20" x2="27" y2="13" stroke="#ffb020" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="2" fill="#eef3f7"/>
+      </svg>
+      <span class="brand-txt">DELTA P 33<small>Chauffage · Mérignac</small></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#energies">Énergies</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+33953260044" class="nav-call">09 53 26 00 44</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="mosaic">
+
+      <!-- TITLE PANEL -->
+      <div class="inst title-panel">
+        <div>
+          <div class="status-row code">
+            <span><i class="led"></i> SYS <b>EN SERVICE</b></span>
+            <span><i class="led amber blink"></i> 33700 MÉRIGNAC</span>
+            <span>RGE QUALIPAC · QUALIBOIS</span>
+          </div>
+          <h1><span class="delta">Δ</span>Delta P <span class="n">33</span></h1>
+          <p class="tagline">Chauffagiste à Mérignac : <em>gaz, fioul, bois, pompe à chaleur</em> — on règle la pression, vous gardez le confort.</p>
+
+          <svg class="hero-schema" viewBox="0 0 620 120" role="img" aria-label="Schéma d’un circuit de chauffage : générateur, départ chaud, radiateurs et retour">
+            <defs>
+              <linearGradient id="hot" x1="0" x2="1"><stop offset="0" stop-color="#ffb020"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+            </defs>
+            <!-- generator -->
+            <rect x="8" y="14" width="86" height="92" rx="6" fill="#121a23" stroke="#8b98a5" stroke-width="1.5"/>
+            <rect x="20" y="26" width="62" height="20" rx="3" fill="#0b1117" stroke="#2f3e4c"/>
+            <text x="51" y="40" text-anchor="middle" font-family="Saira Condensed, sans-serif" font-size="11" font-weight="700" fill="#6ee7a8" letter-spacing="1.5">GEN-01</text>
+            <circle cx="36" cy="72" r="11" fill="none" stroke="#8b98a5" stroke-width="1.5"/>
+            <line x1="36" y1="72" x2="42" y2="65" stroke="#ffb020" stroke-width="2"/>
+            <path d="M64 86c-6-6 0-10 0-16 6 5 9 9 4 16z" fill="#ffb020" class="flame" style="transform-origin:64px 80px"/>
+            <!-- pipes -->
+            <path d="M94 38H560V90H94" fill="none" stroke="url(#hot)" stroke-width="4" stroke-dasharray="10 8">
+              <animate attributeName="stroke-dashoffset" from="36" to="0" dur="1.6s" repeatCount="indefinite"/>
+            </path>
+            <path d="M94 90H560" fill="none" stroke="#5aa8e0" stroke-width="4" opacity=".85" stroke-dasharray="10 8">
+              <animate attributeName="stroke-dashoffset" from="0" to="36" dur="1.6s" repeatCount="indefinite"/>
+            </path>
+            <!-- radiators -->
+            <g fill="#1d2833" stroke="#a9b4bf" stroke-width="1.4">
+              <g transform="translate(180 50)"><rect width="70" height="30" rx="3"/><path d="M12 0v30M24 0v30M36 0v30M48 0v30M60 0v30"/></g>
+              <g transform="translate(300 50)"><rect width="70" height="30" rx="3"/><path d="M12 0v30M24 0v30M36 0v30M48 0v30M60 0v30"/></g>
+              <g transform="translate(420 50)"><rect width="70" height="30" rx="3"/><path d="M12 0v30M24 0v30M36 0v30M48 0v30M60 0v30"/></g>
+            </g>
+            <!-- ΔP sensor -->
+            <circle cx="560" cy="64" r="20" fill="#121a23" stroke="#6ee7a8" stroke-width="1.6"/>
+            <text x="560" y="70" text-anchor="middle" font-family="Saira Condensed, sans-serif" font-size="16" font-weight="800" fill="#6ee7a8">ΔP</text>
+            <text x="120" y="30" font-family="Saira Condensed, sans-serif" font-size="10" fill="#a9b4bf" letter-spacing="2">DÉPART</text>
+            <text x="120" y="108" font-family="Saira Condensed, sans-serif" font-size="10" fill="#a9b4bf" letter-spacing="2">RETOUR</text>
+          </svg>
+
+          <p class="lead">Installation, remplacement et suivi de votre production de chauffage et d’eau chaude : chaudières gaz ou fioul, bois, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Un seul interlocuteur, à Mérignac.</p>
+          <div class="btns">
+            <a class="switch primary" href="tel:+33953260044"><i class="toggle" aria-hidden="true"></i>Appeler</a>
+            <a class="switch amber" href="#contact"><i class="toggle" aria-hidden="true"></i>Demander un devis</a>
+          </div>
+        </div>
+        <div class="readout">
+          <div>TEL <strong>09 53 26 00 44</strong></div>
+          <div>LUN–VEN <strong>8H00–19H00</strong></div>
+          <div>TARIFS <strong>SUR DEVIS</strong></div>
+        </div>
+        <i class="scale" aria-hidden="true"></i>
+      </div>
+
+      <!-- G1 : Manomètre ΔP -->
+      <div class="inst g1">
+        <div class="inst-head"><span class="code">SYS-01 <b>ΔP</b></span><i class="led"></i></div>
+        <svg class="dial" viewBox="0 0 200 175" role="img" aria-label="Manomètre de pression du circuit de chauffage">
+          <circle cx="100" cy="100" r="86" fill="#0d141b" stroke="#3a4a58" stroke-width="3"/>
+          <circle cx="100" cy="100" r="78" fill="none" stroke="#1f2c38" stroke-width="1"/>
+          <!-- zones -->
+          <path d="M45.6 154.4A77 77 0 0 1 32.7 63" fill="none" stroke="#ffb020" stroke-width="5" opacity=".8"/>
+          <path d="M32.7 63A77 77 0 0 1 154.4 45.6" fill="none" stroke="#6ee7a8" stroke-width="5" opacity=".85"/>
+          <path d="M154.4 45.6A77 77 0 0 1 154.4 154.4" fill="none" stroke="#ff6b5e" stroke-width="5" opacity=".7"/>
+          <g id="ticks" stroke="#a9b4bf"></g>
+          <g font-family="Saira Condensed, sans-serif" font-size="13" font-weight="700" fill="#eef3f7" text-anchor="middle">
+            <text x="60" y="144">0</text><text x="44" y="96">1</text><text x="75" y="54">2</text><text x="125" y="54">3</text><text x="155" y="96">4</text><text x="140" y="144">5</text>
+          </g>
+          <text x="100" y="128" text-anchor="middle" font-family="Saira Condensed, sans-serif" font-size="12" fill="#8b98a5" letter-spacing="2">BAR</text>
+          <g class="needle">
+            <path d="M100 100L52 76" stroke="#ffb020" stroke-width="3" stroke-linecap="round"/>
+            <path d="M100 100L114 107" stroke="#ffb020" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <circle cx="100" cy="100" r="7" fill="#eef3f7" stroke="#121a23" stroke-width="2"/>
+          <text x="100" y="170" text-anchor="middle" font-family="Saira Condensed, sans-serif" font-size="22" font-weight="800" fill="#6ee7a8">ΔP</text>
+        </svg>
+        <div class="inst-foot">Pression circuit</div>
+      </div>
+
+      <!-- G2 : Thermomètre -->
+      <div class="inst g2">
+        <div class="inst-head"><span class="code">SYS-02 <b>ECS</b></span><i class="led amber"></i></div>
+        <svg class="dial" viewBox="0 0 200 175" role="img" aria-label="Thermomètre d’eau chaude sanitaire">
+          <rect x="20" y="10" width="160" height="150" rx="10" fill="#0d141b" stroke="#3a4a58" stroke-width="2"/>
+          <rect x="88" y="22" width="24" height="112" rx="12" fill="#121a23" stroke="#8b98a5" stroke-width="1.5"/>
+          <circle cx="100" cy="140" r="16" fill="#ff8a3d" stroke="#8b98a5" stroke-width="1.5"/>
+          <g class="mercury"><rect x="94" y="44" width="12" height="100" rx="6" fill="url(#thermo)"/></g>
+          <defs><linearGradient id="thermo" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ffb020"/></linearGradient></defs>
+          <g stroke="#a9b4bf" stroke-width="1.2">
+            <path d="M118 30h14M118 42h8M118 54h14M118 66h8M118 78h14M118 90h8M118 102h14M118 114h8M118 126h14"/>
+            <path d="M82 30h-14M82 54h-14M82 78h-14M82 102h-14M82 126h-14"/>
+          </g>
+          <g font-family="Saira Condensed, sans-serif" font-size="11" font-weight="600" fill="#a9b4bf">
+            <text x="138" y="34">80</text><text x="138" y="58">60</text><text x="138" y="82">40</text><text x="138" y="106">20</text><text x="138" y="130">0</text>
+          </g>
+          <text x="46" y="70" font-family="Saira Condensed, sans-serif" font-size="13" font-weight="700" fill="#ffb020" text-anchor="middle">°C</text>
+        </svg>
+        <div class="inst-foot">Eau chaude</div>
+      </div>
+
+      <!-- G3 : PAC -->
+      <div class="inst g3">
+        <div class="inst-head"><span class="code">SYS-03 <b>PAC</b></span><i class="led"></i></div>
+        <svg class="dial" viewBox="0 0 200 175" role="img" aria-label="Indicateur de pompe à chaleur avec ventilateur en rotation">
+          <rect x="16" y="14" width="168" height="140" rx="8" fill="#0d141b" stroke="#3a4a58" stroke-width="2"/>
+          <circle cx="100" cy="92" r="50" fill="#121a23" stroke="#8b98a5" stroke-width="1.5"/>
+          <g stroke="#2f3e4c" stroke-width="1.2"><path d="M54 92h92M100 46v92M67 59l66 66M133 59l-66 66"/></g>
+          <circle cx="100" cy="92" r="50" fill="none" stroke="#2f3e4c" stroke-width="5" stroke-dasharray="2 5"/>
+          <g class="fan" fill="#6ee7a8" opacity=".9">
+            <path d="M100 92c-4-14 2-30 14-34 6 10-2 26-14 34z"/>
+            <path d="M100 92c14-4 30 2 34 14-10 6-26-2-34-14z"/>
+            <path d="M100 92c4 14-2 30-14 34-6-10 2-26 14-34z"/>
+            <path d="M100 92c-14 4-30-2-34-14 10-6 26 2 34 14z"/>
+          </g>
+          <circle cx="100" cy="92" r="7" fill="#eef3f7"/>
+          <g font-family="Saira Condensed, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">
+            <circle cx="34" cy="30" r="4" fill="#ffb020"/><text x="42" y="34" fill="#ffb020">CHAUD</text>
+            <circle cx="126" cy="30" r="4" fill="#44525f"/><text x="134" y="34" fill="#8b98a5">FROID</text>
+          </g>
+        </svg>
+        <div class="inst-foot">Pompe à chaleur</div>
+      </div>
+
+      <!-- G4 : Bois -->
+      <div class="inst g4">
+        <div class="inst-head"><span class="code">SYS-04 <b>BOIS</b></span><i class="led"></i></div>
+        <svg class="dial" viewBox="0 0 200 175" role="img" aria-label="Jauge de combustible bois">
+          <path d="M22 130A78 78 0 0 1 178 130" fill="#0d141b" stroke="#3a4a58" stroke-width="3"/>
+          <path d="M34 130A66 66 0 0 1 166 130" fill="none" stroke="#2f3e4c" stroke-width="10"/>
+          <path d="M34 130A66 66 0 0 1 145 80" fill="none" stroke="#6ee7a8" stroke-width="10" opacity=".85"/>
+          <g stroke="#a9b4bf" stroke-width="1.5"><path d="M30 130h-12M48 85l-9-8M100 60V48M152 85l9-8M170 130h12"/></g>
+          <g font-family="Saira Condensed, sans-serif" font-size="14" font-weight="800" fill="#eef3f7" text-anchor="middle">
+            <text x="30" y="150">0</text><text x="170" y="150">1</text>
+          </g>
+          <g class="needle2"><path d="M100 120V66" stroke="#ffb020" stroke-width="3" stroke-linecap="round"/></g>
+          <circle cx="100" cy="120" r="6" fill="#eef3f7"/>
+          <g class="flame">
+            <path d="M100 160c-12 0-18-8-15-18 2-6 7-9 8-16 6 4 9 10 8 15 3-2 4-5 4-8 6 6 9 13 8 17-1 6-6 10-13 10z" fill="#ffb020"/>
+            <path d="M100 160c-5 0-8-4-6-8 1-3 4-5 5-8 3 3 6 7 6 10 0 4-2 6-5 6z" fill="#fff2d1"/>
+          </g>
+          <rect x="74" y="160" width="52" height="7" rx="3" fill="#8a5a33"/>
+        </svg>
+        <div class="inst-foot">Chauffage bois</div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-grid reveal">
+      <div class="trust-item">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 3l11 4v9c0 7-5 12-11 15C11 28 6 23 6 16V7z" fill="none" stroke="#6ee7a8" stroke-width="2"/><path d="M12 17l4 4 7-8" fill="none" stroke="#6ee7a8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><strong>RGE QualiPAC</strong><span>Chauffage &amp; chauffe-eau thermodynamique (CET)</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31c-7 0-11-5-9-11 1-4 5-6 5-11 5 3 7 8 6 12 2-1 3-3 3-6 5 4 7 9 6 12-1 3-5 4-11 4z" fill="none" stroke="#ffb020" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div><strong>Qualibois</strong><span>Chauffage et eau chaude au bois</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31s10-10 10-17a10 10 0 0 0-20 0c0 7 10 17 10 17z" fill="none" stroke="#6ee7a8" stroke-width="2"/><circle cx="17" cy="14" r="3.5" fill="#6ee7a8"/></svg>
+        <div><strong>Basé à Mérignac</strong><span>6 avenue Romain Rolland, 33700 – métropole bordelaise</span></div>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="#a9b4bf" stroke-width="2"/><path d="M17 9v8l6 4" fill="none" stroke="#ffb020" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <div><strong>Lun – Ven · 8h–19h</strong><span>Joignable par téléphone en semaine</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-10 · <b>SERVICES</b></div>
+      <h2>Les circuits que <span>nous pilotons</span></h2>
+      <p>Du générateur à l’émetteur, Delta P 33 intervient sur l’ensemble de votre installation de chauffage, d’eau chaude et de rafraîchissement.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="14" y="6" width="30" height="44" rx="4" fill="#121a23" stroke="#eef3f7" stroke-width="2"/><rect x="19" y="12" width="20" height="8" rx="1.5" fill="none" stroke="#6ee7a8" stroke-width="1.6"/><path d="M29 40c-5 0-7-3-6-7 1-2 3-3 3-6 3 2 4 4 4 6 1-1 2-2 2-3 2 2 3 5 2 7 0 2-2 3-5 3z" fill="#ffb020"/><path d="M22 50v4M36 50v4" stroke="#8b98a5" stroke-width="2"/></svg>
+          <span class="code">SYS-11</span>
+        </div>
+        <h3>Chaudières gaz ou fioul</h3>
+        <p>Installation, remplacement et mise en service de chaudières gaz ou fioul, adaptées à votre logement et à vos besoins en chauffage comme en eau chaude.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><path d="M12 50V22l17-12 17 12v28z" fill="#121a23" stroke="#eef3f7" stroke-width="2" stroke-linejoin="round"/><rect x="20" y="30" width="18" height="16" rx="2" fill="none" stroke="#8b98a5" stroke-width="1.6"/><path d="M29 44c-4 0-6-3-5-6 1-2 3-3 3-5 3 2 4 4 3 6 1 0 2-2 2-3 2 2 2 4 2 5 0 2-2 3-5 3z" fill="#ffb020"/><path d="M38 14V6h5v12" fill="none" stroke="#8b98a5" stroke-width="2"/></svg>
+          <span class="code">SYS-12</span>
+        </div>
+        <h3>Chauffage &amp; eau chaude au bois</h3>
+        <p>Solutions de chauffage et de production d’eau chaude au bois, posées par une entreprise qualifiée Qualibois, pour profiter d’une énergie renouvelable.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="5" y="14" width="48" height="32" rx="3" fill="#121a23" stroke="#eef3f7" stroke-width="2"/><circle cx="22" cy="30" r="11" fill="none" stroke="#8b98a5" stroke-width="1.6"/><path d="M22 30c-2-5 1-9 4-10 2 4-1 8-4 10zm0 0c5-2 9 1 10 4-4 2-8-1-10-4zm0 0c2 5-1 9-4 10-2-4 1-8 4-10zm0 0c-5 2-9-1-10-4 4-2 8 1 10 4z" fill="#6ee7a8"/><path d="M39 22h9M39 28h9M39 34h9" stroke="#8b98a5" stroke-width="1.6"/><path d="M12 46v5M46 46v5" stroke="#8b98a5" stroke-width="2"/></svg>
+          <span class="code">SYS-13</span>
+        </div>
+        <h3>Pompes à chaleur</h3>
+        <p>Étude et installation de pompes à chaleur pour le chauffage, réalisées par une entreprise RGE QualiPAC, avec conseils sur l’usage au quotidien.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="6" y="12" width="46" height="18" rx="4" fill="#121a23" stroke="#eef3f7" stroke-width="2"/><path d="M12 24h34" stroke="#8b98a5" stroke-width="1.6"/><circle cx="44" cy="18" r="1.8" fill="#6ee7a8"/><path d="M17 36v10M29 36v14M41 36v10" stroke="#5aa8e0" stroke-width="2" stroke-linecap="round"/><path d="M26 44l3 3 3-3M14 43l3 3 3-3M38 43l3 3 3-3" fill="none" stroke="#5aa8e0" stroke-width="1.6"/></svg>
+          <span class="code">SYS-14</span>
+        </div>
+        <h3>Climatisation</h3>
+        <p>Pose de systèmes de climatisation pour garder un intérieur confortable quand la chaleur s’installe sur la Gironde, avec un équipement dimensionné pour vos pièces.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="16" y="4" width="26" height="48" rx="12" fill="#121a23" stroke="#eef3f7" stroke-width="2"/><path d="M16 16h26" stroke="#8b98a5" stroke-width="1.6"/><circle cx="29" cy="10" r="2" fill="#6ee7a8"/><path d="M22 26h14M22 32h14M22 38h14" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round"/><path d="M22 52v4M36 52v4" stroke="#8b98a5" stroke-width="2"/></svg>
+          <span class="code">SYS-15</span>
+        </div>
+        <h3>Chauffe-eau thermodynamiques</h3>
+        <p>Installation de chauffe-eau thermodynamiques (CET) par une entreprise qualifiée QualiPAC CET, pour produire votre eau chaude sanitaire autrement.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-top">
+          <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="10" y="8" width="38" height="44" rx="3" fill="#121a23" stroke="#eef3f7" stroke-width="2"/><path d="M17 20h24M17 28h24M17 36h14" stroke="#8b98a5" stroke-width="1.6"/><circle cx="40" cy="42" r="9" fill="#121a23" stroke="#6ee7a8" stroke-width="2"/><path d="M36 42l3 3 5-6" fill="none" stroke="#6ee7a8" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="code">SYS-16</span>
+        </div>
+        <h3>Conseil &amp; devis</h3>
+        <p>Vous hésitez entre plusieurs énergies ? Nous étudions votre logement et votre installation actuelle pour vous proposer une solution cohérente, chiffrée sur devis.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ENERGIES -->
+<section id="energies">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-20 · <b>ÉCRAN DE CONTRÔLE</b></div>
+      <h2>Quatre énergies, <span>un seul interlocuteur</span></h2>
+      <p>Gaz, fioul, bois, pompe à chaleur ou chauffe-eau thermodynamique : chaque logement a sa bonne réponse. Ce tableau vous aide à vous repérer avant d’en parler ensemble.</p>
+    </div>
+    <div class="screen reveal">
+      <div class="screen-bar"><span><i class="led"></i> MODE COMPARATIF</span><span>4 CANAUX ACTIFS</span><span><i class="led amber blink"></i> TARIFS : SUR DEVIS</span></div>
+      <table class="etable">
+        <thead><tr><th scope="col">Canal</th><th scope="col">Usages</th><th scope="col">Pour quel logement</th><th scope="col">Qualification</th><th scope="col">Tarif</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <svg class="e-ico" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 30c-7 0-10-5-8-10 1-3 4-5 4-9 5 3 6 7 5 10 2-1 3-3 3-5 4 4 6 8 5 11-1 2-4 3-9 3z" fill="none" stroke="#ffb020" stroke-width="2"/></svg>
+              <small>CH-A</small>Gaz / fioul
+            </th>
+            <td data-l="Usages"><div class="tags"><span class="tag on">Chauffage</span><span class="tag on">Eau chaude</span></div></td>
+            <td data-l="Pour quel logement">Logements déjà équipés d’un circuit de radiateurs ; remplacement d’une chaudière existante.</td>
+            <td data-l="Qualification">—</td>
+            <td data-l="Tarif" class="price">Sur devis</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <svg class="e-ico" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="20" width="24" height="6" rx="3" fill="none" stroke="#c68a5a" stroke-width="2"/><path d="M17 18c-4 0-6-3-5-6 1-2 3-3 3-6 3 2 4 4 3 6 1 0 2-1 2-2 2 2 3 4 2 6-1 1-2 2-5 2z" fill="#ffb020"/></svg>
+              <small>CH-B</small>Bois
+            </th>
+            <td data-l="Usages"><div class="tags"><span class="tag on">Chauffage</span><span class="tag on">Eau chaude</span></div></td>
+            <td data-l="Pour quel logement">Foyers souhaitant une énergie renouvelable et disposant d’un espace pour le combustible.</td>
+            <td data-l="Qualification"><span class="tag on">Qualibois</span></td>
+            <td data-l="Tarif" class="price">Sur devis</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <svg class="e-ico" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="12" fill="none" stroke="#6ee7a8" stroke-width="2"/><path d="M17 17c-2-5 1-8 4-9 2 4-1 7-4 9zm0 0c5-2 8 1 9 4-4 2-7-1-9-4zm0 0c2 5-1 8-4 9-2-4 1-7 4-9zm0 0c-5 2-8-1-9-4 4-2 7 1 9 4z" fill="#6ee7a8"/></svg>
+              <small>CH-C</small>Pompe à chaleur
+            </th>
+            <td data-l="Usages"><div class="tags"><span class="tag on">Chauffage</span><span class="tag on">Climatisation</span><span class="tag">Eau chaude selon modèle</span></div></td>
+            <td data-l="Pour quel logement">Projets de rénovation ou de construction ; étude du logement nécessaire pour bien dimensionner.</td>
+            <td data-l="Qualification"><span class="tag on">RGE QualiPAC</span></td>
+            <td data-l="Tarif" class="price">Sur devis</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <svg class="e-ico" viewBox="0 0 34 34" aria-hidden="true"><rect x="10" y="3" width="14" height="28" rx="7" fill="none" stroke="#5aa8e0" stroke-width="2"/><path d="M14 14h6M14 19h6M14 24h6" stroke="#ffb020" stroke-width="2"/></svg>
+              <small>CH-D</small>Chauffe-eau thermo.
+            </th>
+            <td data-l="Usages"><div class="tags"><span class="tag on">Eau chaude sanitaire</span></div></td>
+            <td data-l="Pour quel logement">Remplacement d’un ballon électrique classique, maisons avec un local adapté (garage, cellier…).</td>
+            <td data-l="Qualification"><span class="tag on">RGE QualiPAC CET</span></td>
+            <td data-l="Tarif" class="price">Sur devis</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="screen-foot"><i class="led amber" style="margin-top:7px;flex:none"></i><span>Indications générales : le choix final dépend de votre logement, de votre installation actuelle et de vos usages. Chaque projet fait l’objet d’un devis personnalisé.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="pourquoi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-30 · <b>CHECK-LIST</b></div>
+      <h2>Pourquoi choisir <span>Delta P 33</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><span class="code">CHK-01 <b>OK</b></span><h3>Un seul interlocuteur</h3><p>Gaz, fioul, bois, PAC, climatisation, CET : vous n’avez pas à multiplier les entreprises pour comparer ou changer d’énergie.</p></div>
+      <div class="why-item reveal"><span class="code">CHK-02 <b>OK</b></span><h3>Qualifications RGE</h3><p>QualiPAC (chauffage et CET) et Qualibois : des qualifications reconnues pour les énergies renouvelables.</p></div>
+      <div class="why-item reveal"><span class="code">CHK-03 <b>OK</b></span><h3>Conseil sans parti pris</h3><p>Plusieurs technologies maîtrisées, c’est l’assurance d’un conseil orienté vers ce qui convient vraiment à votre logement.</p></div>
+      <div class="why-item reveal"><span class="code">CHK-04 <b>OK</b></span><h3>Une entreprise locale</h3><p>Installée avenue Romain Rolland à Mérignac, joignable du lundi au vendredi de 8h à 19h.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODE -->
+<section id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-40 · <b>PROCÉDURE</b></div>
+      <h2>Comment <span>ça se passe</span></h2>
+      <p>Une séquence simple, comme une check-list avant décollage.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><div class="step-num"><b>01</b><span class="bar"><i style="width:25%"></i></span></div><h3>Prise de contact</h3><p>Vous appelez le 09 53 26 00 44 ou remplissez le formulaire : on fait le point sur votre besoin.</p></li>
+      <li class="step reveal"><div class="step-num"><b>02</b><span class="bar"><i style="width:50%"></i></span></div><h3>Visite &amp; diagnostic</h3><p>Nous examinons le logement et l’installation existante pour identifier la solution adaptée.</p></li>
+      <li class="step reveal"><div class="step-num"><b>03</b><span class="bar"><i style="width:75%"></i></span></div><h3>Devis détaillé</h3><p>Vous recevez une proposition claire, poste par poste, pour décider en connaissance de cause.</p></li>
+      <li class="step reveal"><div class="step-num"><b>04</b><span class="bar"><i style="width:100%"></i></span></div><h3>Installation &amp; mise en service</h3><p>Pose, réglages, contrôle des pressions et explication du fonctionnement avant notre départ.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos">
+  <div class="wrap about-grid">
+    <div class="about-txt reveal">
+      <div class="sec-head" style="margin-bottom:22px">
+        <div class="code">SYS-50 · <b>À PROPOS</b></div>
+        <h2>La différence <span>de pression</span></h2>
+      </div>
+      <p>En hydraulique, le <strong>ΔP</strong> désigne la différence de pression qui fait circuler l’eau dans un circuit de chauffage. C’est ce qui a donné son nom à <strong>Delta P 33</strong>, entreprise de chauffage installée au <strong>6 avenue Romain Rolland à Mérignac</strong>.</p>
+      <p>Nous intervenons sur les <strong>chaudières gaz ou fioul</strong>, le <strong>chauffage et l’eau chaude au bois</strong>, les <strong>pompes à chaleur</strong>, la <strong>climatisation</strong> et les <strong>chauffe-eau thermodynamiques</strong>.</p>
+      <p>L’entreprise est qualifiée <strong>RGE QualiPAC</strong> pour le chauffage et les chauffe-eau thermodynamiques, ainsi que <strong>Qualibois</strong>. Pour échanger sur votre projet, appelez-nous du lundi au vendredi, de 8h à 19h.</p>
+    </div>
+    <div class="plate reveal">
+      <i class="rivet" style="top:10px;left:10px"></i><i class="rivet" style="top:10px;right:10px"></i><i class="rivet" style="bottom:10px;left:10px"></i><i class="rivet" style="bottom:10px;right:10px"></i>
+      <div class="plate-title">Plaque signalétique <i class="led"></i></div>
+      <dl>
+        <dt>Raison</dt><dd>Delta P 33</dd>
+        <dt>Adresse</dt><dd>6 avenue Romain Rolland<br>33700 Mérignac</dd>
+        <dt>Tél.</dt><dd><a href="tel:+33953260044">09 53 26 00 44</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:deltap33@yahoo.fr">deltap33@yahoo.fr</a></dd>
+        <dt>Labels</dt><dd>RGE QualiPAC (chauffage &amp; CET) · Qualibois</dd>
+        <dt>Service</dt><dd>Lun – Ven · 8h00 – 19h00</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis" style="padding-top:24px">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <svg viewBox="0 0 96 96" aria-hidden="true">
+        <circle cx="48" cy="48" r="44" fill="#121a23" stroke="#3a4a58" stroke-width="2"/>
+        <circle cx="48" cy="48" r="34" fill="none" stroke="#2f3e4c" stroke-width="6" stroke-dasharray="3 5"/>
+        <path d="M48 26l6.5 13.2 14.5 2.1-10.5 10.2 2.5 14.5L48 59.2 35 66l2.5-14.5L27 41.3l14.5-2.1z" fill="none" stroke="#ffb020" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="code" style="margin-bottom:8px">SYS-60 · <b>RETOURS</b></div>
+        <h2>Votre avis compte</h2>
+        <p>Vous avez fait appel à Delta P 33 ? Partager votre expérience sur Google aide les habitants de Mérignac et des environs à choisir leur chauffagiste en confiance.</p>
+      </div>
+      <a class="switch amber" href="https://www.google.com/maps/search/?api=1&amp;query=Delta%20P%2033%2C%206%20avenue%20Romain%20Rolland%2C%2033700%20M%C3%A9rignac" target="_blank" rel="noopener"><i class="toggle" aria-hidden="true"></i>Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-70 · <b>FAQ</b></div>
+      <h2>Questions <span>fréquentes</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">L’entretien annuel de la chaudière est-il obligatoire ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Pour les chaudières gaz, fioul ou bois d’une certaine puissance, un entretien annuel par un professionnel est en principe obligatoire. Il contribue à la sécurité, au bon rendement de l’appareil et à sa longévité. Appelez-nous pour en parler.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Puis-je bénéficier d’aides comme MaPrimeRénov’ ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Certaines aides publiques peuvent concerner l’installation d’équipements utilisant les énergies renouvelables (pompe à chaleur, chauffe-eau thermodynamique, bois), à condition notamment de passer par une entreprise RGE. Les conditions évoluent régulièrement et dépendent de votre situation : nous vous conseillons de vérifier votre éligibilité sur les sites officiels (france-renov.gouv.fr).</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Pompe à chaleur ou chaudière : que choisir ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Tout dépend de l’isolation du logement, des émetteurs en place (radiateurs, plancher chauffant), de la place disponible et de vos usages. Comme nous installons les deux, nous pouvons comparer les options avec vous de façon objective lors de la visite.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Quels sont les délais pour une installation ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Les délais varient selon le type d’équipement, sa disponibilité et la période de l’année. Ils vous sont précisés au moment du devis pour que vous puissiez vous organiser.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Ma chaudière perd de la pression, que faire ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Une baisse de pression régulière sur le manomètre peut avoir plusieurs causes (purge, fuite, vase d’expansion…). Évitez de remettre de l’eau à répétition sans diagnostic : appelez-nous au 09 53 26 00 44 pour faire vérifier l’installation.</p></div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Le devis est-il payant ?<i class="ind" aria-hidden="true"></i></button><div class="faq-a"><div><p>Les conditions d’établissement du devis vous sont indiquées lors de votre premier appel. Chaque projet étant différent, les tarifs sont établis sur devis après étude de votre besoin.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES -->
+<section id="horaires">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-80 · <b>DISPONIBILITÉ</b></div>
+      <h2>Horaires <span>&amp; accès</span></h2>
+    </div>
+    <div class="hours-grid">
+      <div class="reveal">
+        <table class="htable" id="hours">
+          <tbody>
+            <tr data-d="1"><td>Lundi</td><td>8h00 – 19h00</td></tr>
+            <tr data-d="2"><td>Mardi</td><td>8h00 – 19h00</td></tr>
+            <tr data-d="3"><td>Mercredi</td><td>8h00 – 19h00</td></tr>
+            <tr data-d="4"><td>Jeudi</td><td>8h00 – 19h00</td></tr>
+            <tr data-d="5"><td>Vendredi</td><td>8h00 – 19h00</td></tr>
+            <tr data-d="6" class="closed"><td>Samedi</td><td>Fermé</td></tr>
+            <tr data-d="0" class="closed"><td>Dimanche</td><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="now-status" id="now" style="margin-top:14px"><i class="led off"></i><span>Statut</span></p>
+      </div>
+      <div class="loc reveal">
+        <svg viewBox="0 0 400 150" aria-hidden="true">
+          <defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1f2c38" stroke-width="1"/></pattern></defs>
+          <rect width="400" height="150" fill="url(#g)"/>
+          <path d="M0 110C80 96 140 120 220 90S340 40 400 52" fill="none" stroke="#2f3e4c" stroke-width="10"/>
+          <path d="M120 0L170 150" fill="none" stroke="#2f3e4c" stroke-width="6"/>
+          <circle cx="200" cy="75" r="50" fill="none" stroke="#6ee7a8" stroke-width="1" opacity=".4"/>
+          <circle cx="200" cy="75" r="28" fill="none" stroke="#6ee7a8" stroke-width="1" opacity=".6"/>
+          <g class="sweep" style="transform-origin:200px 75px"><path d="M200 75L250 75A50 50 0 0 0 235 40z" fill="#6ee7a8" opacity=".14"/></g>
+          <circle cx="200" cy="75" r="6" fill="#ffb020"/>
+          <text x="214" y="70" font-family="Saira Condensed, sans-serif" font-size="13" font-weight="700" fill="#eef3f7" letter-spacing="1.5">DELTA P 33</text>
+          <text x="10" y="20" font-family="Saira Condensed, sans-serif" font-size="11" fill="#8b98a5" letter-spacing="2">MÉRIGNAC · 33700</text>
+        </svg>
+        <address><strong>Delta P 33</strong>6 avenue Romain Rolland<br>33700 Mérignac</address>
+        <div class="btns">
+          <a class="switch primary" href="https://www.google.com/maps/search/?api=1&amp;query=6%20avenue%20Romain%20Rolland%2C%2033700%20M%C3%A9rignac" target="_blank" rel="noopener"><i class="toggle" aria-hidden="true"></i>Itinéraire</a>
+          <a class="switch" href="tel:+33953260044"><i class="toggle" aria-hidden="true"></i>Appeler</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="code">SYS-90 · <b>LIAISON</b></div>
+      <h2>Demander <span>un devis</span></h2>
+      <p>Décrivez votre projet ou votre installation actuelle : nous revenons vers vous pour en discuter.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="direct reveal">
+        <a class="big" href="tel:+33953260044">
+          <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="18" fill="#1b2f27" stroke="#6ee7a8"/><path d="M13 10l4 1 1 5-2.5 1.5a12 12 0 0 0 5 5L22 20l5 1 1 4c0 2-2 3-4 3C17 27 11 21 10 14c0-2 1-4 3-4z" fill="#6ee7a8"/></svg>
+          <div><span>Téléphone</span><strong>09 53 26 00 44</strong></div>
+        </a>
+        <a class="big" href="mailto:deltap33@yahoo.fr">
+          <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="18" fill="#2d2614" stroke="#ffb020"/><rect x="10" y="13" width="18" height="13" rx="2" fill="none" stroke="#ffb020" stroke-width="1.8"/><path d="M10.5 14l8.5 7 8.5-7" fill="none" stroke="#ffb020" stroke-width="1.8"/></svg>
+          <div><span>E-mail</span><strong>deltap33@yahoo.fr</strong></div>
+        </a>
+        <a class="big" href="#horaires">
+          <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="18" fill="#1d2833" stroke="#8b98a5"/><circle cx="19" cy="19" r="9" fill="none" stroke="#a9b4bf" stroke-width="1.8"/><path d="M19 14v5l3 2" fill="none" stroke="#a9b4bf" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div><span>Horaires</span><strong>Lun – Ven · 8h – 19h</strong></div>
+        </a>
+      </div>
+      <form class="panel reveal" id="form" novalidate>
+        <div class="frow two">
+          <div><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        </div>
+        <div class="frow two">
+          <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Mérignac, Pessac, Bordeaux…"></div>
+        </div>
+        <div class="frow">
+          <div>
+            <label id="lbl-e">Énergie concernée</label>
+            <div class="chips" role="group" aria-labelledby="lbl-e">
+              <label><input type="checkbox" name="e" value="gaz"><span>Gaz / fioul</span></label>
+              <label><input type="checkbox" name="e" value="bois"><span>Bois</span></label>
+              <label><input type="checkbox" name="e" value="pac"><span>Pompe à chaleur</span></label>
+              <label><input type="checkbox" name="e" value="clim"><span>Climatisation</span></label>
+              <label><input type="checkbox" name="e" value="cet"><span>Chauffe-eau thermo.</span></label>
+              <label><input type="checkbox" name="e" value="nsp"><span>Je ne sais pas</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="frow"><div><label for="msg">Votre projet</label><textarea id="msg" name="msg" placeholder="Type de logement, installation actuelle, ce que vous souhaitez…"></textarea></div></div>
+        <button type="submit" class="switch primary"><i class="toggle" aria-hidden="true"></i>Envoyer la demande</button>
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"><i class="led amber" style="margin-top:7px;flex:none"></i><span>Maquette de démonstration – le formulaire sera activé à la mise en ligne. Appelez le <a href="tel:+33953260044">09 53 26 00 44</a>.</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand" style="margin-bottom:14px">
+          <span class="brand-txt">DELTA P 33<small>Chauffage · Mérignac</small></span>
+        </a>
+        <p style="margin-top:12px">Chaudières gaz ou fioul, bois, pompes à chaleur, climatisation et chauffe-eau thermodynamiques.</p>
+        <p>RGE QualiPAC (chauffage &amp; CET) · Qualibois</p>
+      </div>
+      <div>
+        <h3>Coordonnées</h3>
+        <p>6 avenue Romain Rolland<br>33700 Mérignac</p>
+        <p><a href="tel:+33953260044">09 53 26 00 44</a></p>
+        <p><a href="mailto:deltap33@yahoo.fr">deltap33@yahoo.fr</a></p>
+      </div>
+      <div>
+        <h3>Horaires</h3>
+        <p>Lundi – vendredi<br>8h00 – 19h00</p>
+        <p>Samedi, dimanche : fermé</p>
+      </div>
+      <div>
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="#services">Nos services</a></li>
+          <li><a href="#energies">Comparatif des énergies</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
+          <li><a href="#contact">Demander un devis</a></li>
+          <li><a href="https://france-renov.gouv.fr" target="_blank" rel="noopener">France Rénov’</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> Delta P 33 – Mérignac</span><span class="code">SYS <b>FIN DE CHECK-LIST</b></span></div>
+  </div>
+</footer>
+<div class="demo-band">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+
+<a class="fab" href="tel:+33953260044" aria-label="Appeler Delta P 33">
+  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2l3 1 1 4-2 1a10 10 0 0 0 6 6l1-2 4 1 1 3c0 2-2 3-3 3C8 19 1 12 1 5c0-1 1-3 3-3z" fill="#0b1a12"/></svg>
+  Appeler
+</a>
+
+<script>
+(function(){
+  // ticks on manometer
+  var t=document.getElementById('ticks');
+  if(t){var s='';for(var i=0;i<=50;i++){var a=(135+i*5.4)*Math.PI/180,big=i%10===0,mid=i%5===0;
+    var r1=78,r2=big?64:(mid?68:72);
+    s+='<line x1="'+(100+r1*Math.cos(a)).toFixed(1)+'" y1="'+(100+r1*Math.sin(a)).toFixed(1)+'" x2="'+(100+r2*Math.cos(a)).toFixed(1)+'" y2="'+(100+r2*Math.sin(a)).toFixed(1)+'" stroke-width="'+(big?2:1)+'"/>';}
+    t.innerHTML=s;}
+
+  // burger
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function close(){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');}
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
+  // faq
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+    var it=q.parentElement,o=it.classList.toggle('open');q.setAttribute('aria-expanded',o);});});
+
+  // hours
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  var st=document.getElementById('now'),open=d>=1&&d<=5&&h>=8&&h<19;
+  st.querySelector('i').className='led'+(open?'':' amber');
+  st.querySelector('span').textContent=open?'Ouvert en ce moment – appelez-nous':'Fermé en ce moment – laissez-nous un message via le formulaire';
+
+  // form
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formMsg').classList.add('show');});
+  document.getElementById('yr').textContent=now.getFullYear();
+
+  // reveal
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
