@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christophe Buchy – Plombier chauffagiste à Bihorel</title>
+<meta name="description" content="Christophe Buchy, plombier chauffagiste à Bihorel (76420) : chaudières gaz et fioul, chauffage électrique, chauffage bois, pompes à chaleur et plomberie. Bihorel, Bois-Guillaume, Rouen, Darnétal.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --torchis:#f2e6cf;
+  --torchis-d:#e6d4b2;
+  --torchis-l:#f8f0e0;
+  --chene:#5b3a22;
+  --chene-d:#3f2716;
+  --chene-l:#7a5233;
+  --brique:#a8412b;
+  --brique-d:#8a3220;
+  --pommier:#6d8a3b;
+  --pommier-d:#53692c;
+  --encre:#2b211a;
+  --encre-l:#5a4a3c;
+  --lueur:#f3c77a;
+  --script:"Kaushan Script","Brush Script MT","Segoe Script",cursive;
+  --sans:"Cabin","Trebuchet MS","Segoe UI",Arial,sans-serif;
+  --max:1180px;
+  --nav:70px;
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .23 0 0 0 0 .13 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 12px)}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--encre);background:var(--torchis);background-image:var(--paper);overflow-x:hidden}
+a{color:inherit}
+svg{display:block}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.15}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.script{font-family:var(--script)}
+
+/* ===== Poutres ===== */
+.beam{height:26px;position:relative;background:
+  repeating-linear-gradient(90deg,transparent 0 120px,rgba(0,0,0,.08) 120px 122px,transparent 122px 260px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,transparent 2px 5px),
+  linear-gradient(180deg,var(--chene-l),var(--chene) 45%,var(--chene-d));
+  box-shadow:0 4px 0 rgba(43,33,26,.15)}
+.beam::before,.beam::after{content:"";position:absolute;top:9px;width:8px;height:8px;border-radius:50%;background:var(--chene-d);box-shadow:inset 1px 1px 0 rgba(255,255,255,.15)}
+.beam::before{left:8%}.beam::after{right:8%}
+
+/* ===== Navigation ===== */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav);z-index:60;color:var(--torchis);
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px),linear-gradient(180deg,var(--chene-l),var(--chene) 50%,var(--chene-d));
+  box-shadow:0 3px 0 var(--chene-d),0 8px 20px rgba(43,33,26,.25)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:38px;height:38px}
+.logo span{font-family:var(--script);font-size:25px;line-height:1;color:var(--torchis-l)}
+.logo small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lueur);margin-top:3px}
+.menu{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:4px;transition:background .2s,color .2s}
+.menu a:hover{background:rgba(242,230,207,.14);color:#fff}
+.menu .m-call a{background:var(--brique);color:#fff;margin-left:8px;box-shadow:0 3px 0 var(--brique-d)}
+.menu .m-call a:hover{background:var(--brique-d)}
+.burger{display:none;width:46px;height:46px;border-radius:6px;border:2px solid rgba(242,230,207,.5);background:transparent;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:2.5px;border-radius:2px;background:var(--torchis);transition:transform .3s,opacity .2s}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ===== Boutons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:17px;padding:15px 26px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-brique{background:var(--brique);color:#fff;box-shadow:0 5px 0 var(--brique-d),0 10px 20px rgba(43,33,26,.25)}
+.btn-brique:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--brique-d),0 14px 24px rgba(43,33,26,.3)}
+.btn-bois{background:var(--torchis-l);color:var(--chene);box-shadow:0 5px 0 var(--chene),0 10px 20px rgba(43,33,26,.2);border:2px solid var(--chene)}
+.btn-bois:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--chene),0 14px 24px rgba(43,33,26,.25)}
+.btn:active{transform:translateY(3px)}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:calc(var(--nav) + 30px) 20px 60px;
+  background:linear-gradient(180deg,#e7cfa3 0%,#f1dfbd 38%,#f6ead3 70%)}
+.hero-scene{position:absolute;inset:0;width:100%;height:100%}
+.smoke circle{fill:#fbf6ec;transform-box:fill-box;transform-origin:center;animation:smoke 6s linear infinite;opacity:0}
+.smoke circle:nth-child(2){animation-delay:1.5s}
+.smoke circle:nth-child(3){animation-delay:3s}
+.smoke circle:nth-child(4){animation-delay:4.5s}
+@keyframes smoke{0%{transform:translate(0,0) scale(.35);opacity:0}12%{opacity:.85}100%{transform:translate(-70px,-190px) scale(2.2);opacity:0}}
+.glow{animation:flicker 4s ease-in-out infinite alternate}
+@keyframes flicker{0%{opacity:.85}50%{opacity:1}100%{opacity:.9}}
+.cloud{animation:drift 60s linear infinite}
+@keyframes drift{from{transform:translateX(-120px)}to{transform:translateX(120px)}}
+
+.hero-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hanger{position:relative;width:min(560px,92vw);display:flex;flex-direction:column;align-items:center}
+.bracket{width:calc(100% + 60px);height:18px;border-radius:4px;background:linear-gradient(180deg,var(--chene-l),var(--chene-d));box-shadow:0 4px 0 rgba(43,33,26,.25);position:relative}
+.bracket::before,.bracket::after{content:"";position:absolute;top:5px;width:8px;height:8px;border-radius:50%;background:#2b211a}
+.bracket::before{left:14px}.bracket::after{right:14px}
+.sign-swing{transform-origin:50% -46px;animation:swing 5s ease-in-out infinite alternate;width:100%;position:relative;padding-top:46px}
+@keyframes swing{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}
+.chain{position:absolute;top:0;width:6px;height:52px;background:repeating-linear-gradient(180deg,#3a2f27 0 6px,transparent 6px 8px,#6b5a4a 8px 12px,transparent 12px 14px);border-radius:3px}
+.chain.l{left:16%}.chain.r{right:16%}
+.sign{position:relative;border-radius:14px;padding:34px 34px 30px;color:var(--torchis-l);
+  background:
+   repeating-radial-gradient(ellipse at 30% -40%,transparent 0 14px,rgba(0,0,0,.07) 14px 16px),
+   repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 3px,transparent 3px 9px),
+   linear-gradient(180deg,#7d5434,#5b3a22 55%,#4a2f1b);
+  box-shadow:inset 0 0 0 4px #3f2716,inset 0 0 0 7px rgba(243,199,122,.35),0 16px 0 -6px rgba(43,33,26,.35),0 28px 40px rgba(43,33,26,.35)}
+.sign::before,.sign::after{content:"";position:absolute;top:12px;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#8d7a64,#2b211a)}
+.sign::before{left:calc(16% - 3px)}.sign::after{right:calc(16% - 3px)}
+.sign .kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--lueur);font-weight:700}
+.sign .kicker svg{width:22px;height:22px}
+.sign h1{font-family:var(--script);font-size:clamp(42px,7vw,72px);line-height:1.05;margin:10px 0 6px;color:#fff6e6;text-shadow:0 2px 0 #3f2716,0 4px 10px rgba(0,0,0,.35)}
+.sign .metier{font-size:clamp(17px,2.2vw,21px);font-weight:600;color:var(--torchis)}
+.sign .rule{display:flex;align-items:center;gap:12px;justify-content:center;margin:16px auto;color:var(--lueur);max-width:320px}
+.sign .rule::before,.sign .rule::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,transparent,rgba(243,199,122,.6),transparent)}
+.sign .rule svg{width:22px;height:22px}
+.sign .accroche{font-size:17px;color:#f2e6cf;max-width:30em;margin:0 auto}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:34px}
+.hero-zone{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:rgba(248,240,224,.88);border:2px solid var(--chene);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;color:var(--chene)}
+.hero-zone svg{width:16px;height:16px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;color:var(--torchis-l);font-size:12px;letter-spacing:.2em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.scroll-hint span{width:2px;height:26px;background:var(--torchis-l);animation:hint 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes hint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ===== Bandeau confiance ===== */
+.trust{background:var(--chene);color:var(--torchis);background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px);border-top:6px solid var(--chene-d);border-bottom:6px solid var(--chene-d)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.t-item{display:flex;gap:12px;align-items:center;padding:22px 16px;border-right:2px dashed rgba(242,230,207,.22)}
+.t-item:last-child{border-right:0}
+.t-item svg{width:38px;height:38px;flex:none}
+.t-item small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lueur);font-weight:700}
+.t-item strong{display:block;font-size:16px;line-height:1.3;font-weight:600}
+.trust-src{text-align:center;font-size:12px;color:rgba(242,230,207,.7);padding:0 16px 12px}
+
+/* ===== Sections ===== */
+section{padding:96px 0;position:relative}
+.s-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.s-head .pre{display:inline-flex;align-items:center;gap:10px;color:var(--brique);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.s-head .pre svg{width:24px;height:24px}
+.s-head h2{font-family:var(--script);font-size:clamp(38px,5vw,58px);color:var(--chene);margin:8px 0 14px}
+.s-head p{color:var(--encre-l);font-size:18px}
+.alt{background:var(--torchis-l);background-image:var(--paper)}
+
+/* Services : panneaux de colombage */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.svc{position:relative;background:var(--torchis-l);border:7px solid var(--chene);border-radius:4px;padding:30px 26px 28px;box-shadow:0 6px 0 var(--chene-d),0 16px 30px rgba(43,33,26,.12);transition:transform .3s,box-shadow .3s;overflow:hidden}
+.svc::before{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;background:linear-gradient(45deg,transparent 46%,rgba(91,58,34,.12) 46% 54%,transparent 54%)}
+.svc:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 10px 0 var(--chene-d),0 24px 36px rgba(43,33,26,.18)}
+.svc-ic{width:76px;height:76px;border-radius:50%;background:var(--torchis);border:3px solid var(--chene);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:background .3s,transform .4s}
+.svc-ic svg{width:44px;height:44px}
+.svc:hover .svc-ic{background:var(--lueur);transform:rotate(-8deg)}
+.svc h3{font-family:var(--script);font-size:28px;color:var(--chene);margin-bottom:8px}
+.svc p{color:var(--encre-l);font-size:16px}
+
+/* Pourquoi */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why-item{text-align:center;padding:26px 18px;border-radius:12px;background:rgba(255,255,255,.35);border:2px dashed rgba(91,58,34,.35);transition:background .3s,transform .3s}
+.why-item:hover{background:rgba(255,255,255,.7);transform:translateY(-4px)}
+.why-item svg{width:64px;height:64px;margin:0 auto 12px}
+.why-item h3{font-weight:700;font-size:19px;color:var(--chene);margin-bottom:8px;font-family:var(--sans)}
+.why-item p{font-size:15.5px;color:var(--encre-l)}
+
+/* Étapes */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:12%;right:12%;top:42px;border-top:4px dotted var(--chene-l);opacity:.6}
+.step{text-align:center;position:relative}
+.step-n{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--script);font-size:38px;color:var(--torchis-l);
+  background:repeating-radial-gradient(circle at 50% 50%,#7a5233 0 4px,#5b3a22 4px 8px);box-shadow:0 0 0 5px var(--torchis),0 0 0 8px var(--chene),0 8px 16px rgba(43,33,26,.25);position:relative;z-index:1;transition:transform .4s}
+.step:hover .step-n{transform:rotate(-12deg) scale(1.06)}
+.step h3{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--chene);margin-bottom:6px}
+.step p{font-size:15.5px;color:var(--encre-l);max-width:260px;margin:0 auto}
+
+/* À propos */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.note{position:relative;background:#fffaf0;background-image:repeating-linear-gradient(180deg,transparent 0 31px,rgba(168,65,43,.12) 31px 32px);padding:40px 40px 34px;border-radius:4px;box-shadow:0 2px 0 rgba(0,0,0,.05),0 20px 40px rgba(43,33,26,.14);transform:rotate(-1deg)}
+.note::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;transform:translateX(-50%) rotate(2deg);background:rgba(109,138,59,.45);border-radius:2px}
+.note h2{font-family:var(--script);font-size:clamp(34px,4vw,48px);color:var(--chene);margin-bottom:12px}
+.note p{font-size:17px;line-height:32px}
+.note p+p{margin-top:16px}
+.note .sig{font-family:var(--script);font-size:28px;color:var(--brique);margin-top:16px;text-align:right}
+.card-id{background:var(--chene);color:var(--torchis);border-radius:10px;padding:30px;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px);box-shadow:0 8px 0 var(--chene-d),0 20px 30px rgba(43,33,26,.2)}
+.card-id svg.house{width:100%;height:auto;margin-bottom:18px}
+.card-id dl{margin:0}
+.card-id div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed rgba(242,230,207,.25);font-size:15px}
+.card-id div:last-child{border-bottom:0}
+.card-id dt{color:var(--lueur);font-weight:600}
+.card-id dd{margin:0;text-align:right}
+
+/* Comparatif */
+.compare{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cmp{background:var(--torchis-l);border-radius:10px;border:3px solid var(--chene);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.cmp:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(43,33,26,.16)}
+.cmp-top{background:var(--chene);color:var(--torchis);padding:18px 14px 14px;text-align:center;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px)}
+.cmp-top svg{width:52px;height:52px;margin:0 auto 6px}
+.cmp-top h3{font-family:var(--script);font-size:24px}
+.cmp-body{padding:16px 16px 18px;font-size:14.5px;flex:1;display:flex;flex-direction:column;gap:12px}
+.cmp-body b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brique)}
+.cmp-body p{color:var(--encre-l);line-height:1.5}
+.cmp-price{margin-top:auto;text-align:center;font-weight:700;color:var(--chene);border-top:2px dashed rgba(91,58,34,.3);padding-top:12px}
+.cmp-price span{font-family:var(--script);font-size:20px;color:var(--brique);font-weight:400}
+.cmp-note{margin-top:28px;text-align:center;font-size:14.5px;color:var(--encre-l)}
+
+/* Avis */
+.reviews{max-width:820px;margin:0 auto;text-align:center;background:#fffaf0;border:3px dashed var(--chene-l);border-radius:16px;padding:46px 32px;position:relative}
+.reviews .apples{display:flex;justify-content:center;gap:10px;margin-bottom:16px}
+.reviews .apples svg{width:34px;height:34px;opacity:.35}
+.reviews h3{font-family:var(--script);font-size:34px;color:var(--chene);margin-bottom:10px}
+.reviews p{color:var(--encre-l);max-width:36em;margin:0 auto 22px}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.qa{background:var(--torchis-l);border:2px solid var(--chene);border-radius:10px;overflow:hidden;box-shadow:0 4px 0 rgba(91,58,34,.35)}
+.qa button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;font-weight:700;font-size:17.5px;color:var(--chene)}
+.qa button:focus-visible{outline:3px solid var(--brique);outline-offset:-3px}
+.qa .ico{width:34px;height:34px;flex:none;border-radius:50%;background:var(--chene);color:var(--torchis);display:flex;align-items:center;justify-content:center;transition:transform .35s,background .2s}
+.qa button:hover .ico{background:var(--brique)}
+.qa.open .ico{transform:rotate(45deg);background:var(--brique)}
+.qa-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.qa.open .qa-a{grid-template-rows:1fr}
+.qa-a>div{overflow:hidden}
+.qa-a p{padding:0 22px 20px;color:var(--encre-l)}
+
+/* Horaires */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.board{background:var(--chene);color:var(--torchis);border-radius:12px;padding:30px;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 6px);box-shadow:0 8px 0 var(--chene-d)}
+.board h3{font-family:var(--script);font-size:32px;color:#fff6e6;margin-bottom:14px}
+.board table{width:100%;border-collapse:collapse}
+.board td{padding:10px 8px;border-bottom:1px dashed rgba(242,230,207,.22)}
+.board td:last-child{text-align:right}
+.board tr.today td{background:rgba(243,199,122,.18);color:#fff;font-weight:700}
+.board tr.today td:first-child{border-left:4px solid var(--lueur)}
+.board tr.today td:first-child::after{content:" · aujourd’hui";font-weight:400;color:var(--lueur);font-size:13px}
+.board .warn{margin-top:14px;font-size:14px;color:rgba(242,230,207,.8)}
+.place{background:#fffaf0;border:3px solid var(--chene);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:14px}
+.place h3{font-family:var(--script);font-size:32px;color:var(--chene)}
+.place address{font-style:normal;font-size:18px;font-weight:600}
+.towns{display:flex;flex-wrap:wrap;gap:8px}
+.towns span{background:var(--torchis);border:2px solid var(--pommier);color:var(--pommier-d);font-weight:700;font-size:14px;padding:5px 12px;border-radius:999px}
+.mini-map{border-radius:8px;overflow:hidden;border:2px solid var(--torchis-d)}
+.mini-map svg{width:100%;height:auto}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:start}
+.c-card{background:var(--brique);color:#fff;border-radius:12px;padding:32px;box-shadow:0 8px 0 var(--brique-d);background-image:repeating-linear-gradient(0deg,transparent 0 22px,rgba(0,0,0,.08) 22px 24px),repeating-linear-gradient(90deg,transparent 0 46px,rgba(0,0,0,.06) 46px 48px)}
+.c-card h3{font-family:var(--script);font-size:34px;margin-bottom:12px}
+.c-card p{opacity:.95}
+.c-line{display:flex;gap:12px;align-items:center;margin-top:18px;text-decoration:none;font-weight:700}
+.c-line svg{width:42px;height:42px;padding:10px;border-radius:50%;background:rgba(255,255,255,.16);flex:none}
+.c-line span small{display:block;font-weight:400;font-size:13px;opacity:.85}
+.c-line.big{font-size:24px}
+.c-line:hover svg{background:rgba(255,255,255,.3)}
+form.devis{background:var(--torchis-l);border:7px solid var(--chene);border-radius:4px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;box-shadow:0 6px 0 var(--chene-d)}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1 / -1}
+.f label{font-weight:700;font-size:14px;color:var(--chene)}
+.f input,.f select,.f textarea{font:inherit;font-size:16px;color:var(--encre);background:#fffaf0;border:2px solid var(--torchis-d);border-radius:8px;padding:12px 14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--pommier);box-shadow:0 0 0 4px rgba(109,138,59,.2)}
+.f textarea{min-height:120px;resize:vertical}
+.form-end{grid-column:1 / -1;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.form-end small{color:var(--encre-l);font-size:13.5px;max-width:26em}
+.form-msg{grid-column:1 / -1;display:none;background:var(--pommier);color:#fff;border-radius:8px;padding:14px 16px;font-weight:600}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{background:var(--encre);color:#e9dcc4;padding-top:0}
+footer .beam{box-shadow:none}
+.f-top{padding:60px 0 40px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+.f-top h4{margin:0 0 12px;color:var(--lueur);font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.f-brand .script{font-size:36px;color:#fff6e6;display:block;line-height:1.1}
+.f-top p,.f-top li{font-size:15px;line-height:1.75}
+.f-top ul{list-style:none;margin:0;padding:0}
+.f-top a{text-decoration:none;border-bottom:1px dashed rgba(233,220,196,.4)}
+.f-top a:hover{color:#fff;border-color:var(--lueur)}
+.f-bottom{border-top:1px solid rgba(233,220,196,.15);padding:18px 0 72px;font-size:13px;color:#b7a88f;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.orchard{display:flex;justify-content:center;gap:28px;padding-top:30px;opacity:.6}
+.orchard svg{width:34px;height:34px}
+
+.demo{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(43,33,26,.94);color:#e9dcc4;text-align:center;font-size:12.5px;padding:8px 14px;border-top:2px solid var(--chene)}
+.fab{display:none;position:fixed;right:16px;bottom:54px;z-index:55;width:62px;height:62px;border-radius:50%;background:var(--brique);color:#fff;align-items:center;justify-content:center;box-shadow:0 5px 0 var(--brique-d),0 10px 20px rgba(0,0,0,.3);text-decoration:none;animation:bob 3s ease-in-out infinite}
+.fab svg{width:28px;height:28px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* Apparition */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.services .rv:nth-child(2),.why .rv:nth-child(2),.steps .rv:nth-child(2),.compare .rv:nth-child(2){transition-delay:.1s}
+.services .rv:nth-child(3),.why .rv:nth-child(3),.steps .rv:nth-child(3),.compare .rv:nth-child(3){transition-delay:.2s}
+.why .rv:nth-child(4),.steps .rv:nth-child(4),.compare .rv:nth-child(4){transition-delay:.3s}
+.compare .rv:nth-child(5){transition-delay:.4s}
+
+/* ===== Responsive ===== */
+@media (max-width:1080px){
+  .compare{grid-template-columns:repeat(3,1fr)}
+  .why{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:fixed;top:var(--nav);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:12px 20px 24px;background:var(--chene-d);background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 6px);box-shadow:0 14px 24px rgba(0,0,0,.3);transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .3s,opacity .3s,visibility .3s}
+  .menu.open{transform:none;opacity:1;visibility:visible}
+  .menu li{border-bottom:1px dashed rgba(242,230,207,.2)}
+  .menu li:last-child{border-bottom:0}
+  .menu a{font-size:19px;padding:14px 6px}
+  .menu .m-call a{margin:14px 0 0;text-align:center}
+  .services{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+  .steps::before{display:none}
+  .about{grid-template-columns:1fr}
+  .visit,.contact{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .t-item{border-right:0;border-bottom:2px dashed rgba(242,230,207,.2)}
+  .t-item:nth-child(odd){border-right:2px dashed rgba(242,230,207,.2)}
+  .f-top{grid-template-columns:1fr 1fr}
+  .fab{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .hero{padding:calc(var(--nav) + 24px) 14px 70px}
+  .sign{padding:30px 20px 24px}
+  .bracket{width:calc(100% + 16px)}
+  .sign .accroche{font-size:15.5px}
+  .hero-cta{flex-direction:column;width:100%;gap:14px}
+  .hero-cta .btn{width:100%}
+  .services,.why,.compare{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .t-item,.t-item:nth-child(odd){border-right:0}
+  .note{padding:32px 22px 26px}
+  form.devis{grid-template-columns:1fr;padding:22px 18px}
+  .f-top{grid-template-columns:1fr}
+  .board,.place,.c-card{padding:24px 20px}
+  .logo span{font-size:21px}
+  .demo{font-size:11px;padding:7px 10px}
+  .scroll-hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .rv{opacity:1;transform:none}
+  .smoke circle{opacity:.5}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="pommier" viewBox="0 0 48 48">
+      <path d="M22 44c1-6 1-11 0-17h4c-1 6-1 11 0 17z" fill="#5b3a22"/>
+      <path d="M24 30c-9 0-16-5-16-12 0-6 5-11 10-11 2-3 4-4 6-4s4 1 6 4c5 0 10 5 10 11 0 7-7 12-16 12z" fill="#6d8a3b"/>
+      <path d="M14 14c3-4 8-6 12-5" stroke="#8fae55" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="16" cy="20" r="2.6" fill="#a8412b"/><circle cx="29" cy="15" r="2.6" fill="#a8412b"/><circle cx="33" cy="23" r="2.6" fill="#a8412b"/><circle cx="23" cy="24" r="2.4" fill="#a8412b"/>
+      <path d="M12 44h24" stroke="#5b3a22" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="pomme" viewBox="0 0 32 32">
+      <path d="M16 9c-3-2-10-2-11 5-1 6 4 15 8 15 1.5 0 2-1 3-1s1.5 1 3 1c4 0 9-9 8-15-1-7-8-7-11-5z" fill="#a8412b"/>
+      <path d="M16 9c0-3 1-5 3-6" stroke="#5b3a22" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M18 6c3-2 6-1 7 0-2 2-5 2-7 0z" fill="#6d8a3b"/>
+      <path d="M9 13c1-2 3-3 4-3" stroke="#fff" stroke-opacity=".5" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Christophe Buchy, retour en haut">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="3" y="3" width="42" height="42" rx="8" fill="#f2e6cf"/><path d="M8 24 24 10l16 14" stroke="#5b3a22" stroke-width="3.5" fill="none" stroke-linejoin="round"/><path d="M12 22v18h24V22" stroke="#5b3a22" stroke-width="3" fill="none"/><path d="M12 31h24M24 22v18M12 22l12 9M36 22l-12 9" stroke="#5b3a22" stroke-width="2"/><path d="M33 8v7" stroke="#a8412b" stroke-width="3.5"/></svg>
+      <span>Christophe Buchy<small>Plombier chauffagiste</small></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="m-call"><a href="tel:+33610444582">06 10 44 45 82</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ EN-TÊTE PLEIN ÉCRAN ============ -->
+<section class="hero" aria-labelledby="h1">
+  <svg class="hero-scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a4a35"/><stop offset="1" stop-color="#4a3122"/></linearGradient>
+      <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8d2a8"/><stop offset="1" stop-color="#d9bd8e"/></linearGradient>
+      <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d9a48"/><stop offset="1" stop-color="#53692c"/></linearGradient>
+      <radialGradient id="win" cx=".5" cy=".6" r=".7"><stop offset="0" stop-color="#ffe0a0"/><stop offset="1" stop-color="#e9a94e"/></radialGradient>
+      <pattern id="tiles" width="34" height="22" patternUnits="userSpaceOnUse"><path d="M0 21h34M17 0v11M0 11h34M0 0v11" stroke="#3f2716" stroke-width="1.4" opacity=".45"/></pattern>
+      <pattern id="brick" width="40" height="16" patternUnits="userSpaceOnUse"><rect width="40" height="16" fill="#a8412b"/><path d="M0 .5h40M0 8.5h40M20 0v8M0 8v8M40 8v8" stroke="#e9d3b0" stroke-width="1.4"/></pattern>
+    </defs>
+    <!-- nuages -->
+    <g class="cloud" fill="#fbf3e4" opacity=".8"><ellipse cx="240" cy="170" rx="90" ry="26"/><ellipse cx="290" cy="150" rx="60" ry="30"/><ellipse cx="1200" cy="120" rx="110" ry="24"/><ellipse cx="1150" cy="104" rx="56" ry="26"/></g>
+    <!-- collines -->
+    <path d="M0 700C200 640 360 660 520 690s420 10 600-30 260-10 320 10v320H0z" fill="#a9b874" opacity=".55"/>
+    <path d="M0 760c240-50 480-30 720-10s480 0 720-40v190H0z" fill="url(#grass)"/>
+    <!-- pommiers -->
+    <g transform="translate(70 560) scale(4.4)"><use href="#pommier" width="48" height="48"/></g>
+    <g transform="translate(1180 580) scale(4)"><use href="#pommier" width="48" height="48"/></g>
+    <g transform="translate(-40 650) scale(3)" opacity=".85"><use href="#pommier" width="48" height="48"/></g>
+    <g transform="translate(1330 640) scale(3)" opacity=".85"><use href="#pommier" width="48" height="48"/></g>
+    <!-- cheminée + fumée -->
+    <g class="smoke"><circle cx="905" cy="140" r="16"/><circle cx="905" cy="140" r="16"/><circle cx="905" cy="140" r="16"/><circle cx="905" cy="140" r="16"/></g>
+    <rect x="878" y="150" width="56" height="110" fill="url(#brick)"/>
+    <rect x="870" y="140" width="72" height="16" fill="#8a3220"/>
+    <!-- toit -->
+    <path d="M300 400 720 105l420 295z" fill="url(#roof)"/>
+    <path d="M300 400 720 105l420 295z" fill="url(#tiles)"/>
+    <path d="M296 402 720 100l424 302" fill="none" stroke="#3f2716" stroke-width="14" stroke-linejoin="round"/>
+    <!-- lucarne / pignon : étage -->
+    <rect x="345" y="395" width="750" height="215" fill="url(#wall)"/>
+    <g fill="#5b3a22">
+      <rect x="335" y="390" width="770" height="18"/>
+      <rect x="335" y="596" width="770" height="20"/>
+      <rect x="345" y="405" width="16" height="195"/><rect x="1079" y="405" width="16" height="195"/>
+      <rect x="455" y="405" width="14" height="195"/><rect x="565" y="405" width="14" height="195"/>
+      <rect x="861" y="405" width="14" height="195"/><rect x="971" y="405" width="14" height="195"/>
+      <rect x="675" y="405" width="12" height="195"/><rect x="753" y="405" width="12" height="195"/>
+    </g>
+    <g stroke="#5b3a22" stroke-width="12">
+      <path d="M361 600 455 408M469 408 565 600"/><path d="M875 600 971 408M985 408 1079 600"/>
+      <path d="M579 410 675 598M579 598 675 410"/><path d="M765 410 861 598M765 598 861 410"/>
+    </g>
+    <!-- ferme du pignon -->
+    <g stroke="#5b3a22" stroke-width="12" fill="none"><path d="M720 130v262M540 392l180-200 180 200M610 392l110-120 110 120"/></g>
+    <circle cx="720" cy="300" r="34" fill="url(#win)" class="glow" stroke="#5b3a22" stroke-width="8"/>
+    <path d="M720 268v64M688 300h64" stroke="#5b3a22" stroke-width="5"/>
+    <!-- fenêtres étage -->
+    <g>
+      <rect x="380" y="445" width="60" height="110" fill="url(#win)" class="glow"/><rect x="380" y="445" width="60" height="110" fill="none" stroke="#5b3a22" stroke-width="7"/><path d="M410 445v110M380 500h60" stroke="#5b3a22" stroke-width="4"/>
+      <rect x="1000" y="445" width="60" height="110" fill="url(#win)" class="glow"/><rect x="1000" y="445" width="60" height="110" fill="none" stroke="#5b3a22" stroke-width="7"/><path d="M1030 445v110M1000 500h60" stroke="#5b3a22" stroke-width="4"/>
+      <rect x="360" y="438" width="20" height="124" fill="#a8412b"/><rect x="440" y="438" width="20" height="124" fill="#a8412b"/>
+      <rect x="980" y="438" width="20" height="124" fill="#a8412b"/><rect x="1060" y="438" width="20" height="124" fill="#a8412b"/>
+    </g>
+    <!-- rez-de-chaussée -->
+    <rect x="365" y="616" width="710" height="200" fill="url(#wall)"/>
+    <g fill="#5b3a22">
+      <rect x="365" y="616" width="18" height="200"/><rect x="1057" y="616" width="18" height="200"/>
+      <rect x="510" y="616" width="14" height="200"/><rect x="916" y="616" width="14" height="200"/>
+      <rect x="365" y="700" width="710" height="12"/>
+    </g>
+    <g stroke="#5b3a22" stroke-width="11"><path d="M383 700 510 622M930 622 1057 700"/><path d="M383 712 510 812M930 812 1057 712"/></g>
+    <!-- porte -->
+    <path d="M668 816V690a52 52 0 0 1 104 0v126z" fill="#7a5233" stroke="#3f2716" stroke-width="8"/>
+    <path d="M694 690v126M720 650v166M746 690v126" stroke="#5b3a22" stroke-width="3"/>
+    <circle cx="756" cy="760" r="5" fill="#f3c77a"/>
+    <!-- fenêtres rdc -->
+    <rect x="560" y="660" width="70" height="90" fill="url(#win)" class="glow"/><rect x="560" y="660" width="70" height="90" fill="none" stroke="#5b3a22" stroke-width="7"/><path d="M595 660v90M560 705h70" stroke="#5b3a22" stroke-width="4"/>
+    <rect x="810" y="660" width="70" height="90" fill="url(#win)" class="glow"/><rect x="810" y="660" width="70" height="90" fill="none" stroke="#5b3a22" stroke-width="7"/><path d="M845 660v90M810 705h70" stroke="#5b3a22" stroke-width="4"/>
+    <!-- jardinières -->
+    <rect x="552" y="750" width="86" height="14" rx="3" fill="#5b3a22"/><rect x="802" y="750" width="86" height="14" rx="3" fill="#5b3a22"/>
+    <g fill="#a8412b"><circle cx="566" cy="748" r="6"/><circle cx="584" cy="745" r="6"/><circle cx="604" cy="748" r="6"/><circle cx="624" cy="745" r="6"/><circle cx="816" cy="748" r="6"/><circle cx="836" cy="745" r="6"/><circle cx="856" cy="748" r="6"/><circle cx="876" cy="745" r="6"/></g>
+    <!-- soubassement brique -->
+    <rect x="355" y="812" width="730" height="34" fill="url(#brick)"/>
+    <path d="M0 846h1440v60H0z" fill="#53692c"/>
+    <path d="M640 846h160l30 60H610z" fill="#c9b18a"/>
+  </svg>
+
+  <div class="hero-center">
+    <div class="hanger">
+      <div class="bracket" aria-hidden="true"></div>
+      <div class="sign-swing">
+        <span class="chain l" aria-hidden="true"></span><span class="chain r" aria-hidden="true"></span>
+        <div class="sign">
+          <span class="kicker"><svg aria-hidden="true"><use href="#pomme"/></svg>Bihorel · Seine-Maritime</span>
+          <h1 id="h1">Christophe Buchy</h1>
+          <p class="metier">Plombier chauffagiste</p>
+          <div class="rule" aria-hidden="true"><svg><use href="#pommier"/></svg></div>
+          <p class="accroche">Gaz, fioul, électrique, bois ou pompe à chaleur : le chauffage qui convient à votre maison, posé et entretenu par un artisan des hauteurs de Rouen.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-brique" href="tel:+33610444582"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+      <a class="btn btn-bois" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg>Demander un devis</a>
+    </div>
+    <p class="hero-zone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Bihorel · Bois-Guillaume · Rouen · Darnétal</p>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<div class="trust" id="confiance">
+  <div class="wrap">
+    <div class="t-item"><svg viewBox="0 0 40 40" fill="none" stroke="#f3c77a" stroke-width="2.4"><circle cx="20" cy="17" r="11"/><path d="M14 26l-3 11 9-4 9 4-3-11"/><path d="M15 17l4 4 7-8"/></svg><div><small>Qualification</small><strong>QUALIBAT Entretien chauffage</strong></div></div>
+    <div class="t-item"><svg viewBox="0 0 40 40" fill="none" stroke="#f3c77a" stroke-width="2.4"><circle cx="20" cy="17" r="11"/><path d="M14 26l-3 11 9-4 9 4-3-11"/><path d="M15 17l4 4 7-8"/></svg><div><small>Qualification</small><strong>QUALIBAT Remplacement chaudière</strong></div></div>
+    <div class="t-item"><svg viewBox="0 0 40 40" fill="none" stroke="#f3c77a" stroke-width="2.4"><path d="M6 19 20 7l14 12"/><path d="M10 17v17h20V17"/><path d="M10 25h20M20 17v17"/></svg><div><small>Installé à</small><strong>Bihorel (76420)</strong></div></div>
+    <div class="t-item"><svg viewBox="0 0 40 40" fill="none" stroke="#f3c77a" stroke-width="2.4"><path d="M20 36s11-11 11-19a11 11 0 0 0-22 0c0 8 11 19 11 19z"/><circle cx="20" cy="17" r="4"/></svg><div><small>Secteur</small><strong>Bihorel, Bois-Guillaume, Rouen, Darnétal</strong></div></div>
+  </div>
+  <p class="trust-src">Qualifications mentionnées sur la fiche HelloWatt de l’entreprise.</p>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Le savoir-faire</span>
+      <h2>Toutes les énergies, un seul artisan</h2>
+      <p>De la chaudière gaz au poêle à bois, en passant par la pompe à chaleur et la salle de bains : Christophe Buchy intervient sur l’ensemble de votre installation.</p>
+    </div>
+    <div class="services">
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><rect x="11" y="5" width="26" height="34" rx="3"/><rect x="16" y="11" width="16" height="7" rx="1"/><path d="M24 34c-4 0-5-3-5-5 0-3 3-4 3-7 2 2 4 3 4 6 1-1 1-2 1-3 2 2 2 4 2 5 0 2-1 4-5 4z" fill="#a8412b" stroke="#a8412b" stroke-width="1"/><path d="M17 39v5M31 39v5"/></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Installation, remplacement et entretien de chaudières gaz, dont les modèles à condensation, avec réglages soignés.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><rect x="6" y="10" width="22" height="30" rx="3"/><path d="M11 16h12M11 22h12"/><circle cx="17" cy="31" r="4" stroke="#a8412b"/><path d="M28 30h8v-8h6v18H32"/><path d="M38 10c0 3-3 4-3 7a3 3 0 0 0 6 0c0-3-3-4-3-7z" fill="#a8412b" stroke="#a8412b" stroke-width="1"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Entretien et dépannage de votre chaudière fioul, et conseils pour envisager sereinement son remplacement.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><rect x="5" y="12" width="38" height="24" rx="4"/><path d="M12 12v24M19 12v24M26 12v24M33 12v24"/><path d="M27 4l-6 8h6l-5 8" stroke="#a8412b" stroke-width="2.8" stroke-linecap="round"/><path d="M10 36v5M38 36v5"/></svg></div>
+        <h3>Radiateurs &amp; chaudières électriques</h3>
+        <p>Pose de radiateurs électriques performants et de chaudières électriques, là où le gaz n’est pas une option.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><path d="M20 4h8v8"/><path d="M12 12h24v28H12z"/><rect x="17" y="18" width="14" height="14" rx="2"/><path d="M24 30c-3 0-4-2-4-4s2-3 2-5c2 1 3 3 3 4 1 0 1-1 1-2 1 1 2 3 2 4 0 2-1 3-4 3z" fill="#a8412b" stroke="#a8412b" stroke-width="1"/><path d="M8 44h32M14 40v4M34 40v4"/></svg></div>
+        <h3>Chauffage bois</h3>
+        <p>Une chaleur douce et rayonnante au cœur de la maison : poêles et solutions de chauffage au bois adaptées à votre intérieur.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><rect x="4" y="12" width="40" height="26" rx="3"/><circle cx="18" cy="25" r="8" stroke="#6d8a3b"/><path d="M18 17v16M10 25h16" stroke="#6d8a3b"/><path d="M32 19h7M32 25h7M32 31h7"/><path d="M9 38v4M39 38v4"/></svg></div>
+        <h3>Pompes à chaleur</h3>
+        <p>Étude et installation de pompes à chaleur, souvent en relève d’une chaudière existante, pour chauffer autrement.</p>
+      </article>
+      <article class="svc rv">
+        <div class="svc-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 8h14v8h8a6 6 0 0 1 6 6v6"/><path d="M6 8h4M6 4v8"/><path d="M38 32c0 4-3 6-3 9a3 3 0 0 0 6 0c0-3-3-5-3-9z" fill="#6d8a3b" stroke="#6d8a3b" stroke-width="1"/><path d="M24 16v8"/><rect x="20" y="24" width="8" height="6" rx="1"/></svg></div>
+        <h3>Plomberie</h3>
+        <p>Recherche de fuite, robinetterie, chauffe-eau, sanitaires : les travaux du quotidien comme les petites rénovations.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ POURQUOI ============ -->
+<section class="alt" id="pourquoi">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Pourquoi lui faire confiance</span>
+      <h2>Un artisan, pas un standard</h2>
+      <p>Faire appel à un chauffagiste installé à Bihorel, c’est avoir un interlocuteur que l’on connaît par son nom.</p>
+    </div>
+    <div class="why">
+      <div class="why-item rv"><svg viewBox="0 0 64 64" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linecap="round"><circle cx="32" cy="22" r="10"/><path d="M14 56c0-10 8-18 18-18s18 8 18 18"/><path d="M44 12l4-4M48 18h5" stroke="#a8412b"/></svg><h3>Un interlocuteur unique</h3><p>C’est Christophe Buchy qui vous répond, se déplace et suit votre installation.</p></div>
+      <div class="why-item rv"><svg viewBox="0 0 64 64" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><circle cx="32" cy="26" r="15"/><path d="M24 39l-4 17 12-6 12 6-4-17"/><path d="M25 26l5 5 9-10" stroke="#6d8a3b" stroke-width="3"/></svg><h3>Des qualifications reconnues</h3><p>QUALIBAT Entretien chauffage et Remplacement chaudière, selon sa fiche HelloWatt.</p></div>
+      <div class="why-item rv"><svg viewBox="0 0 64 64" fill="none" stroke="#5b3a22" stroke-width="2.6" stroke-linejoin="round"><path d="M8 30 32 10l24 20"/><path d="M14 26v28h36V26"/><path d="M14 40h36M32 26v28M14 26l18 14M50 26 32 40"/><path d="M44 8v8" stroke="#a8412b" stroke-width="4"/></svg><h3>Toutes les énergies</h3><p>Gaz, fioul, électricité, bois, pompe à chaleur : un conseil sans parti pris pour une énergie plutôt qu’une autre.</p></div>
+      <div class="why-item rv"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#pommier"/></svg><h3>Un voisin du plateau</h3><p>Installé rue du Docteur Caron, à Bihorel : Bois-Guillaume, Rouen et Darnétal sont à deux pas.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ ÉTAPES ============ -->
+<section id="etapes">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Comment ça se passe</span>
+      <h2>Quatre étapes, sans surprise</h2>
+      <p>Du premier coup de fil à la mise en route, vous savez toujours ce qui vient ensuite.</p>
+    </div>
+    <ol class="steps">
+      <li class="step rv"><span class="step-n">1</span><h3>Vous appelez</h3><p>Un coup de fil ou un message : vous décrivez votre besoin, panne, entretien ou projet.</p></li>
+      <li class="step rv"><span class="step-n">2</span><h3>On regarde ensemble</h3><p>Visite chez vous pour voir l’installation, la maison et vos habitudes de chauffage.</p></li>
+      <li class="step rv"><span class="step-n">3</span><h3>Le devis</h3><p>Une proposition claire et détaillée, avec les solutions possibles et leurs différences.</p></li>
+      <li class="step rv"><span class="step-n">4</span><h3>Les travaux</h3><p>Intervention soignée, mise en service et explications pour bien utiliser votre équipement.</p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ À PROPOS ============ -->
+<section class="alt" id="apropos">
+  <div class="wrap about">
+    <div class="note rv">
+      <h2>Le chauffagiste de Bihorel</h2>
+      <p>Christophe Buchy est plombier chauffagiste à Bihorel, rue du Docteur Caron, sur les hauteurs de Rouen. Il intervient sur les chaudières gaz ou fioul, les radiateurs et chaudières électriques, le chauffage au bois et les pompes à chaleur, sans oublier la plomberie.</p>
+      <p>Ses qualifications QUALIBAT Entretien chauffage et Remplacement chaudière témoignent de son métier de base : faire durer les installations… et les remplacer le moment venu. Il se déplace à Bihorel, Bois-Guillaume, Rouen et Darnétal.</p>
+      <p class="sig">C. Buchy</p>
+    </div>
+    <aside class="card-id rv">
+      <svg class="house" viewBox="0 0 300 150" aria-hidden="true"><rect width="300" height="150" rx="8" fill="#f2e6cf"/><path d="M70 70 150 18l80 52z" fill="#4a3122"/><rect x="82" y="70" width="136" height="64" fill="#efdfc1"/><g stroke="#5b3a22" stroke-width="5"><path d="M82 70h136M82 100h136M82 70v64M218 70v64M126 70v64M174 70v64M82 70l44 30M174 100l44-30M82 134l44-34M174 100l44 34"/></g><path d="M138 134v-24h24v24" fill="#7a5233" stroke="#3f2716" stroke-width="3"/><rect x="190" y="26" width="12" height="26" fill="#a8412b"/><g transform="translate(20 86) scale(1)"><use href="#pommier" width="48" height="48"/></g><g transform="translate(236 90)"><use href="#pommier" width="44" height="44"/></g><path d="M0 134h300v16H0z" fill="#6d8a3b"/></svg>
+      <dl>
+        <div><dt>Artisan</dt><dd>Christophe Buchy</dd></div>
+        <div><dt>Métier</dt><dd>Plombier chauffagiste</dd></div>
+        <div><dt>Adresse</dt><dd>Rue du Docteur Caron, 76420 Bihorel</dd></div>
+        <div><dt>Labels</dt><dd>QUALIBAT (2 qualifications)</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ COMPARATIF ============ -->
+<section id="solutions">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Bien choisir</span>
+      <h2>Quel chauffage pour votre maison ?</h2>
+      <p>Chaque énergie a ses atouts. Ce comparatif simplifié vous aide à y voir clair avant d’en parler de vive voix.</p>
+    </div>
+    <div class="compare">
+      <article class="cmp rv">
+        <div class="cmp-top"><svg viewBox="0 0 48 48" fill="none" stroke="#f3c77a" stroke-width="2.6"><path d="M24 42c-8 0-11-6-11-11 0-7 7-9 7-16 4 3 8 7 8 12 2-1 3-3 3-6 4 4 5 8 5 11 0 5-4 10-12 10z"/></svg><h3>Gaz</h3></div>
+        <div class="cmp-body"><div><b>Atouts</b><p>Confort immédiat, chauffage et eau chaude réunis, chaudières à condensation compactes.</p></div><div><b>À savoir</b><p>Nécessite un raccordement au réseau ou une citerne.</p></div><p class="cmp-price">Tarif <span>sur devis</span></p></div>
+      </article>
+      <article class="cmp rv">
+        <div class="cmp-top"><svg viewBox="0 0 48 48" fill="none" stroke="#f3c77a" stroke-width="2.6"><path d="M24 6c0 8-10 14-10 24a10 10 0 0 0 20 0c0-10-10-16-10-24z"/><path d="M19 32a5 5 0 0 0 5 5"/></svg><h3>Fioul</h3></div>
+        <div class="cmp-body"><div><b>Atouts</b><p>Fonctionne hors réseau gaz ; les installations existantes peuvent être entretenues.</p></div><div><b>À savoir</b><p>La réglementation encadre désormais fortement la pose de chaudières fioul neuves : parlons des alternatives.</p></div><p class="cmp-price">Tarif <span>sur devis</span></p></div>
+      </article>
+      <article class="cmp rv">
+        <div class="cmp-top"><svg viewBox="0 0 48 48" fill="none" stroke="#f3c77a" stroke-width="2.6" stroke-linejoin="round"><path d="M27 4 12 27h11l-3 17 16-25H25z"/></svg><h3>Électrique</h3></div>
+        <div class="cmp-body"><div><b>Atouts</b><p>Installation simple, pas de conduit ni d’entretien lourd, pilotage pièce par pièce.</p></div><div><b>À savoir</b><p>Le coût d’usage dépend beaucoup de l’isolation du logement.</p></div><p class="cmp-price">Tarif <span>sur devis</span></p></div>
+      </article>
+      <article class="cmp rv">
+        <div class="cmp-top"><svg viewBox="0 0 48 48" fill="none" stroke="#f3c77a" stroke-width="2.6" stroke-linecap="round"><path d="M8 34l32-10M8 24l32 10"/><path d="M24 22c-4 0-6-3-6-6 0-4 4-5 4-9 3 2 5 5 5 8 1-1 2-2 2-4 2 2 3 5 3 6 0 3-3 5-8 5z"/></svg><h3>Bois</h3></div>
+        <div class="cmp-body"><div><b>Atouts</b><p>Chaleur rayonnante très agréable, énergie renouvelable, ambiance d’une vraie flambée.</p></div><div><b>À savoir</b><p>Demande un conduit adapté, un lieu de stockage et un ramonage régulier.</p></div><p class="cmp-price">Tarif <span>sur devis</span></p></div>
+      </article>
+      <article class="cmp rv">
+        <div class="cmp-top"><svg viewBox="0 0 48 48" fill="none" stroke="#f3c77a" stroke-width="2.6"><rect x="5" y="11" width="38" height="26" rx="3"/><circle cx="19" cy="24" r="8"/><path d="M19 16v16M11 24h16M32 18h7M32 24h7M32 30h7"/></svg><h3>Pompe à chaleur</h3></div>
+        <div class="cmp-body"><div><b>Atouts</b><p>Puise les calories de l’air extérieur ; peut prendre le relais d’une chaudière sur vos radiateurs.</p></div><div><b>À savoir</b><p>Un bon dimensionnement est essentiel ; une étude de la maison s’impose.</p></div><p class="cmp-price">Tarif <span>sur devis</span></p></div>
+      </article>
+    </div>
+    <p class="cmp-note">Comparatif indicatif et général : la bonne solution dépend de votre maison, de votre installation actuelle et de votre budget.</p>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ AVIS ============ -->
+<section class="alt" id="avis">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>La parole aux clients</span>
+      <h2>Vos avis</h2>
+    </div>
+    <div class="reviews rv">
+      <div class="apples" aria-hidden="true"><svg><use href="#pomme"/></svg><svg><use href="#pomme"/></svg><svg><use href="#pomme"/></svg><svg><use href="#pomme"/></svg><svg><use href="#pomme"/></svg></div>
+      <h3>Les avis de vos clients apparaîtront ici</h3>
+      <p>Seuls de vrais avis, laissés par de vrais clients, seront publiés sur ce site. Christophe Buchy est intervenu chez vous ? Votre retour aidera vos voisins de Bihorel et des environs.</p>
+      <a class="btn btn-bois" href="#contact">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Questions fréquentes</span>
+      <h2>Vous vous demandez…</h2>
+    </div>
+    <div class="faq rv">
+      <div class="qa"><button aria-expanded="false">À quelle fréquence faut-il entretenir sa chaudière ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>Pour la plupart des chaudières (gaz, fioul, bois), un entretien annuel par un professionnel est obligatoire. Il permet de vérifier la sécurité de l’appareil, d’optimiser son fonctionnement et vous remet une attestation d’entretien.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Ma chaudière est ancienne : réparer ou remplacer ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>Tout dépend de son état, de la disponibilité des pièces et de vos besoins. Après examen, un avis honnête vous est donné : parfois une réparation suffit, parfois un remplacement devient plus raisonnable à moyen terme.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Puis-je obtenir des aides pour changer mon chauffage ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>Selon votre situation (revenus, logement, équipement choisi), vous pourriez bénéficier d’aides comme MaPrimeRénov’ ou les primes CEE, notamment pour une pompe à chaleur ou un chauffage au bois. Les conditions évoluent : elles sont à vérifier au moment du projet, sur les sites officiels.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Une pompe à chaleur peut-elle remplacer ma chaudière fioul ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>C’est souvent envisageable, notamment avec une pompe à chaleur air/eau raccordée aux radiateurs existants. Il faut cependant vérifier l’isolation, la température d’eau nécessaire et la place disponible : c’est l’objet de la visite.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Intervenez-vous pour une simple fuite ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>Oui, la plomberie fait partie du métier : fuite, robinet, chasse d’eau, chauffe-eau… Appelez pour décrire le problème et convenir d’un passage selon les disponibilités.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Quelles communes couvrez-vous ?<span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button><div class="qa-a"><div><p>Principalement Bihorel, Bois-Guillaume, Rouen et Darnétal. Pour une autre commune proche, n’hésitez pas à appeler pour vérifier.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ HORAIRES & ADRESSE ============ -->
+<section class="alt" id="horaires">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Horaires &amp; secteur</span>
+      <h2>Où le trouver</h2>
+    </div>
+    <div class="visit">
+      <div class="board rv">
+        <h3>Horaires</h3>
+        <table id="hours">
+          <tr data-d="1"><td>Lundi</td><td>8h – 18h</td></tr>
+          <tr data-d="2"><td>Mardi</td><td>8h – 18h</td></tr>
+          <tr data-d="3"><td>Mercredi</td><td>8h – 18h</td></tr>
+          <tr data-d="4"><td>Jeudi</td><td>8h – 18h</td></tr>
+          <tr data-d="5"><td>Vendredi</td><td>8h – 18h</td></tr>
+          <tr data-d="6"><td>Samedi</td><td>Sur rendez-vous</td></tr>
+          <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+        <p class="warn">Horaires indicatifs, à confirmer par téléphone.</p>
+      </div>
+      <div class="place rv">
+        <h3>L’adresse</h3>
+        <address>Rue du Docteur Caron<br>76420 Bihorel</address>
+        <div class="mini-map">
+          <svg viewBox="0 0 400 170" aria-label="Schéma : Bihorel entouré de Bois-Guillaume, Rouen et Darnétal">
+            <rect width="400" height="170" fill="#f8f0e0"/>
+            <path d="M0 150c80-20 140 10 220-8s130-30 180-20" stroke="#cdbb97" stroke-width="10" fill="none" opacity=".6"/>
+            <g stroke="#cdbb97" stroke-width="2" stroke-dasharray="4 5" fill="none"><path d="M200 82 92 40M200 82 118 140M200 82 318 120"/></g>
+            <circle cx="200" cy="82" r="34" fill="#6d8a3b" opacity=".18"/>
+            <circle cx="200" cy="82" r="9" fill="#a8412b"/>
+            <text x="200" y="62" text-anchor="middle" font-family="Cabin,Arial" font-weight="700" font-size="15" fill="#5b3a22">Bihorel</text>
+            <g font-family="Cabin,Arial" font-size="13" fill="#5a4a3c"><circle cx="92" cy="40" r="5" fill="#5b3a22"/><text x="102" y="28">Bois-Guillaume</text><circle cx="118" cy="140" r="5" fill="#5b3a22"/><text x="130" y="160">Rouen</text><circle cx="318" cy="120" r="5" fill="#5b3a22"/><text x="300" y="104">Darnétal</text></g>
+          </svg>
+        </div>
+        <div class="towns"><span>Bihorel</span><span>Bois-Guillaume</span><span>Rouen</span><span>Darnétal</span></div>
+        <div><a class="btn btn-brique" href="https://www.google.com/maps/search/?api=1&amp;query=rue+du+Docteur+Caron+76420+Bihorel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Itinéraire</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="beam" aria-hidden="true"></div>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="s-head rv">
+      <span class="pre"><svg aria-hidden="true"><use href="#pommier"/></svg>Contact</span>
+      <h2>Demander un devis</h2>
+      <p>Expliquez votre besoin en quelques mots : Christophe Buchy vous recontacte pour en discuter.</p>
+    </div>
+    <div class="contact">
+      <div class="c-card rv">
+        <h3>Un coup de fil suffit</h3>
+        <p>Le plus simple reste souvent d’appeler directement, pour un dépannage comme pour un projet.</p>
+        <a class="c-line big" href="tel:+33610444582"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span><small>Téléphone</small>06 10 44 45 82</span></a>
+        <a class="c-line" href="mailto:chris.buchy@free.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><small>E-mail</small>chris.buchy@free.fr</span></a>
+        <div class="c-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Adresse</small>Rue du Docteur Caron, 76420 Bihorel</span></div>
+      </div>
+      <form class="devis rv" id="devis" novalidate>
+        <div class="f"><label for="n">Nom</label><input id="n" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="f"><label for="t">Téléphone</label><input id="t" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="f"><label for="c">Commune</label><select id="c"><option>Bihorel</option><option>Bois-Guillaume</option><option>Rouen</option><option>Darnétal</option><option>Autre commune</option></select></div>
+        <div class="f"><label for="b">Besoin</label><select id="b"><option>Entretien de chaudière</option><option>Remplacement de chaudière</option><option>Pompe à chaleur</option><option>Chauffage bois</option><option>Chauffage électrique</option><option>Plomberie / fuite</option><option>Autre</option></select></div>
+        <div class="f full"><label for="m">Votre message</label><textarea id="m" placeholder="Type d’installation, marque de la chaudière, ce qui ne va pas…"></textarea></div>
+        <div class="form-end"><small>Vos coordonnées servent uniquement à répondre à votre demande.</small><button class="btn btn-brique" type="submit">Envoyer ma demande</button></div>
+        <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera actif sur le site final.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="beam" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="orchard" aria-hidden="true"><svg><use href="#pommier"/></svg><svg><use href="#pomme"/></svg><svg><use href="#pommier"/></svg><svg><use href="#pomme"/></svg><svg><use href="#pommier"/></svg></div>
+    <div class="f-top">
+      <div class="f-brand"><span class="script">Christophe Buchy</span><p>Plombier chauffagiste à Bihorel. Chaudières gaz et fioul, chauffage électrique, bois, pompes à chaleur et plomberie.</p></div>
+      <div><h4>Coordonnées</h4><ul><li><a href="tel:+33610444582">06 10 44 45 82</a></li><li><a href="mailto:chris.buchy@free.fr">chris.buchy@free.fr</a></li><li>Rue du Docteur Caron<br>76420 Bihorel</li></ul></div>
+      <div><h4>Horaires indicatifs</h4><p>Lun – ven : 8h – 18h<br>Samedi : sur rendez-vous<br>Dimanche : fermé<br><small>À confirmer par téléphone</small></p></div>
+      <div><h4>Secteur</h4><ul><li>Bihorel</li><li>Bois-Guillaume</li><li>Rouen</li><li>Darnétal</li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© <span id="y">2026</span> Christophe Buchy · Mentions légales · Confidentialité</span><span>QUALIBAT Entretien chauffage · QUALIBAT Remplacement chaudière · Tarifs sur devis</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="tel:+33610444582" aria-label="Appeler Christophe Buchy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></a>
+
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function setMenu(o){burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');menu.classList.toggle('open',o)}
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  document.querySelectorAll('.qa button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentNode,o=q.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+
+  var d=new Date().getDay(),r=document.querySelector('#hours tr[data-d="'+d+'"]');if(r)r.classList.add('today');
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  document.getElementById('devis').addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('form-msg');m.classList.add('show');m.scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paul Grenot – Chauffagiste à Sotteville-lès-Rouen</title>
+<meta name="description" content="Paul Grenot, chauffagiste à Sotteville-lès-Rouen (76300) : chaudières gaz ou fioul et pompes à chaleur, label QUALIBAT PAC. Intervention à Sotteville-lès-Rouen et dans l'agglomération rouennaise.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --jaune:#f7e733;
+  --bleu:#2340d9;
+  --blanc:#ffffff;
+  --noir:#0d0d0d;
+  --rouge:#ff3b30;
+  --gris:#f2f0e6;
+  --bord:3px solid var(--noir);
+  --bord-epais:4px solid var(--noir);
+  --ombre:6px 6px 0 var(--noir);
+  --ombre-l:10px 10px 0 var(--noir);
+  --titre:"Anton", Impact, "Haettenschweiler", "Arial Narrow Bold", "Arial Black", sans-serif;
+  --mono:"Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Courier New", monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--mono);font-size:16px;line-height:1.6;color:var(--noir);background:var(--gris);overflow-x:hidden;
+  background-image:radial-gradient(rgba(13,13,13,.13) 1.2px,transparent 1.2px);background-size:22px 22px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titre);font-weight:400;text-transform:uppercase;line-height:1.08;margin:0 0 .4em;letter-spacing:.01em}
+h2{font-size:clamp(2.6rem,7vw,5.2rem)}
+h3{font-size:1.6rem;letter-spacing:.02em}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.section{padding:clamp(70px,9vw,110px) 0}
+.etiquette{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;background:var(--noir);color:var(--jaune);padding:.35em .8em;border:var(--bord);margin-bottom:16px}
+.etiquette.rouge{background:var(--rouge);color:var(--blanc)}
+.etiquette.blanc{background:var(--blanc);color:var(--noir)}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:44px}
+.head p{max-width:460px;margin:0;font-size:.98rem}
+.surligne{background:linear-gradient(transparent 55%,var(--jaune) 55%);padding:0 .1em}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--mono);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;padding:.95em 1.4em;border:var(--bord);box-shadow:var(--ombre);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;color:var(--noir);background:var(--blanc)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--noir)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--noir)}
+.btn-bleu{background:var(--bleu);color:var(--blanc)}
+.btn-jaune{background:var(--jaune)}
+.btn-rouge{background:var(--rouge);color:var(--blanc)}
+.btn-noir{background:var(--noir);color:var(--jaune)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--blanc);border-bottom:var(--bord-epais)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:var(--titre);font-weight:400;font-size:1.7rem;letter-spacing:.02em;line-height:1}
+.logo i{font-style:normal;background:var(--jaune);border:var(--bord);font-weight:700;font-size:.68rem;padding:.15em .5em;text-transform:uppercase}
+.menu{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-weight:700;font-size:.85rem;text-transform:uppercase;padding:.5em .8em;border:3px solid transparent;transition:background .15s ease,border-color .15s ease}
+.menu a:hover{background:var(--jaune);border-color:var(--noir)}
+.menu .btn{padding:.6em 1em;box-shadow:4px 4px 0 var(--noir);margin-left:8px;border:var(--bord)}
+.menu .btn:hover{background:var(--rouge);color:var(--blanc)}
+.burger{display:none;width:50px;height:46px;border:var(--bord);background:var(--jaune);box-shadow:4px 4px 0 var(--noir);cursor:pointer;padding:0}
+.burger span{display:block;width:24px;height:3px;background:var(--noir);margin:5px auto;transition:transform .2s ease,opacity .2s ease}
+.burger[aria-expanded="true"]{background:var(--rouge)}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* HERO bento */
+.hero{padding:104px 0 60px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto auto auto;gap:20px;grid-template-areas:"t t t c" "t t t c" "p p a l" "p p z z"}
+.tuile{border:var(--bord-epais);box-shadow:var(--ombre-l);background:var(--blanc);padding:24px;position:relative;transition:transform .2s ease,box-shadow .2s ease}
+.tuile:hover{transform:translate(-4px,-4px);box-shadow:14px 14px 0 var(--noir)}
+.t-titre{grid-area:t;background:var(--jaune);padding:30px 34px 34px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.t-titre .prenom{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.t-titre h1{font-size:1rem;font-family:var(--mono);font-weight:700;margin:0;text-transform:uppercase;letter-spacing:.04em}
+.geant{font-family:var(--titre);font-size:clamp(5.6rem,15vw,13.5rem);line-height:.86;letter-spacing:-.005em;margin:18px 0 14px;display:block;text-transform:uppercase}
+.geant span{color:var(--bleu);-webkit-text-stroke:0}
+.accroche{font-size:1.05rem;max-width:600px;margin-bottom:22px;font-weight:400}
+.accroche strong{background:var(--blanc);border:2px solid var(--noir);padding:0 .3em}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.t-titre .coin{position:absolute;right:-14px;top:22px;background:var(--rouge);color:var(--blanc);border:var(--bord);font-weight:700;font-size:.78rem;text-transform:uppercase;padding:.4em 2.4em .4em 1em;transform:rotate(4deg)}
+.t-chaud{grid-area:c;background:var(--blanc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:320px}
+.t-chaud svg{width:100%;max-width:220px;height:auto}
+.t-chaud .flamme{transform-origin:50% 90%;animation:flamme 1.4s steps(2) infinite}
+@keyframes flamme{50%{transform:scale(1.1,1.15)}}
+.legende{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;border-top:3px solid var(--noir);padding-top:8px;align-self:stretch;display:flex;justify-content:space-between}
+.t-pac{grid-area:p;background:var(--bleu);color:var(--blanc);display:flex;align-items:center;gap:18px;min-height:240px}
+.t-pac svg{width:56%;flex:none;height:auto}
+.t-pac .helice{transform-origin:110px 95px;animation:tourne 2.2s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.t-pac h2{font-size:clamp(2rem,3.4vw,3rem);color:var(--jaune);margin:0 0 .2em}
+.t-pac p{margin:0;font-size:.88rem}
+.t-appel{grid-area:a;background:var(--bleu);color:var(--blanc);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:12px;transform:rotate(-2deg);min-height:200px}
+.t-appel:hover{transform:rotate(-2deg) translate(-4px,-4px);background:#1a33bd}
+.t-appel .gros{font-family:var(--titre);font-size:2.8rem;line-height:.9;text-transform:uppercase}
+.t-appel .num{font-weight:700;font-size:1.05rem;background:var(--blanc);color:var(--noir);border:var(--bord);padding:.25em .5em;align-self:flex-start;white-space:nowrap}
+.t-appel svg{width:42px;height:42px}
+.t-label{grid-area:l;background:var(--blanc);transform:rotate(2.5deg);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;min-height:200px}
+.t-label:hover{transform:rotate(2.5deg) translate(-4px,-4px)}
+.badge{display:flex;align-items:center;gap:10px}
+.badge svg{width:58px;height:58px;flex:none}
+.badge b{font-family:var(--titre);font-weight:400;font-size:2rem;line-height:.95;text-transform:uppercase}
+.t-label small{font-size:.8rem}
+.t-zone{grid-area:z;background:var(--rouge);color:var(--blanc);display:flex;align-items:center;gap:18px}
+.t-zone svg{width:70px;height:70px;flex:none}
+.t-zone b{display:block;font-family:var(--titre);font-weight:400;font-size:1.7rem;line-height:1;text-transform:uppercase}
+.t-zone span{font-size:.85rem}
+
+/* Bandeau confiance */
+.trust{background:var(--noir);color:var(--blanc);border-block:var(--bord-epais);overflow:hidden}
+.trust-in{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;padding:22px 20px;font-weight:700;text-transform:uppercase;font-size:.9rem;letter-spacing:.04em}
+.trust-in>*{display:flex;align-items:center;gap:10px}
+.trust-in svg{width:22px;height:22px;color:var(--jaune);flex:none}
+.trust-in a{color:var(--jaune);text-decoration:none}
+.trust-in a:hover{text-decoration:underline}
+
+/* Services */
+.grid-services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.carte{background:var(--blanc);border:var(--bord);box-shadow:var(--ombre);padding:26px;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;position:relative}
+.carte:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--noir);background:var(--jaune)}
+.carte .ico{width:68px;height:68px;border:var(--bord);background:var(--jaune);display:grid;place-items:center;margin-bottom:18px;transition:background .15s ease,transform .2s ease}
+.carte:hover .ico{background:var(--blanc);transform:rotate(-6deg)}
+.carte .ico svg{width:40px;height:40px}
+.carte .n{position:absolute;top:16px;right:18px;font-weight:700;font-size:.8rem;border:2px solid var(--noir);padding:0 .4em;background:var(--blanc)}
+.carte p{margin:0;font-size:.92rem}
+.carte.pac .ico{background:var(--bleu);color:var(--blanc)}
+
+/* Pourquoi */
+.pourquoi{background:var(--bleu);color:var(--blanc);border-block:var(--bord-epais)}
+.pourquoi h2{color:var(--blanc)}
+.pourquoi h2 .j{color:var(--jaune)}
+.grid-atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.atout{background:var(--blanc);color:var(--noir);border:var(--bord);box-shadow:var(--ombre);padding:24px;transition:transform .15s ease}
+.atout:nth-child(even){transform:rotate(1deg)}
+.atout:nth-child(odd){transform:rotate(-1deg)}
+.atout:hover{transform:rotate(0) translate(-3px,-3px)}
+.atout .big{font-family:var(--titre);font-size:3.2rem;line-height:1;color:var(--rouge);display:block;margin-bottom:6px}
+.atout p{margin:0;font-size:.9rem}
+
+/* Étapes */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:var(--bord-epais);box-shadow:var(--ombre-l);background:var(--blanc)}
+.step{padding:28px 24px;border-right:var(--bord);position:relative;transition:background .15s ease}
+.step:last-child{border-right:0}
+.step:hover{background:var(--jaune)}
+.step .num{font-family:var(--titre);font-size:5rem;line-height:.9;display:block;margin-bottom:12px;color:var(--bleu);-webkit-text-stroke:2px var(--noir)}
+.step p{margin:0;font-size:.9rem}
+.step .fleche{position:absolute;right:-22px;top:40px;width:40px;height:40px;background:var(--rouge);border:var(--bord);display:grid;place-items:center;z-index:2;color:var(--blanc);font-weight:700}
+.step:last-child .fleche{display:none}
+
+/* À propos */
+.apropos-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:stretch}
+.bloc-texte{background:var(--blanc);border:var(--bord-epais);box-shadow:var(--ombre-l);padding:36px}
+.bloc-texte p{font-size:.98rem}
+.fiche{background:var(--jaune);border:var(--bord-epais);box-shadow:var(--ombre-l);padding:30px;transform:rotate(1.2deg);display:flex;flex-direction:column;gap:14px}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto 1fr;border-top:var(--bord)}
+.fiche dt,.fiche dd{margin:0;padding:10px 6px;border-bottom:var(--bord);font-size:.88rem}
+.fiche dt{font-weight:700;text-transform:uppercase;padding-right:16px}
+.fiche dd a{font-weight:700;word-break:break-all}
+
+/* Comparatif */
+.comparatif{background:var(--jaune);border-block:var(--bord-epais)}
+.table-wrap{overflow-x:auto;border:var(--bord-epais);box-shadow:var(--ombre-l);background:var(--blanc)}
+table.comp{width:100%;border-collapse:collapse;min-width:720px}
+.comp th,.comp td{border:var(--bord);padding:16px 18px;text-align:left;vertical-align:top;font-size:.9rem}
+.comp thead th{background:var(--noir);color:var(--blanc);font-family:var(--titre);font-weight:400;font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em}
+.comp thead th svg{width:44px;height:44px;display:block;margin-bottom:8px}
+.comp tbody th{background:var(--gris);font-weight:700;text-transform:uppercase;font-size:.8rem;width:18%}
+.comp tbody tr:hover td{background:#fffbd0}
+.comp .devis td{font-weight:700}
+.comp .tag{display:inline-block;background:var(--rouge);color:var(--blanc);border:2px solid var(--noir);padding:.1em .5em;font-size:.78rem}
+.scroll-note{display:none;font-size:.8rem;margin-top:12px;font-weight:700}
+
+/* Avis */
+.avis-bloc{background:var(--blanc);border:var(--bord-epais);box-shadow:var(--ombre-l);display:grid;grid-template-columns:auto 1fr;gap:0}
+.avis-bloc .gauche{background:var(--rouge);color:var(--blanc);border-right:var(--bord-epais);padding:30px;display:grid;place-items:center}
+.avis-bloc .gauche svg{width:110px;height:110px}
+.avis-bloc .droite{padding:34px}
+.avis-bloc h2{font-size:clamp(2rem,4.5vw,3.4rem)}
+.etoiles{display:flex;gap:6px;margin:6px 0 16px}
+.etoiles svg{width:30px;height:30px}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:16px}
+.faq-item{border:var(--bord);background:var(--blanc);box-shadow:5px 5px 0 var(--noir)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:0;padding:18px 20px;font-family:var(--mono);font-weight:700;font-size:1rem;text-align:left;cursor:pointer;color:var(--noir)}
+.faq-q:hover{background:var(--jaune)}
+.faq-q .pm{flex:none;width:36px;height:36px;border:var(--bord);background:var(--jaune);display:grid;place-items:center;font-size:1.4rem;line-height:1;transition:transform .2s ease,background .2s ease}
+.faq-item.open .faq-q{background:var(--bleu);color:var(--blanc)}
+.faq-item.open .pm{transform:rotate(45deg);background:var(--rouge);color:var(--blanc)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.faq-a>div{overflow:hidden}
+.faq-a p{margin:0;padding:18px 20px;border-top:var(--bord);font-size:.93rem}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+
+/* Horaires */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.panneau{background:var(--blanc);border:var(--bord-epais);box-shadow:var(--ombre-l);padding:28px}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{border-bottom:2px solid var(--noir);padding:11px 8px;font-size:.95rem}
+.horaires td:last-child{text-align:right;font-weight:700}
+.horaires tr.today td{background:var(--jaune)}
+.horaires tr.today td:first-child::after{content:"AUJOURD'HUI";margin-left:10px;background:var(--rouge);color:var(--blanc);font-size:.66rem;padding:.15em .5em;border:2px solid var(--noir);font-weight:700;vertical-align:middle}
+.indicatif{margin:14px 0 0;font-size:.82rem;font-style:italic}
+.plan{border:var(--bord);background:var(--bleu);margin:6px 0 18px}
+.plan svg{display:block;width:100%;height:auto}
+.zone-txt{font-size:.92rem}
+
+/* Contact */
+.contact{background:var(--noir);color:var(--blanc);border-top:var(--bord-epais)}
+.contact h2{color:var(--jaune)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.coord{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.coord li{border:3px solid var(--blanc);padding:14px 16px;display:flex;gap:14px;align-items:center}
+.coord svg{width:28px;height:28px;color:var(--jaune);flex:none}
+.coord a{color:var(--blanc);font-weight:700;text-decoration:none;word-break:break-all}
+.coord a:hover{color:var(--jaune)}
+.coord small{display:block;font-size:.78rem;opacity:.8}
+form.devis{background:var(--blanc);color:var(--noir);border:var(--bord-epais);box-shadow:10px 10px 0 var(--jaune);padding:32px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.full{grid-column:1/-1}
+.champ label{font-weight:700;font-size:.8rem;text-transform:uppercase}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:.95rem;border:var(--bord);padding:.75em .9em;background:var(--gris);color:var(--noir);border-radius:0;width:100%}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;background:#fffbd0;box-shadow:4px 4px 0 var(--bleu)}
+.champ textarea{min-height:120px;resize:vertical}
+.form-msg{display:none;margin:18px 0 0;padding:14px;border:var(--bord);background:var(--jaune);font-weight:700}
+.form-msg.show{display:block}
+.rgpd{font-size:.76rem;margin:14px 0 0}
+
+/* Footer */
+footer{background:var(--jaune);border-top:var(--bord-epais);padding:56px 0 24px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.foot-grid h3{font-size:1.4rem}
+.foot-logo{font-family:var(--titre);font-size:4rem;line-height:.9;text-transform:uppercase;margin:0 0 10px}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{padding:3px 0;font-size:.88rem}
+footer a{text-decoration:none;font-weight:700}
+footer a:hover{background:var(--noir);color:var(--jaune)}
+.foot-bas{margin-top:36px;padding-top:18px;border-top:var(--bord);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.8rem}
+.demo{background:var(--noir);color:#e6e6e6;text-align:center;font-size:.76rem;padding:12px 20px}
+
+.fcall{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:64px;height:64px;background:var(--rouge);color:var(--blanc);border:var(--bord);box-shadow:5px 5px 0 var(--noir);place-items:center}
+.fcall svg{width:30px;height:30px}
+.fcall:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--noir)}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.9,.3,1.3)}
+.reveal.in{opacity:1;transform:none}
+.atout.reveal.in:nth-child(even){transform:rotate(1deg)}
+.atout.reveal.in:nth-child(odd){transform:rotate(-1deg)}
+.atout.reveal.in:hover{transform:translate(-3px,-3px)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:1080px){
+  .bento{grid-template-columns:repeat(2,1fr);grid-template-areas:"t t" "c a" "c l" "p p" "z z"}
+  .grid-services{grid-template-columns:repeat(2,1fr)}
+  .grid-atouts{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2){border-right:0}
+  .step:nth-child(-n+2){border-bottom:var(--bord)}
+  .step .fleche{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--jaune);border-bottom:var(--bord-epais);padding:12px 20px 22px;transform:translateY(-130%);visibility:hidden;transition:transform .25s ease;z-index:-1}
+  .menu.open{transform:none;visibility:visible}
+  .menu a{border:0;border-bottom:3px solid var(--noir);padding:14px 4px;font-size:1rem}
+  .menu a:hover{background:var(--blanc)}
+  .menu .btn{display:flex;margin:16px 0 0;justify-content:center;border:var(--bord)}
+  .apropos-grid,.contact-grid,.infos-grid{grid-template-columns:1fr}
+  .fiche{transform:none}
+  .avis-bloc{grid-template-columns:1fr}
+  .avis-bloc .gauche{border-right:0;border-bottom:var(--bord-epais);padding:22px}
+  .avis-bloc .gauche svg{width:80px;height:80px}
+  .scroll-note{display:block}
+  .fcall{display:grid}
+  .demo{padding:12px 92px 12px 16px;text-align:left}
+}
+@media (max-width:600px){
+  body{font-size:15px}
+  .bento{grid-template-columns:1fr 1fr;gap:16px;grid-template-areas:"t t" "c c" "a l" "p p" "z z"}
+  .tuile{padding:18px;box-shadow:6px 6px 0 var(--noir)}
+  .t-titre{padding:22px 20px 24px}
+  .geant{font-size:27vw}
+  .t-titre .coin{font-size:.66rem;right:-18px;top:14px}
+  .cta .btn{width:100%}
+  .t-chaud{min-height:0}
+  .t-chaud svg{max-width:180px}
+  .t-pac{flex-direction:column;align-items:flex-start}
+  .t-pac svg{width:100%;max-width:280px}
+  .t-appel{min-height:170px}
+  .t-appel .gros{font-size:2rem}
+  .t-appel .num{font-size:.78rem;padding:.25em .35em}
+  .t-label{min-height:170px}
+  .badge{flex-direction:column;align-items:flex-start;gap:6px}
+  .badge svg{width:46px;height:46px}
+  .badge b{font-size:1.5rem}
+  .grid-services,.grid-atouts,.steps{grid-template-columns:1fr}
+  .step{border-right:0!important;border-bottom:var(--bord)}
+  .step:last-child{border-bottom:0}
+  .champs{grid-template-columns:1fr}
+  form.devis{padding:22px 18px}
+  .bloc-texte,.fiche,.panneau{padding:22px 18px}
+  .foot-grid{grid-template-columns:1fr}
+  .faq-q{font-size:.92rem;padding:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></g></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 22s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12z"/><rect x="9.5" y="7.5" width="5" height="5"/></g></symbol>
+    <symbol id="eclair" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="currentColor"/></symbol>
+    <symbol id="etoile" viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21l1.4-7L2 9.3l7-.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#accueil" aria-label="Paul Grenot, accueil"><b>GRENOT</b><i>Chauffage</i></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#comparatif">Comparatif</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#infos">Horaires</a></li>
+      <li><a href="#contact" class="btn btn-jaune">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO : mosaïque bento brutaliste -->
+<section class="hero" id="accueil">
+  <div class="wrap bento">
+    <div class="tuile t-titre">
+      <span class="coin">QUALIBAT PAC</span>
+      <div>
+        <div class="prenom"><span class="etiquette">Paul</span><h1>Chauffagiste à Sotteville-lès-Rouen</h1></div>
+        <span class="geant" aria-hidden="true">GRE<span>NOT</span></span>
+        <p class="accroche">Chaudière gaz, chaudière fioul ou <strong>pompe à chaleur</strong> : du chauffage solide, posé et suivi par un artisan de Sotteville, de la rive gauche à toute l'agglo rouennaise.</p>
+      </div>
+      <div class="cta">
+        <a href="tel:+33770335868" class="btn btn-bleu"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+        <a href="#contact" class="btn btn-blanc">Demander un devis →</a>
+      </div>
+    </div>
+
+    <div class="tuile t-chaud" aria-label="Illustration chaudière">
+      <svg viewBox="0 0 200 240" aria-hidden="true">
+        <rect x="40" y="14" width="120" height="176" fill="#ffffff" stroke="#0d0d0d" stroke-width="5"/>
+        <rect x="40" y="14" width="120" height="40" fill="#f7e733" stroke="#0d0d0d" stroke-width="5"/>
+        <rect x="56" y="26" width="46" height="16" fill="#0d0d0d"/>
+        <text x="60" y="39" font-family="Space Mono, monospace" font-size="12" font-weight="700" fill="#f7e733">65°C</text>
+        <circle cx="128" cy="34" r="8" fill="#ff3b30" stroke="#0d0d0d" stroke-width="4"/>
+        <rect x="62" y="74" width="76" height="76" fill="#0d0d0d"/>
+        <g class="flamme">
+          <path d="M100 140c-16 0-24-10-24-22 0-16 16-20 14-38 10 6 14 16 12 24 6-4 8-10 8-14 10 10 14 20 14 28 0 12-8 22-24 22z" fill="#ff3b30"/>
+          <path d="M100 140c-8 0-12-5-12-11 0-8 8-10 8-18 6 4 9 9 9 14 3-1 4-4 4-6 3 4 4 7 4 10 0 6-5 11-13 11z" fill="#f7e733"/>
+        </g>
+        <rect x="56" y="162" width="88" height="12" fill="#2340d9" stroke="#0d0d0d" stroke-width="3"/>
+        <path d="M66 190v34M90 190v34M110 190v34M134 190v34" stroke="#0d0d0d" stroke-width="6"/>
+        <rect x="58" y="222" width="16" height="10" fill="#ff3b30" stroke="#0d0d0d" stroke-width="3"/>
+        <rect x="126" y="222" width="16" height="10" fill="#2340d9" stroke="#0d0d0d" stroke-width="3"/>
+      </svg>
+      <div class="legende"><span>Gaz</span><span>+</span><span>Fioul</span></div>
+    </div>
+
+    <div class="tuile t-pac">
+      <svg viewBox="0 0 220 180" aria-hidden="true">
+        <rect x="10" y="20" width="200" height="140" fill="#ffffff" stroke="#0d0d0d" stroke-width="5"/>
+        <circle cx="110" cy="95" r="54" fill="#f7e733" stroke="#0d0d0d" stroke-width="5"/>
+        <g class="helice">
+          <path d="M110 95c-6-22 4-38 18-40 6 14-4 30-18 40zM110 95c22-6 38 4 40 18-14 6-30-4-40-18zM110 95c6 22-4 38-18 40-6-14 4-30 18-40zM110 95c-22 6-38-4-40-18 14-6 30 4 40 18z" fill="#0d0d0d"/>
+        </g>
+        <circle cx="110" cy="95" r="8" fill="#ff3b30" stroke="#0d0d0d" stroke-width="3"/>
+        <path d="M24 40h20M24 54h20M24 68h20M176 40h20M176 54h20M176 68h20" stroke="#0d0d0d" stroke-width="4"/>
+        <rect x="30" y="160" width="30" height="12" fill="#0d0d0d"/>
+        <rect x="160" y="160" width="30" height="12" fill="#0d0d0d"/>
+      </svg>
+      <div>
+        <span class="etiquette blanc">Air / eau</span>
+        <h2>Pompe à chaleur</h2>
+        <p>Étude, pose et suivi de PAC, par un installateur labellisé QUALIBAT PAC.</p>
+      </div>
+    </div>
+
+    <a class="tuile t-appel" href="tel:+33770335868" aria-label="Appeler Paul Grenot au 07 70 33 58 68">
+      <svg aria-hidden="true"><use href="#tel"/></svg>
+      <span class="gros">Appeler</span>
+      <span class="num">07 70 33 58 68</span>
+    </a>
+
+    <div class="tuile t-label">
+      <div class="badge">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M30 3l7 6 9-1 2 9 8 5-4 8 4 8-8 5-2 9-9-1-7 6-7-6-9 1-2-9-8-5 4-8-4-8 8-5 2-9 9 1z" fill="#f7e733" stroke="#0d0d0d" stroke-width="3" stroke-linejoin="round"/><path d="M20 30l7 7 14-14" fill="none" stroke="#0d0d0d" stroke-width="4"/></svg>
+        <b>Qualibat<br>PAC</b>
+      </div>
+      <small>Label détenu pour l'installation de pompes à chaleur.</small>
+    </div>
+
+    <div class="tuile t-zone">
+      <svg viewBox="0 0 70 70" aria-hidden="true"><rect x="3" y="3" width="64" height="64" fill="#ffffff" stroke="#0d0d0d" stroke-width="4"/><path d="M3 30c14-6 22 8 34 4s18-12 30-8" fill="none" stroke="#2340d9" stroke-width="7"/><rect x="28" y="40" width="14" height="14" fill="#0d0d0d"/></svg>
+      <div><b>Sotteville-lès-Rouen</b><span>et agglomération rouennaise</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Bandeau de confiance -->
+<section class="trust" aria-label="En bref">
+  <div class="trust-in">
+    <span><svg aria-hidden="true"><use href="#eclair"/></svg>Label QUALIBAT PAC</span>
+    <span><svg aria-hidden="true"><use href="#eclair"/></svg>Chaudières gaz ou fioul</span>
+    <span><svg aria-hidden="true"><use href="#eclair"/></svg>Pompes à chaleur</span>
+    <span><svg aria-hidden="true"><use href="#pin"/></svg>Sotteville-lès-Rouen et agglomération rouennaise</span>
+    <span><svg aria-hidden="true"><use href="#tel"/></svg><a href="tel:+33770335868">07 70 33 58 68</a></span>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="etiquette">01 / Services</span><h2>Ce que fait <span class="surligne">Paul Grenot</span></h2></div>
+      <p>Des chaudières gaz et fioul aux pompes à chaleur, tout ce qui chauffe votre maison passe entre de bonnes mains, de Sotteville au reste de l'agglo.</p>
+    </div>
+    <div class="grid-services">
+      <article class="carte reveal"><span class="n">A</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="4" width="22" height="28"/><path d="M14 10h12"/><path d="M20 28c-3 0-5-2-5-5 0-4 4-4 4-9 3 2 6 5 6 9 0 3-2 5-5 5z" fill="currentColor"/><path d="M14 32v5M26 32v5"/></svg></div>
+        <h3>Chaudière gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, raccordement et mise en service soignés.</p>
+      </article>
+      <article class="carte reveal d1"><span class="n">B</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="12" width="20" height="24"/><path d="M8 18h12M8 24h12"/><path d="M24 28h6V8"/><path d="M33 4l-4 6a4 4 0 1 0 8 0z" fill="currentColor"/></svg></div>
+        <h3>Chaudière fioul</h3>
+        <p>Pose, remplacement et remise en route de chaudières fioul pour les maisons non raccordées au gaz.</p>
+      </article>
+      <article class="carte pac reveal d2"><span class="n">C</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="34" height="26"/><circle cx="20" cy="20" r="9"/><path d="M20 11v18M11 20h18" stroke-width="2.5"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et installation de pompes à chaleur par un professionnel labellisé QUALIBAT PAC.</p>
+      </article>
+      <article class="carte reveal"><span class="n">D</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="30" height="28"/><path d="M5 15h30M13 3v8M27 3v8"/><path d="M13 24l5 5 9-9"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>Vérification, nettoyage et réglages de votre chaudière, avec l'attestation d'entretien à la clé.</p>
+      </article>
+      <article class="carte reveal d1"><span class="n">E</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M26 5a8 8 0 0 0-7 10L6 28l6 6 13-13a8 8 0 0 0 10-7l-5 3-4-2-1-4 5-4z"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Chaudière en panne ou en défaut : diagnostic franc et remise en route dès que possible.</p>
+      </article>
+      <article class="carte reveal d2"><span class="n">F</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M6 20h22M20 12l8 8-8 8"/><rect x="30" y="8" width="6" height="24" fill="currentColor"/></svg></div>
+        <h3>Remplacement d'équipement</h3>
+        <p>Passer d'une vieille chaudière à un équipement récent ou à une PAC : on étudie la faisabilité ensemble.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi -->
+<section class="section pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="etiquette blanc">02 / Pourquoi lui</span><h2>Pas de blabla, <span class="j">du chaud.</span></h2></div>
+      <p>Un artisan joignable, un label vérifiable, des explications claires. Le reste, c'est du travail bien fait.</p>
+    </div>
+    <div class="grid-atouts">
+      <div class="atout reveal"><span class="big">→</span><h3>Label QUALIBAT PAC</h3><p>Une qualification reconnue pour l'installation de pompes à chaleur.</p></div>
+      <div class="atout reveal d1"><span class="big">☎</span><h3>Un seul interlocuteur</h3><p>Vous parlez directement à Paul Grenot, du devis jusqu'à la mise en service.</p></div>
+      <div class="atout reveal d2"><span class="big">◎</span><h3>Ancré à Sotteville</h3><p>Basé à Sotteville-lès-Rouen, il connaît les maisons de l'agglo, des cités cheminotes aux pavillons récents.</p></div>
+      <div class="atout reveal d3"><span class="big">≡</span><h3>Devis clair</h3><p>Une proposition écrite et détaillée avant chaque chantier, sans ligne floue.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Étapes -->
+<section class="section" id="etapes">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="etiquette">03 / Méthode</span><h2>Comment ça se passe</h2></div>
+      <p>Quatre étapes, dans l'ordre, sans surprise.</p>
+    </div>
+    <ol class="steps reveal" style="list-style:none;padding:0;margin:0">
+      <li class="step"><span class="num">01</span><h3>Appel</h3><p>Vous appelez ou envoyez le formulaire avec votre besoin.</p><span class="fleche" aria-hidden="true">→</span></li>
+      <li class="step"><span class="num">02</span><h3>Visite</h3><p>Paul Grenot passe voir votre installation et votre logement.</p><span class="fleche" aria-hidden="true">→</span></li>
+      <li class="step"><span class="num">03</span><h3>Devis</h3><p>Vous recevez un devis détaillé, à valider à tête reposée.</p><span class="fleche" aria-hidden="true">→</span></li>
+      <li class="step"><span class="num">04</span><h3>Chantier</h3><p>Installation ou intervention, mise en service et explications.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- À propos -->
+<section class="section" id="apropos" style="padding-top:0">
+  <div class="wrap apropos-grid">
+    <div class="bloc-texte reveal">
+      <span class="etiquette rouge">04 / À propos</span>
+      <h2>Paul Grenot, chauffagiste</h2>
+      <p>Paul Grenot est chauffagiste à Sotteville-lès-Rouen, dans le 76300, sur la rive gauche de la Seine. Son terrain de jeu : les chaudières gaz ou fioul, de l'installation à l'entretien.</p>
+      <p>Titulaire du label QUALIBAT PAC, il installe également des pompes à chaleur pour ceux qui veulent changer de mode de chauffage. Il intervient à Sotteville-lès-Rouen et dans toute l'agglomération rouennaise.</p>
+      <a href="#contact" class="btn btn-jaune">Parler de mon projet →</a>
+    </div>
+    <aside class="fiche reveal d1" aria-label="Fiche d'identité">
+      <span class="etiquette">Fiche</span>
+      <dl>
+        <dt>Nom</dt><dd>Paul Grenot</dd>
+        <dt>Métier</dt><dd>Chauffagiste</dd>
+        <dt>Ville</dt><dd>Sotteville-lès-Rouen (76300)</dd>
+        <dt>Label</dt><dd>QUALIBAT PAC</dd>
+        <dt>Énergies</dt><dd>Gaz · Fioul · Pompe à chaleur</dd>
+        <dt>Tél.</dt><dd><a href="tel:+33770335868">07 70 33 58 68</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- Comparatif -->
+<section class="section comparatif" id="comparatif">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="etiquette">05 / Comparatif</span><h2>Gaz, fioul ou PAC ?</h2></div>
+      <p>Un repère général pour y voir clair. La bonne solution dépend de votre logement : c'est l'objet de la visite.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="comp">
+        <thead>
+          <tr>
+            <th scope="col"><span class="etiquette blanc" style="margin:0">Critère</span></th>
+            <th scope="col"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="3" width="28" height="38" fill="#f7e733" stroke="#fff" stroke-width="3"/><path d="M22 34c-5 0-7-3-7-6 0-5 5-6 5-11 4 3 8 6 8 11 0 3-2 6-6 6z" fill="#ff3b30"/></svg>Chaudière gaz</th>
+            <th scope="col"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="3" y="12" width="24" height="29" fill="#fff" stroke="#fff" stroke-width="3"/><path d="M35 8l-5 8a5 5 0 1 0 10 0z" fill="#f7e733"/><path d="M27 30h8V20" stroke="#fff" stroke-width="3" fill="none"/></svg>Chaudière fioul</th>
+            <th scope="col"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="3" y="8" width="38" height="28" fill="#2340d9" stroke="#fff" stroke-width="3"/><circle cx="22" cy="22" r="9" fill="#f7e733"/><path d="M22 14v16M14 22h16" stroke="#0d0d0d" stroke-width="3"/></svg>Pompe à chaleur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Énergie</th><td>Gaz naturel du réseau</td><td>Fioul domestique stocké en cuve</td><td>Calories de l'air extérieur + électricité</td></tr>
+          <tr><th scope="row">Pour qui</th><td>Logements raccordés au gaz</td><td>Maisons hors réseau gaz</td><td>Maisons, selon isolation et émetteurs</td></tr>
+          <tr><th scope="row">Encombrement</th><td>Compact, souvent murale</td><td>Chaudière au sol + cuve</td><td>Unité extérieure + module intérieur</td></tr>
+          <tr><th scope="row">Entretien</th><td>Annuel obligatoire</td><td>Annuel obligatoire</td><td>Entretien régulier recommandé, selon le modèle</td></tr>
+          <tr><th scope="row">Aides</th><td>Selon votre situation</td><td>Selon votre situation</td><td>Possibles, sous conditions, avec un installateur qualifié</td></tr>
+          <tr class="devis"><th scope="row">Tarif</th><td><span class="tag">Sur devis</span></td><td><span class="tag">Sur devis</span></td><td><span class="tag">Sur devis</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-note">← Faites défiler le tableau →</p>
+  </div>
+</section>
+
+<!-- Avis -->
+<section class="section" id="avis">
+  <div class="wrap">
+    <div class="avis-bloc reveal">
+      <div class="gauche" aria-hidden="true">
+        <svg viewBox="0 0 110 110"><rect x="6" y="10" width="98" height="70" fill="#ffffff" stroke="#0d0d0d" stroke-width="5"/><path d="M26 80v24l22-24" fill="#ffffff" stroke="#0d0d0d" stroke-width="5" stroke-linejoin="round"/><path d="M24 34h62M24 52h40" stroke="#0d0d0d" stroke-width="6"/></svg>
+      </div>
+      <div class="droite">
+        <span class="etiquette">06 / Avis</span>
+        <h2>Les avis de vos clients apparaîtront ici</h2>
+        <div class="etoiles" aria-hidden="true"><svg><use href="#etoile"/></svg><svg><use href="#etoile"/></svg><svg><use href="#etoile"/></svg><svg><use href="#etoile"/></svg><svg><use href="#etoile"/></svg></div>
+        <p>Paul Grenot a installé ou entretenu votre chauffage ? Votre avis aidera d'autres habitants de Sotteville et de l'agglo rouennaise à choisir leur chauffagiste.</p>
+        <a href="#contact" class="btn btn-rouge">Laisser un avis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="etiquette">07 / FAQ</span><h2>Questions fréquentes</h2></div>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Une pompe à chaleur convient-elle à ma maison ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>Cela dépend de l'isolation, de la surface, des radiateurs ou du plancher chauffant existants et de la place disponible pour l'unité extérieure. Une visite permet de vérifier si la PAC est pertinente, ou si une chaudière reste plus adaptée.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Que signifie le label QUALIBAT PAC ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>C'est une qualification professionnelle liée à l'installation de pompes à chaleur. Faire appel à un installateur qualifié est généralement une condition pour prétendre à certaines aides publiques.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Puis-je obtenir MaPrimeRénov' ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>Certains travaux, notamment l'installation d'une pompe à chaleur, pourraient être éligibles à MaPrimeRénov' ou à d'autres aides, selon votre situation, vos revenus et votre logement. Les règles évoluent : renseignez-vous sur le site officiel France Rénov' avant de signer.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">L'entretien de la chaudière est-il obligatoire ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>Oui, pour les chaudières gaz et fioul, un entretien annuel par un professionnel est obligatoire. Il garantit la sécurité de l'appareil et permet de garder une consommation maîtrisée.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Ma chaudière fioul est ancienne, que faire ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>Selon son état et votre projet, elle peut être entretenue, réparée ou remplacée, par une chaudière récente ou par une pompe à chaleur. Le plus simple est d'en parler lors d'une visite.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Où intervenez-vous ?<span class="pm" aria-hidden="true">+</span></button><div class="faq-a"><div><p>À Sotteville-lès-Rouen et dans l'agglomération rouennaise. Pour une commune précise, un simple appel permet de confirmer.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Horaires / zone -->
+<section class="section" id="infos" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal"><div><span class="etiquette">08 / Infos</span><h2>Horaires &amp; zone</h2></div></div>
+    <div class="infos-grid">
+      <div class="panneau reveal">
+        <h3>Horaires</h3>
+        <table class="horaires"><tbody>
+          <tr data-d="1"><td>Lundi</td><td>8h – 18h</td></tr>
+          <tr data-d="2"><td>Mardi</td><td>8h – 18h</td></tr>
+          <tr data-d="3"><td>Mercredi</td><td>8h – 18h</td></tr>
+          <tr data-d="4"><td>Jeudi</td><td>8h – 18h</td></tr>
+          <tr data-d="5"><td>Vendredi</td><td>8h – 18h</td></tr>
+          <tr data-d="6"><td>Samedi</td><td>Sur RDV</td></tr>
+          <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+        </tbody></table>
+        <p class="indicatif">Horaires indicatifs, à confirmer par téléphone.</p>
+      </div>
+      <div class="panneau reveal d1">
+        <h3>Zone d'intervention</h3>
+        <div class="plan" aria-hidden="true">
+          <svg viewBox="0 0 400 190">
+            <rect width="400" height="190" fill="#2340d9"/>
+            <g stroke="#ffffff" stroke-width="1" opacity=".25"><path d="M0 38h400M0 76h400M0 114h400M0 152h400M80 0v190M160 0v190M240 0v190M320 0v190"/></g>
+            <path d="M-10 60C80 50 120 90 170 110S260 150 300 120 360 70 410 80" fill="none" stroke="#0d0d0d" stroke-width="22"/>
+            <path d="M-10 60C80 50 120 90 170 110S260 150 300 120 360 70 410 80" fill="none" stroke="#ffffff" stroke-width="12"/>
+            <rect x="150" y="128" width="26" height="26" fill="#f7e733" stroke="#0d0d0d" stroke-width="4"/>
+            <rect x="184" y="132" width="150" height="20" fill="#0d0d0d"/>
+            <text x="190" y="147" font-family="Space Mono, monospace" font-weight="700" font-size="12" fill="#f7e733">SOTTEVILLE-LÈS-ROUEN</text>
+            <rect x="120" y="22" width="14" height="14" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+            <text x="140" y="34" font-family="Space Mono, monospace" font-weight="700" font-size="12" fill="#ffffff">ROUEN</text>
+            <circle cx="163" cy="141" r="60" fill="none" stroke="#f7e733" stroke-width="3" stroke-dasharray="8 6"/>
+          </svg>
+        </div>
+        <p class="zone-txt"><strong>Sotteville-lès-Rouen et agglomération rouennaise.</strong> Pas d'adresse d'atelier publiée : les interventions se font chez vous.</p>
+        <a class="btn btn-bleu" href="https://www.google.com/maps/search/?api=1&amp;query=Sotteville-l%C3%A8s-Rouen%2076300" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#pin"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="etiquette rouge">09 / Contact</span>
+      <h2>Un devis ? Une panne ?</h2>
+      <p>Décrivez votre projet de chaudière ou de pompe à chaleur, Paul Grenot revient vers vous.</p>
+      <ul class="coord">
+        <li><svg aria-hidden="true"><use href="#tel"/></svg><div><a href="tel:+33770335868">07 70 33 58 68</a><small>Appel direct</small></div></li>
+        <li><svg aria-hidden="true"><use href="#mail"/></svg><div><a href="mailto:spc.grenot@orange.fr">spc.grenot@orange.fr</a><small>Demande écrite</small></div></li>
+        <li><svg aria-hidden="true"><use href="#pin"/></svg><div><strong>Sotteville-lès-Rouen (76300)</strong><small>et agglomération rouennaise</small></div></li>
+      </ul>
+    </div>
+    <form class="devis reveal d1" id="form" novalidate>
+      <div class="champs">
+        <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="champ"><label for="telf">Téléphone</label><input id="telf" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="champ"><label for="commune">Commune</label><input id="commune" placeholder="Ex. Le Petit-Quevilly"></div>
+        <div class="champ"><label for="projet">Projet</label><select id="projet"><option>Pompe à chaleur</option><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Entretien</option><option>Dépannage</option><option>Autre</option></select></div>
+        <div class="champ full"><label for="msg">Message</label><textarea id="msg" placeholder="Logement, équipement actuel, délai souhaité…"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-bleu" style="margin-top:20px;width:100%">Envoyer →</button>
+      <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera actif sur le site final.</p>
+      <p class="rgpd">Vos données servent uniquement à répondre à votre demande.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><p class="foot-logo">Grenot</p><p style="font-size:.88rem;margin:0">Paul Grenot, chauffagiste à Sotteville-lès-Rouen. Chaudières gaz ou fioul, pompes à chaleur. Label QUALIBAT PAC.</p></div>
+      <div><h3>Contact</h3><ul><li><a href="tel:+33770335868">07 70 33 58 68</a></li><li><a href="mailto:spc.grenot@orange.fr">spc.grenot@orange.fr</a></li><li>Sotteville-lès-Rouen (76300) et agglomération rouennaise</li></ul></div>
+      <div><h3>Horaires</h3><ul><li>Lun – ven : 8h – 18h</li><li>Samedi : sur RDV</li><li><em>Indicatifs, à confirmer</em></li></ul></div>
+      <div><h3>Menu</h3><ul><li><a href="#services">Services</a></li><li><a href="#comparatif">Comparatif</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul></div>
+    </div>
+    <div class="foot-bas"><span>© 2026 Paul Grenot – Chauffagiste</span><span>Mentions légales · Confidentialité</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+<a class="fcall" href="tel:+33770335868" aria-label="Appeler Paul Grenot"><svg aria-hidden="true"><use href="#tel"/></svg></a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false')})});
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var o=q.parentElement.classList.toggle('open');q.setAttribute('aria-expanded',o)})});
+  var d=new Date().getDay();document.querySelectorAll('tr[data-d]').forEach(function(r){if(+r.dataset.d===d)r.classList.add('today')});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show')});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramona – Chauffage au bois, poêles et inserts à Bihorel (Rouen)</title>
+<meta name="description" content="Ramona, spécialiste du chauffage au bois à Bihorel : poêles et inserts bois, chauffage et eau chaude au bois. Entreprise QUALIBOIS Air. Intervention à Rouen et dans l'agglomération. Devis sur demande.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121010">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charbon:#121010;
+  --charbon-2:#181413;
+  --fumee:#2a2422;
+  --fumee-2:#352d2a;
+  --braise:#e2572b;
+  --braise-2:#f08a4b;
+  --cuivre:#c07a4a;
+  --cuivre-2:#d9a07a;
+  --cendre:#d9cfc4;
+  --cendre-2:#a79c92;
+  --ligne:rgba(192,122,74,.28);
+  --f-titre:"Italiana","Didot","Bodoni 72","Bodoni MT","Playfair Display",Georgia,serif;
+  --f-texte:"Jost","Futura","Century Gothic","Avenir Next",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:4px;
+  --max:1200px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--charbon);color:var(--cendre);font-family:var(--f-texte);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-titre);font-weight:400;margin:0;line-height:1.1;color:#f3ebe2}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--braise-2);outline-offset:3px}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.7em;padding:15px 28px;border-radius:999px;font-family:var(--f-texte);font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .35s var(--ease),background .35s,color .35s,box-shadow .35s,border-color .35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-feu{background:linear-gradient(135deg,var(--braise),#c8431d);color:#fff;box-shadow:0 10px 30px -10px rgba(226,87,43,.7)}
+.btn-feu:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(226,87,43,.9)}
+.btn-ligne{border-color:var(--cuivre);color:var(--cendre)}
+.btn-ligne:hover{background:rgba(192,122,74,.12);border-color:var(--cuivre-2);transform:translateY(-2px)}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(18,16,16,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--ligne)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo b{font-family:var(--f-titre);font-weight:400;font-size:26px;letter-spacing:.18em;color:#f3ebe2}
+.logo small{display:block;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--cuivre-2);margin-top:-4px}
+.menu{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
+.menu a{font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--cendre);position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--cuivre);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .menu-cta{padding:10px 20px;border:1px solid var(--cuivre);border-radius:999px;color:#fff}
+.menu .menu-cta::after{display:none}
+.menu .menu-cta:hover{background:var(--braise);border-color:var(--braise)}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--ligne);border-radius:50%;background:transparent;cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:1.5px;background:var(--cendre);transition:transform .35s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* ---------- En-tête ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 70px;overflow:hidden;isolation:isolate;
+  background:
+    radial-gradient(60% 50% at 50% 62%,rgba(226,87,43,.22),transparent 70%),
+    radial-gradient(40% 35% at 50% 70%,rgba(240,138,75,.14),transparent 70%),
+    linear-gradient(180deg,#0d0b0b 0%,var(--charbon) 55%,#1a1412 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(180deg,transparent,var(--charbon));z-index:-1}
+.hero-word{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:-1;margin:0;font-family:var(--f-titre);font-weight:400;font-size:clamp(92px,22vw,380px);line-height:.8;letter-spacing:.06em;color:transparent;-webkit-text-stroke:1px var(--cuivre);white-space:nowrap;pointer-events:none;user-select:none;opacity:.9;
+  background:linear-gradient(180deg,rgba(192,122,74,.0) 30%,rgba(226,87,43,.10) 100%);-webkit-background-clip:text;background-clip:text}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(220px,340px) 1fr;align-items:start;gap:40px}
+.hero-side{padding-top:70px}
+.hero-side{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--cendre-2)}
+.hero-side.l{text-align:right}
+.hero-side b{display:block;font-family:var(--f-titre);font-weight:400;font-size:30px;letter-spacing:.04em;text-transform:none;color:#f3ebe2;margin-top:6px;line-height:1.15}
+.hero-side .trait{display:inline-block;width:48px;height:1px;background:var(--cuivre);margin:18px 0}
+.stove{position:relative;width:100%}
+.stove svg{width:100%;height:auto;filter:drop-shadow(0 40px 50px rgba(0,0,0,.6))}
+.stove::before{content:"";position:absolute;left:10%;right:10%;bottom:-6%;height:14%;background:radial-gradient(closest-side,rgba(226,87,43,.35),transparent);filter:blur(10px);z-index:-1}
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 1.6s ease-in-out infinite alternate}
+.flame.f2{animation-duration:1.15s;animation-delay:-.4s}
+.flame.f3{animation-duration:1.9s;animation-delay:-.9s}
+.flame.f4{animation-duration:.9s;animation-delay:-.2s}
+.glow{animation:glow 2.4s ease-in-out infinite alternate}
+@keyframes flicker{
+  0%{transform:scale(1,1) skewX(0deg);opacity:.95}
+  35%{transform:scale(.96,1.08) skewX(2deg);opacity:1}
+  65%{transform:scale(1.03,.94) skewX(-2deg);opacity:.9}
+  100%{transform:scale(.98,1.12) skewX(1deg);opacity:1}}
+@keyframes glow{from{opacity:.55}to{opacity:.9}}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.embers i{position:absolute;bottom:22%;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:var(--braise-2);box-shadow:0 0 8px 2px rgba(240,138,75,.7);opacity:0;animation:rise var(--d) linear var(--delay) infinite}
+@keyframes rise{
+  0%{transform:translate(0,0) scale(1);opacity:0}
+  10%{opacity:1}
+  60%{opacity:.8}
+  100%{transform:translate(var(--dx),-70vh) scale(.3);opacity:0}}
+.hero-bottom{text-align:center;margin-top:46px}
+.hero-kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--cuivre-2);margin-bottom:18px}
+.hero-kicker::before,.hero-kicker::after{content:"";width:28px;height:1px;background:var(--cuivre)}
+.hero-lead{font-family:var(--f-titre);font-size:clamp(27px,2.7vw,40px);line-height:1.22;color:#f3ebe2;max-width:860px;margin:0 auto 14px}
+.hero-lead em{font-style:normal;color:var(--braise-2)}
+.hero-sub{max-width:600px;margin:0 auto 30px;color:var(--cendre-2)}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--cendre-2);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint::after{content:"";width:1px;height:34px;background:linear-gradient(var(--cuivre),transparent)}
+
+/* ---------- Bandeau de confiance ---------- */
+.trust{border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);background:var(--charbon-2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.trust-item{display:flex;align-items:center;gap:18px;padding:28px 22px}
+.trust-item+.trust-item{border-left:1px solid var(--ligne)}
+.trust-item svg{width:42px;height:42px;flex:none}
+.trust-item strong{display:block;font-weight:500;color:#f3ebe2;font-size:15px;letter-spacing:.04em}
+.trust-item span{font-size:14px;color:var(--cendre-2)}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.sec{padding:120px 0}
+.sec-head{max-width:720px;margin-bottom:64px}
+.sec-head.c{margin-left:auto;margin-right:auto;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--cuivre-2);margin-bottom:18px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--cuivre)}
+.sec-head h2{font-size:clamp(38px,5vw,64px)}
+.sec-head p{margin-top:20px;color:var(--cendre-2);font-size:18px}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ligne);border:1px solid var(--ligne)}
+.svc{background:var(--charbon);padding:42px 34px 38px;position:relative;overflow:hidden;transition:background .5s}
+.svc::before{content:"";position:absolute;inset:auto -20% -60% -20%;height:80%;background:radial-gradient(closest-side,rgba(226,87,43,.22),transparent);opacity:0;transition:opacity .6s}
+.svc:hover{background:#171312}
+.svc:hover::before{opacity:1}
+.svc-num{position:absolute;top:26px;right:30px;font-family:var(--f-titre);font-size:15px;color:var(--cuivre);letter-spacing:.1em}
+.svc svg{width:58px;height:58px;margin-bottom:28px;transition:transform .6s var(--ease)}
+.svc:hover svg{transform:translateY(-4px)}
+.svc h3{font-size:27px;margin-bottom:12px}
+.svc p{color:var(--cendre-2);font-size:15.5px;margin:0;position:relative}
+
+/* Pourquoi */
+.why{background:linear-gradient(180deg,var(--charbon),#171211 50%,var(--charbon))}
+.why-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.why-art{position:relative;aspect-ratio:1/1;border:1px solid var(--ligne);border-radius:50%;display:grid;place-items:center}
+.why-art::before{content:"";position:absolute;inset:9%;border:1px dashed rgba(192,122,74,.25);border-radius:50%}
+.why-art svg{width:72%}
+.why-list{list-style:none;margin:0;padding:0}
+.why-list li{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--ligne)}
+.why-list li:first-child{border-top:1px solid var(--ligne)}
+.why-list .ic{width:56px;height:56px;border-radius:50%;border:1px solid var(--cuivre);display:grid;place-items:center;transition:background .4s,border-color .4s}
+.why-list li:hover .ic{background:rgba(226,87,43,.14);border-color:var(--braise)}
+.why-list .ic svg{width:26px;height:26px}
+.why-list h3{font-size:25px;margin-bottom:6px}
+.why-list p{margin:0;color:var(--cendre-2);font-size:15.5px}
+
+/* Étapes */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.step{position:relative;padding-top:30px}
+.step::before{content:"";position:absolute;top:0;left:0;right:-28px;height:1px;background:linear-gradient(90deg,var(--cuivre),rgba(192,122,74,.1))}
+.step:last-child::before{right:0}
+.step-n{font-family:var(--f-titre);font-size:78px;line-height:1;color:transparent;-webkit-text-stroke:1px var(--cuivre);display:block;margin-bottom:14px;transition:color .5s}
+.step:hover .step-n{color:rgba(226,87,43,.25)}
+.step::after{content:"";position:absolute;top:-4px;left:0;width:9px;height:9px;border-radius:50%;background:var(--braise);box-shadow:0 0 12px var(--braise)}
+.step h3{font-size:25px;margin-bottom:8px}
+.step p{color:var(--cendre-2);font-size:15.5px;margin:0}
+
+/* À propos */
+.about{background:var(--fumee);overflow:hidden}
+.about::before{content:"BOIS";position:absolute;right:-2%;bottom:-8%;font-family:var(--f-titre);font-size:clamp(120px,22vw,320px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(192,122,74,.22);pointer-events:none}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start;position:relative}
+.about h2{font-size:clamp(38px,4.6vw,60px)}
+.about-txt p{font-size:18px;color:var(--cendre)}
+.about-txt p:first-child::first-letter{font-family:var(--f-titre);float:left;font-size:76px;line-height:.85;padding:6px 12px 0 0;color:var(--braise-2)}
+.fiche{margin-top:30px;border:1px solid var(--ligne);border-radius:var(--r);padding:24px 26px;background:rgba(18,16,16,.35)}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:15px}
+.fiche dt{color:var(--cuivre-2);letter-spacing:.14em;text-transform:uppercase;font-size:12px;padding-top:3px}
+.fiche dd{margin:0;color:#f3ebe2}
+
+/* Réalisations */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.real{border:1px solid var(--ligne);border-radius:var(--r);overflow:hidden;background:var(--charbon-2);transition:transform .6s var(--ease),border-color .4s}
+.real:hover{transform:translateY(-6px);border-color:var(--cuivre)}
+.real-art{aspect-ratio:16/10;background:linear-gradient(160deg,#1f1a18,#0f0d0d);position:relative;overflow:hidden}
+.real-art svg{width:100%;height:100%}
+.real-body{padding:24px 28px 28px;display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.real-body h3{font-size:26px;margin-bottom:4px}
+.real-body p{margin:0;color:var(--cendre-2);font-size:15px}
+.tag{flex:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cuivre-2);border:1px solid var(--ligne);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.compare{margin-top:80px;display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--ligne);border-radius:var(--r);overflow:hidden}
+.compare>div{padding:40px 38px}
+.compare>div+div{border-left:1px solid var(--ligne)}
+.compare h3{font-size:32px;margin-bottom:6px}
+.compare .k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--braise-2);margin-bottom:16px;display:block}
+.compare ul{margin:0;padding:0;list-style:none}
+.compare li{padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed rgba(192,122,74,.2);font-size:15.5px;color:var(--cendre)}
+.compare li::before{content:"";position:absolute;left:2px;top:19px;width:12px;height:1px;background:var(--cuivre)}
+.price-note{margin-top:34px;text-align:center;font-size:15px;color:var(--cendre-2)}
+.price-note strong{font-family:var(--f-titre);font-weight:400;font-size:26px;color:#f3ebe2;letter-spacing:.04em;margin-left:6px}
+
+/* Avis */
+.reviews{text-align:center}
+.review-box{max-width:760px;margin:0 auto;border:1px solid var(--ligne);border-radius:var(--r);padding:56px 40px;background:radial-gradient(80% 120% at 50% 0%,rgba(226,87,43,.10),transparent 70%),var(--charbon-2)}
+.stars{display:flex;justify-content:center;gap:10px;margin-bottom:26px}
+.stars svg{width:28px;height:28px}
+.review-box h2{font-size:clamp(32px,4vw,46px);margin-bottom:14px}
+.review-box p{color:var(--cendre-2);max-width:540px;margin:0 auto 28px}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.faq-item{border-bottom:1px solid var(--ligne)}
+.faq-item:first-child{border-top:1px solid var(--ligne)}
+.faq-q{width:100%;background:none;border:0;color:#f3ebe2;font-family:var(--f-titre);font-size:23px;text-align:left;padding:26px 50px 26px 0;cursor:pointer;position:relative;line-height:1.3}
+.faq-q::after,.faq-q::before{content:"";position:absolute;right:8px;top:50%;width:16px;height:1px;background:var(--cuivre);transition:transform .4s var(--ease)}
+.faq-q::before{transform:rotate(90deg)}
+.faq-q[aria-expanded="true"]::before{transform:rotate(0)}
+.faq-q:hover{color:var(--braise-2)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.faq-a>div{overflow:hidden}
+.faq-a p{color:var(--cendre-2);font-size:16px;padding-bottom:24px;margin:0}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+
+/* Contact */
+.contact{background:linear-gradient(180deg,var(--charbon),#1a1412)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px}
+.info-card{border:1px solid var(--ligne);border-radius:var(--r);padding:34px;background:var(--charbon-2)}
+.info-card+.info-card{margin-top:24px}
+.info-card h3{font-size:26px;margin-bottom:18px}
+.coord{list-style:none;margin:0 0 24px;padding:0}
+.coord li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;font-size:16px}
+.coord svg{width:20px;height:20px;flex:none;margin-top:4px}
+.coord a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.coord a:hover{border-color:var(--cuivre)}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:10px 12px;border-bottom:1px solid rgba(192,122,74,.15)}
+.hours td:last-child{text-align:right;color:var(--cendre-2)}
+.hours tr.today td{color:#fff;background:rgba(226,87,43,.13)}
+.hours tr.today td:first-child{border-left:2px solid var(--braise)}
+.hours tr.today td:first-child::after{content:"aujourd'hui";margin-left:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--braise-2)}
+.small{font-size:13px;color:var(--cendre-2);margin-top:14px}
+form.devis{border:1px solid var(--ligne);border-radius:var(--r);padding:40px;background:var(--charbon-2);position:relative}
+form.devis h3{font-size:32px;margin-bottom:6px}
+form.devis>p{color:var(--cendre-2);font-size:15px;margin-bottom:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cuivre-2);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(217,207,196,.3);color:#f3ebe2;font-family:var(--f-texte);font-size:16px;font-weight:300;padding:10px 2px;border-radius:0;transition:border-color .3s}
+.field select{appearance:none;-webkit-appearance:none;background:linear-gradient(45deg,transparent 50%,var(--cuivre) 50%) right 8px center/6px 6px no-repeat,linear-gradient(-45deg,transparent 50%,var(--cuivre) 50%) right 2px center/6px 6px no-repeat}
+.field select option{background:var(--charbon);color:var(--cendre)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--braise)}
+.form-msg{display:none;margin-top:18px;padding:16px 18px;border:1px solid var(--braise);border-radius:var(--r);background:rgba(226,87,43,.1);color:#fff;font-size:15px}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{border-top:1px solid var(--ligne);padding:80px 0 0;background:#0d0b0b}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px}
+footer h4{font-family:var(--f-texte);font-weight:500;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--cuivre-2);margin:0 0 18px}
+footer p,footer li{font-size:15px;color:var(--cendre-2)}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{padding:4px 0}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.foot-word{font-family:var(--f-titre);font-size:clamp(70px,16vw,230px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(192,122,74,.35);text-align:center;letter-spacing:.08em;margin:0;padding:0 0 10px;user-select:none;overflow:hidden;white-space:nowrap}
+.legal{border-top:1px solid var(--ligne);padding:22px 0;font-size:13px;color:var(--cendre-2);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.demo{background:#080707;color:#8f857c;font-size:12.5px;text-align:center;padding:12px 20px 14px;letter-spacing:.03em}
+
+/* Appel flottant */
+.fab{display:none;position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--braise);color:#fff;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(226,87,43,.8)}
+.fab svg{width:26px;height:26px}
+.fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--braise);animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+
+/* Révélation */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1020px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid,.about-grid,.faq-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+  .why-art{max-width:420px;margin:0 auto;width:100%}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:50px}
+  .step::before{right:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(18,16,16,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--ligne);padding:10px 24px 26px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .35s,transform .35s var(--ease),visibility .35s}
+  .menu.open{opacity:1;transform:none;visibility:visible}
+  .menu li{border-bottom:1px solid rgba(192,122,74,.15)}
+  .menu a{display:block;padding:16px 0;font-size:14px}
+  .menu li:last-child{border:0;margin-top:16px}
+  .menu .menu-cta{text-align:center;padding:14px}
+  .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero-side{display:none}
+  .stove{max-width:240px;margin:0 auto}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust-item+.trust-item{border-left:0;border-top:1px solid var(--ligne)}
+  .gallery,.compare{grid-template-columns:1fr}
+  .compare>div+div{border-left:0;border-top:1px solid var(--ligne)}
+  .fab{display:flex}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .sec{padding:84px 0}
+  .sec-head{margin-bottom:44px}
+  .services-grid{grid-template-columns:1fr}
+  .svc{padding:34px 26px}
+  .steps{grid-template-columns:1fr;row-gap:40px}
+  .hero{padding:100px 0 80px}
+  .hero-word{top:36%;font-size:23vw;letter-spacing:.02em}
+  .hero-bottom{margin-top:30px}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .scroll-hint{display:none}
+  .row{grid-template-columns:1fr;gap:0}
+  form.devis,.info-card{padding:28px 22px}
+  .real-body{flex-direction:column;align-items:flex-start}
+  .compare>div{padding:30px 24px}
+  .review-box{padding:44px 22px}
+  .foot-grid{grid-template-columns:1fr}
+  .faq-q{font-size:21px}
+  .demo{padding-bottom:88px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .embers{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Ramona – accueil">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#c07a4a" stroke-width="1"/>
+        <path d="M20 9c3 5 8 8 8 15a8 8 0 0 1-16 0c0-4 2-6 4-8 0 3 1 5 3 5-1-4 0-8 1-12z" fill="#e2572b"/>
+        <path d="M20 20c2 2 3 4 3 6a3 3 0 0 1-6 0c0-2 1-3 3-6z" fill="#f6c27a"/>
+      </svg>
+      <span><b>RAMONA</b><small>Chauffage au bois</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Savoir-faire</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#apropos">L'entreprise</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#devis" class="menu-cta">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= EN-TÊTE ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <h1 class="hero-word" id="hero-title" aria-label="Ramona, chauffage au bois à Bihorel">RAMONA</h1>
+
+  <div class="embers" aria-hidden="true">
+    <i style="--x:44%;--s:3px;--d:7s;--delay:0s;--dx:-30px"></i>
+    <i style="--x:48%;--s:2px;--d:5.5s;--delay:-1.2s;--dx:20px"></i>
+    <i style="--x:52%;--s:4px;--d:8s;--delay:-3s;--dx:40px"></i>
+    <i style="--x:55%;--s:2px;--d:6s;--delay:-4.4s;--dx:-10px"></i>
+    <i style="--x:46%;--s:3px;--d:9s;--delay:-2.2s;--dx:60px"></i>
+    <i style="--x:50%;--s:2px;--d:6.5s;--delay:-5s;--dx:-50px"></i>
+    <i style="--x:57%;--s:3px;--d:7.5s;--delay:-.6s;--dx:-35px"></i>
+    <i style="--x:42%;--s:2px;--d:8.5s;--delay:-6s;--dx:25px"></i>
+    <i style="--x:49%;--s:5px;--d:10s;--delay:-7s;--dx:-70px"></i>
+    <i style="--x:53%;--s:2px;--d:5s;--delay:-2.8s;--dx:15px"></i>
+    <i style="--x:39%;--s:2px;--d:9.5s;--delay:-4s;--dx:-20px"></i>
+    <i style="--x:61%;--s:3px;--d:8s;--delay:-1.8s;--dx:30px"></i>
+    <i style="--x:47%;--s:2px;--d:6.8s;--delay:-3.6s;--dx:45px"></i>
+    <i style="--x:58%;--s:2px;--d:7.2s;--delay:-5.6s;--dx:-45px"></i>
+    <i style="--x:51%;--s:3px;--d:11s;--delay:-8s;--dx:10px"></i>
+    <i style="--x:36%;--s:2px;--d:10s;--delay:-6.6s;--dx:35px"></i>
+    <i style="--x:64%;--s:2px;--d:9s;--delay:-.3s;--dx:-25px"></i>
+    <i style="--x:45%;--s:4px;--d:7.8s;--delay:-4.9s;--dx:-15px"></i>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-side l reveal">
+        Spécialiste
+        <b>Poêles &amp; inserts<br>à bois</b>
+        <span class="trait"></span><br>
+        Chauffage &amp; eau chaude
+      </div>
+
+      <div class="stove reveal d1">
+        <svg viewBox="0 0 300 470" role="img" aria-label="Illustration d'un poêle à bois allumé">
+          <defs>
+            <linearGradient id="g-body" x1="0" x2="1">
+              <stop offset="0" stop-color="#1b1716"/>
+              <stop offset=".45" stop-color="#3a312d"/>
+              <stop offset=".6" stop-color="#2c2522"/>
+              <stop offset="1" stop-color="#141111"/>
+            </linearGradient>
+            <linearGradient id="g-pipe" x1="0" x2="1">
+              <stop offset="0" stop-color="#5e3b25"/>
+              <stop offset=".4" stop-color="#d9a07a"/>
+              <stop offset=".6" stop-color="#c07a4a"/>
+              <stop offset="1" stop-color="#4b2e1c"/>
+            </linearGradient>
+            <radialGradient id="g-fire" cx=".5" cy=".85" r=".8">
+              <stop offset="0" stop-color="#ffb35c"/>
+              <stop offset=".35" stop-color="#e2572b"/>
+              <stop offset=".75" stop-color="#5a1a0b"/>
+              <stop offset="1" stop-color="#1a0b07"/>
+            </radialGradient>
+            <linearGradient id="g-f1" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#ffcf7a"/>
+              <stop offset=".5" stop-color="#f08a4b"/>
+              <stop offset="1" stop-color="#e2572b" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="g-f2" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#fff1c4"/>
+              <stop offset=".6" stop-color="#ffc36b"/>
+              <stop offset="1" stop-color="#f08a4b" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="clip-win"><rect x="86" y="178" width="128" height="140" rx="10"/></clipPath>
+          </defs>
+          <!-- conduit -->
+          <rect x="128" y="0" width="44" height="122" fill="url(#g-pipe)"/>
+          <rect x="122" y="40" width="56" height="8" rx="2" fill="#a8663c"/>
+          <rect x="122" y="96" width="56" height="8" rx="2" fill="#a8663c"/>
+          <!-- plateau -->
+          <rect x="54" y="120" width="192" height="18" rx="4" fill="#2f2826"/>
+          <rect x="54" y="120" width="192" height="3" rx="1.5" fill="#c07a4a" opacity=".7"/>
+          <!-- corps -->
+          <rect x="62" y="136" width="176" height="236" rx="16" fill="url(#g-body)"/>
+          <rect x="62" y="136" width="176" height="236" rx="16" fill="none" stroke="#c07a4a" stroke-opacity=".35"/>
+          <!-- porte -->
+          <rect x="76" y="166" width="148" height="164" rx="14" fill="#151212" stroke="#c07a4a" stroke-opacity=".6"/>
+          <!-- vitre & feu -->
+          <rect x="86" y="178" width="128" height="140" rx="10" fill="url(#g-fire)"/>
+          <g clip-path="url(#clip-win)">
+            <ellipse class="glow" cx="150" cy="300" rx="80" ry="50" fill="#ff9a4d" opacity=".7"/>
+            <path class="flame f1" d="M104 304c-6-30 10-44 8-72 14 16 20 30 18 48 6-10 6-22 4-34 16 18 22 40 16 58z" fill="url(#g-f1)"/>
+            <path class="flame f3" d="M150 306c-14-30 2-58 0-96 20 26 30 52 24 72 6-6 10-16 10-26 12 22 10 40 0 50z" fill="url(#g-f1)"/>
+            <path class="flame f2" d="M166 306c-4-24 10-36 12-58 12 18 16 38 10 58z" fill="url(#g-f1)"/>
+            <path class="flame f4" d="M126 306c-6-20 4-34 6-52 10 16 14 30 10 44 4-6 6-12 6-20 8 12 8 22 4 28z" fill="url(#g-f2)"/>
+            <path class="flame f2" d="M148 306c-6-16 2-28 4-44 8 14 12 28 6 44z" fill="url(#g-f2)"/>
+            <!-- bûches -->
+            <rect x="96" y="298" width="112" height="14" rx="7" fill="#3a2015" transform="rotate(-6 152 305)"/>
+            <rect x="92" y="302" width="116" height="14" rx="7" fill="#4a2a1b" transform="rotate(7 150 309)"/>
+            <circle cx="98" cy="312" r="6" fill="#6b3f26"/><circle cx="98" cy="312" r="3" fill="#e2572b" opacity=".8"/>
+            <circle cx="204" cy="300" r="6" fill="#6b3f26"/><circle cx="204" cy="300" r="3" fill="#e2572b" opacity=".8"/>
+            <!-- reflet vitre -->
+            <path d="M92 178h34l-38 140h-2z" fill="#fff" opacity=".06"/>
+          </g>
+          <!-- poignée -->
+          <rect x="226" y="222" width="8" height="50" rx="4" fill="#c07a4a"/>
+          <!-- bandeau bas -->
+          <rect x="76" y="342" width="148" height="16" rx="4" fill="#151212" stroke="#c07a4a" stroke-opacity=".35"/>
+          <g fill="#c07a4a" opacity=".7"><rect x="96" y="348" width="22" height="3" rx="1.5"/><rect x="128" y="348" width="22" height="3" rx="1.5"/><rect x="160" y="348" width="22" height="3" rx="1.5"/><rect x="192" y="348" width="14" height="3" rx="1.5"/></g>
+          <!-- pieds -->
+          <path d="M80 372h22l-6 46h-10z M198 372h22l-6 46h-10z" fill="#221d1b"/>
+          <!-- plaque de sol -->
+          <ellipse cx="150" cy="430" rx="130" ry="16" fill="#1e1917" stroke="#c07a4a" stroke-opacity=".35"/>
+          <ellipse cx="150" cy="428" rx="90" ry="7" fill="#e2572b" opacity=".18"/>
+        </svg>
+      </div>
+
+      <div class="hero-side r reveal d2">
+        Atelier &amp; interventions
+        <b>Bihorel,<br>Rouen &amp; agglo</b>
+        <span class="trait"></span><br>
+        QUALIBOIS Air
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-kicker reveal">Chauffage au bois · Bihorel</div>
+      <p class="hero-lead reveal d1">Sur les hauteurs de Rouen, on rallume <em>le vrai feu de bois</em>&nbsp;: un poêle ou un insert choisi pour votre maison, posé dans les règles.</p>
+      <p class="hero-sub reveal d2">Ramona accompagne les foyers de Bihorel et de l'agglomération rouennaise, de l'étude de votre pièce à la première flambée.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-feu" href="tel:+33235602929">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          Appeler
+        </a>
+        <a class="btn btn-ligne" href="#devis">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONFIANCE ================= -->
+<section class="trust" aria-label="Informations de confiance">
+  <div class="wrap">
+    <div class="trust-item reveal">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#c07a4a" stroke-width="1.3" aria-hidden="true"><circle cx="24" cy="20" r="12"/><path d="M17 30l-3 13 10-5 10 5-3-13"/><path d="M19 20l4 4 7-8" stroke="#e2572b"/></svg>
+      <div><strong>QUALIBOIS Air</strong><span>Qualification poêle et insert</span></div>
+    </div>
+    <div class="trust-item reveal d1">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#c07a4a" stroke-width="1.3" aria-hidden="true"><path d="M24 6c5 8 12 12 12 22a12 12 0 0 1-24 0c0-6 3-9 6-12 0 4 2 7 4 7-1-6 0-11 2-17z"/><path d="M24 30c3 3 4 5 4 8a4 4 0 0 1-8 0c0-3 2-5 4-8z" stroke="#e2572b"/></svg>
+      <div><strong>Spécialiste du bois</strong><span>Poêles, inserts, chauffage et eau chaude</span></div>
+    </div>
+    <div class="trust-item reveal d2">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#c07a4a" stroke-width="1.3" aria-hidden="true"><path d="M24 44s14-13 14-24a14 14 0 0 0-28 0c0 11 14 24 14 24z"/><circle cx="24" cy="20" r="5" stroke="#e2572b"/></svg>
+      <div><strong>Bihorel &amp; agglomération</strong><span>Rouen et communes alentour</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Savoir-faire</span>
+      <h2 id="services-title">Tout ce qui touche au feu de bois, sous un même toit</h2>
+      <p>Ramona travaille un seul combustible, et le travaille bien&nbsp;: les appareils de chauffage au bois indépendants, du conseil à la mise en service.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc reveal">
+        <span class="svc-num">01</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><rect x="26" y="4" width="12" height="12"/><rect x="14" y="16" width="36" height="38" rx="5"/><rect x="20" y="23" width="24" height="20" rx="3"/><path d="M32 40c-5-4-2-9 0-13 1 4 5 6 3 10" stroke="#e2572b"/><path d="M18 54l-2 6M46 54l2 6"/></svg>
+        <h3>Poêles à bois</h3>
+        <p>Le choix d'un poêle adapté au volume de vos pièces, à votre isolation et à votre façon de vivre, puis sa pose complète.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="svc-num">02</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><path d="M6 58V22L32 8l26 14v36"/><rect x="16" y="28" width="32" height="26" rx="2"/><rect x="21" y="33" width="22" height="16" rx="2"/><path d="M32 46c-4-3-2-7 0-10 1 3 4 5 2 8" stroke="#e2572b"/><path d="M4 58h56"/></svg>
+        <h3>Inserts de cheminée</h3>
+        <p>Votre cheminée ouverte transformée en vrai chauffage&nbsp;: un insert fermé qui garde le charme du foyer et chauffe enfin la maison.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="svc-num">03</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><rect x="10" y="14" width="22" height="40" rx="4"/><path d="M21 44c-4-3-2-7 0-10 1 3 4 5 2 8" stroke="#e2572b"/><path d="M32 24h8a6 6 0 0 1 6 6v0"/><rect x="40" y="30" width="16" height="24" rx="8"/><path d="M48 20c2 3 2 5 0 7M53 18c2 3 2 5 0 7" stroke="#e2572b"/></svg>
+        <h3>Chauffage &amp; eau chaude au bois</h3>
+        <p>Des solutions bois qui participent au chauffage du logement et, selon l'installation, à la production d'eau chaude.</p>
+      </article>
+      <article class="svc reveal">
+        <span class="svc-num">04</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><rect x="10" y="8" width="44" height="48" rx="3"/><path d="M18 20h28M18 28h20M18 36h24"/><circle cx="44" cy="44" r="7" stroke="#e2572b"/><path d="M49 49l6 6" stroke="#e2572b"/></svg>
+        <h3>Étude de votre projet</h3>
+        <p>Visite, mesure de la pièce, état du conduit existant&nbsp;: on vérifie ce qui est possible chez vous avant de proposer un appareil.</p>
+      </article>
+      <article class="svc reveal d1">
+        <span class="svc-num">05</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><rect x="26" y="4" width="12" height="34"/><path d="M22 14h20M22 28h20"/><path d="M20 38h24v18H20z"/><path d="M8 60h48"/><path d="M14 30l-6-6 4-4 6 6" stroke="#e2572b"/></svg>
+        <h3>Pose &amp; raccordement</h3>
+        <p>Installation de l'appareil et de son raccordement au conduit de fumée, avec les distances de sécurité et la finition soignées.</p>
+      </article>
+      <article class="svc reveal d2">
+        <span class="svc-num">06</span>
+        <svg viewBox="0 0 64 64" fill="none" stroke="#c07a4a" stroke-width="1.4" aria-hidden="true"><rect x="8" y="38" width="48" height="10" rx="5"/><rect x="12" y="26" width="40" height="10" rx="5"/><circle cx="13" cy="43" r="3"/><circle cx="17" cy="31" r="3"/><path d="M32 22c-5-4-2-10 0-14 2 4 6 7 3 12" stroke="#e2572b"/></svg>
+        <h3>Conseils d'usage</h3>
+        <p>Allumage, réglage de l'air, choix et stockage du bois&nbsp;: les bons gestes pour un feu propre, efficace et agréable.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="sec why" aria-labelledby="why-title">
+  <div class="wrap why-grid">
+    <div class="why-art reveal" aria-hidden="true">
+      <svg viewBox="0 0 300 300" fill="none">
+        <defs>
+          <radialGradient id="g-why" cx=".5" cy=".6" r=".5"><stop offset="0" stop-color="#e2572b" stop-opacity=".5"/><stop offset="1" stop-color="#e2572b" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="150" cy="170" r="120" fill="url(#g-why)"/>
+        <!-- maison normande à colombages -->
+        <path d="M70 140L150 70l80 70" stroke="#c07a4a" stroke-width="1.5"/>
+        <rect x="84" y="134" width="132" height="110" stroke="#c07a4a" stroke-width="1.5"/>
+        <path d="M84 170h132M84 206h132M120 134v110M180 134v110M84 134l36 36M120 170l-36 36M180 134l36 36M216 170l-36 36" stroke="#c07a4a" stroke-opacity=".55"/>
+        <rect x="186" y="56" width="16" height="44" stroke="#c07a4a" stroke-width="1.5"/>
+        <path d="M194 50c-8-8 4-12-2-22M200 44c-6-6 4-10 0-18" stroke="#d9cfc4" stroke-opacity=".5"/>
+        <rect x="134" y="200" width="32" height="44" stroke="#c07a4a" stroke-width="1.5"/>
+        <rect x="132" y="146" width="36" height="20" fill="#e2572b" fill-opacity=".35" stroke="#f08a4b"/>
+        <path class="flame" d="M150 164c-6-4-2-10 0-14 2 4 6 6 3 12z" fill="#f08a4b"/>
+        <path d="M40 244h220" stroke="#c07a4a"/>
+      </svg>
+    </div>
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:34px">
+        <span class="eyebrow">Pourquoi Ramona</span>
+        <h2 id="why-title">Un artisan du feu, pas un vendeur d'appareils</h2>
+      </div>
+      <ul class="why-list">
+        <li class="reveal">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.4"><path d="M12 3c2 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3-1-3 0-5 1-8z"/></svg></span>
+          <div><h3>Un seul métier&nbsp;: le bois</h3><p>Poêles, inserts, chauffage et eau chaude au bois&nbsp;: une spécialité assumée plutôt qu'un catalogue fourre-tout.</p></div>
+        </li>
+        <li class="reveal d1">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.4"><circle cx="12" cy="10" r="6"/><path d="M9 15l-1 6 4-2 4 2-1-6"/></svg></span>
+          <div><h3>Une qualification reconnue</h3><p>L'entreprise est qualifiée QUALIBOIS Air pour les poêles et inserts, un repère utile pour comparer les professionnels.</p></div>
+        </li>
+        <li class="reveal d2">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.4"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <div><h3>Basé à Bihorel</h3><p>Une entreprise installée sur le plateau, à quelques minutes de Rouen&nbsp;: on connaît les maisons, les longères et les conduits du coin.</p></div>
+        </li>
+        <li class="reveal d3">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.4"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8"/></svg></span>
+          <div><h3>Un devis clair</h3><p>Chaque projet est chiffré après étude, poste par poste, pour savoir précisément ce que vous financez.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÉTAPES ================= -->
+<section class="sec" aria-labelledby="steps-title">
+  <div class="wrap">
+    <div class="sec-head c reveal">
+      <span class="eyebrow">Comment ça se passe</span>
+      <h2 id="steps-title">De la première question à la première flambée</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-n">01</span><h3>Premier échange</h3><p>Un appel ou un message pour parler de votre maison, de la pièce à chauffer et de vos envies.</p></div>
+      <div class="step reveal d1"><span class="step-n">02</span><h3>Visite &amp; étude</h3><p>Passage sur place pour vérifier le conduit, les distances et l'emplacement idéal de l'appareil.</p></div>
+      <div class="step reveal d2"><span class="step-n">03</span><h3>Devis détaillé</h3><p>Une proposition chiffrée, avec le modèle conseillé et les travaux nécessaires, sans engagement.</p></div>
+      <div class="step reveal d3"><span class="step-n">04</span><h3>Pose &amp; mise en route</h3><p>Installation soignée, premier allumage ensemble et conseils pour bien profiter de votre feu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="sec about" id="apropos" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">L'entreprise</span>
+      <h2 id="about-title">Ramona, le chauffage au bois à Bihorel</h2>
+    </div>
+    <div class="about-txt reveal d1">
+      <p>Ramona est une entreprise spécialisée dans le chauffage au bois, installée rue des Canadiens à Bihorel, sur les hauteurs de Rouen.</p>
+      <p>Son terrain de jeu&nbsp;: les poêles et les inserts à bois, ces appareils indépendants qui réchauffent une pièce de vie, et plus largement le chauffage et l'eau chaude au bois.</p>
+      <p>L'entreprise est référencée dans l'annuaire Qualit'EnR avec la qualification QUALIBOIS Air – poêle et insert, et intervient à Bihorel, à Rouen et dans l'agglomération.</p>
+      <div class="fiche">
+        <dl>
+          <dt>Adresse</dt><dd>45 rue des Canadiens, 76420 Bihorel</dd>
+          <dt>Qualification</dt><dd>QUALIBOIS Air – poêle et insert</dd>
+          <dt>Spécialités</dt><dd>Poêles et inserts bois, chauffage et eau chaude au bois</dd>
+          <dt>Secteur</dt><dd>Bihorel, Rouen et agglomération</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉALISATIONS ================= -->
+<section class="sec" id="realisations" aria-labelledby="real-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Réalisations types</span>
+      <h2 id="real-title">Quatre intérieurs, quatre façons d'accueillir le feu</h2>
+      <p>Des exemples illustrés des configurations les plus courantes dans les maisons de l'agglomération rouennaise.</p>
+    </div>
+    <div class="gallery">
+      <figure class="real reveal" style="margin:0">
+        <div class="real-art">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="250" fill="#1d1816"/>
+            <rect y="190" width="400" height="60" fill="#151110"/>
+            <path d="M0 190h400" stroke="#c07a4a" stroke-opacity=".4"/>
+            <rect x="40" y="50" width="90" height="110" fill="#2a2422" stroke="#c07a4a" stroke-opacity=".3"/>
+            <path d="M85 50v110M40 105h90" stroke="#c07a4a" stroke-opacity=".3"/>
+            <rect x="192" y="0" width="16" height="96" fill="#c07a4a"/>
+            <rect x="166" y="96" width="68" height="94" rx="8" fill="#2e2725" stroke="#c07a4a" stroke-opacity=".5"/>
+            <rect x="176" y="112" width="48" height="50" rx="5" fill="#e2572b"/>
+            <path class="flame" d="M200 160c-10-8-4-20 0-30 4 8 10 14 6 24 3-2 5-6 5-10 4 8 2 14-2 16z" fill="#ffc36b"/>
+            <ellipse cx="200" cy="200" rx="70" ry="8" fill="#e2572b" opacity=".15"/>
+            <rect x="268" y="150" width="90" height="40" rx="6" fill="#2a2422"/>
+            <rect x="276" y="128" width="74" height="28" rx="6" fill="#352d2a"/>
+          </svg>
+        </div>
+        <figcaption class="real-body"><div><h3>Poêle contemporain en séjour</h3><p>Conduit apparent en cuivre, poêle au centre de la pièce de vie.</p></div><span class="tag">Poêle à bois</span></figcaption>
+      </figure>
+      <figure class="real reveal d1" style="margin:0">
+        <div class="real-art">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="250" fill="#1f1a17"/>
+            <rect y="200" width="400" height="50" fill="#151110"/>
+            <path d="M110 200V70h180v130" fill="#3a302b"/>
+            <path d="M96 70h208v16H96z" fill="#4a3c35"/>
+            <rect x="140" y="104" width="120" height="96" fill="#1a1412"/>
+            <rect x="150" y="116" width="100" height="74" rx="4" fill="#2a2422" stroke="#c07a4a" stroke-opacity=".7"/>
+            <rect x="158" y="124" width="84" height="58" rx="3" fill="#e2572b"/>
+            <path class="flame" d="M200 180c-14-10-6-28 0-44 6 12 14 20 8 34 4-3 6-8 6-14 6 12 4 20-2 24z" fill="#ffc36b"/>
+            <path class="flame f2" d="M176 180c-6-6-2-14 0-20 3 6 6 10 3 18z" fill="#ffcf7a"/>
+            <g stroke="#c07a4a" stroke-opacity=".25"><path d="M110 100h30M260 100h30M110 140h30M260 140h30M110 180h30M260 180h30"/></g>
+          </svg>
+        </div>
+        <figcaption class="real-body"><div><h3>Insert dans une cheminée ancienne</h3><p>Le foyer ouvert d'origine équipé d'un insert fermé.</p></div><span class="tag">Insert</span></figcaption>
+      </figure>
+      <figure class="real reveal" style="margin:0">
+        <div class="real-art">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="250" fill="#1b1715"/>
+            <path d="M0 0l200 60 200-60" fill="#221c1a"/>
+            <path d="M200 60v190" stroke="#c07a4a" stroke-opacity=".3"/>
+            <path d="M0 210l200-20 200 20v40H0z" fill="#141110"/>
+            <path d="M120 0v40M280 0v40" stroke="#5a3a26" stroke-width="10"/>
+            <rect x="193" y="40" width="14" height="70" fill="#c07a4a"/>
+            <path d="M170 110h60l-6 80h-48z" fill="#2e2725" stroke="#c07a4a" stroke-opacity=".5"/>
+            <rect x="180" y="124" width="40" height="40" rx="20" fill="#e2572b"/>
+            <path class="flame" d="M200 162c-8-6-4-16 0-24 4 6 8 12 4 20z" fill="#ffc36b"/>
+            <g fill="#3a2015"><rect x="60" y="176" width="70" height="10" rx="5"/><rect x="66" y="166" width="60" height="10" rx="5"/><rect x="72" y="156" width="50" height="10" rx="5"/></g>
+            <g fill="#6b3f26"><circle cx="62" cy="181" r="5"/><circle cx="68" cy="171" r="5"/><circle cx="74" cy="161" r="5"/></g>
+          </svg>
+        </div>
+        <figcaption class="real-body"><div><h3>Poêle d'angle sous poutres</h3><p>Une longère rénovée, le bois rangé à portée de main.</p></div><span class="tag">Poêle à bois</span></figcaption>
+      </figure>
+      <figure class="real reveal d1" style="margin:0">
+        <div class="real-art">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="250" fill="#141011"/>
+            <circle cx="330" cy="50" r="18" fill="#d9cfc4" opacity=".15"/>
+            <path d="M0 220h400v30H0z" fill="#0f0c0c"/>
+            <path d="M110 120l90-70 90 70" fill="#2a2422" stroke="#c07a4a"/>
+            <rect x="124" y="118" width="152" height="102" fill="#2f2826" stroke="#c07a4a"/>
+            <path d="M124 152h152M124 186h152M162 118v102M238 118v102M124 118l38 34M238 118l38 34M162 152l-38 34M276 152l-38 34" stroke="#c07a4a" stroke-opacity=".5"/>
+            <rect x="172" y="160" width="56" height="22" fill="#e2572b" opacity=".7"/>
+            <rect x="232" y="54" width="16" height="40" fill="#2a2422" stroke="#c07a4a"/>
+            <path d="M240 50c-10-10 6-14-2-28M246 42c-8-8 6-12 0-22" stroke="#d9cfc4" stroke-opacity=".35" fill="none"/>
+            <path d="M40 220c0-30 10-50 20-60 10 10 20 30 20 60z M320 220c0-26 8-44 16-52 8 8 16 26 16 52z" fill="#1f2a1f"/>
+          </svg>
+        </div>
+        <figcaption class="real-body"><div><h3>Maison normande chauffée au bois</h3><p>Chauffage et eau chaude au bois pour une maison à colombages.</p></div><span class="tag">Chauffage bois</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="compare reveal">
+      <div>
+        <span class="k">Vous partez de zéro</span>
+        <h3>Le poêle à bois</h3>
+        <ul>
+          <li>S'installe là où il chauffera le mieux, souvent au cœur de la pièce de vie</li>
+          <li>Nécessite un conduit existant ou à créer</li>
+          <li>Large choix de formes&nbsp;: contemporain, rond, d'angle, en fonte</li>
+        </ul>
+      </div>
+      <div>
+        <span class="k">Vous avez une cheminée</span>
+        <h3>L'insert</h3>
+        <ul>
+          <li>Se loge dans le foyer d'une cheminée ouverte existante</li>
+          <li>Transforme un feu d'agrément en véritable appoint de chauffage</li>
+          <li>Conserve l'habillage et le cachet de la cheminée</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note reveal">Chaque intérieur est différent, chaque projet est chiffré après visite. Tarifs&nbsp;: <strong>sur devis</strong></p>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="sec reviews" aria-labelledby="rev-title" style="padding-top:20px">
+  <div class="wrap">
+    <div class="review-box reveal">
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.2"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+      </div>
+      <span class="eyebrow" style="justify-content:center">Avis clients</span>
+      <h2 id="rev-title">Les avis de vos clients apparaîtront ici</h2>
+      <p>Vous avez fait installer un poêle ou un insert par Ramona&nbsp;? Votre retour aidera d'autres foyers de Bihorel et de Rouen à se lancer. Cet espace accueillera les avis réels laissés par les clients.</p>
+      <a class="btn btn-ligne" href="#devis">Partager votre expérience</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq" aria-labelledby="faq-title" style="background:var(--charbon-2)">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal" style="margin:0">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2 id="faq-title">Avant d'allumer le premier feu</h2>
+      <p>Les réponses aux questions que l'on nous pose le plus souvent. Pour votre cas précis, le plus simple reste d'en parler.</p>
+      <a class="btn btn-feu" href="tel:+33235602929" style="margin-top:12px">02 35 60 29 29</a>
+    </div>
+    <div class="faq reveal d1">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Poêle ou insert&nbsp;: comment choisir&nbsp;?</button>
+        <div class="faq-a"><div><p>Si vous avez déjà une cheminée ouverte en bon état, l'insert est souvent la solution la plus naturelle. Sans cheminée, le poêle offre plus de liberté d'emplacement. La visite permet de trancher selon votre maison.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Faut-il obligatoirement un conduit de cheminée&nbsp;?</button>
+        <div class="faq-a"><div><p>Oui, un appareil à bois doit évacuer ses fumées par un conduit adapté. Il peut s'agir d'un conduit existant, à vérifier et parfois à tuber, ou d'un conduit neuf à créer selon la configuration du logement.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Puis-je bénéficier d'aides comme MaPrimeRénov'&nbsp;?</button>
+        <div class="faq-a"><div><p>Selon votre situation, vos revenus et l'appareil choisi, certaines aides pourraient s'appliquer, notamment MaPrimeRénov' ou les primes énergie. Elles demandent en général un professionnel qualifié RGE&nbsp;; les conditions évoluent, mieux vaut les vérifier au moment du projet.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quel bois utiliser dans mon poêle&nbsp;?</button>
+        <div class="faq-a"><div><p>Un bois sec, idéalement stocké à l'abri et à l'air pendant plusieurs mois, brûle mieux, encrasse moins et chauffe davantage. Les essences dures comme le chêne, le hêtre ou le charme sont généralement appréciées.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Le ramonage est-il obligatoire&nbsp;?</button>
+        <div class="faq-a"><div><p>En règle générale, le ramonage du conduit est obligatoire et souvent demandé par les assureurs, avec une fréquence fixée par le règlement sanitaire de votre département. Renseignez-vous auprès de votre mairie ou de votre assurance.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Combien coûte l'installation d'un poêle&nbsp;?</button>
+        <div class="faq-a"><div><p>Le prix dépend de l'appareil, de l'état du conduit et des travaux annexes. C'est pourquoi chaque projet fait l'objet d'un devis personnalisé, établi après étude de votre logement.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-title">Parlons de votre feu</h2>
+      <p>Un projet de poêle, d'insert ou de chauffage au bois à Bihorel, Rouen ou dans l'agglomération&nbsp;? Décrivez-le en quelques mots.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="info-card reveal">
+          <h3>Coordonnées</h3>
+          <ul class="coord">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.5"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>45 rue des Canadiens<br>76420 Bihorel</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+33235602929">02 35 60 29 29</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="#c07a4a" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:ent.ramona@wanadoo.fr">ent.ramona@wanadoo.fr</a></li>
+          </ul>
+          <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=45%20rue%20des%20Canadiens%2C%2076420%20Bihorel" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+            Itinéraire
+          </a>
+        </div>
+        <div class="info-card reveal d1">
+          <h3>Horaires</h3>
+          <table class="hours" id="hours">
+            <tr data-d="1"><td>Lundi</td><td>8h – 18h</td></tr>
+            <tr data-d="2"><td>Mardi</td><td>8h – 18h</td></tr>
+            <tr data-d="3"><td>Mercredi</td><td>8h – 18h</td></tr>
+            <tr data-d="4"><td>Jeudi</td><td>8h – 18h</td></tr>
+            <tr data-d="5"><td>Vendredi</td><td>8h – 18h</td></tr>
+            <tr data-d="6"><td>Samedi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+          </table>
+          <p class="small">Horaires indicatifs, à confirmer par téléphone.</p>
+        </div>
+      </div>
+
+      <form class="devis reveal d1" id="devis" novalidate>
+        <h3>Demander un devis</h3>
+        <p>Réponse sous quelques jours ouvrés. Aucun engagement.</p>
+        <div class="row">
+          <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="field"><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Bihorel, Rouen, Bois-Guillaume…"></div>
+        </div>
+        <div class="field"><label for="f-projet">Votre projet</label>
+          <select id="f-projet" name="projet">
+            <option>Poêle à bois</option>
+            <option>Insert dans une cheminée existante</option>
+            <option>Chauffage / eau chaude au bois</option>
+            <option>Conseil, autre demande</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Surface de la pièce, cheminée existante ou non, délai souhaité…"></textarea></div>
+        <button class="btn btn-feu" type="submit">Envoyer ma demande</button>
+        <div class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera actif sur le site final.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= PIED DE PAGE ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" aria-label="Ramona – haut de page" style="margin-bottom:18px">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#c07a4a"/><path d="M20 9c3 5 8 8 8 15a8 8 0 0 1-16 0c0-4 2-6 4-8 0 3 1 5 3 5-1-4 0-8 1-12z" fill="#e2572b"/></svg>
+          <span><b>RAMONA</b><small>Chauffage au bois</small></span>
+        </a>
+        <p>Poêles et inserts à bois, chauffage et eau chaude au bois. Qualification QUALIBOIS Air – poêle et insert.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li>45 rue des Canadiens<br>76420 Bihorel</li>
+          <li><a href="tel:+33235602929">02 35 60 29 29</a></li>
+          <li><a href="mailto:ent.ramona@wanadoo.fr">ent.ramona@wanadoo.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Lun – ven&nbsp;: 8h – 18h</li>
+          <li>Samedi&nbsp;: sur rendez-vous</li>
+          <li style="font-size:13px">Indicatifs, à confirmer</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Secteur</h4>
+        <ul>
+          <li>Bihorel</li>
+          <li>Rouen</li>
+          <li>Agglomération rouennaise</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="foot-word" aria-hidden="true">RAMONA</p>
+  <div class="wrap legal">
+    <span>© <span id="year">2026</span> Ramona – Bihorel. Tous droits réservés.</span>
+    <span>Mentions légales · Politique de confidentialité (complétées sur le site final)</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33235602929" aria-label="Appeler Ramona au 02 35 60 29 29">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>30)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  function setMenu(open){menu.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');if(open)nav.classList.add('scrolled');else onScroll();}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  var items=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});items.forEach(function(el){io.observe(el)})}
+
+  document.querySelectorAll('.faq-item').forEach(function(it){
+    var q=it.querySelector('.faq-q');
+    q.addEventListener('click',function(){
+      var open=!it.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-q').setAttribute('aria-expanded','false')});
+      if(open){it.classList.add('open');q.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  var d=new Date().getDay(),row=document.querySelector('#hours tr[data-d="'+d+'"]');
+  if(row)row.classList.add('today');
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  document.getElementById('devis').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show')});
+})();
+</script>
+</body>
+</html>

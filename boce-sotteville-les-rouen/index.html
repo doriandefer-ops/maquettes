@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Boce – Chauffagiste à Sotteville-lès-Rouen</title>
+<meta name="description" content="Boce (Eddy Boce), chauffagiste à Sotteville-lès-Rouen : chaudières gaz ou fioul, chaudières et radiateurs électriques, plomberie. Rouen rive gauche, Saint-Étienne-du-Rouvray, Le Petit-Quevilly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#17191c;
+  --graphite-2:#212429;
+  --graphite-3:#2c3036;
+  --wagon:#1f4d3a;
+  --wagon-2:#173a2c;
+  --wagon-light:#2d6a51;
+  --rouille:#b5562a;
+  --rouille-2:#9a4520;
+  --creme:#efe6d2;
+  --creme-2:#e3d7bd;
+  --laiton:#c9a24a;
+  --laiton-2:#a9852f;
+  --ink:#17191c;
+  --muted:#5b5f63;
+  --line:rgba(23,25,28,.18);
+  --f-title:"Big Shoulders Display","Arial Narrow","Roboto Condensed","Helvetica Neue Condensed",Impact,sans-serif;
+  --f-text:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --nav-h:68px;
+  --radius:4px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px)}
+body{margin:0;font-family:var(--f-text);color:var(--ink);background:var(--creme);line-height:1.6;font-size:16.5px;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-title);font-weight:800;line-height:1;margin:0;letter-spacing:.01em;text-transform:uppercase}
+p{margin:0 0 1em}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Rivets & plaques ---------- */
+.rivets{position:relative}
+.rivets::before,.rivets::after{content:"";position:absolute;top:10px;width:9px;height:9px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff6 0 20%,transparent 45%),var(--laiton);box-shadow:inset -1px -1px 0 #0005,0 1px 0 #fff3}
+.rivets::before{left:10px}.rivets::after{right:10px}
+.rivets-b{position:relative}
+.rivets-b>.rv{position:absolute;bottom:10px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff6 0 20%,transparent 45%),var(--laiton);box-shadow:inset -1px -1px 0 #0005}
+.rv.l{left:10px}.rv.r{right:10px}
+
+.tag{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-title);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem;color:var(--rouille)}
+.tag::before{content:"";width:28px;height:10px;background:repeating-linear-gradient(-45deg,var(--rouille) 0 4px,transparent 4px 8px)}
+.section-title{font-size:clamp(2.4rem,6vw,4.4rem);margin:.25em 0 .35em}
+.lead{font-size:1.08rem;color:var(--muted);max-width:60ch}
+
+/* ---------- Boutons ---------- */
+.btn{--bg:var(--rouille);--fg:var(--creme);display:inline-flex;align-items:center;gap:.6em;padding:.9em 1.4em;border:2px solid var(--bg);background:var(--bg);color:var(--fg);
+  font-family:var(--f-title);font-weight:800;font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:var(--radius);
+  box-shadow:4px 4px 0 var(--graphite);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--graphite)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--graphite)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.ghost{--bg:transparent;--fg:var(--creme);border-color:var(--creme);box-shadow:4px 4px 0 var(--laiton)}
+.btn.ghost:hover{background:var(--creme);color:var(--graphite);box-shadow:6px 6px 0 var(--laiton)}
+.btn.green{--bg:var(--wagon);--fg:var(--creme)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--laiton);outline-offset:3px}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;background:rgba(23,25,28,.94);backdrop-filter:blur(6px);color:var(--creme);border-bottom:3px solid var(--rouille)}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:6px;background:repeating-linear-gradient(90deg,var(--laiton) 0 14px,transparent 14px 28px);opacity:.55}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-plate{font-family:var(--f-title);font-weight:900;font-size:1.6rem;letter-spacing:.12em;background:var(--creme);color:var(--wagon);padding:2px 12px 0;border:2px solid var(--laiton);border-radius:3px;box-shadow:inset 0 0 0 2px var(--creme),inset 0 0 0 3px var(--wagon)}
+.brand small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--creme-2);line-height:1.2}
+.nav-links{display:flex;gap:4px;align-items:center;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:8px 12px;text-decoration:none;font-family:var(--f-title);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:1.02rem;color:var(--creme-2);border-radius:3px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--graphite);background:var(--laiton)}
+.nav-links .nav-cta{background:var(--rouille);color:var(--creme);margin-left:6px}
+.nav-links .nav-cta:hover{background:var(--creme);color:var(--rouille)}
+.burger{display:none;width:48px;height:44px;border:2px solid var(--laiton);background:transparent;border-radius:3px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:3px;background:var(--creme);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:12px}.burger span:nth-child(2){top:19px}.burger span:nth-child(3){top:26px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;padding:calc(var(--nav-h) + 40px) 0 0;background:var(--graphite);color:var(--creme);overflow:hidden;isolation:isolate}
+.hero-rails{position:absolute;inset:auto 0 0 0;height:62%;z-index:-2;opacity:.9}
+.hero::before{content:"";position:absolute;inset:0;z-index:-3;background:
+  radial-gradient(ellipse 60% 50% at 70% 30%,rgba(181,86,42,.22),transparent 70%),
+  radial-gradient(ellipse 50% 40% at 15% 20%,rgba(31,77,58,.45),transparent 70%),
+  repeating-linear-gradient(0deg,transparent 0 39px,rgba(239,230,210,.035) 39px 40px),
+  repeating-linear-gradient(90deg,transparent 0 39px,rgba(239,230,210,.035) 39px 40px)}
+.hero-giant{position:absolute;left:-3vw;top:calc(var(--nav-h) + 2vh);z-index:-1;font-family:var(--f-title);font-weight:900;font-size:clamp(11rem,47vw,46rem);line-height:.8;letter-spacing:-.01em;color:transparent;
+  -webkit-text-stroke:2px rgba(239,230,210,.14);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-giant .fill{position:absolute;inset:0;color:var(--rouille);-webkit-text-stroke:0;opacity:.82;
+  -webkit-mask-image:linear-gradient(180deg,#000 0 47%,transparent 47% 53%,#000 53% 100%);
+  mask-image:linear-gradient(180deg,#000 0 47%,transparent 47% 53%,#000 53% 100%)}
+.hero-giant .fill span{display:inline-block;position:relative}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:end;min-height:calc(100vh - var(--nav-h) - 40px)}
+.hero-text{padding:clamp(120px,22vw,260px) 0 72px;position:relative;z-index:2}
+.hero-plate{display:inline-flex;gap:12px;align-items:center;background:var(--creme);color:var(--wagon);padding:6px 16px 6px 12px;border:2px solid var(--laiton);border-radius:3px;font-family:var(--f-title);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:1rem;box-shadow:3px 3px 0 #000}
+.hero-plate b{background:var(--wagon);color:var(--creme);padding:1px 8px;border-radius:2px}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.6rem);margin:18px 0 18px;text-shadow:0 3px 0 #000}
+.hero h1 em{font-style:normal;color:var(--laiton)}
+.hero .accroche{font-size:clamp(1.05rem,1.6vw,1.22rem);max-width:52ch;color:var(--creme-2)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:.92rem;color:var(--creme-2)}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta svg{width:18px;height:18px;color:var(--laiton)}
+.hero-art{position:relative;align-self:center;z-index:1;margin-top:60px}
+.hero-art svg{width:100%;max-width:520px;margin-left:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.flame{transform-origin:50% 100%;animation:flicker 1.6s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.12) scaleX(.94)}}
+.needle{transform-origin:200px 352px;animation:needle 5s ease-in-out infinite}
+@keyframes needle{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(18deg)}}
+.steam{animation:steam 3.4s ease-in-out infinite;opacity:.0}
+.steam.s2{animation-delay:1.1s}.steam.s3{animation-delay:2.2s}
+@keyframes steam{0%{opacity:0;transform:translateY(10px)}30%{opacity:.7}100%{opacity:0;transform:translateY(-30px)}}
+.hero-strip{position:relative;z-index:3;background:var(--rouille);color:var(--creme);border-top:3px solid var(--graphite);overflow:hidden}
+.ticker{display:flex;gap:48px;white-space:nowrap;padding:12px 0;font-family:var(--f-title);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:1.1rem;animation:ticker 38s linear infinite;width:max-content}
+.ticker span{display:inline-flex;align-items:center;gap:48px}
+.ticker span::after{content:"";width:12px;height:12px;background:var(--laiton);transform:rotate(45deg)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* ---------- Bandeau de confiance ---------- */
+.trust{background:var(--wagon);color:var(--creme);padding:46px 0;position:relative}
+.trust::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 120px,rgba(0,0,0,.12) 120px 122px);pointer-events:none}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.plaque{background:var(--creme);color:var(--wagon);border-radius:6px;padding:22px 22px 20px;border:3px solid var(--wagon-2);box-shadow:inset 0 0 0 3px var(--creme),inset 0 0 0 5px var(--wagon),0 6px 0 rgba(0,0,0,.35);position:relative}
+.plaque .k{font-family:var(--f-title);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem;color:var(--rouille);display:block;margin:6px 0 4px}
+.plaque .v{font-family:var(--f-title);font-weight:900;font-size:1.6rem;text-transform:uppercase;line-height:1.05;display:block}
+.plaque p{margin:.5em 0 0;font-size:.9rem;color:#3c4a43}
+.plaque svg{width:36px;height:36px;color:var(--wagon)}
+
+/* ---------- Services ---------- */
+section{position:relative}
+.pad{padding:clamp(72px,10vw,120px) 0}
+.services{background:var(--creme);background-image:radial-gradient(rgba(23,25,28,.07) 1px,transparent 1.2px);background-size:18px 18px}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fbf7ec;border:2px solid var(--graphite);border-radius:var(--radius);padding:30px 26px 26px;position:relative;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:6px 6px 0 var(--graphite)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--rouille)}
+.card .num{position:absolute;top:14px;right:18px;font-family:var(--f-title);font-weight:800;font-size:.95rem;letter-spacing:.14em;color:var(--muted)}
+.card .ico{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--wagon);color:var(--creme);border:3px solid var(--laiton);margin-bottom:20px;transition:transform .4s}
+.card:hover .ico{transform:rotate(-12deg)}
+.card .ico svg{width:38px;height:38px}
+.card h3{font-size:1.75rem;margin-bottom:10px}
+.card p{color:#44484d;margin:0;font-size:.98rem}
+
+/* ---------- Pourquoi ---------- */
+.why{background:var(--graphite);color:var(--creme);overflow:hidden}
+.why::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:repeating-linear-gradient(-45deg,var(--laiton) 0 14px,var(--graphite) 14px 28px)}
+.why .lead{color:var(--creme-2)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;border:2px solid var(--graphite-3)}
+.atout{padding:34px 26px;border-right:2px solid var(--graphite-3);position:relative;transition:background .3s}
+.atout:last-child{border-right:0}
+.atout:hover{background:var(--graphite-2)}
+.atout .sig{width:54px;height:54px;margin-bottom:22px;color:var(--laiton)}
+.atout h3{font-size:1.6rem;margin-bottom:12px;color:var(--creme)}
+.atout p{color:#c9c1ae;font-size:.96rem;margin:0}
+.atout::after{content:"";position:absolute;left:26px;bottom:0;width:40px;height:4px;background:var(--rouille);transition:width .35s}
+.atout:hover::after{width:calc(100% - 52px)}
+
+/* ---------- Étapes ---------- */
+.steps{background:var(--creme-2)}
+.track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+.track::before{content:"";position:absolute;left:4%;right:4%;top:34px;height:14px;background:
+  linear-gradient(var(--graphite),var(--graphite)) 0 0/100% 3px no-repeat,
+  linear-gradient(var(--graphite),var(--graphite)) 0 100%/100% 3px no-repeat,
+  repeating-linear-gradient(90deg,var(--rouille-2) 0 6px,transparent 6px 22px)}
+.step{position:relative;text-align:center;padding:0 6px}
+.step .disc{width:82px;height:82px;margin:0 auto 22px;border-radius:50%;background:var(--wagon);color:var(--creme);display:grid;place-items:center;font-family:var(--f-title);font-weight:900;font-size:2.4rem;border:4px solid var(--laiton);box-shadow:0 0 0 6px var(--creme-2),0 6px 0 6px rgba(0,0,0,.15);position:relative;z-index:1;transition:transform .3s}
+.step:hover .disc{transform:translateY(-6px)}
+.step h3{font-size:1.55rem;margin-bottom:8px}
+.step p{font-size:.95rem;color:#43474b;margin:0}
+
+/* ---------- À propos ---------- */
+.about{background:var(--wagon);color:var(--creme);overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.about .tag{color:var(--laiton)}.about .tag::before{background:repeating-linear-gradient(-45deg,var(--laiton) 0 4px,transparent 4px 8px)}
+.about p{color:#e1dac7}
+.about-card{background:var(--creme);color:var(--graphite);padding:34px 30px 30px;border-radius:6px;border:3px solid var(--laiton);box-shadow:12px 12px 0 var(--graphite);position:relative}
+.about-card h3{font-size:2rem;color:var(--wagon);margin-bottom:16px}
+.spec{list-style:none;margin:0;padding:0}
+.spec li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.spec li:last-child{border-bottom:0}
+.spec li span:first-child{font-family:var(--f-title);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--rouille);flex:none}
+.spec li span:last-child{text-align:right}
+.spec a{color:var(--wagon);font-weight:600}
+
+/* ---------- Comparatif : tableau des départs ---------- */
+.board-sec{background:var(--graphite);color:var(--creme)}
+.board-sec .lead{color:var(--creme-2)}
+.board{margin-top:44px;background:#0e0f11;border:4px solid var(--graphite-3);border-radius:8px;padding:10px;box-shadow:inset 0 0 0 2px #000,0 20px 40px rgba(0,0,0,.4)}
+.board-head,.board-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1.1fr;gap:6px}
+.board-head div{font-family:var(--f-title);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem;color:var(--laiton);padding:10px 12px}
+.board-row{margin-top:6px;transition:background .25s}
+.board-row>div{background:#1b1d21;padding:14px 12px;font-size:.93rem;color:#dcd4c0;border-radius:3px;position:relative}
+.board-row>div:first-child{font-family:var(--f-title);font-weight:800;font-size:1.45rem;text-transform:uppercase;color:var(--creme);letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+.board-row>div:first-child i{width:14px;height:14px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor}
+.board-row:hover>div{background:#24272c}
+.board-row .devis{font-family:var(--f-title);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);background:var(--laiton);text-align:center;display:flex;align-items:center;justify-content:center}
+.board-row:hover .devis{background:var(--creme)}
+.dl{display:none;font-family:var(--f-title);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;color:var(--laiton);margin-bottom:2px}
+.board-note{margin-top:18px;font-size:.88rem;color:#a9a291}
+.realisations{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px}
+.real{background:var(--graphite-2);border:2px solid var(--graphite-3);border-radius:6px;overflow:hidden;transition:transform .3s,border-color .3s}
+.real:hover{transform:translateY(-6px);border-color:var(--laiton)}
+.real svg{width:100%;height:auto;background:#1d2024}
+.real .cap{padding:16px 18px 18px}
+.real h3{font-size:1.4rem;margin-bottom:6px}
+.real p{margin:0;font-size:.9rem;color:#bdb6a4}
+
+/* ---------- Avis ---------- */
+.avis{background:var(--creme)}
+.avis-box{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;background:#fbf7ec;border:2px solid var(--graphite);padding:36px 36px;border-radius:6px;box-shadow:8px 8px 0 var(--wagon)}
+.avis-box .stamp{width:110px;height:110px;border-radius:50%;border:3px dashed var(--rouille);display:grid;place-items:center;color:var(--rouille);transform:rotate(-8deg)}
+.avis-box .stamp svg{width:56px;height:56px}
+.avis-box h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:10px}
+.avis-box p{margin:0;color:#44484d}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--creme-2)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-list{border-top:3px solid var(--graphite)}
+.qa{border-bottom:2px solid var(--graphite)}
+.qa button{width:100%;text-align:left;background:none;border:0;padding:22px 52px 22px 0;font-family:var(--f-title);font-weight:800;text-transform:uppercase;font-size:1.35rem;letter-spacing:.02em;color:var(--graphite);cursor:pointer;position:relative;line-height:1.15}
+.qa button::after{content:"";position:absolute;right:6px;top:50%;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:var(--wagon) center/14px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M7 1v12M1 7h12' stroke='%23efe6d2' stroke-width='2.4'/%3E%3C/svg%3E");transition:transform .3s,background-color .3s}
+.qa button:hover{color:var(--rouille)}
+.qa button[aria-expanded="true"]::after{transform:rotate(135deg);background-color:var(--rouille)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{padding:0 40px 22px 0;margin:0;color:#3d4146}
+.qa.open .ans{grid-template-rows:1fr}
+
+/* ---------- Horaires + contact ---------- */
+.contact{background:var(--graphite);color:var(--creme)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+.info-panel{background:var(--graphite-2);border:2px solid var(--graphite-3);border-radius:6px;padding:30px}
+.info-panel h3{font-size:1.8rem;color:var(--laiton);margin-bottom:14px}
+.hours{list-style:none;margin:0 0 10px;padding:0;font-variant-numeric:tabular-nums}
+.hours li{display:flex;justify-content:space-between;padding:9px 12px;border-radius:3px;font-size:.96rem;color:#d4ccb8}
+.hours li:nth-child(odd){background:rgba(255,255,255,.03)}
+.hours li.today{background:var(--rouille);color:var(--creme);font-weight:600}
+.hours li.today span:first-child::after{content:" · aujourd'hui";font-weight:400;font-size:.85em}
+.small{font-size:.85rem;color:#a9a291}
+.addr{margin:26px 0 18px;padding-top:22px;border-top:1px dashed rgba(239,230,210,.2)}
+.addr p{margin:0 0 .3em}
+.addr a{color:var(--creme)}
+.coords{display:grid;gap:10px;margin:14px 0 22px}
+.coords a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme);font-weight:500;word-break:break-word}
+.coords a:hover{color:var(--laiton)}
+.coords svg{width:22px;height:22px;flex:none;color:var(--laiton)}
+form.devis-form{background:var(--creme);color:var(--graphite);border-radius:6px;padding:34px 30px;border:3px solid var(--laiton);position:relative}
+form h3{font-size:2.1rem;color:var(--wagon);margin-bottom:6px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-family:var(--f-title);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;color:var(--wagon)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;padding:12px 14px;border:2px solid var(--graphite);border-radius:3px;background:#fbf7ec;color:var(--graphite);transition:border-color .2s,box-shadow .2s;width:100%}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--rouille);box-shadow:3px 3px 0 var(--rouille)}
+.form-msg{display:none;margin-top:18px;padding:14px 16px;background:var(--wagon);color:var(--creme);border-left:6px solid var(--laiton);font-weight:500}
+.form-msg.show{display:block}
+.form-foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:22px}
+.form-foot .small{color:var(--muted);max-width:32ch}
+
+/* ---------- Footer ---------- */
+footer{background:#0f1012;color:#cfc7b3;padding:64px 0 120px;border-top:6px solid var(--wagon);position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:-18px;height:12px;background:repeating-linear-gradient(90deg,var(--graphite) 0 22px,transparent 22px 44px)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-size:1.25rem;color:var(--laiton);letter-spacing:.12em;margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.93rem}
+footer a{color:#e7dfcb;text-decoration:none}
+footer a:hover{color:var(--laiton);text-decoration:underline}
+.foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid #2a2c30;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:.82rem;color:#8f8878}
+
+.demo-banner{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(15,16,18,.92);color:#d9d1bd;font-size:.78rem;text-align:center;padding:7px 16px;border-top:1px solid var(--graphite-3);letter-spacing:.02em}
+.call-fab{position:fixed;right:16px;bottom:44px;z-index:45;display:none;align-items:center;gap:8px;background:var(--rouille);color:var(--creme);text-decoration:none;font-family:var(--f-title);font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:14px 18px;border-radius:40px;border:2px solid var(--creme);box-shadow:0 8px 24px rgba(0,0,0,.4);animation:pulse 2.6s ease-in-out infinite}
+.call-fab svg{width:22px;height:22px}
+@keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 0 rgba(181,86,42,.6)}50%{box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 12px rgba(181,86,42,0)}}
+
+/* ---------- Reveal ---------- */
+.rv-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv-up.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(2){border-right:0}
+  .atout:nth-child(-n+2){border-bottom:2px solid var(--graphite-3)}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--graphite);border-bottom:4px solid var(--rouille);padding:10px 16px 20px;transform:translateY(-120%);transition:transform .35s ease;visibility:hidden;z-index:-1}
+  .nav-links.open{transform:none;visibility:visible}
+  .nav-links a{padding:14px 8px;font-size:1.3rem;border-bottom:1px solid var(--graphite-3)}
+  .nav-links .nav-cta{margin:14px 0 0;text-align:center}
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-art{order:-1;margin:clamp(20px,8vw,60px) 0 0 auto;max-width:min(300px,62vw);width:100%}
+  .hero-text{padding:24px 0 56px}
+  .about-grid,.faq-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .track{grid-template-columns:repeat(2,1fr);row-gap:44px}
+  .track::before{display:none}
+  .realisations{grid-template-columns:1fr 1fr}
+  .board-head{display:none}
+  .board-row{grid-template-columns:1fr 1fr;margin-top:10px;background:#1b1d21;border-radius:4px;padding:6px;gap:4px}
+  .board-row>div:first-child{grid-column:1/-1}
+  .board-row .devis{grid-column:1/-1;padding:10px}
+  .dl{display:block}
+  .avis-box{grid-template-columns:1fr;text-align:left;gap:20px}
+  .call-fab{display:inline-flex}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .cards,.realisations,.trust-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .atout{border-right:0!important;border-bottom:2px solid var(--graphite-3)}
+  .atout:last-child{border-bottom:0}
+  .track{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-actions .btn{flex:1 1 100%;justify-content:center}
+  .brand small{display:none}
+  .avis-box{padding:28px 22px}
+  form.devis-form{padding:28px 20px}
+  .info-panel{padding:24px 18px}
+  .hero-giant{font-size:62vw;top:calc(var(--nav-h) + 6px)}
+  .call-fab{bottom:62px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv-up{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="top">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Boce – retour en haut">
+      <span class="brand-plate">BOCE</span>
+      <small>Chauffagiste<br>Sotteville-lès-Rouen</small>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">L'artisan</a></li>
+      <li><a href="#comparatif">Comparatif</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ========== HERO ========== -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- Rails en perspective -->
+  <svg class="hero-rails" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="railfade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#efe6d2" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#efe6d2" stop-opacity=".25"/>
+        <stop offset="1" stop-color="#efe6d2" stop-opacity=".55"/>
+      </linearGradient>
+      <linearGradient id="sleeperfade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#b5562a" stop-opacity="0"/>
+        <stop offset="1" stop-color="#b5562a" stop-opacity=".5"/>
+      </linearGradient>
+    </defs>
+    <g fill="url(#sleeperfade)">
+      <polygon points="700,40 740,40 742,44 698,44"/>
+      <polygon points="690,70 750,70 753,76 687,76"/>
+      <polygon points="676,110 764,110 768,119 672,119"/>
+      <polygon points="656,165 784,165 790,178 650,178"/>
+      <polygon points="626,240 814,240 823,259 617,259"/>
+      <polygon points="584,345 856,345 869,372 571,372"/>
+      <polygon points="520,490 920,490 940,530 500,530"/>
+    </g>
+    <g stroke="url(#railfade)" stroke-width="5" fill="none" stroke-linecap="round">
+      <line x1="706" y1="30" x2="560" y2="560"/>
+      <line x1="734" y1="30" x2="880" y2="560"/>
+    </g>
+    <g stroke="url(#railfade)" stroke-width="3" fill="none" opacity=".55">
+      <line x1="690" y1="30" x2="180" y2="560"/>
+      <line x1="700" y1="30" x2="370" y2="560"/>
+      <line x1="740" y1="30" x2="1070" y2="560"/>
+      <line x1="750" y1="30" x2="1260" y2="560"/>
+    </g>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#efe6d2" stroke-opacity=".12"/>
+  </svg>
+
+  <div class="hero-giant" aria-hidden="true">BOCE<span class="fill">BOCE</span></div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="hero-plate rv-up"><b>76300</b> Sotteville-lès-Rouen</span>
+      <h1 id="hero-title" class="rv-up d1">Boce, le chauffage <em>remis sur les rails</em></h1>
+      <p class="accroche rv-up d2">Chaudière gaz qui s'essouffle, vieille chaudière fioul, radiateurs électriques à remplacer&nbsp;? Eddy Boce intervient depuis Sotteville-lès-Rouen, sur la rive gauche de Rouen et dans les communes voisines, pour remettre votre installation en marche — proprement et sans détour.</p>
+      <div class="hero-actions rv-up d3">
+        <a class="btn" href="tel:+33235734898">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Appeler
+        </a>
+        <a class="btn ghost" href="#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+          Demander un devis
+        </a>
+      </div>
+      <div class="hero-meta rv-up d4">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>34 rue Louis Antier</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/><circle cx="12" cy="12" r="9"/></svg>Rouen rive gauche &amp; environs</span>
+      </div>
+    </div>
+
+    <div class="hero-art rv-up d2">
+      <!-- Chaudière murale au trait -->
+      <svg viewBox="0 0 400 520" aria-label="Illustration d'une chaudière murale">
+        <defs>
+          <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="8" stroke="#efe6d2" stroke-opacity=".18" stroke-width="2"/>
+          </pattern>
+        </defs>
+        <!-- vapeur -->
+        <g stroke="#efe6d2" stroke-width="3" fill="none" stroke-linecap="round">
+          <path class="steam" d="M180 50c-10-12 10-18 0-32"/>
+          <path class="steam s2" d="M200 48c-10-12 10-18 0-32"/>
+          <path class="steam s3" d="M220 50c-10-12 10-18 0-32"/>
+        </g>
+        <!-- conduit fumées -->
+        <rect x="178" y="58" width="44" height="40" fill="#17191c" stroke="#c9a24a" stroke-width="4"/>
+        <line x1="178" y1="72" x2="222" y2="72" stroke="#c9a24a" stroke-width="3"/>
+        <!-- fixation murale -->
+        <rect x="70" y="92" width="260" height="14" rx="2" fill="#2c3036" stroke="#efe6d2" stroke-width="3"/>
+        <!-- corps -->
+        <rect x="60" y="100" width="280" height="330" rx="16" fill="#1f4d3a" stroke="#efe6d2" stroke-width="5"/>
+        <rect x="60" y="100" width="280" height="330" rx="16" fill="url(#hatch)"/>
+        <!-- rivets -->
+        <g fill="#c9a24a">
+          <circle cx="82" cy="122" r="5"/><circle cx="318" cy="122" r="5"/>
+          <circle cx="82" cy="408" r="5"/><circle cx="318" cy="408" r="5"/>
+        </g>
+        <!-- plaque émaillée -->
+        <rect x="110" y="128" width="180" height="40" rx="4" fill="#efe6d2" stroke="#c9a24a" stroke-width="3"/>
+        <text x="200" y="157" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, Impact, sans-serif" font-weight="900" font-size="26" letter-spacing="5" fill="#1f4d3a">BOCE · 76</text>
+        <!-- hublot flamme -->
+        <circle cx="200" cy="245" r="58" fill="#17191c" stroke="#efe6d2" stroke-width="5"/>
+        <circle cx="200" cy="245" r="46" fill="none" stroke="#c9a24a" stroke-width="3" stroke-dasharray="4 7"/>
+        <g class="flame">
+          <path d="M200 285c-22 0-32-16-28-34 4-16 18-22 18-40 14 10 12 24 10 30 8-4 12-12 12-20 12 12 18 26 14 40-4 16-14 24-26 24z" fill="#b5562a"/>
+          <path d="M200 285c-11 0-16-8-14-17 2-9 9-12 10-22 7 6 7 13 6 17 4-2 6-6 6-10 6 7 8 13 6 20-2 8-7 12-14 12z" fill="#c9a24a"/>
+        </g>
+        <!-- manomètre -->
+        <circle cx="200" cy="352" r="30" fill="#efe6d2" stroke="#c9a24a" stroke-width="4"/>
+        <path d="M178 362a24 24 0 0 1 44 0" fill="none" stroke="#17191c" stroke-width="2" stroke-dasharray="2 4"/>
+        <path d="M206 344a24 24 0 0 1 16 18" fill="none" stroke="#b5562a" stroke-width="4"/>
+        <g class="needle"><line x1="200" y1="352" x2="200" y2="330" stroke="#17191c" stroke-width="3" stroke-linecap="round"/></g>
+        <circle cx="200" cy="352" r="4" fill="#17191c"/>
+        <!-- boutons -->
+        <g stroke="#efe6d2" stroke-width="3" fill="#17191c">
+          <circle cx="110" cy="352" r="14"/><circle cx="290" cy="352" r="14"/>
+        </g>
+        <line x1="110" y1="352" x2="110" y2="342" stroke="#c9a24a" stroke-width="3"/>
+        <line x1="290" y1="352" x2="298" y2="345" stroke="#c9a24a" stroke-width="3"/>
+        <rect x="96" y="388" width="208" height="8" rx="4" fill="#17191c" stroke="#efe6d2" stroke-width="2"/>
+        <!-- tuyaux -->
+        <g fill="none" stroke-width="10" stroke-linecap="round">
+          <path d="M110 430v40h-50" stroke="#b5562a"/>
+          <path d="M160 430v70" stroke="#c9a24a"/>
+          <path d="M240 430v70" stroke="#efe6d2"/>
+          <path d="M290 430v40h60" stroke="#2d6a51"/>
+        </g>
+        <g fill="#17191c" stroke="#efe6d2" stroke-width="3">
+          <rect x="148" y="450" width="24" height="14" rx="2"/>
+          <rect x="228" y="450" width="24" height="14" rx="2"/>
+        </g>
+        <!-- vanne -->
+        <g transform="translate(160 492)"><circle r="12" fill="#b5562a" stroke="#efe6d2" stroke-width="3"/><path d="M-12 0h24M0 -12v24" stroke="#efe6d2" stroke-width="3"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-strip" aria-hidden="true">
+    <div class="ticker">
+      <span>Chaudières gaz</span><span>Chaudières fioul</span><span>Chaudières électriques</span><span>Radiateurs électriques</span><span>Plomberie</span><span>Sotteville-lès-Rouen</span><span>Rouen rive gauche</span>
+      <span>Chaudières gaz</span><span>Chaudières fioul</span><span>Chaudières électriques</span><span>Radiateurs électriques</span><span>Plomberie</span><span>Sotteville-lès-Rouen</span><span>Rouen rive gauche</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONFIANCE ========== -->
+<section class="trust" aria-label="Informations clés">
+  <div class="wrap trust-grid">
+    <div class="plaque rivets rv-up">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M20 4l6 10h-12z"/><rect x="8" y="14" width="24" height="22" rx="2"/><path d="M20 22c-3 3-3 7 0 8 3-1 3-5 0-8z"/></svg>
+      <span class="k">Métier</span>
+      <span class="v">Chauffagiste</span>
+      <p>Gaz, fioul et électrique — aussi référencé en plomberie.</p>
+    </div>
+    <div class="plaque rivets rv-up d1">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 37s12-10.5 12-20a12 12 0 0 0-24 0c0 9.5 12 20 12 20z"/><circle cx="20" cy="17" r="4.5"/></svg>
+      <span class="k">Atelier</span>
+      <span class="v">Sotteville-lès-Rouen</span>
+      <p>34 rue Louis Antier, 76300.</p>
+    </div>
+    <div class="plaque rivets rv-up d2">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M4 30h32M8 30l6-20h12l6 20M12 22h16M16 10v-4h8v4"/></svg>
+      <span class="k">Zone desservie</span>
+      <span class="v">Rive gauche</span>
+      <p>Sotteville, Rouen rive gauche, Saint-Étienne-du-Rouvray, Le Petit-Quevilly.</p>
+    </div>
+    <div class="plaque rivets rv-up d3">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M33 26v4a3 3 0 0 1-3.3 3A30 30 0 0 1 7 10.3 3 3 0 0 1 10 7h4l2 6-3 2a20 20 0 0 0 10 10l2-3 6 2z"/></svg>
+      <span class="k">Ligne directe</span>
+      <span class="v"><a href="tel:+33235734898" style="text-decoration:none">02 35 73 48 98</a></span>
+      <p>Vous parlez directement à l'artisan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="services pad" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <span class="tag rv-up">Atelier · Voie 1</span>
+        <h2 class="section-title rv-up d1" id="services-title">Ce que Boce prend en charge</h2>
+      </div>
+      <p class="lead rv-up d2">Des chaudières gaz et fioul aux équipements électriques, en passant par la plomberie : un seul interlocuteur pour le chauffage de votre maison ou de votre appartement.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv-up">
+        <span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="5" width="24" height="30" rx="3"/><circle cx="20" cy="18" r="6"/><path d="M20 22c-2.4 0-3.4-1.6-3-3.4.4-1.6 2-2 2-3.8 1.6 1 2.6 2.6 3 3.6.6 2-.4 3.6-2 3.6z" fill="currentColor"/><path d="M13 29h14"/></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Installation, remplacement et remise en route de chaudières gaz murales ou au sol. Le bon modèle selon votre logement.</p>
+      </article>
+      <article class="card rv-up d1">
+        <span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="20" height="23" rx="2"/><path d="M26 18h4a3 3 0 0 1 3 3v8"/><path d="M33 29v6"/><path d="M12 6h8v6h-8z"/><path d="M16 21c-2 2.5-2 6 0 7 2-1 2-4.5 0-7z" fill="currentColor"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Entretien de votre chaudière fioul existante ou étude d'un remplacement : on fait le point sur ce qui est le plus pertinent pour vous.</p>
+      </article>
+      <article class="card rv-up d2">
+        <span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="5" width="24" height="30" rx="3"/><path d="M22 11l-6 9h6l-4 9" /><path d="M12 31h16"/></svg></div>
+        <h3>Chaudières électriques</h3>
+        <p>Une solution compacte, sans conduit ni combustion, adaptée à certains appartements et petites surfaces. Pose et raccordement.</p>
+      </article>
+      <article class="card rv-up">
+        <span class="num">04</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="30" height="20" rx="3"/><path d="M11 10v20M17 10v20M23 10v20M29 10v20"/><path d="M9 30v4M31 30v4"/></svg></div>
+        <h3>Radiateurs électriques</h3>
+        <p>Remplacement de vieux convecteurs par des radiateurs plus confortables, posés et réglés pièce par pièce.</p>
+      </article>
+      <article class="card rv-up d1">
+        <span class="num">05</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h14a6 6 0 0 1 6 6v4"/><path d="M6 8v8"/><path d="M22 22h8v4h-8z"/><path d="M26 29c-1.8 2.4-1.8 4 0 5 1.8-1 1.8-2.6 0-5z" fill="currentColor"/><path d="M12 8h4"/></svg></div>
+        <h3>Plomberie</h3>
+        <p>Fuites, robinetterie, raccordements, circuits d'eau chaude : les travaux de plomberie qui accompagnent souvent le chauffage.</p>
+      </article>
+      <article class="card rv-up d2">
+        <span class="num">06</span>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="22" r="12"/><path d="M20 22l6-6"/><path d="M14 4h12M20 4v6"/><path d="M11 26h2M27 26h2"/></svg></div>
+        <h3>Diagnostic &amp; conseil</h3>
+        <p>Une panne, une facture qui grimpe, un projet de rénovation ? On regarde votre installation et on vous explique les options.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POURQUOI ========== -->
+<section class="why pad" aria-labelledby="why-title">
+  <div class="wrap">
+    <span class="tag rv-up" style="color:var(--laiton)">Signalisation</span>
+    <h2 class="section-title rv-up d1" id="why-title">Pourquoi faire appel à Boce</h2>
+    <p class="lead rv-up d2">Un artisan de la rive gauche, pour qui le chauffage est un métier de précision — comme un aiguillage bien réglé.</p>
+    <div class="why-grid">
+      <div class="atout rv-up">
+        <svg class="sig" viewBox="0 0 54 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="15" y="4" width="24" height="36" rx="12"/><circle cx="27" cy="16" r="5" fill="currentColor"/><circle cx="27" cy="29" r="5"/><path d="M27 40v10M18 50h18"/></svg>
+        <h3>Un interlocuteur unique</h3>
+        <p>Vous échangez directement avec Eddy Boce, de la première visite jusqu'à la mise en service.</p>
+      </div>
+      <div class="atout rv-up d1">
+        <svg class="sig" viewBox="0 0 54 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 46L27 8l19 38"/><path d="M14 34h26M18 26h18"/></svg>
+        <h3>Gaz, fioul, électrique</h3>
+        <p>Plusieurs énergies maîtrisées : le conseil part de votre logement, pas d'un catalogue imposé.</p>
+      </div>
+      <div class="atout rv-up d2">
+        <svg class="sig" viewBox="0 0 54 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="27" cy="24" r="16"/><path d="M27 14v10l7 5"/><path d="M15 48h24"/></svg>
+        <h3>Proche de chez vous</h3>
+        <p>Basé rue Louis Antier, à Sotteville : la rive gauche et les communes voisines restent à portée.</p>
+      </div>
+      <div class="atout rv-up d3">
+        <svg class="sig" viewBox="0 0 54 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="6" width="34" height="42" rx="3"/><path d="M18 18h18M18 26h18M18 34h10"/></svg>
+        <h3>Un devis clair</h3>
+        <p>Chaque intervention est chiffrée sur devis, détaillé et expliqué avant le moindre travail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ÉTAPES ========== -->
+<section class="steps pad" id="methode" aria-labelledby="steps-title">
+  <div class="wrap">
+    <span class="tag rv-up">Feuille de route</span>
+    <h2 class="section-title rv-up d1" id="steps-title">Comment ça se passe</h2>
+    <p class="lead rv-up d2">Quatre gares, un seul trajet : de votre appel à un chauffage qui tourne rond.</p>
+    <div class="track">
+      <div class="step rv-up"><div class="disc">1</div><h3>Vous appelez</h3><p>Au 02 35 73 48 98 ou via le formulaire : vous décrivez la panne ou le projet.</p></div>
+      <div class="step rv-up d1"><div class="disc">2</div><h3>Visite sur place</h3><p>Eddy Boce vient voir l'installation, le logement et vos habitudes de chauffage.</p></div>
+      <div class="step rv-up d2"><div class="disc">3</div><h3>Devis détaillé</h3><p>Vous recevez une proposition chiffrée, poste par poste, sans engagement.</p></div>
+      <div class="step rv-up d3"><div class="disc">4</div><h3>Intervention</h3><p>Pose ou réparation, essais, mise en service et explications avant de partir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== À PROPOS ========== -->
+<section class="about pad" id="apropos" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div>
+      <span class="tag rv-up">L'artisan</span>
+      <h2 class="section-title rv-up d1" id="about-title">Eddy Boce, chauffagiste à Sotteville</h2>
+      <p class="rv-up d2">Boce, c'est l'entreprise d'Eddy Boce, chauffagiste installé au 34 rue Louis Antier, à Sotteville-lès-Rouen — une ville qui a grandi autour de ses ateliers ferroviaires et du goût du travail bien fait.</p>
+      <p class="rv-up d2">Son terrain de jeu : les chaudières gaz ou fioul, les chaudières et radiateurs électriques, et la plomberie qui va avec.</p>
+      <p class="rv-up d3">Il intervient à Sotteville, sur la rive gauche de Rouen, à Saint-Étienne-du-Rouvray et au Petit-Quevilly, pour des particuliers qui veulent un chauffage fiable et un artisan joignable.</p>
+    </div>
+    <div class="about-card rivets rv-up d2">
+      <h3>Fiche technique</h3>
+      <ul class="spec">
+        <li><span>Entreprise</span><span>Boce (Eddy Boce)</span></li>
+        <li><span>Métier</span><span>Chauffagiste · plomberie</span></li>
+        <li><span>Énergies</span><span>Gaz, fioul, électrique</span></li>
+        <li><span>Adresse</span><span>34 rue Louis Antier<br>76300 Sotteville-lès-Rouen</span></li>
+        <li><span>Téléphone</span><span><a href="tel:+33235734898">02 35 73 48 98</a></span></li>
+        <li><span>Tarifs</span><span>Sur devis</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COMPARATIF + RÉALISATIONS ========== -->
+<section class="board-sec pad" id="comparatif" aria-labelledby="board-title">
+  <div class="wrap">
+    <span class="tag rv-up" style="color:var(--laiton)">Tableau des départs</span>
+    <h2 class="section-title rv-up d1" id="board-title">Quelle énergie pour votre logement&nbsp;?</h2>
+    <p class="lead rv-up d2">Un repère simple pour comparer les solutions que Boce installe. Chaque situation est différente : le bon choix se décide lors de la visite.</p>
+
+    <div class="board rv-up d2" role="table" aria-label="Comparatif des solutions de chauffage">
+      <div class="board-head" role="row">
+        <div role="columnheader">Solution</div><div role="columnheader">Idéal pour</div><div role="columnheader">Points forts</div><div role="columnheader">À prévoir</div><div role="columnheader">Tarif</div>
+      </div>
+      <div class="board-row" role="row">
+        <div role="cell"><i style="color:#c9a24a;background:#c9a24a"></i>Chaudière gaz</div>
+        <div role="cell"><span class="dl">Idéal pour</span>Logements raccordés au réseau de gaz</div>
+        <div role="cell"><span class="dl">Points forts</span>Chauffage et eau chaude, bonne réactivité</div>
+        <div role="cell"><span class="dl">À prévoir</span>Conduit d'évacuation, entretien annuel</div>
+        <div role="cell" class="devis">Sur devis</div>
+      </div>
+      <div class="board-row" role="row">
+        <div role="cell"><i style="color:#b5562a;background:#b5562a"></i>Chaudière fioul</div>
+        <div role="cell"><span class="dl">Idéal pour</span>Maisons non desservies par le gaz</div>
+        <div role="cell"><span class="dl">Points forts</span>Autonomie, forte puissance de chauffe</div>
+        <div role="cell"><span class="dl">À prévoir</span>Cuve, livraisons, entretien annuel</div>
+        <div role="cell" class="devis">Sur devis</div>
+      </div>
+      <div class="board-row" role="row">
+        <div role="cell"><i style="color:#2d6a51;background:#2d6a51"></i>Chaudière électrique</div>
+        <div role="cell"><span class="dl">Idéal pour</span>Appartements, petites surfaces bien isolées</div>
+        <div role="cell"><span class="dl">Points forts</span>Compacte, silencieuse, sans conduit</div>
+        <div role="cell"><span class="dl">À prévoir</span>Puissance de l'abonnement électrique</div>
+        <div role="cell" class="devis">Sur devis</div>
+      </div>
+      <div class="board-row" role="row">
+        <div role="cell"><i style="color:#efe6d2;background:#efe6d2"></i>Radiateurs électriques</div>
+        <div role="cell"><span class="dl">Idéal pour</span>Pièces sans circuit d'eau chaude</div>
+        <div role="cell"><span class="dl">Points forts</span>Pose rapide, réglage pièce par pièce</div>
+        <div role="cell"><span class="dl">À prévoir</span>Bonne isolation pour maîtriser la facture</div>
+        <div role="cell" class="devis">Sur devis</div>
+      </div>
+    </div>
+    <p class="board-note rv-up">Informations générales, à titre indicatif. Les tarifs sont établis sur devis, après visite.</p>
+
+    <h3 class="rv-up" style="font-size:clamp(1.9rem,4vw,2.8rem);margin-top:72px">Réalisations types</h3>
+    <p class="lead rv-up d1" style="margin-top:10px">Des exemples illustrés du type de chantiers réalisés — schémas indicatifs, pas des photos de chantiers réels.</p>
+    <div class="realisations">
+      <article class="real rv-up">
+        <svg viewBox="0 0 360 220" aria-hidden="true">
+          <rect width="360" height="220" fill="#1d2024"/>
+          <path d="M0 190h360" stroke="#efe6d2" stroke-opacity=".2" stroke-width="2"/>
+          <rect x="40" y="40" width="70" height="130" fill="none" stroke="#efe6d2" stroke-opacity=".35" stroke-width="2" stroke-dasharray="5 5"/>
+          <text x="75" y="190" fill="#a9a291" font-size="12" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" dy="16">avant</text>
+          <path d="M130 105h50" stroke="#c9a24a" stroke-width="4" marker-end="url(#ar)"/>
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0l10 5-10 5z" fill="#c9a24a"/></marker></defs>
+          <rect x="210" y="40" width="96" height="120" rx="10" fill="#1f4d3a" stroke="#efe6d2" stroke-width="3"/>
+          <circle cx="258" cy="92" r="22" fill="#17191c" stroke="#c9a24a" stroke-width="3"/>
+          <path d="M258 106c-8 0-11-6-10-12 1-5 6-7 6-13 5 4 9 8 10 12 1 7-2 13-6 13z" fill="#b5562a"/>
+          <rect x="226" y="130" width="64" height="8" rx="3" fill="#17191c"/>
+          <path d="M230 160v30M250 160v30M266 160v30M286 160v30" stroke="#c9a24a" stroke-width="4"/>
+        </svg>
+        <div class="cap"><h3>Remplacement chaudière gaz</h3><p>Dépose de l'ancien appareil, pose d'une chaudière murale et raccordements.</p></div>
+      </article>
+      <article class="real rv-up d1">
+        <svg viewBox="0 0 360 220" aria-hidden="true">
+          <rect width="360" height="220" fill="#1d2024"/>
+          <path d="M0 190h360" stroke="#efe6d2" stroke-opacity=".2" stroke-width="2"/>
+          <rect x="50" y="60" width="110" height="130" rx="6" fill="#2c3036" stroke="#efe6d2" stroke-width="3"/>
+          <rect x="68" y="80" width="74" height="30" rx="3" fill="#efe6d2"/>
+          <circle cx="105" cy="148" r="18" fill="#17191c" stroke="#b5562a" stroke-width="3"/>
+          <path d="M105 160c-6 0-9-4-8-9 1-4 5-5 5-10 4 3 7 6 7 9 1 6-1 10-4 10z" fill="#c9a24a"/>
+          <rect x="200" y="110" width="120" height="80" rx="38" fill="none" stroke="#b5562a" stroke-width="4"/>
+          <path d="M240 110V96h40v14" stroke="#b5562a" stroke-width="4" fill="none"/>
+          <path d="M160 160h40" stroke="#c9a24a" stroke-width="4"/>
+          <text x="260" y="156" fill="#efe6d2" font-size="14" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" letter-spacing="3">FIOUL</text>
+        </svg>
+        <div class="cap"><h3>Chaufferie fioul</h3><p>Entretien, remise en état ou remplacement d'une chaudière au sol avec sa cuve.</p></div>
+      </article>
+      <article class="real rv-up d2">
+        <svg viewBox="0 0 360 220" aria-hidden="true">
+          <rect width="360" height="220" fill="#1d2024"/>
+          <path d="M0 190h360" stroke="#efe6d2" stroke-opacity=".2" stroke-width="2"/>
+          <rect x="30" y="30" width="110" height="90" fill="#17191c" stroke="#efe6d2" stroke-opacity=".5" stroke-width="2"/>
+          <path d="M85 30v90M30 75h110" stroke="#efe6d2" stroke-opacity=".5" stroke-width="2"/>
+          <g transform="translate(40 140)">
+            <rect width="140" height="44" rx="6" fill="#efe6d2"/>
+            <path d="M18 6v32M36 6v32M54 6v32M72 6v32M90 6v32M108 6v32M126 6v32" stroke="#1f4d3a" stroke-width="3"/>
+          </g>
+          <g transform="translate(220 120)">
+            <rect width="100" height="64" rx="6" fill="#efe6d2"/>
+            <rect x="12" y="12" width="76" height="12" rx="3" fill="#1f4d3a"/>
+            <circle cx="80" cy="46" r="7" fill="#b5562a"/>
+          </g>
+          <path d="M236 70l-8 18h12l-8 18" stroke="#c9a24a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="cap"><h3>Radiateurs électriques</h3><p>Remplacement de convecteurs par des radiateurs plus doux, pièce par pièce.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AVIS ========== -->
+<section class="avis pad" aria-labelledby="avis-title">
+  <div class="wrap">
+    <div class="avis-box rv-up">
+      <div class="stamp"><svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M28 6l6.5 13.4 14.7 2.1-10.6 10.3 2.5 14.6L28 39.5l-13.1 6.9 2.5-14.6L6.8 21.5l14.7-2.1z"/></svg></div>
+      <div>
+        <h2 id="avis-title">Les avis de vos clients apparaîtront ici</h2>
+        <p>Pas de témoignages inventés sur ce site : seules de vraies évaluations y figureront. Vous avez fait appel à Boce&nbsp;? Votre retour aidera vos voisins de la rive gauche à choisir en confiance.</p>
+      </div>
+      <a href="#contact" class="btn green">Donner mon avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq pad" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="tag rv-up">Questions fréquentes</span>
+      <h2 class="section-title rv-up d1" id="faq-title">Les questions qu'on nous pose</h2>
+      <p class="lead rv-up d2">Une autre question ? Le plus simple reste d'appeler : <a href="tel:+33235734898" style="color:var(--rouille);font-weight:600">02 35 73 48 98</a>.</p>
+    </div>
+    <div class="faq-list rv-up d1">
+      <div class="qa"><button aria-expanded="false">Faut-il faire entretenir sa chaudière chaque année&nbsp;?</button><div class="ans"><div><p>Pour les chaudières gaz et fioul, un entretien annuel est en principe obligatoire. Il permet de vérifier la sécurité de l'appareil, d'optimiser son fonctionnement et de prolonger sa durée de vie.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Ma chaudière fioul est ancienne : par quoi la remplacer&nbsp;?</button><div class="ans"><div><p>Tout dépend de votre logement : raccordement possible au gaz, isolation, surface, budget. Une visite permet de comparer les options réalistes et de vous conseiller la solution la plus adaptée à votre situation.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Existe-t-il des aides pour changer de chauffage&nbsp;?</button><div class="ans"><div><p>Certains travaux pourraient ouvrir droit à des aides comme MaPrimeRénov' ou des primes énergie, selon votre situation, vos revenus et l'équipement choisi. Les conditions évoluent régulièrement : il est conseillé de vérifier votre éligibilité auprès de France Rénov' avant de vous engager.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Chaudière électrique ou radiateurs électriques&nbsp;?</button><div class="ans"><div><p>Une chaudière électrique alimente un circuit d'eau chaude existant (radiateurs à eau, plancher chauffant), alors que les radiateurs électriques fonctionnent de façon indépendante. Le choix dépend surtout de votre installation actuelle.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Combien coûte une intervention&nbsp;?</button><div class="ans"><div><p>Chaque chantier est différent : les prix sont établis sur devis, après avoir vu l'installation. Le devis détaille les fournitures et la main-d'œuvre avant toute intervention.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Dans quelles communes intervenez-vous&nbsp;?</button><div class="ans"><div><p>Principalement à Sotteville-lès-Rouen, sur la rive gauche de Rouen, à Saint-Étienne-du-Rouvray et au Petit-Quevilly. Pour une autre commune proche, appelez simplement pour vérifier.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact pad" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <span class="tag rv-up" style="color:var(--laiton)">Guichet</span>
+    <h2 class="section-title rv-up d1" id="contact-title">Contact &amp; devis</h2>
+    <div class="contact-grid" style="margin-top:36px">
+      <aside class="info-panel rv-up">
+        <h3>Horaires</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Lundi</span><span>8h – 18h</span></li>
+          <li data-d="2"><span>Mardi</span><span>8h – 18h</span></li>
+          <li data-d="3"><span>Mercredi</span><span>8h – 18h</span></li>
+          <li data-d="4"><span>Jeudi</span><span>8h – 18h</span></li>
+          <li data-d="5"><span>Vendredi</span><span>8h – 18h</span></li>
+          <li data-d="6"><span>Samedi</span><span>Sur rendez-vous</span></li>
+          <li data-d="0"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+        <p class="small">Horaires indicatifs, à confirmer par téléphone.</p>
+        <div class="addr">
+          <h3 style="font-size:1.4rem;margin-bottom:10px">Adresse</h3>
+          <p>Boce – Eddy Boce</p>
+          <p>34 rue Louis Antier<br>76300 Sotteville-lès-Rouen</p>
+        </div>
+        <div class="coords">
+          <a href="tel:+33235734898"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>02 35 73 48 98</a>
+          <a href="mailto:boce.eddy@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>boce.eddy@orange.fr</a>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=34%20rue%20Louis%20Antier%2076300%20Sotteville-l%C3%A8s-Rouen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire
+        </a>
+      </aside>
+
+      <form class="devis-form rv-up d1" id="devis-form" novalidate>
+        <h3>Demander un devis</h3>
+        <p style="color:var(--muted);margin:0">Décrivez votre besoin : Eddy Boce vous recontacte pour en parler.</p>
+        <div class="fields">
+          <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          <div class="field"><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Sotteville-lès-Rouen"></div>
+          <div class="field"><label for="f-objet">Objet</label>
+            <select id="f-objet" name="objet">
+              <option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chaudière électrique</option><option>Radiateurs électriques</option><option>Plomberie</option><option>Autre demande</option>
+            </select></div>
+          <div class="field full"><label for="f-msg">Votre message</label><textarea id="f-msg" name="message" placeholder="Type d'installation, panne constatée, projet…"></textarea></div>
+        </div>
+        <div class="form-foot">
+          <span class="small">Vos informations servent uniquement à vous recontacter.</span>
+          <button class="btn" type="submit">Envoyer la demande</button>
+        </div>
+        <div class="form-msg" id="form-msg" role="status">Maquette de démonstration – le formulaire sera actif sur le site final</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <span class="brand-plate" style="display:inline-block;margin-bottom:16px">BOCE</span>
+      <p style="font-size:.93rem;max-width:34ch">Eddy Boce, chauffagiste à Sotteville-lès-Rouen : chaudières gaz ou fioul, chaudières et radiateurs électriques, plomberie.</p>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul>
+        <li>34 rue Louis Antier</li>
+        <li>76300 Sotteville-lès-Rouen</li>
+        <li><a href="tel:+33235734898">02 35 73 48 98</a></li>
+        <li><a href="mailto:boce.eddy@orange.fr">boce.eddy@orange.fr</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul>
+        <li>Lun – ven : 8h – 18h</li>
+        <li>Samedi : sur rendez-vous</li>
+        <li>Dimanche : fermé</li>
+        <li style="color:#8f8878">Indicatifs, à confirmer</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Secteur</h4>
+      <ul>
+        <li>Sotteville-lès-Rouen</li>
+        <li>Rouen rive gauche</li>
+        <li>Saint-Étienne-du-Rouvray</li>
+        <li>Le Petit-Quevilly</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="year">2026</span> Boce – Eddy Boce, chauffagiste. Tous droits réservés.</span>
+    <span>Mentions légales · Politique de confidentialité (à compléter sur le site final)</span>
+  </div>
+</footer>
+
+<a class="call-fab" href="tel:+33235734898" aria-label="Appeler Boce au 02 35 73 48 98">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler
+</a>
+
+<div class="demo-banner">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<script>
+(function(){
+  // Burger
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function setMenu(open){burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');menu.classList.toggle('open',open);}
+  burger.addEventListener('click',function(){setMenu(burger.getAttribute('aria-expanded')!=='true');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  // Reveal
+  var els=document.querySelectorAll('.rv-up');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('in');}); }
+
+  // FAQ
+  document.querySelectorAll('.qa button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var qa=b.parentNode,open=!qa.classList.contains('open');
+      document.querySelectorAll('.qa.open').forEach(function(o){if(o!==qa){o.classList.remove('open');o.querySelector('button').setAttribute('aria-expanded','false');}});
+      qa.classList.toggle('open',open);b.setAttribute('aria-expanded',open);
+    });
+  });
+
+  // Jour actuel
+  var d=new Date().getDay(),li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li)li.classList.add('today');
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Formulaire
+  document.getElementById('devis-form').addEventListener('submit',function(e){
+    e.preventDefault();var m=document.getElementById('form-msg');m.classList.add('show');m.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+})();
+</script>
+</body>
+</html>

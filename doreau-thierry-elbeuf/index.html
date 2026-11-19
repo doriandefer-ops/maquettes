@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doreau Thierry – Chauffagiste à Elbeuf | Pompes à chaleur, chaudières</title>
+<meta name="description" content="Doreau Thierry, chauffagiste RGE à Elbeuf (76500) : pompes à chaleur géothermiques, hybrides, air-eau et air-air, chaudières gaz et fioul à condensation, chauffe-eau thermodynamique. Noté 5,0/5 sur Effy.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --laine:#f3eee3;
+  --laine-2:#ebe4d4;
+  --papier:#faf7f0;
+  --drap:#22355e;
+  --drap-2:#1a2949;
+  --garance:#b2342a;
+  --encre:#1b1b1f;
+  --lin:#8d877b;
+  --lin-txt:#5f5a50;
+  --filet:rgba(27,27,31,.18);
+  --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --sans:'Karla','Helvetica Neue',Arial,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--laine);color:var(--encre);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0 0 .45em;color:var(--encre)}
+p{margin:0 0 1em}
+a{color:var(--drap)}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:300;background:var(--garance);color:#fff;padding:8px 14px}
+
+/* Motif tissage / chevron */
+.tissage{background-color:var(--drap);background-image:
+  repeating-linear-gradient(45deg,rgba(243,238,227,.07) 0 6px,transparent 6px 12px),
+  repeating-linear-gradient(-45deg,rgba(243,238,227,.07) 0 6px,transparent 6px 12px)}
+.chevron-band{height:14px;background:
+  linear-gradient(135deg,var(--drap) 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(225deg,var(--drap) 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(315deg,var(--drap) 25%,transparent 25%) 0 0/14px 14px,
+  linear-gradient(45deg,var(--drap) 25%,transparent 25%) 0 0/14px 14px;background-color:var(--laine);opacity:.85}
+.trame{background-image:repeating-linear-gradient(90deg,rgba(34,53,94,.035) 0 1px,transparent 1px 5px),repeating-linear-gradient(0deg,rgba(34,53,94,.035) 0 1px,transparent 1px 5px)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(243,238,227,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--filet);transition:box-shadow .3s}
+.nav.scrolle{box-shadow:0 6px 24px -12px rgba(27,27,31,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.marque{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--encre)}
+.marque b{font-family:var(--serif);font-weight:400;font-size:1.5rem;letter-spacing:-.01em;white-space:nowrap}
+.marque span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--garance);font-weight:700}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px;align-items:center}
+.menu a{text-decoration:none;color:var(--encre);font-weight:600;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;position:relative}
+.menu a:not(.cta)::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:1px;background:var(--garance);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:not(.cta):hover::after{transform:scaleX(1)}
+.menu .cta{background:var(--garance);color:#fff;margin-left:10px;padding:10px 16px}
+.menu .cta:hover{background:var(--drap)}
+.burger{display:none;background:none;border:1px solid var(--encre);width:46px;height:42px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--encre);transition:.3s}
+.burger span:nth-child(1){top:12px}.burger span:nth-child(2){top:19px}.burger span:nth-child(3){top:26px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-family:var(--sans);font-weight:700;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--encre);cursor:pointer;transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-rouge{background:var(--garance);border-color:var(--garance);color:#fff}
+.btn-rouge:hover{background:var(--drap);border-color:var(--drap);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--encre)}
+.btn-trait{background:transparent;color:var(--encre)}
+.btn-trait:hover{background:var(--encre);color:var(--laine);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--garance)}
+
+/* Hero écran coupé */
+.hero{padding-top:66px;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;border-bottom:1px solid var(--encre)}
+.couverture{padding:48px clamp(20px,4vw,64px) 48px;display:flex;flex-direction:column;border-right:1px solid var(--encre);position:relative}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double var(--encre);padding-bottom:10px;margin-bottom:28px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;gap:12px;flex-wrap:wrap}
+.masthead .no{font-family:var(--serif);font-size:2rem;letter-spacing:0;text-transform:none;font-weight:400;color:var(--garance);line-height:1}
+.rubrique{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--garance);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.rubrique::before{content:"";width:34px;height:2px;background:var(--garance)}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5.6rem);letter-spacing:-.02em;margin-bottom:.25em}
+.hero h1 i{color:var(--drap)}
+.chapo{font-size:1.15rem;max-width:520px;color:#34322e;border-left:3px solid var(--garance);padding-left:18px;margin-bottom:28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.sommaire{margin-top:auto;border-top:1px solid var(--encre);padding-top:16px}
+.sommaire h2{font-size:.78rem;font-family:var(--sans);font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--lin-txt);margin-bottom:10px}
+.sommaire ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.sommaire li a{display:flex;gap:12px;align-items:baseline;padding:7px 0;border-bottom:1px dotted var(--lin);text-decoration:none;color:var(--encre);font-weight:600;transition:color .2s,padding .2s}
+.sommaire li a:hover{color:var(--garance);padding-left:4px}
+.sommaire li b{font-family:var(--serif);font-weight:400;color:var(--garance);font-size:1.1rem;min-width:24px}
+
+.planche{position:relative;background:var(--papier);display:flex;flex-direction:column;padding:40px clamp(20px,3vw,48px) 28px;overflow:hidden}
+.planche::before{content:"";position:absolute;inset:16px;border:1px solid var(--encre);pointer-events:none}
+.planche::after{content:"";position:absolute;inset:22px;border:1px solid var(--filet);pointer-events:none}
+.planche-tete{display:flex;justify-content:space-between;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--lin-txt);padding:0 12px;position:relative;z-index:1}
+.planche svg.grav{width:100%;height:auto;flex:1;display:block;margin:10px 0;position:relative;z-index:1}
+.legende{font-style:italic;font-family:var(--serif);font-size:1.02rem;text-align:center;color:#3e3b35;padding:0 24px;position:relative;z-index:1;margin:0}
+.macaron{position:absolute;z-index:3;top:46px;right:42px;width:132px;height:132px;border-radius:50%;background:var(--garance);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;text-decoration:none;box-shadow:0 0 0 5px var(--papier),0 0 0 6px var(--garance);transform:rotate(-8deg);transition:transform .4s}
+.macaron:hover{transform:rotate(0) scale(1.04)}
+.macaron .n{font-family:var(--serif);font-size:2.4rem;line-height:1}
+.macaron .s{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;line-height:1.3;margin-top:4px}
+.macaron .et{font-size:.8rem;letter-spacing:2px;color:#ffd9a8}
+.flux{stroke-dasharray:6 8;animation:circule 2.4s linear infinite}
+@keyframes circule{to{stroke-dashoffset:-28}}
+
+/* Bandeau confiance */
+.confiance{background:var(--drap);color:var(--laine);border-bottom:1px solid var(--encre)}
+.confiance .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.conf{padding:24px 22px;border-right:1px solid rgba(243,238,227,.2)}
+.conf:last-child{border-right:0}
+.conf small{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#c9bfa9;font-weight:700;margin-bottom:6px}
+.conf strong{font-family:var(--serif);font-weight:400;font-size:1.35rem;line-height:1.2;display:block;color:#fff}
+.conf a{color:#fff;text-decoration-color:var(--garance);text-underline-offset:4px}
+
+/* Sections */
+section{padding:96px 0;position:relative}
+.entete-sec{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;border-top:1px solid var(--encre);padding-top:18px;margin-bottom:52px}
+.entete-sec .num{font-family:var(--serif);font-size:4.6rem;line-height:.85;color:var(--garance)}
+.entete-sec .kick{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--lin-txt);margin-bottom:8px}
+.entete-sec h2{font-size:clamp(2rem,4.2vw,3.4rem);letter-spacing:-.015em;margin-bottom:.2em}
+.entete-sec p{max-width:640px;color:#3d3a34;margin:0}
+
+/* Prestations : grille éditoriale */
+.prestations{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--encre);border-left:1px solid var(--encre)}
+.presta{padding:30px 24px 28px;border-right:1px solid var(--encre);border-bottom:1px solid var(--encre);background:var(--laine);transition:background .3s}
+.presta:hover{background:var(--papier)}
+.presta .pico{width:58px;height:58px;margin-bottom:18px;transition:transform .4s}
+.presta:hover .pico{transform:translateY(-4px) rotate(-3deg)}
+.presta .rub{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--garance);font-weight:800;margin-bottom:6px}
+.presta h3{font-size:1.45rem}
+.presta p{font-size:.96rem;color:#3d3a34;margin:0}
+
+/* Pourquoi : colonnes */
+.colonnes{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.col{padding:0 26px;border-left:1px solid var(--filet)}
+.col:first-child{border-left:0;padding-left:0}
+.col .lettrine{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--drap);display:block;margin-bottom:10px}
+.col h3{font-size:1.4rem}
+.col p{font-size:.97rem;color:#3d3a34}
+
+/* Étapes */
+.sec-drap{background:var(--drap);color:var(--laine)}
+.sec-drap .entete-sec{border-color:rgba(243,238,227,.5)}
+.sec-drap h2,.sec-drap h3{color:#fff}
+.sec-drap .entete-sec .kick{color:#c9bfa9}
+.sec-drap .entete-sec p{color:#ddd5c4}
+.sec-drap .entete-sec .num{color:#f07a6e}
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:e}
+.etape{padding:26px 24px;border-left:1px solid rgba(243,238,227,.25);position:relative}
+.etape:first-child{border-left:0;padding-left:0}
+.etape .num-e{font-family:var(--serif);font-size:3.6rem;line-height:1;color:transparent;-webkit-text-stroke:1px #f3eee3;display:block;margin-bottom:12px}
+.etape h3{font-size:1.35rem}
+.etape p{color:#ddd5c4;font-size:.96rem;margin:0}
+
+/* À propos */
+.apropos{display:grid;grid-template-columns:1.25fr 1fr;gap:56px}
+.texte-col{column-count:2;column-gap:36px;column-rule:1px solid var(--filet)}
+.texte-col p{font-size:1.02rem}
+.texte-col p:first-child::first-letter{font-family:var(--serif);float:left;font-size:4.4rem;line-height:.8;padding:6px 10px 0 0;color:var(--garance)}
+.encadre{border:1px solid var(--encre);padding:30px;background:var(--papier);position:relative}
+.encadre::before{content:"";position:absolute;inset:-8px 8px 8px -8px;border:1px solid var(--garance);z-index:-1}
+.encadre h3{font-size:1.6rem}
+.fiche{list-style:none;margin:0;padding:0}
+.fiche li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--filet);font-size:.95rem}
+.fiche li:last-child{border-bottom:0}
+.fiche b{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lin-txt);padding-top:3px}
+
+/* Comparatif tableau */
+.tableau-wrap{overflow-x:auto;border:1px solid var(--encre);background:var(--papier)}
+table{width:100%;border-collapse:collapse;min-width:820px;font-size:.95rem}
+thead th{font-family:var(--serif);font-weight:400;font-size:1.25rem;text-align:left;padding:20px 18px 14px;border-bottom:2px solid var(--encre);vertical-align:bottom}
+thead th svg{display:block;width:54px;height:54px;margin-bottom:10px}
+thead th:first-child{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--lin-txt);width:170px}
+tbody th{text-align:left;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lin-txt);font-weight:800;padding:14px 18px;border-bottom:1px solid var(--filet);vertical-align:top}
+tbody td{padding:14px 18px;border-bottom:1px solid var(--filet);border-left:1px solid var(--filet);vertical-align:top}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody tr:hover td{background:rgba(178,52,42,.04)}
+.pastille{display:inline-block;font-weight:700;color:var(--garance)}
+.note-tab{font-size:.88rem;color:var(--lin-txt);margin-top:14px;font-style:italic}
+.scroll-hint{display:none;font-size:.8rem;color:var(--lin-txt);margin-bottom:8px}
+
+/* Avis */
+.avis-bloc{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--encre)}
+.avis-note{background:var(--garance);color:#fff;padding:44px 36px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.avis-note::after{content:"";position:absolute;inset:auto 0 0;height:14px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 6px,transparent 6px 12px)}
+.avis-note .gros{font-family:var(--serif);font-size:clamp(4.5rem,9vw,7rem);line-height:.9}
+.avis-note .gros small{font-size:.35em}
+.avis-note .etoiles{display:flex;gap:6px;margin:12px 0}
+.avis-note .etoiles svg{width:26px;height:26px}
+.avis-note p{margin:0 0 18px;font-size:1.05rem}
+.avis-note a.btn{border-color:#fff;color:#fff;align-self:flex-start}
+.avis-note a.btn:hover{background:#fff;color:var(--garance);box-shadow:4px 4px 0 var(--encre)}
+.avis-points{padding:40px 36px;background:var(--papier)}
+.avis-points h3{font-size:1.8rem}
+.points{list-style:none;margin:0 0 18px;padding:0}
+.points li{display:grid;grid-template-columns:50px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--filet)}
+.points li span{font-family:var(--serif);font-size:2rem;color:var(--drap);line-height:1}
+.points li strong{display:block;font-size:1.05rem}
+.points li em{font-style:normal;color:#4a463e;font-size:.95rem}
+.source{font-size:.85rem;color:var(--lin-txt)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--encre)}
+.faq details{border-bottom:1px solid var(--encre)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:56px 1fr 36px;align-items:center;gap:12px;padding:22px 0;font-family:var(--serif);font-size:1.35rem;line-height:1.25;transition:color .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--garance)}
+.faq summary .q{font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;font-weight:800;color:var(--garance)}
+.faq summary .tog{width:32px;height:32px;border:1px solid var(--encre);display:grid;place-items:center;font-family:var(--sans);font-size:1.2rem;transition:transform .3s,background .3s}
+.faq details[open] .tog{transform:rotate(45deg);background:var(--encre);color:var(--laine)}
+.faq .rep{padding:0 48px 24px 68px;color:#3d3a34;max-width:900px}
+.faq .rep p{margin:0}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:0;border:1px solid var(--encre)}
+.contact-infos{padding:36px;border-right:1px solid var(--encre);background:var(--papier)}
+.contact-infos h3{font-size:1.6rem}
+.ligne{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--filet);text-decoration:none;color:var(--encre)}
+a.ligne:hover{color:var(--garance)}
+.ligne svg{width:20px;height:20px;flex:none;margin-top:3px;color:var(--garance)}
+.horaires{list-style:none;margin:18px 0 6px;padding:0}
+.horaires li{display:flex;justify-content:space-between;padding:7px 10px;font-size:.95rem;border-bottom:1px dotted var(--lin)}
+.horaires li.auj{background:var(--drap);color:#fff;font-weight:700;border-bottom-color:var(--drap)}
+.horaires li.auj span:first-child::after{content:" · aujourd'hui";font-weight:500;font-style:italic;color:#e7d9bd}
+.petit{font-size:.84rem;color:var(--lin-txt);font-style:italic}
+form{padding:36px}
+form h3{font-size:1.6rem}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
+.champ{display:flex;flex-direction:column;gap:4px}
+.champ.plein{grid-column:1/-1}
+label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--lin-txt)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:1.5px solid var(--encre);padding:10px 2px;border-radius:0;width:100%;transition:border-color .2s,background .2s}
+textarea{min-height:110px;resize:vertical;border:1.5px solid var(--encre);padding:10px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--garance);background:rgba(178,52,42,.04)}
+.msg-form{display:none;margin-top:18px;padding:14px 18px;border:1.5px solid var(--garance);color:var(--garance);font-weight:700;background:#fff7f4}
+.msg-form.visible{display:block}
+
+/* Footer */
+footer{background:var(--encre);color:#d9d3c6;padding:64px 0 26px}
+.pied{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(243,238,227,.2)}
+.pied .marque b{color:#fff;font-size:2rem}
+.pied h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#c9bfa9;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.94rem}
+.pied a{color:#d9d3c6;text-decoration:none}
+.pied a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--garance)}
+.pied p{font-size:.94rem}
+.mentions{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:20px;font-size:.84rem;color:#a7a092}
+.demo{background:var(--laine-2);color:var(--lin-txt);text-align:center;font-size:.82rem;padding:11px 16px;border-top:1px solid var(--filet)}
+
+.appel{display:none;position:fixed;right:16px;bottom:18px;z-index:90;width:60px;height:60px;border-radius:50%;background:var(--garance);color:#fff;place-items:center;box-shadow:0 0 0 4px var(--laine),0 0 0 5px var(--garance),0 10px 24px -6px rgba(0,0,0,.4)}
+.appel svg{width:26px;height:26px}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media (max-width:1100px){
+  .prestations{grid-template-columns:repeat(2,1fr)}
+  .colonnes{grid-template-columns:1fr 1fr;row-gap:30px}
+  .col:nth-child(3){border-left:0;padding-left:0}
+  .etapes{grid-template-columns:1fr 1fr;row-gap:20px}
+  .etape:nth-child(3){border-left:0;padding-left:0}
+  .confiance .wrap{grid-template-columns:1fr 1fr}
+  .conf:nth-child(2){border-right:0}
+  .conf:nth-child(-n+2){border-bottom:1px solid rgba(243,238,227,.2)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  .burger{display:block}
+  .menu{position:fixed;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--laine);border-bottom:1px solid var(--encre);padding:10px 16px 18px;transform:translateY(-10px);opacity:0;visibility:hidden;transition:.3s}
+  .menu.ouvert{transform:none;opacity:1;visibility:visible}
+  .menu a{display:block;padding:14px 4px;border-bottom:1px solid var(--filet);font-size:.95rem}
+  .menu a:not(.cta)::after{display:none}
+  .menu .cta{margin:12px 0 0;text-align:center;border-bottom:0}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .couverture{border-right:0;border-bottom:1px solid var(--encre)}
+  .planche{min-height:520px}
+  .apropos{grid-template-columns:1fr}
+  .avis-bloc,.contact{grid-template-columns:1fr}
+  .contact-infos{border-right:0;border-bottom:1px solid var(--encre)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:68px 0}
+  .couverture{padding:32px 16px}
+  .planche{padding:32px 14px 24px;min-height:0}
+  .planche::before{inset:8px}.planche::after{inset:13px}
+  .macaron{width:104px;height:104px;top:28px;right:22px}
+  .macaron .n{font-size:1.9rem}
+  .macaron .s{font-size:.56rem}
+  .sommaire ol{grid-template-columns:1fr}
+  .nav .marque span,.masthead span:last-child{display:none}
+  .hero .actions .btn{flex:1 1 100%;justify-content:center}
+  .entete-sec{grid-template-columns:1fr;gap:6px}
+  .entete-sec .num{font-size:3.4rem}
+  .prestations,.colonnes,.etapes{grid-template-columns:1fr}
+  .col,.etape{border-left:0;padding-left:0;padding-right:0}
+  .col{border-top:1px solid var(--filet);padding-top:20px}
+  .col:first-child{border-top:0;padding-top:0}
+  .etape{border-top:1px solid rgba(243,238,227,.25)}
+  .etape:first-child{border-top:0}
+  .confiance .wrap{grid-template-columns:1fr}
+  .conf{border-right:0;border-bottom:1px solid rgba(243,238,227,.2)}
+  .conf:last-child{border-bottom:0}
+  .texte-col{column-count:1}
+  .encadre::before{display:none}
+  .fiche li{grid-template-columns:1fr;gap:2px}
+  .avis-note,.avis-points,.contact-infos,form{padding:28px 20px}
+  .champs{grid-template-columns:1fr}
+  .faq summary{grid-template-columns:40px 1fr 32px;font-size:1.12rem}
+  .faq .rep{padding:0 0 22px 52px}
+  .pied{grid-template-columns:1fr}
+  .scroll-hint{display:block}
+  .appel{display:grid}
+  .demo{padding-bottom:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a href="#contenu" class="skip">Aller au contenu</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#couverture" class="marque"><b>Doreau Thierry</b><span>Chauffage · Elbeuf</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#comparatif">Comparatif</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#atelier">L'entreprise</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="cta">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenu">
+<section class="hero" id="couverture" style="padding:66px 0 0">
+  <div class="couverture trame">
+    <div class="masthead"><span class="no">N° 76500</span><span>Édition Elbeuf-sur-Seine</span><span>Chauffage &amp; énergies</span></div>
+    <div class="reveal">
+      <div class="rubrique">À la une</div>
+      <h1>Le confort, tissé <i>serré</i> à Elbeuf.</h1>
+      <p class="chapo">Dans l'ancienne ville drapière, Doreau Thierry installe pompes à chaleur, chaudières à condensation et chauffe-eau thermodynamiques avec le soin d'un ouvrage bien fait. Une entreprise RGE notée 5,0/5 par ses clients.</p>
+      <div class="actions">
+        <a class="btn btn-rouge" href="tel:+33235788050"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a class="btn btn-trait" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+    <nav class="sommaire" aria-label="Sommaire">
+      <h2>Au sommaire</h2>
+      <ol>
+        <li><a href="#prestations"><b>01</b>Les prestations</a></li>
+        <li><a href="#pourquoi"><b>02</b>Pourquoi nous</a></li>
+        <li><a href="#methode"><b>03</b>Le déroulé</a></li>
+        <li><a href="#atelier"><b>04</b>L'entreprise</a></li>
+        <li><a href="#comparatif"><b>05</b>Le grand comparatif</a></li>
+        <li><a href="#avis"><b>06</b>La parole aux clients</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="planche">
+    <a class="macaron" href="https://www.effy.fr/artisans/pro/1342-doreau-thierry" target="_blank" rel="noopener" aria-label="Note 5,0 sur 5 sur 32 avis Effy">
+      <span class="et">★★★★★</span><span class="n">5,0</span><span class="s">sur 5<br>32 avis Effy</span>
+    </a>
+    <div class="planche-tete"><span>Planche I · Géothermie</span></div>
+    <svg class="grav" viewBox="0 0 560 560" aria-hidden="true" fill="none" stroke="#1b1b1f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <defs>
+        <pattern id="hach" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#1b1b1f" stroke-width=".8"/></pattern>
+        <pattern id="hach2" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#8d877b" stroke-width=".7"/></pattern>
+        <pattern id="points" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#8d877b" stroke="none"/><circle cx="6.5" cy="6.5" r=".7" fill="#8d877b" stroke="none"/></pattern>
+        <pattern id="strates" width="40" height="12" patternUnits="userSpaceOnUse"><path d="M0 6q10-4 20 0t20 0" stroke="#8d877b" stroke-width=".8" fill="none"/></pattern>
+      </defs>
+      <!-- ciel / soleil gravé -->
+      <g stroke="#8d877b" stroke-width="1"><circle cx="80" cy="80" r="22"/><path d="M80 44v-10M80 126v-10M44 80h-10M126 80h-10M55 55l-7-7M112 112l-7-7M55 105l-7 7M112 48l-7 7"/></g>
+      <!-- maison -->
+      <path d="M110 205 250 95l140 110"/>
+      <path d="M128 192V258h244V192" />
+      <rect x="128" y="192" width="244" height="66" fill="url(#hach2)" stroke="none" opacity=".6"/>
+      <path d="M110 205 250 95l140 110" stroke-width="2.4"/>
+      <path d="M150 180 250 102l100 78" fill="url(#hach)" stroke="none" opacity=".35"/>
+      <rect x="326" y="112" width="22" height="48" fill="#f3eee3"/>
+      <!-- intérieur : plancher chauffant + radiateur -->
+      <rect x="150" y="200" width="60" height="40" fill="#faf7f0"/>
+      <path d="M150 200h60v40h-60z M170 200v40 M190 200v40"/>
+      <rect x="270" y="210" width="50" height="34" fill="#faf7f0"/>
+      <path d="M276 210v34M284 210v34M292 210v34M300 210v34M308 210v34M314 210v34"/>
+      <!-- PAC intérieure -->
+      <rect x="226" y="198" width="34" height="56" fill="#faf7f0" stroke-width="2"/>
+      <path d="M232 208h22M232 216h22"/><circle cx="243" cy="236" r="7"/>
+      <text x="243" y="190" font-family="Karla, Arial, sans-serif" font-size="10" fill="#1b1b1f" stroke="none" text-anchor="middle" letter-spacing="1">PAC</text>
+      <!-- sol -->
+      <path d="M20 262h520" stroke-width="2.6"/>
+      <path d="M20 268h520" stroke="#8d877b" stroke-width="1"/>
+      <g stroke="#1b1b1f" stroke-width="1"><path d="M40 262l-6-8M60 262l4-9M80 262l-3-7M420 262l-5-9M440 262l3-8M470 262l-4-7M500 262l5-8M520 262l-2-6"/></g>
+      <!-- strates du sous-sol -->
+      <rect x="20" y="270" width="520" height="250" fill="url(#points)" stroke="none"/>
+      <rect x="20" y="340" width="520" height="40" fill="url(#strates)" stroke="none"/>
+      <rect x="20" y="440" width="520" height="40" fill="url(#strates)" stroke="none"/>
+      <path d="M20 330q130-14 260 0t260 0M20 400q130 12 260 0t260 0M20 490q130-10 260 0t260 0" stroke="#8d877b" stroke-width="1.1"/>
+      <!-- sonde verticale -->
+      <path d="M236 254v6M250 254v6"/>
+      <path d="M236 262v250q7 14 14 0V262" stroke-width="2"/>
+      <path class="flux" d="M239 270v236" stroke="#b2342a" stroke-width="1.6"/>
+      <path class="flux" d="M247 506V270" stroke="#22355e" stroke-width="1.6"/>
+      <!-- capteurs horizontaux schématiques -->
+      <path d="M380 290q24 0 24 12t-24 12q-24 0-24 12t24 12h60" stroke="#22355e" stroke-width="1.4"/>
+      <!-- flèches calories -->
+      <g stroke="#b2342a" stroke-width="1.4">
+        <path d="M150 470q30-20 70-12M212 452l8 6-9 5"/>
+        <path d="M340 430q-30-18-74-6M274 418l-8 6 9 5"/>
+      </g>
+      <!-- annotations -->
+      <g font-family="DM Serif Display, Georgia, serif" font-size="15" fill="#1b1b1f" stroke="none" font-style="italic">
+        <text x="40" y="300">Fig. 1 — sonde verticale</text>
+        <text x="300" y="370">calories du sous-sol</text>
+        <text x="60" y="510">≈ 10 à 14 °C toute l'année</text>
+      </g>
+      <g stroke="#1b1b1f" stroke-width=".9"><path d="M214 296h18"/><path d="M296 366l-40 20"/></g>
+      <g font-family="Karla, Arial, sans-serif" font-size="11" fill="#5f5a50" stroke="none" letter-spacing="1.5">
+        <text x="150" y="252">PLANCHER</text><text x="270" y="256">RADIATEUR</text>
+      </g>
+    </svg>
+    <p class="legende">Coupe d'une pompe à chaleur géothermique : la chaleur stable du sous-sol normand remonte par la sonde jusqu'à la maison.</p>
+  </div>
+</section>
+
+<div class="confiance tissage">
+  <div class="wrap">
+    <div class="conf reveal"><small>Note clients</small><strong><a href="https://www.effy.fr/artisans/pro/1342-doreau-thierry" target="_blank" rel="noopener">5,0/5 · 32 avis Effy</a></strong></div>
+    <div class="conf reveal d1"><small>Qualification</small><strong>QUALIBAT PAC</strong></div>
+    <div class="conf reveal d2"><small>RGE</small><strong>QUALIBAT Remplacement chaudière</strong></div>
+    <div class="conf reveal d3"><small>Réseau</small><strong>Partenaire Effy</strong></div>
+  </div>
+</div>
+<div class="chevron-band" aria-hidden="true"></div>
+
+<section id="prestations">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">01</div>
+      <div><div class="kick">Rubrique · Les prestations</div><h2>Six savoir-faire, un même fil</h2><p>Des pompes à chaleur aux chaudières à condensation, Doreau Thierry choisit avec vous l'équipement adapté à votre maison d'Elbeuf et des bords de Seine.</p></div>
+    </header>
+    <div class="prestations">
+      <article class="presta reveal">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h44"/><path d="M14 22 22 12h16l8 10"/><path d="M30 22v32" stroke="#b2342a" stroke-width="2.2"/><path d="M26 22v30q4 6 8 0V22" /><path d="M8 34q11-4 22 0t22 0M8 44q11 4 22 0t22 0" stroke="#8d877b"/></svg>
+        <div class="rub">Pompe à chaleur</div><h3>Géothermique</h3>
+        <p>La chaleur stable du sol, captée par sonde ou capteurs : une solution durable pour les projets ambitieux.</p>
+      </article>
+      <article class="presta reveal d1">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="22" height="30" rx="2"/><circle cx="17" cy="31" r="7"/><path d="M17 24v14M10 31h14"/><rect x="34" y="10" width="20" height="38" rx="2"/><path d="M44 40c-4 0-5-3-4-6 1-2 3-3 3-5 3 2 6 4 5 7 0 3-2 4-4 4z" stroke="#b2342a"/><path d="M28 24h6M28 38h6"/></svg>
+        <div class="rub">Pompe à chaleur</div><h3>Hybride</h3>
+        <p>PAC et chaudière à condensation pilotées ensemble : l'appareil le plus économique prend le relais selon la météo.</p>
+      </article>
+      <article class="presta reveal d2">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="48" height="32" rx="2"/><circle cx="24" cy="30" r="11"/><path d="M24 19v22M13 30h22M17 23l14 14M31 23 17 37" stroke="#8d877b" stroke-width="1.2"/><path d="M42 20h8M42 26h8M42 32h8M42 38h8"/><path d="M14 52q4-4 8 0t8 0" stroke="#b2342a"/></svg>
+        <div class="rub">Pompe à chaleur</div><h3>Air-eau</h3>
+        <p>Elle alimente radiateurs ou plancher chauffant et peut produire l'eau chaude, en remplacement d'une vieille chaudière.</p>
+      </article>
+      <article class="presta reveal">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="48" height="16" rx="3"/><path d="M12 22h36"/><path d="M16 36q2 4 0 8M30 36q2 4 0 8M44 36q2 4 0 8" stroke="#b2342a"/><path d="M22 36l-2 10M38 36l2 10" stroke="#8d877b"/></svg>
+        <div class="rub">Pompe à chaleur</div><h3>Air-air</h3>
+        <p>Unités murales réversibles : chaleur douce l'hiver, fraîcheur l'été, pièce par pièce.</p>
+      </article>
+      <article class="presta reveal d1">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="32" height="44" rx="2"/><path d="M14 16h32"/><circle cx="20" cy="11" r="1.5"/><path d="M30 42c-6 0-8-5-6-9 2-3 4-4 4-7 4 2 8 6 7 10 0 4-2 6-5 6z" stroke="#b2342a"/><path d="M22 50v5M38 50v5"/></svg>
+        <div class="rub">Chaudière</div><h3>Gaz ou fioul à condensation</h3>
+        <p>Remplacement de chaudière par un modèle à condensation, qui récupère la chaleur des fumées. Qualification RGE dédiée.</p>
+      </article>
+      <article class="presta reveal d2">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="14" width="44" height="30" rx="2"/><path d="M15 14v30M22 14v30M29 14v30M36 14v30M43 14v30" stroke="#8d877b"/><path d="M12 44v6M48 44v6"/><path d="M48 8l-4 6h5l-4 6" stroke="#b2342a"/></svg>
+        <div class="rub">Électrique</div><h3>Radiateurs à inertie</h3>
+        <p>Pour les logements sans réseau d'eau : une chaleur homogène et régulée, plus confortable que les vieux convecteurs.</p>
+      </article>
+      <article class="presta reveal">
+        <svg class="pico" viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="4" width="24" height="50" rx="12"/><rect x="22" y="10" width="16" height="8" rx="2"/><path d="M30 26v16M25 37l5 5 5-5" stroke="#b2342a"/></svg>
+        <div class="rub">Eau chaude</div><h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon qui chauffe l'eau en captant les calories de l'air : une alternative sobre au cumulus électrique.</p>
+      </article>
+      <article class="presta reveal d1" style="background:var(--drap);color:#fff">
+        <div class="rub" style="color:#f5b2a8">Et aussi</div><h3 style="color:#fff">Un projet à étudier ?</h3>
+        <p style="color:#ddd5c4;margin-bottom:18px">Décrivez votre logement : on vous oriente vers la solution la plus adaptée.</p>
+        <a class="btn btn-rouge" href="#contact" style="border-color:#fff">Devis</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pourquoi" class="trame" style="background-color:var(--papier);border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">02</div>
+      <div><div class="kick">Rubrique · Pourquoi nous choisir</div><h2>L'ouvrage avant tout</h2></div>
+    </header>
+    <div class="colonnes">
+      <div class="col reveal"><span class="lettrine">I.</span><h3>Des clients satisfaits</h3><p>Une note de 5,0/5 sur 32 avis Effy : un retour concret, vérifiable en ligne.</p></div>
+      <div class="col reveal d1"><span class="lettrine">II.</span><h3>Qualifié RGE</h3><p>QUALIBAT PAC et Remplacement chaudière : des qualifications utiles pour solliciter certaines aides.</p></div>
+      <div class="col reveal d2"><span class="lettrine">III.</span><h3>Toutes les PAC</h3><p>Géothermique, hybride, air-eau, air-air : le choix n'est pas dicté par un seul catalogue.</p></div>
+      <div class="col reveal d3"><span class="lettrine">IV.</span><h3>Un chantier propre</h3><p>Protection des lieux, nettoyage en fin d'intervention et explications claires à la remise des clés.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode" class="sec-drap tissage">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">03</div>
+      <div><div class="kick">Rubrique · Comment ça se passe</div><h2>Quatre temps, comme une pièce bien tissée</h2><p>De la première prise de contact à la mise en service, chaque étape est expliquée.</p></div>
+    </header>
+    <div class="etapes">
+      <div class="etape reveal"><span class="num-e">1</span><h3>L'appel</h3><p>Vous présentez votre logement, votre chauffage actuel et vos attentes.</p></div>
+      <div class="etape reveal d1"><span class="num-e">2</span><h3>La visite</h3><p>Diagnostic sur place à Elbeuf ou alentour : surfaces, émetteurs, isolation, emplacements.</p></div>
+      <div class="etape reveal d2"><span class="num-e">3</span><h3>Le devis</h3><p>Une proposition détaillée, avec les pistes d'aides possibles selon votre situation.</p></div>
+      <div class="etape reveal d3"><span class="num-e">4</span><h3>La pose</h3><p>Installation, mise en service, réglages et prise en main expliquée.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="atelier">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">04</div>
+      <div><div class="kick">Rubrique · Portrait</div><h2>Une entreprise de la rue Pierre Renaudel</h2></div>
+    </header>
+    <div class="apropos">
+      <div class="texte-col reveal">
+        <p>Doreau Thierry est une entreprise de chauffage installée au 3 rue Pierre Renaudel, à Elbeuf. Elle intervient à Elbeuf, Saint-Pierre-lès-Elbeuf, Caudebec-lès-Elbeuf et dans les communes environnantes de la boucle de Seine.</p>
+        <p>Son cœur de métier : les pompes à chaleur sous toutes leurs formes, géothermiques, hybrides, air-eau et air-air, ainsi que le remplacement de chaudières gaz et fioul par des modèles à condensation.</p>
+        <p>Titulaire des qualifications QUALIBAT PAC et Remplacement chaudière (RGE), l'entreprise est aussi partenaire Effy, où ses clients lui attribuent la note de 5,0/5 sur 32 avis.</p>
+        <p>Radiateurs électriques à inertie et chauffe-eau thermodynamiques complètent l'offre, pour les logements où une PAC n'est pas la meilleure réponse.</p>
+      </div>
+      <aside class="encadre reveal d2">
+        <h3>Fiche signalétique</h3>
+        <ul class="fiche">
+          <li><b>Raison</b><span>Doreau Thierry, chauffagiste</span></li>
+          <li><b>Adresse</b><span>3 rue Pierre Renaudel, 76500 Elbeuf</span></li>
+          <li><b>Téléphone</b><span><a href="tel:+33235788050">02 35 78 80 50</a></span></li>
+          <li><b>Labels</b><span>QUALIBAT PAC · QUALIBAT Remplacement chaudière (RGE) · Partenaire Effy</span></li>
+          <li><b>Secteur</b><span>Elbeuf, Saint-Pierre-lès-Elbeuf, Caudebec-lès-Elbeuf et environs</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="comparatif" style="padding-top:0">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">05</div>
+      <div><div class="kick">Rubrique · Le grand comparatif</div><h2>Quelle pompe à chaleur pour votre maison ?</h2><p>Des repères généraux pour préparer l'échange. La solution finale dépend de votre logement, et se décide après visite.</p></div>
+    </header>
+    <p class="scroll-hint">Faites glisser le tableau horizontalement →</p>
+    <div class="tableau-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Critère</th>
+            <th scope="col"><svg viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8"><path d="M8 22h44M30 22v32" /><path d="M26 22v30q4 6 8 0V22"/><path d="M8 36q11-4 22 0t22 0" stroke="#8d877b"/></svg>Géothermique</th>
+            <th scope="col"><svg viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8"><rect x="6" y="16" width="22" height="30" rx="2"/><circle cx="17" cy="31" r="7"/><rect x="34" y="10" width="20" height="38" rx="2"/><path d="M28 31h6" stroke="#b2342a"/></svg>Hybride</th>
+            <th scope="col"><svg viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8"><rect x="6" y="14" width="48" height="32" rx="2"/><circle cx="24" cy="30" r="11"/><path d="M42 22h8M42 30h8M42 38h8"/></svg>Air-eau</th>
+            <th scope="col"><svg viewBox="0 0 60 60" fill="none" stroke="#22355e" stroke-width="1.8"><rect x="6" y="16" width="48" height="16" rx="3"/><path d="M12 26h36"/><path d="M18 40q2 4 0 8M30 40q2 4 0 8M42 40q2 4 0 8" stroke="#b2342a"/></svg>Air-air</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Source</th><td>Le sous-sol, à température stable</td><td>L'air extérieur + chaudière d'appoint</td><td>L'air extérieur</td><td>L'air extérieur</td></tr>
+          <tr><th scope="row">Diffusion</th><td>Radiateurs, plancher chauffant</td><td>Radiateurs existants</td><td>Radiateurs, plancher chauffant</td><td>Unités murales soufflantes</td></tr>
+          <tr><th scope="row">Eau chaude</th><td>Possible</td><td>Possible</td><td>Possible</td><td>Non, à prévoir à part</td></tr>
+          <tr><th scope="row">Rafraîchir l'été</th><td>Selon modèle</td><td>Rarement</td><td>Selon modèle</td><td>Oui, réversible</td></tr>
+          <tr><th scope="row">Pour qui ?</th><td>Construction ou grande rénovation, terrain disponible</td><td>Maison déjà au gaz, transition en douceur</td><td>Remplacement d'une chaudière ancienne</td><td>Pièces de vie, logement sans réseau d'eau</td></tr>
+          <tr><th scope="row">Tarif</th><td><span class="pastille">Sur devis</span></td><td><span class="pastille">Sur devis</span></td><td><span class="pastille">Sur devis</span></td><td><span class="pastille">Sur devis</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note-tab">Repères indicatifs, à affiner lors de la visite technique. Chaudières à condensation, radiateurs à inertie et chauffe-eau thermodynamiques sont également proposés.</p>
+  </div>
+</section>
+
+<section id="avis" style="padding-top:0">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">06</div>
+      <div><div class="kick">Rubrique · La parole aux clients</div><h2>Ce que les clients soulignent</h2></div>
+    </header>
+    <div class="avis-bloc reveal">
+      <div class="avis-note">
+        <div class="gros">5,0<small>/5</small></div>
+        <div class="etoiles" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#ffd9a8"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21.1l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#ffd9a8"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21.1l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#ffd9a8"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21.1l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#ffd9a8"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21.1l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#ffd9a8"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21.1l1.5-7L2 9.3l7-.8z"/></svg>
+        </div>
+        <p>Note moyenne sur 32 avis publiés sur Effy.</p>
+        <a class="btn" href="https://www.effy.fr/artisans/pro/1342-doreau-thierry" target="_blank" rel="noopener">Lire les avis sur Effy</a>
+      </div>
+      <div class="avis-points">
+        <h3>En résumé, au fil des avis</h3>
+        <ul class="points">
+          <li><span>a.</span><div><strong>Un travail soigné</strong><em>La qualité de la pose et des finitions revient régulièrement.</em></div></li>
+          <li><span>b.</span><div><strong>Un chantier laissé propre</strong><em>Les clients notent le respect de leur intérieur, avant comme après les travaux.</em></div></li>
+          <li><span>c.</span><div><strong>Une équipe à l'écoute</strong><em>Des explications claires et une attention portée aux besoins de chacun.</em></div></li>
+        </ul>
+        <p class="source">Synthèse rédigée à partir des avis publics de la page Effy de l'entreprise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">07</div>
+      <div><div class="kick">Rubrique · Questions-réponses</div><h2>Le courrier des lecteurs</h2></div>
+    </header>
+    <div class="faq reveal">
+      <details><summary><span class="q">Q.01</span>La géothermie est-elle possible sur mon terrain ?<span class="tog">+</span></summary><div class="rep"><p>Cela dépend de la surface disponible, de la nature du sous-sol et de l'accès pour les engins. Une étude préalable permet de savoir si une sonde verticale ou des capteurs horizontaux sont envisageables.</p></div></details>
+      <details><summary><span class="q">Q.02</span>Puis-je obtenir des aides pour une pompe à chaleur ?<span class="tog">+</span></summary><div class="rep"><p>Selon votre situation, vous pourriez bénéficier de MaPrimeRénov' ou de primes CEE. Ces dispositifs exigent en général un artisan RGE et leurs conditions évoluent régulièrement : nous en parlons au moment du devis.</p></div></details>
+      <details><summary><span class="q">Q.03</span>Hybride ou PAC seule, comment choisir ?<span class="tog">+</span></summary><div class="rep"><p>L'hybride convient souvent aux maisons déjà équipées au gaz dont l'isolation reste perfectible ; une PAC seule est pertinente lorsque le logement est bien isolé. La visite permet de trancher.</p></div></details>
+      <details><summary><span class="q">Q.04</span>Ma chaudière a plus de quinze ans, faut-il la changer ?<span class="tog">+</span></summary><div class="rep"><p>Pas forcément, mais une chaudière ancienne consomme généralement davantage qu'un modèle à condensation récent. Un diagnostic permet d'évaluer l'intérêt d'un remplacement ou d'une PAC.</p></div></details>
+      <details><summary><span class="q">Q.05</span>Les radiateurs à inertie sont-ils vraiment plus confortables ?<span class="tog">+</span></summary><div class="rep"><p>Ils restituent une chaleur plus douce et plus régulière que les anciens convecteurs grâce à leur cœur de chauffe. Leur intérêt dépend de l'isolation et de l'usage du logement.</p></div></details>
+      <details><summary><span class="q">Q.06</span>Intervenez-vous hors d'Elbeuf ?<span class="tog">+</span></summary><div class="rep"><p>Oui, à Saint-Pierre-lès-Elbeuf, Caudebec-lès-Elbeuf et dans les environs. Appelez le 02 35 78 80 50 pour vérifier votre commune.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <header class="entete-sec reveal">
+      <div class="num">08</div>
+      <div><div class="kick">Rubrique · Contact</div><h2>Écrire à la rédaction… ou plutôt à l'atelier</h2><p>Une question, un devis, une visite ? Laissez vos coordonnées, vous serez recontacté.</p></div>
+    </header>
+    <div class="contact reveal">
+      <div class="contact-infos">
+        <h3>Coordonnées</h3>
+        <a class="ligne" href="tel:+33235788050"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>02 35 78 80 50</a>
+        <a class="ligne" href="mailto:doreau.thierry@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>doreau.thierry@orange.fr</a>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>3 rue Pierre Renaudel, 76500 Elbeuf</div>
+        <a class="btn btn-trait" style="margin-top:18px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=3%20rue%20Pierre%20Renaudel%2076500%20Elbeuf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 19-9-9 19-2-8z"/></svg>Itinéraire</a>
+        <ul class="horaires" id="horaires">
+          <li data-j="1"><span>Lundi</span><span>8h – 18h</span></li>
+          <li data-j="2"><span>Mardi</span><span>8h – 18h</span></li>
+          <li data-j="3"><span>Mercredi</span><span>8h – 18h</span></li>
+          <li data-j="4"><span>Jeudi</span><span>8h – 18h</span></li>
+          <li data-j="5"><span>Vendredi</span><span>8h – 18h</span></li>
+          <li data-j="6"><span>Samedi</span><span>Sur rendez-vous</span></li>
+          <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+        <p class="petit">Horaires indicatifs, à confirmer par téléphone.</p>
+      </div>
+      <form id="form" novalidate>
+        <h3>Demande de devis</h3>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="02 … ou 06 …"></div>
+          <div class="champ"><label for="ville">Commune</label><input id="ville" placeholder="Elbeuf, Caudebec…"></div>
+          <div class="champ"><label for="type">Projet</label><select id="type"><option>PAC géothermique</option><option>PAC hybride</option><option>PAC air-eau</option><option>PAC air-air</option><option>Chaudière à condensation</option><option>Radiateurs à inertie</option><option>Chauffe-eau thermodynamique</option><option>Autre demande</option></select></div>
+          <div class="champ plein"><label for="mail">Email</label><input id="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ plein"><label for="msg">Votre projet</label><textarea id="msg" placeholder="Surface, chauffage actuel, délai…"></textarea></div>
+        </div>
+        <button class="btn btn-rouge" type="submit" style="margin-top:22px">Envoyer la demande</button>
+        <div class="msg-form" id="msgForm" role="status">Maquette de démonstration – le formulaire sera actif sur le site final.</div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="chevron-band" aria-hidden="true" style="background-color:var(--laine)"></div>
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div><a class="marque" href="#couverture"><b>Doreau Thierry</b></a><p style="margin-top:12px">Chauffagiste RGE à Elbeuf : pompes à chaleur, chaudières à condensation, radiateurs à inertie et chauffe-eau thermodynamiques.</p></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33235788050">02 35 78 80 50</a></li><li><a href="mailto:doreau.thierry@orange.fr">doreau.thierry@orange.fr</a></li><li>3 rue Pierre Renaudel<br>76500 Elbeuf</li></ul></div>
+      <div><h4>Horaires indicatifs</h4><ul><li>Lun – ven : 8h – 18h</li><li>Samedi : sur rendez-vous</li><li>Dimanche : fermé</li></ul></div>
+      <div><h4>Secteur</h4><ul><li>Elbeuf</li><li>Saint-Pierre-lès-Elbeuf</li><li>Caudebec-lès-Elbeuf</li><li>et environs</li></ul></div>
+    </div>
+    <div class="mentions"><span>© Doreau Thierry – Chauffage, Elbeuf</span><span>Mentions légales · Politique de confidentialité</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="appel" href="tel:+33235788050" aria-label="Appeler Doreau Thierry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),b=document.getElementById('burger'),m=document.getElementById('menu');
+  function sc(){nav.classList.toggle('scrolle',scrollY>20)}addEventListener('scroll',sc,{passive:true});sc();
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false')})});
+  var li=document.querySelector('#horaires li[data-j="'+new Date().getDay()+'"]');if(li)li.classList.add('auj');
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else els.forEach(function(e){e.classList.add('in')});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msgForm').classList.add('visible')});
+})();
+</script>
+</body>
+</html>
