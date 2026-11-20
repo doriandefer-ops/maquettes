@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aisance Travaux – chauffagiste à Échirolles</title>
+<meta name="description" content="Aisance Travaux, chauffagiste à Échirolles : installation et entretien de chaudières gaz et fioul, pompes à chaleur et climatisation dans toute l'agglomération grenobloise. Devis sur demande au 06 13 48 88 41.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d1030">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0d1030;
+  --indigo:#2a2f7a;
+  --cyan:#5ce1ff;
+  --rose:#ff6fb5;
+  --blanc:#f4f6ff;
+  --texte:#d9ddf5;
+  --doux:#aab2e0;
+  --verre:rgba(244,246,255,.07);
+  --verre-fort:rgba(244,246,255,.12);
+  --bord:rgba(244,246,255,.16);
+  --ombre:0 20px 60px -20px rgba(0,0,0,.6);
+  --rayon:22px;
+  --grad:linear-gradient(120deg,var(--cyan),var(--rose));
+  --titre:'Lexend',system-ui,sans-serif;
+  --corps:'Inter',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--corps);color:var(--texte);background:var(--nuit);line-height:1.65;font-size:16.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--titre);color:var(--blanc);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700}
+h3{font-size:1.18rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== Fond aurore ===== */
+.ciel{position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(1200px 700px at 80% -10%,rgba(92,225,255,.18),transparent 60%),
+  radial-gradient(900px 600px at -10% 30%,rgba(255,111,181,.14),transparent 60%),
+  radial-gradient(1000px 800px at 50% 120%,rgba(42,47,122,.9),transparent 70%),
+  linear-gradient(180deg,#0d1030 0%,#121644 55%,#0d1030 100%)}
+.orbe{position:fixed;border-radius:50%;filter:blur(70px);z-index:-1;opacity:.55;pointer-events:none;animation:derive 22s ease-in-out infinite alternate}
+.orbe.o1{width:420px;height:420px;background:#5ce1ff;top:-120px;right:-80px;opacity:.28}
+.orbe.o2{width:360px;height:360px;background:#ff6fb5;top:40%;left:-160px;opacity:.22;animation-duration:28s}
+.orbe.o3{width:300px;height:300px;background:#6a5cff;bottom:-100px;right:20%;opacity:.25;animation-duration:32s}
+@keyframes derive{to{transform:translate(60px,40px) scale(1.12)}}
+
+.verre{background:var(--verre);border:1px solid var(--bord);border-radius:var(--rayon);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--ombre),inset 0 1px 0 rgba(255,255,255,.08)}
+
+/* ===== Navigation ===== */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:50}
+.nav .barre{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 18px;border-radius:999px;background:rgba(13,16,48,.55);border:1px solid var(--bord);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .3s}
+.nav.defile .barre{background:rgba(13,16,48,.85)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:700;color:var(--blanc);font-size:1.08rem;letter-spacing:-.01em}
+.logo svg{width:34px;height:34px}
+.logo small{display:block;font-weight:400;font-size:.68rem;color:var(--doux);letter-spacing:.08em;text-transform:uppercase}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-size:.93rem;color:var(--texte);transition:background .2s,color .2s}
+.menu a:hover,.menu a:focus-visible{background:var(--verre-fort);color:var(--blanc)}
+.nav .appel{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--grad);color:#0d1030;font-weight:700;text-decoration:none;font-size:.92rem;white-space:nowrap}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--bord);background:var(--verre-fort);cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:2px;background:var(--blanc);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ===== Boutons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:1px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;font-family:var(--corps)}
+.btn svg{width:20px;height:20px}
+.btn-plein{background:var(--grad);color:#0d1030;box-shadow:0 10px 30px -10px rgba(92,225,255,.6)}
+.btn-plein:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(255,111,181,.6)}
+.btn-verre{background:var(--verre-fort);color:var(--blanc);border-color:var(--bord);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-verre:hover{background:rgba(244,246,255,.2);transform:translateY(-2px)}
+
+/* ===== En-tête ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative}
+.hero .grille{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.pastille{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--verre-fort);border:1px solid var(--bord);font-size:.85rem;color:var(--blanc);margin-bottom:22px}
+.pastille i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.hero h1{font-size:clamp(2.4rem,4.6vw,3.9rem);font-weight:800;letter-spacing:-.025em;margin-bottom:18px}
+.hero h1 .degrade{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .accroche{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--texte);max-width:560px;margin-bottom:30px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero .puces{display:flex;flex-wrap:wrap;gap:10px 22px;list-style:none;padding:0;margin:0;font-size:.93rem;color:var(--doux)}
+.hero .puces li{display:flex;align-items:center;gap:8px}
+.hero .puces svg{width:18px;height:18px;color:var(--cyan)}
+
+.pile{position:relative;height:640px;perspective:1200px}
+.carte-v{position:absolute;width:min(270px,48%);padding:0;transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+.carte-v .flot{animation:flotte 7s ease-in-out infinite}
+.carte-v svg{width:100%;height:auto;margin-bottom:14px}
+.carte-v h3{font-size:1.05rem;margin:0 0 4px}
+.carte-v p{margin:0;font-size:.86rem;color:var(--doux)}
+.carte-v .etiq{position:absolute;top:16px;right:16px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(13,16,48,.5);border:1px solid var(--bord);color:var(--cyan)}
+.c1{top:0;left:0;z-index:1}
+.c2{top:120px;right:0;z-index:3}
+.c3{top:385px;left:22%;z-index:2}
+.c2 .flot{animation-delay:-2.3s}.c3 .flot{animation-delay:-4.6s}
+.c2 .etiq{color:var(--rose)}
+@keyframes flotte{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.anneau{position:absolute;inset:40px 10px 20px;border-radius:50%;border:1px dashed rgba(92,225,255,.22);animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.helice{animation:tourne 5s linear infinite}
+.montagnes{position:absolute;left:0;right:0;bottom:0;height:150px;z-index:-1;pointer-events:none;opacity:.75}
+
+/* ===== Confiance ===== */
+.confiance{padding:0 0 40px}
+.confiance .bande{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:8px}
+.confiance .item{display:flex;align-items:center;gap:14px;padding:18px 20px}
+.confiance .item+.item{border-left:1px solid var(--bord)}
+.confiance .ico{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(92,225,255,.22),rgba(255,111,181,.18));border:1px solid var(--bord)}
+.confiance .ico svg{width:24px;height:24px;color:var(--blanc)}
+.confiance strong{display:block;color:var(--blanc);font-family:var(--titre);font-weight:600;font-size:.98rem}
+.confiance span{font-size:.85rem;color:var(--doux)}
+
+/* ===== Sections ===== */
+section{padding:96px 0;position:relative}
+.entete-s{max-width:720px;margin-bottom:48px}
+.entete-s.centre{margin-inline:auto;text-align:center}
+.surtitre{display:inline-block;font-family:var(--titre);font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.entete-s p{color:var(--doux);font-size:1.06rem}
+
+.services .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:28px 26px;transition:transform .35s,border-color .35s,background .35s;position:relative;overflow:hidden}
+.service::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--cyan);filter:blur(60px);opacity:0;top:-90px;right:-60px;transition:opacity .4s}
+.service:nth-child(even)::after{background:var(--rose)}
+.service:hover{transform:translateY(-6px);border-color:rgba(92,225,255,.45);background:var(--verre-fort)}
+.service:hover::after{opacity:.35}
+.service .ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(135deg,rgba(92,225,255,.18),rgba(255,111,181,.14));border:1px solid var(--bord)}
+.service .ico svg{width:32px;height:32px}
+.service p{color:var(--doux);margin:0;font-size:.96rem}
+
+.atouts .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.atout{padding:28px 24px}
+.atout .num{font-family:var(--titre);font-size:2.6rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+.atout p{color:var(--doux);margin:0;font-size:.95rem}
+
+.etapes ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:e;position:relative}
+.etapes ol::before{content:"";position:absolute;top:34px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--rose),transparent);opacity:.5}
+.etapes li{counter-increment:e;padding:0 6px;text-align:center;position:relative}
+.etapes li::before{content:counter(e,decimal-leading-zero);display:grid;place-items:center;width:68px;height:68px;margin:0 auto 18px;border-radius:50%;font-family:var(--titre);font-weight:700;font-size:1.25rem;color:var(--blanc);background:rgba(13,16,48,.75);border:1px solid var(--bord);box-shadow:0 0 0 6px rgba(92,225,255,.08),0 0 30px rgba(92,225,255,.25);backdrop-filter:blur(10px)}
+.etapes p{color:var(--doux);font-size:.95rem;margin:0}
+
+.apropos .grille{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.apropos .bloc{padding:36px}
+.apropos .bloc p{color:var(--texte)}
+.apropos .liste{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.apropos .liste li{display:flex;gap:12px;align-items:flex-start;color:var(--texte)}
+.apropos .liste svg{flex:none;width:22px;height:22px;color:var(--cyan);margin-top:2px}
+.apropos .visuel{padding:20px}
+
+/* Réalisations */
+.galerie .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.real{overflow:hidden;transition:transform .35s}
+.real:hover{transform:translateY(-6px)}
+.real .scene{aspect-ratio:4/3;background:linear-gradient(160deg,#1a1f5a,#0f1238);border-bottom:1px solid var(--bord)}
+.real .scene svg{width:100%;height:100%}
+.real .legende{padding:18px 22px 22px}
+.real .legende span{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.real .legende h3{margin:6px 0 4px}
+.real .legende p{margin:0;color:var(--doux);font-size:.92rem}
+.note-illu{font-size:.85rem;color:var(--doux);text-align:center;margin-top:22px}
+
+.tarifs{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tarif{padding:28px 26px;display:flex;flex-direction:column}
+.tarif h3{margin-bottom:6px}
+.tarif .prix{font-family:var(--titre);font-size:1.6rem;font-weight:700;color:var(--blanc);margin:6px 0 12px}
+.tarif .prix small{font-size:.9rem;font-weight:400;color:var(--doux)}
+.tarif ul{padding:0;margin:0 0 20px;list-style:none;display:grid;gap:8px;font-size:.93rem;color:var(--texte)}
+.tarif li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-right:10px;vertical-align:middle}
+.tarif .btn{margin-top:auto}
+.tarif.mis{border-color:rgba(255,111,181,.5);background:linear-gradient(160deg,rgba(92,225,255,.12),rgba(255,111,181,.1))}
+
+/* Avis */
+.avis .carte{padding:44px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+.avis .etoiles{display:flex;gap:6px}
+.avis .etoiles svg{width:34px;height:34px}
+.avis p{margin:0;color:var(--texte)}
+
+/* FAQ */
+.faq .liste{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.q{padding:0;overflow:hidden}
+.q button{all:unset;box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:center;gap:18px;padding:22px 26px;cursor:pointer;font-family:var(--titre);font-weight:600;color:var(--blanc);font-size:1.04rem}
+.q button:focus-visible{outline:2px solid var(--cyan);outline-offset:-4px;border-radius:var(--rayon)}
+.q .plus{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--bord);position:relative;transition:transform .3s,background .3s}
+.q .plus::before,.q .plus::after{content:"";position:absolute;left:8px;right:8px;top:14px;height:2px;background:var(--cyan);border-radius:2px}
+.q .plus::after{transform:rotate(90deg);transition:transform .3s}
+.q.ouvert .plus{background:rgba(92,225,255,.15)}
+.q.ouvert .plus::after{transform:rotate(0)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{padding:0 26px 22px;margin:0;color:var(--doux)}
+
+/* Horaires / zone */
+.infos .grille{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.infos .bloc{padding:32px}
+.horaires{width:100%;border-collapse:collapse;margin-top:8px}
+.horaires td{padding:11px 14px;border-bottom:1px solid rgba(244,246,255,.08);font-size:.97rem}
+.horaires td:last-child{text-align:right;color:var(--doux)}
+.horaires tr.auj td{background:linear-gradient(90deg,rgba(92,225,255,.2),rgba(255,111,181,.15));color:var(--blanc);font-weight:600}
+.horaires tr.auj td:first-child{border-radius:12px 0 0 12px}
+.horaires tr.auj td:last-child{border-radius:0 12px 12px 0;color:var(--blanc)}
+.horaires .tag{display:inline-block;margin-left:8px;font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--cyan);color:#0d1030;font-weight:700;letter-spacing:.04em;vertical-align:middle}
+.zone-carte{margin:16px 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--bord);background:rgba(13,16,48,.5)}
+.communes{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 22px}
+.communes li{padding:6px 12px;border-radius:999px;font-size:.85rem;background:var(--verre-fort);border:1px solid var(--bord)}
+
+/* Contact */
+.contact .grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.contact .coord{padding:34px}
+.contact .coord a.ligne{display:flex;align-items:center;gap:14px;padding:14px 0;text-decoration:none;border-bottom:1px solid rgba(244,246,255,.08);color:var(--blanc);word-break:break-word}
+.contact .coord a.ligne:hover{color:var(--cyan)}
+.contact .coord .ico{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--verre-fort);border:1px solid var(--bord)}
+.contact .coord .ico svg{width:22px;height:22px;color:var(--cyan)}
+.contact .coord small{display:block;color:var(--doux);font-size:.8rem}
+form{padding:34px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.large{grid-column:1/-1}
+label{font-size:.88rem;color:var(--blanc);font-weight:500}
+input,select,textarea{font:inherit;color:var(--blanc);background:rgba(13,16,48,.55);border:1px solid var(--bord);border-radius:14px;padding:13px 15px;transition:border-color .2s,box-shadow .2s;width:100%}
+select option{background:#14184a}
+textarea{min-height:130px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#8088bb}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(92,225,255,.15)}
+.form-pied{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:20px}
+.form-pied small{color:var(--doux);font-size:.82rem;max-width:340px}
+.retour{display:none;margin-top:16px;padding:14px 18px;border-radius:14px;background:rgba(92,225,255,.12);border:1px solid rgba(92,225,255,.4);color:var(--blanc);font-size:.94rem}
+.retour.vu{display:block}
+
+/* Pied */
+footer{padding:70px 0 0;border-top:1px solid var(--bord);background:rgba(8,10,32,.6);margin-top:40px}
+footer .grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:44px}
+footer h4{font-size:.95rem;margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.93rem}
+footer a{text-decoration:none;color:var(--texte)}
+footer a:hover{color:var(--cyan)}
+footer p{color:var(--doux);font-size:.93rem}
+.mention{border-top:1px solid rgba(244,246,255,.08);padding:18px 0;font-size:.82rem;color:var(--doux);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.demo{background:#080a22;color:#c4c9ec;text-align:center;font-size:.8rem;padding:12px 16px;border-top:1px solid rgba(244,246,255,.06)}
+
+/* Appel flottant */
+.flottant{position:fixed;right:16px;bottom:18px;z-index:60;display:none;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;background:var(--grad);color:#0d1030;font-weight:700;text-decoration:none;box-shadow:0 12px 30px -8px rgba(92,225,255,.6)}
+.flottant svg{width:20px;height:20px}
+.flottant::before{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--cyan);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.8}to{transform:scale(1.35);opacity:0}}
+
+/* Révélation */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+@media (max-width:1080px){
+  .menu{display:none}
+  .burger{display:block}
+  .nav .appel{display:none}
+  .menu.ouvert{display:flex;flex-direction:column;position:absolute;top:calc(100% + 10px);left:0;right:0;padding:14px;border-radius:24px;background:#10143c;box-shadow:0 24px 50px -10px rgba(0,0,0,.7);border:1px solid var(--bord);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .menu.ouvert a{padding:14px 16px;font-size:1.02rem}
+  .nav .barre{position:relative}
+  .atouts .grille{grid-template-columns:repeat(2,1fr)}
+  footer .grille{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero{padding-top:120px;min-height:auto}
+  .hero .grille{grid-template-columns:1fr;gap:40px}
+  .pile{height:620px;max-width:560px;margin:0 auto;width:100%}
+  .services .grille,.galerie .grille,.tarifs{grid-template-columns:1fr 1fr}
+  .confiance .bande{grid-template-columns:1fr 1fr}
+  .confiance .item:nth-child(3){border-left:0}
+  .confiance .item:nth-child(n+3){border-top:1px solid var(--bord)}
+  .etapes ol{grid-template-columns:1fr 1fr;row-gap:36px}
+  .etapes ol::before{display:none}
+  .apropos .grille,.infos .grille,.contact .grille{grid-template-columns:1fr}
+  .avis .carte{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .services .grille,.galerie .grille,.tarifs,.atouts .grille{grid-template-columns:1fr}
+  .confiance .bande{grid-template-columns:1fr}
+  .confiance .item+.item{border-left:0;border-top:1px solid var(--bord)}
+  .etapes ol{grid-template-columns:1fr}
+  .champs{grid-template-columns:1fr}
+  .pile{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px;perspective:none}
+  .anneau{display:none}
+  .carte-v{position:static;width:auto}
+  .carte-v .flot{padding:14px!important;height:100%}
+  .c3{grid-column:1/-1;width:62%;justify-self:center;margin-top:-4px}
+  .carte-v h3{font-size:.95rem}.carte-v p{font-size:.8rem}
+  .carte-v .etiq{position:static;display:inline-block;margin-bottom:8px;font-size:.62rem}
+  .hero .actions .btn{flex:1 1 100%}
+  .flottant{display:inline-flex}
+  footer .grille{grid-template-columns:1fr}
+  .apropos .bloc,.infos .bloc,.contact .coord,form{padding:24px}
+  .avis .carte{padding:30px 22px}
+  .logo small{display:none}
+  .demo{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="ciel" aria-hidden="true"></div>
+<div class="orbe o1" aria-hidden="true"></div>
+<div class="orbe o2" aria-hidden="true"></div>
+<div class="orbe o3" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <div class="barre">
+      <a class="logo" href="#accueil" aria-label="Aisance Travaux, retour en haut">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ce1ff"/><stop offset="1" stop-color="#ff6fb5"/></linearGradient></defs><rect x="2" y="2" width="36" height="36" rx="12" fill="rgba(244,246,255,.1)" stroke="url(#lg)" stroke-width="1.5"/><path d="M20 9c4 5 7 8 7 12.5a7 7 0 0 1-14 0c0-2.6 1.2-4.6 3-6.5.3 2 1.3 3.2 2.6 3.6C18 15 18.6 12 20 9z" fill="url(#lg)"/><path d="M12 30h16" stroke="#f4f6ff" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Aisance Travaux<small>Chauffage · PAC · Clim</small></span>
+      </a>
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methode">Déroulé</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="appel" href="tel:+33613488841"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 13 48 88 41</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== EN-TÊTE ===== -->
+<section class="hero" id="accueil">
+  <svg class="montagnes" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="mt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2f7a" stop-opacity=".9"/><stop offset="1" stop-color="#0d1030"/></linearGradient></defs>
+    <path d="M0 180V120l90-40 70 30 110-80 90 60 80-35 120 70 100-75 130 80 90-45 110 55 120-90 110 70 90-30 130 60v50z" fill="url(#mt)" opacity=".7"/>
+    <path d="M0 180v-30l140-30 120 25 160-50 140 45 150-35 170 40 150-30 160 35 130-20 120 20v30z" fill="#0d1030"/>
+  </svg>
+  <div class="wrap grille">
+    <div>
+      <div class="pastille rv"><i></i>Chauffagiste à Échirolles · agglomération grenobloise</div>
+      <h1 class="rv d1">Aisance Travaux,<br><span class="degrade">la bonne chaleur</span> au pied de Belledonne.</h1>
+      <p class="accroche rv d2">Chaudière gaz ou fioul qui fatigue, envie d'une pompe à chaleur, besoin de fraîcheur l'été dans la cuvette grenobloise : nous installons, entretenons et dépannons vos équipements de chauffage et de climatisation, d'Échirolles à tout le bassin grenoblois.</p>
+      <div class="actions rv d3">
+        <a class="btn btn-plein" href="tel:+33613488841"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler le 06 13 48 88 41</a>
+        <a class="btn btn-verre" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+      </div>
+      <ul class="puces rv d3">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Gaz &amp; fioul</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Pompes à chaleur</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Climatisation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Devis sur demande</li>
+      </ul>
+    </div>
+
+    <div class="pile" id="pile" aria-label="Nos trois domaines : chaudière, pompe à chaleur, climatisation">
+      <div class="anneau" aria-hidden="true"></div>
+      <div class="carte-v c1" data-prof="18">
+        <div class="flot verre" style="padding:22px">
+          <span class="etiq">Gaz · Fioul</span>
+          <svg viewBox="0 0 260 150" aria-hidden="true">
+            <defs><linearGradient id="ch1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6ff"/><stop offset="1" stop-color="#c9cff5"/></linearGradient><linearGradient id="fl1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5ce1ff"/><stop offset="1" stop-color="#ff6fb5"/></linearGradient></defs>
+            <rect x="80" y="8" width="100" height="134" rx="14" fill="url(#ch1)"/>
+            <rect x="92" y="22" width="76" height="30" rx="8" fill="#1a1f5a"/>
+            <text x="130" y="43" text-anchor="middle" font-family="Lexend,sans-serif" font-size="15" font-weight="700" fill="#5ce1ff">55°</text>
+            <circle cx="104" cy="70" r="7" fill="#2a2f7a"/><circle cx="130" cy="70" r="7" fill="#2a2f7a"/><circle cx="156" cy="70" r="7" fill="#ff6fb5"/>
+            <rect x="96" y="88" width="68" height="40" rx="8" fill="#1a1f5a"/>
+            <path d="M130 124c-10-5-12-13-6-22 1 5 4 7 6 7-1-6 2-11 8-16-2 8 6 12 6 20 0 6-5 10-14 11z" fill="url(#fl1)"/>
+            <path d="M100 142v8M118 142v8M142 142v8M160 142v8" stroke="#aab2e0" stroke-width="4" stroke-linecap="round"/>
+            <path d="M30 40h40M20 60h50M36 80h34" stroke="#5ce1ff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+            <path d="M190 40h40M190 60h50M190 80h34" stroke="#ff6fb5" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <h3>Chaudières</h3>
+          <p>Installation, remplacement et entretien gaz ou fioul.</p>
+        </div>
+      </div>
+      <div class="carte-v c2" data-prof="34">
+        <div class="flot verre" style="padding:22px">
+          <span class="etiq">Air / eau</span>
+          <svg viewBox="0 0 260 150" aria-hidden="true">
+            <rect x="34" y="20" width="192" height="112" rx="14" fill="#f4f6ff"/>
+            <circle cx="98" cy="76" r="42" fill="#1a1f5a"/>
+            <g class="helice" style="transform-origin:98px 76px"><path d="M98 76c0-24 8-32 18-30-2 14-8 22-18 30zM98 76c24 0 32 8 30 18-14-2-22-8-30-18zM98 76c0 24-8 32-18 30 2-14 8-22 18-30zM98 76c-24 0-32-8-30-18 14 2 22 8 30 18z" fill="#5ce1ff"/></g>
+            <circle cx="98" cy="76" r="6" fill="#f4f6ff"/>
+            <g stroke="#2a2f7a" stroke-width="3" stroke-linecap="round"><path d="M160 46h46M160 60h46M160 74h46M160 88h46M160 102h46"/></g>
+            <rect x="44" y="132" width="20" height="10" rx="3" fill="#aab2e0"/><rect x="196" y="132" width="20" height="10" rx="3" fill="#aab2e0"/>
+            <path d="M232 40c10 6 10 18 0 24M240 32c16 10 16 30 0 40" stroke="#ff6fb5" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <h3>Pompes à chaleur</h3>
+          <p>Une alternative performante à l'ancienne chaudière.</p>
+        </div>
+      </div>
+      <div class="carte-v c3" data-prof="26">
+        <div class="flot verre" style="padding:22px">
+          <span class="etiq">Réversible</span>
+          <svg viewBox="0 0 260 150" aria-hidden="true">
+            <rect x="30" y="24" width="200" height="62" rx="16" fill="#f4f6ff"/>
+            <rect x="44" y="70" width="172" height="6" rx="3" fill="#c9cff5"/>
+            <circle cx="206" cy="42" r="4" fill="#5ce1ff"/>
+            <rect x="48" y="36" width="60" height="6" rx="3" fill="#c9cff5"/>
+            <g stroke="#5ce1ff" stroke-width="3.5" fill="none" stroke-linecap="round"><path d="M70 98c6 10 -6 18 0 28M110 98c6 10 -6 18 0 28M150 98c6 10 -6 18 0 28M190 98c6 10 -6 18 0 28"/></g>
+            <g fill="#ff6fb5"><path d="M26 120l6-6 6 6-6 6z"/><path d="M226 116l5-5 5 5-5 5z"/></g>
+          </svg>
+          <h3>Climatisation</h3>
+          <p>Du frais en été, un appoint de chaleur en mi-saison.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONFIANCE ===== -->
+<div class="confiance">
+  <div class="wrap">
+    <div class="bande verre rv">
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></div><div><strong>Basés à Échirolles</strong><span>Isère (38130)</span></div></div>
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20l6-10 4 6 3-4 5 8z"/><path d="M8 7l1-2 1 2"/></svg></div><div><strong>Agglomération grenobloise</strong><span>Zone d'intervention</span></div></div>
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-2 1-3.6 2.4-5"/><path d="M4 21h16"/></svg></div><div><strong>Gaz, fioul, PAC, clim</strong><span>Un seul interlocuteur</span></div></div>
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 14h8"/></svg></div><div><strong>Devis sur demande</strong><span>Après étude de votre logement</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="entete-s rv">
+      <span class="surtitre">Nos services</span>
+      <h2>Tout ce qui chauffe (et rafraîchit) votre maison</h2>
+      <p>De la vieille chaudière fioul d'une maison de Seyssinet à la pompe à chaleur d'un pavillon d'Eybens, chaque installation est pensée pour votre logement et pour les hivers isérois.</p>
+    </div>
+    <div class="grille">
+      <article class="service verre rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="8" y="3" width="16" height="24" rx="3" stroke="#f4f6ff" stroke-width="1.8"/><rect x="11" y="6" width="10" height="5" rx="1.5" fill="#5ce1ff"/><path d="M16 23c-2.4-1-3-3-1.6-5.2.2 1.2 1 1.6 1.6 1.6-.2-1.4.6-2.6 2-3.6-.4 2 1.4 2.8 1.4 4.6 0 1.4-1.2 2.4-3.4 2.6z" fill="#ff6fb5"/><path d="M12 27v2M20 27v2" stroke="#f4f6ff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Pose de chaudières gaz à condensation, remplacement d'un ancien modèle et mise en service soignée.</p>
+      </article>
+      <article class="service verre rv d1">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5" y="8" width="16" height="20" rx="3" stroke="#f4f6ff" stroke-width="1.8"/><path d="M9 13h8M9 17h8" stroke="#5ce1ff" stroke-width="1.8" stroke-linecap="round"/><path d="M21 18h4a2 2 0 0 1 2 2v6" stroke="#f4f6ff" stroke-width="1.8" stroke-linecap="round"/><path d="M26 5c1.6 2 2.4 3.2 2.4 4.6a2.4 2.4 0 0 1-4.8 0C23.6 8.2 24.4 7 26 5z" fill="#ff6fb5"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Entretien, dépannage et remplacement de chaudières fioul, ou étude d'un passage vers une autre énergie.</p>
+      </article>
+      <article class="service verre rv d2">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="3" stroke="#f4f6ff" stroke-width="1.8"/><circle cx="12" cy="16" r="5.5" stroke="#5ce1ff" stroke-width="1.8"/><path d="M12 16l3-3M12 16l-3 3M12 16l3 3M12 16l-3-3" stroke="#5ce1ff" stroke-width="1.6" stroke-linecap="round"/><path d="M21 12h5M21 16h5M21 20h5" stroke="#ff6fb5" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Pompes à chaleur</h3>
+        <p>Étude, dimensionnement et installation de pompes à chaleur adaptées au climat de l'Isère.</p>
+      </article>
+      <article class="service verre rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="3" y="6" width="26" height="11" rx="3" stroke="#f4f6ff" stroke-width="1.8"/><path d="M6 14h20" stroke="#5ce1ff" stroke-width="1.6" stroke-linecap="round"/><path d="M10 21c1.4 2-1.4 3.4 0 5.4M16 21c1.4 2-1.4 3.4 0 5.4M22 21c1.4 2-1.4 3.4 0 5.4" stroke="#5ce1ff" stroke-width="1.8" stroke-linecap="round"/><circle cx="25" cy="9.5" r="1.3" fill="#ff6fb5"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs muraux et systèmes réversibles pour garder la fraîcheur quand la cuvette grenobloise surchauffe.</p>
+      </article>
+      <article class="service verre rv d1">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M20 5a6 6 0 0 0-7.6 7.6L4.5 20.5a2.1 2.1 0 0 0 3 3l7.9-7.9A6 6 0 0 0 23 8l-3.6 3.6-2.8-.7-.7-2.8z" stroke="#f4f6ff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="25" cy="24" r="4" stroke="#ff6fb5" stroke-width="1.8"/><path d="M25 22v2l1.4 1" stroke="#ff6fb5" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>Contrôle, nettoyage et réglages de votre chaudière ou de votre PAC pour un fonctionnement fiable chaque hiver.</p>
+      </article>
+      <article class="service verre rv d2">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M18 3L7 18h8l-2 11 11-15h-8z" stroke="#5ce1ff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="25" cy="7" r="3" fill="#ff6fb5"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Plus d'eau chaude, chaudière en sécurité, PAC qui se met en défaut : appelez-nous, nous faisons le point avec vous.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POURQUOI ===== -->
+<section class="atouts" id="atouts">
+  <div class="wrap">
+    <div class="entete-s centre rv">
+      <span class="surtitre">Pourquoi nous choisir</span>
+      <h2>Un chauffagiste proche, qui parle clair</h2>
+      <p>Nous préférons vous expliquer les choses simplement plutôt que de vous vendre l'équipement le plus cher.</p>
+    </div>
+    <div class="grille">
+      <div class="atout verre rv"><div class="num">01</div><h3>Polyvalence</h3><p>Gaz, fioul, pompe à chaleur ou climatisation : un même artisan pour comparer les solutions avec vous.</p></div>
+      <div class="atout verre rv d1"><div class="num">02</div><h3>Proximité</h3><p>Installés à Échirolles, nous intervenons dans l'agglomération grenobloise, sans longs trajets.</p></div>
+      <div class="atout verre rv d2"><div class="num">03</div><h3>Conseil honnête</h3><p>Nous vous disons quand une réparation suffit et quand un remplacement devient plus raisonnable.</p></div>
+      <div class="atout verre rv d3"><div class="num">04</div><h3>Devis détaillé</h3><p>Un devis écrit, poste par poste, avant tout engagement de votre part.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÉTHODE ===== -->
+<section class="etapes" id="methode">
+  <div class="wrap">
+    <div class="entete-s centre rv">
+      <span class="surtitre">Comment ça se passe</span>
+      <h2>Quatre étapes, sans mauvaise surprise</h2>
+    </div>
+    <ol>
+      <li class="rv"><h3>Vous nous appelez</h3><p>Par téléphone ou via le formulaire : vous décrivez votre besoin et votre logement.</p></li>
+      <li class="rv d1"><h3>Visite &amp; diagnostic</h3><p>Nous venons voir l'installation existante, les volumes à chauffer et les contraintes.</p></li>
+      <li class="rv d2"><h3>Devis clair</h3><p>Vous recevez une proposition détaillée, que vous prenez le temps d'étudier.</p></li>
+      <li class="rv d3"><h3>Installation</h3><p>Pose, mise en service et explications sur l'utilisation de votre nouvel équipement.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section class="apropos" id="apropos">
+  <div class="wrap grille">
+    <div class="bloc verre rv">
+      <span class="surtitre">À propos</span>
+      <h2>Aisance Travaux, chauffagiste à Échirolles</h2>
+      <p>Aisance Travaux est une entreprise de chauffage installée à Échirolles, dans le sud de l'agglomération grenobloise. Nous intervenons sur les chaudières gaz et fioul, les pompes à chaleur et la climatisation. Entre les hivers rudes au pied de Belledonne et les étés étouffants de la cuvette, nous savons qu'un logement confortable toute l'année, c'est d'abord un équipement bien choisi et bien entretenu. Pour en parler, le plus simple reste de nous appeler au 06 13 48 88 41.</p>
+      <ul class="liste">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Chaudières gaz et fioul : pose, entretien, dépannage</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Pompes à chaleur et climatisation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Échirolles et toute l'agglomération grenobloise</li>
+      </ul>
+    </div>
+    <div class="visuel verre rv d1">
+      <svg viewBox="0 0 520 420" aria-label="Illustration : maison au pied des montagnes, chauffée l'hiver et rafraîchie l'été">
+        <defs>
+          <linearGradient id="ap-ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1f5a"/><stop offset="1" stop-color="#2a2f7a"/></linearGradient>
+          <linearGradient id="ap-aur" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5ce1ff" stop-opacity="0"/><stop offset=".5" stop-color="#5ce1ff" stop-opacity=".55"/><stop offset="1" stop-color="#ff6fb5" stop-opacity="0"/></linearGradient>
+        </defs>
+        <rect width="520" height="420" rx="16" fill="url(#ap-ciel)"/>
+        <path d="M-20 120C100 60 220 150 340 80S520 60 560 90" stroke="url(#ap-aur)" stroke-width="40" fill="none" opacity=".7"/>
+        <path d="M-20 160C120 110 240 180 360 120S520 110 560 130" stroke="url(#ap-aur)" stroke-width="18" fill="none" opacity=".5"/>
+        <g fill="#f4f6ff"><circle cx="60" cy="40" r="1.6"/><circle cx="150" cy="30" r="1.2"/><circle cx="420" cy="36" r="1.6"/><circle cx="480" cy="70" r="1"/><circle cx="300" cy="24" r="1.2"/></g>
+        <path d="M0 300l90-110 50 50 80-100 80 90 60-50 90 80 70-40v180H0z" fill="#151a4c"/>
+        <path d="M220 140l-26 32 16-6 10 10 14-14 12 6z M140 240l-20 22 12-4 8 6z" fill="#f4f6ff" opacity=".6"/>
+        <rect y="330" width="520" height="90" fill="#0d1030"/>
+        <g transform="translate(150 210)">
+          <path d="M0 80L110 0l110 80v120H0z" fill="#f4f6ff"/>
+          <path d="M-14 86L110-8l124 94" stroke="#ff6fb5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <rect x="150" y="10" width="22" height="44" fill="#c9cff5"/>
+          <rect x="28" y="100" width="54" height="44" rx="6" fill="#2a2f7a"/><rect x="138" y="100" width="54" height="44" rx="6" fill="#2a2f7a"/>
+          <path d="M55 100v44M28 122h54M165 100v44M138 122h54" stroke="#5ce1ff" stroke-width="2"/>
+          <rect x="92" y="140" width="38" height="60" rx="5" fill="#1a1f5a"/>
+          <rect x="232" y="160" width="48" height="40" rx="6" fill="#c9cff5"/><circle cx="250" cy="180" r="12" fill="#2a2f7a"/><path d="M262 172h12M262 180h12M262 188h12" stroke="#2a2f7a" stroke-width="2"/>
+        </g>
+        <g stroke="#f4f6ff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"><path d="M311 200c-6-10 6-16 0-26M318 196c-6-10 6-16 0-26"/></g>
+        <g fill="#5ce1ff"><circle cx="40" cy="380" r="3"/><circle cx="480" cy="372" r="3"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RÉALISATIONS ===== -->
+<section class="galerie" id="realisations">
+  <div class="wrap">
+    <div class="entete-s rv">
+      <span class="surtitre">Types de chantiers</span>
+      <h2>Ce que nous réalisons chez vous</h2>
+      <p>Quelques exemples de travaux typiques de notre métier, illustrés. Les tarifs dépendent de chaque logement : nous établissons toujours un devis sur mesure.</p>
+    </div>
+    <div class="grille">
+      <article class="real verre rv">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="40" y="60" width="140" height="180" rx="8" fill="#2a2f7a" opacity=".6" stroke="#aab2e0" stroke-dasharray="6 6"/>
+          <text x="110" y="160" text-anchor="middle" font-family="Inter" font-size="14" fill="#aab2e0">ancienne</text>
+          <path d="M196 150h40" stroke="#5ce1ff" stroke-width="4" stroke-linecap="round"/><path d="M228 140l12 10-12 10" stroke="#5ce1ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="256" y="50" width="110" height="170" rx="14" fill="#f4f6ff"/>
+          <rect x="268" y="64" width="86" height="30" rx="7" fill="#1a1f5a"/><text x="311" y="85" text-anchor="middle" font-family="Lexend" font-size="14" font-weight="700" fill="#5ce1ff">60°</text>
+          <path d="M311 190c-12-5-14-14-7-24 1 6 5 8 7 8-1-7 2-12 9-17-2 9 7 13 7 22 0 6-6 10-16 11z" fill="#ff6fb5"/>
+          <path d="M276 220v34M296 220v34M326 220v34M346 220v34" stroke="#aab2e0" stroke-width="5" stroke-linecap="round"/>
+        </svg></div>
+        <div class="legende"><span>Remplacement</span><h3>Chaudière gaz à condensation</h3><p>Dépose de l'ancien appareil, pose, raccordements et mise en service.</p></div>
+      </article>
+      <article class="real verre rv d1">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <path d="M70 140l110-80 110 80v120H70z" fill="#c9cff5" opacity=".25" stroke="#aab2e0" stroke-width="2"/>
+          <rect x="120" y="170" width="40" height="40" fill="#1a1f5a"/><rect x="200" y="170" width="40" height="40" fill="#1a1f5a"/>
+          <rect x="270" y="196" width="96" height="64" rx="8" fill="#f4f6ff"/>
+          <circle cx="302" cy="228" r="22" fill="#1a1f5a"/><path d="M302 228l12-12M302 228l-12 12M302 228l12 12M302 228l-12-12" stroke="#5ce1ff" stroke-width="5" stroke-linecap="round"/>
+          <path d="M334 212h22M334 224h22M334 236h22M334 248h22" stroke="#2a2f7a" stroke-width="3"/>
+          <path d="M370 210c12 8 12 26 0 34" stroke="#ff6fb5" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect y="260" width="400" height="40" fill="#0d1030"/>
+          <path d="M60 60c14 12 14 30 0 42M40 50c22 18 22 44 0 62" stroke="#5ce1ff" stroke-width="3" fill="none" opacity=".4"/>
+        </svg></div>
+        <div class="legende"><span>Installation</span><h3>Pompe à chaleur air / eau</h3><p>Unité extérieure posée au calme, raccordée à vos radiateurs ou au plancher chauffant.</p></div>
+      </article>
+      <article class="real verre rv d2">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="30" y="30" width="340" height="230" rx="10" fill="#1a1f5a"/>
+          <rect x="70" y="60" width="260" height="70" rx="16" fill="#f4f6ff"/><rect x="86" y="112" width="228" height="8" rx="4" fill="#c9cff5"/>
+          <circle cx="306" cy="80" r="5" fill="#5ce1ff"/>
+          <g stroke="#5ce1ff" stroke-width="4" fill="none" stroke-linecap="round"><path d="M110 146c8 12-8 22 0 34M170 146c8 12-8 22 0 34M230 146c8 12-8 22 0 34M290 146c8 12-8 22 0 34"/></g>
+          <rect x="80" y="200" width="120" height="50" rx="6" fill="#2a2f7a"/><rect x="230" y="210" width="90" height="40" rx="6" fill="#2a2f7a"/>
+          <text x="200" y="285" text-anchor="middle" font-family="Lexend" font-size="14" fill="#aab2e0">intérieur · 22 °C</text>
+        </svg></div>
+        <div class="legende"><span>Confort d'été</span><h3>Climatisation murale</h3><p>Split intérieur discret, liaison soignée vers le groupe extérieur.</p></div>
+      </article>
+      <article class="real verre rv">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="140" y="40" width="120" height="190" rx="12" fill="#f4f6ff"/>
+          <rect x="154" y="56" width="92" height="40" rx="8" fill="#1a1f5a"/>
+          <path d="M160 82l14-12 12 8 16-16 14 10 14-6" stroke="#5ce1ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M200 180c-14-6-16-17-8-29 1 7 6 10 8 10-1-8 3-15 11-21-3 11 8 16 8 27 0 7-7 12-19 13z" fill="#ff6fb5"/>
+          <g transform="rotate(-30 300 110)"><rect x="286" y="60" width="16" height="100" rx="6" fill="#5ce1ff"/><path d="M280 60a14 14 0 0 1 28 0v10h-28z" fill="#5ce1ff"/></g>
+          <circle cx="96" cy="120" r="34" fill="none" stroke="#aab2e0" stroke-width="3"/><path d="M96 98v22l14 10" stroke="#ff6fb5" stroke-width="4" stroke-linecap="round" fill="none"/>
+        </svg></div>
+        <div class="legende"><span>Chaque année</span><h3>Entretien de chaudière</h3><p>Nettoyage, contrôle de combustion et attestation d'entretien remise.</p></div>
+      </article>
+      <article class="real verre rv d1">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="60" y="70" width="110" height="170" rx="10" fill="#c9cff5"/>
+          <rect x="74" y="88" width="82" height="70" rx="6" fill="#2a2f7a"/>
+          <circle cx="115" cy="200" r="16" fill="#1a1f5a"/>
+          <text x="115" y="130" text-anchor="middle" font-family="Lexend" font-size="18" font-weight="700" fill="#f4f6ff">FIOUL</text>
+          <path d="M184 150h40" stroke="#5ce1ff" stroke-width="4" stroke-linecap="round"/><path d="M216 140l12 10-12 10" stroke="#5ce1ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="246" y="140" width="110" height="80" rx="10" fill="#f4f6ff"/>
+          <circle cx="282" cy="180" r="24" fill="#1a1f5a"/><path d="M282 180l12-12M282 180l-12 12M282 180l12 12M282 180l-12-12" stroke="#ff6fb5" stroke-width="5" stroke-linecap="round"/>
+          <path d="M316 162h28M316 176h28M316 190h28" stroke="#2a2f7a" stroke-width="3"/>
+        </svg></div>
+        <div class="legende"><span>Changement d'énergie</span><h3>Du fioul à la PAC</h3><p>Étude du remplacement d'une chaudière fioul par une pompe à chaleur.</p></div>
+      </article>
+      <article class="real verre rv d2">
+        <div class="scene"><svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect x="40" y="200" width="320" height="60" rx="10" fill="#1a1f5a"/>
+          <g fill="none" stroke="#5ce1ff" stroke-width="5" stroke-linecap="round"><path d="M80 120v80M120 120v80M160 120v80M200 120v80"/></g>
+          <rect x="66" y="110" width="148" height="20" rx="8" fill="#f4f6ff"/><rect x="66" y="190" width="148" height="20" rx="8" fill="#f4f6ff"/>
+          <circle cx="300" cy="120" r="46" fill="none" stroke="#f4f6ff" stroke-width="4"/>
+          <path d="M300 120l22-26" stroke="#ff6fb5" stroke-width="5" stroke-linecap="round"/><circle cx="300" cy="120" r="6" fill="#ff6fb5"/>
+          <path d="M268 136a36 36 0 0 1 64 0" stroke="#5ce1ff" stroke-width="3" fill="none" opacity=".5"/>
+        </svg></div>
+        <div class="legende"><span>Dépannage</span><h3>Remise en route</h3><p>Recherche de panne, remplacement de pièce et vérification de pression.</p></div>
+      </article>
+    </div>
+    <p class="note-illu">Illustrations de principe, ne représentant pas des chantiers réels.</p>
+
+    <div class="tarifs">
+      <div class="tarif verre rv"><h3>Entretien</h3><div class="prix">Sur devis <small>· selon l'appareil</small></div><ul><li>Chaudière gaz ou fioul</li><li>Pompe à chaleur</li><li>Climatisation</li></ul><a class="btn btn-verre" href="#contact">Demander un tarif</a></div>
+      <div class="tarif verre mis rv d1"><h3>Installation</h3><div class="prix">Sur devis <small>· après visite</small></div><ul><li>Chaudière neuve</li><li>Pompe à chaleur</li><li>Climatisation réversible</li></ul><a class="btn btn-plein" href="#contact">Demander un devis</a></div>
+      <div class="tarif verre rv d2"><h3>Dépannage</h3><div class="prix">Sur devis <small>· selon la panne</small></div><ul><li>Diagnostic sur place</li><li>Remplacement de pièces</li><li>Remise en service</li></ul><a class="btn btn-verre" href="tel:+33613488841">Appeler</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AVIS ===== -->
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="carte verre rv">
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z" fill="#5ce1ff"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z" fill="#9ac0ff"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8z" fill="#ff6fb5"/></svg>
+      </div>
+      <div>
+        <span class="surtitre">Votre avis compte</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Nous avons travaillé ensemble ?</h2>
+        <p>Votre retour aide d'autres habitants de l'agglomération grenobloise à choisir leur chauffagiste. N'hésitez pas à nous dire ce que vous avez pensé de notre intervention.</p>
+      </div>
+      <a class="btn btn-plein" href="mailto:aisance.travaux@gmail.com?subject=Mon%20avis%20sur%20Aisance%20Travaux">Donner mon avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="entete-s centre rv">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2>Vos questions, nos réponses</h2>
+    </div>
+    <div class="liste">
+      <div class="q verre rv"><button aria-expanded="false">Une pompe à chaleur est-elle adaptée aux hivers grenoblois ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Les pompes à chaleur actuelles fonctionnent par temps froid, mais leur rendement dépend du modèle, de l'isolation du logement et des émetteurs (radiateurs, plancher chauffant). C'est pourquoi nous étudions votre maison avant de proposer une solution, éventuellement avec un appoint.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">À quelle fréquence faut-il entretenir sa chaudière ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Pour une chaudière gaz ou fioul, un entretien annuel est obligatoire. Il permet aussi de vérifier la sécurité de l'appareil et de limiter la consommation. Pensez à le programmer avant les premiers froids.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Faut-il remplacer ma chaudière fioul ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Pas forcément tout de suite. Une chaudière fioul en bon état peut encore être entretenue et réparée. Si elle est ancienne ou souvent en panne, nous pouvons étudier avec vous un remplacement, par exemple par une pompe à chaleur.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Une climatisation peut-elle aussi chauffer ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Oui, la plupart des climatiseurs actuels sont réversibles : ils rafraîchissent l'été et peuvent apporter de la chaleur en mi-saison. Selon votre logement, ils viennent en complément de votre chauffage principal.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Existe-t-il des aides pour changer de chauffage ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Des dispositifs d'aide existent pour certains travaux de rénovation énergétique, sous conditions qui évoluent régulièrement. Nous vous conseillons de vous renseigner sur le site officiel France Rénov' ; nous pourrons vous indiquer ce qui est envisageable lors du devis.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Dans quelles communes intervenez-vous ?<span class="plus" aria-hidden="true"></span></button><div class="rep"><div><p>Nous sommes basés à Échirolles et intervenons dans l'agglomération grenobloise. Appelez-nous en indiquant votre commune, nous vous dirons rapidement si nous pouvons venir.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HORAIRES & ZONE ===== -->
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="entete-s rv">
+      <span class="surtitre">Horaires &amp; zone</span>
+      <h2>Quand et où nous trouver</h2>
+    </div>
+    <div class="grille">
+      <div class="bloc verre rv">
+        <h3>Horaires sur rendez-vous – appelez-nous</h3>
+        <p style="color:var(--doux);font-size:.95rem">Nous n'avons pas de boutique : les interventions se font sur rendez-vous, chez vous.</p>
+        <table class="horaires" id="horaires">
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>Nous consulter</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>Nous consulter</td></tr>
+          </tbody>
+        </table>
+        <a class="btn btn-plein" style="margin-top:22px" href="tel:+33613488841">Appeler pour un rendez-vous</a>
+      </div>
+      <div class="bloc verre rv d1">
+        <h3>Échirolles et agglomération grenobloise</h3>
+        <div class="zone-carte">
+          <svg viewBox="0 0 400 220" aria-label="Schéma de la zone d'intervention autour d'Échirolles">
+            <rect width="400" height="220" fill="#12164a"/>
+            <path d="M0 40c60 10 100-20 160-10s90 40 150 30 70-20 90-16" stroke="#2a2f7a" stroke-width="22" fill="none" opacity=".6"/>
+            <path d="M40 0c20 60 60 90 110 120s80 70 90 100" stroke="#5ce1ff" stroke-width="4" fill="none" opacity=".45"/>
+            <path d="M330 0c-20 50-60 80-100 100" stroke="#5ce1ff" stroke-width="3" fill="none" opacity=".35"/>
+            <circle cx="200" cy="120" r="80" fill="rgba(92,225,255,.08)" stroke="#5ce1ff" stroke-dasharray="5 6"/>
+            <circle cx="200" cy="120" r="44" fill="rgba(255,111,181,.08)" stroke="#ff6fb5" stroke-dasharray="4 5"/>
+            <circle cx="200" cy="130" r="7" fill="#ff6fb5"/><circle cx="200" cy="130" r="14" fill="none" stroke="#ff6fb5" opacity=".5"/>
+            <text x="214" y="148" font-family="Lexend" font-size="13" font-weight="600" fill="#f4f6ff">Échirolles</text>
+            <circle cx="190" cy="84" r="4" fill="#f4f6ff"/><text x="152" y="76" font-family="Inter" font-size="11" fill="#aab2e0">Grenoble</text>
+            <path d="M300 200l30-50 20 26 20-34 30 58z" fill="#2a2f7a"/><text x="304" y="214" font-family="Inter" font-size="10" fill="#aab2e0">Belledonne</text>
+            <path d="M10 200l24-44 18 22 22-36 26 58z" fill="#2a2f7a"/><text x="14" y="214" font-family="Inter" font-size="10" fill="#aab2e0">Vercors</text>
+          </svg>
+        </div>
+        <p style="color:var(--doux);font-size:.95rem">À titre indicatif, autour d'Échirolles : Grenoble, Eybens, Pont-de-Claix, Seyssinet-Pariset, Saint-Martin-d'Hères et les communes voisines. Appelez-nous pour confirmer.</p>
+        <a class="btn btn-verre" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%89chirolles%2038130" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="entete-s rv">
+      <span class="surtitre">Contact &amp; devis</span>
+      <h2>Parlons de votre projet</h2>
+      <p>Décrivez-nous votre installation actuelle et ce que vous souhaitez : nous revenons vers vous pour en discuter et, si besoin, convenir d'une visite.</p>
+    </div>
+    <div class="grille">
+      <div class="coord verre rv">
+        <a class="ligne" href="tel:+33613488841"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Téléphone</small>06 13 48 88 41</span></a>
+        <a class="ligne" href="mailto:aisance.travaux@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small>aisance.travaux@gmail.com</span></a>
+        <a class="ligne" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%89chirolles%2038130" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span><small>Zone</small>Échirolles et agglomération grenobloise</span></a>
+        <p style="margin:20px 0 0;color:var(--doux);font-size:.92rem">Horaires sur rendez-vous – le plus rapide reste de nous appeler.</p>
+      </div>
+      <form class="verre rv d1" id="form" novalidate>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom" required></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          <div class="champ"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Échirolles, Grenoble…"></div>
+          <div class="champ large"><label for="objet">Votre besoin</label>
+            <select id="objet" name="objet"><option>Installation de chaudière gaz</option><option>Chaudière fioul</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Entretien</option><option>Dépannage</option><option>Autre demande</option></select></div>
+          <div class="champ large"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Type de logement, équipement actuel, ce que vous souhaitez…" required></textarea></div>
+        </div>
+        <div class="form-pied">
+          <small>En envoyant, votre logiciel de messagerie s'ouvre avec votre demande pré-remplie vers aisance.travaux@gmail.com.</small>
+          <button class="btn btn-plein" type="submit">Envoyer ma demande</button>
+        </div>
+        <div class="retour" id="retour" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grille">
+    <div>
+      <a class="logo" href="#accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="12" fill="rgba(244,246,255,.1)" stroke="url(#lg)" stroke-width="1.5"/><path d="M20 9c4 5 7 8 7 12.5a7 7 0 0 1-14 0c0-2.6 1.2-4.6 3-6.5.3 2 1.3 3.2 2.6 3.6C18 15 18.6 12 20 9z" fill="url(#lg)"/><path d="M12 30h16" stroke="#f4f6ff" stroke-width="1.6" stroke-linecap="round"/></svg><span>Aisance Travaux</span></a>
+      <p style="margin-top:14px">Chauffagiste à Échirolles : chaudières gaz et fioul, pompes à chaleur et climatisation dans l'agglomération grenobloise.</p>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul>
+        <li><a href="tel:+33613488841">06 13 48 88 41</a></li>
+        <li><a href="mailto:aisance.travaux@gmail.com">aisance.travaux@gmail.com</a></li>
+        <li>Échirolles (38130)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul><li>Lun – ven : sur rendez-vous</li><li>Week-end : nous consulter</li></ul>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap mention"><span>© <span id="annee">2026</span> Aisance Travaux · Échirolles</span><span>Zone : Échirolles et agglomération grenobloise</span></div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33613488841" aria-label="Appeler Aisance Travaux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Navigation
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var o=menu.classList.toggle('ouvert');
+    burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');});});
+  window.addEventListener('scroll',function(){nav.classList.toggle('defile',window.scrollY>30);},{passive:true});
+
+  // Révélation
+  var els=document.querySelectorAll('.rv');
+  if(reduit||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Parallaxe des cartes de verre
+  var pile=document.getElementById('pile');
+  if(!reduit && window.matchMedia('(pointer:fine)').matches){
+    var cartes=pile.querySelectorAll('.carte-v'),raf=null,mx=0,my=0;
+    window.addEventListener('mousemove',function(e){
+      mx=(e.clientX/window.innerWidth-.5);my=(e.clientY/window.innerHeight-.5);
+      if(!raf)raf=requestAnimationFrame(function(){
+        cartes.forEach(function(c){var p=+c.dataset.prof;c.style.transform='translate('+(mx*p)+'px,'+(my*p)+'px) rotateY('+(mx*6)+'deg) rotateX('+(-my*6)+'deg)';});
+        raf=null;
+      });
+    });
+  }
+
+  // FAQ
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){var q=b.parentNode,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);});
+  });
+
+  // Jour actuel
+  var j=new Date().getDay(),tr=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(tr){tr.classList.add('auj');tr.cells[0].insertAdjacentHTML('beforeend','<span class="tag">Aujourd’hui</span>');}
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  // Formulaire
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.nom.value.trim()||!f.msg.value.trim()){r.textContent='Merci d’indiquer au moins votre nom et votre message.';r.classList.add('vu');return;}
+    var corps='Nom : '+f.nom.value+'\nTéléphone : '+f.tel.value+'\nEmail : '+f.mail.value+'\nCommune : '+f.ville.value+'\nBesoin : '+f.objet.value+'\n\n'+f.msg.value;
+    window.location.href='mailto:aisance.travaux@gmail.com?subject='+encodeURIComponent('Demande de devis – '+f.objet.value)+'&body='+encodeURIComponent(corps);
+    r.textContent='Maquette de démonstration : votre messagerie s’ouvre avec la demande pré-remplie.';r.classList.add('vu');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alby-Eco – chauffage et eau chaude au bois à Eybens</title>
+<meta name="description" content="Alby-Eco, à Eybens (38320) : poêles à bois, poêles à granulés et chaudières bois pour le chauffage et l'eau chaude, au sud de l'agglomération grenobloise. Appelez le 04 76 01 84 71.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1f3d2b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+--sapin:#1f3d2b;
+--mousse:#7a9e5f;
+--lichen:#d9e4c8;
+--creme:#f6f3ea;
+--bois:#8a5a35;
+--encre:#18231b;
+--sapin-2:#2a5239;
+--mousse-fonce:#4f6e3a;
+--bois-clair:#c08b5c;
+--ligne:rgba(31,61,43,.14);
+--ombre:0 18px 40px -18px rgba(24,35,27,.35);
+--r-feuille:44px 10px 44px 10px;
+--wrap:1180px;
+--ff-titre:"Fraunces", Georgia, serif;
+--ff-texte:"DM Sans", system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--ff-texte);font-size:17px;line-height:1.65;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--ff-titre);font-weight:700;line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--mousse);outline-offset:3px;border-radius:6px}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:.95em 1.6em;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .25s ease, background .25s ease, box-shadow .25s ease, color .25s ease;font-family:var(--ff-texte)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-plein{background:var(--mousse);color:var(--encre);box-shadow:0 10px 24px -10px rgba(122,158,95,.8)}
+.btn-plein:hover{background:var(--lichen);transform:translateY(-3px)}
+.btn-ligne{border-color:var(--lichen);color:var(--creme)}
+.btn-ligne:hover{background:var(--creme);color:var(--sapin);transform:translateY(-3px)}
+.btn-sapin{background:var(--sapin);color:var(--creme)}
+.btn-sapin:hover{background:var(--bois);transform:translateY(-3px)}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s ease, box-shadow .35s ease, padding .35s ease;padding:18px 0}
+.nav.solide{background:rgba(24,35,27,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 30px -12px rgba(0,0,0,.5);padding:10px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--creme);font-family:var(--ff-titre);font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
+.logo svg{width:38px;height:38px}
+.menu{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:.5em .85em;border-radius:999px;text-decoration:none;color:var(--lichen);font-weight:500;font-size:.96rem;transition:background .2s,color .2s}
+.menu a:hover{background:rgba(217,228,200,.14);color:var(--creme)}
+.menu .menu-tel a{background:var(--mousse);color:var(--encre);font-weight:700;margin-left:6px}
+.menu .menu-tel a:hover{background:var(--lichen);color:var(--encre)}
+.burger{display:none;width:48px;height:48px;border:0;border-radius:50%;background:rgba(217,228,200,.14);cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:2px;background:var(--creme);border-radius:2px;transition:transform .3s, opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.nav.ouvert .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span:nth-child(2){opacity:0}
+.nav.ouvert .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- En-tête plein écran ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--creme);overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 30%, #2f5a40 0%, var(--sapin) 45%, var(--encre) 100%);padding:120px 0 170px}
+.hero-foret{position:absolute;inset:auto 0 0 0;height:72%;width:100%;pointer-events:none}
+.hero-foret svg{width:100%;height:100%}
+.hero-etoiles{position:absolute;inset:0;pointer-events:none;opacity:.55}
+.hero-contenu{position:relative;z-index:2;width:min(820px,100% - 32px)}
+.medaillon{width:190px;height:220px;margin:0 auto 26px;filter:drop-shadow(0 22px 30px rgba(0,0,0,.45))}
+.medaillon .flamme{transform-origin:100px 150px;animation:flamme 3.2s ease-in-out infinite}
+.medaillon .flamme-int{transform-origin:100px 150px;animation:flamme 2.4s ease-in-out infinite reverse}
+@keyframes flamme{0%,100%{transform:scale(1,1)}50%{transform:scale(1.04,.95) skewX(-2deg)}}
+.surtitre{display:inline-flex;align-items:center;gap:.6em;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lichen);font-weight:700;margin-bottom:14px}
+.surtitre::before,.surtitre::after{content:"";width:28px;height:1px;background:var(--mousse)}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800;margin:0 0 .18em;letter-spacing:-.03em;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--mousse)}
+.accroche{font-family:var(--ff-titre);font-size:clamp(1.2rem,2.6vw,1.6rem);font-weight:500;font-style:italic;color:var(--lichen);margin:0 auto .7em;max-width:640px;line-height:1.35}
+.hero-texte{max-width:600px;margin:0 auto 30px;color:rgba(246,243,234,.86)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero-vague{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0}
+.hero-vague svg{width:100%;height:110px}
+
+/* ---------- Bandeau de confiance ---------- */
+.confiance{position:relative;z-index:4;margin-top:-40px}
+.confiance-liste{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;margin:0;padding:18px;background:#fff;border-radius:var(--r-feuille);box-shadow:var(--ombre);border:1px solid var(--ligne)}
+.confiance-liste li{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:22px;transition:background .25s}
+.confiance-liste li:hover{background:var(--lichen)}
+.confiance-liste svg{width:42px;height:42px;flex:none}
+.confiance-liste strong{display:block;font-family:var(--ff-titre);font-size:1.02rem;color:var(--sapin)}
+.confiance-liste span{font-size:.9rem;color:#3d4a40;line-height:1.35;display:block}
+.confiance-liste a{text-decoration:none}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.bloc{padding:110px 0}
+.entete-bloc{max-width:720px;margin-bottom:54px}
+.entete-bloc.centre{margin-inline:auto;text-align:center}
+.etiquette{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mousse-fonce);margin-bottom:12px}
+.etiquette svg{width:18px;height:18px}
+.entete-bloc h2{font-size:clamp(2rem,4.4vw,3.1rem);color:var(--sapin)}
+.entete-bloc h2 em{font-style:italic;font-weight:500;color:var(--bois)}
+.entete-bloc p{color:#3d4a40;font-size:1.06rem}
+.niveaux{position:absolute;inset:0;pointer-events:none;opacity:.5;overflow:hidden}
+.niveaux svg{width:100%;height:100%}
+
+/* Services */
+.services-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.carte{position:relative;background:#fff;border-radius:var(--r-feuille);padding:32px 28px 28px;border:1px solid var(--ligne);transition:transform .35s ease, box-shadow .35s ease, border-color .35s;overflow:hidden}
+.carte::after{content:"";position:absolute;right:-40px;bottom:-40px;width:120px;height:120px;border-radius:50% 0 50% 0;background:var(--lichen);opacity:.55;transition:transform .5s ease}
+.carte:hover{transform:translateY(-6px);box-shadow:var(--ombre);border-color:var(--mousse)}
+.carte:hover::after{transform:scale(1.5) rotate(20deg)}
+.carte-icone{width:70px;height:70px;border-radius:50% 50% 50% 12px;background:var(--lichen);display:grid;place-items:center;margin-bottom:20px;transition:background .3s,transform .35s}
+.carte:hover .carte-icone{background:var(--mousse);transform:rotate(-6deg)}
+.carte-icone svg{width:42px;height:42px}
+.carte h3{font-size:1.35rem;color:var(--sapin);margin-bottom:.4em}
+.carte p{color:#3d4a40;margin:0;position:relative;z-index:1;font-size:.98rem}
+
+/* Pourquoi */
+.pourquoi{background:var(--sapin);color:var(--creme);overflow:hidden}
+.pourquoi .entete-bloc h2{color:var(--creme)}
+.pourquoi .entete-bloc h2 em{color:var(--mousse)}
+.pourquoi .entete-bloc p{color:var(--lichen)}
+.pourquoi .etiquette{color:var(--mousse)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;z-index:2}
+.atout{padding:30px 24px;border-radius:var(--r-feuille);background:rgba(246,243,234,.06);border:1px solid rgba(217,228,200,.18);transition:background .3s, transform .3s}
+.atout:hover{background:rgba(246,243,234,.12);transform:translateY(-5px)}
+.atout svg{width:54px;height:54px;margin-bottom:18px}
+.atout h3{font-size:1.25rem;color:var(--creme)}
+.atout p{color:rgba(246,243,234,.82);font-size:.97rem;margin:0}
+.vague-haut,.vague-bas{position:absolute;left:0;right:0;line-height:0;z-index:1}
+.vague-haut{top:-1px}.vague-bas{bottom:-1px}
+.vague-haut svg,.vague-bas svg{width:100%;height:70px}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:etape;position:relative}
+.etapes::before{content:"";position:absolute;top:44px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--mousse) 0 10px,transparent 10px 20px)}
+.etape{position:relative;text-align:center;padding:0 6px}
+.etape-num{width:88px;height:88px;margin:0 auto 20px;border-radius:50% 50% 50% 14px;background:var(--creme);border:2px solid var(--mousse);display:grid;place-items:center;font-family:var(--ff-titre);font-weight:800;font-size:2rem;color:var(--sapin);position:relative;z-index:1;transition:background .3s,color .3s,transform .3s}
+.etape:hover .etape-num{background:var(--sapin);color:var(--creme);transform:rotate(-8deg)}
+.etape h3{font-size:1.2rem;color:var(--sapin)}
+.etape p{font-size:.96rem;color:#3d4a40;margin:0}
+
+/* À propos */
+.apropos{background:var(--lichen);overflow:hidden}
+.apropos-grille{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;position:relative;z-index:2}
+.apropos-illu{width:100%;background:var(--creme);border-radius:48% 52% 46% 54% / 56% 44% 56% 44%;padding:0;overflow:hidden;box-shadow:var(--ombre)}
+.apropos h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--sapin)}
+.apropos h2 em{font-style:italic;font-weight:500;color:var(--bois)}
+.apropos p{color:#2b3a2f}
+.apropos-faits{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:24px 0 0}
+.apropos-faits li{background:var(--creme);border-radius:999px;padding:.5em 1em;font-weight:500;font-size:.93rem;color:var(--sapin);display:flex;align-items:center;gap:8px}
+.apropos-faits svg{width:18px;height:18px}
+
+/* Réalisations */
+.galerie{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.realisation{border-radius:var(--r-feuille);overflow:hidden;background:#fff;border:1px solid var(--ligne);transition:transform .35s, box-shadow .35s}
+.realisation:hover{transform:translateY(-6px);box-shadow:var(--ombre)}
+.realisation svg{width:100%;height:auto;aspect-ratio:16/10;transition:transform .6s ease}
+.realisation:hover svg{transform:scale(1.03)}
+.realisation figcaption{padding:20px 24px 24px}
+.realisation h3{font-size:1.2rem;color:var(--sapin);margin-bottom:.25em}
+.realisation p{margin:0;font-size:.95rem;color:#3d4a40}
+.note-illu{font-size:.86rem;color:#4d5a50;text-align:center;margin-top:22px;font-style:italic}
+
+.tarifs{margin-top:80px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:start;background:#fff;border-radius:var(--r-feuille);border:1px solid var(--ligne);padding:44px}
+.tarifs h3{font-size:1.9rem;color:var(--sapin)}
+.tarifs h3 em{font-style:italic;font-weight:500;color:var(--bois)}
+.tarifs-liste{list-style:none;margin:0;padding:0}
+.tarifs-liste li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dashed var(--ligne)}
+.tarifs-liste li:last-child{border-bottom:0}
+.tarifs-liste span:first-child{font-weight:500}
+.tarifs-liste .prix{font-family:var(--ff-titre);font-style:italic;color:var(--bois);white-space:nowrap;font-weight:500}
+
+/* Avis */
+.avis{padding:0 0 110px}
+.avis-encart{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;padding:40px 44px;border-radius:var(--r-feuille);background:linear-gradient(120deg,var(--creme),var(--lichen));border:1px solid var(--ligne)}
+.avis-encart svg{width:86px;height:86px}
+.avis-encart h2{font-size:1.75rem;color:var(--sapin);margin-bottom:.25em}
+.avis-encart p{margin:0;color:#2b3a2f}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-grille{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+.faq-liste{display:flex;flex-direction:column;gap:12px}
+.question{border:1px solid var(--ligne);border-radius:24px;background:var(--creme);overflow:hidden;transition:border-color .3s, background .3s}
+.question.ouverte{border-color:var(--mousse);background:#fff}
+.question button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;font-family:var(--ff-titre);font-weight:700;font-size:1.08rem;color:var(--sapin)}
+.question button:focus-visible{outline:3px solid var(--mousse);outline-offset:-3px;border-radius:24px}
+.question .plus{width:34px;height:34px;flex:none;border-radius:50%;background:var(--lichen);position:relative;transition:transform .35s, background .3s}
+.question .plus::before,.question .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--sapin);transform:translate(-50%,-50%)}
+.question .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .35s}
+.question.ouverte .plus{background:var(--mousse);transform:rotate(180deg)}
+.question.ouverte .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.reponse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.question.ouverte .reponse{grid-template-rows:1fr}
+.reponse>div{overflow:hidden}
+.reponse p{padding:0 24px 22px;margin:0;color:#3d4a40}
+
+/* Horaires & contact */
+.contact{background:var(--creme);overflow:hidden}
+.contact-grille{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;position:relative;z-index:2}
+.panneau{background:#fff;border-radius:var(--r-feuille);padding:38px;border:1px solid var(--ligne);box-shadow:var(--ombre)}
+.panneau h3{font-size:1.5rem;color:var(--sapin)}
+.horaires{width:100%;border-collapse:collapse;margin:8px 0 22px}
+.horaires th,.horaires td{text-align:left;padding:11px 14px;font-size:.97rem;border-bottom:1px solid var(--ligne)}
+.horaires th{font-weight:500}
+.horaires td{text-align:right;color:#3d4a40}
+.horaires tr.aujourdhui th,.horaires tr.aujourdhui td{background:var(--lichen);color:var(--sapin);font-weight:700}
+.horaires tr.aujourdhui th{border-radius:14px 0 0 14px}
+.horaires tr.aujourdhui td{border-radius:0 14px 14px 0}
+.badge-jour{display:inline-block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:var(--sapin);color:var(--creme);border-radius:999px;padding:.15em .6em;margin-left:8px;vertical-align:middle}
+.info-rdv{display:flex;gap:12px;align-items:flex-start;background:var(--creme);border-radius:20px;padding:16px 18px;margin-bottom:22px;font-size:.96rem}
+.info-rdv svg{width:26px;height:26px;flex:none;margin-top:2px}
+.coord{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:14px}
+.coord li{display:flex;gap:14px;align-items:flex-start}
+.coord svg{width:24px;height:24px;flex:none;margin-top:3px}
+.coord a{font-weight:700;color:var(--sapin);text-decoration-color:var(--mousse);text-underline-offset:3px;word-break:break-word}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.large{grid-column:1/-1}
+.champ label{font-weight:700;font-size:.9rem;color:var(--sapin)}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:1rem;padding:.85em 1em;border-radius:18px;border:1.5px solid rgba(31,61,43,.25);background:var(--creme);color:var(--encre);transition:border-color .25s, background .25s;width:100%}
+.champ textarea{min-height:130px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--mousse);background:#fff}
+.form .btn{grid-column:1/-1;justify-self:start}
+.form-msg{grid-column:1/-1;margin:0;padding:14px 18px;border-radius:18px;background:var(--lichen);color:var(--sapin);font-weight:500;display:none}
+.form-msg.visible{display:block}
+
+/* Pied de page */
+.pied{background:var(--encre);color:var(--lichen);padding:90px 0 0;position:relative;overflow:hidden}
+.pied-grille{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;position:relative;z-index:2}
+.pied h4{color:var(--creme);font-size:1.1rem;margin-bottom:1em}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{color:var(--lichen);text-decoration:none;transition:color .2s}
+.pied a:hover{color:var(--mousse)}
+.pied .logo{margin-bottom:14px}
+.pied p{font-size:.95rem;color:rgba(217,228,200,.85)}
+.pied-bas{margin-top:60px;padding:22px 0;border-top:1px solid rgba(217,228,200,.15);font-size:.88rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;position:relative;z-index:2;color:rgba(217,228,200,.8)}
+.pied-sapins{position:absolute;left:0;right:0;bottom:0;height:160px;opacity:.12;pointer-events:none}
+.pied-sapins svg{width:100%;height:100%}
+.demo{background:var(--bois);color:var(--creme);text-align:center;font-size:.85rem;padding:10px 16px 12px}
+
+/* Appel flottant */
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50% 50% 50% 14px;background:var(--mousse);color:var(--encre);align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(24,35,27,.6);text-decoration:none;transition:transform .25s}
+.appel-flottant:hover{transform:scale(1.06)}
+.appel-flottant svg{width:28px;height:28px}
+.appel-flottant::before{content:"";position:absolute;inset:-6px;border-radius:inherit;border:2px solid var(--mousse);animation:onde 2.2s ease-out infinite}
+@keyframes onde{from{opacity:.8;transform:scale(.9)}to{opacity:0;transform:scale(1.3)}}
+
+/* Animations au défilement */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.vu{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.js .rv{opacity:1;transform:none;transition:none}
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+.services-grille{grid-template-columns:repeat(2,1fr)}
+.atouts{grid-template-columns:repeat(2,1fr)}
+.confiance-liste{grid-template-columns:repeat(2,1fr)}
+.pied-grille{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+.burger{display:block}
+.menu{position:fixed;top:0;right:0;bottom:0;width:min(330px,86vw);flex-direction:column;align-items:stretch;gap:4px;padding:96px 22px 30px;background:var(--sapin);transform:translateX(105%);transition:transform .4s cubic-bezier(.2,.7,.2,1);box-shadow:-20px 0 50px -20px rgba(0,0,0,.6);border-radius:40px 0 0 40px}
+.nav.ouvert .menu{transform:none}
+.menu a{font-size:1.1rem;padding:.8em 1em}
+.menu .menu-tel a{margin:12px 0 0;text-align:center}
+.burger{z-index:2}
+.nav.ouvert{backdrop-filter:none;-webkit-backdrop-filter:none}
+.menu{height:100vh;height:100dvh}
+.horaires td{white-space:nowrap}
+.horaires th,.horaires td{padding:11px 10px}
+.apropos-grille,.faq-grille,.contact-grille,.tarifs{grid-template-columns:1fr;gap:36px}
+.apropos-illu{max-width:440px;margin:0 auto}
+.etapes{grid-template-columns:repeat(2,1fr);row-gap:44px}
+.etapes::before{display:none}
+.avis-encart{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (max-width:640px){
+body{font-size:16px}
+.bloc{padding:80px 0}
+.hero{padding:110px 0 150px}
+.medaillon{width:150px;height:174px;margin-bottom:18px}
+.hero-vague svg{height:70px}
+.services-grille,.atouts,.galerie,.confiance-liste{grid-template-columns:1fr}
+.etapes{grid-template-columns:1fr}
+.form{grid-template-columns:1fr}
+.panneau,.tarifs{padding:28px 22px}
+.avis-encart{padding:32px 22px}
+.pied-grille{grid-template-columns:1fr}
+.appel-flottant{display:flex;opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .3s,transform .3s}
+.appel-flottant.visible{opacity:1;pointer-events:auto;transform:none}
+.hero-btns .btn{width:100%}
+.tarifs-liste li{flex-direction:column;gap:2px}
+.demo{padding-bottom:90px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="sapin" viewBox="0 0 40 100"><path d="M20 0 L31 24 H25.5 L35 46 H28 L40 72 H23 V92 H17 V72 H0 L12 46 H5 L14.5 24 H9 Z"/></symbol>
+<symbol id="sapin-fin" viewBox="0 0 30 100"><path d="M15 0 L23 20 H19 L26 38 H20.5 L28 58 H22 L30 80 H17 V96 H13 V80 H0 L8 58 H2 L9.5 38 H4 L11 20 H7 Z"/></symbol>
+<symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-devis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></g></symbol>
+<symbol id="i-feuille" viewBox="0 0 24 24"><path fill="currentColor" d="M20 3C10 3 4 8 4 15c0 2 .6 3.7 1.6 5L4 21.5 5.2 23l1.7-1.6C8.2 22.4 9.8 23 12 23c6 0 9-6 8-20zM8 18c2-4 5-7 9-9-3 3-5.5 6-7 10z"/></symbol>
+</defs>
+</svg>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="nav">
+<div class="wrap">
+<a class="logo" href="#accueil" aria-label="Alby-Eco – retour en haut">
+<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2C31 7 37 16 35 26S25 39 20 39 7 35 5 26 9 7 20 2z" fill="#7a9e5f"/><path d="M20 12c3 4 7 7 7 12a7 7 0 0 1-14 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4 1-6 2-9z" fill="#f6f3ea"/><path d="M12 31h16" stroke="#8a5a35" stroke-width="3" stroke-linecap="round"/></svg>
+Alby-Eco
+</a>
+<button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<ul class="menu" id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#methode">Déroulement</a></li>
+<li><a href="#apropos">À propos</a></li>
+<li><a href="#realisations">Réalisations</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+<li class="menu-tel"><a href="tel:+33476018471">04 76 01 84 71</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+<!-- ========== EN-TÊTE ========== -->
+<section class="hero" id="accueil">
+<svg class="hero-etoiles" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<g fill="#d9e4c8"><circle cx="120" cy="90" r="1.6"/><circle cx="260" cy="180" r="1.1"/><circle cx="410" cy="70" r="1.4"/><circle cx="560" cy="150" r="1"/><circle cx="880" cy="90" r="1.5"/><circle cx="1010" cy="200" r="1.1"/><circle cx="1180" cy="60" r="1.7"/><circle cx="1320" cy="160" r="1.2"/><circle cx="1390" cy="260" r="1"/><circle cx="60" cy="260" r="1.2"/><circle cx="720" cy="40" r="1.3"/><circle cx="330" cy="300" r=".9"/><circle cx="1100" cy="320" r=".9"/></g>
+</svg>
+<div class="hero-foret" aria-hidden="true">
+<svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice">
+<!-- Massif de Belledonne au loin -->
+<path d="M0 300 L90 250 L160 270 L250 190 L320 230 L400 150 L470 205 L540 170 L610 220 L700 120 L770 180 L850 140 L930 200 L1010 130 L1090 190 L1170 160 L1260 220 L1340 180 L1440 230 V560 H0Z" fill="#2c5139" opacity=".75"/>
+<path d="M400 150 L422 168 L406 164 L398 176 L390 167 L374 176Z M700 120 L722 139 L705 138 L697 150 L688 142 L671 152Z M850 140 L876 159 L858 151 L850 160 L841 149 L824 153Z M1010 130 L1036 149 L1018 144 L1010 155 L1001 145 L984 152Z M1170 160 L1199 179 L1180 170 L1171 178 L1162 167 L1144 170Z" fill="#d9e4c8" opacity=".55"/>
+<path d="M0 350 L120 300 L210 330 L330 270 L430 320 L560 260 L660 310 L780 250 L900 300 L1020 255 L1140 305 L1260 270 L1440 320 V560 H0Z" fill="#244832"/>
+<!-- Courbes de niveau -->
+<g fill="none" stroke="#7a9e5f" stroke-width="1" opacity=".25">
+<path d="M0 380 C200 350 360 395 560 360 S900 340 1100 370 1340 350 1440 365"/>
+<path d="M0 405 C220 380 380 420 600 388 S940 370 1120 398 1360 378 1440 392"/>
+</g>
+<g fill="#21422e"><use href="#sapin-fin" x="-20" y="333" width="25" height="62"/><use href="#sapin-fin" x="13" y="324" width="28" height="71"/><use href="#sapin-fin" x="44" y="327" width="27" height="68"/><use href="#sapin-fin" x="82" y="341" width="22" height="54"/><use href="#sapin-fin" x="122" y="341" width="21" height="54"/><use href="#sapin-fin" x="161" y="341" width="22" height="54"/><use href="#sapin-fin" x="192" y="331" width="26" height="64"/><use href="#sapin-fin" x="239" y="339" width="22" height="56"/><use href="#sapin-fin" x="273" y="325" width="28" height="70"/><use href="#sapin-fin" x="322" y="326" width="27" height="69"/><use href="#sapin-fin" x="360" y="315" width="32" height="80"/><use href="#sapin-fin" x="391" y="318" width="31" height="77"/><use href="#sapin-fin" x="427" y="338" width="23" height="57"/><use href="#sapin-fin" x="459" y="334" width="24" height="61"/><use href="#sapin-fin" x="506" y="337" width="23" height="58"/><use href="#sapin-fin" x="547" y="325" width="28" height="70"/><use href="#sapin-fin" x="585" y="327" width="27" height="68"/><use href="#sapin-fin" x="616" y="341" width="22" height="54"/><use href="#sapin-fin" x="650" y="323" width="29" height="72"/><use href="#sapin-fin" x="689" y="334" width="25" height="61"/><use href="#sapin-fin" x="730" y="330" width="26" height="65"/><use href="#sapin-fin" x="766" y="320" width="30" height="75"/><use href="#sapin-fin" x="810" y="336" width="24" height="59"/><use href="#sapin-fin" x="852" y="328" width="27" height="67"/><use href="#sapin-fin" x="899" y="322" width="29" height="73"/><use href="#sapin-fin" x="935" y="315" width="32" height="80"/><use href="#sapin-fin" x="968" y="331" width="26" height="64"/><use href="#sapin-fin" x="1013" y="338" width="23" height="57"/><use href="#sapin-fin" x="1052" y="341" width="21" height="54"/><use href="#sapin-fin" x="1096" y="321" width="30" height="74"/><use href="#sapin-fin" x="1137" y="318" width="31" height="77"/><use href="#sapin-fin" x="1174" y="323" width="29" height="72"/><use href="#sapin-fin" x="1215" y="326" width="27" height="69"/><use href="#sapin-fin" x="1255" y="319" width="30" height="76"/><use href="#sapin-fin" x="1303" y="329" width="26" height="66"/><use href="#sapin-fin" x="1347" y="341" width="22" height="54"/><use href="#sapin-fin" x="1391" y="324" width="28" height="71"/><use href="#sapin-fin" x="1441" y="319" width="30" height="76"/></g>
+<g fill="#183424"><use href="#sapin" x="-20" y="361" width="40" height="99"/><use href="#sapin" x="40" y="377" width="33" height="83"/><use href="#sapin" x="94" y="370" width="36" height="90"/><use href="#sapin" x="138" y="375" width="34" height="85"/><use href="#sapin" x="200" y="372" width="35" height="88"/><use href="#sapin" x="248" y="360" width="40" height="100"/><use href="#sapin" x="314" y="374" width="34" height="86"/><use href="#sapin" x="367" y="353" width="43" height="107"/><use href="#sapin" x="433" y="341" width="47" height="119"/><use href="#sapin" x="498" y="365" width="38" height="95"/><use href="#sapin" x="551" y="362" width="39" height="98"/><use href="#sapin" x="616" y="335" width="50" height="125"/><use href="#sapin" x="661" y="370" width="36" height="90"/><use href="#sapin" x="709" y="367" width="37" height="93"/><use href="#sapin" x="764" y="352" width="43" height="108"/><use href="#sapin" x="812" y="377" width="33" height="83"/><use href="#sapin" x="865" y="361" width="39" height="99"/><use href="#sapin" x="922" y="336" width="50" height="124"/><use href="#sapin" x="982" y="355" width="42" height="105"/><use href="#sapin" x="1040" y="348" width="45" height="112"/><use href="#sapin" x="1083" y="338" width="49" height="122"/><use href="#sapin" x="1146" y="339" width="48" height="121"/><use href="#sapin" x="1209" y="360" width="40" height="100"/><use href="#sapin" x="1261" y="373" width="35" height="87"/><use href="#sapin" x="1320" y="375" width="34" height="85"/><use href="#sapin" x="1363" y="368" width="37" height="92"/><use href="#sapin" x="1409" y="363" width="39" height="97"/><use href="#sapin" x="1451" y="377" width="33" height="83"/></g>
+<g fill="#122619"><use href="#sapin" x="-20" y="414" width="51" height="126"/><use href="#sapin" x="50" y="418" width="49" height="122"/><use href="#sapin" x="139" y="381" width="64" height="159"/><use href="#sapin" x="201" y="404" width="54" height="136"/><use href="#sapin" x="270" y="397" width="57" height="143"/><use href="#sapin" x="331" y="366" width="70" height="174"/><use href="#sapin" x="424" y="390" width="60" height="150"/><use href="#sapin" x="499" y="471" width="28" height="69"/><use href="#sapin" x="559" y="462" width="31" height="78"/><use href="#sapin" x="625" y="445" width="38" height="95"/><use href="#sapin" x="687" y="473" width="27" height="67"/><use href="#sapin" x="779" y="455" width="34" height="85"/><use href="#sapin" x="841" y="455" width="34" height="85"/><use href="#sapin" x="898" y="455" width="34" height="85"/><use href="#sapin" x="991" y="444" width="39" height="96"/><use href="#sapin" x="1074" y="403" width="55" height="137"/><use href="#sapin" x="1144" y="409" width="52" height="131"/><use href="#sapin" x="1229" y="386" width="62" height="154"/><use href="#sapin" x="1314" y="399" width="56" height="141"/><use href="#sapin" x="1379" y="368" width="69" height="172"/></g>
+<g fill="#0d1a11"><use href="#sapin" x="-20" y="362" width="87" height="218"/><use href="#sapin" x="95" y="365" width="86" height="215"/><use href="#sapin" x="207" y="412" width="67" height="168"/><use href="#sapin" x="308" y="402" width="71" height="178"/><use href="#sapin" x="385" y="428" width="61" height="152"/><use href="#sapin" x="474" y="486" width="38" height="94"/><use href="#sapin" x="583" y="455" width="50" height="125"/><use href="#sapin" x="681" y="456" width="49" height="124"/><use href="#sapin" x="805" y="455" width="50" height="125"/><use href="#sapin" x="898" y="488" width="37" height="92"/><use href="#sapin" x="985" y="489" width="36" height="91"/><use href="#sapin" x="1070" y="380" width="80" height="200"/><use href="#sapin" x="1190" y="363" width="87" height="217"/><use href="#sapin" x="1289" y="378" width="81" height="202"/><use href="#sapin" x="1404" y="423" width="63" height="157"/></g>
+</svg>
+</div>
+
+<div class="hero-contenu">
+<svg class="medaillon" viewBox="0 0 200 232" role="img" aria-label="Flamme au-dessus d'un rondin de bois, dans un médaillon en forme de feuille">
+<defs>
+<linearGradient id="g-feuille" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f3ea"/><stop offset="1" stop-color="#d9e4c8"/></linearGradient>
+<linearGradient id="g-flamme" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c08b5c"/><stop offset=".55" stop-color="#8a5a35"/><stop offset="1" stop-color="#5e3b20"/></linearGradient>
+</defs>
+<path d="M100 4 C150 30 190 80 188 136 C186 186 150 222 100 228 C50 222 14 186 12 136 C10 80 50 30 100 4Z" fill="url(#g-feuille)"/>
+<path d="M100 4 C150 30 190 80 188 136 C186 186 150 222 100 228 C50 222 14 186 12 136 C10 80 50 30 100 4Z" fill="none" stroke="#7a9e5f" stroke-width="3"/>
+<path d="M100 18 V214" stroke="#7a9e5f" stroke-width="2" opacity=".35"/>
+<g stroke="#7a9e5f" stroke-width="1.6" opacity=".3" fill="none"><path d="M100 70 C80 60 60 62 44 72"/><path d="M100 70 C120 60 140 62 156 72"/><path d="M100 110 C78 100 54 104 36 116"/><path d="M100 110 C122 100 146 104 164 116"/></g>
+<g class="flamme"><path d="M100 46 C116 72 138 92 138 126 C138 150 121 166 100 166 C79 166 62 150 62 126 C62 106 72 94 80 84 C81 98 88 106 94 108 C90 88 92 66 100 46Z" fill="url(#g-flamme)"/></g>
+<g class="flamme-int"><path d="M101 92 C110 108 122 118 122 136 C122 150 112 160 100 160 C88 160 78 150 78 138 C78 126 85 120 89 114 C90 122 94 126 97 127 C95 116 96 104 101 92Z" fill="#7a9e5f"/><path d="M100 126 C105 134 110 140 110 147 C110 153 106 157 100 157 C94 157 90 153 90 147 C90 141 96 134 100 126Z" fill="#f6f3ea"/></g>
+<!-- rondin -->
+<g transform="translate(0 0)">
+<rect x="46" y="164" width="108" height="30" rx="15" fill="#8a5a35"/>
+<path d="M58 172 H118 M70 184 H140" stroke="#5e3b20" stroke-width="2.4" stroke-linecap="round"/>
+<ellipse cx="146" cy="179" rx="12" ry="15" fill="#c08b5c"/>
+<ellipse cx="146" cy="179" rx="7" ry="9.5" fill="none" stroke="#8a5a35" stroke-width="1.8"/>
+<circle cx="146" cy="179" r="2.4" fill="#8a5a35"/>
+<path d="M60 164 C58 156 64 152 70 156" fill="none" stroke="#4f6e3a" stroke-width="3" stroke-linecap="round"/>
+<path d="M66 156 c4-6 12-6 14 0 c-6 2-10 2-14 0z" fill="#7a9e5f"/>
+</g>
+</svg>
+<div class="surtitre">Eybens · Isère</div>
+<h1>Alby<em>-</em>Eco</h1>
+<p class="accroche">La chaleur douce d'un vrai feu de bois, pour traverser les hivers au pied de Belledonne.</p>
+<p class="hero-texte">Poêles à bûches, poêles à granulés et chaudières bois&nbsp;: nous vous aidons à chauffer votre maison et à produire votre eau chaude avec une énergie qui pousse à deux pas de chez vous.</p>
+<div class="hero-btns">
+<a class="btn btn-plein" href="tel:+33476018471"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler le 04 76 01 84 71</a>
+<a class="btn btn-ligne" href="#contact"><svg aria-hidden="true"><use href="#i-devis"/></svg>Demander un devis</a>
+</div>
+</div>
+
+<div class="hero-vague" aria-hidden="true">
+<svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 60 C180 20 330 100 520 70 S860 10 1040 52 1300 96 1440 48 V110 H0Z" fill="#7a9e5f" opacity=".45"/><path d="M0 78 C200 46 360 112 560 86 S900 36 1080 70 1320 104 1440 70 V110 H0Z" fill="#f6f3ea"/></svg>
+</div>
+</section>
+
+<!-- ========== BANDEAU DE CONFIANCE ========== -->
+<div class="confiance">
+<div class="wrap">
+<ul class="confiance-liste rv">
+<li>
+<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4c9 0 16 7 16 16 0 11-16 24-16 24S8 31 8 20C8 11 15 4 24 4z" fill="#d9e4c8" stroke="#1f3d2b" stroke-width="2.5"/><path d="M17 26 L24 14 L31 26Z" fill="#1f3d2b"/><path d="M21 21 L24 16 L27 21" fill="#f6f3ea"/></svg>
+<div><strong>Zone d'intervention</strong><span>Eybens et sud de l'agglomération grenobloise</span></div>
+</li>
+<li>
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#d9e4c8"/><path d="M24 9c5 7 11 11 11 19a11 11 0 0 1-22 0c0-5 3-8 5-10 0 3 2 5 3 5-1-6 0-10 3-14z" fill="#8a5a35"/><path d="M24 25c2 3 4 5 4 7a4 4 0 0 1-8 0c0-2 2-4 4-7z" fill="#f6f3ea"/></svg>
+<div><strong>Spécialité bois</strong><span>Chauffage et eau chaude au bois</span></div>
+</li>
+<li>
+<a href="tel:+33476018471" style="display:contents">
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#d9e4c8"/><g transform="translate(12 12)" color="#1f3d2b"><use href="#i-tel" width="24" height="24"/></g></svg>
+<div><strong>Contact direct</strong><span>04 76 01 84 71</span></div>
+</a>
+</li>
+<li>
+<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#d9e4c8"/><g transform="translate(12 12)" color="#1f3d2b"><use href="#i-devis" width="24" height="24"/></g></svg>
+<div><strong>Devis sur demande</strong><span>Étude de votre projet avant tout engagement</span></div>
+</li>
+</ul>
+</div>
+</div>
+
+<!-- ========== SERVICES ========== -->
+<section class="bloc" id="services">
+<div class="wrap">
+<div class="entete-bloc rv">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Nos services</div>
+<h2>Du poêle de séjour à la chaudière bois, <em>une même passion du feu</em></h2>
+<p>Que vous rêviez d'une flamme qui danse dans le salon ou d'un chauffage central au bois pour toute la maison, nous vous accompagnons de l'idée jusqu'à la mise en route.</p>
+</div>
+<div class="services-grille">
+<article class="carte rv">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4h8v8h-8z"/><rect x="11" y="12" width="26" height="28" rx="4"/><rect x="16" y="18" width="16" height="13" rx="2"/><path d="M24 29c-3 0-4-2-4-4 0-2 2-3 2-5 1 1 2 2 2 3 1-1 1-2 1-3 2 2 3 3 3 5s-1 4-4 4z" fill="#8a5a35" stroke="none"/><path d="M14 40v4M34 40v4"/></svg></div>
+<h3>Poêles à bûches</h3>
+<p>Le charme d'une vraie flambée et une chaleur enveloppante. Choix du modèle et de l'emplacement selon votre pièce de vie.</p>
+</article>
+<article class="carte rv d1">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="6" width="24" height="36" rx="5"/><path d="M12 16h24"/><rect x="17" y="21" width="14" height="10" rx="2"/><path d="M17 37h6"/><g fill="#8a5a35" stroke="none"><ellipse cx="17" cy="11" rx="2" ry="1.3"/><ellipse cx="22" cy="12" rx="2" ry="1.3"/><ellipse cx="27" cy="11" rx="2" ry="1.3"/><ellipse cx="31" cy="12" rx="2" ry="1.3"/></g><circle cx="30" cy="37" r="1.6" fill="#7a9e5f" stroke="none"/></svg></div>
+<h3>Poêles à granulés</h3>
+<p>Une chaleur programmable et régulière, avec un réservoir à remplir de temps en temps. Idéal pour qui veut le bois sans la corvée.</p>
+</article>
+<article class="carte rv d2">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="22" height="34" rx="3"/><circle cx="21" cy="17" r="4"/><path d="M21 17l2-2"/><rect x="14" y="25" width="14" height="11" rx="2"/><path d="M32 14h6v6M32 30h6v6M38 20v10" /><path d="M18 33c0-2 2-3 3-5 1 2 3 3 3 5" stroke="#8a5a35"/></svg></div>
+<h3>Chaudières bois</h3>
+<p>Bûches ou granulés, raccordées à vos radiateurs ou à votre plancher chauffant pour chauffer toute la maison au bois.</p>
+</article>
+<article class="carte rv">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10c0-3 4-5 10-5s10 2 10 5v28c0 3-4 5-10 5s-10-2-10-5z"/><path d="M14 10c0 3 4 5 10 5s10-2 10-5"/><path d="M24 21c3 4 5 6 5 9a5 5 0 0 1-10 0c0-3 2-5 5-9z" fill="#7a9e5f" stroke="none"/><path d="M34 18h5M34 32h5"/></svg></div>
+<h3>Eau chaude sanitaire</h3>
+<p>Production d'eau chaude couplée à votre installation bois, avec ballon adapté au nombre de personnes du foyer.</p>
+</article>
+<article class="carte rv d1">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 6a8 8 0 0 0-7 11L8 32a4 4 0 0 0 6 6l15-15a8 8 0 0 0 11-7l-5 3-4-1-1-4z"/><circle cx="11" cy="35" r="1" fill="#1f3d2b"/><path d="M34 32c4 0 7 2 7 6-4 1-7-1-7-6z" fill="#7a9e5f" stroke="none"/></svg></div>
+<h3>Entretien &amp; dépannage</h3>
+<p>Contrôle, nettoyage et réglages pour que votre appareil garde son rendement, et intervention si quelque chose cloche.</p>
+</article>
+<article class="carte rv d2">
+<div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24L24 8l18 16"/><path d="M11 20v20h26V20"/><path d="M24 38c-4 0-6-3-6-6 0-4 4-6 6-10 2 4 6 6 6 10 0 3-2 6-6 6z" fill="#d9e4c8"/><path d="M24 38v-9"/></svg></div>
+<h3>Conseil &amp; chauffage</h3>
+<p>Bilan de vos besoins, dimensionnement et solutions de chauffage plus largement, pour un confort juste, ni trop ni trop peu.</p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- ========== POURQUOI NOUS ========== -->
+<section class="bloc pourquoi" id="pourquoi">
+<div class="vague-haut" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 0 H1440 V30 C1260 64 1080 10 880 34 S520 70 320 36 80 20 0 40Z" fill="#f6f3ea"/></svg></div>
+<div class="niveaux" aria-hidden="true">
+<svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#7a9e5f" stroke-width="1.2" opacity=".35">
+<path d="M1100 350c0-90 80-160 170-150s150 90 130 170-110 120-190 100-110-60-110-120z"/>
+<path d="M1060 350c0-120 100-200 220-190s190 120 160 220-150 160-250 130-130-90-130-160z"/>
+<path d="M1020 350c0-150 130-240 270-230s230 150 190 270-190 200-310 160-150-110-150-200z"/>
+<path d="M980 350c0-180 160-280 320-270s270 180 220 320-230 240-370 190-170-140-170-240z"/>
+<path d="M-60 560c160-60 300 20 420-20s200-140 340-110"/>
+<path d="M-60 610c170-60 320 20 450-20s220-140 360-100"/>
+<path d="M-60 660c180-60 340 20 480-20s240-140 380-90"/>
+</svg>
+</div>
+<div class="wrap" style="position:relative;z-index:2">
+<div class="entete-bloc rv">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Pourquoi nous choisir</div>
+<h2>Le bois, c'est notre métier, <em>pas une option au catalogue</em></h2>
+<p>Un poêle ou une chaudière bois se choisit avec soin&nbsp;: tirage, conduit, isolation, usage quotidien. Voici ce que nous mettons au cœur de chaque projet.</p>
+</div>
+<div class="atouts">
+<div class="atout rv">
+<svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#2a5239"/><path d="M28 10c6 9 13 14 13 23a13 13 0 0 1-26 0c0-6 3-10 6-13 0 4 2 6 4 6-1-7 0-12 3-16z" fill="#c08b5c"/><path d="M28 31c3 3 5 6 5 8a5 5 0 0 1-10 0c0-2 2-5 5-8z" fill="#f6f3ea"/></svg>
+<h3>Une spécialité claire</h3>
+<p>Le chauffage et l'eau chaude au bois sont au centre de notre activité&nbsp;: c'est là que nous concentrons notre attention.</p>
+</div>
+<div class="atout rv d1">
+<svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#2a5239"/><path d="M10 40 L22 22 L28 30 L34 20 L46 40Z" fill="#7a9e5f"/><path d="M34 20 L38 27 L35 26 L33 28 L31 25Z M22 22 L25 27 L22 26 L20 28 L19 26Z" fill="#f6f3ea"/><circle cx="40" cy="16" r="3" fill="#d9e4c8"/></svg>
+<h3>Un artisan d'ici</h3>
+<p>Basés à Eybens, nous connaissons les maisons du coin, des pavillons de la plaine aux chalets plus perchés.</p>
+</div>
+<div class="atout rv d2">
+<svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#2a5239"/><g stroke="#d9e4c8" stroke-width="2.4" stroke-linecap="round"><path d="M28 12v32M14 20l28 16M42 20L14 36"/><path d="M24 14l4 3 4-3M24 42l4-3 4 3"/></g></svg>
+<h3>Pensé pour l'hiver isérois</h3>
+<p>Matins à &minus;5&nbsp;°C, redoux, inversions de température&nbsp;: nous dimensionnons pour un confort réel, toute la saison.</p>
+</div>
+<div class="atout rv d3">
+<svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="#2a5239"/><rect x="17" y="12" width="22" height="30" rx="3" fill="#f6f3ea"/><path d="M21 20h14M21 26h14M21 32h8" stroke="#1f3d2b" stroke-width="2.2" stroke-linecap="round"/><circle cx="38" cy="38" r="7" fill="#7a9e5f"/><path d="M35 38l2 2 4-4" stroke="#18231b" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+<h3>Un devis lisible</h3>
+<p>Chaque poste est détaillé avant le début des travaux, pour que vous sachiez exactement ce que vous financez.</p>
+</div>
+</div>
+</div>
+<div class="vague-bas" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 40 C160 10 380 64 600 36 S1000 6 1200 34 1380 50 1440 30 V70 H0Z" fill="#f6f3ea"/></svg></div>
+</section>
+
+<!-- ========== DÉROULEMENT ========== -->
+<section class="bloc" id="methode">
+<div class="wrap">
+<div class="entete-bloc centre rv">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Comment ça se passe</div>
+<h2>Quatre étapes, <em>du premier appel à la première flambée</em></h2>
+</div>
+<ol class="etapes" style="list-style:none;padding:0;margin:0">
+<li class="etape rv">
+<div class="etape-num">1</div>
+<h3>Premier échange</h3>
+<p>Vous nous appelez ou nous écrivez&nbsp;: logement, chauffage actuel, envies. On fait le point simplement.</p>
+</li>
+<li class="etape rv d1">
+<div class="etape-num">2</div>
+<h3>Visite &amp; étude</h3>
+<p>Nous regardons sur place le conduit, l'emplacement et les volumes à chauffer pour vous conseiller juste.</p>
+</li>
+<li class="etape rv d2">
+<div class="etape-num">3</div>
+<h3>Devis détaillé</h3>
+<p>Vous recevez une proposition claire, poste par poste. Vous prenez le temps de décider, sans pression.</p>
+</li>
+<li class="etape rv d3">
+<div class="etape-num">4</div>
+<h3>Pose &amp; mise en route</h3>
+<p>Installation, premier allumage et explications d'usage&nbsp;: vous repartez avec les bons gestes.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- ========== À PROPOS ========== -->
+<section class="bloc apropos" id="apropos">
+<div class="vague-haut" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 0 H1440 V24 C1220 60 1000 8 760 36 S300 64 0 26Z" fill="#f6f3ea"/></svg></div>
+<div class="niveaux" aria-hidden="true">
+<svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#7a9e5f" stroke-width="1.2" opacity=".45">
+<path d="M-40 200c140-60 260 30 400-10s260-130 400-90"/><path d="M-40 240c150-60 280 30 420-10s270-130 420-90"/><path d="M-40 280c160-60 300 30 440-10s280-130 440-90"/>
+<path d="M900 620c120-40 240 20 360-10s140-80 220-60"/><path d="M900 660c130-40 250 20 370-10s150-80 230-60"/>
+</svg>
+</div>
+<div class="wrap">
+<div class="apropos-grille">
+<div class="apropos-illu rv">
+<svg viewBox="0 0 400 340" role="img" aria-label="Illustration d'une maison chauffée au bois au pied des sapins et des montagnes">
+<path d="M0 210 L70 120 L120 170 L190 70 L260 150 L310 110 L400 200 V340 H0Z" fill="#d9e4c8"/>
+<path d="M190 70 L212 98 L200 96 L222 118 L190 104 L170 110 L180 96Z" fill="#f6f3ea"/>
+<path d="M0 250 C90 220 170 260 260 240 S360 220 400 236 V340 H0Z" fill="#7a9e5f" opacity=".55"/>
+<g fill="#1f3d2b"><use href="#sapin" x="18" y="170" width="40" height="100"/><use href="#sapin" x="50" y="190" width="32" height="80"/><use href="#sapin" x="318" y="168" width="42" height="104"/><use href="#sapin" x="350" y="196" width="30" height="74"/></g>
+<!-- maison -->
+<path d="M112 200 L200 132 L288 200" fill="none" stroke="#1f3d2b" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M126 196 L200 140 L274 196 V284 H126Z" fill="#f6f3ea"/>
+<rect x="236" y="118" width="18" height="46" fill="#8a5a35"/>
+<path d="M245 112 c-10-12 6-20-2-34 c14 8 10 20 18 24 c-2-10 8-14 6-24 c12 14 4 28-6 36z" fill="#d9e4c8" opacity=".9"/>
+<rect x="146" y="216" width="40" height="34" rx="4" fill="#c08b5c"/>
+<path d="M166 216v34M146 233h40" stroke="#f6f3ea" stroke-width="3"/>
+<rect x="208" y="226" width="40" height="58" rx="4" fill="#8a5a35"/>
+<circle cx="240" cy="256" r="3" fill="#f6f3ea"/>
+<path d="M100 290 H300" stroke="#1f3d2b" stroke-width="4" stroke-linecap="round"/>
+<!-- tas de bûches -->
+<g><rect x="292" y="262" width="70" height="28" rx="3" fill="#5e3b20"/><g fill="#c08b5c"><circle cx="304" cy="270" r="6"/><circle cx="318" cy="270" r="6"/><circle cx="332" cy="270" r="6"/><circle cx="346" cy="270" r="6"/><circle cx="311" cy="282" r="6"/><circle cx="325" cy="282" r="6"/><circle cx="339" cy="282" r="6"/><circle cx="353" cy="282" r="6"/></g></g>
+</svg>
+</div>
+<div class="rv d1">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>À propos</div>
+<h2>Alby-Eco, <em>le chauffage au bois à Eybens</em></h2>
+<p>Alby-Eco est une entreprise installée à Eybens (38320), au sud de Grenoble, spécialisée dans le chauffage et l'eau chaude au bois.</p>
+<p>Poêles et chaudières bois forment le cœur de notre activité, et nous sommes également référencés comme chauffagiste et climaticien.</p>
+<p>Nous intervenons à Eybens et dans le sud de l'agglomération grenobloise, et restons joignables directement au 04&nbsp;76&nbsp;01&nbsp;84&nbsp;71 ou par e-mail pour parler de votre projet.</p>
+<ul class="apropos-faits">
+<li><svg aria-hidden="true" color="#7a9e5f"><use href="#i-feuille"/></svg>Poêles à bois</li>
+<li><svg aria-hidden="true" color="#7a9e5f"><use href="#i-feuille"/></svg>Chaudières bois</li>
+<li><svg aria-hidden="true" color="#7a9e5f"><use href="#i-feuille"/></svg>Eau chaude</li>
+<li><svg aria-hidden="true" color="#7a9e5f"><use href="#i-feuille"/></svg>Eybens · 38320</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="vague-bas" aria-hidden="true"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 30 C240 64 480 10 720 36 S1200 60 1440 24 V70 H0Z" fill="#f6f3ea"/></svg></div>
+</section>
+
+<!-- ========== RÉALISATIONS & TARIFS ========== -->
+<section class="bloc" id="realisations">
+<div class="wrap">
+<div class="entete-bloc rv">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Types d'installations</div>
+<h2>Quelques idées <em>pour votre intérieur</em></h2>
+<p>Chaque maison est différente&nbsp;: voici, en illustrations, les grandes familles d'installations bois que nous pouvons étudier avec vous.</p>
+</div>
+<div class="galerie">
+<figure class="realisation rv" style="margin:0">
+<svg viewBox="0 0 480 300" role="img" aria-label="Illustration : poêle à bûches dans un séjour au parquet clair">
+<rect width="480" height="300" fill="#d9e4c8"/>
+<rect y="226" width="480" height="74" fill="#c08b5c"/>
+<g stroke="#8a5a35" stroke-width="1.5" opacity=".5"><path d="M0 246H480M0 268H480M0 290H480M60 226v20M180 246v22M300 226v20M420 268v22M120 268v22"/></g>
+<rect x="300" y="40" width="130" height="100" rx="8" fill="#f6f3ea"/>
+<path d="M300 112 L340 80 L372 104 L398 86 L430 112 V132 a8 8 0 0 1-8 8 H308 a8 8 0 0 1-8-8Z" fill="#7a9e5f"/>
+<g fill="#1f3d2b"><use href="#sapin-fin" x="312" y="82" width="16" height="52"/><use href="#sapin-fin" x="404" y="88" width="14" height="46"/></g>
+<rect x="212" y="0" width="22" height="104" fill="#18231b"/>
+<rect x="176" y="100" width="94" height="128" rx="10" fill="#1f3d2b"/>
+<rect x="190" y="116" width="66" height="70" rx="6" fill="#18231b"/>
+<path d="M223 180c-12 0-18-8-18-16 0-9 8-12 9-20 4 4 6 8 6 12 3-3 4-8 3-12 8 6 14 12 14 20 0 9-6 16-14 16z" fill="#c08b5c"/>
+<path d="M223 180c-6 0-9-4-9-8 0-5 5-7 6-11 3 3 5 6 5 9 1-1 2-3 2-5 3 3 5 5 5 8 0 4-3 7-9 7z" fill="#f6f3ea" opacity=".85"/>
+<rect x="196" y="176" width="54" height="6" rx="3" fill="#8a5a35"/>
+<path d="M184 228h16M246 228h16" stroke="#18231b" stroke-width="6"/>
+<g><rect x="60" y="150" width="90" height="60" rx="14" fill="#8a5a35"/><rect x="52" y="140" width="22" height="76" rx="10" fill="#5e3b20"/><rect x="136" y="140" width="22" height="76" rx="10" fill="#5e3b20"/><rect x="74" y="132" width="62" height="30" rx="10" fill="#7a9e5f"/></g>
+<g><rect x="300" y="180" width="64" height="44" rx="4" fill="#8a5a35"/><g fill="#c08b5c"><circle cx="314" cy="194" r="7"/><circle cx="332" cy="194" r="7"/><circle cx="350" cy="194" r="7"/><circle cx="322" cy="210" r="7"/><circle cx="340" cy="210" r="7"/></g></g>
+</svg>
+<figcaption><h3>Poêle à bûches au cœur du séjour</h3><p>Une flamme visible depuis le canapé, un conduit bien placé et une réserve de bûches à portée de main.</p></figcaption>
+</figure>
+<figure class="realisation rv d1" style="margin:0">
+<svg viewBox="0 0 480 300" role="img" aria-label="Illustration : chaudière à granulés avec silo et ballon d'eau chaude en chaufferie">
+<rect width="480" height="300" fill="#f6f3ea"/>
+<rect y="240" width="480" height="60" fill="#d9e4c8"/>
+<g stroke="#1f3d2b" stroke-width="1" opacity=".12"><path d="M0 40H480M0 80H480M0 120H480M0 160H480M0 200H480"/></g>
+<path d="M40 60 H150 L170 100 V240 H20 V100Z" fill="#8a5a35"/>
+<path d="M40 60 H150 L170 100 H20Z" fill="#c08b5c"/>
+<g fill="#f6f3ea" opacity=".75"><ellipse cx="60" cy="88" rx="4" ry="2.5"/><ellipse cx="80" cy="84" rx="4" ry="2.5"/><ellipse cx="100" cy="90" rx="4" ry="2.5"/><ellipse cx="120" cy="84" rx="4" ry="2.5"/><ellipse cx="140" cy="90" rx="4" ry="2.5"/><ellipse cx="70" cy="94" rx="4" ry="2.5"/><ellipse cx="110" cy="96" rx="4" ry="2.5"/></g>
+<path d="M170 200 C200 200 200 180 220 180" fill="none" stroke="#5e3b20" stroke-width="10" stroke-linecap="round"/>
+<rect x="210" y="90" width="110" height="150" rx="10" fill="#1f3d2b"/>
+<rect x="226" y="108" width="78" height="20" rx="4" fill="#7a9e5f"/>
+<circle cx="240" cy="118" r="4" fill="#f6f3ea"/><rect x="252" y="114" width="40" height="8" rx="4" fill="#18231b"/>
+<rect x="226" y="146" width="78" height="64" rx="6" fill="#18231b"/>
+<path d="M265 200c-9 0-14-6-14-12 0-7 6-9 7-15 3 3 5 6 5 9 2-2 3-5 2-9 6 4 11 9 11 15 0 7-5 12-11 12z" fill="#c08b5c"/>
+<path d="M320 120 H360 M320 150 H360" stroke="#8a5a35" stroke-width="8"/>
+<path d="M360 70 c0-14 20-20 40-20 s40 6 40 20 V230 c0 14-20 18-40 18 s-40-4-40-18Z" fill="#d9e4c8" stroke="#1f3d2b" stroke-width="4"/>
+<path d="M400 120c10 14 16 22 16 32a16 16 0 0 1-32 0c0-10 6-18 16-32z" fill="#7a9e5f"/>
+<path d="M392 156a8 8 0 0 0 8 8" stroke="#f6f3ea" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
+<figcaption><h3>Chaudière à granulés &amp; eau chaude</h3><p>Silo, chaudière automatique et ballon&nbsp;: le bois chauffe les radiateurs et l'eau de la douche.</p></figcaption>
+</figure>
+<figure class="realisation rv" style="margin:0">
+<svg viewBox="0 0 480 300" role="img" aria-label="Illustration : insert à bois dans une cheminée en pierre">
+<rect width="480" height="300" fill="#7a9e5f" opacity=".35"/>
+<rect width="480" height="300" fill="#d9e4c8" opacity=".6"/>
+<rect y="250" width="480" height="50" fill="#8a5a35"/>
+<path d="M140 0 H340 V60 H360 V250 H120 V60 H140Z" fill="#f6f3ea"/>
+<g fill="none" stroke="#c08b5c" stroke-width="2"><path d="M120 90H360M120 130H360M120 170H360M120 210H360"/><path d="M180 60v30M260 60v30M160 90v40M240 90v40M320 90v40M200 130v40M290 130v40M150 170v40M230 170v40M330 170v40M190 210v40M280 210v40"/></g>
+<rect x="110" y="52" width="260" height="14" rx="3" fill="#8a5a35"/>
+<rect x="168" y="140" width="144" height="110" rx="8" fill="#18231b"/>
+<rect x="180" y="152" width="120" height="78" rx="4" fill="#1f3d2b"/>
+<path d="M240 226c-14 0-22-9-22-19 0-11 9-14 11-24 5 5 7 10 7 15 4-4 5-10 4-15 10 7 17 15 17 24 0 11-7 19-17 19z" fill="#c08b5c"/>
+<path d="M240 226c-7 0-11-4-11-9 0-6 5-8 6-13 3 3 5 7 5 10 1-1 2-3 2-6 4 3 6 6 6 9 0 5-3 9-8 9z" fill="#f6f3ea" opacity=".8"/>
+<rect x="196" y="226" width="88" height="6" rx="3" fill="#8a5a35"/>
+<g fill="#1f3d2b"><use href="#sapin-fin" x="30" y="150" width="34" height="104"/><use href="#sapin-fin" x="410" y="160" width="30" height="92"/></g>
+<path d="M170 66 c4-10 14-10 18 0 c-8 4-12 4-18 0z" fill="#7a9e5f"/>
+</svg>
+<figcaption><h3>Insert dans une cheminée existante</h3><p>Redonner vie à un foyer ouvert peu efficace en y intégrant un insert fermé, plus sûr et plus chaud.</p></figcaption>
+</figure>
+<figure class="realisation rv d1" style="margin:0">
+<svg viewBox="0 0 480 300" role="img" aria-label="Illustration : poêle à granulés moderne dans une maison de montagne">
+<rect width="480" height="300" fill="#1f3d2b"/>
+<path d="M0 150 L80 90 L150 130 L240 60 L330 120 L400 80 L480 130 V300 H0Z" fill="#2a5239"/>
+<path d="M240 60 L262 82 L250 80 L268 100 L240 86 L222 92 L232 78Z" fill="#d9e4c8"/>
+<rect x="40" y="40" width="400" height="220" rx="14" fill="none" stroke="#f6f3ea" stroke-width="6"/>
+<path d="M240 40V260" stroke="#f6f3ea" stroke-width="4"/>
+<g fill="#18231b"><use href="#sapin" x="60" y="140" width="40" height="100"/><use href="#sapin" x="100" y="160" width="30" height="80"/><use href="#sapin" x="360" y="150" width="36" height="90"/><use href="#sapin" x="396" y="170" width="28" height="70"/></g>
+<rect y="250" width="480" height="50" fill="#f6f3ea"/>
+<rect x="190" y="110" width="100" height="148" rx="14" fill="#8a5a35"/>
+<rect x="190" y="110" width="100" height="26" rx="12" fill="#5e3b20"/>
+<rect x="205" y="150" width="70" height="66" rx="8" fill="#18231b"/>
+<path d="M240 210c-9 0-14-6-14-12 0-7 6-9 7-15 3 3 5 6 5 9 2-2 3-5 2-9 6 4 11 9 11 15 0 7-5 12-11 12z" fill="#c08b5c"/>
+<rect x="226" y="228" width="28" height="8" rx="4" fill="#7a9e5f"/>
+<circle cx="270" cy="123" r="4" fill="#7a9e5f"/>
+</svg>
+<figcaption><h3>Poêle à granulés programmable</h3><p>Une silhouette moderne, une chaleur pilotée à heure fixe&nbsp;: rentrer de randonnée dans une maison déjà tiède.</p></figcaption>
+</figure>
+</div>
+<p class="note-illu">Illustrations à titre d'exemple&nbsp;: elles présentent des types d'installations, pas des chantiers précis.</p>
+
+<div class="tarifs rv">
+<div>
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Tarifs</div>
+<h3>Chaque projet <em>sur devis</em></h3>
+<p>Le prix d'une installation bois dépend de l'appareil choisi, du conduit de fumée, de l'accès et du raccordement. Plutôt qu'un tarif au hasard, nous préférons étudier votre situation et vous remettre un devis détaillé.</p>
+<a class="btn btn-sapin" href="#contact"><svg aria-hidden="true"><use href="#i-devis"/></svg>Demander mon devis</a>
+</div>
+<ul class="tarifs-liste">
+<li><span>Fourniture et pose d'un poêle à bûches</span><span class="prix">sur devis</span></li>
+<li><span>Fourniture et pose d'un poêle à granulés</span><span class="prix">sur devis</span></li>
+<li><span>Chaudière bois ou granulés</span><span class="prix">sur devis</span></li>
+<li><span>Production d'eau chaude couplée</span><span class="prix">sur devis</span></li>
+<li><span>Entretien, réglage, dépannage</span><span class="prix">sur devis</span></li>
+<li><span>Étude de remplacement d'un ancien appareil</span><span class="prix">sur devis</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ========== AVIS ========== -->
+<section class="avis" id="avis">
+<div class="wrap">
+<div class="avis-encart rv">
+<svg viewBox="0 0 86 86" aria-hidden="true"><path d="M43 4C66 14 82 34 80 56S60 84 43 84 8 76 6 56 20 14 43 4z" fill="#1f3d2b"/><path d="M43 26l5.5 11.2 12.3 1.8-8.9 8.7 2.1 12.3L43 54.2l-11 5.8 2.1-12.3-8.9-8.7 12.3-1.8z" fill="#7a9e5f"/></svg>
+<div>
+<h2>Votre avis compte</h2>
+<p>Vous avez fait appel à Alby-Eco pour un poêle, une chaudière ou un entretien&nbsp;? Partagez votre expérience&nbsp;: cela aide vos voisins de l'agglomération à choisir en confiance.</p>
+</div>
+<a class="btn btn-sapin" href="https://www.google.com/maps/search/?api=1&amp;query=Alby-Eco+Eybens+38320" target="_blank" rel="noopener">Laisser un avis</a>
+</div>
+</div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="bloc faq" id="faq">
+<div class="wrap faq-grille">
+<div class="entete-bloc rv" style="margin-bottom:0">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Questions fréquentes</div>
+<h2>Vos questions <em>autour du feu</em></h2>
+<p>Les réponses ci-dessous sont générales&nbsp;: chaque logement a ses particularités. Pour un avis précis sur votre maison, le plus simple reste de nous appeler.</p>
+<a class="btn btn-sapin" href="tel:+33476018471"><svg aria-hidden="true"><use href="#i-tel"/></svg>04 76 01 84 71</a>
+</div>
+<div class="faq-liste rv d1">
+<div class="question">
+<button aria-expanded="false">Bûches ou granulés&nbsp;: que choisir&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Les bûches offrent une belle flamme et un combustible souvent facile à trouver localement, mais demandent du stockage et des recharges régulières. Les granulés permettent une chaleur programmable et plus automatique, avec une alimentation électrique. Le bon choix dépend de votre rythme de vie, de la place disponible et de l'usage visé.</p></div></div>
+</div>
+<div class="question">
+<button aria-expanded="false">Un poêle peut-il chauffer toute la maison&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Cela dépend de la surface, de l'isolation et de la façon dont la chaleur circule entre les pièces. Dans une maison bien isolée et assez ouverte, un poêle peut couvrir une grande partie des besoins&nbsp;; sinon, une chaudière bois raccordée aux radiateurs est souvent plus adaptée. C'est précisément ce que l'étude de départ permet d'évaluer.</p></div></div>
+</div>
+<div class="question">
+<button aria-expanded="false">Une chaudière bois peut-elle aussi produire l'eau chaude&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Oui, c'est une configuration courante&nbsp;: la chaudière chauffe un ballon d'eau chaude en plus du circuit de chauffage. Pour l'été, quand on ne chauffe plus, on prévoit généralement une solution d'appoint. Nous en discutons ensemble selon vos habitudes.</p></div></div>
+</div>
+<div class="question">
+<button aria-expanded="false">Quel entretien prévoir pour un appareil bois&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Un nettoyage régulier par l'utilisateur (cendres, vitre) et un entretien de l'appareil sont recommandés. Le ramonage du conduit est en principe obligatoire, à une fréquence fixée par le règlement sanitaire départemental&nbsp;: renseignez-vous sur les règles applicables en Isère et auprès de votre assureur.</p></div></div>
+</div>
+<div class="question">
+<button aria-expanded="false">Existe-t-il des aides pour remplacer un vieil appareil&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Des aides nationales ou locales existent parfois, notamment dans l'agglomération grenobloise où la qualité de l'air est un enjeu. Leurs conditions évoluent et dépendent souvent de critères précis (revenus, qualification de l'installateur, performance de l'appareil)&nbsp;: nous vous conseillons de vérifier votre éligibilité auprès des organismes officiels avant de signer.</p></div></div>
+</div>
+<div class="question">
+<button aria-expanded="false">Quel délai pour une installation&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+<div class="reponse"><div><p>Il varie selon la saison, la disponibilité du matériel et l'ampleur des travaux (création de conduit, raccordements). L'automne est très demandé&nbsp;: anticiper au printemps ou en été permet d'aborder l'hiver sereinement. Nous vous donnons une estimation lors du devis.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== HORAIRES & CONTACT ========== -->
+<section class="bloc contact" id="contact">
+<div class="niveaux" aria-hidden="true">
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#7a9e5f" stroke-width="1.2" opacity=".35">
+<path d="M200 160c0-70 60-120 130-110s110 70 100 130-80 90-140 80-90-50-90-100z"/>
+<path d="M160 160c0-100 90-160 180-150s150 100 130 180-120 120-200 110-110-80-110-140z"/>
+<path d="M120 160c0-130 120-200 230-190s190 130 160 230-160 150-260 140-130-110-130-180z"/>
+<path d="M1000 800c120-50 240 20 360-10s120-70 180-60"/><path d="M980 840c130-50 260 20 380-10s130-70 190-60"/>
+</svg>
+</div>
+<div class="wrap">
+<div class="entete-bloc centre rv">
+<div class="etiquette"><svg aria-hidden="true"><use href="#i-feuille"/></svg>Contact &amp; horaires</div>
+<h2>Parlons de <em>votre futur feu de bois</em></h2>
+<p>Un appel suffit pour démarrer. Vous préférez écrire&nbsp;? Le formulaire ci-dessous prépare un e-mail à notre attention.</p>
+</div>
+<div class="contact-grille">
+<div class="panneau rv">
+<h3>Horaires</h3>
+<div class="info-rdv"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Horaires sur rendez-vous – appelez-nous.</strong> Nous convenons ensemble d'un créneau pour échanger ou passer chez vous.</span></div>
+<table class="horaires" id="horaires">
+<caption class="sr">Disponibilités de la semaine</caption>
+<tbody>
+<tr data-j="1"><th scope="row">Lundi</th><td>Sur rendez-vous</td></tr>
+<tr data-j="2"><th scope="row">Mardi</th><td>Sur rendez-vous</td></tr>
+<tr data-j="3"><th scope="row">Mercredi</th><td>Sur rendez-vous</td></tr>
+<tr data-j="4"><th scope="row">Jeudi</th><td>Sur rendez-vous</td></tr>
+<tr data-j="5"><th scope="row">Vendredi</th><td>Sur rendez-vous</td></tr>
+<tr data-j="6"><th scope="row">Samedi</th><td>Nous consulter</td></tr>
+<tr data-j="0"><th scope="row">Dimanche</th><td>Nous consulter</td></tr>
+</tbody>
+</table>
+<h3>Coordonnées</h3>
+<ul class="coord">
+<li><svg viewBox="0 0 24 24" aria-hidden="true" color="#1f3d2b"><use href="#i-tel"/></svg><div>Téléphone<br><a href="tel:+33476018471">04 76 01 84 71</a></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div>E-mail<br><a href="mailto:alby-eco@sfr.fr">alby-eco@sfr.fr</a></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#1f3d2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Zone<br><strong>Eybens (38320) et sud de l'agglomération grenobloise</strong></div></li>
+</ul>
+<a class="btn btn-sapin" href="https://www.google.com/maps/search/?api=1&amp;query=Alby-Eco+Eybens+38320" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+</div>
+
+<div class="panneau rv d1">
+<h3>Demande de devis</h3>
+<form class="form" id="form" novalidate>
+<div class="champ"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required placeholder="Votre nom"></div>
+<div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></div>
+<div class="champ large"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+<div class="champ"><label for="f-projet">Votre projet</label>
+<select id="f-projet" name="projet">
+<option>Poêle à bûches</option><option>Poêle à granulés</option><option>Chaudière bois / granulés</option><option>Eau chaude sanitaire</option><option>Entretien / dépannage</option><option>Autre demande</option>
+</select>
+</div>
+<div class="champ"><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Eybens, Poisat, Brié…"></div>
+<div class="champ large"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Surface, chauffage actuel, conduit existant ou non…"></textarea></div>
+<button class="btn btn-plein" type="submit"><svg aria-hidden="true"><use href="#i-devis"/></svg>Envoyer ma demande</button>
+<p class="form-msg" id="form-msg" role="status"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ========== PIED DE PAGE ========== -->
+<footer class="pied">
+<div class="pied-sapins" aria-hidden="true"><svg viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax slice"><g fill="#7a9e5f"><use href="#sapin" x="0" y="16" width="57" height="144"/><use href="#sapin" x="72" y="27" width="53" height="133"/><use href="#sapin" x="134" y="68" width="37" height="92"/><use href="#sapin" x="207" y="57" width="41" height="103"/><use href="#sapin" x="280" y="12" width="59" height="148"/><use href="#sapin" x="339" y="52" width="43" height="108"/><use href="#sapin" x="417" y="29" width="52" height="131"/><use href="#sapin" x="468" y="71" width="36" height="89"/><use href="#sapin" x="518" y="17" width="57" height="143"/><use href="#sapin" x="591" y="70" width="36" height="90"/><use href="#sapin" x="665" y="11" width="59" height="149"/><use href="#sapin" x="733" y="55" width="42" height="105"/><use href="#sapin" x="797" y="71" width="36" height="89"/><use href="#sapin" x="843" y="12" width="59" height="148"/><use href="#sapin" x="911" y="43" width="47" height="117"/><use href="#sapin" x="988" y="50" width="44" height="110"/><use href="#sapin" x="1064" y="22" width="55" height="138"/><use href="#sapin" x="1116" y="62" width="39" height="98"/><use href="#sapin" x="1171" y="63" width="39" height="97"/><use href="#sapin" x="1237" y="62" width="39" height="98"/><use href="#sapin" x="1297" y="71" width="36" height="89"/><use href="#sapin" x="1373" y="55" width="42" height="105"/><use href="#sapin" x="1434" y="39" width="48" height="121"/></g></svg></div>
+<div class="wrap">
+<div class="pied-grille">
+<div>
+<a class="logo" href="#accueil">
+<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2C31 7 37 16 35 26S25 39 20 39 7 35 5 26 9 7 20 2z" fill="#7a9e5f"/><path d="M20 12c3 4 7 7 7 12a7 7 0 0 1-14 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4 1-6 2-9z" fill="#f6f3ea"/><path d="M12 31h16" stroke="#8a5a35" stroke-width="3" stroke-linecap="round"/></svg>
+Alby-Eco
+</a>
+<p>Chauffage et eau chaude au bois&nbsp;: poêles et chaudières bois à Eybens et dans le sud de l'agglomération grenobloise.</p>
+</div>
+<div>
+<h4>Coordonnées</h4>
+<ul>
+<li><a href="tel:+33476018471">04 76 01 84 71</a></li>
+<li><a href="mailto:alby-eco@sfr.fr">alby-eco@sfr.fr</a></li>
+<li>Eybens (38320)</li>
+</ul>
+</div>
+<div>
+<h4>Horaires</h4>
+<ul>
+<li>Sur rendez-vous</li>
+<li>Appelez-nous pour convenir d'un créneau</li>
+</ul>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#realisations">Installations</a></li>
+<li><a href="#faq">Questions fréquentes</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="pied-bas">
+<span>© <span id="annee">2026</span> Alby-Eco – Eybens, Isère</span>
+<span>Chauffage au bois · Belledonne · Grenoble</span>
+</div>
+</div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement.</div>
+
+<a class="appel-flottant" href="tel:+33476018471" aria-label="Appeler Alby-Eco au 04 76 01 84 71"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+
+<script>
+(function(){
+var doc=document.documentElement;
+doc.classList.add('js');
+var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+
+var flot=document.querySelector('.appel-flottant');
+function surDefilement(){nav.classList.toggle('solide',window.scrollY>40||nav.classList.contains('ouvert'));flot.classList.toggle('visible',window.scrollY>window.innerHeight*.6);}
+window.addEventListener('scroll',surDefilement,{passive:true});surDefilement();
+
+function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');surDefilement();}
+burger.addEventListener('click',function(){
+var ouvert=nav.classList.toggle('ouvert');
+burger.setAttribute('aria-expanded',ouvert?'true':'false');
+burger.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');
+surDefilement();
+});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+// Apparitions au défilement
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+var io=new IntersectionObserver(function(entrees){
+entrees.forEach(function(en){if(en.isIntersecting){en.target.classList.add('vu');io.unobserve(en.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(el){io.observe(el);});
+} else { els.forEach(function(el){el.classList.add('vu');}); }
+
+// FAQ en accordéon
+document.querySelectorAll('.question button').forEach(function(btn){
+btn.addEventListener('click',function(){
+var q=btn.parentElement,ouverte=q.classList.contains('ouverte');
+document.querySelectorAll('.question.ouverte').forEach(function(o){o.classList.remove('ouverte');o.querySelector('button').setAttribute('aria-expanded','false');});
+if(!ouverte){q.classList.add('ouverte');btn.setAttribute('aria-expanded','true');}
+});
+});
+
+// Jour actuel
+var j=new Date().getDay();
+var ligne=document.querySelector('#horaires tr[data-j="'+j+'"]');
+if(ligne){ligne.classList.add('aujourdhui');ligne.querySelector('th').insertAdjacentHTML('beforeend','<span class="badge-jour">Aujourd\'hui</span>');}
+
+document.getElementById('annee').textContent=new Date().getFullYear();
+
+// Formulaire -> mailto
+var form=document.getElementById('form'),msg=document.getElementById('form-msg');
+form.addEventListener('submit',function(e){
+e.preventDefault();
+var d=new FormData(form);
+if(!String(d.get('nom')||'').trim()){msg.textContent='Merci d\'indiquer votre nom pour que nous puissions vous répondre.';msg.classList.add('visible');form.querySelector('#f-nom').focus();return;}
+var corps='Nom : '+d.get('nom')+'\nTéléphone : '+(d.get('tel')||'-')+'\nE-mail : '+(d.get('email')||'-')+'\nCommune : '+(d.get('ville')||'-')+'\nProjet : '+d.get('projet')+'\n\n'+(d.get('message')||'');
+msg.textContent='Maquette de démonstration : votre messagerie va s\'ouvrir avec la demande pré-remplie pour alby-eco@sfr.fr.';
+msg.classList.add('visible');
+window.location.href='mailto:alby-eco@sfr.fr?subject='+encodeURIComponent('Demande de devis – '+d.get('projet'))+'&body='+encodeURIComponent(corps);
+});
+})();
+</script>
+</body>
+</html>

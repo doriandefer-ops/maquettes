@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abonnel et Blandin – Plombier chauffagiste à Grenoble</title>
+<meta name="description" content="Abonnel et Blandin, plombier chauffagiste à Grenoble depuis 1960 : chaudières gaz et fioul (installation, remplacement, dépannage), salles de bain, chauffe-eau. QUALIBAT Remplacement chaudière. 04 76 23 09 13.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1f4a3d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f5ecd7;
+  --sapin:#1f4a3d;
+  --orange:#e0782f;
+  --petrole:#1d5c73;
+  --encre:#2b2118;
+  --creme-2:#ede0c2;
+  --creme-3:#e4d3ae;
+  --sapin-2:#173a30;
+  --encre-doux:#5a4a3c;
+  --max:1180px;
+  --display:"Abril Fatface", Georgia, serif;
+  --sans:"Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--orange);color:var(--encre);padding:8px 14px;z-index:400}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--petrole);outline-offset:3px}
+
+/* ---------- Éléments rétro ---------- */
+.cartouche{display:inline-flex;align-items:center;gap:10px;background:var(--sapin);color:var(--creme);font-weight:700;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;padding:7px 18px;border-radius:40px;box-shadow:0 0 0 2px var(--creme),0 0 0 4px var(--sapin)}
+.cartouche::before,.cartouche::after{content:"★";color:var(--orange);font-size:11px;letter-spacing:0}
+.sec{padding:100px 0;position:relative}
+.sec-head{text-align:center;max-width:740px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(34px,4.6vw,56px);margin:22px 0 16px;color:var(--sapin)}
+.sec-head p{color:var(--encre-doux);font-size:18px;margin:0}
+.filet{height:14px;background:
+  linear-gradient(var(--encre),var(--encre)) top/100% 3px no-repeat,
+  linear-gradient(var(--encre),var(--encre)) bottom/100% 1px no-repeat}
+.rayures{height:12px;background:repeating-linear-gradient(90deg,var(--orange) 0 40px,var(--creme) 40px 52px,var(--sapin) 52px 92px,var(--creme) 92px 104px,var(--petrole) 104px 144px,var(--creme) 144px 156px)}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2.5px solid var(--encre);border-radius:999px;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s;box-shadow:0 4px 0 var(--encre)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--encre)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--encre)}
+.btn-orange{background:var(--orange);color:var(--encre)}
+.btn-creme{background:var(--creme);color:var(--encre)}
+.btn-creme:hover{background:#fff8e8}
+.btn-sapin{background:var(--sapin);color:var(--creme)}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(245,236,215,.96);border-bottom:3px double var(--encre);transition:box-shadow .3s}
+.nav.ombre{box-shadow:0 8px 20px -14px rgba(43,33,24,.6)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:50px;height:50px;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-txt b{font-family:var(--display);font-weight:400;font-size:22px;color:var(--sapin)}
+.brand-txt small{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--petrole);margin-top:5px}
+.menu{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-weight:600;font-size:15px;position:relative;padding:4px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--orange);border-radius:3px;transform:scaleX(0);transition:transform .25s}
+.menu a:not(.btn):hover::after{transform:scaleX(1)}
+.menu .btn{padding:10px 18px;font-size:13.5px;box-shadow:0 3px 0 var(--encre)}
+.burger{display:none;width:48px;height:48px;border:2.5px solid var(--encre);background:var(--orange);border-radius:50%;cursor:pointer;position:relative;color:var(--encre)}
+.burger span{position:absolute;left:12px;right:12px;height:2.5px;border-radius:2px;background:currentColor;transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:20.5px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ---------- En-tête ---------- */
+.hero{padding-top:76px;position:relative}
+.hero-intro{text-align:center;padding:54px 24px 40px}
+.hero h1{font-size:clamp(46px,8vw,104px);color:var(--sapin);margin:24px 0 8px;line-height:.98;text-shadow:3px 3px 0 var(--creme-3)}
+.hero h1 .et{color:var(--orange);font-size:.8em;text-shadow:3px 3px 0 var(--encre)}
+.hero .accroche{font-family:var(--display);font-size:clamp(20px,2.4vw,28px);color:var(--petrole);margin:12px auto 10px;max-width:760px;line-height:1.25}
+.hero .sous{max-width:640px;margin:0 auto 30px;color:var(--encre-doux)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.bandeau{position:relative;border-top:3px solid var(--encre);border-bottom:3px solid var(--encre);background:var(--creme-2);overflow:hidden}
+.bandeau svg{width:100%;height:clamp(300px,36vw,500px)}
+.fumee-b{animation:monte 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.fumee-b.f2{animation-delay:-3s}
+@keyframes monte{0%{opacity:0;transform:translateY(12px) scale(.8)}40%{opacity:.8}100%{opacity:0;transform:translateY(-34px) scale(1.25)}}
+.soleil{animation:tourne 80s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.flamme-b{animation:vacille 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes vacille{50%{transform:scaleY(.82) scaleX(1.08)}}
+.enseigne{animation:balance 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes balance{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+
+/* Ticket */
+.ticket-zone{position:relative;z-index:5;margin-top:-58px;padding:0 24px}
+.ticket{max-width:1000px;margin:0 auto;background:var(--creme);border:3px solid var(--encre);border-radius:14px;box-shadow:8px 8px 0 var(--sapin);display:grid;grid-template-columns:auto 1fr auto;position:relative;
+  -webkit-mask:radial-gradient(circle 14px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 14px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat}
+.ticket-talon{background:var(--orange);border-right:3px dashed var(--encre);padding:26px 30px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:11px 0 0 11px}
+.ticket-talon small{font-weight:800;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.ticket-talon b{font-family:var(--display);font-weight:400;font-size:46px;line-height:1}
+.ticket-talon span{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.ticket-corps{padding:22px 30px}
+.ticket-corps h2{font-size:24px;color:var(--sapin);margin-bottom:10px}
+.ticket-lignes{display:grid;grid-template-columns:max-content max-content;gap:8px 26px;font-size:15.5px}
+.ticket-lignes a,.ticket-lignes span{white-space:nowrap}
+.ticket-lignes a{text-decoration:none;font-weight:600}
+.ticket-lignes a:hover{color:var(--petrole);text-decoration:underline}
+.ticket-lignes div{display:flex;gap:8px;align-items:center}
+.ticket-lignes svg{width:17px;height:17px;flex:none;color:var(--petrole)}
+.ticket-actions{padding:22px 28px 22px 0;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.ticket-actions .btn{padding:12px 20px;font-size:13.5px;white-space:nowrap}
+
+/* ---------- Confiance ---------- */
+.confiance{padding:80px 0 30px}
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;margin:0;padding:0}
+.badge{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.badge .rond{width:122px;height:122px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--encre);box-shadow:0 0 0 5px var(--creme) inset,0 0 0 7px currentColor inset,4px 4px 0 var(--encre);transition:transform .35s}
+.badge:hover .rond{transform:rotate(-8deg) scale(1.05)}
+.badge .rond svg{width:52px;height:52px}
+.badge.b1 .rond{background:var(--sapin);color:var(--creme)}
+.badge.b2 .rond{background:var(--orange);color:var(--encre)}
+.badge.b3 .rond{background:var(--petrole);color:var(--creme)}
+.badge.b4 .rond{background:var(--creme-3);color:var(--encre)}
+.badge b{font-family:var(--display);font-weight:400;font-size:21px;color:var(--sapin);line-height:1.15}
+.badge span{font-size:14.5px;color:var(--encre-doux);margin-top:-8px;max-width:230px}
+
+/* ---------- Services ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.plaque{background:var(--creme);border:3px solid var(--encre);border-radius:16px;padding:26px 22px 24px;position:relative;box-shadow:5px 5px 0 var(--encre);transition:transform .25s,box-shadow .25s,background .25s}
+.plaque::before{content:"";position:absolute;inset:6px;border:1.5px solid var(--encre);border-radius:10px;opacity:.25;pointer-events:none}
+.plaque:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--orange);background:#fbf4e3}
+.plaque .ico{width:70px;height:70px;border-radius:50%;background:var(--sapin);display:grid;place-items:center;margin-bottom:18px;border:3px solid var(--encre);transition:background .25s,transform .4s}
+.plaque:nth-child(3n+2) .ico{background:var(--petrole)}
+.plaque:nth-child(3n) .ico{background:var(--orange)}
+.plaque:hover .ico{transform:rotate(-10deg)}
+.plaque .ico svg{width:38px;height:38px}
+.plaque h3{font-size:22px;color:var(--sapin);margin-bottom:8px}
+.plaque p{font-size:15px;color:var(--encre-doux);margin:0}
+.rivet{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--creme-3);border:1.5px solid var(--encre)}
+.rivet.r1{top:12px;right:12px}.rivet.r2{bottom:12px;right:12px}
+
+/* ---------- Pourquoi ---------- */
+.pourquoi{background:var(--sapin);color:var(--creme);overflow:hidden}
+.pourquoi::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 120%,rgba(245,236,215,.05) 0 6deg,transparent 6deg 12deg);pointer-events:none}
+.pourquoi .sec-head h2{color:var(--creme)}
+.pourquoi .sec-head p{color:#d8cdb4}
+.pourquoi .cartouche{background:var(--orange);color:var(--encre);box-shadow:0 0 0 2px var(--sapin),0 0 0 4px var(--orange)}
+.pourquoi .cartouche::before,.pourquoi .cartouche::after{color:var(--encre)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.atout{background:var(--sapin-2);border:2px solid rgba(245,236,215,.35);border-radius:200px 200px 16px 16px;padding:46px 24px 30px;text-align:center;transition:transform .3s,border-color .3s}
+.atout:hover{transform:translateY(-6px);border-color:var(--orange)}
+.atout svg{width:58px;height:58px;margin:0 auto 18px;color:var(--orange)}
+.atout h3{font-size:22px;margin-bottom:10px;color:var(--creme)}
+.atout p{font-size:15.5px;color:#d8cdb4;margin:0}
+
+/* ---------- Étapes ---------- */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;margin:0;padding:0}
+.etape{position:relative;background:var(--creme-2);border:2.5px dashed var(--encre);border-radius:12px;padding:56px 22px 26px;text-align:center;margin-top:34px;transition:background .25s}
+.etape:hover{background:#f9eed4}
+.etape .no{position:absolute;top:-36px;left:50%;transform:translateX(-50%);width:72px;height:72px;border-radius:50%;background:var(--orange);border:3px solid var(--encre);display:grid;place-items:center;font-family:var(--display);font-size:34px;box-shadow:3px 3px 0 var(--encre)}
+.etape h3{font-size:22px;color:var(--sapin);margin-bottom:8px}
+.etape p{font-size:15.5px;color:var(--encre-doux);margin:0}
+
+/* ---------- À propos ---------- */
+.apropos{background:var(--creme-2);border-top:3px solid var(--encre);border-bottom:3px solid var(--encre)}
+.apropos-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.cadre{background:var(--creme);border:3px solid var(--encre);padding:14px;box-shadow:8px 8px 0 var(--petrole);transform:rotate(-1.5deg);transition:transform .4s}
+.cadre:hover{transform:rotate(0)}
+.cadre svg{width:100%;height:auto;border:2px solid var(--encre)}
+.cadre figcaption{text-align:center;font-family:var(--display);font-size:17px;color:var(--encre-doux);padding-top:12px}
+.apropos h2{font-size:clamp(34px,4.2vw,50px);color:var(--sapin);margin:20px 0 22px}
+.apropos .lead{font-size:19px;font-weight:500}
+.tampon{display:inline-flex;align-items:center;gap:12px;margin-top:10px;border:3px solid var(--petrole);color:var(--petrole);padding:8px 18px;border-radius:6px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;transform:rotate(-2deg)}
+
+/* ---------- Réalisations ---------- */
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.carte-postale{margin:0;background:#fffaf0;border:3px solid var(--encre);padding:12px 12px 16px;box-shadow:5px 5px 0 var(--encre);transition:transform .3s,box-shadow .3s}
+.carte-postale:nth-child(odd){transform:rotate(-1deg)}
+.carte-postale:nth-child(even){transform:rotate(1deg)}
+.carte-postale:hover{transform:rotate(0) translateY(-5px);box-shadow:9px 9px 0 var(--orange)}
+.carte-postale svg{width:100%;height:auto;aspect-ratio:4/3;border:2px solid var(--encre)}
+.carte-postale figcaption{padding:14px 6px 0}
+.carte-postale b{display:block;font-family:var(--display);font-weight:400;font-size:21px;color:var(--sapin)}
+.carte-postale span{font-size:14.5px;color:var(--encre-doux)}
+.note-ill{text-align:center;font-size:14px;color:var(--encre-doux);font-style:italic;margin-top:28px}
+.tarifs{margin-top:80px;background:var(--petrole);color:var(--creme);border:3px solid var(--encre);border-radius:18px;padding:40px;display:grid;grid-template-columns:1.1fr 2fr;gap:40px;align-items:center;box-shadow:8px 8px 0 var(--encre)}
+.tarifs h3{font-size:clamp(30px,3.4vw,42px);line-height:1.05}
+.tarifs h3 em{font-style:normal;color:var(--orange)}
+.tarifs p{color:#d9e6e9;margin:12px 0 0}
+.tarifs ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tarifs li{display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(245,236,215,.1);border:1.5px solid rgba(245,236,215,.35);border-radius:10px;padding:13px 16px;font-weight:600}
+.tarifs li span{background:var(--creme);color:var(--encre);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border-radius:20px;padding:4px 10px;white-space:nowrap}
+
+/* ---------- Avis ---------- */
+.avis{max-width:860px;margin:0 auto;text-align:center;background:var(--orange);border:3px solid var(--encre);border-radius:20px;padding:50px 36px;box-shadow:8px 8px 0 var(--sapin);position:relative}
+.avis h2{font-size:clamp(30px,3.6vw,44px);margin:0 0 14px}
+.avis p{max-width:560px;margin:0 auto 26px;font-size:17.5px}
+.avis .etoiles{display:flex;justify-content:center;gap:6px;margin-bottom:16px}
+.avis .etoiles svg{width:30px;height:30px}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--creme-2);border-top:3px solid var(--encre)}
+.faq-liste{max-width:880px;margin:0 auto;display:grid;gap:14px}
+.q{background:var(--creme);border:2.5px solid var(--encre);border-radius:14px;box-shadow:4px 4px 0 var(--encre);overflow:hidden}
+.q button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;background:none;border:0;font-family:var(--sans);font-size:18px;font-weight:700;color:var(--encre);padding:20px 22px;text-align:left;cursor:pointer}
+.q button:hover{color:var(--petrole)}
+.q .pm{width:34px;height:34px;flex:none;border-radius:50%;background:var(--sapin);color:var(--creme);display:grid;place-items:center;font-size:22px;font-weight:700;line-height:1;transition:transform .3s,background .3s}
+.q button[aria-expanded="true"] .pm{transform:rotate(45deg);background:var(--orange);color:var(--encre)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q .rep>div{overflow:hidden}
+.q .rep p{margin:0;padding:0 22px 22px;color:var(--encre-doux)}
+.q.ouvert .rep{grid-template-rows:1fr}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.carton{background:var(--creme);border:3px solid var(--encre);border-radius:16px;padding:32px;box-shadow:6px 6px 0 var(--encre)}
+.carton h3{font-size:26px;color:var(--sapin);margin-bottom:18px}
+.coord{list-style:none;padding:0;margin:0 0 24px}
+.coord li{display:flex;gap:14px;padding:11px 0;border-bottom:1.5px dashed rgba(43,33,24,.3)}
+.coord svg{width:22px;height:22px;color:var(--petrole);flex:none;margin-top:2px}
+.coord a{font-weight:600;text-decoration:none}
+.coord a:hover{color:var(--petrole);text-decoration:underline}
+.coord small{display:block;font-size:13px;color:var(--encre-doux)}
+.rdv{display:inline-block;background:var(--sapin);color:var(--creme);font-weight:700;padding:6px 14px;border-radius:30px;font-size:14.5px;margin-bottom:12px}
+.horaires{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:15.5px}
+.horaires td{padding:8px 10px;border-bottom:1px solid rgba(43,33,24,.18)}
+.horaires td:last-child{text-align:right;color:var(--encre-doux)}
+.horaires tr.auj td{background:var(--orange);color:var(--encre);font-weight:700;border-bottom-color:var(--encre)}
+.horaires .tag{display:inline-block;margin-left:8px;background:var(--encre);color:var(--creme);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:2px 8px;border-radius:20px;vertical-align:middle}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .plein{grid-column:1/-1}
+.form label{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--sapin)}
+.form input,.form select,.form textarea{width:100%;font-family:var(--sans);font-size:16px;background:#fffaf0;color:var(--encre);border:2px solid var(--encre);border-radius:10px;padding:12px 14px;transition:box-shadow .2s}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(224,120,47,.4)}
+.form textarea{min-height:120px;resize:vertical}
+.form .rgpd{font-size:13.5px;color:var(--encre-doux);margin:0}
+.form-ok{display:none;background:var(--sapin);color:var(--creme);border-radius:10px;padding:12px 16px;margin:0;font-weight:600}
+.form-ok.vu{display:block}
+
+/* ---------- Pied ---------- */
+.pied{background:var(--encre);color:#e9dcc0;padding:70px 0 0;position:relative}
+.pied::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:repeating-linear-gradient(90deg,var(--orange) 0 40px,var(--encre) 40px 52px,var(--sapin) 52px 92px,var(--encre) 92px 104px,var(--petrole) 104px 144px,var(--encre) 144px 156px)}
+.pied-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.pied h4{font-family:var(--display);font-weight:400;font-size:21px;color:var(--orange);margin:0 0 14px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin-bottom:8px;font-size:15px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--orange)}
+.pied .brand-txt b{color:var(--creme)}
+.pied .brand-txt small{color:#9cc6d4}
+.pied-bas{margin-top:50px;border-top:1px solid rgba(245,236,215,.18);padding:20px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:#bcae94}
+.demo{background:#1c150f;color:#b9ab92;text-align:center;font-size:13px;padding:14px 16px}
+
+/* ---------- Appel flottant ---------- */
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:90;width:62px;height:62px;border-radius:50%;background:var(--orange);color:var(--encre);border:3px solid var(--encre);box-shadow:3px 3px 0 var(--encre);align-items:center;justify-content:center;text-decoration:none}
+.appel-flottant svg{width:26px;height:26px}
+.appel-flottant::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--orange);animation:onde 2.2s ease-out infinite}
+@keyframes onde{from{transform:scale(.9);opacity:1}to{transform:scale(1.3);opacity:0}}
+
+/* ---------- Apparitions ---------- */
+.reveal{opacity:0;transform:translateY(24px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .atouts,.etapes{grid-template-columns:repeat(2,1fr)}
+  .etapes{row-gap:50px}
+  .badges{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .pied-grid{grid-template-columns:1fr 1fr}
+  .ticket{grid-template-columns:auto 1fr}
+  .ticket-actions{grid-column:1/-1;flex-direction:row;padding:0 24px 22px;border-top:0}
+  .ticket-actions .btn{flex:1}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:fixed;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--creme);border-bottom:3px double var(--encre);padding:8px 24px 24px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu li{border-bottom:1.5px dashed rgba(43,33,24,.3)}
+  .menu li:last-child{border:0;margin-top:16px}
+  .menu a:not(.btn){display:block;padding:14px 0;font-size:18px}
+  .menu .btn{width:100%;padding:14px;font-size:15px}
+  .apropos-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .tarifs{grid-template-columns:1fr}
+  .appel-flottant{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .sec{padding:76px 0}
+  .hero-intro{padding:40px 16px 32px}
+  .hero-ctas{flex-direction:column;align-items:stretch;max-width:340px;margin:0 auto}
+  .bandeau svg{height:300px}
+  .ticket-zone{margin-top:-28px;padding:0 16px}
+  .cartouche{font-size:11px;letter-spacing:.12em;padding:7px 14px}
+  .ticket{grid-template-columns:1fr;box-shadow:5px 5px 0 var(--sapin);
+    -webkit-mask:radial-gradient(circle 12px at 50% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at 50% 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+    mask:radial-gradient(circle 12px at 50% 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at 50% 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+  .ticket-talon{border-right:0;border-bottom:3px dashed var(--encre);border-radius:11px 11px 0 0;flex-direction:row;gap:12px;padding:16px;flex-wrap:wrap}
+  .ticket-talon b{font-size:34px}
+  .ticket-corps{padding:20px 18px 10px}
+  .ticket-lignes{grid-template-columns:1fr}
+  .ticket-actions{flex-direction:column;padding:8px 18px 22px}
+  .badges{grid-template-columns:1fr 1fr;gap:28px 12px}
+  .badge .rond{width:100px;height:100px}
+  .badge .rond svg{width:42px;height:42px}
+  .badge b{font-size:18px}
+  .badge span{font-size:13.5px}
+  .services-grid,.atouts,.etapes,.galerie{grid-template-columns:1fr}
+  .tarifs{padding:28px 20px}
+  .tarifs ul{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .carton{padding:24px 18px}
+  .avis{padding:40px 20px}
+  .pied-grid{grid-template-columns:1fr}
+  .pied-bas{padding:20px 16px}
+  .horaires td{padding:8px 6px}
+  .horaires td:last-child{white-space:nowrap}
+  .q button{font-size:16.5px;padding:18px 16px}
+  .q .rep p{padding:0 16px 18px}
+  .brand-txt b{font-size:19px}
+  .brand svg{width:44px;height:44px}
+  .demo{padding-bottom:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+h1,h2,h3{text-wrap:balance}
+.plaque .ico svg{stroke:var(--creme)}
+.plaque:nth-child(3n) .ico svg{stroke:var(--encre)}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#haut" aria-label="Abonnel et Blandin – accueil">
+      <svg viewBox="0 0 50 50" aria-hidden="true">
+        <circle cx="25" cy="25" r="23.5" fill="#1f4a3d" stroke="#2b2118" stroke-width="2"/>
+        <circle cx="25" cy="25" r="19" fill="none" stroke="#f5ecd7" stroke-width="1.2" stroke-dasharray="2 2.4"/>
+        <text x="25" y="30" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="15" fill="#f5ecd7">A&amp;B</text>
+        <path d="M25 6.5l1.2 2.5 2.7.3-2 1.8.6 2.7-2.5-1.4-2.4 1.4.5-2.7-2-1.8 2.7-.3z" fill="#e0782f"/>
+        <text x="25" y="41" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="700" font-size="5" fill="#e0782f" letter-spacing=".6">1960</text>
+      </svg>
+      <span class="brand-txt"><b>Abonnel &amp; Blandin</b><small>Plomberie · Chauffage</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#maison">La maison</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-orange" href="tel:+33476230913">04 76 23 09 13</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenu">
+<!-- ===================== EN-TÊTE ===================== -->
+<section class="hero" id="haut" aria-labelledby="titre-hero">
+  <div class="hero-intro">
+    <span class="cartouche">Plombier chauffagiste · Grenoble</span>
+    <h1 id="titre-hero">Abonnel <span class="et">&amp;</span> Blandin</h1>
+    <p class="accroche">Votre chaudière entre de bonnes mains, à Grenoble depuis 1960.</p>
+    <p class="sous">Chaudières gaz et fioul, dépannage, chauffe-eau, plomberie et salles de bain&nbsp;: un atelier de la rue Jacquard qui chauffe les Grenoblois de génération en génération.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-orange" href="tel:+33476230913"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+      <a class="btn btn-creme" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+    </div>
+  </div>
+
+  <div class="bandeau">
+    <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration rétro&nbsp;: l'atelier Abonnel et Blandin avec son enseigne « Depuis 1960 », une chaudière en vitrine et les montagnes de Grenoble">
+      <defs>
+        <pattern id="store" width="60" height="10" patternUnits="userSpaceOnUse"><rect width="30" height="10" fill="#e0782f"/><rect x="30" width="30" height="10" fill="#f5ecd7"/></pattern>
+        <pattern id="briques" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#e4d3ae"/><path d="M0 19.5h40M20 0v10M0 10h40M0 10v10M40 10v10" stroke="#cdb98f" stroke-width="1.5"/></pattern>
+      </defs>
+      <rect width="1440" height="500" fill="#ede0c2"/>
+      <!-- soleil rayonnant -->
+      <g class="soleil" opacity=".55">
+        <g fill="#e4d3ae">
+          <path d="M720 300 L560 -200 L640 -200Z"/><path d="M720 300 L800 -200 L880 -200Z"/><path d="M720 300 L1040 -180 L1120 -120Z"/><path d="M720 300 L1240 0 L1280 70Z"/><path d="M720 300 L400 -180 L320 -120Z"/><path d="M720 300 L200 0 L160 70Z"/><path d="M720 300 L1400 180 L1420 260Z"/><path d="M720 300 L40 180 L20 260Z"/>
+        </g>
+      </g>
+      <circle cx="720" cy="300" r="150" fill="#e0782f" opacity=".85"/>
+      <circle cx="720" cy="300" r="122" fill="none" stroke="#f5ecd7" stroke-width="3" stroke-dasharray="6 8"/>
+      <!-- montagnes -->
+      <path d="M0 330 L120 250 L190 290 L300 190 L380 250 L450 210 L540 300 L0 360Z" fill="#1d5c73"/>
+      <path d="M300 190 L330 218 L318 222 L300 208 L284 224 L272 218Z" fill="#f5ecd7"/>
+      <path d="M880 300 L980 220 L1040 250 L1150 160 L1230 230 L1300 200 L1440 290 L1440 360 L880 360Z" fill="#1d5c73"/>
+      <path d="M1150 160 L1178 186 L1166 190 L1150 178 L1136 192 L1124 186Z" fill="#f5ecd7"/>
+      <path d="M0 360 C200 320 360 350 520 330 L920 330 C1080 350 1240 320 1440 350 L1440 500 L0 500Z" fill="#1f4a3d"/>
+      <!-- trottoir -->
+      <rect x="0" y="452" width="1440" height="48" fill="#2b2118"/>
+      <rect x="0" y="446" width="1440" height="8" fill="#5a4a3c"/>
+      <!-- immeubles voisins -->
+      <rect x="200" y="250" width="200" height="196" fill="#e4d3ae" stroke="#2b2118" stroke-width="3"/>
+      <g fill="#1d5c73" stroke="#2b2118" stroke-width="2"><rect x="226" y="276" width="40" height="54"/><rect x="290" y="276" width="40" height="54"/><rect x="354" y="276" width="30" height="54"/><rect x="226" y="356" width="40" height="54"/><rect x="290" y="356" width="40" height="54"/></g>
+      <rect x="1040" y="236" width="210" height="210" fill="#e4d3ae" stroke="#2b2118" stroke-width="3"/>
+      <g fill="#1d5c73" stroke="#2b2118" stroke-width="2"><rect x="1064" y="262" width="40" height="54"/><rect x="1126" y="262" width="40" height="54"/><rect x="1188" y="262" width="40" height="54"/><rect x="1064" y="344" width="40" height="54"/><rect x="1188" y="344" width="40" height="54"/></g>
+      <!-- façade de l'atelier -->
+      <rect x="420" y="150" width="600" height="296" fill="url(#briques)" stroke="#2b2118" stroke-width="4"/>
+      <rect x="420" y="138" width="600" height="18" fill="#2b2118"/>
+      <!-- cheminée et fumée -->
+      <rect x="900" y="96" width="38" height="44" fill="#5a4a3c" stroke="#2b2118" stroke-width="3"/>
+      <path class="fumee-b" d="M919 90 c-12 -10 6 -18 -4 -30 c-8 -10 8 -16 2 -26" stroke="#f5ecd7" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path class="fumee-b f2" d="M919 90 c10 -12 -6 -20 4 -32" stroke="#f5ecd7" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <!-- enseigne principale -->
+      <rect x="470" y="170" width="500" height="64" rx="10" fill="#1f4a3d" stroke="#2b2118" stroke-width="4"/>
+      <rect x="480" y="179" width="480" height="46" rx="6" fill="none" stroke="#f5ecd7" stroke-width="2"/>
+      <text x="720" y="214" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="34" fill="#f5ecd7" letter-spacing="2">ABONNEL &amp; BLANDIN</text>
+      <!-- store rayé -->
+      <path d="M450 250 h540 l-24 46 h-492z" fill="url(#store)" stroke="#2b2118" stroke-width="3"/>
+      <path d="M474 296 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0 q15 14 30 0" fill="#e0782f" stroke="#2b2118" stroke-width="3"/>
+      <!-- vitrine -->
+      <rect x="470" y="318" width="310" height="128" fill="#1d5c73" stroke="#2b2118" stroke-width="4"/>
+      
+      <text x="625" y="342" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="12" fill="#f5ecd7" letter-spacing="3">PLOMBERIE · CHAUFFAGE</text>
+      <!-- chaudière vintage en vitrine -->
+      <rect x="590" y="352" width="70" height="90" rx="8" fill="#f5ecd7" stroke="#2b2118" stroke-width="3"/>
+      <rect x="600" y="362" width="50" height="16" rx="3" fill="#2b2118"/>
+      <circle cx="612" cy="370" r="4" fill="#e0782f"/><circle cx="638" cy="370" r="4" fill="#f5ecd7"/>
+      <rect x="606" y="390" width="38" height="26" rx="4" fill="#2b2118"/>
+      <path class="flamme-b" d="M618 414 c-4 -8 2 -14 6 -18 c1 5 3 6 4 7 c1 -4 3 -7 5 -9 c3 8 4 14 0 20z" fill="#e0782f"/>
+      <path d="M605 442 v4 M645 442 v4" stroke="#2b2118" stroke-width="3"/>
+      <path d="M600 352 v-6 h10 v6 M640 352 v-6 h10 v6" fill="none" stroke="#2b2118" stroke-width="3"/>
+      <!-- tuyaux et robinet -->
+      <path d="M500 442 v-60 h50 v-20" fill="none" stroke="#e0782f" stroke-width="7"/>
+      <path d="M500 442 v-60 h50 v-20" fill="none" stroke="#2b2118" stroke-width="2" stroke-dasharray="1 0" opacity=".0"/>
+      <path d="M700 442 v-44 h46" fill="none" stroke="#f5ecd7" stroke-width="7"/>
+      <rect x="742" y="388" width="16" height="20" rx="3" fill="#e0782f" stroke="#2b2118" stroke-width="2"/>
+      <!-- porte -->
+      <rect x="810" y="318" width="80" height="128" fill="#e0782f" stroke="#2b2118" stroke-width="4"/>
+      <rect x="822" y="330" width="56" height="50" fill="#1d5c73" stroke="#2b2118" stroke-width="2.5"/>
+      <circle cx="878" cy="398" r="4" fill="#2b2118"/>
+      <text x="850" y="312" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="13" fill="#2b2118">N° 25</text>
+      <!-- plaques émaillées -->
+      <rect x="910" y="320" width="96" height="40" rx="8" fill="#1d5c73" stroke="#2b2118" stroke-width="3"/>
+      <text x="958" y="345" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="12" fill="#f5ecd7" letter-spacing="1">GAZ · FIOUL</text>
+      <rect x="910" y="372" width="96" height="40" rx="8" fill="#f5ecd7" stroke="#2b2118" stroke-width="3"/>
+      <text x="958" y="397" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="11" fill="#1f4a3d" letter-spacing="1">SALLE DE BAIN</text>
+      <!-- enseigne drapeau « Depuis 1960 » -->
+      <path d="M1020 186 h60" stroke="#2b2118" stroke-width="5"/>
+      <g class="enseigne">
+        <path d="M1050 186 v14 M1050 186" stroke="#2b2118" stroke-width="3"/>
+        <circle cx="1050" cy="250" r="50" fill="#e0782f" stroke="#2b2118" stroke-width="4"/>
+        <circle cx="1050" cy="250" r="40" fill="none" stroke="#2b2118" stroke-width="2" stroke-dasharray="3 3"/>
+        <text x="1050" y="238" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="11" fill="#2b2118" letter-spacing="2">DEPUIS</text>
+        <text x="1050" y="270" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="30" fill="#2b2118">1960</text>
+        <path d="M1050 200 v0" stroke="#2b2118"/>
+      </g>
+      <!-- lampadaire -->
+      <path d="M140 446 v-170" stroke="#2b2118" stroke-width="6"/>
+      <path d="M140 276 q0 -26 30 -26" stroke="#2b2118" stroke-width="5" fill="none"/>
+      <path d="M160 250 h28 l-6 14 h-16z" fill="#e0782f" stroke="#2b2118" stroke-width="3"/>
+      <!-- camionnette -->
+      <g transform="translate(1270 372)">
+        <path d="M0 74 V24 a14 14 0 0 1 14-14 H96 l30 30 v34z" fill="#1f4a3d" stroke="#2b2118" stroke-width="4"/>
+        <path d="M100 18 l20 22 h-20z" fill="#1d5c73" stroke="#2b2118" stroke-width="3"/>
+        <rect x="10" y="34" width="80" height="18" fill="#f5ecd7"/>
+        <text x="50" y="47" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="10" fill="#1f4a3d">A&amp;B</text>
+        <circle cx="28" cy="76" r="12" fill="#2b2118"/><circle cx="28" cy="76" r="5" fill="#e4d3ae"/>
+        <circle cx="104" cy="76" r="12" fill="#2b2118"/><circle cx="104" cy="76" r="5" fill="#e4d3ae"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="ticket-zone">
+    <div class="ticket reveal">
+      <div class="ticket-talon">
+        <small>Atelier fondé en</small>
+        <b>1960</b>
+        <span>Grenoble · Isère</span>
+      </div>
+      <div class="ticket-corps">
+        <h2>Un souci de chauffage&nbsp;? Un projet&nbsp;?</h2>
+        <div class="ticket-lignes">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33476230913">04 76 23 09 13</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><a href="tel:+33603074750">06 03 07 47 50</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:abonnel.blandin@orange.fr">abonnel.blandin@orange.fr</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-7.5 8-13a8 8 0 0 0-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><span>25 rue Jacquard, Grenoble</span></div>
+        </div>
+      </div>
+      <div class="ticket-actions">
+        <a class="btn btn-orange" href="tel:+33476230913">Appeler</a>
+        <a class="btn btn-sapin" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONFIANCE ===================== -->
+<section class="confiance" aria-label="Informations de confiance">
+  <div class="wrap">
+    <ul class="badges">
+      <li class="badge b1 reveal">
+        <div class="rond"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M26 4l18 7v13c0 12-8 20-18 24C16 44 8 36 8 24V11z"/><path d="M17 26l6 6 12-13"/></svg></div>
+        <b>QUALIBAT</b><span>Remplacement chaudière</span>
+      </li>
+      <li class="badge b2 reveal d1">
+        <div class="rond"><svg viewBox="0 0 52 52" aria-hidden="true"><text x="26" y="22" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="9" fill="currentColor" letter-spacing="1.5">DEPUIS</text><text x="26" y="40" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="18" fill="currentColor">1960</text></svg></div>
+        <b>Depuis 1960</b><span>Une entreprise grenobloise</span>
+      </li>
+      <li class="badge b3 reveal d2">
+        <div class="rond"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M4 42l14-22 9 12 6-8 15 18z"/><circle cx="38" cy="12" r="5"/></svg></div>
+        <b>Grenoble &amp; alentours</b><span>Atelier rue Jacquard, 38100</span>
+      </li>
+      <li class="badge b4 reveal d3">
+        <div class="rond"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 28h32v4a10 10 0 0 1-10 10H20a10 10 0 0 1-10-10z"/><path d="M14 28V12a5 5 0 0 1 10 0"/><path d="M20 42l-2 5M32 42l2 5"/><path d="M24 15v3"/></svg></div>
+        <b>Partenaire Espace Aubade</b><span>Pour vos projets de salle de bain</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="sec" id="services" aria-labelledby="titre-services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Nos services</span>
+      <h2 id="titre-services">Du robinet à la chaudière</h2>
+      <p>Tout ce qui chauffe et tout ce qui coule dans votre maison, avec le sérieux d'un atelier qui a vu passer des générations de chaudières.</p>
+    </div>
+    <div class="services-grid">
+      <article class="plaque reveal"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="4" width="22" height="32" rx="3"/><rect x="13" y="8" width="14" height="6" rx="1"/><path d="M17 31c-2-3 0-6 3-8 0 2 1 3 2 3 0-2 1-3 2-4 1 4 1 7-1 9z"/></svg></div>
+        <h3>Chaudière gaz</h3><p>Installation et mise en service de chaudières gaz, adaptées à votre logement et à vos besoins.</p></article>
+      <article class="plaque reveal d1"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="20" height="26" rx="3"/><path d="M10 16h10M10 21h10"/><path d="M25 18h6a3 3 0 0 1 3 3v10"/><path d="M31 4c2 3 3 4 3 6a3 3 0 0 1-6 0c0-2 1-3 3-6z"/></svg></div>
+        <h3>Chaudière fioul</h3><p>Installation, remplacement ou dépannage de votre chaudière fioul, en maison comme en immeuble.</p></article>
+      <article class="plaque reveal d2"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#2b2118" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14a12 12 0 0 1 20-6l4-3v10H22l4-3a8 8 0 0 0-14 4"/><path d="M32 26a12 12 0 0 1-20 6l-4 3V25h10l-4 3a8 8 0 0 0 14-4"/></svg></div>
+        <h3>Remplacement chaudière</h3><p>Une vieille chaudière fatiguée&nbsp;? Nous la remplaçons par un modèle plus économe. QUALIBAT Remplacement chaudière.</p></article>
+      <article class="plaque reveal d3"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6a8 8 0 0 0-9 10L5 26a3 3 0 0 0 4 4l10-10a8 8 0 0 0 10-9l-5 5-4-1-1-4z"/></svg></div>
+        <h3>Dépannage chauffage</h3><p>Panne de chauffage ou d'eau chaude en plein hiver grenoblois&nbsp;? Appelez l'atelier pour un diagnostic.</p></article>
+      <article class="plaque reveal"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="4" width="16" height="30" rx="8"/><path d="M15 34v3M25 34v3"/><path d="M20 14v8"/><circle cx="20" cy="24" r="3"/></svg></div>
+        <h3>Chauffe-eau</h3><p>Pose et remplacement de chauffe-eau et ballons d'eau chaude, dimensionnés pour votre foyer.</p></article>
+      <article class="plaque reveal d1"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22h28v3a9 9 0 0 1-9 9H15a9 9 0 0 1-9-9z"/><path d="M10 22V9a4 4 0 0 1 8 0"/><path d="M15 34l-2 3M25 34l2 3"/><path d="M26 10v2M30 12v2M22 12v2"/></svg></div>
+        <h3>Salle de bain</h3><p>Création ou rénovation de salle de bain&nbsp;: douche, baignoire, vasques et toute la plomberie qui va avec.</p></article>
+      <article class="plaque reveal d2"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#2b2118" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14h12v-4h8v4h4a6 6 0 0 1 6 6v4"/><path d="M4 10v8"/><path d="M34 28c1.5 2 2.5 3.2 2.5 4.5a2.5 2.5 0 0 1-5 0c0-1.3 1-2.5 2.5-4.5z"/></svg></div>
+        <h3>Plomberie</h3><p>Fuites, canalisations, robinetterie, raccordements&nbsp;: les travaux de plomberie du quotidien comme les plus importants.</p></article>
+      <article class="plaque reveal d3"><i class="rivet r1"></i><i class="rivet r2"></i>
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5ecd7" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="30" height="24" rx="3"/><path d="M11 9v24M17 9v24M23 9v24M29 9v24"/><path d="M5 36h4M31 36h4"/></svg></div>
+        <h3>Radiateurs &amp; circuits</h3><p>Ajout ou remplacement de radiateurs, désembouage et équilibrage pour un chauffage homogène.</p></article>
+    </div>
+  </div>
+</section>
+
+<div class="rayures" aria-hidden="true"></div>
+
+<!-- ===================== POURQUOI ===================== -->
+<section class="sec pourquoi" aria-labelledby="titre-pourquoi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Pourquoi nous choisir</span>
+      <h2 id="titre-pourquoi">Le métier, à l'ancienne et à jour</h2>
+      <p>Les méthodes d'un atelier de quartier, les exigences d'aujourd'hui.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout reveal"><svg viewBox="0 0 58 58" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="29" cy="29" r="24"/><path d="M29 15v14l9 6"/></svg><h3>Une adresse qui dure</h3><p>Fondée en 1960, l'entreprise fait partie du paysage grenoblois depuis plus de soixante ans.</p></div>
+      <div class="atout reveal d1"><svg viewBox="0 0 58 58" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M29 5l20 8v14c0 13-9 22-20 26C18 49 9 40 9 27V13z"/><path d="M19 29l7 7 13-14"/></svg><h3>Qualification reconnue</h3><p>L'entreprise est qualifiée QUALIBAT pour le remplacement de chaudière.</p></div>
+      <div class="atout reveal d2"><svg viewBox="0 0 58 58" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="20" r="8"/><circle cx="40" cy="22" r="6"/><path d="M8 48c1-9 7-14 14-14s13 5 14 14M36 34c7 0 12 4 13 11"/></svg><h3>Une petite équipe</h3><p>Une structure à taille humaine&nbsp;: vous savez qui vient chez vous et à qui vous parlez.</p></div>
+      <div class="atout reveal d3"><svg viewBox="0 0 58 58" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h38v26H24l-10 8v-8h-4z"/><path d="M18 22h22M18 29h14"/></svg><h3>Des conseils honnêtes</h3><p>Réparer quand c'est possible, remplacer quand c'est utile&nbsp;: nous vous expliquons simplement les options.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="rayures" aria-hidden="true"></div>
+
+<!-- ===================== ÉTAPES ===================== -->
+<section class="sec" aria-labelledby="titre-etapes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Comment ça se passe</span>
+      <h2 id="titre-etapes">Quatre étapes, pas une de plus</h2>
+    </div>
+    <ol class="etapes">
+      <li class="etape reveal"><span class="no">1</span><h3>Vous appelez</h3><p>Au <span style="white-space:nowrap">04 76 23 09 13</span> ou au <span style="white-space:nowrap">06 03 07 47 50</span>&nbsp;: vous expliquez votre besoin ou votre panne.</p></li>
+      <li class="etape reveal d1"><span class="no">2</span><h3>On regarde</h3><p>Visite sur place pour voir l'installation, comprendre la situation et prendre les mesures.</p></li>
+      <li class="etape reveal d2"><span class="no">3</span><h3>Le devis</h3><p>Un devis clair et détaillé, sans surprise, pour décider en connaissance de cause.</p></li>
+      <li class="etape reveal d3"><span class="no">4</span><h3>Le chantier</h3><p>Intervention, mise en service, essais, et explications pour bien utiliser votre installation.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== À PROPOS ===================== -->
+<section class="sec apropos" id="maison" aria-labelledby="titre-apropos">
+  <div class="wrap apropos-grid">
+    <figure class="cadre reveal" style="margin:0">
+      <svg viewBox="0 0 480 360" aria-hidden="true">
+        <rect width="480" height="360" fill="#e4d3ae"/>
+        <g opacity=".5" fill="#ede0c2"><path d="M240 360 L0 0 H60Z"/><path d="M240 360 L120 0 H180Z"/><path d="M240 360 L240 0 H300Z"/><path d="M240 360 L360 0 H420Z"/><path d="M240 360 L480 40 V100Z"/></g>
+        <!-- plaque émaillée centrale -->
+        <rect x="60" y="70" width="360" height="160" rx="22" fill="#1f4a3d" stroke="#2b2118" stroke-width="5"/>
+        <rect x="74" y="84" width="332" height="132" rx="14" fill="none" stroke="#f5ecd7" stroke-width="3"/>
+        <circle cx="90" cy="100" r="6" fill="#e4d3ae" stroke="#2b2118" stroke-width="2"/><circle cx="390" cy="100" r="6" fill="#e4d3ae" stroke="#2b2118" stroke-width="2"/><circle cx="90" cy="200" r="6" fill="#e4d3ae" stroke="#2b2118" stroke-width="2"/><circle cx="390" cy="200" r="6" fill="#e4d3ae" stroke="#2b2118" stroke-width="2"/>
+        <text x="240" y="126" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="15" fill="#e0782f" letter-spacing="5">PLOMBERIE · CHAUFFAGE</text>
+        <text x="240" y="172" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="31" fill="#f5ecd7">Abonnel &amp; Blandin</text>
+        <text x="240" y="200" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="700" font-size="13" fill="#f5ecd7" letter-spacing="3">25 RUE JACQUARD · GRENOBLE</text>
+        <!-- ruban -->
+        <path d="M150 250 h180 l-14 22 14 22 H150 l14-22z" fill="#e0782f" stroke="#2b2118" stroke-width="4"/>
+        <text x="240" y="280" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="22" fill="#2b2118">depuis 1960</text>
+        <!-- clés -->
+        <g stroke="#1d5c73" stroke-width="8" stroke-linecap="round"><path d="M40 330 L110 300"/><path d="M440 330 L370 300"/></g>
+        <circle cx="110" cy="300" r="12" fill="none" stroke="#1d5c73" stroke-width="7"/><circle cx="370" cy="300" r="12" fill="none" stroke="#1d5c73" stroke-width="7"/>
+      </svg>
+      <figcaption>L'enseigne de la rue Jacquard, réinterprétée</figcaption>
+    </figure>
+    <div class="reveal d1">
+      <span class="cartouche">La maison</span>
+      <h2 id="titre-apropos">Une entreprise grenobloise fondée en 1960</h2>
+      <p class="lead">Abonnel et Blandin est une SARL de plomberie et de chauffage installée au 25 rue Jacquard, à Grenoble, depuis sa création en 1960.</p>
+      <p>Chaudières gaz et fioul — installation, remplacement, dépannage —, chauffe-eau, salles de bain&nbsp;: la petite équipe de l'atelier intervient sur tout ce qui chauffe et tout ce qui coule dans la maison.</p>
+      <p>L'entreprise est qualifiée QUALIBAT Remplacement chaudière et travaille en artisan partenaire du réseau Espace Aubade à Grenoble pour les projets de salle de bain.</p>
+      <span class="tampon">★ QUALIBAT · Remplacement chaudière ★</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RÉALISATIONS ===================== -->
+<section class="sec" id="realisations" aria-labelledby="titre-real">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Réalisations</span>
+      <h2 id="titre-real">Cartes postales de chantier</h2>
+      <p>Un aperçu, en images dessinées, des travaux que l'atelier réalise chez les Grenoblois.</p>
+    </div>
+    <div class="galerie">
+      <figure class="carte-postale reveal">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#f5ecd7"/><rect y="230" width="400" height="70" fill="#e4d3ae"/>
+          <rect x="140" y="40" width="120" height="170" rx="12" fill="#fffaf0" stroke="#2b2118" stroke-width="4"/>
+          <rect x="158" y="60" width="84" height="34" rx="6" fill="#1d5c73" stroke="#2b2118" stroke-width="3"/>
+          <circle cx="178" cy="77" r="6" fill="#e0782f"/><rect x="194" y="72" width="36" height="10" rx="3" fill="#f5ecd7"/>
+          <path d="M160 210v30M185 210v30M215 210v30M240 210v30" stroke="#e0782f" stroke-width="7"/>
+          <path d="M60 240h80" stroke="#1d5c73" stroke-width="7"/><path d="M260 240h80" stroke="#e0782f" stroke-width="7"/>
+          <g fill="#e0782f"><path d="M300 70 l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2z"/></g>
+          <text x="200" y="285" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="13" fill="#2b2118" letter-spacing="3">NOUVELLE CHAUDIÈRE</text>
+        </svg>
+        <figcaption><b>Chaudière gaz murale</b><span>Remplacement d'une ancienne chaudière par un modèle récent.</span></figcaption>
+      </figure>
+      <figure class="carte-postale reveal d1">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#1d5c73"/>
+          <g stroke="#f5ecd7" stroke-opacity=".25" stroke-width="2"><path d="M0 40h400M0 80h400M0 120h400M0 160h400M0 200h400M40 0v230M80 0v230M120 0v230M160 0v230M200 0v230M240 0v230M280 0v230M320 0v230M360 0v230"/></g>
+          <rect y="230" width="400" height="70" fill="#e4d3ae"/>
+          <path d="M60 170h220v20a40 40 0 0 1-40 40H100a40 40 0 0 1-40-40z" fill="#fffaf0" stroke="#2b2118" stroke-width="4"/>
+          <path d="M90 230l-8 16M250 230l8 16" stroke="#2b2118" stroke-width="5" stroke-linecap="round"/>
+          <path d="M320 230V70h-30" fill="none" stroke="#e0782f" stroke-width="7"/><circle cx="280" cy="70" r="14" fill="#e0782f" stroke="#2b2118" stroke-width="3"/>
+          <g fill="#f5ecd7"><circle cx="276" cy="100" r="3"/><circle cx="284" cy="114" r="3"/><circle cx="272" cy="126" r="3"/><circle cx="286" cy="140" r="3"/></g>
+          <rect x="100" y="150" width="40" height="22" rx="8" fill="#e0782f" stroke="#2b2118" stroke-width="3"/>
+        </svg>
+        <figcaption><b>Salle de bain rétro-chic</b><span>Baignoire, douche et carrelage&nbsp;: la plomberie de A à Z.</span></figcaption>
+      </figure>
+      <figure class="carte-postale reveal d2">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#ede0c2"/>
+          <rect x="150" y="30" width="100" height="200" rx="50" fill="#fffaf0" stroke="#2b2118" stroke-width="4"/>
+          <rect x="174" y="80" width="52" height="20" rx="4" fill="#1f4a3d"/><circle cx="200" cy="140" r="16" fill="none" stroke="#2b2118" stroke-width="3"/><path d="M200 140l8-8" stroke="#e0782f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M175 230v40h-60M225 230v40h60" fill="none" stroke="#1d5c73" stroke-width="7"/>
+          <path d="M285 270h40" stroke="#e0782f" stroke-width="7"/>
+          <path d="M80 60 q20 -20 40 0 q20 20 40 0" fill="none" stroke="#e0782f" stroke-width="4"/>
+          <text x="80" y="200" font-family="Abril Fatface, Georgia, serif" font-size="30" fill="#1f4a3d">60°</text>
+        </svg>
+        <figcaption><b>Chauffe-eau neuf</b><span>Ballon d'eau chaude posé et raccordé en cellier.</span></figcaption>
+      </figure>
+      <figure class="carte-postale reveal">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#f5ecd7"/>
+          <rect x="40" y="70" width="140" height="180" rx="10" fill="#1f4a3d" stroke="#2b2118" stroke-width="4"/>
+          <rect x="60" y="90" width="100" height="40" rx="6" fill="#f5ecd7"/><circle cx="80" cy="110" r="8" fill="#e0782f"/>
+          <path d="M70 200 c-6-14 4-26 12-32 c2 8 6 10 8 12 c2-8 6-14 12-20 c6 16 8 30 0 40z" fill="#e0782f" stroke="#2b2118" stroke-width="2"/>
+          <rect x="220" y="160" width="140" height="90" rx="8" fill="#e4d3ae" stroke="#2b2118" stroke-width="4"/>
+          <text x="290" y="215" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="20" fill="#2b2118">FIOUL</text>
+          <path d="M180 140h60v20" fill="none" stroke="#2b2118" stroke-width="6"/>
+          <path d="M20 250h360" stroke="#2b2118" stroke-width="4"/>
+        </svg>
+        <figcaption><b>Chaufferie fioul</b><span>Chaudière au sol et cuve en sous-sol de maison.</span></figcaption>
+      </figure>
+      <figure class="carte-postale reveal d1">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#e0782f"/>
+          <circle cx="200" cy="150" r="110" fill="#f5ecd7" stroke="#2b2118" stroke-width="4"/>
+          <path d="M150 120a50 50 0 0 1 80-30l14-12v40h-40l14-12a30 30 0 0 0-50 22" fill="#1f4a3d" stroke="#2b2118" stroke-width="3"/>
+          <path d="M250 180a50 50 0 0 1-80 30l-14 12v-40h40l-14 12a30 30 0 0 0 50-22" fill="#1d5c73" stroke="#2b2118" stroke-width="3"/>
+          <text x="200" y="285" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="800" font-size="14" fill="#2b2118" letter-spacing="3">AVANT · APRÈS</text>
+        </svg>
+        <figcaption><b>Remplacement complet</b><span>Dépose de l'ancienne chaudière, pose et mise en service.</span></figcaption>
+      </figure>
+      <figure class="carte-postale reveal d2">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#1f4a3d"/>
+          <path d="M0 200 L80 120 L140 170 L220 90 L300 160 L360 120 L400 150 V300 H0Z" fill="#1d5c73"/>
+          <path d="M220 90 l18 18 -10 2 -8-8 -8 8 -10-2z" fill="#f5ecd7"/>
+          <rect x="60" y="170" width="280" height="90" rx="8" fill="#fffaf0" stroke="#2b2118" stroke-width="4"/>
+          <path d="M90 170v90M130 170v90M170 170v90M210 170v90M250 170v90M290 170v90" stroke="#2b2118" stroke-width="3"/>
+          <path d="M60 250h-30M340 250h30" stroke="#e0782f" stroke-width="7"/>
+          <g fill="#f5ecd7"><circle cx="40" cy="40" r="3"/><circle cx="120" cy="70" r="2.5"/><circle cx="330" cy="50" r="3"/><circle cx="280" cy="30" r="2"/></g>
+          <path d="M150 150 q10-14 0-28 M200 150 q10-14 0-28 M250 150 q10-14 0-28" stroke="#e0782f" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <figcaption><b>Radiateurs en fonte</b><span>Circuit désemboué, chaleur retrouvée pour l'hiver.</span></figcaption>
+      </figure>
+    </div>
+    <p class="note-ill">Illustrations indicatives des types de travaux réalisés.</p>
+
+    <div class="tarifs reveal">
+      <div>
+        <h3>Nos tarifs&nbsp;? <em>Sur devis</em>, tout simplement.</h3>
+        <p>Chaque installation est différente&nbsp;: le prix dépend du matériel, de l'accès et de l'état de l'existant. Le devis est établi après échange ou visite.</p>
+      </div>
+      <ul>
+        <li>Remplacement chaudière <span>Sur devis</span></li>
+        <li>Installation gaz / fioul <span>Sur devis</span></li>
+        <li>Dépannage chauffage <span>Sur devis</span></li>
+        <li>Chauffe-eau <span>Sur devis</span></li>
+        <li>Salle de bain <span>Sur devis</span></li>
+        <li>Plomberie <span>Sur devis</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVIS ===================== -->
+<section class="sec" style="padding-top:0" aria-labelledby="titre-avis">
+  <div class="wrap">
+    <div class="avis reveal">
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="#f5ecd7" stroke="#2b2118" stroke-width="1.6"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f5ecd7" stroke="#2b2118" stroke-width="1.6"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#f5ecd7" stroke="#2b2118" stroke-width="1.6"><path d="M12 2l3 6.6 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.2l1.4-7L2 9.4l7-.8z"/></svg>
+      </div>
+      <h2 id="titre-avis">Vous êtes client de l'atelier&nbsp;?</h2>
+      <p>Votre avis aide vos voisins grenoblois à trouver un chauffagiste de confiance. Quelques mots suffisent&nbsp;!</p>
+      <a class="btn btn-creme" href="https://www.google.com/maps/search/?api=1&amp;query=Abonnel%20et%20Blandin%2025%20rue%20Jacquard%2038100%20Grenoble" target="_blank" rel="noopener">Laisser un avis sur Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec faq" id="faq" aria-labelledby="titre-faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Questions fréquentes</span>
+      <h2 id="titre-faq">On nous demande souvent…</h2>
+    </div>
+    <div class="faq-liste reveal">
+      <div class="q"><button aria-expanded="false" aria-controls="r1" id="q1">Ma chaudière tombe souvent en panne&nbsp;: réparer ou remplacer&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r1" role="region" aria-labelledby="q1"><div><p>Tout dépend de l'âge de l'appareil, de la disponibilité des pièces et du coût des réparations successives. Après diagnostic, nous vous présentons honnêtement les deux options pour que vous puissiez choisir.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r2" id="q2">L'entretien annuel de la chaudière est-il obligatoire&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r2" role="region" aria-labelledby="q2"><div><p>Oui, l'entretien annuel est obligatoire pour les chaudières gaz et fioul. Il contribue à la sécurité, au bon rendement de l'appareil et à sa longévité. Contactez-nous pour en parler.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r3" id="q3">Je n'ai plus de chauffage, que faire&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r3" role="region" aria-labelledby="q3"><div><p>Vérifiez d'abord l'alimentation électrique, la pression du circuit et, pour le fioul, le niveau de la cuve. Si le problème persiste, appelez l'atelier&nbsp;: nous vous indiquerons la marche à suivre et les possibilités d'intervention.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r4" id="q4">Existe-t-il des aides pour remplacer ma chaudière&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r4" role="region" aria-labelledby="q4"><div><p>Des aides peuvent exister selon l'équipement choisi et votre situation ; elles évoluent régulièrement. Renseignez-vous auprès de France Rénov'. Certaines aides demandent de faire appel à une entreprise qualifiée.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r5" id="q5">Quelle taille de chauffe-eau choisir&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r5" role="region" aria-labelledby="q5"><div><p>La capacité dépend du nombre de personnes, de vos habitudes (douches, bains) et de la place disponible. Nous vous conseillons le volume adapté lors de notre passage.</p></div></div></div>
+      <div class="q"><button aria-expanded="false" aria-controls="r6" id="q6">Vous occupez-vous aussi de la salle de bain complète&nbsp;?<span class="pm" aria-hidden="true">+</span></button>
+        <div class="rep" id="r6" role="region" aria-labelledby="q6"><div><p>Nous prenons en charge la plomberie et la pose des équipements sanitaires. Pour le choix des produits, l'atelier est artisan partenaire du réseau Espace Aubade à Grenoble. Parlons-en ensemble.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="sec" id="contact" aria-labelledby="titre-contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="cartouche">Contact</span>
+      <h2 id="titre-contact">Passez un coup de fil à l'atelier</h2>
+      <p>Pour une panne, un devis ou un simple conseil, joignez-nous par téléphone ou laissez-nous un message.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="carton reveal">
+        <h3>Coordonnées</h3>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-7.5 8-13a8 8 0 0 0-16 0c0 5.5 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><span>25 rue Jacquard<br>38100 Grenoble<small>Interventions à Grenoble et dans les environs</small></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><a href="tel:+33476230913">04 76 23 09 13</a><small>Fixe de l'atelier</small></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span><a href="tel:+33603074750">06 03 07 47 50</a><small>Portable</small></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg><a href="mailto:abonnel.blandin@orange.fr">abonnel.blandin@orange.fr</a></li>
+        </ul>
+        <h3>Horaires</h3>
+        <span class="rdv">Horaires sur rendez-vous – appelez-nous</span>
+        <table class="horaires" id="horaires"><tbody>
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>Nous consulter</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>Nous consulter</td></tr>
+        </tbody></table>
+        <a class="btn btn-sapin" href="https://www.google.com/maps/search/?api=1&amp;query=25%20rue%20Jacquard%2038100%20Grenoble" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+      <div class="carton reveal d1">
+        <h3>Demande de devis</h3>
+        <form class="form" id="form" novalidate>
+          <div><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+          <div><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+          <div class="plein"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+          <div class="plein"><label for="f-objet">Objet</label>
+            <select id="f-objet" name="objet"><option>Remplacement de chaudière</option><option>Dépannage chauffage</option><option>Installation chaudière gaz / fioul</option><option>Chauffe-eau</option><option>Salle de bain</option><option>Plomberie</option><option>Autre</option></select></div>
+          <div class="plein"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Type et âge de la chaudière, nature de la panne, adresse du chantier…"></textarea></div>
+          <p class="rgpd plein">Vos informations servent uniquement à répondre à votre demande.</p>
+          <div class="plein"><button class="btn btn-orange" type="submit">Envoyer ma demande</button></div>
+          <p class="form-ok plein" id="form-ok" role="status">Votre messagerie va s'ouvrir avec votre demande pré-remplie.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="wrap pied-grid">
+    <div>
+      <a class="brand" href="#haut" style="margin-bottom:16px">
+        <svg viewBox="0 0 50 50" aria-hidden="true"><circle cx="25" cy="25" r="23.5" fill="#e0782f" stroke="#f5ecd7" stroke-width="2"/><text x="25" y="30" text-anchor="middle" font-family="Abril Fatface, Georgia, serif" font-size="15" fill="#2b2118">A&amp;B</text></svg>
+        <span class="brand-txt"><b>Abonnel &amp; Blandin</b><small>Depuis 1960</small></span>
+      </a>
+      <p style="font-size:15px;margin:0 0 10px">SARL de plomberie et chauffage à Grenoble&nbsp;: chaudières gaz et fioul, dépannage, chauffe-eau, salles de bain.</p>
+      <p style="font-size:15px;margin:0">QUALIBAT Remplacement chaudière</p>
+    </div>
+    <div><h4>L'atelier</h4><ul><li>25 rue Jacquard</li><li>38100 Grenoble</li><li><a href="mailto:abonnel.blandin@orange.fr">abonnel.blandin@orange.fr</a></li></ul></div>
+    <div><h4>Téléphones</h4><ul><li><a href="tel:+33476230913">04 76 23 09 13</a> (fixe)</li><li><a href="tel:+33603074750">06 03 07 47 50</a> (portable)</li></ul><h4 style="margin-top:22px">Horaires</h4><ul><li>Sur rendez-vous</li></ul></div>
+    <div><h4>Navigation</h4><ul><li><a href="#services">Services</a></li><li><a href="#maison">La maison</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul></div>
+  </div>
+  <div class="wrap pied-bas"><span>© <span id="annee">2026</span> Abonnel et Blandin SARL – Grenoble</span><span>Une entreprise grenobloise fondée en 1960</span></div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33476230913" aria-label="Appeler le 04 76 23 09 13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function sc(){nav.classList.toggle('ombre',window.scrollY>10)}
+  sc();window.addEventListener('scroll',sc,{passive:true});
+  function fermer(){menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu')}
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer()});
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('vu')}); }
+
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var q=b.parentNode,o=!q.classList.contains('ouvert');
+      document.querySelectorAll('.q.ouvert').forEach(function(x){if(x!==q){x.classList.remove('ouvert');x.querySelector('button').setAttribute('aria-expanded','false')}});
+      q.classList.toggle('ouvert',o);b.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+
+  var j=new Date().getDay(),tr=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(tr){tr.classList.add('auj');tr.cells[0].insertAdjacentHTML('beforeend','<span class="tag">Aujourd\'hui</span>')}
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  var form=document.getElementById('form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    var corps='Nom : '+(d.get('nom')||'')+'\nTéléphone : '+(d.get('tel')||'')+'\nEmail : '+(d.get('email')||'')+'\nObjet : '+(d.get('objet')||'')+'\n\n'+(d.get('message')||'');
+    document.getElementById('form-ok').classList.add('vu');
+    window.location.href='mailto:abonnel.blandin@orange.fr?subject='+encodeURIComponent('Demande – '+(d.get('objet')||''))+'&body='+encodeURIComponent(corps);
+  });
+})();
+</script>
+</body>
+</html>

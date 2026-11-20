@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sani-Thermie – Plombier chauffagiste à Fontaine</title>
+<meta name="description" content="Sani-Thermie, plombier chauffagiste à Fontaine (Isère) : chaudières gaz et fioul, pompes à chaleur, climatisation, chauffe-eau thermodynamiques et plomberie. Entreprise QUALIPAC Chauffage et QUALIPAC CET.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acier:#2b3036; --acier-clair:#4a525b; --beton:#e6e7e8; --orange:#ff6a00; --plan:#1e4f7a; --blanc:#ffffff;
+  --trait:#c9ccd0; --txt-2:#4a525b; --plan-fonce:#173f62;
+  --cond:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --sans:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--beton);color:var(--acier);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--cond);font-weight:700;line-height:1;text-transform:uppercase;letter-spacing:.01em}
+.ref{font-family:var(--cond);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;font:700 1.02rem var(--cond);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:2px solid var(--acier);cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s;background:transparent;color:var(--acier);position:relative}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.or{background:var(--orange);border-color:var(--orange);color:var(--acier)}
+.btn.or:hover{transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--acier)}
+.btn.ac{background:var(--acier);color:#fff}
+.btn.ac:hover{transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--orange)}
+.btn.bl{border-color:#fff;color:#fff}
+.btn.bl:hover{background:#fff;color:var(--plan)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--acier);color:#fff;border-bottom:3px solid var(--orange)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-ic{width:40px;height:40px;flex:none}
+.logo strong{display:block;font-family:var(--cond);font-weight:800;font-size:1.55rem;letter-spacing:.04em;line-height:1;text-transform:uppercase}
+.logo strong span{color:var(--orange)}
+.logo small{display:block;font-family:var(--cond);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#b9c0c7;margin-top:3px}
+.menu{display:flex;list-style:none;gap:2px;align-items:center}
+.menu a{display:block;text-decoration:none;font-family:var(--cond);font-weight:600;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;color:#e6e7e8;transition:color .2s,background .2s}
+.menu a:not(.btn):hover{color:var(--orange);background:rgba(255,255,255,.05)}
+.menu a .c{font-size:.7rem;color:#8e98a2;margin-right:5px}
+.menu .btn{margin-left:10px;padding:10px 16px;color:var(--acier)}
+.burger{display:none;width:46px;height:46px;background:var(--acier-clair);border:0;cursor:pointer;position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:12px;width:22px;height:2px;background:#fff;transition:.25s;content:""}
+.burger span{top:22px}.burger span::before{left:0;top:-7px}.burger span::after{left:0;top:7px}
+.burger[aria-expanded=true] span{background:transparent}
+.burger[aria-expanded=true] span::before{transform:translateY(7px) rotate(45deg);background:var(--orange)}
+.burger[aria-expanded=true] span::after{transform:translateY(-7px) rotate(-45deg);background:var(--orange)}
+
+/* bandeau plan */
+.bandeau{position:relative;background-color:var(--plan);color:#fff;padding:122px 0 150px;overflow:hidden;
+  background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px;background-position:-1px -1px}
+.bandeau::after{content:"";position:absolute;inset:auto 0 0 0;height:10px;background:repeating-linear-gradient(-45deg,var(--orange) 0 14px,var(--acier) 14px 28px)}
+.b-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;position:relative}
+.cartouche{display:inline-flex;border:1px solid rgba(255,255,255,.55);margin-bottom:24px}
+.cartouche span{padding:6px 12px;font-family:var(--cond);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase}
+.cartouche span+span{border-left:1px solid rgba(255,255,255,.55)}
+.cartouche span:first-child{background:var(--orange);color:var(--acier);font-weight:700}
+.bandeau h1{font-size:clamp(3rem,7.2vw,6.2rem);font-weight:800;line-height:.9;letter-spacing:-.005em;margin-bottom:22px}
+.bandeau h1 .o{color:var(--orange)}
+.bandeau h1 .contour{color:transparent;-webkit-text-stroke:1.5px #fff}
+.bandeau .acc{font-size:1.14rem;max-width:44ch;color:#dbe6f0;margin-bottom:30px}
+.bandeau .acc b{color:#fff}
+.b-cta{display:flex;gap:12px;flex-wrap:wrap}
+.schema{position:relative}
+.schema svg{width:100%;height:auto}
+.schema .titre-plan{position:absolute;right:0;bottom:-6px;font-family:var(--cond);font-size:.78rem;letter-spacing:.18em;color:#bcd2e6;text-transform:uppercase}
+.flux{stroke-dasharray:6 8;animation:flux 1.6s linear infinite}
+@keyframes flux{to{stroke-dashoffset:-28}}
+.clign{animation:clign 2s ease-in-out infinite}
+@keyframes clign{50%{opacity:.25}}
+
+/* fiche technique flottante */
+.fiche-wrap{position:relative;z-index:5;margin-top:-104px}
+.fiche{background:#fff;border:2px solid var(--acier);box-shadow:10px 10px 0 rgba(43,48,54,.18);display:grid;grid-template-columns:220px 1fr auto}
+.fiche-tete{background:var(--acier);color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;border-top:6px solid var(--orange)}
+.fiche-tete .ref{color:var(--orange)}
+.fiche-tete strong{font-family:var(--cond);font-size:1.9rem;font-weight:800;text-transform:uppercase;line-height:.95}
+.fiche-tete small{font-family:var(--cond);font-size:.8rem;letter-spacing:.14em;color:#b9c0c7;text-transform:uppercase}
+.fiche-corps{display:grid;grid-template-columns:repeat(3,1fr)}
+.fiche-corps div{padding:18px 20px;border-left:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.fiche-corps div:nth-child(n+4){border-bottom:0}
+.fiche-corps dt{font-family:var(--cond);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-2);font-weight:600;margin-bottom:4px}
+.fiche-corps dd{font-weight:600;font-size:.98rem;line-height:1.35;word-break:break-word}
+.fiche-corps dd a{text-decoration:none;border-bottom:2px solid var(--orange)}
+.fiche-corps dd a:hover{color:var(--plan)}
+.fiche-act{display:flex;flex-direction:column;gap:10px;padding:18px;border-left:2px solid var(--acier);justify-content:center;background:#f4f5f6}
+
+/* confiance */
+.confiance{padding:44px 0 8px}
+.conf{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--acier);background:#fff}
+.conf li{list-style:none;display:flex;gap:14px;align-items:center;padding:18px 20px;border-right:1px solid var(--trait)}
+.conf li:last-child{border-right:0}
+.conf svg{width:38px;height:38px;flex:none}
+.conf strong{display:block;font-family:var(--cond);font-size:1.2rem;text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
+.conf span{font-size:.84rem;color:var(--txt-2);line-height:1.3;display:block}
+
+/* sections */
+section.s{padding:96px 0}
+section.s.blanc{background:#fff}
+section.s.acier{background:var(--acier);color:#fff}
+.s-tete{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:48px;border-bottom:2px solid currentColor;padding-bottom:22px;position:relative}
+.s-tete::after{content:"";position:absolute;right:0;bottom:-7px;width:12px;height:12px;background:var(--orange)}
+.s-code{font-family:var(--cond);font-weight:800;font-size:5.4rem;line-height:.8;color:var(--orange);letter-spacing:-.02em}
+.s-code small{display:block;font-size:.8rem;letter-spacing:.2em;color:var(--txt-2);font-weight:600;margin-bottom:8px}
+.acier .s-code small{color:#c9ced3;opacity:1}
+.s-tete h2{font-size:clamp(2.3rem,5.2vw,4.2rem);font-weight:800}
+.s-tete p{margin-top:10px;color:var(--txt-2);max-width:60ch}
+.acier .s-tete p{color:#c9ced3}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:2px solid var(--acier);padding:26px 24px 24px;position:relative;transition:transform .25s,box-shadow .25s}
+.svc::before,.svc::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--orange)}
+.svc::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.svc::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.svc:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--plan)}
+.svc:hover .svc-ic{background:var(--orange)}
+.svc .code{position:absolute;top:22px;right:22px;font-family:var(--cond);font-size:.82rem;letter-spacing:.14em;color:var(--txt-2);font-weight:600}
+.svc-ic{width:64px;height:64px;background:var(--beton);display:grid;place-items:center;margin-bottom:20px;transition:background .25s}
+.svc-ic svg{width:42px;height:42px}
+.svc h3{font-size:1.65rem;margin-bottom:8px}
+.svc p{font-size:.95rem;color:var(--txt-2)}
+.svc .spec{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
+.svc .spec span{font-family:var(--cond);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--acier-clair);color:var(--acier)}
+
+/* pourquoi */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #5d6670}
+.atout{padding:30px 24px;border-right:1px solid #5d6670;position:relative;transition:background .25s}
+.atout:last-child{border-right:0}
+.atout:hover{background:var(--acier-clair)}
+.atout .chk{width:44px;height:44px;border:2px solid var(--orange);display:grid;place-items:center;margin-bottom:20px}
+.atout .chk svg{width:24px;height:24px}
+.atout .ref{color:var(--orange);display:block;margin-bottom:8px}
+.atout h3{font-size:1.5rem;margin-bottom:10px}
+.atout p{font-size:.95rem;color:#d3d7db}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.etape{padding:0 22px 0 0;position:relative}
+.etape .num{display:flex;align-items:center;gap:0;margin-bottom:22px}
+.etape .num b{width:68px;height:68px;background:var(--acier);color:#fff;display:grid;place-items:center;font-family:var(--cond);font-size:2.2rem;font-weight:800;transition:background .25s,color .25s;flex:none}
+.etape:hover .num b{background:var(--orange);color:var(--acier)}
+.etape .num i{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--acier) 0 8px,transparent 8px 14px)}
+.etape:last-child .num i{background:none}
+.etape:last-child .num i::after{content:"";display:block}
+.etape .ref{color:var(--plan);margin-bottom:6px;display:block}
+.etape h3{font-size:1.5rem;margin-bottom:8px}
+.etape p{font-size:.95rem;color:var(--txt-2)}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.apropos .txt p{margin-bottom:14px;font-size:1.05rem}
+.apropos .txt p:first-child{font-size:1.25rem;font-weight:500;color:var(--acier)}
+.nomen{margin-top:22px;border:2px solid var(--acier)}
+.nomen table{width:100%;border-collapse:collapse;font-size:.94rem}
+.nomen th,.nomen td{padding:10px 14px;border-bottom:1px solid var(--trait);text-align:left;vertical-align:top}
+.nomen tr:last-child th,.nomen tr:last-child td{border-bottom:0}
+.nomen th{font-family:var(--cond);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;background:var(--beton);width:34%;font-weight:600}
+.nomen caption{caption-side:top;text-align:left;background:var(--acier);color:#fff;font-family:var(--cond);letter-spacing:.16em;font-size:.86rem;padding:8px 14px;text-transform:uppercase}
+.vue{background:var(--plan);padding:16px;border:2px solid var(--acier);background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);background-size:20px 20px}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.plan{background:#fff;border:2px solid var(--acier);transition:transform .25s,box-shadow .25s}
+.plan:hover{transform:translateY(-4px);box-shadow:0 10px 0 -2px var(--orange)}
+.plan .dessin{background:var(--plan);aspect-ratio:4/3;background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);background-size:20px 20px;border-bottom:2px solid var(--acier)}
+.plan .dessin svg{width:100%;height:100%}
+.plan .cart{display:grid;grid-template-columns:1fr auto}
+.plan .cart div{padding:12px 16px}
+.plan .cart div+div{border-left:1px solid var(--trait);font-family:var(--cond);font-weight:700;font-size:.9rem;letter-spacing:.12em;color:var(--plan);display:flex;align-items:center}
+.plan h3{font-size:1.25rem}
+.plan p{font-size:.88rem;color:var(--txt-2)}
+.tarif{margin-top:40px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;background:var(--acier);color:#fff;padding:24px 28px;border-left:10px solid var(--orange)}
+.tarif .gros{font-family:var(--cond);font-weight:800;font-size:2.4rem;text-transform:uppercase;line-height:.95}
+.tarif .gros span{color:var(--orange)}
+.tarif p{color:#d3d7db;font-size:.98rem}
+
+/* avis invitation */
+.invite{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:#fff;border:2px dashed var(--acier);padding:32px}
+.invite svg{width:84px;height:84px}
+.invite h3{font-size:2rem;margin-bottom:6px}
+.invite p{color:var(--txt-2)}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+.faq details{background:#fff;border:2px solid var(--acier);transition:box-shadow .2s}
+.faq details[open]{box-shadow:6px 6px 0 var(--orange)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:76px 1fr 44px;align-items:center;font-family:var(--cond);font-weight:700;font-size:1.35rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q{align-self:stretch;display:grid;place-items:center;background:var(--beton);border-right:2px solid var(--acier);font-size:.95rem;letter-spacing:.12em;color:var(--plan);padding:16px 0}
+.faq summary .t{padding:18px 20px}
+.faq summary:hover .t{color:var(--plan)}
+.faq summary .pl{width:28px;height:28px;position:relative;background:var(--acier)}
+.faq summary .pl::before,.faq summary .pl::after{content:"";position:absolute;left:7px;top:13px;width:14px;height:2px;background:#fff;transition:transform .25s}
+.faq summary .pl::after{transform:rotate(90deg)}
+.faq details[open] .pl{background:var(--orange)}
+.faq details[open] .pl::after{transform:rotate(0)}
+.faq .rep{padding:0 24px 22px 96px;color:var(--txt-2)}
+
+/* horaires / accès */
+.acces{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panneau{background:#fff;border:2px solid var(--acier)}
+.panneau h3{background:var(--acier);color:#fff;padding:14px 20px;font-size:1.4rem;display:flex;justify-content:space-between;align-items:center}
+.panneau h3 .ref{color:var(--orange);font-size:.8rem}
+.panneau .in{padding:22px 20px}
+.mention{font-weight:600;margin-bottom:14px;color:var(--plan)}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:10px 12px;border-bottom:1px solid var(--trait);font-size:.98rem}
+.horaires td:first-child{font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem}
+.horaires td:last-child{text-align:right;color:var(--txt-2)}
+.horaires tr.auj td{background:var(--orange);color:var(--acier);font-weight:600;border-color:var(--orange)}
+.horaires tr.auj td:first-child::before{content:"▶ ";font-size:.7em}
+.adr{font-family:var(--cond);font-size:2rem;font-weight:700;text-transform:uppercase;line-height:1.05;margin-bottom:12px}
+.adr small{display:block;font-family:var(--sans);text-transform:none;font-size:.92rem;font-weight:400;color:var(--txt-2);margin-top:8px}
+.coords{list-style:none;margin:18px 0 22px;border-top:1px solid var(--trait)}
+.coords li{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--trait);flex-wrap:wrap}
+.coords li span{font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:var(--txt-2);font-weight:600}
+.coords a{font-weight:600;text-decoration:none}
+.coords a:hover{color:var(--plan);text-decoration:underline}
+.mini-plan{margin-bottom:20px;border:2px solid var(--acier)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.contact-intro p{color:#d3d7db;margin-bottom:14px}
+.contact-intro .tel{font-family:var(--cond);font-size:2.4rem;font-weight:800;color:var(--orange);text-decoration:none;display:inline-block;margin:8px 0 18px;letter-spacing:.02em}
+.contact-intro .tel:hover{color:#fff}
+form{background:#fff;color:var(--acier);border:2px solid #fff;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative}
+form::before{content:"FORMULAIRE · REF. DEV-01";position:absolute;top:-12px;left:22px;background:var(--orange);color:var(--acier);font-family:var(--cond);font-weight:700;letter-spacing:.14em;font-size:.82rem;padding:3px 10px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.plein{grid-column:1/-1}
+.champ label{font-family:var(--cond);font-weight:600;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase}
+.champ input,.champ select,.champ textarea{font:400 1rem var(--sans);color:var(--acier);background:var(--beton);border:2px solid transparent;border-bottom-color:var(--acier);padding:11px 12px;border-radius:0;transition:border-color .2s,background .2s}
+.champ textarea{min-height:120px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--orange);background:#fff}
+.form-bas{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.form-bas small{color:var(--txt-2);font-size:.85rem;flex:1;min-width:200px}
+.form-msg{grid-column:1/-1;display:none;padding:12px 16px;background:var(--beton);border-left:6px solid var(--orange);font-weight:500}
+.form-msg.on{display:block}
+
+/* pied */
+footer{background:#1f2328;color:#d3d7db;padding:64px 0 0;border-top:6px solid var(--orange)}
+.pied{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding-bottom:44px}
+.pied .logo{color:#fff}
+.pied p{font-size:.92rem;margin-top:14px;max-width:34ch}
+.pied h4{font-size:1rem;letter-spacing:.16em;color:var(--orange);margin-bottom:14px}
+.pied ul{list-style:none;display:grid;gap:7px;font-size:.94rem}
+.pied a{text-decoration:none;color:#e6e7e8}
+.pied a:hover{color:var(--orange)}
+.pied-bas{border-top:1px solid #3a4047;padding:18px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--cond);letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:#9aa3ad}
+.demo{background:#15181b;color:#aab2ba;text-align:center;font-size:.78rem;padding:12px 24px}
+
+.flottant{position:fixed;right:16px;bottom:16px;z-index:70;display:none;align-items:center;gap:8px;background:var(--orange);color:var(--acier);text-decoration:none;padding:14px 18px;font:800 1.05rem var(--cond);letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--acier);box-shadow:4px 4px 0 var(--acier)}
+.flottant svg{width:20px;height:20px}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+@media (max-width:1080px){
+  .menu a{padding:8px 8px;font-size:.92rem}
+  .menu a .c{display:none}
+  .fiche{grid-template-columns:1fr}
+  .fiche-tete{flex-direction:row;align-items:flex-end;flex-wrap:wrap}
+  .fiche-act{flex-direction:row;border-left:0;border-top:2px solid var(--acier)}
+  .fiche-act .btn{flex:1}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(2){border-right:0}
+  .atout:nth-child(-n+2){border-bottom:1px solid #5d6670}
+  .conf{grid-template-columns:repeat(2,1fr)}
+  .conf li:nth-child(2){border-right:0}
+  .conf li:nth-child(-n+2){border-bottom:1px solid var(--trait)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:67px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--acier);padding:10px 24px 24px;border-bottom:3px solid var(--orange);transform:translateY(-10px);opacity:0;visibility:hidden;transition:.25s;max-height:calc(100vh - 67px);overflow:auto}
+  .menu.ouvert{transform:none;opacity:1;visibility:visible}
+  .menu li{border-bottom:1px solid #444c55}
+  .menu li:last-child{border:0;margin-top:14px}
+  .menu a{padding:14px 0;font-size:1.3rem}
+  .menu a .c{display:inline}
+  .menu .btn{margin:0;display:flex}
+  .b-grid{grid-template-columns:1fr}
+  .bandeau{padding-bottom:140px}
+  .s-tete{grid-template-columns:1fr;gap:12px}
+  .etapes{grid-template-columns:1fr 1fr;gap:36px 0}
+  .etape:nth-child(2) .num i{background:none}
+  .apropos,.contact,.acces{grid-template-columns:1fr}
+  .galerie{grid-template-columns:1fr 1fr}
+  .tarif,.invite{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .logo strong{font-size:1.3rem}
+  .logo small{font-size:.62rem;letter-spacing:.14em}
+  .logo-ic{width:34px;height:34px}
+  .bandeau{padding:96px 0 128px;background-size:64px 64px,64px 64px,16px 16px,16px 16px}
+  .bandeau h1{font-size:3.3rem}
+  .cartouche span{font-size:.7rem;padding:5px 8px;letter-spacing:.12em}
+  .b-cta .btn{flex:1 1 100%}
+  .schema .titre-plan{position:static;margin-top:8px}
+  .fiche-wrap{margin-top:-96px}
+  .fiche{box-shadow:6px 6px 0 rgba(43,48,54,.18)}
+  .fiche-corps{grid-template-columns:1fr}
+  .fiche-corps div{border-left:0;border-bottom:1px solid var(--trait)!important}
+  .fiche-corps div:last-child{border-bottom:0!important}
+  .fiche-act{flex-direction:column}
+  .conf{grid-template-columns:1fr}
+  .conf li{border-right:0!important;border-bottom:1px solid var(--trait)}
+  .conf li:last-child{border-bottom:0}
+  section.s{padding:68px 0}
+  .s-code{font-size:4rem}
+  .services,.galerie{grid-template-columns:1fr}
+  .atouts{grid-template-columns:1fr}
+  .atout{border-right:0!important;border-bottom:1px solid #5d6670}
+  .atout:last-child{border-bottom:0}
+  .etapes{grid-template-columns:1fr;gap:28px}
+  .etape{padding:0;display:grid;grid-template-columns:68px 1fr;gap:0 18px}
+  .etape .num{grid-row:span 3;margin:0;align-self:start}
+  .etape .num i{display:none}
+  .faq summary{grid-template-columns:52px 1fr 40px;font-size:1.12rem}
+  .faq summary .t{padding:14px 12px}
+  .faq .rep{padding:0 16px 20px 16px}
+  .adr{font-size:1.6rem}
+  form{grid-template-columns:1fr;padding:26px 18px}
+  .invite{padding:24px 18px}
+  .pied{grid-template-columns:1fr;gap:28px}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="haut">
+  <div class="wrap nav-in">
+    <a href="#haut" class="logo" aria-label="Sani-Thermie, retour en haut">
+      <svg class="logo-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="none" stroke="#ff6a00" stroke-width="2"/><path d="M8 28h8V12h8v16h8" fill="none" stroke="#fff" stroke-width="3"/><circle cx="20" cy="9" r="3" fill="#ff6a00"/></svg>
+      <span><strong>Sani<span>-</span>Thermie</strong><small>Plomberie · Chauffage · Fontaine</small></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services"><span class="c">01</span>Services</a></li>
+      <li><a href="#etapes"><span class="c">03</span>Méthode</a></li>
+      <li><a href="#realisations"><span class="c">05</span>Réalisations</a></li>
+      <li><a href="#faq"><span class="c">07</span>FAQ</a></li>
+      <li><a href="#acces"><span class="c">08</span>Accès</a></li>
+      <li><a href="#contact" class="btn or">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ===== BANDEAU PLAN ===== -->
+<section class="bandeau">
+  <div class="wrap b-grid">
+    <div>
+      <div class="cartouche"><span>REF. SANI-THERMIE</span><span>Fontaine · 38600</span></div>
+      <h1>Votre chaufferie, <span class="o">réglée</span> <span class="contour">au plan près.</span></h1>
+      <p class="acc"><b>Sani-Thermie, plombier chauffagiste à Fontaine.</b> Chaudières gaz et fioul, pompes à chaleur, climatisation, chauffe-eau thermodynamiques et plomberie : chaque installation est pensée comme un schéma clair, du générateur au robinet.</p>
+      <div class="b-cta">
+        <a class="btn or" href="tel:+33612357926"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn bl" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+    <div class="schema">
+      <svg viewBox="0 0 560 400" role="img" aria-label="Schéma technique coté d'une chaufferie : chaudière murale, vase d'expansion, pompe à chaleur extérieure et ballon d'eau chaude">
+        <defs>
+          <marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#bcd2e6"/></marker>
+        </defs>
+        <g fill="none" stroke="#fff" stroke-width="1.6">
+          <!-- murs -->
+          <path d="M20 40h330v330" stroke-width="3"/>
+          <path d="M20 370h520" stroke-width="3"/>
+          <path d="M350 40v330" stroke-dasharray="0"/>
+          <!-- chaudière -->
+          <rect x="60" y="70" width="110" height="150" fill="#1a466d"/>
+          <rect x="76" y="88" width="78" height="30"/>
+          <circle cx="92" cy="103" r="6"/><path d="M108 103h36"/>
+          <path d="M98 180c-8-10 6-14 0-26 14 8 14 18 8 26" stroke="#ff6a00"/>
+          <!-- vase d'expansion -->
+          <rect x="200" y="84" width="54" height="84" rx="27" fill="#1a466d"/>
+          <path d="M200 126h54" stroke-dasharray="4 3"/>
+          <!-- ballon -->
+          <rect x="220" y="230" width="90" height="130" rx="10" fill="#1a466d"/>
+          <path d="M240 260h50M240 280h50M240 300h50M240 320h50" stroke-width=".8" opacity=".6"/>
+          <!-- PAC extérieure -->
+          <rect x="390" y="250" width="130" height="100" fill="#1a466d"/>
+          <circle cx="455" cy="292" r="30"/>
+          <circle cx="455" cy="292" r="19" stroke-width=".8"/>
+          <path d="M455 262v60M425 292h60M434 271l42 42M476 271l-42 42" stroke-width=".7"/>
+          <path d="M404 350v20M506 350v20"/>
+        </g>
+        <!-- tuyauteries -->
+        <g fill="none" stroke-width="3">
+          <path d="M90 220v40h150v-30" stroke="#ff6a00"/>
+          <path d="M140 220v20h60" stroke="#8fc3ff"/>
+          <path d="M170 110h30" stroke="#ff6a00"/>
+          <path d="M310 300h80" stroke="#ff6a00"/>
+          <path d="M310 330h80" stroke="#8fc3ff"/>
+        </g>
+        <g fill="none" stroke="#fff" stroke-width="2" class="flux">
+          <path d="M90 220v40h150v-30"/>
+          <path d="M310 300h80"/>
+        </g>
+        <!-- vannes -->
+        <g fill="#fff"><path d="M120 254l10 6-10 6zM140 254l-10 6 10 6z"/><path d="M350 294l10 6-10 6zM370 294l-10 6 10 6z" transform="translate(-10 0)"/></g>
+        <!-- manomètre -->
+        <circle cx="185" cy="110" r="9" fill="#173f62" stroke="#fff" stroke-width="1.4"/><path d="M185 110l5-5" stroke="#ff6a00" stroke-width="1.6"/>
+        <!-- cotes -->
+        <g stroke="#bcd2e6" stroke-width="1" fill="none">
+          <path d="M60 52h110" marker-start="url(#fl)" marker-end="url(#fl)"/><path d="M60 46v18M170 46v18"/>
+          <path d="M44 70v150" marker-start="url(#fl)" marker-end="url(#fl)"/><path d="M38 70h16M38 220h16"/>
+          <path d="M390 236h130" marker-start="url(#fl)" marker-end="url(#fl)"/><path d="M390 230v14M520 230v14"/>
+        </g>
+        <g font-family="Barlow Condensed, sans-serif" font-weight="600" fill="#bcd2e6" font-size="12" letter-spacing="1.5">
+          <text x="115" y="46" text-anchor="middle">L</text>
+          <text x="36" y="148" text-anchor="middle">H</text>
+          <text x="455" y="230" text-anchor="middle">L</text>
+        </g>
+        <!-- étiquettes REF -->
+        <g font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="13" letter-spacing="1.6">
+          <rect x="60" y="226" width="0" height="0"/>
+          <g><rect x="66" y="196" width="88" height="18" fill="#ff6a00"/><text x="110" y="209" text-anchor="middle" fill="#2b3036">A · CHAUD.</text></g>
+          <g><rect x="192" y="176" width="72" height="18" fill="#ff6a00"/><text x="228" y="189" text-anchor="middle" fill="#2b3036">B · VASE</text></g>
+          <g><rect x="222" y="336" width="86" height="18" fill="#ff6a00"/><text x="265" y="349" text-anchor="middle" fill="#2b3036">C · BALLON</text></g>
+          <g><rect x="420" y="330" width="70" height="18" fill="#ff6a00"/><text x="455" y="343" text-anchor="middle" fill="#2b3036">D · PAC</text></g>
+        </g>
+        <g font-family="Barlow Condensed, sans-serif" font-size="11" fill="#bcd2e6" letter-spacing="1.5">
+          <text x="360" y="60">EXTÉRIEUR →</text>
+          <text x="30" y="390">LOCAL TECHNIQUE · VUE DE FACE</text>
+          <text x="313" y="291" fill="#ff6a00" font-size="9">DÉPART</text>
+          <text x="313" y="345" fill="#8fc3ff" font-size="9">RETOUR</text>
+        </g>
+        <circle class="clign" cx="146" cy="103" r="3" fill="#ff6a00"/>
+      </svg>
+      <div class="titre-plan">Pl. 01 — Schéma de principe · échelle libre</div>
+    </div>
+  </div>
+</section>
+
+<!-- fiche technique -->
+<div class="fiche-wrap">
+  <div class="wrap">
+    <div class="fiche rv">
+      <div class="fiche-tete">
+        <span class="ref">Fiche technique · REF. SANI-THERMIE</span>
+        <strong>Sani-Thermie<br>SARL</strong>
+        <small>Plombier chauffagiste</small>
+      </div>
+      <dl class="fiche-corps">
+        <div><dt>Activité</dt><dd>Chauffage, PAC, climatisation, plomberie</dd></div>
+        <div><dt>Adresse</dt><dd>3 rue Guy Môquet, 38600 Fontaine</dd></div>
+        <div><dt>Qualifications</dt><dd>QUALIPAC Chauffage · QUALIPAC CET</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33612357926">06 12 35 79 26</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:sani.thermie@outlook.fr">sani.thermie@outlook.fr</a></dd></div>
+        <div><dt>Horaires</dt><dd>Sur rendez-vous</dd></div>
+      </dl>
+      <div class="fiche-act">
+        <a class="btn or" href="tel:+33612357926">Appeler</a>
+        <a class="btn ac" href="#contact">Devis</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- confiance -->
+<div class="confiance">
+  <div class="wrap">
+    <ul class="conf">
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#2b3036" stroke-width="2"><path d="M20 3l14 6v10c0 9-6 15-14 18C12 34 6 28 6 19V9z"/><path d="M13 20l5 5 9-10" stroke="#ff6a00" stroke-width="3"/></svg><div><strong>QUALIPAC Chauffage</strong><span>Pompes à chaleur</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#2b3036" stroke-width="2"><path d="M20 3l14 6v10c0 9-6 15-14 18C12 34 6 28 6 19V9z"/><path d="M15 13h10v12H15zM20 25v-5" stroke="#ff6a00" stroke-width="2.5"/></svg><div><strong>QUALIPAC CET</strong><span>Chauffe-eau thermodynamiques</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#2b3036" stroke-width="2"><rect x="6" y="10" width="28" height="22"/><path d="M6 16h28M12 22h6M12 27h12"/><path d="M24 22h6" stroke="#ff6a00" stroke-width="3"/></svg><div><strong>Chauffage + plomberie</strong><span>Un même interlocuteur</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="#2b3036" stroke-width="2"><path d="M20 36s-11-11-11-19a11 11 0 0 1 22 0c0 8-11 19-11 19z"/><circle cx="20" cy="17" r="4" stroke="#ff6a00" stroke-width="3"/></svg><div><strong>Fontaine (38)</strong><span>Agglomération grenobloise</span></div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 01 SERVICES ===== -->
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>01</div>
+      <div><h2>Services</h2><p>Du générateur de chaleur aux réseaux d’eau : les équipements sur lesquels intervient Sani-Thermie.</p></div>
+    </div>
+    <div class="services">
+      <article class="svc rv">
+        <span class="code">SRV-01</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><rect x="9" y="3" width="24" height="30"/><rect x="13" y="7" width="16" height="7"/><path d="M19 28c-3-3 1-5 0-9 4 2 5 6 3 9"/><path d="M14 33v6M21 33v6M28 33v6"/></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, avec raccordement et réglage pour un fonctionnement sûr et régulier.</p>
+        <div class="spec"><span>Pose</span><span>Remplacement</span><span>Réglage</span></div>
+      </article>
+      <article class="svc rv d1">
+        <span class="code">SRV-02</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><rect x="5" y="10" width="22" height="28"/><path d="M5 18h22"/><path d="M16 24c-3 3-3 6 0 8 3-2 3-5 0-8z"/><path d="M27 16h6v-8h4"/><circle cx="35" cy="30" r="4"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Intervention sur les installations fioul existantes et étude des solutions de remplacement adaptées à votre logement.</p>
+        <div class="spec"><span>Fioul</span><span>Remplacement</span></div>
+      </article>
+      <article class="svc rv d2">
+        <span class="code">SRV-03</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><rect x="3" y="9" width="36" height="24"/><circle cx="21" cy="21" r="8"/><path d="M21 13v16M13 21h16"/><path d="M7 33v5M35 33v5"/></svg></div>
+        <h3>Pompes à chaleur</h3>
+        <p>Pompes à chaleur pour le chauffage du logement, posées par une entreprise qualifiée QUALIPAC Chauffage.</p>
+        <div class="spec"><span>QUALIPAC</span><span>Air-eau</span></div>
+      </article>
+      <article class="svc rv">
+        <span class="code">SRV-04</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><rect x="4" y="8" width="34" height="13"/><path d="M8 17h26"/><path d="M21 25v12M15 28l6 3 6-3M15 34l6-3 6 3"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Des solutions pour rafraîchir les pièces de vie lors des étés chauds de la cuvette grenobloise, souvent réversibles.</p>
+        <div class="spec"><span>Réversible</span><span>Confort d’été</span></div>
+      </article>
+      <article class="svc rv d1">
+        <span class="code">SRV-05</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><rect x="11" y="3" width="20" height="36" rx="10"/><path d="M11 13h20"/><circle cx="21" cy="8" r="2"/><path d="M21 34V20M17 24l4-4 4 4"/></svg></div>
+        <h3>Chauffe-eau thermodynamiques</h3>
+        <p>Production d’eau chaude à partir des calories de l’air. Entreprise qualifiée QUALIPAC CET pour ces équipements.</p>
+        <div class="spec"><span>QUALIPAC CET</span><span>Eau chaude</span></div>
+      </article>
+      <article class="svc rv d2">
+        <span class="code">SRV-06</span>
+        <div class="svc-ic"><svg viewBox="0 0 42 42" fill="none" stroke="#2b3036" stroke-width="2"><path d="M4 12h14v6h10v-6h10"/><path d="M18 9v12M28 9v12"/><path d="M33 12v10c0 3 2 4 2 7"/><path d="M35 33c-2 2-2 4 0 5 2-1 2-3 0-5z" fill="#ff6a00" stroke="#ff6a00"/></svg></div>
+        <h3>Plomberie</h3>
+        <p>Réseaux d’eau, équipements sanitaires, réparations et remplacements : la plomberie au quotidien, chez vous.</p>
+        <div class="spec"><span>Sanitaire</span><span>Réseaux</span><span>Réparation</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 POURQUOI ===== -->
+<section class="s acier" id="pourquoi">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>02</div>
+      <div><h2>Pourquoi nous choisir</h2><p>Quatre points de contrôle qui résument notre façon de travailler.</p></div>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a00" stroke-width="2.5"><path d="M4 12l5 5 11-11"/></svg></div><span class="ref">CTRL-A</span><h3>Qualifié QUALIPAC</h3><p>Chauffage et CET : des qualifications qui concernent directement les pompes à chaleur et les chauffe-eau thermodynamiques.</p></div>
+      <div class="atout rv d1"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a00" stroke-width="2.5"><path d="M4 12l5 5 11-11"/></svg></div><span class="ref">CTRL-B</span><h3>Chauffage et plomberie</h3><p>Le même artisan pour le générateur, les réseaux et les sanitaires : moins d’intermédiaires, une vision d’ensemble.</p></div>
+      <div class="atout rv d2"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a00" stroke-width="2.5"><path d="M4 12l5 5 11-11"/></svg></div><span class="ref">CTRL-C</span><h3>Des explications claires</h3><p>Nous vous présentons les options possibles et leurs contraintes, pour que vous décidiez sur des bases concrètes.</p></div>
+      <div class="atout rv d3"><div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#ff6a00" stroke-width="2.5"><path d="M4 12l5 5 11-11"/></svg></div><span class="ref">CTRL-D</span><h3>Basé à Fontaine</h3><p>Une entreprise locale, joignable directement sur mobile pour organiser une visite.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 ÉTAPES ===== -->
+<section class="s blanc" id="etapes">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>03</div>
+      <div><h2>Comment ça se passe</h2><p>Une procédure simple, en quatre phases.</p></div>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><div class="num"><b>1</b><i></i></div><span class="ref">PH-01 · Contact</span><h3>Votre demande</h3><p>Appel ou formulaire : vous décrivez le logement, l’équipement en place et votre besoin.</p></div>
+      <div class="etape rv d1"><div class="num"><b>2</b><i></i></div><span class="ref">PH-02 · Relevé</span><h3>Visite technique</h3><p>Relevé sur place : local technique, réseaux, émetteurs, contraintes d’accès et d’évacuation.</p></div>
+      <div class="etape rv d2"><div class="num"><b>3</b><i></i></div><span class="ref">PH-03 · Chiffrage</span><h3>Devis détaillé</h3><p>Un devis clair, ligne par ligne, avec la solution proposée et ses éventuelles variantes.</p></div>
+      <div class="etape rv d3"><div class="num"><b>4</b><i></i></div><span class="ref">PH-04 · Mise en service</span><h3>Pose et réglages</h3><p>Installation, essais, mise en service et explications d’utilisation avant notre départ.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 À PROPOS ===== -->
+<section class="s" id="apropos">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>04</div>
+      <div><h2>À propos</h2></div>
+    </div>
+    <div class="apropos">
+      <div class="txt rv">
+        <p>Sani-Thermie est une SARL de plomberie et de chauffage installée au 3 rue Guy Môquet, à Fontaine, aux portes de Grenoble.</p>
+        <p>L’entreprise intervient sur les chaudières gaz et fioul, les pompes à chaleur et la climatisation, les chauffe-eau thermodynamiques et l’ensemble des travaux de plomberie.</p>
+        <p>Elle est qualifiée QUALIPAC Chauffage et QUALIPAC CET. Entre Vercors et Belledonne, là où les hivers mettent les installations à l’épreuve, elle accompagne les particuliers de Fontaine et des communes voisines.</p>
+        <div class="nomen">
+          <table>
+            <caption>Nomenclature · REF. SANI-THERMIE</caption>
+            <tr><th>Raison sociale</th><td>Sani-Thermie (SARL)</td></tr>
+            <tr><th>Métier</th><td>Plombier chauffagiste</td></tr>
+            <tr><th>Siège</th><td>3 rue Guy Môquet, 38600 Fontaine</td></tr>
+            <tr><th>Qualifications</th><td>QUALIPAC Chauffage · QUALIPAC CET</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="vue rv d1">
+        <svg viewBox="0 0 420 340" role="img" aria-label="Plan isométrique d'une maison avec sa pompe à chaleur et son ballon d'eau chaude">
+          <g fill="none" stroke="#fff" stroke-width="1.6">
+            <path d="M210 40l150 80v130l-150 80-150-80V120z" fill="#1a466d"/>
+            <path d="M210 40v150M60 120l150 70 150-70"/>
+            <path d="M210 190v140" stroke-dasharray="5 4"/>
+            <path d="M100 150v70l50 25v-70z" fill="#173f62"/>
+            <path d="M260 175l50-25v70l-50 25z" fill="#173f62"/>
+            <path d="M372 250l30-15v30l-30 15z" fill="#1a466d"/>
+            <path d="M115 170l20 10v30l-20-10z" stroke="#ff6a00"/>
+          </g>
+          <path d="M135 195h40l35 15h80l82 40" fill="none" stroke="#ff6a00" stroke-width="3"/>
+          <path d="M135 205h40l35 15h80l82 40" fill="none" stroke="#8fc3ff" stroke-width="3"/>
+          <g font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="12" letter-spacing="1.4">
+            <rect x="80" y="234" width="78" height="18" fill="#ff6a00"/><text x="119" y="247" text-anchor="middle" fill="#2b3036">CHAUFFERIE</text>
+            <rect x="330" y="290" width="54" height="18" fill="#ff6a00"/><text x="357" y="303" text-anchor="middle" fill="#2b3036">PAC</text>
+          </g>
+          <g font-family="Barlow Condensed, sans-serif" font-size="11" fill="#bcd2e6" letter-spacing="1.5"><text x="16" y="24">PL. 02 — VUE ISOMÉTRIQUE</text><text x="16" y="326">ILLUSTRATION DE PRINCIPE</text></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 RÉALISATIONS ===== -->
+<section class="s blanc" id="realisations">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>05</div>
+      <div><h2>Types de réalisations</h2><p>Planches illustrant les installations que réalise l’entreprise. Chaque chantier est adapté au logement.</p></div>
+    </div>
+    <div class="galerie">
+      <figure class="plan rv">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="110" y="30" width="100" height="140" fill="#1a466d"/><rect x="124" y="46" width="72" height="26"/><circle cx="138" cy="59" r="5"/><path d="M152 59h34"/><path d="M124 170v40M146 170v40M174 170v40M196 170v40"/></g><path d="M150 140c-6-8 4-12 0-22 10 6 10 16 6 22" fill="none" stroke="#ff6a00" stroke-width="2"/><path d="M90 30v140M84 30h12M84 170h12" stroke="#bcd2e6"/><text x="80" y="104" fill="#bcd2e6" font-family="Barlow Condensed, sans-serif" font-size="12" transform="rotate(-90 80 104)">H</text></svg></div>
+        <figcaption class="cart"><div><h3>Chaudière gaz murale</h3><p>Remplacement et raccordement</p></div><div>PL-A</div></figcaption>
+      </figure>
+      <figure class="plan rv d1">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="60" y="80" width="140" height="100" fill="#1a466d"/><circle cx="130" cy="130" r="36"/><circle cx="130" cy="130" r="22" stroke-width=".8"/><path d="M130 94v72M94 130h72" stroke-width=".8"/><path d="M76 180v24M184 180v24"/><path d="M40 204h240"/></g><path d="M200 116h60V60M200 140h72V60" fill="none" stroke="#ff6a00" stroke-width="2.5"/><path d="M200 140h72V60" fill="none" stroke="#8fc3ff" stroke-width="2.5"/><path d="M60 64h140M60 58v12M200 58v12" stroke="#bcd2e6"/></svg></div>
+        <figcaption class="cart"><div><h3>Pompe à chaleur</h3><p>Unité extérieure et liaisons</p></div><div>PL-B</div></figcaption>
+      </figure>
+      <figure class="plan rv d2">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="120" y="20" width="80" height="196" rx="40" fill="#1a466d"/><path d="M120 70h80"/><rect x="136" y="34" width="48" height="22"/><path d="M136 100h48M136 120h48M136 140h48M136 160h48" stroke-width=".7" opacity=".7"/></g><path d="M160 196v-90M152 116l8-10 8 10" fill="none" stroke="#ff6a00" stroke-width="2.5"/><path d="M60 44c20 0 30 8 56 8M60 64c20 0 30-4 56-4" fill="none" stroke="#8fc3ff" stroke-dasharray="4 4" stroke-width="2"/></svg></div>
+        <figcaption class="cart"><div><h3>Chauffe-eau thermodynamique</h3><p>Ballon et prise d’air</p></div><div>PL-C</div></figcaption>
+      </figure>
+      <figure class="plan rv">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="60" y="60" width="200" height="40" fill="#1a466d"/><path d="M70 90h180"/><path d="M90 108c0 10-8 10-8 22M160 108c0 10-8 10-8 22M230 108c0 10-8 10-8 22" stroke="#8fc3ff" stroke-width="2"/><path d="M40 180h240"/></g><path d="M60 44h200M60 38v12M260 38v12" stroke="#bcd2e6"/><text x="160" y="36" text-anchor="middle" fill="#bcd2e6" font-family="Barlow Condensed, sans-serif" font-size="12">L</text></svg></div>
+        <figcaption class="cart"><div><h3>Climatisation</h3><p>Unité murale intérieure</p></div><div>PL-D</div></figcaption>
+      </figure>
+      <figure class="plan rv d1">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><path d="M40 200h240"/><rect x="70" y="120" width="90" height="80" fill="#1a466d"/><path d="M70 140h90"/><path d="M200 60v60c0 12 10 12 10 24v56"/><path d="M190 60h20"/><path d="M230 120h40v80h-40z" fill="#1a466d"/></g><path d="M115 120V80h85" fill="none" stroke="#8fc3ff" stroke-width="2.5"/><path d="M115 100h-30V60" fill="none" stroke="#ff6a00" stroke-width="2.5"/><path d="M210 150c-4 4-4 8 0 10 4-2 4-6 0-10z" fill="#8fc3ff"/></svg></div>
+        <figcaption class="cart"><div><h3>Plomberie sanitaire</h3><p>Alimentation et évacuation</p></div><div>PL-E</div></figcaption>
+      </figure>
+      <figure class="plan rv d2">
+        <div class="dessin"><svg viewBox="0 0 320 240" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="80" y="50" width="100" height="150" fill="#1a466d"/><path d="M80 90h100"/><circle cx="130" cy="70" r="8"/><path d="M180 70h40v-30"/><rect x="210" y="140" width="60" height="60" rx="6" fill="#1a466d"/><path d="M40 200h240"/></g><path d="M118 170c-6-8 4-12 0-22 10 6 10 16 6 22" fill="none" stroke="#ff6a00" stroke-width="2"/><path d="M180 180h30" stroke="#ff6a00" stroke-width="2.5"/><text x="240" y="176" text-anchor="middle" fill="#bcd2e6" font-family="Barlow Condensed, sans-serif" font-size="12" letter-spacing="1.4">FIOUL</text></svg></div>
+        <figcaption class="cart"><div><h3>Chaudière fioul au sol</h3><p>Intervention et remplacement</p></div><div>PL-F</div></figcaption>
+      </figure>
+    </div>
+    <div class="tarif rv">
+      <div class="gros">Tarifs<br><span>sur devis</span></div>
+      <p>Le chiffrage dépend du logement, de l’équipement choisi, de l’accès au local technique et de l’état des réseaux existants. Le devis est établi après visite, poste par poste.</p>
+      <a class="btn or" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 AVIS ===== -->
+<section class="s" id="avis">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>06</div>
+      <div><h2>Votre avis compte</h2></div>
+    </div>
+    <div class="invite rv">
+      <svg viewBox="0 0 84 84" aria-hidden="true"><rect x="2" y="2" width="80" height="80" fill="#e6e7e8" stroke="#2b3036" stroke-width="2"/><path d="M42 16l7 14 15 2-11 10 3 15-14-7-14 7 3-15-11-10 15-2z" fill="#ff6a00" stroke="#2b3036" stroke-width="2"/></svg>
+      <div>
+        <h3>Vous avez fait appel à Sani-Thermie ?</h3>
+        <p>Partagez votre expérience en ligne : votre retour aide d’autres habitants de Fontaine et de l’agglomération à choisir leur artisan, et nous aide à progresser.</p>
+      </div>
+      <a class="btn ac" href="https://www.google.com/maps/search/?api=1&amp;query=Sani-Thermie%203%20rue%20Guy%20M%C3%B4quet%2038600%20Fontaine" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 FAQ ===== -->
+<section class="s blanc" id="faq">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>07</div>
+      <div><h2>Questions fréquentes</h2><p>Réponses générales : pour votre situation précise, appelez le 06 12 35 79 26.</p></div>
+    </div>
+    <div class="faq rv">
+      <details open><summary><span class="q">Q-01</span><span class="t">Faut-il faire entretenir sa chaudière chaque année ?</span><span class="pl"></span></summary><div class="rep">Oui, l’entretien annuel des chaudières gaz et fioul est obligatoire. Il contribue à la sécurité de l’installation, à son rendement et à sa durée de vie. Une attestation vous est remise à l’issue de la visite.</div></details>
+      <details><summary><span class="q">Q-02</span><span class="t">Remplacer ma chaudière fioul : quelles options ?</span><span class="pl"></span></summary><div class="rep">Selon le logement, plusieurs solutions peuvent être étudiées : pompe à chaleur, chaudière gaz si le réseau est disponible, ou autre configuration. La visite technique permet de comparer les options réalistes pour votre maison.</div></details>
+      <details><summary><span class="q">Q-03</span><span class="t">Une pompe à chaleur suffit-elle en hiver à Fontaine ?</span><span class="pl"></span></summary><div class="rep">Les pompes à chaleur récentes fonctionnent par temps froid, mais leurs performances dépendent du modèle, de l’isolation et des émetteurs de chaleur. Le dimensionnement se fait au cas par cas.</div></details>
+      <details><summary><span class="q">Q-04</span><span class="t">Qu’est-ce qu’un chauffe-eau thermodynamique ?</span><span class="pl"></span></summary><div class="rep">C’est un ballon d’eau chaude équipé d’une petite pompe à chaleur qui récupère les calories de l’air pour chauffer l’eau. Son emplacement (pièce, volume, prise d’air) est important pour son bon fonctionnement.</div></details>
+      <details><summary><span class="q">Q-05</span><span class="t">Pourquoi faire appel à une entreprise QUALIPAC ?</span><span class="pl"></span></summary><div class="rep">Les qualifications QUALIPAC attestent de compétences pour l’installation de pompes à chaleur et de chauffe-eau thermodynamiques. Le recours à une entreprise qualifiée est souvent une condition pour certaines aides publiques, dont les règles évoluent.</div></details>
+      <details><summary><span class="q">Q-06</span><span class="t">Intervenez-vous aussi pour la plomberie ?</span><span class="pl"></span></summary><div class="rep">Oui, Sani-Thermie réalise des travaux de plomberie. Décrivez-nous le problème ou le projet par téléphone ou via le formulaire pour convenir d’un rendez-vous.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 ACCÈS ===== -->
+<section class="s" id="acces">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>08</div>
+      <div><h2>Horaires &amp; accès</h2></div>
+    </div>
+    <div class="acces">
+      <div class="panneau rv">
+        <h3>Horaires <span class="ref">HOR-01</span></h3>
+        <div class="in">
+          <p class="mention">Horaires sur rendez-vous – appelez-nous.</p>
+          <table class="horaires" id="horaires">
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>Nous consulter</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>Nous consulter</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="panneau rv d1">
+        <h3>Adresse <span class="ref">LOC-01</span></h3>
+        <div class="in">
+          <p class="adr">3 rue Guy Môquet<br>38600 Fontaine<small>Fontaine, agglomération grenobloise (Isère).</small></p>
+          <ul class="coords">
+            <li><span>Mobile</span><a href="tel:+33612357926">06 12 35 79 26</a></li>
+            <li><span>Email</span><a href="mailto:sani.thermie@outlook.fr">sani.thermie@outlook.fr</a></li>
+          </ul>
+          <div class="mini-plan vue" style="padding:0;border-width:2px"><svg viewBox="0 0 400 110" role="img" aria-label="Pictogramme de localisation : Fontaine, 38600"><g fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><path d="M0 70h400M150 0v110M290 0v110" stroke-width="6" stroke="#2b5f8e" opacity="1"/></g><g font-family="Barlow Condensed, sans-serif" font-size="11" letter-spacing="1.6" fill="#bcd2e6"><text x="12" y="20">PL. 03 — SITUATION</text><text x="12" y="100">FONTAINE · 38600 · ISÈRE</text><text x="300" y="100">↑ N</text></g><circle cx="220" cy="56" r="26" fill="none" stroke="#ff6a00" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M220 72s-12-12-12-21a12 12 0 0 1 24 0c0 9-12 21-12 21z" fill="#ff6a00"/><circle cx="220" cy="51" r="4" fill="#2b3036"/><text x="252" y="48" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="13" letter-spacing="1.4" fill="#fff">SANI-THERMIE</text></svg></div>
+          <a class="btn or" href="https://www.google.com/maps/search/?api=1&amp;query=Sani-Thermie%203%20rue%20Guy%20M%C3%B4quet%2038600%20Fontaine" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 CONTACT ===== -->
+<section class="s acier" id="contact">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <div class="s-code"><small>REF.</small>09</div>
+      <div><h2>Demander un devis</h2></div>
+    </div>
+    <div class="contact">
+      <div class="contact-intro rv">
+        <p>Indiquez-nous votre projet ou la panne constatée, le type de logement et l’équipement en place. Nous vous recontactons pour organiser la visite.</p>
+        <p>Pour aller plus vite :</p>
+        <a class="tel" href="tel:+33612357926">06 12 35 79 26</a>
+        <p>Ou par email : <a href="mailto:sani.thermie@outlook.fr" style="color:#fff;font-weight:600">sani.thermie@outlook.fr</a></p>
+      </div>
+      <form id="form" class="rv d1" novalidate>
+        <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel"></div>
+        <div class="champ"><label for="mail">Email</label><input id="mail" type="email" autocomplete="email"></div>
+        <div class="champ"><label for="objet">Équipement</label>
+          <select id="objet"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Plomberie</option><option>Autre</option></select></div>
+        <div class="champ plein"><label for="msg">Description</label><textarea id="msg" placeholder="Logement, équipement actuel, besoin ou panne…"></textarea></div>
+        <div class="form-bas"><button type="submit" class="btn or">Envoyer</button><small>L’envoi ouvre votre messagerie avec un email pré-rempli à sani.thermie@outlook.fr.</small></div>
+        <p class="form-msg" id="form-msg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a href="#haut" class="logo"><svg class="logo-ic" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="none" stroke="#ff6a00" stroke-width="2"/><path d="M8 28h8V12h8v16h8" fill="none" stroke="#fff" stroke-width="3"/><circle cx="20" cy="9" r="3" fill="#ff6a00"/></svg><span><strong>Sani<span>-</span>Thermie</strong><small>Plomberie · Chauffage · Fontaine</small></span></a>
+        <p>Plombier chauffagiste à Fontaine : chaudières gaz et fioul, pompes à chaleur, climatisation, chauffe-eau thermodynamiques, plomberie.</p>
+      </div>
+      <div><h4>Coordonnées</h4><ul><li>3 rue Guy Môquet</li><li>38600 Fontaine</li><li><a href="tel:+33612357926">06 12 35 79 26</a></li><li><a href="mailto:sani.thermie@outlook.fr">sani.thermie@outlook.fr</a></li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Sur rendez-vous</li><li>Appelez-nous pour fixer un créneau</li></ul></div>
+      <div><h4>Plan du site</h4><ul><li><a href="#services">01 · Services</a></li><li><a href="#etapes">03 · Méthode</a></li><li><a href="#realisations">05 · Réalisations</a></li><li><a href="#faq">07 · FAQ</a></li><li><a href="#contact">09 · Devis</a></li></ul></div>
+    </div>
+    <div class="pied-bas"><span>© Sani-Thermie SARL · QUALIPAC Chauffage · QUALIPAC CET</span><span>REF. SANI-THERMIE · Fontaine 38600</span></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33612357926" aria-label="Appeler le 06 12 35 79 26"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');});});
+  var r=document.querySelector('#horaires tr[data-j="'+new Date().getDay()+'"]');if(r)r.classList.add('auj');
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+  var f=document.getElementById('form'),msg=document.getElementById('form-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim();};
+    if(!v('nom')||(!v('tel')&&!v('mail'))){msg.textContent='Merci d’indiquer votre nom et un téléphone ou un email.';msg.classList.add('on');return;}
+    var corps='Nom : '+v('nom')+'\nTéléphone : '+v('tel')+'\nEmail : '+v('mail')+'\nÉquipement : '+v('objet')+'\n\n'+v('msg');
+    window.location.href='mailto:sani.thermie@outlook.fr?subject='+encodeURIComponent('Demande de devis – '+v('objet'))+'&body='+encodeURIComponent(corps);
+    msg.textContent='Maquette de démonstration : votre messagerie s’ouvre avec la demande pré-remplie.';msg.classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>

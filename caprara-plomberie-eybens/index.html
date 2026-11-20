@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caprara Plomberie – plombier chauffagiste à Eybens</title>
+<meta name="description" content="Caprara Plomberie, Yoann Caprara, plombier chauffagiste à Eybens (38320) : chaudières gaz et fioul (installation, entretien, dépannage) et plomberie à Eybens, Grenoble et environs. 06 15 49 65 54.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffe14d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bleu:#2f5bff;
+  --rose:#ff7eb6;
+  --jaune:#ffe14d;
+  --blanc:#fffaf0;
+  --noir:#111111;
+  --trait:3px solid var(--noir);
+  --trait-epais:4px solid var(--noir);
+  --ombre:6px 6px 0 var(--noir);
+  --ombre-grande:10px 10px 0 var(--noir);
+  --wrap:1200px;
+  --ff-titre:"Rubik Mono One", "Arial Black", sans-serif;
+  --ff-texte:"Rubik", system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--blanc);color:var(--noir);font-family:var(--ff-texte);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--ff-titre);font-weight:400;line-height:1.08;margin:0 0 .5em;text-transform:uppercase;letter-spacing:-.01em;word-spacing:-.18em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:4px solid var(--bleu);outline-offset:3px}
+::selection{background:var(--rose);color:var(--noir)}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:.9em 1.4em;font-family:var(--ff-texte);font-weight:800;font-size:1.02rem;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;border:var(--trait-epais);box-shadow:var(--ombre);cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, background .15s;color:var(--noir);background:var(--blanc)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--noir)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--noir)}
+.btn-jaune{background:var(--jaune)}
+.btn-rose{background:var(--rose)}
+.btn-bleu{background:var(--bleu);color:#fff}
+.btn-noir{background:var(--noir);color:var(--jaune);box-shadow:6px 6px 0 var(--rose)}
+.btn-noir:hover{box-shadow:9px 9px 0 var(--rose)}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--blanc);border-bottom:var(--trait-epais)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--ff-titre);font-size:1.05rem;line-height:1}
+.logo-carre{width:44px;height:44px;background:var(--bleu);border:var(--trait);box-shadow:3px 3px 0 var(--noir);display:grid;place-items:center;transform:rotate(-6deg);transition:transform .2s}
+.logo:hover .logo-carre{transform:rotate(6deg)}
+.logo-carre svg{width:26px;height:26px}
+.logo small{display:block;font-family:var(--ff-texte);font-weight:700;font-size:.66rem;letter-spacing:.14em;margin-top:4px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:.45em .75em;text-decoration:none;font-weight:700;font-size:.95rem;border:3px solid transparent;transition:background .15s,border-color .15s,transform .15s}
+.menu a:hover{background:var(--jaune);border-color:var(--noir);transform:rotate(-2deg)}
+.menu .menu-tel a{background:var(--rose);border:var(--trait);box-shadow:3px 3px 0 var(--noir);margin-left:8px}
+.menu .menu-tel a:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--noir)}
+.burger{display:none;width:50px;height:50px;border:var(--trait);background:var(--jaune);box-shadow:3px 3px 0 var(--noir);cursor:pointer;position:relative;padding:0}
+.burger span{position:absolute;left:10px;right:10px;height:4px;background:var(--noir);transition:transform .25s, opacity .25s}
+.burger span:nth-child(1){top:12px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:28px}
+.nav.ouvert .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.ouvert .burger span:nth-child(2){opacity:0}
+.nav.ouvert .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- En-tête : texte géant superposé ---------- */
+.hero{position:relative;padding:110px 0 0;background:var(--jaune);border-bottom:var(--trait-epais);overflow:hidden}
+.hero-grille{position:absolute;inset:0;background-image:linear-gradient(rgba(17,17,17,.08) 2px,transparent 2px),linear-gradient(90deg,rgba(17,17,17,.08) 2px,transparent 2px);background-size:48px 48px;pointer-events:none}
+.hero-haut{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.tag{display:inline-flex;align-items:center;gap:.45em;padding:.35em .8em;border:var(--trait);background:var(--blanc);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;box-shadow:3px 3px 0 var(--noir)}
+.tag-rose{background:var(--rose)}.tag-bleu{background:var(--bleu);color:#fff}.tag-noir{background:var(--noir);color:var(--jaune)}
+.tag .point{width:10px;height:10px;border-radius:50%;background:#1fbf5b;border:2px solid var(--noir)}
+.geant{position:relative;margin:0;line-height:.86;text-align:center;white-space:nowrap}
+.geant .mot{display:block;font-family:var(--ff-titre);font-size:clamp(3.4rem,14.6vw,13.2rem);color:var(--bleu);-webkit-text-stroke:4px var(--noir);paint-order:stroke fill;text-shadow:8px 8px 0 var(--noir);letter-spacing:-.03em}
+.geant .sous{display:block;width:max-content;margin-left:4px;font-family:var(--ff-titre);font-size:clamp(1rem,2.6vw,2rem);background:var(--rose);border:var(--trait-epais);padding:.25em .6em;transform:rotate(-3deg);box-shadow:var(--ombre);margin-top:14px;letter-spacing:.04em}
+.hero-scene{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:start;gap:20px;margin-top:-170px}
+.hero-outils{position:relative;margin-top:0;margin-right:-20px;z-index:2;pointer-events:none}
+.hero-outils svg{width:100%;height:auto;filter:drop-shadow(8px 8px 0 rgba(17,17,17,1))}
+.hero-outils .goutte{animation:goutte 2.6s cubic-bezier(.5,0,.8,.4) infinite}
+@keyframes goutte{0%{transform:translateY(-14px);opacity:0}15%{opacity:1}80%{transform:translateY(26px);opacity:1}100%{transform:translateY(34px);opacity:0}}
+.hero-cle{transform-origin:200px 200px;animation:cle 5s ease-in-out infinite}
+@keyframes cle{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+.accroche-bloc{position:relative;z-index:3;background:var(--blanc);border:var(--trait-epais);box-shadow:var(--ombre-grande);padding:32px 34px;margin:220px 0 70px;max-width:600px}
+.accroche-bloc::before{content:"PLOMBIER CHAUFFAGISTE";position:absolute;top:-18px;left:22px;background:var(--noir);color:var(--jaune);font-weight:800;font-size:.78rem;letter-spacing:.12em;padding:.3em .8em}
+.accroche{font-family:var(--ff-titre);font-size:clamp(1.15rem,2.1vw,1.6rem);line-height:1.25;margin:0 0 .6em;text-transform:none;word-spacing:-.2em}
+.accroche mark{background:var(--rose);padding:0 .15em;color:inherit;box-shadow:inset 0 -.1em 0 var(--noir)}
+.accroche-bloc p.texte{font-size:1.05rem;margin-bottom:24px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px}
+
+/* Marquee incliné */
+.marquee-zone{position:relative;z-index:5;padding:34px 0;margin:-40px 0 -20px;overflow:hidden;pointer-events:none}
+.marquee{background:var(--noir);color:var(--jaune);border-block:var(--trait-epais);transform:rotate(-2.5deg);width:110%;margin-left:-5%;overflow:hidden;pointer-events:auto}
+.marquee.inverse{background:var(--rose);color:var(--noir);transform:rotate(2deg);margin-top:-6px}
+.marquee-piste{display:flex;width:max-content;animation:defile 28s linear infinite}
+.marquee.inverse .marquee-piste{animation-direction:reverse;animation-duration:34s}
+.marquee:hover .marquee-piste{animation-play-state:paused}
+.marquee-piste span{display:flex;align-items:center;gap:22px;padding:14px 22px;font-family:var(--ff-titre);font-size:1.15rem;white-space:nowrap}
+.marquee-piste span::after{content:"";width:18px;height:18px;background:currentColor;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ---------- Bandeau de confiance ---------- */
+.confiance{padding:70px 0 30px}
+.confiance-liste{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;list-style:none;margin:0;padding:0}
+.confiance-liste li{display:flex;align-items:center;gap:12px;padding:14px 20px;border:var(--trait-epais);box-shadow:var(--ombre);background:var(--blanc);font-weight:700;transition:transform .15s}
+.confiance-liste li:nth-child(1){background:var(--jaune);transform:rotate(-1.5deg)}
+.confiance-liste li:nth-child(2){background:var(--rose);transform:rotate(1deg)}
+.confiance-liste li:nth-child(3){background:var(--bleu);color:#fff;transform:rotate(-1deg)}
+.confiance-liste li:nth-child(4){transform:rotate(1.5deg)}
+.confiance-liste li:hover{transform:rotate(0) scale(1.04)}
+.confiance-liste svg{width:30px;height:30px;flex:none}
+.confiance-liste small{display:block;font-weight:500;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;opacity:.85}
+.confiance-liste a{text-decoration:none}
+
+/* ---------- Sections ---------- */
+.bloc{padding:100px 0;position:relative}
+.titre-bloc{margin-bottom:50px;max-width:820px}
+.titre-bloc.centre{margin-inline:auto;text-align:center}
+.titre-bloc h2{font-size:clamp(1.7rem,3.8vw,2.9rem)}
+.titre-bloc h2 .surligne{background:var(--jaune);padding:0 .15em;border:3px solid var(--noir);box-shadow:4px 4px 0 var(--noir);display:inline-block;transform:rotate(-1.5deg)}
+.titre-bloc p{font-size:1.1rem;max-width:680px}
+.titre-bloc.centre p{margin-inline:auto}
+.etiquette{display:inline-block;padding:.3em .8em;border:var(--trait);background:var(--rose);font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;box-shadow:3px 3px 0 var(--noir)}
+
+/* Services */
+.services-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.carte{background:var(--blanc);border:var(--trait-epais);box-shadow:var(--ombre);padding:28px 26px;transition:transform .15s, box-shadow .15s;position:relative}
+.carte:hover{transform:translate(-4px,-4px);box-shadow:var(--ombre-grande)}
+.carte:nth-child(3n+1) .carte-icone{background:var(--jaune)}
+.carte:nth-child(3n+2) .carte-icone{background:var(--rose)}
+.carte:nth-child(3n) .carte-icone{background:var(--bleu)}
+.carte-icone{width:78px;height:78px;border:var(--trait-epais);display:grid;place-items:center;margin-bottom:22px;transform:rotate(-4deg);transition:transform .2s}
+.carte:hover .carte-icone{transform:rotate(4deg) scale(1.05)}
+.carte-icone svg{width:46px;height:46px}
+.carte h3{font-size:1.12rem;margin-bottom:.6em}
+.carte p{margin:0;font-size:.99rem}
+.carte .num{position:absolute;top:18px;right:20px;font-family:var(--ff-titre);font-size:.9rem;opacity:.35}
+
+/* Pourquoi */
+.pourquoi{background:var(--bleu);color:#fff;border-block:var(--trait-epais)}
+.pourquoi .titre-bloc h2{color:#fff;-webkit-text-stroke:0}
+.pourquoi .titre-bloc h2 .surligne{color:var(--noir)}
+.pourquoi .etiquette{color:var(--noir)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.atout{background:var(--blanc);color:var(--noir);border:var(--trait-epais);box-shadow:var(--ombre);padding:26px 22px;transition:transform .15s, box-shadow .15s}
+.atout:nth-child(even){transform:translateY(26px)}
+.atout:hover{box-shadow:var(--ombre-grande);transform:translate(-4px,-4px)}
+.atout:nth-child(even):hover{transform:translate(-4px,22px)}
+.atout-pastille{width:64px;height:64px;border-radius:50%;border:var(--trait-epais);display:grid;place-items:center;margin-bottom:18px;background:var(--jaune)}
+.atout:nth-child(2) .atout-pastille{background:var(--rose)}
+.atout:nth-child(4) .atout-pastille{background:var(--rose)}
+.atout-pastille svg{width:34px;height:34px}
+.atout h3{font-size:1rem}
+.atout p{margin:0;font-size:.97rem}
+
+/* Étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;border:var(--trait-epais);box-shadow:var(--ombre-grande);background:var(--blanc)}
+.etape{padding:30px 26px;border-right:var(--trait-epais);position:relative;transition:background .2s}
+.etape:last-child{border-right:0}
+.etape:hover{background:var(--jaune)}
+.etape-num{font-family:var(--ff-titre);font-size:3.6rem;line-height:1;color:var(--blanc);-webkit-text-stroke:3px var(--noir);paint-order:stroke fill;text-shadow:5px 5px 0 var(--rose);display:block;margin-bottom:16px}
+.etape h3{font-size:1rem}
+.etape p{margin:0;font-size:.97rem}
+
+/* À propos */
+.apropos{background:var(--rose);border-block:var(--trait-epais);overflow:hidden}
+.apropos-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.carte-visite{background:var(--blanc);border:var(--trait-epais);box-shadow:var(--ombre-grande);padding:30px;transform:rotate(-3deg);transition:transform .25s;position:relative}
+.carte-visite:hover{transform:rotate(0)}
+.carte-visite::after{content:"";position:absolute;top:-22px;left:50%;width:110px;height:34px;margin-left:-55px;background:rgba(255,225,77,.85);border:2px solid var(--noir);transform:rotate(4deg)}
+.carte-visite svg{width:100%;height:auto;border:var(--trait);background:var(--jaune)}
+.carte-visite .nom{font-family:var(--ff-titre);font-size:1.35rem;margin:20px 0 4px}
+.carte-visite .role{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;margin:0}
+.apropos h2{font-size:clamp(1.8rem,4vw,3rem)}
+.apropos p{font-size:1.07rem}
+.apropos-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+/* Réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.realisation{margin:0;border:var(--trait-epais);box-shadow:var(--ombre);background:var(--blanc);transition:transform .15s, box-shadow .15s}
+.realisation:hover{transform:translate(-4px,-4px) rotate(-1deg);box-shadow:var(--ombre-grande)}
+.realisation svg{width:100%;height:auto;border-bottom:var(--trait-epais)}
+.realisation figcaption{padding:16px 18px 18px}
+.realisation h3{font-size:.92rem;margin-bottom:.4em}
+.realisation p{margin:0;font-size:.93rem}
+.note-illu{margin-top:26px;font-size:.9rem;text-align:center;font-weight:500}
+
+.tarifs{margin-top:80px;display:grid;grid-template-columns:1fr 1.2fr;gap:0;border:var(--trait-epais);box-shadow:var(--ombre-grande)}
+.tarifs-intro{background:var(--noir);color:var(--blanc);padding:40px 36px}
+.tarifs-intro h3{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--jaune)}
+.tarifs-intro p{color:#eee}
+.tarifs-liste{list-style:none;margin:0;padding:0;background:var(--blanc)}
+.tarifs-liste li{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:17px 26px;border-bottom:var(--trait);font-weight:500}
+.tarifs-liste li:last-child{border-bottom:0}
+.tarifs-liste li:hover{background:var(--jaune)}
+.prix{flex:none;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.06em;border:var(--trait);padding:.25em .7em;background:var(--rose);transform:rotate(-2deg)}
+
+/* Avis */
+.avis-encart{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;background:var(--jaune);border:var(--trait-epais);box-shadow:var(--ombre-grande);padding:34px 38px}
+.avis-encart svg{width:90px;height:90px}
+.avis-encart h2{font-size:clamp(1.3rem,2.6vw,1.8rem);margin-bottom:.35em}
+.avis-encart p{margin:0}
+
+/* FAQ */
+.faq{background:var(--blanc);border-top:var(--trait-epais);background-image:radial-gradient(rgba(17,17,17,.14) 1.5px,transparent 1.5px);background-size:22px 22px}
+.faq-grille{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-liste{display:flex;flex-direction:column;gap:16px}
+.question{border:var(--trait-epais);background:var(--blanc);box-shadow:5px 5px 0 var(--noir);transition:box-shadow .15s, background .15s}
+.question.ouverte{box-shadow:5px 5px 0 var(--bleu)}
+.question button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-weight:800;font-size:1.04rem}
+.question button:hover{background:var(--jaune)}
+.question button:focus-visible{outline:4px solid var(--bleu);outline-offset:-4px}
+.question .plus{width:34px;height:34px;flex:none;border:var(--trait);background:var(--rose);position:relative;transition:transform .25s, background .2s}
+.question .plus::before,.question .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:3px;background:var(--noir);transform:translate(-50%,-50%)}
+.question .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s}
+.question.ouverte .plus{background:var(--jaune);transform:rotate(180deg)}
+.question.ouverte .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.question.ouverte button{border-bottom:var(--trait)}
+.reponse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.question.ouverte .reponse{grid-template-rows:1fr}
+.reponse>div{overflow:hidden}
+.reponse p{padding:16px 20px 18px;margin:0}
+
+/* Contact */
+.contact{background:var(--jaune);border-top:var(--trait-epais)}
+.contact-grille{display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+.panneau{background:var(--blanc);border:var(--trait-epais);box-shadow:var(--ombre-grande);padding:34px}
+.panneau h3{font-size:1.25rem}
+.info-rdv{background:var(--rose);border:var(--trait);padding:14px 16px;font-weight:500;margin-bottom:18px}
+.horaires{width:100%;border-collapse:collapse;margin-bottom:26px;border:var(--trait)}
+.horaires th,.horaires td{padding:10px 14px;text-align:left;border-bottom:2px solid var(--noir);font-size:.97rem}
+.horaires th{font-weight:700}
+.horaires td{text-align:right}
+.horaires tr.aujourdhui th,.horaires tr.aujourdhui td{background:var(--bleu);color:#fff}
+.badge-jour{display:inline-block;margin-left:8px;background:var(--jaune);color:var(--noir);border:2px solid var(--noir);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.05em .5em;vertical-align:middle}
+.coord{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:12px}
+.coord li{display:flex;gap:12px;align-items:flex-start}
+.coord .ic{width:38px;height:38px;flex:none;border:var(--trait);display:grid;place-items:center;background:var(--jaune)}
+.coord .ic svg{width:20px;height:20px}
+.coord a{font-weight:800;text-decoration-thickness:3px;text-decoration-color:var(--rose);text-underline-offset:3px;word-break:break-word}
+.coord small{display:block;text-transform:uppercase;font-size:.75rem;letter-spacing:.1em;font-weight:700}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.large{grid-column:1/-1}
+.champ label{font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:1rem;padding:.8em .9em;border:var(--trait);background:#fff;color:var(--noir);border-radius:0;width:100%;transition:box-shadow .15s, background .15s}
+.champ textarea{min-height:130px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;box-shadow:4px 4px 0 var(--bleu);background:var(--blanc)}
+.form .btn{grid-column:1/-1;justify-self:start}
+.form-msg{grid-column:1/-1;margin:0;padding:12px 16px;border:var(--trait);background:var(--jaune);font-weight:700;display:none}
+.form-msg.visible{display:block}
+
+/* Pied de page */
+.pied{background:var(--noir);color:var(--blanc);padding:0 0 0;border-top:var(--trait-epais)}
+.pied-mot{font-family:var(--ff-titre);font-size:clamp(3rem,13vw,11.5rem);line-height:.9;color:transparent;-webkit-text-stroke:2px var(--jaune);text-align:center;padding:50px 0 10px;white-space:nowrap;overflow:hidden;letter-spacing:-.03em}
+.pied-grille{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding:40px 0 50px}
+.pied h4{color:var(--jaune);font-size:.95rem;margin-bottom:1em}
+.pied ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.pied a{text-decoration:none;color:var(--blanc);transition:color .15s}
+.pied a:hover{color:var(--rose)}
+.pied p{color:#ddd;font-size:.97rem}
+.pied-bas{border-top:2px solid #333;padding:20px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.88rem;color:#ccc}
+.demo{background:var(--rose);color:var(--noir);text-align:center;font-weight:500;font-size:.86rem;padding:10px 16px;border-top:var(--trait)}
+
+/* Appel flottant */
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;width:64px;height:64px;background:var(--rose);border:var(--trait-epais);box-shadow:5px 5px 0 var(--noir);align-items:center;justify-content:center;text-decoration:none;color:var(--noir)}
+.appel-flottant svg{width:30px;height:30px}
+.appel-flottant:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--noir)}
+
+/* Apparitions */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .55s ease, transform .55s cubic-bezier(.3,1.4,.5,1)}
+.js .rv.vu{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .services-grille{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(even){transform:none}
+  .atout:nth-child(even):hover{transform:translate(-4px,-4px)}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr)}
+  .etape:nth-child(2){border-right:0}
+  .etape:nth-child(-n+2){border-bottom:var(--trait-epais)}
+  .pied-grille{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block;z-index:2}
+  .menu{position:fixed;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--blanc);border-bottom:var(--trait-epais);padding:10px 16px 22px;transform:translateY(-130%);transition:transform .3s ease;box-shadow:0 8px 0 var(--noir);z-index:-1}
+  .nav.ouvert .menu{transform:none}
+  .menu a{font-size:1.15rem;padding:.75em .6em;border:0;border-bottom:3px solid var(--noir)}
+  .menu a:hover{transform:none}
+  .menu .menu-tel a{margin:16px 0 0;text-align:center;border:var(--trait-epais)}
+  .hero-scene{grid-template-columns:1fr;margin-top:0}
+  .hero-scene{margin-top:-60px}
+  .hero-outils{order:-1;margin:0 0 -20px auto;width:min(420px,80%)}
+  .accroche-bloc{margin:10px 0 70px;max-width:none}
+  .geant .sous{margin-top:10px}
+  .apropos-grille,.faq-grille,.contact-grille,.tarifs{grid-template-columns:1fr}
+  .carte-visite{max-width:420px;margin:0 auto}
+  .avis-encart{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .bloc{padding:76px 0}
+  .nav .wrap{height:66px}
+  .menu{top:70px}
+  .logo{font-size:.9rem}
+  .geant .mot{-webkit-text-stroke:2.5px var(--noir);text-shadow:4px 4px 0 var(--noir)}
+  .hero-outils svg{filter:drop-shadow(5px 5px 0 #111)}
+  .accroche-bloc{padding:28px 20px 24px;box-shadow:var(--ombre)}
+  .hero-btns .btn{width:100%}
+  .marquee-piste span{font-size:.95rem;padding:11px 16px}
+  .services-grille,.atouts,.galerie,.form{grid-template-columns:1fr}
+  .etapes{grid-template-columns:1fr}
+  .etape{border-right:0!important;border-bottom:var(--trait-epais)}
+  .etape:last-child{border-bottom:0}
+  .panneau{padding:26px 18px}
+  .tarifs-intro{padding:30px 22px}
+  .tarifs-liste li{padding:14px 16px}
+  .horaires th,.horaires td{padding:10px 10px}
+  .horaires td{white-space:nowrap}
+  .avis-encart{padding:28px 20px}
+  .pied-grille{grid-template-columns:1fr}
+  .appel-flottant{display:flex;opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .25s, transform .25s}
+  .appel-flottant.visible{opacity:1;pointer-events:auto;transform:none}
+  .demo{padding-bottom:96px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter" d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-devis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="miter"><path d="M14 3H5v18h14V8z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></g></symbol>
+    <symbol id="i-goutte" viewBox="0 0 24 24"><path d="M12 2C9 7 5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-4-8-7-13z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Caprara Plomberie – retour en haut">
+      <span class="logo-carre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 7 5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-4-8-7-13z" fill="#ffe14d" stroke="#111" stroke-width="2"/></svg></span>
+      <span>Caprara<small>Plomberie · Chauffage</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">Yoann</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="menu-tel"><a href="tel:+33615496554">06 15 49 65 54</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ========== EN-TÊTE ========== -->
+<section class="hero" id="accueil">
+  <div class="hero-grille" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-haut">
+      <span class="tag tag-noir">Eybens · 38320</span>
+      <span class="tag"><span class="point" aria-hidden="true"></span>Gaz · Fioul · Plomberie</span>
+    </div>
+    <h1 class="geant"><span class="mot">CAPRARA</span><span class="sous">Plomberie</span></h1>
+
+    <div class="hero-scene">
+      <div class="accroche-bloc">
+        <p class="accroche">Chaudière qui boude, robinet qui goutte&nbsp;? <mark>Yoann s'en occupe</mark>, d'Eybens à Grenoble.</p>
+        <p class="texte">Installation, entretien et dépannage de chaudières gaz et fioul, plus tous vos travaux de plomberie. Un seul numéro, un artisan qui décroche.</p>
+        <div class="hero-btns">
+          <a class="btn btn-rose" href="tel:+33615496554"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+          <a class="btn btn-bleu" href="#contact"><svg aria-hidden="true"><use href="#i-devis"/></svg>Demander un devis</a>
+        </div>
+      </div>
+      <div class="hero-outils" aria-hidden="true">
+        <svg viewBox="0 0 520 470">
+          <!-- Robinet -->
+          <g stroke="#111" stroke-width="7" stroke-linejoin="round">
+            <rect x="352" y="22" width="150" height="58" fill="#fffaf0"/>
+            <rect x="398" y="80" width="58" height="34" fill="#ffe14d"/>
+            <path d="M330 114 H468 V176 H404 V214 H330 Z" fill="#ff7eb6"/>
+            <rect x="318" y="210" width="98" height="30" fill="#fffaf0"/>
+            <rect x="468" y="124" width="46" height="44" fill="#2f5bff"/>
+            <circle cx="427" cy="51" r="12" fill="#ff7eb6"/>
+          </g>
+          <path d="M346 132 H380" stroke="#fffaf0" stroke-width="8" stroke-linecap="square"/>
+          <!-- Goutte -->
+          <g class="goutte">
+            <path d="M367 262 C350 292 330 310 330 336 a37 37 0 0 0 74 0 c0-26-20-44-37-74z" fill="#2f5bff" stroke="#111" stroke-width="7" stroke-linejoin="round"/>
+            <path d="M350 336 a18 18 0 0 0 12 18" stroke="#fffaf0" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </g>
+          <!-- Clé à molette -->
+          <g class="hero-cle">
+            <g transform="rotate(-38 200 260)" stroke="#111" stroke-width="7" stroke-linejoin="round">
+              <rect x="40" y="232" width="250" height="56" rx="10" fill="#ffe14d"/>
+              <rect x="70" y="248" width="150" height="24" rx="12" fill="#fffaf0"/>
+              <path d="M280 196 H380 V240 H340 V280 H380 V324 H280 Z" fill="#2f5bff"/>
+              <rect x="300" y="282" width="34" height="34" fill="#ff7eb6"/>
+              <path d="M300 288 h34 M300 298 h34 M300 308 h34" stroke-width="4"/>
+              <circle cx="72" cy="260" r="10" fill="#111"/>
+            </g>
+          </g>
+          <path d="M470 330 l12 26 28 4 -20 20 5 28 -25-13 -25 13 5-28 -20-20 28-4z" fill="#ff7eb6" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee incliné -->
+<div class="marquee-zone" aria-label="Nos services en bref">
+  <div class="marquee">
+    <div class="marquee-piste">
+      <span>Chaudières gaz</span><span>Chaudières fioul</span><span>Entretien annuel</span><span>Dépannage chauffage</span><span>Fuites</span><span>Robinetterie</span><span>Sanitaires</span><span>Eybens · Grenoble</span>
+      <span aria-hidden="true">Chaudières gaz</span><span aria-hidden="true">Chaudières fioul</span><span aria-hidden="true">Entretien annuel</span><span aria-hidden="true">Dépannage chauffage</span><span aria-hidden="true">Fuites</span><span aria-hidden="true">Robinetterie</span><span aria-hidden="true">Sanitaires</span><span aria-hidden="true">Eybens · Grenoble</span>
+    </div>
+  </div>
+  <div class="marquee inverse" aria-hidden="true">
+    <div class="marquee-piste">
+      <span>06 15 49 65 54</span><span>Devis sur demande</span><span>Isère</span><span>Plombier chauffagiste</span><span>06 15 49 65 54</span><span>Devis sur demande</span><span>Isère</span><span>Plombier chauffagiste</span>
+      <span>06 15 49 65 54</span><span>Devis sur demande</span><span>Isère</span><span>Plombier chauffagiste</span><span>06 15 49 65 54</span><span>Devis sur demande</span><span>Isère</span><span>Plombier chauffagiste</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== BANDEAU DE CONFIANCE ========== -->
+<section class="confiance">
+  <div class="wrap">
+    <ul class="confiance-liste">
+      <li class="rv"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2.6"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z" fill="#fffaf0"/><circle cx="12" cy="10" r="2.5" fill="#111"/></svg><span><small>Zone</small>Eybens, Grenoble et environs</span></li>
+      <li class="rv d1"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2.6"><rect x="5" y="3" width="14" height="18" fill="#fffaf0"/><path d="M9 15c0-2 3-3 3-6 1 2 3 3 3 6a3 3 0 0 1-6 0z" fill="#ffe14d"/></svg><span><small>Spécialité</small>Chaudières gaz &amp; fioul</span></li>
+      <li class="rv d2"><a href="tel:+33615496554" style="display:contents"><svg viewBox="0 0 24 24" aria-hidden="true" color="#fff"><use href="#i-tel"/></svg><span><small>Ligne directe</small>06 15 49 65 54</span></a></li>
+      <li class="rv d3"><svg viewBox="0 0 24 24" aria-hidden="true" color="#111"><use href="#i-devis"/></svg><span><small>Tarifs</small>Devis sur demande</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="titre-bloc rv">
+      <span class="etiquette">Services</span>
+      <h2>Du chaud, de l'eau, <span class="surligne">sans prise de tête</span></h2>
+      <p>Chaudière gaz ou fioul, salle de bains ou simple robinet&nbsp;: voici ce que Caprara Plomberie prend en charge chez vous.</p>
+    </div>
+    <div class="services-grille">
+      <article class="carte rv">
+        <span class="num" aria-hidden="true">01</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><rect x="10" y="4" width="28" height="34" fill="#fffaf0"/><rect x="15" y="10" width="18" height="7" fill="#2f5bff"/><path d="M19 30c0-3 5-5 5-9 1 3 5 5 5 9a5 5 0 0 1-10 0z" fill="#ff7eb6"/><path d="M16 38v6M24 38v6M32 38v6"/></svg></div>
+        <h3>Chaudières gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, réglages et mise en service pour un chauffage fiable tout l'hiver.</p>
+      </article>
+      <article class="carte rv d1">
+        <span class="num" aria-hidden="true">02</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><rect x="6" y="12" width="22" height="30" fill="#fffaf0"/><rect x="11" y="18" width="12" height="10" fill="#ffe14d"/><path d="M28 30h6"/><path d="M34 22h8v20h-8z" fill="#2f5bff"/><path d="M38 14c-2 3-4 4-4 6a4 4 0 0 0 8 0c0-2-2-3-4-6z" fill="#111"/></svg></div>
+        <h3>Chaudières fioul</h3>
+        <p>Entretien, dépannage et conseils pour votre chaudière fioul, y compris quand se pose la question de son remplacement.</p>
+      </article>
+      <article class="carte rv d2">
+        <span class="num" aria-hidden="true">03</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><rect x="6" y="8" width="36" height="34" fill="#fffaf0"/><path d="M6 16h36"/><path d="M14 4v8M34 4v8"/><path d="M15 29l6 6 12-12" stroke-width="4"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>Nettoyage, contrôle et réglages de votre chaudière, avec l'attestation d'entretien à conserver pour votre assurance.</p>
+      </article>
+      <article class="carte rv">
+        <span class="num" aria-hidden="true">04</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><path d="M26 4L10 26h12l-4 18 20-26H26z" fill="#ffe14d"/></svg></div>
+        <h3>Dépannage chauffage</h3>
+        <p>Plus de chauffage, plus d'eau chaude, chaudière en sécurité&nbsp;? Appelez&nbsp;: diagnostic et remise en route dès que possible.</p>
+      </article>
+      <article class="carte rv d1">
+        <span class="num" aria-hidden="true">05</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><path d="M4 14h20v10H14v16H4z" fill="#fffaf0"/><path d="M24 12h8v14h-8z" fill="#ffe14d"/><path d="M32 16h12v6H32z" fill="#fffaf0"/><path d="M38 30c-2 3-4 5-4 7a4 4 0 0 0 8 0c0-2-2-4-4-7z" fill="#2f5bff"/></svg></div>
+        <h3>Plomberie &amp; fuites</h3>
+        <p>Recherche et réparation de fuites, remplacement de tuyauteries, raccordements&nbsp;: on stoppe les dégâts proprement.</p>
+      </article>
+      <article class="carte rv d2">
+        <span class="num" aria-hidden="true">06</span>
+        <div class="carte-icone"><svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#111" stroke-width="3.4" stroke-linejoin="round"><path d="M6 22h36v6a12 12 0 0 1-12 12H18A12 12 0 0 1 6 28z" fill="#fffaf0"/><path d="M12 22V10a5 5 0 0 1 10 0"/><path d="M14 40l-2 4M34 40l2 4"/><circle cx="22" cy="14" r="2" fill="#111"/></svg></div>
+        <h3>Sanitaires &amp; robinetterie</h3>
+        <p>Pose de lavabo, WC, mitigeur ou douche&nbsp;: des équipements bien posés, bien raccordés et sans goutte.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POURQUOI ========== -->
+<section class="bloc pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="titre-bloc rv">
+      <span class="etiquette" style="background:var(--jaune)">Pourquoi Caprara</span>
+      <h2>Un artisan, <span style="white-space:nowrap"><span class="surligne">un numéro</span>,</span> zéro standard</h2>
+      <p>Pas de plateforme ni de centre d'appel&nbsp;: vous parlez directement à la personne qui viendra chez vous.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv">
+        <div class="atout-pastille"><svg viewBox="0 0 24 24" aria-hidden="true" color="#111"><use href="#i-tel"/></svg></div>
+        <h3>Contact direct</h3>
+        <p>Yoann répond lui-même au 06&nbsp;15&nbsp;49&nbsp;65&nbsp;54&nbsp;: vous expliquez votre souci à quelqu'un qui connaît le métier.</p>
+      </div>
+      <div class="atout rv d1">
+        <div class="atout-pastille"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2.6"><path d="M12 3c-3 5-6 7-6 11a6 6 0 0 0 12 0c0-4-3-6-6-11z" fill="#fffaf0"/><path d="M9 15l2 2 4-4"/></svg></div>
+        <h3>Gaz, fioul &amp; eau</h3>
+        <p>Chauffage et plomberie dans les mêmes mains&nbsp;: pratique quand une chaudière touche aussi à l'eau chaude.</p>
+      </div>
+      <div class="atout rv d2">
+        <div class="atout-pastille"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2.6"><path d="M2 20l7-11 4 6 3-4 6 9z" fill="#fffaf0"/></svg></div>
+        <h3>Basé à Eybens</h3>
+        <p>Au sud de Grenoble, entre Belledonne et Vercors&nbsp;: une zone d'intervention proche, sans traverser tout le département.</p>
+      </div>
+      <div class="atout rv d3">
+        <div class="atout-pastille"><svg viewBox="0 0 24 24" aria-hidden="true" color="#111"><use href="#i-devis"/></svg></div>
+        <h3>Prix annoncé avant</h3>
+        <p>Un devis clair avant les travaux. Vous savez ce qui sera fait et combien, avant que le chantier ne commence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DÉROULEMENT ========== -->
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="titre-bloc centre rv">
+      <span class="etiquette">Comment ça se passe</span>
+      <h2>4 étapes, <span class="surligne">pas une de plus</span></h2>
+    </div>
+    <ol class="etapes rv">
+      <li class="etape"><span class="etape-num">01</span><h3>Vous appelez</h3><p>Par téléphone ou via le formulaire&nbsp;: décrivez la panne, le projet ou le bruit bizarre de la chaudière.</p></li>
+      <li class="etape"><span class="etape-num">02</span><h3>Diagnostic</h3><p>Yoann vient voir l'installation, repère l'origine du problème et vous explique les options possibles.</p></li>
+      <li class="etape"><span class="etape-num">03</span><h3>Devis clair</h3><p>Vous recevez un devis détaillé. Rien ne démarre sans votre accord écrit.</p></li>
+      <li class="etape"><span class="etape-num">04</span><h3>Intervention</h3><p>Travaux, essais, mise en service et nettoyage&nbsp;: vous retrouvez une installation qui tourne rond.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== À PROPOS ========== -->
+<section class="bloc apropos" id="apropos">
+  <div class="wrap apropos-grille">
+    <div class="carte-visite rv">
+      <svg viewBox="0 0 400 250" role="img" aria-label="Illustration : caisse à outils de plombier avec clé, coude de tuyau et goutte d'eau">
+        <rect width="400" height="250" fill="#ffe14d"/>
+        <g stroke="#111" stroke-width="6" stroke-linejoin="round">
+          <path d="M150 70 V50 H250 V70" fill="none"/>
+          <rect x="90" y="70" width="220" height="130" fill="#2f5bff"/>
+          <rect x="90" y="70" width="220" height="38" fill="#ff7eb6"/>
+          <rect x="180" y="96" width="40" height="24" fill="#fffaf0"/>
+          <path d="M40 200 H360" />
+          <path d="M300 40 h40 v20 h-20 v40 h-20z" fill="#fffaf0"/>
+          <path d="M60 120 c-8 14-16 20-16 30a16 16 0 0 0 32 0c0-10-8-16-16-30z" fill="#2f5bff"/>
+        </g>
+        <g transform="rotate(-20 200 220)" stroke="#111" stroke-width="6" stroke-linejoin="round"><rect x="120" y="206" width="150" height="26" fill="#fffaf0"/><path d="M262 194 h40 v16 h-16 v18 h16 v16 h-40z" fill="#ff7eb6"/></g>
+      </svg>
+      <p class="nom">Yoann Caprara</p>
+      <p class="role">Plombier chauffagiste · Eybens</p>
+    </div>
+    <div class="rv d1">
+      <span class="etiquette" style="background:var(--jaune)">À propos</span>
+      <h2>Caprara Plomberie, c'est Yoann</h2>
+      <p>Caprara Plomberie est l'entreprise de Yoann Caprara, plombier chauffagiste installé à Eybens (38320).</p>
+      <p>Son terrain de jeu&nbsp;: les chaudières gaz et fioul, de l'installation à l'entretien en passant par le dépannage, ainsi que la plomberie au sens large.</p>
+      <p>Il intervient à Eybens, à Grenoble et dans les communes alentour, et se joint directement au 06&nbsp;15&nbsp;49&nbsp;65&nbsp;54 ou par e-mail.</p>
+      <div class="apropos-tags">
+        <span class="tag">Chaudières gaz</span><span class="tag tag-bleu">Chaudières fioul</span><span class="tag">Plomberie</span><span class="tag tag-noir">Eybens · Grenoble</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RÉALISATIONS & TARIFS ========== -->
+<section class="bloc" id="realisations">
+  <div class="wrap">
+    <div class="titre-bloc rv">
+      <span class="etiquette">Types de chantiers</span>
+      <h2>Ce qu'on fait, <span class="surligne">en images</span></h2>
+      <p>Pas de photos retouchées ici&nbsp;: des illustrations des interventions les plus courantes chez un plombier chauffagiste de l'agglomération.</p>
+    </div>
+    <div class="galerie">
+      <figure class="realisation rv">
+        <svg viewBox="0 0 300 220" role="img" aria-label="Illustration : chaudière murale gaz">
+          <rect width="300" height="220" fill="#2f5bff"/>
+          <g stroke="#111" stroke-width="5" stroke-linejoin="round">
+            <rect x="95" y="24" width="110" height="140" fill="#fffaf0"/>
+            <rect x="110" y="40" width="80" height="26" fill="#111"/>
+            <circle cx="120" cy="90" r="9" fill="#ff7eb6"/><circle cx="150" cy="90" r="9" fill="#ffe14d"/><circle cx="180" cy="90" r="9" fill="#ff7eb6"/>
+            <path d="M115 164 v40 M135 164 v40 M165 164 v40 M185 164 v40" />
+          </g>
+          <text x="150" y="58" fill="#ffe14d" font-family="Rubik Mono One, sans-serif" font-size="14" text-anchor="middle">21°C</text>
+          <path d="M150 112 c-6 10-12 14-12 22a12 12 0 0 0 24 0c0-8-6-12-12-22z" fill="#2f5bff" stroke="#111" stroke-width="4"/>
+        </svg>
+        <figcaption><h3>Chaudière gaz murale</h3><p>Remplacement d'une ancienne chaudière par un modèle récent, raccordé et réglé.</p></figcaption>
+      </figure>
+      <figure class="realisation rv d1">
+        <svg viewBox="0 0 300 220" role="img" aria-label="Illustration : chaudière fioul au sol en chaufferie">
+          <rect width="300" height="220" fill="#ff7eb6"/>
+          <rect y="180" width="300" height="40" fill="#ffe14d" stroke="#111" stroke-width="5"/>
+          <g stroke="#111" stroke-width="5" stroke-linejoin="round">
+            <rect x="40" y="56" width="110" height="124" fill="#fffaf0"/>
+            <rect x="56" y="74" width="78" height="20" fill="#2f5bff"/>
+            <rect x="62" y="110" width="66" height="50" fill="#111"/>
+            <path d="M84 38 h22 v18 h-22z" fill="#fffaf0"/>
+            <path d="M95 38 V10"/>
+            <rect x="180" y="96" width="90" height="84" rx="14" fill="#2f5bff"/>
+            <path d="M150 140 h30"/>
+          </g>
+          <path d="M95 152c-8 0-12-5-12-10 0-6 6-8 7-13 3 3 5 6 5 8 2-2 3-4 2-7 5 3 9 7 9 12s-4 10-11 10z" fill="#ffe14d"/>
+          <text x="225" y="144" fill="#fffaf0" font-family="Rubik Mono One, sans-serif" font-size="13" text-anchor="middle">FIOUL</text>
+        </svg>
+        <figcaption><h3>Chaudière fioul</h3><p>Entretien annuel, nettoyage du brûleur et contrôle de la combustion en chaufferie.</p></figcaption>
+      </figure>
+      <figure class="realisation rv d2">
+        <svg viewBox="0 0 300 220" role="img" aria-label="Illustration : salle de bains avec lavabo et mitigeur neufs">
+          <rect width="300" height="220" fill="#ffe14d"/>
+          <g stroke="#111" stroke-width="2" opacity=".25"><path d="M0 40h300M0 80h300M0 120h300M60 0v140M120 0v140M180 0v140M240 0v140"/></g>
+          <g stroke="#111" stroke-width="5" stroke-linejoin="round">
+            <rect x="100" y="20" width="100" height="70" rx="40" fill="#fffaf0"/>
+            <path d="M60 120 h180 v12 a40 40 0 0 1-40 40 H100 a40 40 0 0 1-40-40z" fill="#fffaf0"/>
+            <path d="M140 120 V100 h30 v10" fill="none"/>
+            <rect x="132" y="94" width="20" height="10" fill="#ff7eb6"/>
+            <path d="M150 172 v38" />
+            <rect x="130" y="196" width="40" height="14" fill="#2f5bff"/>
+          </g>
+        </svg>
+        <figcaption><h3>Lavabo &amp; mitigeur</h3><p>Pose d'un plan vasque et d'un mitigeur, alimentation et évacuation refaites.</p></figcaption>
+      </figure>
+      <figure class="realisation rv d3">
+        <svg viewBox="0 0 300 220" role="img" aria-label="Illustration : réparation de fuite sur une tuyauterie">
+          <rect width="300" height="220" fill="#fffaf0"/>
+          <g stroke="#111" stroke-width="5" stroke-linejoin="round">
+            <path d="M0 80 H170 V220 H120 V130 H0z" fill="#2f5bff"/>
+            <rect x="70" y="70" width="34" height="70" fill="#ffe14d"/>
+            <path d="M200 30 c-8 14-16 20-16 30a16 16 0 0 0 32 0c0-10-8-16-16-30z" fill="#2f5bff"/>
+            <path d="M240 70 c-6 10-12 14-12 22a12 12 0 0 0 24 0c0-8-6-12-12-22z" fill="#ff7eb6"/>
+            <path d="M190 120 l40 40 M230 120 l-40 40" stroke-width="8"/>
+          </g>
+          <text x="210" y="200" fill="#111" font-family="Rubik Mono One, sans-serif" font-size="13" text-anchor="middle">STOP</text>
+        </svg>
+        <figcaption><h3>Fuite réparée</h3><p>Recherche de l'origine, remplacement du raccord ou du tronçon abîmé, remise en eau.</p></figcaption>
+      </figure>
+    </div>
+    <p class="note-illu">Illustrations d'exemple, représentant des types d'interventions et non des chantiers précis.</p>
+
+    <div class="tarifs rv">
+      <div class="tarifs-intro">
+        <span class="etiquette" style="background:var(--jaune);color:var(--noir)">Tarifs</span>
+        <h3>Tout est sur devis</h3>
+        <p>Une chaudière n'est pas l'autre, une fuite non plus. Plutôt que d'afficher des prix au hasard, Yoann établit un devis adapté à votre installation.</p>
+        <a class="btn btn-jaune" href="#contact"><svg aria-hidden="true"><use href="#i-devis"/></svg>Mon devis</a>
+      </div>
+      <ul class="tarifs-liste">
+        <li>Installation / remplacement chaudière gaz<span class="prix">Sur devis</span></li>
+        <li>Entretien annuel chaudière gaz ou fioul<span class="prix">Sur devis</span></li>
+        <li>Dépannage chauffage &amp; eau chaude<span class="prix">Sur devis</span></li>
+        <li>Recherche et réparation de fuite<span class="prix">Sur devis</span></li>
+        <li>Pose de sanitaires &amp; robinetterie<span class="prix">Sur devis</span></li>
+        <li>Conseil remplacement chaudière fioul<span class="prix">Sur devis</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AVIS ========== -->
+<section class="bloc" id="avis" style="padding-top:0">
+  <div class="wrap">
+    <div class="avis-encart rv">
+      <svg viewBox="0 0 90 90" aria-hidden="true"><rect x="5" y="5" width="80" height="80" fill="#ff7eb6" stroke="#111" stroke-width="5" transform="rotate(-6 45 45)"/><path d="M45 20l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="#ffe14d" stroke="#111" stroke-width="4" stroke-linejoin="round"/></svg>
+      <div>
+        <h2>Votre avis nous aide</h2>
+        <p>Yoann est intervenu chez vous&nbsp;? Quelques mots en ligne aident vos voisins d'Eybens et de Grenoble à trouver un artisan de confiance.</p>
+      </div>
+      <a class="btn btn-noir" href="https://www.google.com/maps/search/?api=1&amp;query=Caprara+Plomberie+Eybens+38320" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="bloc faq" id="faq">
+  <div class="wrap faq-grille">
+    <div class="titre-bloc rv" style="margin-bottom:0">
+      <span class="etiquette">FAQ</span>
+      <h2>Questions <span class="surligne">fréquentes</span></h2>
+      <p>Des réponses générales pour y voir plus clair. Pour votre cas précis, un coup de fil reste le plus rapide.</p>
+      <a class="btn btn-rose" href="tel:+33615496554"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 15 49 65 54</a>
+    </div>
+    <div class="faq-liste rv d1">
+      <div class="question">
+        <button aria-expanded="false">L'entretien de ma chaudière est-il obligatoire&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Oui pour la plupart des chaudières domestiques (gaz, fioul, bois) d'une puissance de 4 à 400&nbsp;kW&nbsp;: un entretien annuel par un professionnel est exigé par la réglementation. Il vous est remis une attestation, souvent demandée par les assureurs en cas de sinistre.</p></div></div>
+      </div>
+      <div class="question">
+        <button aria-expanded="false">Peut-on encore installer une chaudière fioul&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Depuis juillet 2022, l'installation de chaudières fioul neuves est en principe interdite, sauf exceptions encadrées. Les chaudières existantes peuvent continuer à fonctionner et doivent être entretenues et réparées. Si la vôtre arrive en fin de vie, nous pouvons en parler pour envisager les solutions de remplacement.</p></div></div>
+      </div>
+      <div class="question">
+        <button aria-expanded="false">Ma chaudière s'est mise en sécurité, que faire&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Consultez le code affiché et la notice&nbsp;: vérifiez la pression du circuit et l'alimentation. Un réarmement unique peut être tenté si la notice l'autorise. Si la panne revient, ou si vous sentez une odeur de gaz, n'insistez pas&nbsp;: coupez l'arrivée de gaz, aérez, sortez et appelez le numéro d'urgence de votre distributeur, puis un professionnel.</p></div></div>
+      </div>
+      <div class="question">
+        <button aria-expanded="false">Quelle pression doit afficher ma chaudière&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Pour beaucoup d'installations domestiques, on se situe souvent autour de 1 à 2 bars à froid, mais la bonne valeur dépend de votre installation et du fabricant. Si la pression chute régulièrement, cela peut signaler une fuite ou un problème de vase d'expansion&nbsp;: mieux vaut faire vérifier.</p></div></div>
+      </div>
+      <div class="question">
+        <button aria-expanded="false">J'ai une fuite, quels sont les premiers gestes&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Fermez le robinet d'arrivée d'eau générale (souvent près du compteur), coupez l'électricité si l'eau approche des prises ou appareils, épongez et prenez quelques photos pour votre assurance. Ensuite, appelez-nous pour localiser et réparer la fuite.</p></div></div>
+      </div>
+      <div class="question">
+        <button aria-expanded="false">Quand prévoir l'entretien avant l'hiver&nbsp;?<span class="plus" aria-hidden="true"></span></button>
+        <div class="reponse"><div><p>Idéalement entre la fin de l'été et le début de l'automne, avant les premiers froids sur l'agglomération grenobloise. Les plannings se remplissent vite dès que les températures chutent&nbsp;: anticiper permet de choisir plus facilement son créneau.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="bloc contact" id="contact">
+  <div class="wrap">
+    <div class="titre-bloc centre rv">
+      <span class="etiquette">Contact</span>
+      <h2>On en parle&nbsp;? <span class="surligne">Appelez Yoann</span></h2>
+      <p>Le téléphone reste le plus rapide. Vous préférez écrire&nbsp;? Le formulaire prépare un e-mail tout prêt.</p>
+    </div>
+    <div class="contact-grille">
+      <div class="panneau rv">
+        <h3>Horaires</h3>
+        <p class="info-rdv">Horaires sur rendez-vous – appelez-nous pour convenir d'un passage.</p>
+        <table class="horaires" id="horaires">
+          <caption class="sr">Disponibilités de la semaine</caption>
+          <tbody>
+            <tr data-j="1"><th scope="row">Lundi</th><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><th scope="row">Mardi</th><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><th scope="row">Mercredi</th><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><th scope="row">Jeudi</th><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><th scope="row">Vendredi</th><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><th scope="row">Samedi</th><td>Nous consulter</td></tr>
+            <tr data-j="0"><th scope="row">Dimanche</th><td>Nous consulter</td></tr>
+          </tbody>
+        </table>
+        <h3>Coordonnées</h3>
+        <ul class="coord">
+          <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" color="#111"><use href="#i-tel"/></svg></span><div><small>Téléphone</small><a href="tel:+33615496554">06 15 49 65 54</a></div></li>
+          <li><span class="ic" style="background:var(--rose)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2.6"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>E-mail</small><a href="mailto:caprara.yoann@gmail.com">caprara.yoann@gmail.com</a></div></li>
+          <li><span class="ic" style="background:var(--bleu)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2.6"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Zone</small><strong>Eybens (38320), Grenoble et environs</strong></div></li>
+        </ul>
+        <a class="btn btn-jaune" href="https://www.google.com/maps/search/?api=1&amp;query=Caprara+Plomberie+Eybens+38320" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+      <div class="panneau rv d1">
+        <h3>Demande de devis</h3>
+        <form class="form" id="form" novalidate>
+          <div class="champ"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required placeholder="Votre nom"></div>
+          <div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></div>
+          <div class="champ large"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="f-objet">Objet</label>
+            <select id="f-objet" name="objet"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Entretien annuel</option><option>Dépannage chauffage</option><option>Fuite / plomberie</option><option>Sanitaires</option><option>Autre</option></select>
+          </div>
+          <div class="champ"><label for="f-ville">Commune</label><input id="f-ville" name="ville" placeholder="Eybens, Grenoble, Échirolles…"></div>
+          <div class="champ large"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Marque et âge de la chaudière, nature de la panne ou du projet…"></textarea></div>
+          <button class="btn btn-bleu" type="submit"><svg aria-hidden="true"><use href="#i-devis"/></svg>Envoyer</button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========== PIED DE PAGE ========== -->
+<footer class="pied">
+  <div class="pied-mot" aria-hidden="true">CAPRARA</div>
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <a class="logo" href="#accueil" style="color:var(--blanc)"><span class="logo-carre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 7 5 10.5 5 15a7 7 0 0 0 14 0c0-4.5-4-8-7-13z" fill="#ffe14d" stroke="#111" stroke-width="2"/></svg></span><span>Caprara Plomberie</span></a>
+        <p style="margin-top:16px">Yoann Caprara, plombier chauffagiste à Eybens&nbsp;: chaudières gaz et fioul, plomberie, à Eybens, Grenoble et environs.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:+33615496554">06 15 49 65 54</a></li>
+          <li><a href="mailto:caprara.yoann@gmail.com">caprara.yoann@gmail.com</a></li>
+          <li>Eybens (38320)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>Sur rendez-vous</li><li>Appelez pour convenir d'un passage</li></ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="pied-bas"><span>© <span id="annee">2026</span> Caprara Plomberie – Eybens, Isère</span><span>Gaz · Fioul · Plomberie</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement.</div>
+
+<a class="appel-flottant" href="tel:+33615496554" aria-label="Appeler Caprara Plomberie au 06 15 49 65 54"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu'),flot=document.querySelector('.appel-flottant');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){
+    var o=nav.classList.toggle('ouvert');
+    burger.setAttribute('aria-expanded',o?'true':'false');
+    burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function defil(){flot.classList.toggle('visible',window.scrollY>window.innerHeight*.6);}
+  window.addEventListener('scroll',defil,{passive:true});defil();
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('vu');}); }
+
+  document.querySelectorAll('.question button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var q=btn.parentElement,o=q.classList.contains('ouverte');
+      document.querySelectorAll('.question.ouverte').forEach(function(x){x.classList.remove('ouverte');x.querySelector('button').setAttribute('aria-expanded','false');});
+      if(!o){q.classList.add('ouverte');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+
+  var j=new Date().getDay(),l=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(l){l.classList.add('aujourdhui');l.querySelector('th').insertAdjacentHTML('beforeend','<span class="badge-jour">Aujourd\'hui</span>');}
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  var form=document.getElementById('form'),msg=document.getElementById('form-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    if(!String(d.get('nom')||'').trim()){msg.textContent='Indiquez au moins votre nom pour que Yoann puisse vous recontacter.';msg.classList.add('visible');document.getElementById('f-nom').focus();return;}
+    var corps='Nom : '+d.get('nom')+'\nTéléphone : '+(d.get('tel')||'-')+'\nE-mail : '+(d.get('email')||'-')+'\nCommune : '+(d.get('ville')||'-')+'\nObjet : '+d.get('objet')+'\n\n'+(d.get('message')||'');
+    msg.textContent='Maquette de démonstration : votre messagerie s\'ouvre avec la demande pré-remplie pour caprara.yoann@gmail.com.';
+    msg.classList.add('visible');
+    window.location.href='mailto:caprara.yoann@gmail.com?subject='+encodeURIComponent('Demande de devis – '+d.get('objet'))+'&body='+encodeURIComponent(corps);
+  });
+})();
+</script>
+</body>
+</html>
