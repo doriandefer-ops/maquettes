@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M.R Cheminées – Poêles et inserts à bois à Lille</title>
+<meta name="description" content="M.R Cheminées : poêles et inserts à bois, chauffage et eau chaude au bois à Lille, Villeneuve-d'Ascq et environs. Conseil, pose et entretien, devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#f4efe6;
+  --papier-fonce:#ebe4d6;
+  --encre:#141414;
+  --braise:#b3341f;
+  --cendre:#6f6a62;     /* 4.7:1 sur le papier */
+  --ocre:#b8862f;       /* décoratif uniquement */
+  --filet:rgba(20,20,20,.85);
+  --serif:"EB Garamond",Garamond,Georgia,serif;
+  --sans:"Libre Franklin",system-ui,sans-serif;
+  --larg:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--sans);font-size:1rem;line-height:1.65;overflow-x:hidden;
+  background-image:radial-gradient(rgba(20,20,20,.035) 1px,transparent 1px),radial-gradient(rgba(184,134,47,.05) 1px,transparent 1px);
+  background-size:7px 7px,13px 13px;background-position:0 0,3px 5px}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;margin:0;line-height:1.08}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.pc{font-variant:small-caps;letter-spacing:.08em}
+.pc-sans{font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.double{border:0;height:5px;border-top:1px solid var(--encre);border-bottom:2.5px solid var(--encre);margin:0}
+.simple{border:0;border-top:1px solid var(--encre);margin:0}
+
+/* ---------- navigation ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(244,239,230,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;border-top:1px solid var(--encre);border-bottom:2px solid var(--encre);width:min(var(--larg),100% - 32px);margin:0 auto}
+.marque{font-family:var(--serif);font-size:1.45rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.marque svg{width:26px;height:30px}
+.marque i{font-weight:400;color:var(--braise)}
+.menu{list-style:none;display:flex;gap:6px;margin:0;padding:0;align-items:center}
+.menu a{display:block;padding:8px 12px;text-decoration:none;font-family:var(--serif);font-size:1.08rem;font-variant:small-caps;letter-spacing:.06em;position:relative}
+.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:1px;background:var(--braise);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .appel-nav{border:1px solid var(--encre);margin-left:8px;font-family:var(--sans);font-variant:normal;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 14px}
+.menu .appel-nav:hover{background:var(--encre);color:var(--papier)}
+.menu .appel-nav::after{display:none}
+.burger{display:none;background:none;border:1px solid var(--encre);height:42px;padding:0 12px;cursor:pointer;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--encre);align-items:center;gap:10px}
+.burger b{display:block;width:18px;height:11px;position:relative;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transition:transform .3s}
+.burger b::before{content:"";position:absolute;left:0;right:0;top:3.25px;height:1.5px;background:currentColor;transition:opacity .2s}
+.burger[aria-expanded="true"] b{border-color:transparent}
+.burger[aria-expanded="true"] b::before{opacity:1;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{content:"";position:absolute;left:0;right:0;top:3.25px;height:1.5px;background:currentColor;transform:rotate(-45deg)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--braise);outline-offset:3px}
+
+/* ---------- boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;font-family:var(--sans);font-weight:600;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--encre);cursor:pointer;transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px}
+.btn-encre{background:var(--encre);color:var(--papier)}
+.btn-encre:hover{background:var(--braise);border-color:var(--braise);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--encre)}
+.btn-trait{background:transparent;color:var(--encre);box-shadow:inset 0 0 0 3px var(--papier),inset 0 0 0 4px var(--encre)}
+.btn-trait:hover{transform:translate(-2px,-2px);box-shadow:inset 0 0 0 3px var(--papier),inset 0 0 0 4px var(--encre),4px 4px 0 var(--braise)}
+
+/* ---------- la UNE ---------- */
+.une{padding:96px 0 40px}
+.bandeau-une{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;color:var(--cendre)}
+.bandeau-une span{white-space:nowrap}
+.manchette{text-align:center;padding:14px 0 10px}
+.manchette .nom{font-family:var(--serif);font-weight:700;font-size:clamp(3rem,10.5vw,8.6rem);letter-spacing:-.02em;line-height:.92;display:block}
+.manchette .nom i{font-weight:400;color:var(--braise)}
+.manchette .sous{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:var(--cendre);display:block;margin-top:8px}
+.une-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:0;margin-top:28px}
+.une-texte{padding-right:40px;border-right:1px solid var(--encre)}
+.rubrique{display:inline-block;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--braise);margin-bottom:10px}
+.une h1{font-size:clamp(2.6rem,6vw,5.2rem);font-weight:500;letter-spacing:-.015em;line-height:.98;margin-bottom:22px}
+.une h1 em{font-style:italic;color:var(--braise)}
+.chapeau{column-count:2;column-gap:32px;column-rule:1px solid rgba(20,20,20,.35);font-size:1.02rem;text-align:justify;hyphens:auto;margin-bottom:26px}
+.chapeau p{margin:0 0 .8em}
+.chapeau p:first-child::first-letter,.lettrine::first-letter{font-family:var(--serif);float:left;font-size:4.6em;line-height:.8;padding:.06em .1em 0 0;color:var(--braise);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.signature{margin-top:20px;font-family:var(--serif);font-style:italic;color:var(--cendre);font-size:1.02rem}
+.une-figure{padding-left:40px;margin:0;display:flex;flex-direction:column}
+.une-figure svg{width:100%;height:auto;display:block;border:1px solid var(--encre);background:var(--papier);box-shadow:inset 0 0 0 6px var(--papier),inset 0 0 0 7px rgba(20,20,20,.5)}
+figcaption{font-size:.88rem;color:var(--cendre);margin-top:10px;line-height:1.5}
+figcaption b{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--encre);font-size:1.05rem;margin-right:4px}
+.flamme{transform-origin:50% 100%;animation:danse 2.6s ease-in-out infinite alternate}
+.flamme.f2{animation-duration:3.1s;animation-delay:-1s}
+.flamme.f3{animation-duration:2.2s;animation-delay:-.4s}
+@keyframes danse{0%{transform:scale(1,1) skewX(0)}50%{transform:scale(.96,1.06) skewX(-3deg)}100%{transform:scale(1.03,.95) skewX(2deg)}}
+
+/* ---------- en bref (confiance) ---------- */
+.enbref{margin:30px 0 0}
+.enbref .ligne{display:grid;grid-template-columns:auto repeat(4,1fr);align-items:stretch;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)}
+.enbref .titre{display:flex;align-items:center;padding:16px 22px;background:var(--encre);color:var(--papier);font-family:var(--serif);font-style:italic;font-size:1.3rem}
+.enbref .item{padding:14px 20px;border-left:1px solid var(--encre);display:flex;gap:12px;align-items:center}
+.enbref .item svg{width:32px;height:32px;flex:none}
+.enbref .item b{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1.2}
+.enbref .item span{font-size:.84rem;color:var(--cendre)}
+
+/* ---------- sections ---------- */
+section{padding:90px 0}
+.entete{display:grid;grid-template-columns:auto 1fr;gap:6px 28px;align-items:end;margin-bottom:44px;padding-bottom:16px;border-bottom:1px solid var(--encre);position:relative}
+.entete::after{content:"";position:absolute;left:0;right:0;bottom:-5px;border-bottom:2px solid var(--encre)}
+.entete .no{font-family:var(--serif);font-style:italic;font-size:clamp(3rem,6vw,4.6rem);line-height:.8;color:var(--braise);grid-row:span 2}
+.entete .rub{font-family:var(--serif);font-style:italic;color:var(--cendre);font-size:1.1rem}
+.entete h2{font-size:clamp(2rem,4.2vw,3.3rem);font-weight:500;letter-spacing:-.01em}
+.intro{max-width:720px;font-size:1.08rem;margin:-20px 0 40px;color:var(--encre)}
+
+/* prestations */
+.prest{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--encre)}
+.art{padding:28px 28px 30px;border-bottom:1px solid var(--encre);border-right:1px solid var(--encre);position:relative;transition:background .3s}
+.art:nth-child(3n){border-right:0}
+.art:hover{background:var(--papier-fonce)}
+.art:hover .ico{transform:rotate(-4deg) scale(1.05)}
+.art .num{font-family:var(--serif);font-style:italic;color:var(--braise);font-size:1.05rem}
+.art .ico{width:64px;height:64px;margin:12px 0 14px;transition:transform .35s}
+.art h3{font-size:1.6rem;font-weight:600;margin-bottom:8px;line-height:1.12}
+.art p{margin:0;font-size:.97rem}
+.art .note{display:block;margin-top:12px;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--braise)}
+
+/* édito / pourquoi */
+.edito{display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:start}
+.citation{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.18;font-style:italic;padding:22px 0;border-top:3px double var(--encre);border-bottom:3px double var(--encre);margin:0}
+.citation .g{color:var(--braise)}
+.citation small{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cendre)}
+.atouts{display:grid;grid-template-columns:1fr 1fr;gap:0;column-gap:36px}
+.atout{padding:20px 0 22px;border-bottom:1px solid rgba(20,20,20,.35)}
+.atout h3{font-size:1.45rem;font-weight:600;margin-bottom:6px}
+.atout h3 i{color:var(--braise);font-weight:500;margin-right:8px}
+.atout p{margin:0}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.etape{padding:4px 26px 10px;border-left:1px solid var(--encre)}
+.etape:first-child{border-left:0;padding-left:0}
+.etape .chiffre{font-family:var(--serif);font-size:4.4rem;line-height:1;font-weight:400;color:var(--encre);display:block;margin-bottom:6px}
+.etape .chiffre i{color:var(--braise);font-size:.5em;vertical-align:.7em;margin-left:4px}
+.etape h3{font-size:1.35rem;font-weight:600;margin-bottom:6px;font-style:italic}
+.etape p{margin:0;font-size:.96rem}
+
+/* portrait */
+.portrait{background:var(--encre);color:var(--papier)}
+.portrait .entete{border-color:var(--papier)}
+.portrait .entete::after{border-color:var(--papier)}
+.portrait .entete .rub{color:#c9c2b6}
+.portrait .entete .no{color:#e0694f}
+.portrait-grid{display:grid;grid-template-columns:2fr 1fr;gap:50px}
+.portrait .colonnes{column-count:2;column-gap:40px;column-rule:1px solid rgba(244,239,230,.3);font-size:1.06rem;text-align:justify;hyphens:auto}
+.portrait .colonnes .lettrine::first-letter{color:#e0694f}
+.portrait strong{font-weight:600;color:#fff}
+.encart{border:1px solid var(--papier);padding:26px;outline:1px solid var(--papier);outline-offset:4px}
+.encart h3{font-style:italic;font-size:1.5rem;margin-bottom:14px}
+.encart dl{margin:0}
+.encart dt{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#c9c2b6;margin-top:12px}
+.encart dd{margin:2px 0 0;font-family:var(--serif);font-size:1.2rem}
+.encart a{text-decoration:none;border-bottom:1px solid #e0694f}
+.encart a:hover{color:#e0694f}
+
+/* planches */
+.planches{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px}
+.planche{margin:0;transition:transform .35s}
+.planche svg{width:100%;height:auto;display:block;border:1px solid var(--encre);background:var(--papier);transition:box-shadow .35s}
+.planche:hover{transform:translateY(-4px)}
+.planche:hover svg{box-shadow:6px 6px 0 var(--encre)}
+.annonce{margin-top:44px;display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center;padding:22px 26px;border:1.5px solid var(--encre);outline:1px solid var(--encre);outline-offset:-7px;background:var(--papier-fonce)}
+.annonce .pa{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--braise);line-height:1.1;text-align:center}
+.annonce .pa b{display:block;font-size:2rem;font-style:normal;color:var(--encre)}
+.annonce p{margin:0}
+
+/* courrier (avis) */
+.courrier{display:grid;grid-template-columns:1fr 1.3fr;gap:50px;align-items:center}
+.courrier svg{width:100%;max-width:380px;height:auto;display:block;margin:0 auto}
+.courrier .entete{margin-bottom:28px}
+.courrier p{font-size:1.06rem}
+
+/* FAQ */
+.faq{max-width:900px}
+details{border-bottom:1px solid var(--encre)}
+details:first-of-type{border-top:1px solid var(--encre)}
+summary{list-style:none;cursor:pointer;padding:22px 56px 22px 0;font-family:var(--serif);font-size:1.4rem;font-weight:500;position:relative;line-height:1.25}
+summary::-webkit-details-marker{display:none}
+summary .q{color:var(--braise);font-style:italic;margin-right:10px}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-size:2rem;line-height:1;color:var(--braise);transition:transform .3s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+summary:hover{color:var(--braise)}
+details .rep{padding:0 0 24px 34px;max-width:760px}
+details .rep p{margin:0}
+
+/* horaires */
+.pratique{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)}
+.pratique>div{padding:30px 36px 34px 0}
+.pratique>div+div{padding:30px 0 34px 36px;border-left:1px solid var(--encre)}
+.pratique h3{font-size:1.7rem;font-style:italic;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:1rem}
+td{padding:9px 6px;border-bottom:1px dotted rgba(20,20,20,.5)}
+td:first-child{font-family:var(--serif);font-size:1.15rem}
+td:last-child{text-align:right;white-space:nowrap}
+tr.auj td{background:var(--encre);color:var(--papier);border-bottom-color:var(--encre)}
+tr.auj td:first-child{padding-left:12px}
+tr.auj td:last-child{padding-right:12px}
+tr.auj td:first-child::after{content:"aujourd'hui";font-style:italic;color:#f0a08f;margin-left:10px;font-size:.95rem}
+.mention{font-style:italic;color:var(--cendre);font-size:.92rem;margin:14px 0 0}
+.zone{display:flex;gap:22px;align-items:flex-start}
+.zone svg{width:150px;flex:none;height:auto}
+.zone .adr{font-family:var(--serif);font-size:1.5rem;line-height:1.2;margin-bottom:8px}
+
+/* bulletin */
+.bulletin-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:start}
+.coord p{font-size:1.06rem}
+.coord a.ln{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid rgba(20,20,20,.4);text-decoration:none;transition:padding .25s,color .25s}
+.coord a.ln:hover{padding-left:8px;color:var(--braise)}
+.coord a.ln small{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cendre);min-width:104px;flex:none}
+.coord a.ln span{font-family:var(--serif);font-size:1.4rem;overflow-wrap:anywhere}
+form{border:2px dashed var(--encre);padding:34px;position:relative;background:var(--papier)}
+form::before{content:"✂";position:absolute;top:-17px;left:30px;background:var(--papier);padding:0 8px;font-size:1.3rem;line-height:1.3}
+form h3{font-size:1.9rem;font-style:italic;margin-bottom:4px}
+form .sub{color:var(--cendre);font-size:.92rem;margin-bottom:20px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.champ{display:flex;flex-direction:column}
+.champ.plein{grid-column:1/-1}
+label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px}
+input,textarea{font-family:var(--serif);font-size:1.2rem;color:var(--encre);background:transparent;border:0;border-bottom:1px solid var(--encre);padding:6px 0 8px;border-radius:0;width:100%}
+input::placeholder,textarea::placeholder{color:#857f75;font-style:italic}
+input:focus,textarea:focus{outline:none;border-bottom:2px solid var(--braise)}
+textarea{min-height:110px;resize:vertical;background-image:repeating-linear-gradient(transparent 0 33px,rgba(20,20,20,.25) 33px 34px);line-height:34px}
+form .btn{margin-top:24px}
+.retour{display:none;margin:18px 0 0;padding:12px 16px;border-left:4px solid var(--braise);background:var(--papier-fonce);font-family:var(--serif);font-size:1.15rem;font-style:italic}
+.retour.on{display:block}
+
+/* colophon */
+footer{background:var(--encre);color:var(--papier);padding:60px 0 0;margin-top:40px}
+.colophon-titre{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.4rem);font-weight:700;text-align:center;line-height:1;padding-bottom:18px;border-bottom:1px solid rgba(244,239,230,.6)}
+.colophon-titre i{font-weight:400;color:#e0694f}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:28px 0 40px}
+.foot>div{padding:0 22px;border-left:1px solid rgba(244,239,230,.3)}
+.foot>div:first-child{border-left:0;padding-left:0}
+.foot h4{font-family:var(--serif);font-style:italic;font-size:1.25rem;font-weight:500;margin-bottom:10px;color:#f0a08f}
+.foot p{font-size:.94rem;margin:0 0 6px;color:#e4ddd0}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(244,239,230,.4)}
+.foot a:hover{border-color:#e0694f;color:#fff}
+.demo{text-align:center;font-size:.8rem;letter-spacing:.04em;padding:14px 16px;border-top:1px solid rgba(244,239,230,.3);color:#cfc8bb;font-style:italic}
+
+.appel-flottant{display:none}
+
+/* révélation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.visible{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1060px){
+  .enbref .ligne{grid-template-columns:1fr 1fr}
+  .enbref .titre{grid-column:1/-1;justify-content:center}
+  .enbref .item:nth-child(2n){border-left:0}
+  .enbref .item:nth-child(n+4){border-top:1px solid var(--encre)}
+  .enbref .item:nth-child(2){border-left:0}
+  .enbref .item:nth-child(3){border-left:1px solid var(--encre)}
+  .enbref .item:nth-child(5){border-left:1px solid var(--encre)}
+  .prest{grid-template-columns:1fr 1fr}
+  .art:nth-child(3n){border-right:1px solid var(--encre)}
+  .art:nth-child(2n){border-right:0}
+  .etapes{grid-template-columns:1fr 1fr;gap:30px 0}
+  .etape:nth-child(3){border-left:0;padding-left:0}
+  .edito,.portrait-grid,.courrier,.bulletin-grid{grid-template-columns:1fr}
+  .planches{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr;gap:26px 0}
+  .foot>div:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:900px){
+  .burger{display:inline-flex}
+  .menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--papier);padding:8px 16px 18px;border-bottom:3px double var(--encre);
+    opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu li{border-bottom:1px solid rgba(20,20,20,.3)}
+  .menu li:last-child{border:0}
+  .menu a{padding:14px 4px;font-size:1.35rem}
+  .menu a::after{display:none}
+  .menu .appel-nav{margin:14px 0 0;text-align:center;font-size:.86rem;padding:14px}
+  .une-grid{grid-template-columns:1fr}
+  .une-texte{padding-right:0;border-right:0}
+  .une-figure{padding-left:0;margin-top:34px;max-width:560px}
+}
+@media (max-width:768px){
+  section{padding:66px 0}
+  .une{padding-top:84px}
+  .bandeau-une .cache-mob{display:none}
+  .bandeau-une{font-size:.62rem;letter-spacing:.12em}
+  .bandeau-une span{white-space:normal}
+  .bandeau-une span:last-child{text-align:right}
+  .chapeau{column-count:1}
+  .enbref .ligne{grid-template-columns:1fr}
+  .enbref .item{border-left:0!important;border-top:1px solid var(--encre)}
+  .prest,.planches,.atouts,.pratique,.champs{grid-template-columns:1fr}
+  .art{border-right:0!important;padding:24px 0}
+  .etapes{grid-template-columns:1fr;gap:0}
+  .etape{border-left:0;padding:18px 0;border-top:1px solid rgba(20,20,20,.35)}
+  .etape:first-child{border-top:0}
+  .portrait .colonnes{column-count:1}
+  .pratique>div,.pratique>div+div{padding:26px 0;border-left:0}
+  .pratique>div+div{border-top:1px solid var(--encre)}
+  .zone{flex-direction:column}
+  .coord a.ln{flex-direction:column;gap:2px}
+  .coord a.ln span{font-size:1.3rem}
+  .zone svg{width:120px}
+  .annonce{grid-template-columns:1fr;text-align:left}
+  .annonce .pa{text-align:left}
+  form{padding:26px 20px}
+  summary{font-size:1.2rem}
+  details .rep{padding-left:0}
+  .foot{grid-template-columns:1fr}
+  .foot>div{border-left:0!important;padding:0!important}
+  .entete{grid-template-columns:1fr;gap:4px}
+  .entete .no{grid-row:auto;font-size:2.6rem}
+  .appel-flottant{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;align-items:center;justify-content:center;
+    background:var(--braise);color:var(--papier);border:2px solid var(--papier);box-shadow:0 0 0 1.5px var(--encre),4px 4px 0 var(--encre)}
+  .appel-flottant svg{width:26px;height:26px}
+  .demo{padding-bottom:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- motifs de gravure partagés -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="h45" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#141414" stroke-width="1"/></pattern>
+    <pattern id="h45f" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3.2" stroke="#141414" stroke-width="1.1"/></pattern>
+    <pattern id="hx" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V4M0 0H4" stroke="#141414" stroke-width=".9"/></pattern>
+    <pattern id="hv" width="4" height="4" patternUnits="userSpaceOnUse"><line x1="1" y1="0" x2="1" y2="4" stroke="#141414" stroke-width=".9"/></pattern>
+    <pattern id="hh" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="1" x2="6" y2="1" stroke="#141414" stroke-width=".6"/></pattern>
+    <pattern id="hr" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)"><line x1="0" y1="0" x2="0" y2="4" stroke="#b3341f" stroke-width="1.2"/></pattern>
+    <pattern id="brique" width="40" height="20" patternUnits="userSpaceOnUse"><path d="M0 .5H40M0 10.5H40M10 .5V10.5M30 10.5V20" stroke="#141414" stroke-width=".7" fill="none"/></pattern>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="marque" href="#une" aria-label="M.R Cheminées, accueil">
+      <svg viewBox="0 0 26 30" fill="none" stroke="#141414" stroke-width="1.4" aria-hidden="true"><path d="M9 1h8v8M9 1v8"/><rect x="3" y="9" width="20" height="17" rx="1.5"/><rect x="7" y="13" width="12" height="9" fill="url(#h45)"/><path d="M13 21c-3-2-1.5-4.5 0-6.5 1.4 2 3 4.4 0 6.5z" fill="#b3341f" stroke="#b3341f"/><path d="M5 26v3M21 26v3"/></svg>
+      <span>M.R <i>Cheminées</i></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><b></b>Sommaire</button>
+    <ul class="menu" id="menu">
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#planches">Réalisations</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#bulletin">Devis</a></li>
+      <li><a class="appel-nav" href="tel:+33612552281">06 12 55 22 81</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- LA UNE -->
+<header class="une" id="une">
+  <div class="wrap">
+    <div class="bandeau-une pc-sans">
+      <span>Édition de la métropole lilloise</span>
+      <span class="cache-mob" id="date-une">Saison de chauffe</span>
+      <span>Poêles &amp; inserts à bois</span>
+    </div>
+    <hr class="double">
+    <div class="manchette">
+      <span class="nom">M.R <i>Cheminées</i></span>
+      <span class="sous">La gazette des soirs d'hiver — Lille, Villeneuve-d'Ascq et environs</span>
+    </div>
+    <hr class="double">
+
+    <div class="une-grid">
+      <div class="une-texte rv">
+        <span class="rubrique">À la une —</span>
+        <h1>Le feu de bois, <em>version sereine.</em></h1>
+        <div class="chapeau">
+          <p>Quand la pluie fine du Nord colle aux briques et que le crachin s'installe pour la semaine, rien ne vaut une vraie flamme derrière une vitre propre. M.R Cheminées installe poêles et inserts à bois dans les maisons de la métropole lilloise.</p>
+          <p>Chauffage d'appoint ou principal, eau chaude au bois, choix de l'appareil, conduit, entretien : on vous accompagne pour que le feu reste un plaisir, et jamais un souci.</p>
+        </div>
+        <div class="btns">
+          <a class="btn btn-encre" href="tel:+33612552281"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+          <a class="btn btn-trait" href="#bulletin">Demander un devis</a>
+        </div>
+        <p class="signature">Contact direct au 06 12 55 22 81 — devis sur demande.</p>
+      </div>
+
+      <figure class="une-figure rv">
+        <svg viewBox="0 0 400 480" role="img" aria-label="Gravure au trait d'un poêle à bois allumé, raccordé à son conduit">
+          <!-- mur de briques -->
+          <rect x="8" y="8" width="384" height="392" fill="url(#brique)" opacity=".28"/>
+          <!-- plafond -->
+          <rect x="8" y="8" width="384" height="22" fill="url(#hh)"/>
+          <line x1="8" y1="30" x2="392" y2="30" stroke="#141414" stroke-width="1.2"/>
+          <!-- conduit -->
+          <rect x="182" y="30" width="36" height="148" fill="#f4efe6" stroke="#141414" stroke-width="1.6"/>
+          <rect x="204" y="30" width="14" height="148" fill="url(#hv)"/>
+          <rect x="178" y="70" width="44" height="9" fill="#f4efe6" stroke="#141414" stroke-width="1.4"/>
+          <rect x="178" y="140" width="44" height="9" fill="#f4efe6" stroke="#141414" stroke-width="1.4"/>
+          <rect x="208" y="70" width="14" height="9" fill="url(#h45f)"/>
+          <rect x="208" y="140" width="14" height="9" fill="url(#h45f)"/>
+          <!-- dessus -->
+          <path d="M104 192h192l-8-14H112z" fill="#f4efe6" stroke="#141414" stroke-width="1.6"/>
+          <path d="M262 178l26 0 8 14h-34z" fill="url(#h45f)"/>
+          <rect x="100" y="192" width="200" height="14" fill="#f4efe6" stroke="#141414" stroke-width="1.6"/>
+          <rect x="262" y="192" width="38" height="14" fill="url(#hx)"/>
+          <!-- corps -->
+          <rect x="112" y="206" width="176" height="178" fill="#f4efe6" stroke="#141414" stroke-width="1.8"/>
+          <rect x="258" y="206" width="30" height="178" fill="url(#hx)"/>
+          <rect x="112" y="206" width="12" height="178" fill="url(#hv)" opacity=".7"/>
+          <!-- porte -->
+          <rect x="132" y="224" width="120" height="122" rx="4" fill="#f4efe6" stroke="#141414" stroke-width="1.8"/>
+          <rect x="143" y="235" width="98" height="100" rx="2" fill="#f4efe6" stroke="#141414" stroke-width="1.2"/>
+          <rect x="143" y="235" width="98" height="100" fill="url(#h45f)" opacity=".55"/>
+          <!-- flammes -->
+          <g>
+            <path class="flamme" d="M170 318c-14-14-6-30 2-42 2 10 8 14 10 14-4-12 0-26 10-38 2 16 14 24 14 42 0 10-6 20-14 24z" fill="#b3341f" stroke="#141414" stroke-width="1.1"/>
+            <path class="flamme f2" d="M196 320c-8-10-2-22 6-30 0 8 4 12 6 12-1-8 2-14 8-20 2 12 10 18 8 30-2 6-6 10-12 12z" fill="url(#hr)" stroke="#b3341f" stroke-width="1.3"/>
+            <path class="flamme f3" d="M184 320c-6-8-2-16 4-22 1 6 4 9 6 10 0-6 2-10 6-14 1 10 6 14 4 22-2 4-6 6-10 6z" fill="#f4efe6" stroke="#141414" stroke-width="1"/>
+          </g>
+          <!-- bûches -->
+          <rect x="152" y="318" width="80" height="12" rx="6" fill="url(#h45)" stroke="#141414" stroke-width="1.2"/>
+          <ellipse cx="158" cy="324" rx="6" ry="6" fill="#f4efe6" stroke="#141414" stroke-width="1"/>
+          <circle cx="158" cy="324" r="2.4" fill="none" stroke="#141414" stroke-width=".8"/>
+          <!-- poignée -->
+          <rect x="256" y="268" width="6" height="34" rx="3" fill="#141414"/>
+          <!-- reflets vitre -->
+          <path d="M150 250l18-12M150 262l26-18" stroke="#f4efe6" stroke-width="3"/>
+          <!-- cendrier -->
+          <rect x="132" y="356" width="120" height="16" rx="2" fill="#f4efe6" stroke="#141414" stroke-width="1.4"/>
+          <line x1="176" y1="364" x2="208" y2="364" stroke="#141414" stroke-width="2.4" stroke-linecap="round"/>
+          <!-- pieds -->
+          <path d="M122 384l-6 22h12l4-22M278 384l6 22h-12l-4-22" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <!-- sol + plaque -->
+          <line x1="8" y1="400" x2="392" y2="400" stroke="#141414" stroke-width="1.2"/>
+          <path d="M70 406h260l22 22H48z" fill="url(#h45)" stroke="#141414" stroke-width="1.3" opacity=".9"/>
+          <rect x="8" y="428" width="384" height="44" fill="url(#hh)"/>
+          <!-- panier de bûches -->
+          <path d="M24 344h62l-6 56H30z" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <path d="M28 360h56M29 376h53M30 390h50" stroke="#141414" stroke-width=".8"/>
+          <circle cx="40" cy="338" r="10" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/>
+          <circle cx="40" cy="338" r="4.5" fill="none" stroke="#141414" stroke-width=".8"/>
+          <circle cx="62" cy="336" r="11" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/>
+          <circle cx="62" cy="336" r="5" fill="none" stroke="#141414" stroke-width=".8"/>
+          <circle cx="51" cy="322" r="9" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/>
+          <circle cx="51" cy="322" r="4" fill="none" stroke="#141414" stroke-width=".8"/>
+          <circle cx="78" cy="326" r="8" fill="url(#h45)" stroke="#141414" stroke-width="1.3"/>
+          <!-- serviteur -->
+          <path d="M346 400V292M340 300h12M336 322l10-6 10 6M346 330v-6" stroke="#141414" stroke-width="1.6" fill="none"/>
+          <path d="M338 400h16" stroke="#141414" stroke-width="2"/>
+          <!-- chaleur -->
+          <path d="M318 230c-6-8 6-14 0-22s6-14 0-22M334 246c-6-8 6-14 0-22s6-14 0-22" stroke="#b3341f" stroke-width="1.2" fill="none"/>
+          <!-- cadre -->
+          <text x="380" y="462" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="14" fill="#141414">Fig. 1</text>
+        </svg>
+        <figcaption><b>Fig. 1.</b> Poêle à bois à porte vitrée, raccordé à son conduit, devant un mur de briques. Gravure d'illustration.</figcaption>
+      </figure>
+    </div>
+
+    <!-- EN BREF -->
+    <div class="enbref rv">
+      <div class="ligne">
+        <div class="titre">En bref</div>
+        <div class="item">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#141414" stroke-width="1.4"><rect x="6" y="9" width="20" height="18" rx="1"/><rect x="10" y="13" width="12" height="10" fill="url(#h45)"/><path d="M14 3h4v6h-4zM8 27v3M24 27v3"/></svg>
+          <div><b>Poêles &amp; inserts</b><span>à bois</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#141414" stroke-width="1.4"><path d="M16 3c6 6 8 10 8 14a8 8 0 0 1-16 0c0-3 1.5-5.5 4-7 .4 2.6 1.8 4 3.4 4.4-.8-4 0-8 .6-11.4z" fill="url(#hr)" stroke="#b3341f"/><path d="M5 29h22"/></svg>
+          <div><b>Chauffage &amp; eau chaude</b><span>au bois</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#141414" stroke-width="1.4"><path d="M16 30s9-8.5 9-15.5a9 9 0 0 0-18 0C7 21.5 16 30 16 30z"/><circle cx="16" cy="14" r="3.5" fill="url(#h45f)"/></svg>
+          <div><b>Lille, Villeneuve-d'Ascq</b><span>et environs</span></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#141414" stroke-width="1.4" stroke-linejoin="round"><path d="M8 5h5l2.5 6.5-3 2a14 14 0 0 0 6.5 6.5l2-3 6.5 2.5v5a2.5 2.5 0 0 1-2.5 2.5C13 26.5 5.5 19 5 7.5A2.5 2.5 0 0 1 8 5z"/></svg>
+          <div><b>Contact direct</b><span>06 12 55 22 81</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- PRESTATIONS -->
+<section id="prestations">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">I.</span><span class="rub">Rubrique première</span><h2>Les prestations</h2></div>
+    <p class="intro rv">Du choix de l'appareil à son entretien, tout ce qu'il faut pour se chauffer au bois dans de bonnes conditions, en maison de ville comme en longère.</p>
+    <div class="prest">
+      <article class="art rv">
+        <span class="num">§ 1</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><path d="M28 4h8v12h-8z" fill="url(#hv)"/><path d="M14 16h36v4H14z"/><rect x="16" y="20" width="32" height="34"/><rect x="20" y="25" width="24" height="20" fill="url(#h45f)"/><path d="M32 43c-5-4-3-8 0-12 2.5 4 5 8 0 12z" fill="#b3341f" stroke="#b3341f"/><path d="M18 54l-2 6M46 54l2 6M44 26v22" /></svg>
+        <h3>Poêle à bois</h3>
+        <p>Conseil, fourniture et pose d'un poêle à bûches adapté au volume à chauffer et à l'isolation de votre maison.</p>
+        <span class="note">Spécialité</span>
+      </article>
+      <article class="art rv">
+        <span class="num">§ 2</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><rect x="4" y="10" width="56" height="48" fill="url(#brique)"/><rect x="14" y="22" width="36" height="30" fill="#f4efe6"/><rect x="18" y="26" width="28" height="20" fill="url(#h45f)"/><path d="M32 44c-5-4-3-8 0-12 2.5 4 5 8 0 12z" fill="#b3341f" stroke="#b3341f"/><path d="M4 10h56"/></svg>
+        <h3>Insert à bois</h3>
+        <p>Une ancienne cheminée ouverte transformée en véritable chauffage : plus de chaleur, moins de bois, plus de sécurité.</p>
+        <span class="note">Spécialité</span>
+      </article>
+      <article class="art rv">
+        <span class="num">§ 3</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><rect x="8" y="18" width="22" height="38"/><rect x="12" y="34" width="14" height="14" fill="url(#h45f)"/><path d="M19 46c-3-3-2-6 0-8 1.6 2.4 3 5 0 8z" fill="#b3341f" stroke="#b3341f"/><path d="M30 26h8v-8h10M30 46h14"/><rect x="44" y="12" width="14" height="44" rx="7" fill="url(#hv)"/><path d="M51 6c-2-2 2-3 0-5" stroke="#b3341f"/></svg>
+        <h3>Chauffage &amp; eau chaude au bois</h3>
+        <p>Solutions bois qui chauffent la maison et/ou produisent l'eau chaude, étudiées selon votre installation existante.</p>
+        <span class="note">Spécialité</span>
+      </article>
+      <article class="art rv">
+        <span class="num">§ 4</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><path d="M10 58h44M16 58V20l16-12 16 12v38" /><rect x="40" y="4" width="8" height="16" fill="url(#hv)"/><path d="M44 2v40" stroke-width="2"/><circle cx="44" cy="46" r="7" fill="url(#hx)"/><path d="M37 46h14M44 39v14M39 41l10 10M49 41l-10 10" stroke-width="1"/></svg>
+        <h3>Ramonage &amp; entretien</h3>
+        <p>Entretien de l'appareil et nettoyage du conduit pour garder un tirage sain et un feu qui ne fume pas.</p>
+      </article>
+      <article class="art rv">
+        <span class="num">§ 5</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><rect x="18" y="4" width="28" height="56" fill="url(#brique)"/><rect x="26" y="4" width="12" height="56" fill="#f4efe6"/><path d="M26 4v56M38 4v56"/><path d="M28 4v56M36 4v56" stroke="#b3341f" stroke-dasharray="3 3"/></svg>
+        <h3>Tubage de conduit</h3>
+        <p>Mise en conformité d'un vieux conduit maçonné par un tubage adapté au poêle ou à l'insert raccordé.</p>
+      </article>
+      <article class="art rv">
+        <span class="num">§ 6</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="#141414" stroke-width="1.5"><path d="M10 8h32l10 10v38H10z"/><path d="M42 8v10h10" /><path d="M18 26h26M18 34h26M18 42h18" /><path d="M40 54l14-14 4 4-14 14h-4z" fill="url(#h45f)"/></svg>
+        <h3>Conseil &amp; devis</h3>
+        <p>Visite, écoute de vos habitudes de chauffe et devis détaillé : le bon appareil plutôt que le plus gros.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ÉDITO / POURQUOI -->
+<section id="pourquoi" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">II.</span><span class="rub">L'éditorial</span><h2>Pourquoi nous confier votre feu</h2></div>
+    <div class="edito">
+      <blockquote class="citation rv"><span class="g">« </span>Un bon feu de bois, c'est d'abord un appareil bien choisi et bien posé.<span class="g"> »</span><small>— Notre ligne de conduite</small></blockquote>
+      <div class="atouts">
+        <div class="atout rv"><h3><i>a.</i>Le bois, notre métier</h3><p>Poêles, inserts, chauffage et eau chaude au bois : une spécialité, pas une prestation parmi cent autres.</p></div>
+        <div class="atout rv"><h3><i>b.</i>Un artisan du coin</h3><p>Présent sur Lille, Villeneuve-d'Ascq et les communes voisines : on connaît les maisons de la métropole.</p></div>
+        <div class="atout rv"><h3><i>c.</i>Un seul interlocuteur</h3><p>La même personne vous conseille, prépare le devis et suit le chantier jusqu'à la première flambée.</p></div>
+        <div class="atout rv"><h3><i>d.</i>Des explications claires</h3><p>Allumage, réglage de l'air, choix du bois : on vous laisse les bons gestes, pas seulement l'appareil.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section id="methode" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">III.</span><span class="rub">Mode d'emploi</span><h2>Comment ça se passe</h2></div>
+    <div class="etapes">
+      <div class="etape rv"><span class="chiffre">I</span><h3>Le premier appel</h3><p>Vous décrivez votre maison, votre cheminée ou votre projet. On convient d'une visite.</p></div>
+      <div class="etape rv"><span class="chiffre">II</span><h3>La visite</h3><p>Relevé du conduit, des volumes et de l'emplacement idéal pour l'appareil.</p></div>
+      <div class="etape rv"><span class="chiffre">III</span><h3>Le devis</h3><p>Une proposition détaillée et lisible, avec les options expliquées, sans engagement.</p></div>
+      <div class="etape rv"><span class="chiffre">IV</span><h3>La pose &amp; la flambée</h3><p>Installation soignée, chantier propre, et première mise en chauffe ensemble.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTRAIT -->
+<section class="portrait" id="apropos">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">IV.</span><span class="rub">Le portrait</span><h2>M.R Cheminées, artisan du feu de bois</h2></div>
+    <div class="portrait-grid">
+      <div class="colonnes rv">
+        <p class="lettrine">Au service de <strong>Lille, Villeneuve-d'Ascq et des environs</strong>, <strong>M.R Cheminées</strong> est une entreprise spécialisée dans les <strong>poêles et inserts à bois</strong>, ainsi que dans le <strong>chauffage et l'eau chaude au bois</strong>.</p>
+        <p>Maisons de ville en brique, anciennes courées rénovées, pavillons de la périphérie : chaque intérieur a son conduit, ses contraintes et ses habitudes de chauffe. L'approche reste la même : écouter, mesurer, puis proposer l'appareil qui convient vraiment.</p>
+        <p>Pour une première question comme pour un projet déjà mûr, le plus simple est d'appeler ou d'écrire : on en parle au coin du feu, ou presque.</p>
+      </div>
+      <aside class="encart rv">
+        <h3>Fiche pratique</h3>
+        <dl>
+          <dt>Spécialités</dt><dd>Poêles &amp; inserts à bois<br>Chauffage / eau chaude au bois</dd>
+          <dt>Secteur</dt><dd>Lille, Villeneuve-d'Ascq et environs</dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33612552281">06 12 55 22 81</a></dd>
+          <dt>Courriel</dt><dd><a href="mailto:mrcheminees@gmail.com">mrcheminees@gmail.com</a></dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PLANCHES -->
+<section id="planches">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">V.</span><span class="rub">Planches illustrées</span><h2>Réalisations types</h2></div>
+    <p class="intro rv">Quelques chantiers typiques, en gravures. Les photos des vraies réalisations prendront place ici à la mise en ligne.</p>
+    <div class="planches">
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <rect x="0" y="0" width="300" height="170" fill="url(#brique)" opacity=".25"/>
+          <line x1="0" y1="170" x2="300" y2="170" stroke="#141414"/>
+          <rect x="0" y="170" width="300" height="50" fill="url(#hh)"/>
+          <rect x="138" y="0" width="24" height="70" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/><rect x="152" y="0" width="10" height="70" fill="url(#hv)"/>
+          <rect x="104" y="70" width="92" height="94" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <rect x="176" y="70" width="20" height="94" fill="url(#hx)"/>
+          <rect x="116" y="84" width="54" height="56" fill="url(#h45f)" stroke="#141414"/>
+          <path d="M140 136c-8-6-4-14 0-20 3 6 8 12 0 20zM150 136c-4-4-2-9 1-12 2 4 4 8-1 12z" fill="#b3341f" stroke="#141414" stroke-width=".8"/>
+          <path d="M110 164l-4 8M190 164l4 8" stroke="#141414" stroke-width="1.5"/>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 2</text>
+        </svg>
+        <figcaption><b>Fig. 2.</b> Pose d'un poêle à bois à bûches dans une maison de ville.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <rect x="40" y="10" width="220" height="160" fill="url(#brique)" opacity=".55" stroke="#141414" stroke-width="1.3"/>
+          <rect x="40" y="10" width="220" height="24" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/>
+          <rect x="40" y="10" width="220" height="24" fill="url(#h45)" opacity=".6"/>
+          <rect x="88" y="62" width="124" height="96" fill="#f4efe6" stroke="#141414" stroke-width="1.6"/>
+          <rect x="98" y="72" width="104" height="70" fill="url(#h45f)" stroke="#141414"/>
+          <path d="M140 140c-10-8-6-18 0-26 4 8 10 16 0 26zM160 140c-6-6-3-12 1-17 3 5 6 11-1 17z" fill="#b3341f" stroke="#141414" stroke-width=".8"/>
+          <path d="M98 148h104" stroke="#141414" stroke-width="2"/>
+          <line x1="0" y1="170" x2="300" y2="170" stroke="#141414"/>
+          <rect x="0" y="170" width="300" height="50" fill="url(#hh)"/>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 3</text>
+        </svg>
+        <figcaption><b>Fig. 3.</b> Installation d'un insert dans une cheminée ouverte existante.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <line x1="0" y1="180" x2="300" y2="180" stroke="#141414"/>
+          <rect x="0" y="180" width="300" height="40" fill="url(#hh)"/>
+          <rect x="40" y="70" width="80" height="110" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <rect x="100" y="70" width="20" height="110" fill="url(#hx)"/>
+          <rect x="52" y="110" width="44" height="40" fill="url(#h45f)" stroke="#141414"/>
+          <path d="M74 146c-7-6-3-12 0-18 3 5 7 11 0 18z" fill="#b3341f" stroke="#141414" stroke-width=".8"/>
+          <rect x="70" y="20" width="18" height="50" fill="url(#hv)" stroke="#141414"/>
+          <path d="M120 100h40v-30h30M120 150h70" stroke="#141414" stroke-width="2.2" fill="none"/>
+          <rect x="190" y="50" width="62" height="130" rx="31" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <rect x="230" y="60" width="18" height="110" fill="url(#hv)"/>
+          <path d="M210 30c-6-6 6-10 0-16M228 30c-6-6 6-10 0-16" stroke="#b3341f" stroke-width="1.3" fill="none"/>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 4</text>
+        </svg>
+        <figcaption><b>Fig. 4.</b> Chauffage et production d'eau chaude au bois avec ballon de stockage.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <path d="M20 180V90l90-60 90 60v90z" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+          <path d="M20 180V90l90-60 90 60v90z" fill="url(#brique)" opacity=".4"/>
+          <path d="M110 30L200 90V180" fill="none"/>
+          <rect x="150" y="18" width="22" height="50" fill="#f4efe6" stroke="#141414" stroke-width="1.4"/>
+          <rect x="162" y="18" width="10" height="50" fill="url(#hv)"/>
+          <rect x="146" y="12" width="30" height="8" fill="#141414"/>
+          <path d="M161 12V-2" stroke="#141414"/>
+          <path d="M230 40c20 10 30 40 20 80" stroke="#141414" stroke-width="1.2" fill="none" stroke-dasharray="4 4"/>
+          <circle cx="250" cy="130" r="12" fill="url(#hx)" stroke="#141414"/>
+          <path d="M238 130h24M250 118v24M242 122l16 16M258 122l-16 16" stroke="#141414" stroke-width=".8"/>
+          <line x1="0" y1="180" x2="300" y2="180" stroke="#141414"/>
+          <rect x="0" y="180" width="300" height="40" fill="url(#hh)"/>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 5</text>
+        </svg>
+        <figcaption><b>Fig. 5.</b> Ramonage et contrôle du conduit avant la saison de chauffe.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <rect x="100" y="0" width="100" height="220" fill="url(#brique)" opacity=".5"/>
+          <rect x="128" y="0" width="44" height="220" fill="#f4efe6" stroke="#141414" stroke-width="1.4"/>
+          <rect x="136" y="0" width="28" height="220" fill="#f4efe6" stroke="#b3341f" stroke-width="1.6"/>
+          <rect x="152" y="0" width="12" height="220" fill="url(#hr)"/>
+          <path d="M150 0v220" stroke="#141414" stroke-width=".6" stroke-dasharray="2 6"/>
+          <path d="M60 60h60M60 60l8-5M60 60l8 5" stroke="#141414" stroke-width="1"/>
+          <text x="56" y="56" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">conduit</text>
+          <path d="M240 120h-62M240 120l-8-5M240 120l-8 5" stroke="#141414" stroke-width="1"/>
+          <text x="244" y="124" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">tubage</text>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 6</text>
+        </svg>
+        <figcaption><b>Fig. 6.</b> Tubage d'un ancien conduit maçonné, vue en coupe.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 300 220" aria-hidden="true">
+          <rect x="0" y="0" width="300" height="160" fill="url(#hh)" opacity=".5"/>
+          <rect x="30" y="40" width="70" height="90" fill="#f4efe6" stroke="#141414" stroke-width="1.3"/>
+          <path d="M30 40l35-26 35 26" fill="none" stroke="#141414" stroke-width="1.3"/>
+          <rect x="55" y="96" width="20" height="34" fill="url(#h45)" stroke="#141414"/>
+          <rect x="40" y="56" width="16" height="16" fill="url(#hx)" stroke="#141414"/>
+          <rect x="74" y="56" width="16" height="16" fill="url(#hx)" stroke="#141414"/>
+          <path d="M78 14v-10h10v18" fill="#f4efe6" stroke="#141414"/>
+          <path d="M83 0c-4-4 4-8 0-12" stroke="#b3341f" fill="none"/>
+          <rect x="160" y="30" width="110" height="140" fill="#f4efe6" stroke="#141414" stroke-width="1.3" transform="rotate(4 215 100)"/>
+          <path d="M175 60h80M175 76h80M175 92h60M175 120h40" stroke="#141414" stroke-width="1" transform="rotate(4 215 100)"/>
+          <path d="M170 150l70-6" stroke="#b3341f" stroke-width="1.5"/>
+          <line x1="0" y1="160" x2="140" y2="160" stroke="#141414"/>
+          <text x="290" y="212" text-anchor="end" font-family="EB Garamond" font-style="italic" font-size="13" fill="#141414">Fig. 7</text>
+        </svg>
+        <figcaption><b>Fig. 7.</b> Visite conseil et devis détaillé pour un pavillon de la métropole.</figcaption>
+      </figure>
+    </div>
+    <div class="annonce rv">
+      <div class="pa">Tarifs<b>sur devis</b></div>
+      <p>Chaque intérieur, chaque conduit est différent : le prix dépend de l'appareil choisi, de l'état du conduit et des travaux de pose. Devis détaillé après visite.</p>
+      <a class="btn btn-encre" href="#bulletin">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- COURRIER (AVIS) -->
+<section id="avis" style="padding-top:20px">
+  <div class="wrap courrier">
+    <svg class="rv" viewBox="0 0 320 220" aria-hidden="true">
+      <rect x="20" y="40" width="280" height="160" fill="#f4efe6" stroke="#141414" stroke-width="1.5"/>
+      <path d="M20 40l140 90 140-90" fill="none" stroke="#141414" stroke-width="1.5"/>
+      <path d="M20 200l110-80M300 200l-110-80" stroke="#141414" stroke-width="1"/>
+      <path d="M20 200l110-80 30 10 30-10 110 80z" fill="url(#h45)" opacity=".5"/>
+      <rect x="236" y="52" width="48" height="56" fill="#f4efe6" stroke="#b3341f" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <path d="M260 96c-8-6-4-14 0-22 3 6 9 14 0 22z" fill="#b3341f"/>
+      <circle cx="226" cy="98" r="22" fill="none" stroke="#141414" stroke-width="1"/>
+      <path d="M200 92c8 4 16-4 24 0s16-4 24 0M200 102c8 4 16-4 24 0s16-4 24 0" stroke="#141414" stroke-width=".8" fill="none"/>
+      <path d="M40 20c30-10 60 10 90 0" stroke="#141414" stroke-width="1" fill="none" stroke-dasharray="3 4"/>
+    </svg>
+    <div class="rv">
+      <div class="entete"><span class="no">VI.</span><span class="rub">Courrier des lecteurs</span><h2>Votre avis compte</h2></div>
+      <p>Les avis Google des clients de M.R Cheminées seront publiés dans cette rubrique dès la mise en ligne du site. Vous avez déjà profité d'un poêle ou d'un insert posé par nos soins ? Quelques lignes aident vos voisins à choisir en confiance.</p>
+      <a class="btn btn-trait" href="https://www.google.com/search?q=M.R+Chemin%C3%A9es+Lille" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">VII.</span><span class="rub">Questions au spécialiste</span><h2>Vos questions, nos réponses</h2></div>
+    <div class="faq">
+      <details class="rv"><summary><span class="q">Q.</span>Le ramonage et l'entretien sont-ils obligatoires ?</summary><div class="rep"><p>Le ramonage des conduits de fumée est en principe obligatoire, généralement au moins une fois par an, selon la réglementation et le règlement sanitaire en vigueur dans votre commune. Il est aussi souvent demandé par les assureurs. L'entretien régulier de l'appareil garantit en plus un bon rendement.</p></div></details>
+      <details class="rv"><summary><span class="q">Q.</span>Poêle ou insert : que choisir ?</summary><div class="rep"><p>Si vous avez déjà une cheminée ouverte, l'insert est souvent la solution la plus naturelle. Sans cheminée, le poêle offre plus de liberté d'emplacement. La visite permet de trancher selon votre maison et vos habitudes.</p></div></details>
+      <details class="rv"><summary><span class="q">Q.</span>Le devis est-il gratuit ?</summary><div class="rep"><p>Les conditions du devis sont précisées dès le premier contact. Dans tous les cas, vous recevez une proposition détaillée avant toute commande, sans engagement.</p></div></details>
+      <details class="rv"><summary><span class="q">Q.</span>Quels sont les délais pour une installation ?</summary><div class="rep"><p>Ils varient selon la saison (l'automne est la période la plus demandée) et la disponibilité de l'appareil choisi. Le mieux est d'anticiper et d'appeler pour connaître les délais du moment.</p></div></details>
+      <details class="rv"><summary><span class="q">Q.</span>Puis-je obtenir des aides comme MaPrimeRénov' ?</summary><div class="rep"><p>Certains appareils de chauffage au bois peuvent ouvrir droit à des aides, selon votre situation et les critères en vigueur, qui évoluent régulièrement. On peut en parler lors du devis ; l'éligibilité se vérifie auprès des services officiels (France Rénov').</p></div></details>
+      <details class="rv"><summary><span class="q">Q.</span>Dans quelles communes intervenez-vous ?</summary><div class="rep"><p>À Lille, Villeneuve-d'Ascq et dans les environs. Pour une commune un peu plus éloignée de la métropole, un simple appel permet de vérifier.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS PRATIQUES -->
+<section id="horaires" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">VIII.</span><span class="rub">Infos pratiques</span><h2>Horaires &amp; secteur</h2></div>
+    <div class="pratique rv">
+      <div>
+        <h3>Horaires</h3>
+        <table id="table-horaires">
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+          </tbody>
+        </table>
+        <p class="mention">Horaires indicatifs, à confirmer. Lundi – vendredi : sur rendez-vous.</p>
+      </div>
+      <div>
+        <h3>Secteur d'intervention</h3>
+        <div class="zone">
+          <svg viewBox="0 0 150 150" aria-hidden="true">
+            <circle cx="75" cy="75" r="70" fill="none" stroke="#141414" stroke-width="1"/>
+            <circle cx="75" cy="75" r="64" fill="none" stroke="#141414" stroke-width=".6"/>
+            <circle cx="75" cy="75" r="40" fill="url(#h45)" opacity=".35" stroke="#141414" stroke-dasharray="3 3"/>
+            <path d="M75 8v12M75 130v12M8 75h12M130 75h12" stroke="#141414"/>
+            <text x="75" y="30" text-anchor="middle" font-family="EB Garamond" font-size="11" font-style="italic" fill="#141414">N</text>
+            <circle cx="60" cy="78" r="5" fill="#b3341f"/>
+            <text x="60" y="96" text-anchor="middle" font-family="EB Garamond" font-size="11" fill="#141414">Lille</text>
+            <circle cx="96" cy="74" r="4" fill="#141414"/>
+            <text x="96" y="66" text-anchor="middle" font-family="EB Garamond" font-size="10" fill="#141414">V.-d'Ascq</text>
+          </svg>
+          <div>
+            <p class="adr">Lille, Villeneuve-d'Ascq et environs</p>
+            <p>Intervention à domicile, sur rendez-vous, dans toute la métropole lilloise proche.</p>
+            <a class="btn btn-trait" href="https://www.google.com/maps/search/?api=1&amp;query=M.R+Chemin%C3%A9es+Lille" target="_blank" rel="noopener">Itinéraire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BULLETIN -->
+<section id="bulletin" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><span class="no">IX.</span><span class="rub">Bulletin de demande</span><h2>Écrivez-nous</h2></div>
+    <div class="bulletin-grid">
+      <div class="coord rv">
+        <p class="lettrine">Parlez-nous de votre projet : cheminée existante ou non, pièce à chauffer, envie d'eau chaude au bois… Nous revenons vers vous rapidement pour en discuter.</p>
+        <a class="ln" href="tel:+33612552281"><small>Téléphone</small><span>06 12 55 22 81</span></a>
+        <a class="ln" href="mailto:mrcheminees@gmail.com"><small>Courriel</small><span>mrcheminees@gmail.com</span></a>
+        <a class="ln" href="#horaires"><small>Secteur</small><span>Lille, Villeneuve-d'Ascq et environs</span></a>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <h3>Bulletin à remplir</h3>
+        <p class="sub">Réponse sous forme de rappel ou de courriel.</p>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" type="text" placeholder="Votre nom" autocomplete="name"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" placeholder="06 …" autocomplete="tel"></div>
+          <div class="champ plein"><label for="mail">Courriel</label><input id="mail" type="email" placeholder="vous@exemple.fr" autocomplete="email"></div>
+          <div class="champ plein"><label for="msg">Message</label><textarea id="msg" placeholder="Poêle, insert, eau chaude au bois, commune…"></textarea></div>
+        </div>
+        <button class="btn btn-encre" type="submit">Envoyer le bulletin</button>
+        <p class="retour" id="retour" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="colophon-titre">M.R <i>Cheminées</i></div>
+    <div class="foot">
+      <div><h4>L'entreprise</h4><p>Poêles et inserts à bois, chauffage et eau chaude au bois.</p></div>
+      <div><h4>Coordonnées</h4><p><a href="tel:+33612552281">06 12 55 22 81</a></p><p><a href="mailto:mrcheminees@gmail.com">mrcheminees@gmail.com</a></p></div>
+      <div><h4>Horaires</h4><p>Lundi – vendredi : sur rendez-vous</p><p><em>Horaires indicatifs, à confirmer</em></p></div>
+      <div><h4>Secteur</h4><p>Lille, Villeneuve-d'Ascq et environs</p></div>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33612552281" aria-label="Appeler M.R Cheminées"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function ferme(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');}
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',ferme);});
+  // date de l'édition
+  try{var d=new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});document.getElementById('date-une').textContent=d;}catch(e){}
+  // jour actuel
+  var tr=document.querySelector('#table-horaires tr[data-j="'+new Date().getDay()+'"]');if(tr)tr.classList.add('auj');
+  // révélations
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else els.forEach(function(e){e.classList.add('visible');});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('retour').classList.add('on');});
+})();
+</script>
+</body>
+</html>

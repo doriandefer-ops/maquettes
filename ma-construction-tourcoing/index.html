@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>MA-Construction – Rénovation, isolation et chauffage à Tourcoing</title>
+<meta name="description" content="MA-Construction, entreprise de bâtiment à Tourcoing : rénovation globale, isolation thermique par l'intérieur (QUALIBAT ITI), pompe à chaleur (QUALIBAT PAC), chaudière gaz ou fioul et gros œuvre. Devis gratuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acide:#c6f432;
+  --violet:#6b2ff7;
+  --noir:#0e0e0e;
+  --blanc:#ffffff;
+  --beton:#d6d3cc;
+  --beton-clair:#e8e6e1;
+  --orange:#ff7a1a;
+  --b:4px solid var(--noir);
+  --sh:8px 8px 0 var(--noir);
+  --sh-s:5px 5px 0 var(--noir);
+  --titre:"Dela Gothic One", Impact, sans-serif;
+  --texte:"Be Vietnam Pro", system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:var(--texte);font-size:1.04rem;line-height:1.6;color:var(--noir);background:var(--beton);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.02;margin:0 0 .45em;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,5.2vw,4rem);text-transform:uppercase}
+h3{font-size:1.35rem;line-height:1.12}
+p{margin:0 0 1em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.beton-tex{background-color:var(--beton);background-image:radial-gradient(rgba(14,14,14,.09) 1px,transparent 1.4px),radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.4px);background-size:9px 9px,13px 13px;background-position:0 0,4px 6px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--texte);font-weight:800;font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em;padding:.85em 1.3em;border:var(--b);box-shadow:var(--sh-s);text-decoration:none;cursor:pointer;transition:transform .15s, box-shadow .15s;line-height:1.1}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--noir)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--noir)}
+.btn-noir{background:var(--noir);color:var(--acide)}
+.btn-violet{background:var(--violet);color:#fff}
+.btn-blanc{background:#fff;color:var(--noir)}
+.btn-acide{background:var(--acide);color:var(--noir)}
+.btn-orange{background:var(--orange);color:var(--noir)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:4px solid var(--violet);outline-offset:3px}
+
+/* sticker incliné */
+.sticker{display:inline-block;font-family:var(--titre);font-size:.95rem;text-transform:uppercase;padding:.35em .8em;border:3px solid var(--noir);background:var(--acide);transform:rotate(-3deg);box-shadow:3px 3px 0 var(--noir);letter-spacing:.02em}
+.sticker.v{background:var(--violet);color:#fff}
+.sticker.o{background:var(--orange)}
+.sticker.w{background:#fff}
+
+/* ruban chantier */
+.ruban{background:repeating-linear-gradient(-45deg,var(--orange) 0 22px,var(--noir) 22px 44px);border-block:var(--b);height:22px}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:#fff;border-bottom:var(--b)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:46px;height:46px;flex:none}
+.logo-txt{font-family:var(--titre);font-size:1.25rem;line-height:1;letter-spacing:-.01em}
+.logo-txt small{display:block;font-family:var(--texte);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px;color:#3a3a3a}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px;align-items:center}
+.menu a{display:block;font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:8px 11px;border:3px solid transparent;transition:background .15s,border-color .15s}
+.menu a:hover{background:var(--acide);border-color:var(--noir)}
+.menu .btn{margin-left:10px;padding:.65em 1em;font-size:.92rem;border:var(--b)}
+.menu a.btn{display:inline-flex}
+.menu a.btn:hover{background:var(--violet);color:#fff}
+.burger{display:none;width:52px;height:48px;background:var(--acide);border:var(--b);box-shadow:3px 3px 0 var(--noir);cursor:pointer;padding:0;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{display:block;width:24px;height:3.5px;background:var(--noir);transition:transform .2s, opacity .2s}
+.nav.open .burger{background:var(--violet)}
+.nav.open .burger span{background:#fff}
+.nav.open .burger span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+
+/* ---------- hero : mur de parpaings ---------- */
+.hero{padding:104px 0 0}
+.mur{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(6,minmax(92px,auto));grid-auto-rows:auto;gap:12px;padding:12px;background:#9f9a90;border:var(--b);box-shadow:var(--sh);
+  background-image:linear-gradient(rgba(0,0,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.08) 1px,transparent 1px);background-size:6px 6px}
+.bloc{border:var(--b);position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;container-type:inline-size}
+.bloc::after{/* alvéoles du parpaing */content:"";position:absolute;inset:auto 12px 10px auto;width:34px;height:12px;border:3px solid rgba(14,14,14,.18);border-radius:3px;pointer-events:none}
+.b-nom{grid-column:1/8;grid-row:1/5;background:var(--acide);justify-content:space-between}
+.b-maison{grid-column:8/13;grid-row:1/5;background:#fff;padding:14px;justify-content:center}
+.b-iti{grid-column:1/4;grid-row:5/7;background:var(--violet);color:#fff}
+.b-pac{grid-column:4/7;grid-row:5/7;background:var(--orange)}
+.b-appel{grid-column:7/10;grid-row:5/7;background:var(--noir);color:var(--acide);text-decoration:none;transition:background .15s}
+.b-appel:hover{background:#262626}
+.b-ville{grid-column:10/13;grid-row:5/7;background:var(--beton-clair)}
+.b-nom .kick{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.b-nom h1{font-size:9.1cqi;line-height:.92;margin:0 0 .28em;text-transform:uppercase;white-space:nowrap}
+.b-nom h1 .tiret{color:var(--violet)}
+.b-nom h1 .ma{font-size:2.3em;line-height:.9;display:inline-block}
+.b-nom .accroche{font-size:1.18rem;font-weight:500;max-width:36ch;margin:0 0 20px}
+.b-nom .accroche strong{background:var(--noir);color:var(--acide);padding:0 .25em;font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.b-maison svg{width:100%;height:auto}
+.b-label{font-family:var(--titre);text-transform:uppercase;line-height:1.05;white-space:nowrap}
+.b-iti .b-label,.b-pac .b-label{font-size:min(13cqi,2.6rem);margin:0}
+.b-iti::after,.b-pac::after{display:none}
+.b-label small{display:block;font-family:var(--texte);font-weight:800;font-size:.72rem;letter-spacing:.16em;margin-bottom:8px}
+.b-desc{font-weight:600;font-size:.98rem;margin-top:auto;padding-top:14px}
+.b-iti .tampon,.b-pac .tampon{position:absolute;bottom:14px;right:14px;width:44px;height:44px}
+.b-desc{padding-right:52px}
+.b-appel .b-label{font-size:1.6rem}
+.b-appel .num{font-family:var(--titre);font-size:min(10.5cqi,2rem);white-space:nowrap;color:#fff;margin-top:auto;line-height:1.1}
+.b-appel svg.ring{width:46px;height:46px;margin-bottom:10px}
+.b-ville .b-label{font-size:min(11.5cqi,2.6rem)}
+.b-ville address{font-style:normal;font-weight:600;font-size:.95rem;margin-top:auto;padding-top:12px;line-height:1.4}
+.b-ruban{grid-column:1/13;grid-row:7;padding:0;border:var(--b);background:var(--noir);overflow:hidden}
+.b-ruban::after{display:none}
+.defile{display:flex;width:max-content;animation:defile 28s linear infinite}
+.defile span{font-family:var(--titre);font-size:1.15rem;text-transform:uppercase;color:var(--noir);white-space:nowrap;padding:14px 26px;background:var(--acide);border-right:var(--b)}
+.defile span:nth-child(3n+2){background:var(--orange)}
+.defile span:nth-child(3n){background:#fff}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* empilement */
+.stack .bloc{animation:pose .6s cubic-bezier(.2,1.4,.4,1) both}
+.stack .b-iti,.stack .b-pac,.stack .b-appel,.stack .b-ville{animation-delay:.08s}
+.stack .b-iti{animation-delay:.05s}.stack .b-pac{animation-delay:.15s}.stack .b-appel{animation-delay:.25s}.stack .b-ville{animation-delay:.35s}
+.stack .b-nom{animation-delay:.45s}.stack .b-maison{animation-delay:.58s}.stack .b-ruban{animation-delay:0s}
+@keyframes pose{from{transform:translateY(-70px) rotate(-1.5deg);opacity:0}to{transform:none;opacity:1}}
+
+/* ---------- confiance ---------- */
+.trust{padding:44px 0 0}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.t-item{background:#fff;border:var(--b);box-shadow:var(--sh-s);padding:16px 18px;display:flex;gap:14px;align-items:center}
+.t-item:nth-child(2){background:var(--acide)}
+.t-item:nth-child(3){background:var(--violet);color:#fff}
+.t-item svg{width:44px;height:44px;flex:none}
+.t-item b{display:block;font-family:var(--titre);font-weight:400;font-size:1.05rem;line-height:1.1;text-transform:uppercase}
+.t-item span{display:block;font-size:.9rem;font-weight:500;line-height:1.35;margin-top:3px}
+
+/* ---------- sections ---------- */
+.sec{padding:100px 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:46px}
+.sec-head h2{margin:12px 0 0}
+.sec-head p{max-width:46ch;font-size:1.1rem;font-weight:500;margin:0}
+
+/* services */
+.services{background:#fff;border-block:var(--b)}
+.grid-s{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.carte{border:var(--b);box-shadow:var(--sh);padding:26px 24px;background:#fff;transition:transform .15s, box-shadow .15s;position:relative}
+.carte:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--noir)}
+.carte .ico{width:72px;height:72px;margin-bottom:16px;border:3px solid var(--noir);background:var(--beton-clair);display:grid;place-items:center}
+.carte .ico svg{width:52px;height:52px}
+.carte h3{font-size:1.3rem;text-transform:uppercase}
+.carte p{margin:0;font-weight:500;color:#262626}
+.carte .flag{position:absolute;top:-14px;right:16px}
+.carte:nth-child(1){background:var(--acide)}
+.carte:nth-child(2) .ico{background:var(--violet)}
+.carte:nth-child(3) .ico{background:var(--orange)}
+.carte:nth-child(4) .ico{background:var(--acide)}
+.carte:nth-child(5){background:var(--beton-clair)}
+.carte:nth-child(6) .ico{background:var(--violet)}
+
+/* pourquoi */
+.pourquoi{background:var(--violet);color:#fff;border-bottom:var(--b)}
+.pourquoi .sec-head p{color:#f1ecff}
+.pq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pq{background:var(--noir);border:4px solid #fff;padding:24px 20px;box-shadow:8px 8px 0 var(--acide);transition:transform .15s, box-shadow .15s}
+.pq:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--acide)}
+.pq .n{font-family:var(--titre);font-size:2.6rem;color:var(--acide);line-height:1;display:block;margin-bottom:12px}
+.pq h3{color:#fff;font-size:1.2rem;text-transform:uppercase}
+.pq p{margin:0;color:#dcdcdc;font-size:.98rem}
+
+/* étapes */
+.etapes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:var(--b);box-shadow:var(--sh);background:#fff;list-style:none;padding:0;margin:0}
+.etape{padding:28px 24px;border-right:var(--b);position:relative;transition:background .15s}
+.etape:last-child{border-right:0}
+.etape:hover{background:var(--acide)}
+.etape .num{display:inline-grid;place-items:center;width:64px;height:64px;background:var(--noir);color:var(--acide);font-family:var(--titre);font-size:1.9rem;margin-bottom:18px;box-shadow:4px 4px 0 var(--orange)}
+.etape h3{text-transform:uppercase;font-size:1.2rem}
+.etape p{margin:0;font-weight:500}
+
+/* à propos */
+.apropos{background:var(--noir);color:#fff;border-block:var(--b)}
+.ap-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
+.ap-txt h2{color:#fff}
+.ap-txt h2 em{font-style:normal;color:var(--acide)}
+.ap-txt p{font-size:1.12rem;color:#e6e6e6}
+.ap-txt p strong{color:var(--acide)}
+.fiche{align-self:start;background:#fff;color:var(--noir);border:4px solid #fff;box-shadow:10px 10px 0 var(--orange)}
+.fiche h3{margin:0;padding:16px 20px;background:var(--acide);border-bottom:var(--b);font-size:1.25rem;text-transform:uppercase}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.fiche dt,.fiche dd{margin:0;padding:12px 18px;border-bottom:3px solid var(--noir)}
+.fiche dt{font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;background:var(--beton-clair);border-right:3px solid var(--noir);display:flex;align-items:center}
+.fiche dd{font-weight:600;overflow-wrap:anywhere}
+.fiche dt:nth-last-of-type(1),.fiche dd:last-of-type{border-bottom:0}
+.fiche a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.fiche a:hover{background:var(--acide)}
+
+/* réalisations */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.real{margin:0;border:var(--b);background:#fff;box-shadow:var(--sh);transition:transform .15s, box-shadow .15s}
+.real:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:12px 12px 0 var(--noir)}
+.real .vue{aspect-ratio:16/11;border-bottom:var(--b);overflow:hidden}
+.real .vue svg{width:100%;height:100%}
+.real figcaption{padding:14px 16px;font-weight:700;font-size:1rem;line-height:1.3;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.real figcaption span.k{font-family:var(--titre);font-size:.8rem;background:var(--noir);color:var(--acide);padding:3px 8px;flex:none}
+.tarif{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center;justify-content:space-between;background:var(--orange);border:var(--b);box-shadow:var(--sh);padding:22px 26px}
+.tarif strong{font-family:var(--titre);font-weight:400;font-size:clamp(1.5rem,3vw,2.2rem);text-transform:uppercase;line-height:1}
+.tarif p{margin:0;font-weight:600;max-width:52ch;flex:1 1 300px}
+
+/* avis */
+.avis{padding-top:0}
+.avis-box{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;background:#fff;border:var(--b);box-shadow:var(--sh);padding:30px}
+.avis-box .bulle{width:110px;height:110px}
+.avis-box h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.25em}
+.avis-box p{margin:0;font-weight:500}
+
+/* faq */
+.faq{background:var(--acide);border-block:var(--b)}
+.faq-list{display:grid;gap:14px;max-width:940px}
+.faq details{background:#fff;border:var(--b);box-shadow:var(--sh-s);transition:box-shadow .15s, transform .15s}
+.faq details[open]{box-shadow:8px 8px 0 var(--violet)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 66px 18px 22px;font-weight:800;font-size:1.08rem;position:relative;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:14px;top:50%;width:38px;height:38px;margin-top:-19px;display:grid;place-items:center;background:var(--noir);color:var(--acide);font-family:var(--titre);font-size:1.4rem;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--violet);color:#fff}
+.faq .rep{padding:0 22px 20px;font-weight:500;color:#262626}
+.faq .rep p{margin:0}
+
+/* contact */
+.ct-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}
+.panneau{background:#fff;border:var(--b);box-shadow:var(--sh)}
+.panneau h3{margin:0;padding:16px 22px;border-bottom:var(--b);font-size:1.3rem;text-transform:uppercase;background:var(--noir);color:var(--acide)}
+.panneau .in{padding:22px}
+.hor{width:100%;border-collapse:collapse;margin:6px 0 10px}
+.hor td{padding:9px 10px;border-bottom:2px solid var(--beton);font-weight:600}
+.hor td:last-child{text-align:right}
+.hor tr.today td{background:var(--acide);border-bottom-color:var(--noir)}
+.hor tr.today td:first-child::after{content:" · aujourd'hui";font-size:.78rem;font-weight:800;text-transform:uppercase}
+.indic{display:inline-block;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;background:var(--orange);border:3px solid var(--noir);padding:3px 10px;transform:rotate(-2deg);margin:0 0 12px}
+.adr{border-top:var(--b);padding:20px 22px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;background:var(--beton-clair)}
+.adr address{font-style:normal;font-weight:700;line-height:1.4}
+form.devis .in{display:grid;gap:16px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ label{display:block;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.champ input,.champ textarea{width:100%;font:inherit;font-weight:500;padding:12px 14px;border:var(--b);background:var(--beton-clair);border-radius:0;transition:background .15s, box-shadow .15s}
+.champ textarea{min-height:130px;resize:vertical}
+.champ input:focus,.champ textarea:focus{outline:none;background:#fff;box-shadow:5px 5px 0 var(--violet)}
+.form-msg{display:none;margin:0;padding:14px 16px;border:var(--b);background:var(--acide);font-weight:800}
+.form-msg.show{display:block}
+
+/* footer */
+footer{background:var(--noir);color:#e6e6e6;border-top:var(--b)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding:60px 24px 44px}
+.foot .brand{font-family:var(--titre);font-size:2rem;color:var(--acide);line-height:1;margin-bottom:12px;text-transform:uppercase}
+footer h4{font-family:var(--titre);font-weight:400;text-transform:uppercase;color:#fff;margin:0 0 12px;font-size:1rem;letter-spacing:.04em}
+footer p,footer li{margin:0 0 6px;font-size:.96rem}
+footer ul{list-style:none;margin:0;padding:0}
+footer a{color:var(--acide);text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+footer a:hover{text-decoration:underline}
+.labels-foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.labels-foot span{font-weight:800;font-size:.75rem;letter-spacing:.06em;border:2px solid var(--acide);color:var(--acide);padding:3px 8px}
+.demo{background:var(--acide);color:var(--noir);text-align:center;font-weight:600;font-size:.88rem;padding:12px 16px;border-top:var(--b)}
+
+/* flottant */
+.fab{display:none;position:fixed;right:16px;bottom:16px;z-index:60;align-items:center;gap:8px;background:var(--acide);color:var(--noir);border:var(--b);box-shadow:var(--sh-s);padding:12px 16px;font-weight:800;text-transform:uppercase;text-decoration:none;font-size:.95rem}
+.fab svg{width:24px;height:24px}
+
+/* reveal */
+.reveal{opacity:0;translate:0 30px;transition:opacity .55s ease, translate .55s ease, transform .15s, box-shadow .15s, background .15s}
+.reveal.visible{opacity:1;translate:0 0}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;translate:0 0}
+}
+
+/* responsive */
+@media (max-width:1120px){
+  .menu a{padding:8px 7px;font-size:.85rem}
+  .pq-grid,.trust-row{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:980px){
+  .burger{display:flex}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:var(--b);padding:10px 20px 22px;transform:translateY(-130%);visibility:hidden;transition:transform .25s ease, visibility .25s;max-height:calc(100vh - 72px);overflow:auto}
+  .nav.open .menu{transform:none;visibility:visible}
+  .menu a{font-size:1.15rem;padding:14px 6px;border:0;border-bottom:3px solid var(--noir)}
+  .menu a:hover{border-color:var(--noir)}
+  .menu .btn,.menu a.btn{display:flex;margin:16px 0 0;border:var(--b)}
+  .mur{grid-template-columns:repeat(6,1fr)}
+  .b-nom{grid-column:1/7;grid-row:auto}
+  .b-maison{grid-column:1/5;grid-row:auto}
+  .b-iti{grid-column:5/7;grid-row:auto}
+  .b-pac{grid-column:1/4;grid-row:auto}
+  .b-appel{grid-column:4/7;grid-row:auto}
+  .b-ville{grid-column:1/7;grid-row:auto}
+  .b-ruban{grid-column:1/7;grid-row:auto}
+  .mur{grid-template-rows:none;grid-auto-rows:auto}
+  .grid-s,.gal{grid-template-columns:repeat(2,1fr)}
+  .etapes-grid{grid-template-columns:repeat(2,1fr)}
+  .etape:nth-child(2){border-right:0}
+  .etape:nth-child(-n+2){border-bottom:var(--b)}
+  .ap-grid,.ct-grid{grid-template-columns:1fr}
+  .avis-box{grid-template-columns:auto 1fr}
+  .avis-box .btn{grid-column:1/-1;justify-self:start}
+}
+@media (max-width:768px){
+  .fab{display:inline-flex}
+}
+@media (max-width:620px){
+  body{font-size:1rem}
+  .wrap{padding:0 16px}
+  .nav .wrap{height:68px}
+  .menu{top:68px}
+  .logo-txt{font-size:1.08rem}
+  .logo-mark{width:40px;height:40px}
+  .hero{padding-top:84px}
+  .mur{grid-template-columns:1fr 1fr;gap:10px;padding:10px;box-shadow:5px 5px 0 var(--noir)}
+  .bloc{padding:18px}
+  .b-ruban{padding:0}
+  .b-nom,.b-maison,.b-ville,.b-appel,.b-ruban{grid-column:1/3}
+  .b-iti,.b-pac{grid-column:1/3}
+  .b-iti .tampon,.b-pac .tampon{width:30px;height:30px;bottom:10px;right:10px}
+  .b-desc{padding-right:34px}
+  .b-label small{font-size:.62rem;letter-spacing:.1em}
+  .b-desc{font-size:.85rem}
+  .b-nom .accroche{font-size:1.04rem}
+  .cta .btn{flex:1 1 100%}
+  .trust-row,.grid-s,.gal,.pq-grid{grid-template-columns:1fr}
+  .etapes-grid{grid-template-columns:1fr}
+  .etape{border-right:0;border-bottom:var(--b)}
+  .etape:last-child{border-bottom:0}
+  .sec{padding:72px 0}
+  .avis-box{grid-template-columns:1fr;padding:24px}
+  .avis-box .bulle{width:80px;height:80px}
+  .duo{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr;padding:48px 16px 36px}
+  .fiche dl{grid-template-columns:1fr}
+  .fiche dt{border-right:0;border-bottom:0;padding-bottom:4px}
+  .demo{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5 9 3l1.6 4-1.9 1.4a11 11 0 0 0 6.9 6.9L17 13.4l4 1.6-.5 2.4A3 3 0 0 1 17.6 20 15.6 15.6 0 0 1 4 6.4a3 3 0 0 1 2.6-2.9Z" fill="currentColor"/></symbol>
+    <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M4 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></symbol>
+    <pattern id="laine" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#c6f432"/><path d="M0 7c3.5-5 7 5 10.5 0S14 2 14 7" fill="none" stroke="#0e0e0e" stroke-width="1.6"/></pattern>
+    <pattern id="briques" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#d6d3cc"/><path d="M0 .5h24M0 6.5h24M.5 0v6M12.5 6v6" stroke="#0e0e0e" stroke-width="1.2" fill="none"/></pattern>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#accueil" class="logo" aria-label="MA-Construction, retour en haut">
+      <svg class="logo-mark" viewBox="0 0 46 46" aria-hidden="true"><rect x="2" y="2" width="42" height="42" fill="#c6f432" stroke="#0e0e0e" stroke-width="4"/><rect x="8" y="24" width="14" height="14" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="3"/><rect x="24" y="24" width="14" height="14" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="3"/><rect x="16" y="9" width="14" height="14" fill="#fff" stroke="#0e0e0e" stroke-width="3"/></svg>
+      <span class="logo-txt">MA-Construction<small>Bâtiment · Chauffage</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">L'entreprise</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+33611322586" class="btn btn-noir"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 11 32 25 86</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO : MUR DE PARPAINGS ============ -->
+<section class="hero beton-tex" id="accueil">
+  <div class="wrap">
+    <div class="mur stack">
+      <div class="bloc b-nom">
+        <div>
+          <div class="kick"><span class="sticker w">Tourcoing · 59</span><span class="sticker v" style="transform:rotate(2deg)">Bâtiment + chauffage</span></div>
+          <h1><span class="ma">MA<span class="tiret">-</span></span><br>Construction</h1>
+          <p class="accroche">Des murs isolés de l'intérieur à la pompe à chaleur, <strong>on rénove votre maison du sol au thermostat</strong>. Une seule équipe, un seul devis.</p>
+        </div>
+        <div class="cta">
+          <a href="tel:+33611322586" class="btn btn-noir"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+          <a href="#contact" class="btn btn-blanc">Demander un devis<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        </div>
+      </div>
+
+      <div class="bloc b-maison">
+        <svg viewBox="0 0 420 340" role="img" aria-label="Maison en coupe montrant l'isolation intérieure des murs et une pompe à chaleur raccordée">
+          <!-- sol -->
+          <rect x="0" y="292" width="420" height="48" fill="#d6d3cc"/>
+          <path d="M0 292h420" stroke="#0e0e0e" stroke-width="4"/>
+          <path d="M20 310l10 10M70 306l10 10M150 312l10 10M240 306l10 10M330 312l10 10M390 306l10 10" stroke="#0e0e0e" stroke-width="2.5"/>
+          <!-- toit -->
+          <path d="M28 126 150 30l122 96" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="4" stroke-linejoin="miter"/>
+          <path d="M66 126 150 60l84 66" fill="#ffffff" stroke="#0e0e0e" stroke-width="4"/>
+          <path d="M150 60v66" stroke="#0e0e0e" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <!-- murs extérieurs brique -->
+          <rect x="40" y="126" width="220" height="166" fill="url(#briques)" stroke="#0e0e0e" stroke-width="4"/>
+          <!-- intérieur -->
+          <rect x="58" y="140" width="184" height="152" fill="#ffffff" stroke="#0e0e0e" stroke-width="3"/>
+          <!-- isolant ITI -->
+          <rect x="58" y="140" width="14" height="152" fill="url(#laine)" stroke="#0e0e0e" stroke-width="3"/>
+          <rect x="228" y="140" width="14" height="152" fill="url(#laine)" stroke="#0e0e0e" stroke-width="3"/>
+          <rect x="72" y="140" width="156" height="12" fill="url(#laine)" stroke="#0e0e0e" stroke-width="3"/>
+          <!-- plancher étage -->
+          <rect x="72" y="214" width="156" height="8" fill="#0e0e0e"/>
+          <!-- radiateur / émetteur -->
+          <rect x="96" y="246" width="56" height="34" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="3"/>
+          <path d="M108 246v34M120 246v34M132 246v34M144 246v34" stroke="#0e0e0e" stroke-width="2.5"/>
+          <path d="M106 236c-4-6 4-8 0-14M124 236c-4-6 4-8 0-14M142 236c-4-6 4-8 0-14" fill="none" stroke="#ff7a1a" stroke-width="3" stroke-linecap="round"/>
+          <!-- fenêtre étage -->
+          <rect x="160" y="166" width="46" height="34" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/>
+          <path d="M183 166v34M160 183h46" stroke="#0e0e0e" stroke-width="2.5"/>
+          <!-- canalisations -->
+          <path d="M152 270h76M152 258h76" stroke="#0e0e0e" stroke-width="5"/>
+          <path d="M242 270h60M242 258h60" stroke="#0e0e0e" stroke-width="5"/>
+          <path d="M152 270h76M242 270h60" stroke="#6b2ff7" stroke-width="2.5"/>
+          <path d="M152 258h76M242 258h60" stroke="#ff7a1a" stroke-width="2.5"/>
+          <!-- PAC -->
+          <rect x="300" y="226" width="96" height="66" fill="#ffffff" stroke="#0e0e0e" stroke-width="4"/>
+          <circle cx="336" cy="259" r="23" fill="#c6f432" stroke="#0e0e0e" stroke-width="3.5"/>
+          <g class="helice"><path d="M336 259l0-18M336 259l16 9M336 259l-16 9" stroke="#0e0e0e" stroke-width="5" stroke-linecap="round"/></g>
+          <circle cx="336" cy="259" r="4" fill="#0e0e0e"/>
+          <path d="M370 238h16M370 248h16M370 258h16M370 268h16M370 278h16" stroke="#0e0e0e" stroke-width="3"/>
+          <rect x="306" y="292" width="10" height="6" fill="#0e0e0e"/><rect x="380" y="292" width="10" height="6" fill="#0e0e0e"/>
+          <!-- étiquettes -->
+          <g font-family="Be Vietnam Pro, sans-serif" font-weight="800" font-size="13">
+            <rect x="282" y="132" width="118" height="30" fill="#c6f432" stroke="#0e0e0e" stroke-width="3" transform="rotate(-4 341 147)"/>
+            <text x="292" y="153" transform="rotate(-4 341 147)">ISOLANT ITI</text>
+            <path d="M282 150 246 164" stroke="#0e0e0e" stroke-width="3"/>
+            <rect x="268" y="184" width="140" height="30" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="3" transform="rotate(3 338 199)"/>
+            <text x="277" y="205" transform="rotate(3 338 199)">POMPE À CHALEUR</text>
+          </g>
+          <!-- air extérieur -->
+          <path d="M312 92c12-8 24 8 36 0s24 8 36 0M318 112c12-8 24 8 36 0s24 8 36 0" fill="none" stroke="#6b2ff7" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="bloc b-iti">
+        <svg class="tampon" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/><path d="M11 23l7 7 15-16" fill="none" stroke="#0e0e0e" stroke-width="4.5" stroke-linecap="square"/></svg>
+        <p class="b-label"><small>Label</small>QUALIBAT<br>ITI</p>
+        <p class="b-desc">Isolation thermique par l'intérieur</p>
+      </div>
+      <div class="bloc b-pac">
+        <svg class="tampon" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#0e0e0e" stroke-width="3"/><path d="M11 23l7 7 15-16" fill="none" stroke="#0e0e0e" stroke-width="4.5" stroke-linecap="square"/></svg>
+        <p class="b-label"><small>Label</small>QUALIBAT<br>PAC</p>
+        <p class="b-desc">Pompe à chaleur</p>
+      </div>
+      <a class="bloc b-appel" href="tel:+33611322586">
+        <svg class="ring" viewBox="0 0 24 24" aria-hidden="true" style="color:#c6f432"><use href="#i-tel"/></svg>
+        <span class="b-label">Appeler</span>
+        <span class="num">06 11 32 25 86</span>
+      </a>
+      <div class="bloc b-ville">
+        <p class="b-label" style="margin:0"><small>Basés à</small>Tourcoing</p>
+        <address>64 avenue Alfred Lefrançois<br>59200 Tourcoing</address>
+      </div>
+      <div class="bloc b-ruban" aria-hidden="true">
+        <div class="defile">
+          <span>Rénovation globale</span><span>Isolation intérieure</span><span>Pompe à chaleur</span><span>Chaudière gaz · fioul</span><span>Gros œuvre</span><span>Maçonnerie</span>
+          <span>Rénovation globale</span><span>Isolation intérieure</span><span>Pompe à chaleur</span><span>Chaudière gaz · fioul</span><span>Gros œuvre</span><span>Maçonnerie</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<section class="trust beton-tex" aria-label="Points clés">
+  <div class="wrap">
+    <div class="trust-row">
+      <div class="t-item reveal"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="3" y="3" width="38" height="38" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/><path d="M12 22l7 7 13-14" fill="none" stroke="#0e0e0e" stroke-width="4"/></svg><div><b>QUALIBAT ITI</b><span>Isolation thermique par l'intérieur</span></div></div>
+      <div class="t-item reveal"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="3" y="3" width="38" height="38" fill="#fff" stroke="#0e0e0e" stroke-width="3"/><circle cx="22" cy="22" r="11" fill="none" stroke="#0e0e0e" stroke-width="3"/><path d="M22 22v-9M22 22l8 5M22 22l-8 5" stroke="#0e0e0e" stroke-width="3"/></svg><div><b>QUALIBAT PAC</b><span>Pompe à chaleur</span></div></div>
+      <div class="t-item reveal"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4c-8 0-14 6-14 14 0 10 14 22 14 22s14-12 14-22c0-8-6-14-14-14Z" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/><circle cx="22" cy="18" r="5" fill="#0e0e0e"/></svg><div><b>Tourcoing</b><span>et métropole lilloise</span></div></div>
+      <div class="t-item reveal"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="24" width="17" height="15" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="3"/><rect x="23" y="24" width="17" height="15" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="3"/><rect x="13" y="7" width="17" height="15" fill="#fff" stroke="#0e0e0e" stroke-width="3"/></svg><div><b>Bâtiment &amp; chauffage</b><span>construction, rénovation, gros œuvre</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec beton-tex" id="services" style="padding-top:80px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker">Nos chantiers</span><h2>Ce qu'on<br>construit</h2></div>
+      <p>Le bâti et le chauffage dans la même équipe : pratique quand on rénove une maison de ville tourquennoise de fond en comble.</p>
+    </div>
+    <div class="grid-s">
+      <article class="carte reveal">
+        <span class="sticker v flag">Clé en main</span>
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 26 26 8l20 18" fill="none" stroke="#0e0e0e" stroke-width="4"/><rect x="12" y="24" width="28" height="22" fill="#fff" stroke="#0e0e0e" stroke-width="4"/><rect x="22" y="32" width="8" height="14" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="3"/></svg></div>
+        <h3>Rénovation globale</h3>
+        <p>Une maison à remettre à niveau ? Gros œuvre, isolation et chauffage coordonnés par une seule entreprise.</p>
+      </article>
+      <article class="carte reveal">
+        <span class="sticker flag">QUALIBAT ITI</span>
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="6" y="6" width="14" height="40" fill="#d6d3cc" stroke="#0e0e0e" stroke-width="3.5"/><rect x="20" y="6" width="12" height="40" fill="url(#laine)" stroke="#0e0e0e" stroke-width="3.5"/><rect x="32" y="6" width="6" height="40" fill="#fff" stroke="#0e0e0e" stroke-width="3.5"/><path d="M42 18h6M42 26h6M42 34h6" stroke="#fff" stroke-width="3.5"/></svg></div>
+        <h3>Isolation intérieure</h3>
+        <p>Doublage isolant des murs par l'intérieur pour en finir avec les parois froides et l'humidité des hivers du Nord.</p>
+      </article>
+      <article class="carte reveal">
+        <span class="sticker o flag">QUALIBAT PAC</span>
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="5" y="10" width="42" height="32" fill="#fff" stroke="#0e0e0e" stroke-width="3.5"/><circle cx="21" cy="26" r="10" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/><path d="M21 26v-7M21 26l6 4M21 26l-6 4" stroke="#0e0e0e" stroke-width="3"/><path d="M36 18h7M36 24h7M36 30h7M36 36h7" stroke="#0e0e0e" stroke-width="2.5"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et installation de pompes à chaleur pour chauffer la maison et produire l'eau chaude plus sobrement.</p>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="12" y="4" width="28" height="40" fill="#fff" stroke="#0e0e0e" stroke-width="3.5"/><rect x="17" y="9" width="18" height="8" fill="#0e0e0e"/><path d="M26 38c-7-4-5-12 0-16 1 4 4 5 4 8 2-2 2-4 1-6 4 4 4 11-1 14" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="2.5"/><path d="M18 44v5M26 44v5M34 44v5" stroke="#0e0e0e" stroke-width="3.5"/></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Remplacement et installation de chaudières gaz ou fioul, raccordement et mise en service.</p>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="30" width="20" height="14" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="3"/><rect x="26" y="30" width="20" height="14" fill="#fff" stroke="#0e0e0e" stroke-width="3"/><rect x="14" y="14" width="20" height="14" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="3"/><path d="M36 6l10 8-6 4-10-8z" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/></svg></div>
+        <h3>Gros œuvre &amp; maçonnerie</h3>
+        <p>Construction, murs, ouvertures, dalles : les travaux structurels d'une construction ou d'une rénovation lourde.</p>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M10 42l18-18M26 14a10 10 0 0 1 14-10l-7 7 2 6 6 2 7-7a10 10 0 0 1-12 14" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="square"/><path d="M6 46l7-7" stroke="#c6f432" stroke-width="6"/></svg></div>
+        <h3>Entretien &amp; dépannage</h3>
+        <p>Entretien annuel de chaudière, diagnostic de panne et remise en route de votre installation de chauffage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POURQUOI ============ -->
+<section class="sec pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker">Pourquoi nous</span><h2>Du solide.<br>Et du chaud.</h2></div>
+      <p>Une entreprise de bâtiment qui maîtrise aussi le chauffage : moins d'intervenants, moins de coordination à gérer pour vous.</p>
+    </div>
+    <div class="pq-grid">
+      <div class="pq reveal"><span class="n">01</span><h3>Deux labels QUALIBAT</h3><p>Qualifications ITI (isolation par l'intérieur) et PAC (pompe à chaleur).</p></div>
+      <div class="pq reveal"><span class="n">02</span><h3>Bâti + chauffage</h3><p>Murs, isolation et système de chauffage pensés ensemble, pas chacun dans son coin.</p></div>
+      <div class="pq reveal"><span class="n">03</span><h3>Devis détaillé</h3><p>Chaque poste chiffré clairement avant le démarrage du chantier, sans surprise.</p></div>
+      <div class="pq reveal"><span class="n">04</span><h3>Ancrés à Tourcoing</h3><p>Une entreprise du coin qui connaît les maisons en brique et les courées de la métropole.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉTAPES ============ -->
+<section class="sec beton-tex" id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker o">Méthode</span><h2>Comment<br>ça se passe</h2></div>
+      <p>Quatre étapes, du premier coup de fil à la réception du chantier.</p>
+    </div>
+    <ol class="etapes-grid reveal">
+      <li class="etape"><span class="num">1</span><h3>Premier contact</h3><p>Vous appelez ou écrivez : on fait le point sur votre projet ou votre panne.</p></li>
+      <li class="etape"><span class="num">2</span><h3>Visite technique</h3><p>Passage sur place pour relever les mesures, l'état du bâti et l'installation existante.</p></li>
+      <li class="etape"><span class="num">3</span><h3>Devis gratuit</h3><p>Une proposition écrite et détaillée, poste par poste, sans engagement.</p></li>
+      <li class="etape"><span class="num">4</span><h3>Chantier &amp; réception</h3><p>Travaux menés aux dates convenues, mise en service et chantier laissé propre.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="sec apropos" id="apropos">
+  <div class="wrap ap-grid">
+    <div class="ap-txt reveal">
+      <span class="sticker">L'entreprise</span>
+      <h2 style="margin-top:14px">Bâtir, isoler,<br><em>chauffer.</em></h2>
+      <p><strong>MA-Construction</strong> est une SAS de bâtiment installée avenue Alfred Lefrançois, à Tourcoing. Son activité couvre la construction, la rénovation et le gros œuvre.</p>
+      <p>L'entreprise intervient aussi sur le chauffage : chaudières gaz ou fioul et pompes à chaleur, avec les qualifications <strong>QUALIBAT PAC</strong> et <strong>QUALIBAT ITI</strong> pour l'isolation thermique par l'intérieur.</p>
+      <p>De quoi traiter une maison de la métropole dans son ensemble : la structure, les murs froids et le système de chauffage.</p>
+    </div>
+    <div class="fiche reveal">
+      <h3>Fiche chantier</h3>
+      <dl>
+        <dt>Société</dt><dd>MA-Construction (SAS)</dd>
+        <dt>Adresse</dt><dd>64 avenue Alfred Lefrançois, 59200 Tourcoing</dd>
+        <dt>Téléphone</dt><dd><a href="tel:+33611322586">06 11 32 25 86</a></dd>
+        <dt>Email</dt><dd><a href="mailto:ma.construction.n1@gmail.com">ma.construction.n1@gmail.com</a></dd>
+        <dt>Labels</dt><dd>QUALIBAT ITI · QUALIBAT PAC</dd>
+        <dt>Métiers</dt><dd>Construction, rénovation, gros œuvre, chauffage</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RÉALISATIONS ============ -->
+<section class="sec beton-tex" id="realisations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker v">Réalisations types</span><h2>Sur le<br>chantier</h2></div>
+      <p>Des exemples d'interventions représentatives, illustrées. Chaque projet est étudié et chiffré au cas par cas.</p>
+    </div>
+    <div class="gal">
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#c6f432"/><rect x="40" y="30" width="60" height="170" fill="url(#briques)" stroke="#0e0e0e" stroke-width="4"/><rect x="100" y="30" width="44" height="170" fill="url(#laine)" stroke="#0e0e0e" stroke-width="4"/><rect x="144" y="30" width="16" height="170" fill="#fff" stroke="#0e0e0e" stroke-width="4"/><path d="M196 70h80M196 110h80M196 150h80" stroke="#0e0e0e" stroke-width="4"/><path d="M196 70l-30 0M196 110l-30 0M196 150l-30 0" stroke="#0e0e0e" stroke-width="2" stroke-dasharray="4 4"/><g font-family="Be Vietnam Pro" font-weight="800" font-size="13"><text x="200" y="62">BRIQUE</text><text x="200" y="102">ISOLANT</text><text x="200" y="142">PLAQUE</text></g></svg></div>
+        <figcaption>Isolation des murs par l'intérieur d'une maison de ville<span class="k">ITI</span></figcaption>
+      </figure>
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#6b2ff7"/><rect x="0" y="180" width="320" height="40" fill="#d6d3cc" stroke="#0e0e0e" stroke-width="4"/><rect x="60" y="80" width="150" height="100" fill="#fff" stroke="#0e0e0e" stroke-width="5"/><circle cx="115" cy="130" r="34" fill="#c6f432" stroke="#0e0e0e" stroke-width="4"/><path d="M115 130v-26M115 130l22 13M115 130l-22 13" stroke="#0e0e0e" stroke-width="6" stroke-linecap="round"/><path d="M165 96h30M165 110h30M165 124h30M165 138h30M165 152h30M165 166h30" stroke="#0e0e0e" stroke-width="4"/><path d="M210 150h50v-90h40" fill="none" stroke="#0e0e0e" stroke-width="7"/><path d="M210 150h50v-90h40" fill="none" stroke="#ff7a1a" stroke-width="3"/><path d="M240 30c10-8 20 8 30 0s20 8 30 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg></div>
+        <figcaption>Installation d'une pompe à chaleur air/eau<span class="k">PAC</span></figcaption>
+      </figure>
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#ff7a1a"/><rect x="40" y="40" width="80" height="120" fill="#d6d3cc" stroke="#0e0e0e" stroke-width="4" stroke-dasharray="10 8"/><path d="M40 40l80 120M120 40l-80 120" stroke="#0e0e0e" stroke-width="4"/><path d="M140 100h34M162 88l14 12-14 12" fill="none" stroke="#0e0e0e" stroke-width="5"/><rect x="196" y="30" width="90" height="140" fill="#fff" stroke="#0e0e0e" stroke-width="5"/><rect x="208" y="44" width="66" height="22" fill="#0e0e0e"/><rect x="214" y="50" width="30" height="10" fill="#c6f432"/><path d="M241 146c-14-8-10-26 0-34 2 8 8 10 8 16 4-4 4-8 2-12 10 8 10 24-2 30" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="3"/><path d="M214 170v26M232 170v26M250 170v26M268 170v26" stroke="#0e0e0e" stroke-width="5"/></svg></div>
+        <figcaption>Remplacement de chaudière gaz à condensation<span class="k">GAZ</span></figcaption>
+      </figure>
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#fff"/><path d="M60 90 160 24l100 66" fill="#c6f432" stroke="#0e0e0e" stroke-width="5"/><rect x="74" y="90" width="172" height="110" fill="url(#briques)" stroke="#0e0e0e" stroke-width="5"/><rect x="96" y="112" width="40" height="36" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="4"/><rect x="184" y="112" width="40" height="36" fill="#6b2ff7" stroke="#0e0e0e" stroke-width="4"/><rect x="142" y="150" width="36" height="50" fill="#ff7a1a" stroke="#0e0e0e" stroke-width="4"/><rect x="0" y="200" width="320" height="20" fill="#0e0e0e"/><path d="M262 40l24 0M274 28v24" stroke="#6b2ff7" stroke-width="7"/><path d="M34 40l14 0M41 33v14" stroke="#ff7a1a" stroke-width="6"/></svg></div>
+        <figcaption>Rénovation complète d'une maison en brique<span class="k">RÉNO</span></figcaption>
+      </figure>
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#d6d3cc"/><rect x="30" y="40" width="260" height="150" fill="url(#briques)" stroke="#0e0e0e" stroke-width="5"/><rect x="110" y="64" width="100" height="20" fill="#0e0e0e"/><rect x="118" y="84" width="84" height="106" fill="#fff" stroke="#0e0e0e" stroke-width="5"/><path d="M128 190v-96M192 190v-96" stroke="#ff7a1a" stroke-width="8"/><path d="M128 94h64" stroke="#ff7a1a" stroke-width="8"/><rect x="104" y="14" width="112" height="24" fill="#c6f432" stroke="#0e0e0e" stroke-width="3"/><text x="130" y="31" font-family="Be Vietnam Pro" font-weight="800" font-size="13">LINTEAU</text><path d="M160 38v24" stroke="#0e0e0e" stroke-width="3"/></svg></div>
+        <figcaption>Création d'une ouverture dans un mur porteur<span class="k">GROS ŒUVRE</span></figcaption>
+      </figure>
+      <figure class="real reveal">
+        <div class="vue"><svg viewBox="0 0 320 220" aria-hidden="true"><rect width="320" height="220" fill="#0e0e0e"/><g stroke="#0e0e0e" stroke-width="4"><rect x="40" y="150" width="70" height="40" fill="#ff7a1a"/><rect x="110" y="150" width="70" height="40" fill="#c6f432"/><rect x="180" y="150" width="70" height="40" fill="#fff"/><rect x="75" y="110" width="70" height="40" fill="#6b2ff7"/><rect x="145" y="110" width="70" height="40" fill="#ff7a1a"/><rect x="110" y="70" width="70" height="40" fill="#c6f432"/></g><path d="M240 40v60M224 56l16-16 16 16" fill="none" stroke="#c6f432" stroke-width="6"/><rect x="215" y="100" width="50" height="14" fill="#fff" stroke="#0e0e0e" stroke-width="3"/></svg></div>
+        <figcaption>Élévation de murs en parpaings pour une extension<span class="k">MAÇONNERIE</span></figcaption>
+      </figure>
+    </div>
+    <div class="tarif reveal">
+      <strong>Tarifs : sur devis</strong>
+      <p>Chaque chantier est différent : le prix est établi après visite technique, et le devis est gratuit.</p>
+      <a href="#contact" class="btn btn-noir">Mon devis<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec avis beton-tex" id="avis">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <svg class="bulle" viewBox="0 0 110 110" aria-hidden="true"><path d="M8 10h94v68H48l-24 22V78H8z" fill="#c6f432" stroke="#0e0e0e" stroke-width="5"/><path d="M24 32h62M24 46h62M24 60h36" stroke="#0e0e0e" stroke-width="5"/></svg>
+      <div>
+        <h2>Votre avis compte</h2>
+        <p>Les avis clients Google apparaîtront ici une fois le site en ligne. Un chantier réalisé avec MA-Construction ? Partagez votre retour.</p>
+      </div>
+      <a class="btn btn-violet" href="https://www.google.com/search?q=MA-Construction+Tourcoing" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker w">FAQ</span><h2>Questions<br>fréquentes</h2></div>
+      <p>Les réponses générales aux questions qu'on nous pose le plus. Pour votre cas précis, un appel suffit.</p>
+    </div>
+    <div class="faq-list">
+      <details class="reveal"><summary>L'entretien annuel de la chaudière est-il obligatoire ?</summary><div class="rep"><p>Oui, pour les chaudières gaz et fioul de 4 à 400 kW, l'entretien est obligatoire chaque année. Une attestation est remise à l'issue de la visite. Les pompes à chaleur font aussi l'objet d'un entretien périodique selon leur type et leur puissance.</p></div></details>
+      <details class="reveal"><summary>Le devis est-il gratuit ?</summary><div class="rep"><p>Oui. Après une visite technique, vous recevez un devis écrit et détaillé, sans engagement.</p></div></details>
+      <details class="reveal"><summary>Quels sont les délais pour démarrer un chantier ?</summary><div class="rep"><p>Ils dépendent de l'ampleur des travaux et du planning du moment. Une date de démarrage vous est proposée avec le devis ; un dépannage de chauffage est traité au plus vite dans la mesure du possible.</p></div></details>
+      <details class="reveal"><summary>Peut-on bénéficier d'aides comme MaPrimeRénov' ?</summary><div class="rep"><p>Selon votre situation et les critères en vigueur, certains travaux d'isolation ou de chauffage peuvent être aidés. Renseignez-vous auprès de France Rénov' avant de signer : nous pouvons vous indiquer les éléments techniques du projet.</p></div></details>
+      <details class="reveal"><summary>Isolation par l'intérieur : est-ce adapté à ma maison ?</summary><div class="rep"><p>L'isolation par l'intérieur convient souvent aux maisons en brique de la métropole dont la façade doit être conservée. Elle réduit légèrement la surface habitable : la visite technique permet de vérifier la solution la plus adaptée.</p></div></details>
+      <details class="reveal"><summary>Dans quelles communes intervenez-vous ?</summary><div class="rep"><p>L'entreprise est basée à Tourcoing et intervient dans la métropole lilloise. Appelez pour vérifier que votre commune est dans le secteur.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec beton-tex" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="sticker o">Contact</span><h2>On en parle ?</h2></div>
+      <p>Un projet de rénovation, une isolation, une pompe à chaleur ou une chaudière à changer : décrivez-nous votre besoin.</p>
+    </div>
+    <div class="ct-grid">
+      <div class="panneau reveal">
+        <h3>Horaires</h3>
+        <div class="in">
+          <p class="indic">Horaires indicatifs, à confirmer</p>
+          <p style="font-weight:700;margin:0 0 6px">Lundi – vendredi : sur rendez-vous</p>
+          <table class="hor" aria-label="Horaires de la semaine">
+            <tbody id="jours">
+              <tr data-d="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+              <tr data-d="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+              <tr data-d="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-d="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+              <tr data-d="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-d="6"><td>Samedi</td><td>Sur demande</td></tr>
+              <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="adr">
+          <address>MA-Construction<br>64 avenue Alfred Lefrançois<br>59200 Tourcoing</address>
+          <a class="btn btn-acide" href="https://www.google.com/maps/search/?api=1&amp;query=64+avenue+Alfred+Lefran%C3%A7ois+59200+Tourcoing" target="_blank" rel="noopener">Itinéraire<svg aria-hidden="true"><use href="#i-fleche"/></svg></a>
+        </div>
+      </div>
+
+      <form class="panneau devis reveal" id="form" novalidate>
+        <h3 style="background:var(--violet);color:#fff">Demander un devis</h3>
+        <div class="in">
+          <div class="duo">
+            <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name"></div>
+            <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="champ"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="champ"><label for="msg">Votre projet</label><textarea id="msg" name="msg" placeholder="Ex. : isoler les murs d'une maison de ville et remplacer la vieille chaudière…"></textarea></div>
+          <button type="submit" class="btn btn-noir" style="justify-self:start">Envoyer<svg aria-hidden="true"><use href="#i-fleche"/></svg></button>
+          <p class="form-msg" id="formMsg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="ruban" aria-hidden="true"></div>
+<footer>
+  <div class="wrap foot" style="padding-left:24px;padding-right:24px">
+    <div>
+      <p class="brand">MA-Construction</p>
+      <p>Bâtiment, rénovation, gros œuvre et chauffage à Tourcoing et dans la métropole lilloise.</p>
+      <div class="labels-foot"><span>QUALIBAT ITI</span><span>QUALIBAT PAC</span></div>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul>
+        <li><a href="tel:+33611322586">06 11 32 25 86</a></li>
+        <li><a href="mailto:ma.construction.n1@gmail.com">ma.construction.n1@gmail.com</a></li>
+        <li>64 avenue Alfred Lefrançois<br>59200 Tourcoing</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <p>Lundi – vendredi : sur rendez-vous</p>
+      <p style="color:#b5b5b5">Horaires indicatifs, à confirmer</p>
+    </div>
+    <div>
+      <h4>Zone</h4>
+      <p>Tourcoing et métropole lilloise</p>
+      <ul style="margin-top:10px"><li><a href="#services">Services</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis gratuit</a></li></ul>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33611322586" aria-label="Appeler MA-Construction"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function setOpen(o){nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');}
+  burger.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
+
+  var row=document.querySelector('#jours tr[data-d="'+new Date().getDay()+'"]');
+  if(row)row.classList.add('today');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formMsg').classList.add('show');});
+
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('visible');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

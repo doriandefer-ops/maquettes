@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renovatop – Chauffagiste à Lille-Lomme</title>
+<meta name="description" content="Renovatop, chauffagiste à Lille-Lomme (59160) : chaudière gaz ou fioul, pompe à chaleur et climatisation, chauffe-eau thermodynamique. QUALIPAC Chauffage, QUALIPAC CET, QUALIBAT Remplacement chaudière. Métropole lilloise.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanc:#fbfbfa;
+  --noir:#111111;
+  --gris:#8c8c88;        /* filets, éléments non textuels */
+  --gris-texte:#5e5e5a;  /* texte secondaire, contraste ≥ 6:1 */
+  --gris-clair:#e6e6e2;
+  --accent:#00875a;
+  --accent-fonce:#006e49;
+  --col:12;
+  --gut:24px;
+  --marge:48px;
+  --max:1344px;
+  --nav-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px)}
+body{position:relative;margin:0;background:var(--blanc);color:var(--noir);font-family:"Geist",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+.mono{font-family:"Geist Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--marge);position:relative}
+
+/* Grille visible en fond */
+.grid-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+.grid-bg .wrap{height:100%;display:grid;grid-template-columns:repeat(var(--col),1fr);gap:var(--gut)}
+.grid-bg span{border-left:1px solid rgba(17,17,17,.045);border-right:1px solid rgba(17,17,17,.045);height:100%}
+main,footer,.nav{position:relative;z-index:1}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(251,251,250,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--gris-clair);z-index:50}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:19px;letter-spacing:-.02em}
+.logo-mark{width:28px;height:28px;border:1.5px solid var(--noir);display:grid;place-items:center;position:relative}
+.logo-mark::after{content:"";width:8px;height:8px;background:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{text-decoration:none;color:var(--gris-texte);transition:color .2s}
+.nav-links a:hover{color:var(--noir)}
+.nav-links a b{color:var(--accent);font-weight:500;margin-right:6px}
+.nav-cta{background:var(--noir);color:var(--blanc)!important;padding:10px 16px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--accent)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--noir);background:transparent;cursor:pointer;position:relative;padding:0}
+.burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--noir);transition:transform .25s,opacity .2s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;font-family:"Geist Mono",monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--noir);transition:background .2s,color .2s,transform .2s;cursor:pointer}
+.btn-plein{background:var(--noir);color:var(--blanc)}
+.btn-plein:hover{background:var(--accent);border-color:var(--accent)}
+.btn-vide{background:transparent;color:var(--noir)}
+.btn-vide:hover{background:var(--noir);color:var(--blanc)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* HERO */
+.hero{padding-top:calc(var(--nav-h) + 40px);border-bottom:1px solid var(--noir)}
+.hero-meta{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);padding:16px 0;border-top:1px solid var(--noir);border-bottom:1px solid var(--gris-clair)}
+.hero-meta > div{grid-column:span 3;color:var(--gris-texte)}
+.hero-meta b{color:var(--noir);font-weight:500}
+.hero h1{font-size:clamp(44px,8.6vw,132px);line-height:.92;letter-spacing:-.055em;font-weight:600;margin:48px 0 40px}
+.hero h1 .l2{color:var(--accent)}
+.hero h1 .sq{display:inline-block;width:.18em;height:.18em;background:var(--accent);margin-left:.04em}
+.hero-intro{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);align-items:end;margin-bottom:48px}
+.hero-intro p{grid-column:1 / span 6;font-size:21px;line-height:1.45;margin:0;letter-spacing:-.01em}
+.hero-intro .actions{grid-column:8 / span 5;display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--noir)}
+.tile{aspect-ratio:1/1;border-right:1px solid var(--noir);padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:background .3s}
+.tile:last-child{border-right:0}
+.tile:hover{background:#f2f2ef}
+.tile-top{display:flex;justify-content:space-between;align-items:flex-start}
+.tile-num{font-family:"Geist Mono",monospace;font-size:clamp(48px,6vw,96px);line-height:1;letter-spacing:-.04em;color:var(--noir)}
+.tile-icon{width:44%;max-width:180px;align-self:center;margin:auto 0}
+.tile-icon svg{width:100%;height:auto;stroke:var(--noir);fill:none;stroke-width:1.5}
+.tile-icon .acc{stroke:var(--accent)}
+.tile-icon .accf{fill:var(--accent);stroke:none}
+.tile-body{min-height:112px}
+.tile h3{font-size:clamp(20px,2vw,28px);letter-spacing:-.03em;font-weight:600;margin:0 0 4px;line-height:1.1}
+.tile p{margin:0;color:var(--gris-texte);font-size:15px}
+.tile .mono{color:var(--accent)}
+.tile .draw{stroke-dasharray:400;stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease}
+.js .tile:not(.visible) .draw{stroke-dashoffset:400}
+
+/* Bandeau confiance */
+.trust{border-bottom:1px solid var(--noir)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:24px 24px 24px 0;border-right:1px solid var(--gris-clair)}
+.trust-item + .trust-item{padding-left:24px}
+.trust-item:last-child{border-right:0}
+.trust-item .mono{color:var(--gris-texte);display:block;margin-bottom:6px}
+.trust-item strong{font-weight:500;font-size:17px;letter-spacing:-.01em}
+
+/* Sections */
+section{position:relative}
+.sec{padding:120px 0;border-bottom:1px solid var(--gris-clair)}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);margin-bottom:64px;align-items:start}
+.sec-idx{grid-column:1 / span 3;display:flex;gap:12px;align-items:baseline;padding-top:14px;border-top:1px solid var(--noir)}
+.sec-idx .n{color:var(--accent)}
+.sec-head h2{grid-column:4 / span 7;font-size:clamp(36px,4.6vw,68px);line-height:1;letter-spacing:-.045em;font-weight:600;margin:0}
+.sec-head .lead{grid-column:4 / span 6;color:var(--gris-texte);font-size:18px;margin:20px 0 0}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--noir);border-left:1px solid var(--gris-clair)}
+.svc{border-right:1px solid var(--gris-clair);border-bottom:1px solid var(--gris-clair);padding:28px 24px 32px;min-height:300px;display:flex;flex-direction:column;transition:background .25s;position:relative}
+.svc::before{content:"";position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent);transition:width .35s}
+.svc:hover{background:#fff}
+.svc:hover::before{width:100%}
+.svc .mono{color:var(--gris-texte)}
+.svc svg{width:52px;height:52px;margin:28px 0 auto;stroke:var(--noir);fill:none;stroke-width:1.5}
+.svc svg .acc{stroke:var(--accent)}
+.svc h3{font-size:21px;letter-spacing:-.025em;font-weight:600;margin:32px 0 8px;line-height:1.15}
+.svc p{margin:0;color:var(--gris-texte);font-size:15px}
+.svc.main h3::after{content:" ●";color:var(--accent);font-size:10px;vertical-align:middle}
+
+/* Pourquoi */
+.why{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut)}
+.why-item{grid-column:span 3;border-top:1px solid var(--noir);padding-top:20px}
+.why-item .big{font-family:"Geist Mono",monospace;font-size:13px;color:var(--accent);margin-bottom:56px;display:block}
+.why-item h3{font-size:24px;letter-spacing:-.03em;margin:0 0 10px;font-weight:600;line-height:1.1}
+.why-item p{margin:0;color:var(--gris-texte);font-size:15.5px}
+
+/* Étapes */
+.steps{counter-reset:s;border-top:1px solid var(--noir)}
+.step{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);padding:32px 0;border-bottom:1px solid var(--gris-clair);align-items:baseline;transition:background .25s}
+.step:hover{background:#fff}
+.step .n{grid-column:1 / span 3;font-family:"Geist Mono",monospace;font-size:56px;letter-spacing:-.05em;line-height:1}
+.step:hover .n{color:var(--accent)}
+.step h3{grid-column:4 / span 4;font-size:26px;letter-spacing:-.03em;margin:0;font-weight:600}
+.step p{grid-column:8 / span 5;margin:0;color:var(--gris-texte)}
+
+/* À propos */
+.about{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);align-items:start}
+.about-text{grid-column:4 / span 6}
+.about-text p{font-size:22px;line-height:1.45;letter-spacing:-.015em;margin:0 0 24px}
+.about-text p.small{font-size:17px;color:var(--gris-texte)}
+.about-card{grid-column:10 / span 3;border:1px solid var(--noir);padding:20px}
+.about-card dl{margin:0}
+.about-card dt{color:var(--gris-texte);margin-top:16px}
+.about-card dt:first-child{margin-top:0}
+.about-card dd{margin:4px 0 0;font-weight:500}
+.about-plan{grid-column:1 / span 3}
+.about-plan svg{width:100%;height:auto;stroke:var(--noir);fill:none;stroke-width:1}
+
+/* Réalisations */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gut)}
+.real{border:1px solid var(--gris-clair);background:#fff;transition:border-color .25s,transform .25s}
+.real:hover{border-color:var(--noir);transform:translateY(-3px)}
+.real .pic{aspect-ratio:4/3;border-bottom:1px solid var(--gris-clair);background:
+  linear-gradient(var(--gris-clair) 1px,transparent 1px) 0 0/24px 24px,
+  linear-gradient(90deg,var(--gris-clair) 1px,transparent 1px) 0 0/24px 24px,#fff;display:grid;place-items:center}
+.real .pic svg{width:64%;height:auto;stroke:var(--noir);fill:none;stroke-width:1.4}
+.real .pic svg .acc{stroke:var(--accent)}
+.real .pic svg .accf{fill:var(--accent);stroke:none}
+.real .pic svg .wf{fill:var(--blanc)}
+.real .cap{padding:16px 18px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.real .cap h3{font-size:16px;font-weight:500;letter-spacing:-.01em;margin:0}
+.real .cap .mono{color:var(--accent);white-space:nowrap}
+.price-note{margin-top:32px;display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--noir);padding-top:16px;flex-wrap:wrap}
+.price-note .mono{color:var(--gris-texte)}
+
+/* Avis */
+.review{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);border:1px solid var(--noir);padding:48px}
+.review .q{grid-column:1 / span 2;font-family:"Geist Mono",monospace;font-size:80px;line-height:.8;color:var(--accent)}
+.review .t{grid-column:3 / span 6}
+.review h3{font-size:32px;letter-spacing:-.035em;margin:0 0 12px;font-weight:600}
+.review p{margin:0;color:var(--gris-texte)}
+.review .a{grid-column:9 / span 4;align-self:end;justify-self:end}
+
+/* FAQ */
+.faq{border-top:1px solid var(--noir)}
+.faq details{border-bottom:1px solid var(--gris-clair)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);padding:24px 0;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .mono{grid-column:1 / span 3;color:var(--gris-texte)}
+.faq summary .qq{grid-column:4 / span 8;font-size:21px;letter-spacing:-.02em;font-weight:500}
+.faq summary .pm{grid-column:12;justify-self:end;width:22px;height:22px;position:relative}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--noir);transition:transform .25s}
+.faq summary .pm::after{transform:rotate(90deg)}
+.faq details[open] summary .pm::after{transform:rotate(0)}
+.faq details[open] summary .mono{color:var(--accent)}
+.faq summary:hover .qq{color:var(--accent)}
+.faq .ans{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);padding:0 0 28px}
+.faq .ans p{grid-column:4 / span 7;margin:0;color:var(--gris-texte)}
+
+/* Horaires + contact */
+.contact-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut)}
+.hours{grid-column:1 / span 5}
+.hours table{width:100%;border-collapse:collapse;border-top:1px solid var(--noir)}
+.hours td{padding:12px 0;border-bottom:1px solid var(--gris-clair);font-size:16px}
+.hours td:last-child{text-align:right;color:var(--gris-texte)}
+.hours tr.today td{color:var(--noir);font-weight:600}
+.hours tr.today td:first-child::before{content:"";display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:10px;vertical-align:middle}
+.hours tr.today td:last-child{color:var(--accent)}
+.hours .note{color:var(--gris-texte);margin:12px 0 32px}
+.zone{border:1px solid var(--noir);padding:20px}
+.zone svg{width:100%;height:auto;margin:16px 0}
+.zone h3{margin:0;font-size:20px;letter-spacing:-.02em;font-weight:600}
+.form-wrap{grid-column:7 / span 6}
+.coords{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--noir);margin-bottom:40px}
+.coords a{display:block;padding:18px 0;border-bottom:1px solid var(--gris-clair);text-decoration:none;transition:color .2s}
+.coords a:hover{color:var(--accent)}
+.coords a .mono{display:block;color:var(--gris-texte);margin-bottom:4px}
+.coords a strong{font-size:20px;font-weight:500;letter-spacing:-.02em;word-break:break-all}
+.coords a + a{padding-left:20px;border-left:1px solid var(--gris-clair)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--gut)}
+.field{display:flex;flex-direction:column;margin-bottom:20px}
+.field.full{grid-column:1 / -1}
+.field label{margin-bottom:6px;color:var(--gris-texte)}
+.field input,.field textarea{font:inherit;font-size:17px;padding:12px 0;border:0;border-bottom:1.5px solid var(--noir);background:transparent;color:var(--noir);border-radius:0;outline:none;transition:border-color .2s}
+.field input:focus,.field textarea:focus{border-color:var(--accent)}
+.field textarea{min-height:120px;resize:vertical}
+form .btn{grid-column:1 / -1;justify-self:start}
+.form-msg{grid-column:1 / -1;margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:#eef6f2;display:none;font-size:15px}
+.form-msg.show{display:block}
+
+/* Footer */
+footer{background:var(--noir);color:var(--blanc);padding:80px 0 0}
+footer .big{font-size:clamp(48px,11vw,170px);line-height:.85;letter-spacing:-.06em;font-weight:600;margin:0 0 64px}
+footer .big span{color:var(--accent)}
+.foot-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gut);padding-bottom:56px;border-top:1px solid #333;padding-top:24px}
+.foot-grid > div{grid-column:span 3}
+.foot-grid .mono{color:#a7a7a2;display:block;margin-bottom:10px}
+.foot-grid p,.foot-grid a{margin:0 0 6px;color:#e9e9e5;text-decoration:none;font-size:15px;display:block}
+.foot-grid a:hover{color:#3fd19a}
+.demo{border-top:1px solid #333;padding:16px 0;color:#a7a7a2;text-align:center}
+
+/* Bouton d'appel flottant */
+.fab{display:none}
+
+/* Animations */
+.reveal{transition:opacity .8s ease,transform .8s ease}
+.js .reveal:not(.visible){opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal:not(.visible){opacity:1;transform:none}
+  .js .tile:not(.visible) .draw{stroke-dashoffset:0}
+}
+
+/* Responsive */
+@media (max-width:1100px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .why-item{grid-column:span 6;margin-bottom:24px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .about-plan{display:none}
+  .about-text{grid-column:1 / span 8}
+  .about-card{grid-column:9 / span 4}
+}
+@media (max-width:900px){
+  :root{--marge:16px;--gut:16px;--col:4}
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--blanc);border-bottom:1px solid var(--noir);padding:8px 16px 20px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .nav-links.open{opacity:1;transform:none;visibility:visible}
+  .nav-links li{border-bottom:1px solid var(--gris-clair)}
+  .nav-links a{display:block;padding:16px 0;font-size:14px;color:var(--noir)}
+  .nav-links li:last-child{border:0;padding-top:16px}
+  .nav-cta{text-align:center}
+  .burger{display:block}
+  .grid-bg span:nth-child(n+5){display:none}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:8px 16px}
+  .hero-meta > div{grid-column:span 1}
+  .hero-intro{grid-template-columns:1fr}
+  .hero-intro p,.hero-intro .actions{grid-column:1}
+  .hero-intro .actions{justify-content:flex-start}
+  .mosaic{grid-template-columns:1fr}
+  .tile{border-right:0;border-bottom:1px solid var(--noir);aspect-ratio:auto;min-height:0;display:grid;grid-template-columns:1fr 96px;grid-template-rows:auto auto;gap:16px;padding:24px 0}
+  .tile:last-child{border-bottom:0}
+  .tile-top{grid-column:1;grid-row:1}
+  .tile-icon{grid-column:2;grid-row:1 / span 2;width:96px;margin:0;align-self:center}
+  .tile-body{grid-column:1;grid-row:2;min-height:0}
+  .tile-num{font-size:40px}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust-item,.trust-item + .trust-item{padding:16px 12px 16px 0;border-right:0;border-bottom:1px solid var(--gris-clair)}
+  .trust-item:nth-child(even){padding-left:12px;border-left:1px solid var(--gris-clair)}
+  .sec{padding:80px 0}
+  .sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
+  .sec-idx,.sec-head h2,.sec-head .lead{grid-column:1}
+  .sec-head .lead{margin-top:0}
+  .services{grid-template-columns:1fr}
+  .svc{min-height:0}
+  .why{grid-template-columns:1fr}
+  .why-item{grid-column:1}
+  .why-item .big{margin-bottom:24px}
+  .step{grid-template-columns:72px 1fr;gap:8px 16px}
+  .step .n{grid-column:1;grid-row:1 / span 2;font-size:40px}
+  .step h3{grid-column:2;font-size:22px}
+  .step p{grid-column:2}
+  .about{grid-template-columns:1fr}
+  .about-text,.about-card{grid-column:1}
+  .about-text p{font-size:19px}
+  .gallery{grid-template-columns:1fr}
+  .review{grid-template-columns:1fr;padding:28px 20px;gap:16px}
+  .review .q,.review .t,.review .a{grid-column:1;justify-self:start}
+  .review .q{font-size:56px}
+  .review h3{font-size:26px}
+  .faq summary{grid-template-columns:1fr 24px;gap:6px 12px}
+  .faq summary .mono{grid-column:1 / -1}
+  .faq summary .qq{grid-column:1;font-size:18px}
+  .faq summary .pm{grid-column:2;grid-row:2}
+  .faq .ans{grid-template-columns:1fr}
+  .faq .ans p{grid-column:1}
+  .contact-grid{grid-template-columns:1fr;gap:56px}
+  .hours,.form-wrap{grid-column:1}
+  .coords{grid-template-columns:1fr}
+  .coords a + a{padding-left:0;border-left:0}
+  form{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid > div{grid-column:span 1;margin-bottom:24px}
+  footer{padding-bottom:72px}
+}
+@media (max-width:768px){
+  .fab{display:flex;position:fixed;right:16px;bottom:16px;z-index:60;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;padding:14px 18px;font-family:"Geist Mono",monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .fab svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8}
+}
+@media (max-width:420px){
+  .hero h1{font-size:46px}
+  .btn{padding:14px 16px}
+  .hero-intro p{font-size:18px}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Renovatop, accueil"><span class="logo-mark"></span>Renovatop</a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links mono" id="menu">
+      <li><a href="#services"><b>01</b>Services</a></li>
+      <li><a href="#methode"><b>02</b>Méthode</a></li>
+      <li><a href="#realisations"><b>03</b>Réalisations</a></li>
+      <li><a href="#faq"><b>04</b>FAQ</a></li>
+      <li><a href="#contact"><b>05</b>Contact</a></li>
+      <li><a href="tel:+33611607689" class="nav-cta">06 11 60 76 89</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <!-- EN-TÊTE MOSAÏQUE -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-meta mono">
+        <div><b>Renovatop</b> — SARL</div>
+        <div>Chauffagiste</div>
+        <div>Lille-Lomme · 59160</div>
+        <div>Métropole lilloise</div>
+      </div>
+      <h1>Trois qualifications.<br><span class="l2">Un seul interlocuteur<span class="sq"></span></span></h1>
+      <div class="hero-intro">
+        <p>Chaudière gaz ou fioul, pompe à chaleur, chauffe-eau thermodynamique&nbsp;: Renovatop installe et remplace votre chauffage à Lille-Lomme et dans toute la métropole — du pavillon en brique à la maison de ville.</p>
+        <div class="actions">
+          <a href="tel:+33611607689" class="btn btn-plein">Appeler <span class="arr">→</span></a>
+          <a href="#contact" class="btn btn-vide">Demander un devis <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div class="mosaic">
+        <article class="tile reveal">
+          <div class="tile-top"><span class="tile-num">01</span><span class="mono">Label</span></div>
+          <div class="tile-icon" aria-hidden="true">
+            <!-- Pompe à chaleur : unité extérieure -->
+            <svg viewBox="0 0 120 120"><rect class="draw" x="14" y="28" width="92" height="64"/><circle class="draw" cx="46" cy="60" r="22"/><circle class="acc" cx="46" cy="60" r="4"/><path class="draw acc" d="M46 38 Q56 50 46 60 Q36 70 46 82 M24 60 Q36 50 46 60 Q56 70 68 60"/><line x1="80" y1="44" x2="96" y2="44"/><line x1="80" y1="52" x2="96" y2="52"/><line x1="80" y1="60" x2="96" y2="60"/><line x1="22" y1="92" x2="22" y2="100"/><line x1="98" y1="92" x2="98" y2="100"/></svg>
+          </div>
+          <div class="tile-body"><h3>QUALIPAC Chauffage</h3><p>Pompes à chaleur pour le chauffage du logement.</p></div>
+        </article>
+        <article class="tile reveal">
+          <div class="tile-top"><span class="tile-num">02</span><span class="mono">Label</span></div>
+          <div class="tile-icon" aria-hidden="true">
+            <!-- Chauffe-eau thermodynamique -->
+            <svg viewBox="0 0 120 120"><rect class="draw" x="38" y="10" width="44" height="18" rx="2"/><path class="draw" d="M38 28 h44 v72 a6 6 0 0 1 -6 6 h-32 a6 6 0 0 1 -6 -6z"/><line x1="44" y1="17" x2="76" y2="17"/><line x1="44" y1="22" x2="76" y2="22"/><path class="acc" d="M60 52 c-8 10 -8 18 0 24 c8 -6 8 -14 0 -24z"/><line x1="50" y1="106" x2="50" y2="114"/><line x1="70" y1="106" x2="70" y2="114"/><circle cx="60" cy="92" r="3"/></svg>
+          </div>
+          <div class="tile-body"><h3>QUALIPAC CET</h3><p>Chauffe-eau thermodynamiques pour l’eau chaude sanitaire.</p></div>
+        </article>
+        <article class="tile reveal">
+          <div class="tile-top"><span class="tile-num">03</span><span class="mono">Label</span></div>
+          <div class="tile-icon" aria-hidden="true">
+            <!-- Chaudière murale -->
+            <svg viewBox="0 0 120 120"><rect class="draw" x="28" y="12" width="64" height="80" rx="3"/><rect x="40" y="26" width="40" height="18"/><circle class="acc" cx="48" cy="68" r="6"/><circle cx="72" cy="68" r="6"/><line x1="40" y1="82" x2="80" y2="82"/><path class="draw" d="M44 92 v16 M60 92 v20 M76 92 v16"/><path class="acc" d="M54 35 h12"/></svg>
+          </div>
+          <div class="tile-body"><h3>QUALIBAT Remplacement chaudière</h3><p>Dépose et remplacement de chaudières gaz ou fioul.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEAU DE CONFIANCE -->
+  <section class="trust" aria-label="Informations clés">
+    <div class="wrap">
+      <div class="trust-item"><span class="mono">Qualifications</span><strong>QUALIPAC ×2 · QUALIBAT</strong></div>
+      <div class="trust-item"><span class="mono">Zone</span><strong>Lille-Lomme et métropole</strong></div>
+      <div class="trust-item"><span class="mono">Spécialité</span><strong>Chaudière &amp; pompe à chaleur</strong></div>
+      <div class="trust-item"><span class="mono">Eau chaude</span><strong>Chauffe-eau thermodynamique</strong></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">01</span><span>Services</span></div>
+        <h2>Ce que nous installons, remplaçons et entretenons.</h2>
+        <p class="lead">Les trois premiers postes sont le cœur du métier de Renovatop. Le reste en découle naturellement.</p>
+      </div>
+      <div class="services">
+        <article class="svc main reveal"><span class="mono">S.01</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="4" width="24" height="32" rx="2"/><rect x="17" y="10" width="14" height="7"/><circle class="acc" cx="20" cy="27" r="2.5"/><circle cx="28" cy="27" r="2.5"/><path d="M18 36v8M24 36v8M30 36v8"/></svg>
+          <h3>Chaudière gaz ou fioul</h3><p>Remplacement de votre ancienne chaudière par un modèle récent, dimensionné pour votre logement.</p></article>
+        <article class="svc main reveal"><span class="mono">S.02</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="10" width="40" height="28"/><circle cx="18" cy="24" r="9"/><path class="acc" d="M18 15q5 5 0 9t0 9M9 24q5-4 9 0t9 0"/><path d="M33 17h7M33 22h7M33 27h7"/></svg>
+          <h3>Pompe à chaleur &amp; climatisation</h3><p>Pompe à chaleur air/eau ou air/air&nbsp;: chauffer l’hiver, rafraîchir lors des étés plus chauds.</p></article>
+        <article class="svc main reveal"><span class="mono">S.03</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="3" width="18" height="8"/><path d="M15 11h18v30a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3z"/><path class="acc" d="M24 20c-4 5-4 9 0 12c4-3 4-7 0-12z"/></svg>
+          <h3>Chauffe-eau thermodynamique</h3><p>De l’eau chaude produite à partir des calories de l’air, pour réduire la part de l’électricité.</p></article>
+        <article class="svc reveal"><span class="mono">S.04</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 5"/><path class="acc" d="M38 8l4 4-4 4"/></svg>
+          <h3>Entretien annuel</h3><p>Visite de contrôle de la chaudière ou de la pompe à chaleur, avec attestation remise.</p></article>
+        <article class="svc reveal"><span class="mono">S.05</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L6 35l7 7 15-15a10 10 0 0 0 14-9l-6 6-6-2-2-6z"/><circle class="acc" cx="11" cy="37" r="1.5"/></svg>
+          <h3>Dépannage</h3><p>Panne de chauffage ou d’eau chaude en plein hiver lillois&nbsp;: diagnostic et remise en route.</p></article>
+        <article class="svc reveal"><span class="mono">S.06</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="36" height="22"/><path d="M12 14v22M18 14v22M24 14v22M30 14v22M36 14v22"/><path class="acc" d="M6 40h36"/></svg>
+          <h3>Radiateurs &amp; émetteurs</h3><p>Ajout, remplacement ou équilibrage des radiateurs pour une chaleur homogène, pièce par pièce.</p></article>
+        <article class="svc reveal"><span class="mono">S.07</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3"/><circle cx="24" cy="21" r="8"/><path class="acc" d="M24 21l4-4"/><path d="M18 35h12"/></svg>
+          <h3>Régulation &amp; thermostat</h3><p>Thermostat d’ambiance et programmation pour chauffer au bon moment, au bon degré.</p></article>
+        <article class="svc reveal"><span class="mono">S.08</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 22L24 8l18 14"/><path d="M10 19v23h28V19"/><path class="acc" d="M18 42V30h12v12"/></svg>
+          <h3>Conseil en rénovation</h3><p>Choix de la solution la plus adaptée à votre maison avant tout changement d’équipement.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI -->
+  <section class="sec" id="pourquoi">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">02</span><span>Pourquoi nous</span></div>
+        <h2>Peu d’arguments. Des arguments vérifiables.</h2>
+      </div>
+      <div class="why">
+        <div class="why-item reveal"><span class="big">A —</span><h3>Trois qualifications</h3><p>QUALIPAC Chauffage, QUALIPAC CET et QUALIBAT Remplacement chaudière&nbsp;: des compétences reconnues sur chaque équipement posé.</p></div>
+        <div class="why-item reveal"><span class="big">B —</span><h3>Un seul interlocuteur</h3><p>Chaudière, pompe à chaleur ou eau chaude&nbsp;: vous n’avez pas à coordonner plusieurs entreprises.</p></div>
+        <div class="why-item reveal"><span class="big">C —</span><h3>Un artisan local</h3><p>Basé à Lille-Lomme, Renovatop connaît les maisons de la métropole, leurs caves, leurs conduits et leurs hivers humides.</p></div>
+        <div class="why-item reveal"><span class="big">D —</span><h3>Un devis clair</h3><p>Chaque projet est chiffré poste par poste, après visite, pour que vous sachiez exactement ce que vous payez.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉTAPES -->
+  <section class="sec" id="methode">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">03</span><span>Méthode</span></div>
+        <h2>Quatre étapes, dans l’ordre.</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="n">01</span><h3>Premier contact</h3><p>Vous appelez ou remplissez le formulaire. On échange sur votre logement et votre équipement actuel.</p></div>
+        <div class="step reveal"><span class="n">02</span><h3>Visite technique</h3><p>Relevé sur place&nbsp;: surface, isolation, emplacement, évacuation. Pas de chiffrage à l’aveugle.</p></div>
+        <div class="step reveal"><span class="n">03</span><h3>Devis détaillé</h3><p>Une proposition écrite, matériel et main-d’œuvre séparés, avec les pistes d’aides possibles selon votre situation.</p></div>
+        <div class="step reveal"><span class="n">04</span><h3>Pose &amp; mise en service</h3><p>Installation, réglages, explications d’usage. Le chantier est laissé propre.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="sec" id="apropos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">04</span><span>À propos</span></div>
+        <h2>Renovatop, chauffagiste à Lille-Lomme.</h2>
+      </div>
+      <div class="about">
+        <div class="about-plan reveal" aria-hidden="true">
+          <svg viewBox="0 0 200 260"><rect x="10" y="10" width="180" height="240"/><line x1="10" y1="130" x2="190" y2="130"/><line x1="100" y1="10" x2="100" y2="130"/><rect x="24" y="150" width="40" height="70" stroke="#00875a"/><circle cx="44" cy="175" r="6" stroke="#00875a"/><path d="M64 185 H140 V140" stroke-dasharray="4 4"/><rect x="130" y="40" width="40" height="14"/><rect x="30" y="40" width="40" height="14"/><text x="12" y="268" font-family="Geist Mono" font-size="9" fill="#5e5e5a" stroke="none">PLAN TYPE — RDC</text></svg>
+        </div>
+        <div class="about-text reveal">
+          <p>Renovatop est une SARL de chauffage installée à Lomme, au cœur de la métropole lilloise. Son métier&nbsp;: la chaudière gaz ou fioul, la pompe à chaleur et la climatisation, le chauffe-eau thermodynamique.</p>
+          <p class="small">L’entreprise est titulaire des qualifications QUALIPAC Chauffage, QUALIPAC CET et QUALIBAT Remplacement chaudière. Elle intervient à Lille, Lomme et dans les communes voisines, des maisons de ville en brique aux appartements, pour remplacer, moderniser ou entretenir votre installation.</p>
+        </div>
+        <aside class="about-card reveal">
+          <dl class="mono">
+            <dt>Raison sociale</dt><dd>SARL Renovatop</dd>
+            <dt>Siège</dt><dd>Lomme · 59160</dd>
+            <dt>Zone</dt><dd>Métropole lilloise</dd>
+            <dt>Téléphone</dt><dd><a href="tel:+33611607689">06 11 60 76 89</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉALISATIONS -->
+  <section class="sec" id="realisations">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">05</span><span>Réalisations types</span></div>
+        <h2>Le type de chantiers que nous menons.</h2>
+        <p class="lead">Illustrations schématiques de prestations courantes. Chaque projet fait l’objet d’un devis personnalisé.</p>
+      </div>
+      <div class="gallery">
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><rect class="wf" x="56" y="10" width="48" height="64" rx="3"/><rect x="64" y="20" width="32" height="12"/><circle class="acc" cx="72" cy="52" r="5"/><circle cx="88" cy="52" r="5"/><path d="M66 74v24M80 74v30M94 74v24"/><path class="acc" d="M20 104h120"/><path d="M80 10V2"/></svg></div>
+          <figcaption class="cap"><h3>Remplacement de chaudière gaz à condensation</h3><span class="mono">R.01</span></figcaption>
+        </figure>
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><path d="M14 56L60 22l46 34"/><rect class="wf" x="22" y="52" width="76" height="52"/><rect x="34" y="64" width="16" height="16"/><rect x="70" y="64" width="16" height="16"/><rect class="wf" x="108" y="74" width="40" height="30"/><circle class="acc" cx="122" cy="89" r="9"/><path d="M98 90h10" class="acc"/></svg></div>
+          <figcaption class="cap"><h3>Pompe à chaleur air/eau sur maison de ville</h3><span class="mono">R.02</span></figcaption>
+        </figure>
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><rect class="wf" x="62" y="8" width="36" height="14"/><path class="wf" d="M62 22h36v80a4 4 0 0 1-4 4H66a4 4 0 0 1-4-4z"/><path class="acc" d="M80 46c-7 9-7 15 0 20c7-5 7-11 0-20z"/><path d="M98 40h30M98 70h30" stroke-dasharray="4 3"/><path d="M20 106h120"/></svg></div>
+          <figcaption class="cap"><h3>Chauffe-eau thermodynamique en cellier</h3><span class="mono">R.03</span></figcaption>
+        </figure>
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><rect class="wf" x="20" y="34" width="120" height="30" rx="4"/><path d="M28 56h104"/><path class="acc" d="M48 74q4 8 0 16M80 74q4 8 0 16M112 74q4 8 0 16"/><circle class="accf" cx="128" cy="44" r="2.5"/></svg></div>
+          <figcaption class="cap"><h3>Climatisation réversible en chambre</h3><span class="mono">R.04</span></figcaption>
+        </figure>
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><rect class="wf" x="20" y="20" width="44" height="64" rx="2"/><path d="M30 30h24v16H30z"/><path d="M42 84v20"/><path d="M96 20h44v64H96z" class="wf"/><circle class="acc" cx="118" cy="52" r="12"/><path class="acc" d="M70 52h18M82 46l6 6-6 6"/></svg></div>
+          <figcaption class="cap"><h3>Passage du fioul à la pompe à chaleur</h3><span class="mono">R.05</span></figcaption>
+        </figure>
+        <figure class="real reveal" style="margin:0">
+          <div class="pic"><svg viewBox="0 0 160 120" aria-hidden="true"><rect class="wf" x="30" y="40" width="100" height="44"/><path d="M42 40v44M54 40v44M66 40v44M78 40v44M90 40v44M102 40v44M114 40v44"/><path d="M40 84v10M120 84v10"/><path class="acc" d="M30 30h100"/></svg></div>
+          <figcaption class="cap"><h3>Remplacement de radiateurs et équilibrage</h3><span class="mono">R.06</span></figcaption>
+        </figure>
+      </div>
+      <div class="price-note"><span class="mono">Tarifs</span><strong>Sur devis — après visite technique, gratuit et sans engagement.</strong></div>
+    </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="sec" id="avis">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">06</span><span>Avis</span></div>
+        <h2>Votre avis compte.</h2>
+      </div>
+      <div class="review reveal">
+        <div class="q" aria-hidden="true">“</div>
+        <div class="t"><h3>Les avis Google apparaîtront ici.</h3><p>Une fois le site en ligne, les avis laissés par les clients de Renovatop sur Google seront affichés dans cet espace. Vous avez fait appel à nous&nbsp;? Votre retour aide d’autres habitants de la métropole à choisir.</p></div>
+        <div class="a"><a class="btn btn-vide" href="https://www.google.com/search?q=Renovatop+Lomme+chauffagiste" target="_blank" rel="noopener">Laisser un avis <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">07</span><span>Questions</span></div>
+        <h2>Questions fréquentes.</h2>
+      </div>
+      <div class="faq reveal">
+        <details><summary><span class="mono">Q.01</span><span class="qq">L’entretien de la chaudière est-il obligatoire&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Oui, l’entretien annuel est obligatoire pour les chaudières gaz et fioul, et un entretien périodique est également prévu pour les pompes à chaleur selon leur puissance. Il est conseillé de le programmer avant l’hiver.</p></div></details>
+        <details><summary><span class="mono">Q.02</span><span class="qq">Le devis est-il gratuit&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Oui, le devis est gratuit et sans engagement. Il est établi après échange et, pour un remplacement ou une installation, après une visite technique sur place.</p></div></details>
+        <details><summary><span class="mono">Q.03</span><span class="qq">Quels sont les délais d’intervention&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Ils dépendent de la période et de la nature des travaux. Le plus simple est d’appeler&nbsp;: nous vous indiquerons une date réaliste dès le premier échange.</p></div></details>
+        <details><summary><span class="mono">Q.04</span><span class="qq">Puis-je bénéficier d’aides comme MaPrimeRénov’&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Certains travaux, comme l’installation d’une pompe à chaleur ou d’un chauffe-eau thermodynamique, peuvent ouvrir droit à des aides, selon votre situation et les critères en vigueur. Nous pouvons vous orienter lors de l’établissement du devis.</p></div></details>
+        <details><summary><span class="mono">Q.05</span><span class="qq">Dans quelles communes intervenez-vous&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Renovatop est basé à Lille-Lomme et intervient dans la métropole lilloise. Pour une adresse précise, un simple appel permet de confirmer.</p></div></details>
+        <details><summary><span class="mono">Q.06</span><span class="qq">Quelles marques installez-vous&nbsp;?</span><span class="pm"></span></summary><div class="ans"><p>Le choix du matériel se fait selon votre logement, votre budget et la disponibilité des pièces. Nous vous présentons les options adaptées dans le devis.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-idx mono"><span class="n">08</span><span>Contact</span></div>
+        <h2>Parlons de votre chauffage.</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="hours reveal">
+          <div class="mono" style="color:var(--gris-texte);margin-bottom:12px">Horaires</div>
+          <table id="hours">
+            <tr data-d="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-d="6"><td>Samedi</td><td>Fermé</td></tr>
+            <tr data-d="0"><td>Dimanche</td><td>Fermé</td></tr>
+          </table>
+          <p class="note mono">Horaires indicatifs, à confirmer</p>
+          <div class="zone">
+            <span class="mono" style="color:var(--gris-texte)">Zone d’intervention</span>
+            <svg viewBox="0 0 300 150" aria-hidden="true" fill="none" stroke="#111" stroke-width="1">
+              <g stroke="#e6e6e2"><path d="M0 30h300M0 60h300M0 90h300M0 120h300M50 0v150M100 0v150M150 0v150M200 0v150M250 0v150"/></g>
+              <circle cx="150" cy="75" r="62" stroke-dasharray="3 4" stroke="#8c8c88"/>
+              <circle cx="150" cy="75" r="34" stroke="#8c8c88"/>
+              <circle cx="132" cy="80" r="5" fill="#00875a" stroke="none"/>
+              <circle cx="160" cy="70" r="3" fill="#111" stroke="none"/>
+              <text x="88" y="84" font-family="Geist Mono" font-size="10" fill="#111" stroke="#fbfbfa" stroke-width="4" paint-order="stroke">LOMME</text>
+              <text x="166" y="66" font-family="Geist Mono" font-size="10" fill="#111" stroke="#fbfbfa" stroke-width="4" paint-order="stroke">LILLE</text>
+            </svg>
+            <h3>Lille-Lomme et métropole lilloise</h3>
+            <p style="margin:4px 0 16px;color:var(--gris-texte)">59160 Lomme</p>
+            <a class="btn btn-vide" href="https://www.google.com/maps/search/?api=1&amp;query=Renovatop+59160+Lomme" target="_blank" rel="noopener">Itinéraire <span class="arr">→</span></a>
+          </div>
+        </div>
+        <div class="form-wrap reveal">
+          <div class="coords">
+            <a href="tel:+33611607689"><span class="mono">Téléphone</span><strong>06 11 60 76 89</strong></a>
+            <a href="mailto:fck.coullare@gmail.com"><span class="mono">Email</span><strong>fck.coullare@gmail.com</strong></a>
+          </div>
+          <form id="form" novalidate>
+            <div class="field"><label class="mono" for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name"></div>
+            <div class="field"><label class="mono" for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+            <div class="field full"><label class="mono" for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+            <div class="field full"><label class="mono" for="f-msg">Votre projet</label><textarea id="f-msg" name="message" placeholder="Ex. : remplacer une chaudière fioul par une pompe à chaleur, maison de ville à Lomme…"></textarea></div>
+            <button class="btn btn-plein" type="submit">Envoyer la demande <span class="arr">→</span></button>
+            <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="big">Renovatop<span>.</span></p>
+    <div class="foot-grid">
+      <div><span class="mono">Contact</span><a href="tel:+33611607689">06 11 60 76 89</a><a href="mailto:fck.coullare@gmail.com">fck.coullare@gmail.com</a></div>
+      <div><span class="mono">Zone</span><p>Lille-Lomme (59160)</p><p>Métropole lilloise</p></div>
+      <div><span class="mono">Horaires</span><p>Lundi – vendredi : sur rendez-vous</p><p>Horaires indicatifs, à confirmer</p></div>
+      <div><span class="mono">Qualifications</span><p>QUALIPAC Chauffage</p><p>QUALIPAC CET</p><p>QUALIBAT Remplacement chaudière</p></div>
+    </div>
+  </div>
+  <div class="demo mono">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="fab" href="tel:+33611607689" aria-label="Appeler Renovatop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');});});
+  var d=new Date().getDay(),r=document.querySelector('#hours tr[data-d="'+d+'"]');if(r)r.classList.add('today');
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show');});
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('visible')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

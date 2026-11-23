@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon P’tit Dépanneur – Chauffagiste dépannage à Lille</title>
+<meta name="description" content="Mon P’tit Dépanneur, chauffagiste dépannage à Lille et dans la métropole lilloise : chaudière gaz ou fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique. Qualifié QUALIBAT Remplacement chaudière.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --eau:#d9f4ec;
+  --eau-2:#bfeadd;
+  --tomate:#ff5a4e;
+  --myrtille:#3b4cca;
+  --myrtille-2:#2e3cab;
+  --jaune:#ffd23f;
+  --creme:#fffaf2;
+  --encre:#1f2340;
+  --encre-doux:#4a4e6b;
+  --rose:#ffe1dc;
+  --lilas:#e3e6fb;
+  --f-titre:"Chewy", "Comic Sans MS", cursive;
+  --f-texte:"Readex Pro", system-ui, sans-serif;
+  --ombre:0 14px 34px -12px rgba(31,35,64,.22);
+  --ressort:cubic-bezier(.34,1.56,.64,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:var(--f-texte);font-size:17px;line-height:1.65;color:var(--encre);background:var(--creme);overflow-x:hidden}
+svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-titre);font-weight:400;line-height:1.05;margin:0;letter-spacing:.01em}
+p{margin:0 0 1em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ===== Boutons pilule ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-texte);font-weight:600;font-size:1.05rem;text-decoration:none;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .35s var(--ressort), box-shadow .3s, background .2s}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translateY(-4px) scale(1.04)}
+.btn:active{transform:scale(.96)}
+.btn-tomate{background:var(--tomate);color:var(--encre);box-shadow:0 8px 0 -2px #d9443a, 0 18px 30px -12px rgba(255,90,78,.6)}
+.btn-myrtille{background:var(--myrtille);color:#fff;box-shadow:0 8px 0 -2px var(--myrtille-2), 0 18px 30px -12px rgba(59,76,202,.55)}
+.btn-blanc{background:#fff;color:var(--encre);box-shadow:var(--ombre)}
+.btn-jaune{background:var(--jaune);color:var(--encre);box-shadow:0 8px 0 -2px #e0b31f}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px dashed var(--myrtille);outline-offset:4px}
+
+/* ===== Navigation ===== */
+.nav{position:fixed;top:12px;left:12px;right:12px;z-index:100}
+.nav-in{max-width:1180px;margin:0 auto;background:rgba(255,250,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -14px rgba(31,35,64,.35);display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 18px;position:relative}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:44px;height:44px}
+.logo span{font-family:var(--f-titre);font-size:1.6rem;line-height:1;color:var(--myrtille)}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px;align-items:center}
+.menu a{display:block;text-decoration:none;font-weight:500;font-size:.98rem;padding:9px 14px;border-radius:999px;transition:background .2s, transform .3s var(--ressort)}
+.menu a:hover{background:var(--eau);transform:translateY(-2px)}
+.menu .menu-tel a{background:var(--tomate);color:var(--encre);font-weight:600;padding:10px 18px}
+.menu .menu-tel a:hover{background:var(--jaune)}
+.burger{order:3;display:none;width:48px;height:48px;border-radius:50%;border:0;background:var(--myrtille);cursor:pointer;position:relative;transition:transform .35s var(--ressort)}
+.burger:hover{transform:rotate(-8deg) scale(1.06)}
+.burger span{position:absolute;left:14px;right:14px;height:3px;border-radius:3px;background:#fff;transition:transform .3s var(--ressort), opacity .2s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:30px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ===== Héros plein écran ===== */
+.hero{min-height:100vh;min-height:100svh;position:relative;overflow:hidden;background:var(--eau);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 0}
+.blob{position:absolute;z-index:0;pointer-events:none}
+.blob.b1{width:520px;top:-140px;left:-160px;animation:flotte 14s ease-in-out infinite}
+.blob.b2{width:420px;top:60px;right:-140px;animation:flotte 17s ease-in-out infinite reverse}
+.blob.b3{width:300px;bottom:120px;left:6%;animation:flotte 12s ease-in-out infinite}
+.blob.b4{width:220px;top:34%;right:12%;animation:flotte 15s ease-in-out infinite reverse}
+@keyframes flotte{50%{transform:translate(18px,-14px) rotate(8deg) scale(1.04)}}
+.hero > *:not(.blob){position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:7px 16px 7px 8px;font-weight:500;font-size:.95rem;box-shadow:var(--ombre)}
+.badge i{width:28px;height:28px;border-radius:50%;background:var(--jaune);display:grid;place-items:center;font-style:normal}
+.badge i svg{width:16px;height:16px}
+.hero h1{font-size:clamp(3.2rem,9vw,7.6rem);color:var(--myrtille);margin:22px 0 10px;line-height:.95;text-shadow:0 6px 0 rgba(255,255,255,.7)}
+.hero h1 .apos{color:var(--tomate);display:inline-block;transform:rotate(-8deg)}
+.hero h1 .saute{display:inline-block;animation:saute 3.2s var(--ressort) infinite}
+@keyframes saute{0%,80%,100%{transform:none}88%{transform:translateY(-12px) rotate(-3deg)}}
+.hero-acc{font-size:clamp(1.05rem,1.8vw,1.28rem);max-width:40em;margin:0 auto 26px;color:var(--encre-doux)}
+.hero-acc strong{color:var(--encre)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.scene{width:min(980px,100%);margin-top:44px}
+.scene svg{width:100%;height:auto;overflow:visible}
+.camion{animation:cahot .6s ease-in-out infinite alternate}
+@keyframes cahot{to{transform:translateY(-4px)}}
+.roue{animation:roule .9s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes roule{to{transform:rotate(360deg)}}
+.tirets{animation:route 1.2s linear infinite}
+@keyframes route{to{stroke-dashoffset:-80}}
+.vitesse{animation:vit 1s ease-in-out infinite}
+.vitesse.v2{animation-delay:-.33s}.vitesse.v3{animation-delay:-.66s}
+@keyframes vit{0%{opacity:0;transform:translateX(20px)}50%{opacity:1}100%{opacity:0;transform:translateX(-30px)}}
+.gyro{animation:gyro 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+@keyframes gyro{50%{transform:scale(1.12) rotate(-4deg)}}
+.cle{animation:balance 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}
+@keyframes balance{50%{transform:rotate(10deg)}}
+.cligne{animation:cligne 4s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes cligne{0%,92%,100%{transform:none}95%{transform:scaleY(.1)}}
+
+/* ===== Vagues ===== */
+.vague{display:block;width:100%;height:60px}
+
+/* ===== Confiance ===== */
+.confiance{background:var(--creme);padding:46px 0 10px}
+.pilules{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.pilule{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:10px 20px 10px 10px;box-shadow:var(--ombre);font-weight:500;transition:transform .35s var(--ressort)}
+.pilule:hover{transform:translateY(-4px) rotate(-1.5deg)}
+.pilule i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none}
+.pilule i svg{width:22px;height:22px}
+.pilule.star{background:var(--myrtille);color:#fff}
+.pilule.star i{background:var(--jaune)}
+
+/* ===== Sections ===== */
+.sec{padding:100px 0;position:relative}
+.titre{text-align:center;max-width:720px;margin:0 auto 56px}
+.titre .perso{width:84px;height:84px;margin:0 auto 6px}
+.titre h2{font-size:clamp(2.4rem,5vw,3.8rem);color:var(--myrtille)}
+.titre h2 em{font-style:normal;color:var(--tomate);position:relative;white-space:nowrap}
+.titre h2 em::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:10px;background:var(--jaune);border-radius:10px;z-index:-1;opacity:.85}
+.titre p{color:var(--encre-doux);font-size:1.1rem;margin:14px 0 0}
+.bg-eau{background:var(--eau)}
+.bg-lilas{background:var(--lilas)}
+.bg-rose{background:var(--rose)}
+
+/* ===== Services ===== */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.srv{background:#fff;border-radius:32px;padding:32px 28px 30px;box-shadow:var(--ombre);transition:transform .45s var(--ressort), box-shadow .3s;position:relative;overflow:hidden}
+.srv::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-60px;bottom:-70px;background:var(--c, var(--eau));opacity:.55;transition:transform .5s var(--ressort)}
+.srv:hover{transform:translateY(-8px) rotate(-.8deg)}
+.srv:hover::after{transform:scale(1.35)}
+.ico{width:86px;height:86px;margin-bottom:18px;position:relative;z-index:1;transition:transform .5s var(--ressort)}
+.srv:hover .ico{transform:rotate(-8deg) scale(1.1)}
+.srv h3{font-size:1.75rem;color:var(--encre);margin-bottom:8px;position:relative;z-index:1}
+.srv p{margin:0;color:var(--encre-doux);font-size:.98rem;position:relative;z-index:1}
+.srv .lab{display:inline-block;margin-top:12px;background:var(--myrtille);color:#fff;border-radius:999px;font-size:.8rem;font-weight:600;padding:3px 12px;position:relative;z-index:1}
+
+/* ===== Atouts ===== */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.atout{text-align:center;padding:10px 8px}
+.atout .bulle{width:120px;height:120px;margin:0 auto 18px;display:grid;place-items:center;transition:transform .5s var(--ressort)}
+.atout:hover .bulle{transform:translateY(-8px) scale(1.06)}
+.atout .bulle svg{width:120px;height:120px}
+.atout h3{font-size:1.6rem;color:var(--myrtille);margin-bottom:8px}
+.atout p{color:var(--encre-doux);margin:0;font-size:.98rem}
+
+/* ===== Étapes ===== */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.etapes::before{content:"";position:absolute;top:44px;left:12%;right:12%;border-top:5px dashed rgba(59,76,202,.35);z-index:0}
+.etape{text-align:center;position:relative;z-index:1}
+.etape .n{width:88px;height:88px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-titre);font-size:2.8rem;color:var(--encre);box-shadow:0 8px 0 -2px rgba(31,35,64,.15);transition:transform .45s var(--ressort)}
+.etape:hover .n{transform:translateY(-6px) rotate(-6deg)}
+.etape:nth-child(1) .n{background:var(--jaune)}
+.etape:nth-child(2) .n{background:var(--tomate)}
+.etape:nth-child(3) .n{background:#fff}
+.etape:nth-child(4) .n{background:var(--eau-2)}
+.etape h3{font-size:1.55rem;margin-bottom:6px}
+.etape p{margin:0;color:var(--encre-doux);font-size:.98rem}
+
+/* ===== À propos ===== */
+.apropos{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.apropos-art{position:relative}
+.apropos-art svg{width:100%;height:auto}
+.apropos h2{font-size:clamp(2.4rem,4.6vw,3.6rem);color:var(--myrtille);margin-bottom:18px}
+.apropos p{font-size:1.08rem;color:var(--encre-doux)}
+.apropos p strong{color:var(--encre)}
+.carte-id{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.carte-id a,.carte-id span{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:500;box-shadow:0 6px 16px -10px rgba(31,35,64,.4);overflow-wrap:anywhere;transition:transform .3s var(--ressort)}
+.carte-id a:hover{transform:translateY(-3px)}
+.carte-id svg{width:18px;height:18px;color:var(--myrtille);flex:none}
+
+/* ===== Galerie ===== */
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.vignette{margin:0;background:#fff;border-radius:30px;overflow:hidden;box-shadow:var(--ombre);transition:transform .45s var(--ressort)}
+.vignette:nth-child(even){transform:rotate(1deg)}
+.vignette:nth-child(odd){transform:rotate(-1deg)}
+.vignette:hover{transform:translateY(-8px) rotate(0)}
+.vignette svg{width:100%;height:auto}
+.vignette figcaption{padding:16px 22px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.vignette figcaption b{font-weight:600;font-size:1rem;line-height:1.3}
+.vignette .prix{flex:none;background:var(--jaune);border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:600;white-space:nowrap}
+.note-g{text-align:center;color:var(--encre-doux);font-size:.92rem;margin-top:34px}
+
+/* ===== Avis ===== */
+.avis{background:var(--myrtille);color:#fff;border-radius:44px;padding:50px 46px;display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;position:relative;overflow:hidden}
+.avis::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08);right:-80px;top:-120px}
+.avis svg.p{width:110px;height:110px}
+.avis h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:6px}
+.avis p{margin:0;color:#e4e7ff}
+
+/* ===== FAQ ===== */
+.faq{max-width:840px;margin:0 auto;display:grid;gap:14px}
+.faq details{background:#fff;border-radius:28px;box-shadow:0 8px 22px -14px rgba(31,35,64,.35);transition:box-shadow .3s}
+.faq details[open]{box-shadow:var(--ombre)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:1.06rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .plus{width:38px;height:38px;border-radius:50%;background:var(--eau);flex:none;position:relative;transition:transform .45s var(--ressort), background .2s}
+.faq summary .plus::before,.faq summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:3px;border-radius:3px;background:var(--myrtille);transform:translate(-50%,-50%)}
+.faq summary .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] .plus{transform:rotate(135deg);background:var(--jaune)}
+.faq summary:hover .plus{transform:scale(1.12)}
+.faq details[open] summary:hover .plus{transform:rotate(135deg) scale(1.12)}
+.faq .rep{padding:0 24px 22px;color:var(--encre-doux)}
+.faq .rep p{margin:0}
+
+/* ===== Contact ===== */
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;align-items:start}
+.boite{background:#fff;border-radius:34px;padding:34px;box-shadow:var(--ombre)}
+.boite h3{font-size:2rem;color:var(--myrtille);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.boite h3 svg{width:40px;height:40px;flex:none}
+.jours{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.jours li{display:flex;justify-content:space-between;gap:12px;padding:9px 16px;border-radius:999px;background:var(--creme);font-size:.98rem}
+.jours li b{font-weight:600}
+.jours li span{color:var(--encre-doux)}
+.jours li.auj{background:var(--jaune);transform:scale(1.03);box-shadow:0 6px 14px -8px rgba(31,35,64,.5)}
+.jours li.auj span{color:var(--encre)}
+.jours li.auj b::after{content:" · aujourd’hui";font-weight:400;font-size:.85rem}
+.petit{font-size:.88rem;color:var(--encre-doux);margin:12px 0 0;text-align:center}
+.zone{margin-top:24px;padding:22px;border-radius:26px;background:var(--eau)}
+.zone p{margin:0 0 10px}
+.zone ul{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:6px}
+.zone a{font-weight:600;overflow-wrap:anywhere}
+form{display:grid;gap:16px}
+.ch{display:grid;gap:6px}
+.ch label{font-weight:600;font-size:.95rem;padding-left:14px}
+.ch input,.ch textarea{font:inherit;font-size:1rem;border:2px solid transparent;background:var(--creme);border-radius:999px;padding:14px 20px;width:100%;transition:border-color .2s, background .2s, transform .3s var(--ressort)}
+.ch textarea{border-radius:26px;min-height:130px;resize:vertical}
+.ch input:focus,.ch textarea:focus{outline:none;border-color:var(--myrtille);background:#fff;transform:scale(1.01)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ok{display:none;background:var(--eau);border-radius:22px;padding:14px 18px;font-weight:500;align-items:center;gap:12px}
+.ok.on{display:flex;animation:pop .5s var(--ressort)}
+.ok svg{width:36px;height:36px;flex:none}
+@keyframes pop{from{transform:scale(.8);opacity:0}}
+
+/* ===== Footer ===== */
+footer{background:var(--encre);color:#d8daea;position:relative}
+footer .vague{position:absolute;top:-59px;left:0}
+.foot{display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr;gap:34px;padding:70px 0 40px}
+.foot h4{font-family:var(--f-titre);font-weight:400;font-size:1.5rem;color:var(--jaune);margin:0 0 12px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.foot a:hover{color:var(--jaune)}
+.foot-logo{font-family:var(--f-titre);font-size:2.2rem;color:#fff;line-height:1;margin-bottom:10px}
+.foot-bas{border-top:1px solid rgba(255,255,255,.14);padding:18px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.9rem}
+.demo{background:var(--jaune);color:var(--encre);text-align:center;font-size:.85rem;padding:9px 16px;font-weight:500}
+
+.appel{display:none;position:fixed;right:16px;bottom:18px;z-index:90;width:64px;height:64px;border-radius:50%;background:var(--tomate);color:var(--encre);align-items:center;justify-content:center;box-shadow:0 10px 24px -6px rgba(255,90,78,.7);animation:rebond 2.6s var(--ressort) infinite}
+.appel svg{width:28px;height:28px}
+@keyframes rebond{0%,70%,100%{transform:none}80%{transform:translateY(-10px) rotate(-10deg)}90%{transform:translateY(0) rotate(6deg)}}
+
+/* ===== Révélation ===== */
+.rv{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .6s ease, transform .7s var(--ressort)}
+.rv.visible{opacity:1;transform:none}
+.vignette.rv.visible:nth-child(even){transform:rotate(1deg)}
+.vignette.rv.visible:nth-child(odd){transform:rotate(-1deg)}
+.vignette.rv.visible:hover{transform:translateY(-8px) rotate(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:1060px){
+  .menu a{padding:9px 10px;font-size:.92rem}
+  .atouts{grid-template-columns:repeat(2,1fr);gap:36px 22px}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;align-items:stretch;background:var(--creme);border-radius:30px;padding:14px;box-shadow:0 20px 40px -16px rgba(31,35,64,.45);gap:4px;opacity:0;visibility:hidden;transform:translateY(-10px) scale(.96);transition:opacity .25s, transform .35s var(--ressort), visibility .25s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu a{font-size:1.12rem;padding:13px 18px;text-align:center}
+  .menu .menu-tel a{margin-top:6px}
+  .services,.galerie{grid-template-columns:1fr 1fr}
+  .etapes{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .etapes::before{display:none}
+  .apropos,.contact{grid-template-columns:1fr}
+  .apropos-art{max-width:440px;margin:0 auto}
+  .avis{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (max-width:768px){
+  .appel{display:flex}
+  .demo{padding-bottom:96px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .sec{padding:72px 0}
+  .hero{padding:110px 16px 0}
+  .hero h1{font-size:clamp(2.9rem,14.5vw,4.2rem)}
+  .badge{font-size:.8rem;padding:6px 12px 6px 6px}
+  .hero-btns{flex-direction:column;width:100%;max-width:340px}
+  .hero-btns .btn{width:100%}
+  .blob.b1{width:340px}.blob.b2{width:280px}.blob.b4{display:none}
+  .scene{width:150%;margin-left:-25%;margin-right:-25%;max-width:none}
+  .services,.galerie,.atouts,.etapes{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .boite{padding:26px 18px}
+  .avis{padding:38px 22px;border-radius:34px}
+  .foot{grid-template-columns:1fr}
+  .logo span{font-size:1.35rem}
+  .titre{margin-bottom:40px}
+  .faq summary{padding:18px 18px;font-size:1rem}
+  .faq .rep{padding:0 18px 20px}
+  .vignette:nth-child(n),.vignette.rv.visible:nth-child(n){transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Sprite : petits personnages-outils -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="p-cle" viewBox="0 0 100 100">
+    <g transform="rotate(-30 50 50)" stroke="#1f2340" stroke-width="4" stroke-linejoin="round">
+      <rect x="40" y="40" width="20" height="54" rx="10" fill="#ffd23f"/>
+      <path d="M36 8a24 24 0 1 0 28 0v18H36z" fill="#ffd23f"/>
+    </g>
+    <circle cx="44" cy="52" r="3.4" fill="#1f2340"/><circle cx="56" cy="54" r="3.4" fill="#1f2340"/>
+    <path d="M43 61q7 6 13 1" stroke="#1f2340" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <circle cx="39" cy="59" r="3" fill="#ff5a4e" opacity=".6"/><circle cx="61" cy="62" r="3" fill="#ff5a4e" opacity=".6"/>
+  </symbol>
+  <symbol id="p-flamme" viewBox="0 0 100 100">
+    <path d="M50 8c10 18 30 28 30 52a30 30 0 0 1-60 0c0-14 8-22 14-30 2 10 6 14 12 14-4-14 0-26 4-36z" fill="#ff5a4e" stroke="#1f2340" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M50 46c6 8 14 12 14 22a14 14 0 0 1-28 0c0-8 6-12 8-16 2 4 4 4 6 2z" fill="#ffd23f"/>
+    <circle cx="42" cy="66" r="3.4" fill="#1f2340"/><circle cx="58" cy="66" r="3.4" fill="#1f2340"/>
+    <path d="M44 75q6 6 12 0" stroke="#1f2340" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-goutte" viewBox="0 0 100 100">
+    <path d="M50 8C40 28 22 44 22 62a28 28 0 0 0 56 0C78 44 60 28 50 8z" fill="#3b4cca" stroke="#1f2340" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M34 56q2-10 10-16" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".6"/>
+    <circle cx="42" cy="64" r="3.6" fill="#fff"/><circle cx="58" cy="64" r="3.6" fill="#fff"/>
+    <path d="M43 74q7 7 14 0" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-flocon" viewBox="0 0 100 100">
+    <circle cx="50" cy="52" r="34" fill="#d9f4ec" stroke="#1f2340" stroke-width="4"/>
+    <g stroke="#3b4cca" stroke-width="4" stroke-linecap="round"><path d="M50 22v14M50 68v14M22 52h14M64 52h14M30 32l10 10M60 62l10 10M70 32 60 42M40 62 30 72"/></g>
+    <circle cx="43" cy="50" r="3.4" fill="#1f2340"/><circle cx="57" cy="50" r="3.4" fill="#1f2340"/>
+    <path d="M44 58q6 5 12 0" stroke="#1f2340" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#accueil" aria-label="Mon P’tit Dépanneur, retour en haut">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#ffd23f"/><rect x="7" y="17" width="24" height="13" rx="4" fill="#ff5a4e"/><path d="M31 20h4l3 5v5h-7z" fill="#3b4cca"/><circle cx="14" cy="31" r="4" fill="#1f2340"/><circle cx="31" cy="31" r="4" fill="#1f2340"/><circle cx="14" cy="31" r="1.5" fill="#fff"/><circle cx="31" cy="31" r="1.5" fill="#fff"/></svg>
+      <span>Mon P’tit Dépanneur</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#etapes">Comment ça marche</a></li>
+        <li><a href="#apropos">Qui sommes-nous</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="menu-tel"><a href="tel:+33328534868">03 28 53 48 68</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== HÉROS ===== -->
+<section class="hero" id="accueil">
+  <svg class="blob b1" viewBox="0 0 200 200" aria-hidden="true"><path fill="#ffe1dc" d="M45-60C58-48 66-31 70-12 73 7 70 28 58 43 46 58 23 68 1 67-21 66-42 55-56 39-70 23-77 2-73-17-69-37-54-55-36-66-18-77 3-81 21-77 32-74 39-68 45-60Z" transform="translate(100 100)"/></svg>
+  <svg class="blob b2" viewBox="0 0 200 200" aria-hidden="true"><path fill="#e3e6fb" d="M38-52C50-43 60-30 66-14 72 2 74 21 65 34 56 47 36 55 16 61-4 67-24 70-40 62-56 54-68 35-72 15-76-5-72-26-60-40-48-54-28-61-9-64 10-67 26-61 38-52Z" transform="translate(100 100)"/></svg>
+  <svg class="blob b3" viewBox="0 0 200 200" aria-hidden="true"><path fill="#fff3c4" d="M41-57C54-47 64-33 68-17 72-1 70 17 60 31 50 45 32 55 12 61-8 67-30 69-45 59-60 49-68 27-69 6-70-15-64-36-50-47-36-58-18-59 0-59 18-60 28-67 41-57Z" transform="translate(100 100)"/></svg>
+  <svg class="blob b4" viewBox="0 0 200 200" aria-hidden="true"><path fill="#ffffff" opacity=".7" d="M44-58C57-49 66-34 69-18 72-2 69 15 60 29 51 43 36 54 18 61 0 68-21 71-37 63-53 55-64 36-68 17-72-2-69-21-59-36-49-51-32-62-14-66 4-70 31-67 44-58Z" transform="translate(100 100)"/></svg>
+
+  <span class="badge rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-7 1 2 2 3 3 3-1-3 0-5 0-7z"/></svg></i>Chauffagiste dépannage · Lille et métropole</span>
+  <h1 class="rv d1">Mon P<span class="apos">’</span>tit <span class="saute">Dépanneur</span></h1>
+  <p class="hero-acc rv d2">La chaudière qui boude un matin de grisaille lilloise, la douche qui reste tiède, la pompe à chaleur qui fait des siennes&nbsp;? <strong>Un coup de fil, et le p’tit camion prend la route</strong> vers votre maison, de Lille à toute la métropole.</p>
+  <div class="hero-btns rv d3">
+    <a class="btn btn-tomate" href="tel:+33328534868"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+    <a class="btn btn-myrtille" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>Demander un devis</a>
+  </div>
+
+  <div class="scene" aria-hidden="true">
+    <svg viewBox="0 0 1000 330">
+      <!-- route ondulée -->
+      <path d="M-700 250 Q -575 225 -450 250 T -200 250 T 50 250 T 300 250 T 550 250 T 800 250 T 1050 250 T 1300 250 T 1550 250 T 1800 250 V 500 H -700 Z" fill="#3b4cca"/>
+      <path d="M-700 250 Q -575 225 -450 250 T -200 250 T 50 250 T 300 250 T 550 250 T 800 250 T 1050 250 T 1300 250 T 1550 250 T 1800 250" fill="none" stroke="#2e3cab" stroke-width="10"/>
+      <path class="tirets" d="M-700 292 Q -575 270 -450 292 T -200 292 T 50 292 T 300 292 T 550 292 T 800 292 T 1050 292 T 1300 292 T 1550 292 T 1800 292" fill="none" stroke="#ffd23f" stroke-width="8" stroke-linecap="round" stroke-dasharray="40 40"/>
+      <!-- petits buissons -->
+      <g fill="#7fd3b8"><circle cx="90" cy="238" r="22"/><circle cx="118" cy="232" r="28"/><circle cx="146" cy="240" r="20"/><circle cx="860" cy="238" r="20"/><circle cx="886" cy="230" r="28"/><circle cx="914" cy="238" r="22"/></g>
+      <!-- lignes de vitesse -->
+      <g stroke="#1f2340" stroke-width="7" stroke-linecap="round" opacity=".55">
+        <path class="vitesse" d="M230 150h-70"/><path class="vitesse v2" d="M220 180h-90"/><path class="vitesse v3" d="M236 210h-60"/>
+      </g>
+      <!-- camionnette -->
+      <g class="camion">
+        <!-- ombre -->
+        <ellipse cx="500" cy="262" rx="230" ry="12" fill="#1f2340" opacity=".18"/>
+        <!-- clé + flamme sur le toit -->
+        <rect x="380" y="58" width="190" height="16" rx="8" fill="#1f2340"/>
+        <g class="cle"><g transform="rotate(-20 432 60)" stroke="#1f2340" stroke-width="6" stroke-linejoin="round"><rect x="422" y="10" width="20" height="52" rx="10" fill="#ffd23f"/><path d="M418 -18a26 26 0 1 0 28 0v16h-28z" fill="#ffd23f"/></g></g>
+        <g class="gyro">
+          <path d="M520 60c-26 0-36-18-32-34 3-12 12-18 14-30 12 8 16 18 14 28 6-4 8-10 8-16 10 8 16 20 14 30-2 14-8 22-18 22z" fill="#ff5a4e" stroke="#1f2340" stroke-width="6" stroke-linejoin="round"/>
+          <path d="M520 58c-10 0-14-8-12-14 2-6 6-8 6-14 6 4 8 8 8 12 4-2 6-4 6-8 4 6 6 10 4 16-2 6-6 8-12 8z" fill="#ffd23f"/>
+        </g>
+        <!-- carrosserie -->
+        <path d="M290 110 Q290 72 332 72 H600 Q632 72 646 100 L700 160 Q730 166 730 196 V222 Q730 244 708 244 H306 Q290 244 290 226 Z" fill="#ff5a4e" stroke="#1f2340" stroke-width="8" stroke-linejoin="round"/>
+        <!-- bande -->
+        <path d="M294 186 H726 V206 H294 Z" fill="#fffaf2"/>
+        <path d="M294 186 H726 M294 206 H726" stroke="#1f2340" stroke-width="5"/>
+        <!-- vitre cabine -->
+        <path d="M600 98 Q612 98 620 108 L664 158 H600 Z" fill="#d9f4ec" stroke="#1f2340" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M612 112l14 16" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+        <!-- portière -->
+        <path d="M584 98 V240" stroke="#1f2340" stroke-width="5"/>
+        <rect x="596" y="168" width="22" height="8" rx="4" fill="#1f2340"/>
+        <!-- texte flanc -->
+        <text x="440" y="130" text-anchor="middle" font-family="Chewy, cursive" font-size="40" fill="#fffaf2" stroke="#1f2340" stroke-width="2" paint-order="stroke">Mon P’tit</text>
+        <text x="440" y="170" text-anchor="middle" font-family="Chewy, cursive" font-size="40" fill="#ffd23f" stroke="#1f2340" stroke-width="2" paint-order="stroke">Dépanneur</text>
+        <!-- tel flanc -->
+        <text x="440" y="202" text-anchor="middle" font-family="Readex Pro, sans-serif" font-weight="700" font-size="15" fill="#1f2340">03 28 53 48 68</text>
+        <!-- phare-œil + sourire -->
+        <g class="cligne"><circle cx="704" cy="176" r="10" fill="#1f2340"/><circle cx="707" cy="172" r="3.4" fill="#fff"/></g>
+        <path d="M686 222 q18 14 34 0" stroke="#1f2340" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="682" cy="204" r="7" fill="#ffd23f" opacity=".9"/>
+        <!-- pare-choc -->
+        <rect x="700" y="232" width="40" height="14" rx="7" fill="#1f2340"/>
+        <rect x="280" y="232" width="30" height="14" rx="7" fill="#1f2340"/>
+        <!-- roues -->
+        <g>
+          <circle cx="370" cy="244" r="40" fill="#1f2340"/>
+          <g class="roue"><circle cx="370" cy="244" r="22" fill="#fffaf2"/><path d="M370 224v40M350 244h40" stroke="#3b4cca" stroke-width="7" stroke-linecap="round"/><circle cx="370" cy="244" r="7" fill="#ffd23f"/></g>
+        </g>
+        <g>
+          <circle cx="640" cy="244" r="40" fill="#1f2340"/>
+          <g class="roue"><circle cx="640" cy="244" r="22" fill="#fffaf2"/><path d="M640 224v40M620 244h40" stroke="#3b4cca" stroke-width="7" stroke-linecap="round"/><circle cx="640" cy="244" r="7" fill="#ffd23f"/></g>
+        </g>
+      </g>
+      <!-- petits nuages de pot -->
+      <g fill="#fff" opacity=".9"><circle cx="268" cy="228" r="12"/><circle cx="248" cy="222" r="8"/><circle cx="232" cy="230" r="6"/></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== CONFIANCE ===== -->
+<section class="confiance" aria-label="Ce qu’il faut savoir">
+  <div class="wrap pilules">
+    <span class="pilule star rv"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i>QUALIBAT Remplacement chaudière</span>
+    <span class="pilule rv d1"><i style="background:var(--rose)"><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.4"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>Lille et métropole lilloise</span>
+    <span class="pilule rv d2"><i style="background:var(--eau)"><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.4" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M6 8h12"/><path d="M12 18c-2-1-2-3-1-4 0 1 1 1 1 1 1 1 2 2 0 3z"/></svg></i>Chaudière gaz ou fioul</span>
+    <span class="pilule rv d3"><i style="background:var(--lilas)"><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.4"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="9" cy="12" r="4"/><path d="M16 9h3M16 12h3M16 15h3"/></svg></i>Pompe à chaleur &amp; clim</span>
+    <span class="pilule rv"><i style="background:#fff3c4"><svg viewBox="0 0 24 24" fill="none" stroke="#1f2340" stroke-width="2.4"><rect x="7" y="2" width="10" height="20" rx="4"/><path d="M10 11h4M10 15h4"/></svg></i>Chauffe-eau thermodynamique</span>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-cle"/></svg>
+      <h2>Ce qu’on <em>répare</em> &amp; installe</h2>
+      <p>Chauffage, eau chaude, fraîcheur&nbsp;: la boîte à outils du p’tit camion est bien remplie.</p>
+    </div>
+    <div class="services">
+      <article class="srv rv" style="--c:var(--rose)">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M43 4c22 0 39 14 39 38S66 82 42 82 4 66 4 43 21 4 43 4z" fill="#ffe1dc"/><rect x="26" y="16" width="34" height="50" rx="8" fill="#fff" stroke="#1f2340" stroke-width="3.5"/><rect x="32" y="24" width="22" height="9" rx="3" fill="#3b4cca"/><path d="M43 58c-6-3-5-9-2-12 0 3 2 4 3 2 3 3 5 7-1 10z" fill="#ff5a4e" stroke="#1f2340" stroke-width="2.5" stroke-linejoin="round"/><path d="M34 66v6M52 66v6" stroke="#1f2340" stroke-width="3.5" stroke-linecap="round"/></svg>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Dépannage, remplacement et mise en service de votre chaudière, gaz ou fioul, avec des réglages aux petits oignons.</p>
+        <span class="lab">QUALIBAT Remplacement chaudière</span>
+      </article>
+      <article class="srv rv d1" style="--c:var(--lilas)">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M40 4c24-2 42 16 42 40S62 84 40 82 4 64 4 42 18 6 40 4z" fill="#e3e6fb"/><rect x="12" y="22" width="62" height="42" rx="9" fill="#fff" stroke="#1f2340" stroke-width="3.5"/><circle cx="34" cy="43" r="13" fill="#d9f4ec" stroke="#1f2340" stroke-width="3.5"/><path d="M34 32v22M23 43h22" stroke="#3b4cca" stroke-width="3.5" stroke-linecap="round"/><path d="M54 34h12M54 42h12M54 50h12" stroke="#1f2340" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Pompe à chaleur</h3>
+        <p>Installation, dépannage et suivi de pompes à chaleur air/eau, pour un chauffage plus doux pour la planète.</p>
+      </article>
+      <article class="srv rv d2" style="--c:var(--eau)">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M46 4c20 2 36 18 36 40S64 84 42 82 4 66 6 42 26 2 46 4z" fill="#d9f4ec"/><rect x="10" y="20" width="66" height="24" rx="10" fill="#fff" stroke="#1f2340" stroke-width="3.5"/><path d="M18 36h50" stroke="#1f2340" stroke-width="3"/><circle cx="66" cy="28" r="2.6" fill="#ff5a4e"/><path d="M26 52c-3 6 3 10 0 16M43 52c-3 6 3 10 0 16M60 52c-3 6 3 10 0 16" stroke="#3b4cca" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <h3>Climatisation</h3>
+        <p>Climatisation réversible posée et entretenue&nbsp;: de la fraîcheur quand l’été lillois s’emballe.</p>
+      </article>
+      <article class="srv rv" style="--c:#fff3c4">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M44 4c22 0 38 18 38 40S66 82 42 82 4 64 4 42 22 4 44 4z" fill="#fff3c4"/><rect x="28" y="10" width="30" height="64" rx="13" fill="#fff" stroke="#1f2340" stroke-width="3.5"/><path d="M28 26h30" stroke="#1f2340" stroke-width="3"/><path d="M43 36c-5 7-5 12 0 14 5-2 5-7 0-14z" fill="#3b4cca"/><path d="M36 60h14" stroke="#1f2340" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>De l’eau chaude qui puise les calories de l’air&nbsp;: installation et maintenance en cellier, garage ou buanderie.</p>
+      </article>
+      <article class="srv rv d1" style="--c:var(--rose)">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M42 4c24 0 40 16 40 40S62 84 40 82 4 64 4 42 18 4 42 4z" fill="#ffe1dc"/><use href="#p-cle" x="8" y="8" width="70" height="70"/></svg>
+        <h3>Dépannage chauffage</h3>
+        <p>Plus de chauffage, plus d’eau chaude, une pression qui chute&nbsp;: diagnostic et remise en route de l’installation.</p>
+      </article>
+      <article class="srv rv d2" style="--c:var(--lilas)">
+        <svg class="ico" viewBox="0 0 86 86" aria-hidden="true"><path d="M44 4c22 2 38 18 38 40S64 84 42 82 4 64 4 42 22 2 44 4z" fill="#e3e6fb"/><rect x="18" y="14" width="44" height="58" rx="8" fill="#fff" stroke="#1f2340" stroke-width="3.5"/><path d="M28 30h24M28 40h24M28 50h14" stroke="#1f2340" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="60" r="14" fill="#ffd23f" stroke="#1f2340" stroke-width="3.5"/><path d="M54 60l4 4 8-8" stroke="#1f2340" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Entretien annuel</h3>
+        <p>La visite annuelle obligatoire de votre chaudière, avec attestation d’entretien remise à la fin de l’intervention.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POURQUOI ===== -->
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30C120 0 240 0 360 24S600 60 720 36 960 0 1080 18 1320 54 1440 30V60Z" fill="#d9f4ec"/></svg>
+<section class="sec bg-eau" id="pourquoi" style="padding-top:60px">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-flamme"/></svg>
+      <h2>Pourquoi le <em>p’tit</em> dépanneur&nbsp;?</h2>
+      <p>Pas de promesses en l’air, juste de bonnes raisons de nous appeler.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><div class="bulle"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6c30 0 54 22 54 54s-26 54-56 54S6 90 6 60 30 6 60 6z" fill="#fff"/><path d="M60 26l24 10v18c0 16-10 28-24 34-14-6-24-18-24-34V36z" fill="#3b4cca" stroke="#1f2340" stroke-width="4" stroke-linejoin="round"/><path d="M50 58l8 8 14-16" stroke="#ffd23f" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Qualifié QUALIBAT</h3><p>Qualification « Remplacement chaudière »&nbsp;: un repère sérieux pour changer votre chaudière.</p></div>
+      <div class="atout rv d1"><div class="bulle"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6c30 0 54 22 54 54s-26 54-56 54S6 90 6 60 30 6 60 6z" fill="#fff"/><use href="#p-flamme" x="20" y="16" width="80" height="80"/></svg></div><h3>Toutes énergies</h3><p>Gaz, fioul, pompe à chaleur, clim, chauffe-eau&nbsp;: un seul numéro pour tout votre confort.</p></div>
+      <div class="atout rv d2"><div class="bulle"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6c30 0 54 22 54 54s-26 54-56 54S6 90 6 60 30 6 60 6z" fill="#fff"/><path d="M60 24c-14 0-24 10-24 24 0 18 24 42 24 42s24-24 24-42c0-14-10-24-24-24z" fill="#ff5a4e" stroke="#1f2340" stroke-width="4"/><circle cx="60" cy="48" r="9" fill="#fffaf2" stroke="#1f2340" stroke-width="4"/></svg></div><h3>Du coin</h3><p>Basé à Lille, on connaît les maisons de ville en briques et les hivers humides du Nord.</p></div>
+      <div class="atout rv d3"><div class="bulle"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6c30 0 54 22 54 54s-26 54-56 54S6 90 6 60 30 6 60 6z" fill="#fff"/><rect x="34" y="26" width="52" height="66" rx="8" fill="#ffd23f" stroke="#1f2340" stroke-width="4"/><path d="M44 44h32M44 56h32M44 68h20" stroke="#1f2340" stroke-width="4" stroke-linecap="round"/></svg></div><h3>Devis clair</h3><p>On explique avant d’intervenir&nbsp;: ce qui doit être fait, avec quel matériel, et pourquoi.</p></div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0V30C120 60 240 60 360 36S600 0 720 24 960 60 1080 42 1320 6 1440 30V0Z" fill="#d9f4ec"/></svg>
+
+<!-- ===== ÉTAPES ===== -->
+<section class="sec" id="etapes">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-goutte"/></svg>
+      <h2>Comment ça <em>marche</em>&nbsp;?</h2>
+      <p>Quatre étapes, zéro prise de tête.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><div class="n">1</div><h3>Vous appelez</h3><p>Au 03 28 53 48 68 ou via le formulaire&nbsp;: vous décrivez la panne ou le projet.</p></div>
+      <div class="etape rv d1"><div class="n">2</div><h3>On passe voir</h3><p>Le p’tit camion vient chez vous pour comprendre l’installation et poser le diagnostic.</p></div>
+      <div class="etape rv d2"><div class="n">3</div><h3>Le devis</h3><p>Vous recevez un devis clair, sans jargon, avant tout remplacement ou installation.</p></div>
+      <div class="etape rv d3"><div class="n">4</div><h3>Au chaud&nbsp;!</h3><p>Intervention, essais et conseils d’utilisation&nbsp;: votre maison retrouve son confort.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section class="sec bg-lilas" id="apropos">
+  <div class="wrap apropos">
+    <div class="apropos-art rv">
+      <svg viewBox="0 0 440 400" aria-hidden="true">
+        <path d="M220 20c110 0 200 70 200 180s-90 190-210 190S20 310 20 200 110 20 220 20z" fill="#fff"/>
+        <!-- maison de ville en briques -->
+        <path d="M110 330V170l70-60 70 60v160z" fill="#ff5a4e" stroke="#1f2340" stroke-width="6" stroke-linejoin="round"/>
+        <g stroke="#1f2340" stroke-width="2" opacity=".25"><path d="M114 190h132M114 210h132M114 230h132M114 250h132M114 270h132M114 290h132M114 310h132"/></g>
+        <rect x="134" y="190" width="34" height="40" rx="6" fill="#d9f4ec" stroke="#1f2340" stroke-width="5"/>
+        <rect x="192" y="190" width="34" height="40" rx="6" fill="#d9f4ec" stroke="#1f2340" stroke-width="5"/>
+        <path d="M162 330v-58a18 18 0 0 1 36 0v58" fill="#3b4cca" stroke="#1f2340" stroke-width="5"/>
+        <rect x="206" y="100" width="20" height="40" fill="#1f2340"/>
+        <g fill="#fff" stroke="#1f2340" stroke-width="3"><circle cx="222" cy="82" r="10"/><circle cx="238" cy="66" r="13"/><circle cx="258" cy="48" r="16"/></g>
+        <!-- personnages -->
+        <use href="#p-flamme" x="262" y="200" width="110" height="110"/>
+        <use href="#p-goutte" x="40" y="236" width="80" height="80"/>
+        <use href="#p-flocon" x="300" y="100" width="80" height="80"/>
+        <path d="M70 330h300" stroke="#1f2340" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <h2 class="rv">Un chauffagiste qui vient <span style="color:var(--tomate)">en renfort</span></h2>
+      <p class="rv"><strong>Mon P’tit Dépanneur</strong> est un chauffagiste spécialisé dans le dépannage, installé à Lille et en intervention dans toute la métropole lilloise.</p>
+      <p class="rv">Chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques&nbsp;: tout ce qui chauffe, rafraîchit ou fait l’eau chaude de la maison passe par ses mains.</p>
+      <p class="rv">L’entreprise est qualifiée <strong>QUALIBAT Remplacement chaudière</strong>, un gage de sérieux quand vient le moment de changer de chaudière dans une maison de ville ou un appartement lillois.</p>
+      <div class="carte-id rv">
+        <a href="tel:+33328534868"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>03 28 53 48 68</a>
+        <a href="mailto:monptitdepanneur@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>monptitdepanneur@gmail.com</a>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lille et métropole lilloise</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RÉALISATIONS ===== -->
+<section class="sec" id="realisations">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-flocon"/></svg>
+      <h2>Le carnet de <em>tournée</em></h2>
+      <p>Quelques interventions types du p’tit camion. Chaque maison est unique&nbsp;: tarifs sur devis.</p>
+    </div>
+    <div class="galerie">
+      <figure class="vignette rv">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#ffe1dc"/><circle cx="300" cy="50" r="70" fill="#fff" opacity=".6"/><rect x="130" y="30" width="100" height="140" rx="18" fill="#fff" stroke="#1f2340" stroke-width="5"/><rect x="148" y="48" width="64" height="24" rx="8" fill="#3b4cca"/><text x="180" y="66" text-anchor="middle" font-family="Readex Pro,sans-serif" font-weight="700" font-size="15" fill="#fff">60°</text><use href="#p-flamme" x="150" y="84" width="60" height="60"/><path d="M150 170v30M170 170v30M190 170v30M210 170v30" stroke="#1f2340" stroke-width="7" stroke-linecap="round"/><path d="M40 200c40-20 80-20 120-6" stroke="#ff5a4e" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M320 200c-40-20-80-20-120-6" stroke="#3b4cca" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+        <figcaption><b>Remplacement de chaudière gaz à condensation</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <figure class="vignette rv d1">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#d9f4ec"/><path d="M0 190q90-30 180 0t180 0v40H0z" fill="#7fd3b8"/><path d="M60 190V100l60-46 60 46v90z" fill="#ff5a4e" stroke="#1f2340" stroke-width="5" stroke-linejoin="round"/><rect x="100" y="120" width="40" height="70" rx="20" fill="#3b4cca" stroke="#1f2340" stroke-width="5"/><rect x="200" y="122" width="120" height="70" rx="14" fill="#fff" stroke="#1f2340" stroke-width="5"/><circle cx="242" cy="157" r="24" fill="#e3e6fb" stroke="#1f2340" stroke-width="4"/><path d="M242 137v40M222 157h40" stroke="#3b4cca" stroke-width="5" stroke-linecap="round"/><path d="M282 140h24M282 152h24M282 164h24M282 176h24" stroke="#1f2340" stroke-width="3.5" stroke-linecap="round"/><path d="M180 160h20" stroke="#1f2340" stroke-width="5"/></svg>
+        <figcaption><b>Pompe à chaleur air/eau en maison de ville</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <figure class="vignette rv d2">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#e3e6fb"/><rect x="0" y="190" width="360" height="40" fill="#ffd23f" opacity=".7"/><rect x="70" y="40" width="220" height="62" rx="22" fill="#fff" stroke="#1f2340" stroke-width="5"/><path d="M90 86h180" stroke="#1f2340" stroke-width="4" stroke-linecap="round"/><circle cx="266" cy="60" r="5" fill="#7fd3b8"/><path d="M120 116c-6 12 6 20 0 34M180 116c-6 12 6 20 0 34M240 116c-6 12 6 20 0 34" stroke="#3b4cca" stroke-width="5" fill="none" stroke-linecap="round"/><use href="#p-flocon" x="20" y="120" width="70" height="70"/></svg>
+        <figcaption><b>Climatisation réversible dans une chambre sous les toits</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <figure class="vignette rv">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#fff3c4"/><rect x="0" y="196" width="360" height="34" fill="#f2dd8a"/><rect x="146" y="18" width="68" height="178" rx="30" fill="#fff" stroke="#1f2340" stroke-width="5"/><path d="M146 58h68" stroke="#1f2340" stroke-width="4"/><path d="M164 38h32" stroke="#3b4cca" stroke-width="5" stroke-linecap="round"/><use href="#p-goutte" x="148" y="80" width="64" height="64"/><path d="M164 168h32" stroke="#1f2340" stroke-width="4" stroke-linecap="round"/><path d="M70 60q-20 20 0 40t0 40" stroke="#7fd3b8" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M290 60q20 20 0 40t0 40" stroke="#ff5a4e" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+        <figcaption><b>Chauffe-eau thermodynamique en buanderie</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <figure class="vignette rv d1">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#ffe1dc"/><rect x="60" y="60" width="110" height="140" rx="16" fill="#fff" stroke="#1f2340" stroke-width="5"/><circle cx="115" cy="120" r="30" fill="#d9f4ec" stroke="#1f2340" stroke-width="5"/><path d="M115 120l16-14" stroke="#ff5a4e" stroke-width="5" stroke-linecap="round"/><circle cx="115" cy="120" r="5" fill="#1f2340"/><use href="#p-cle" x="200" y="50" width="120" height="120"/><text x="270" y="200" text-anchor="middle" font-family="Chewy,cursive" font-size="26" fill="#1f2340">Panne ?</text></svg>
+        <figcaption><b>Dépannage chaudière fioul en plein hiver</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <figure class="vignette rv d2">
+        <svg viewBox="0 0 360 230" aria-hidden="true"><rect width="360" height="230" fill="#d9f4ec"/><rect x="90" y="30" width="180" height="170" rx="20" fill="#fff" stroke="#1f2340" stroke-width="5"/><rect x="118" y="14" width="124" height="34" rx="12" fill="#3b4cca" stroke="#1f2340" stroke-width="5"/><g stroke="#1f2340" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M120 80l10 10 18-18"/><path d="M120 120l10 10 18-18"/><path d="M120 160l10 10 18-18"/></g><path d="M166 84h76M166 124h76M166 164h56" stroke="#1f2340" stroke-width="5" stroke-linecap="round" opacity=".35"/><circle cx="290" cy="180" r="30" fill="#ffd23f" stroke="#1f2340" stroke-width="5"/><text x="290" y="190" text-anchor="middle" font-family="Chewy,cursive" font-size="28" fill="#1f2340">OK</text></svg>
+        <figcaption><b>Entretien annuel de chaudière gaz</b><span class="prix">Sur devis</span></figcaption>
+      </figure>
+    </div>
+    <p class="note-g rv">Illustrations de situations types, à titre indicatif.</p>
+  </div>
+</section>
+
+<!-- ===== AVIS ===== -->
+<section class="sec" id="avis" style="padding-top:20px">
+  <div class="wrap">
+    <div class="avis rv">
+      <svg class="p" viewBox="0 0 110 110" aria-hidden="true"><path d="M14 20h82a10 10 0 0 1 10 10v40a10 10 0 0 1-10 10H50L28 98V80H14A10 10 0 0 1 4 70V30a10 10 0 0 1 10-10z" fill="#ffd23f" stroke="#1f2340" stroke-width="5" stroke-linejoin="round"/><circle cx="40" cy="48" r="5" fill="#1f2340"/><circle cx="70" cy="48" r="5" fill="#1f2340"/><path d="M40 62q15 12 30 0" stroke="#1f2340" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <h2>Votre avis compte</h2>
+        <p>Les avis clients Google apparaîtront ici une fois le site en ligne. Le p’tit camion est passé chez vous&nbsp;? Racontez-le, ça aide vos voisins de la métropole.</p>
+      </div>
+      <a class="btn btn-jaune" href="https://www.google.com/search?q=Mon+P%27tit+D%C3%A9panneur+Lille" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V34C160 4 320 4 480 28S800 60 960 34 1280 0 1440 26V60Z" fill="#ffe1dc"/></svg>
+<section class="sec bg-rose" id="faq" style="padding-top:60px">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-goutte"/></svg>
+      <h2>Les questions <em>qu’on nous pose</em></h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>L’entretien annuel de la chaudière est-il obligatoire&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>Oui. Les chaudières gaz et fioul doivent être entretenues chaque année par un professionnel, qui vous remet une attestation. C’est une question de sécurité, de consommation et souvent d’assurance.</p></div></details>
+      <details><summary>Intervenez-vous vite en cas de panne&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>Le délai dépend de la période et du planning&nbsp;: les premiers froids sont souvent chargés. Appelez directement, on vous dira honnêtement quand le p’tit camion peut passer.</p></div></details>
+      <details><summary>Le devis est-il gratuit&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>Les conditions du devis (déplacement, diagnostic) vous sont précisées au téléphone, avant tout rendez-vous. Aucune intervention ne démarre sans votre accord sur un devis écrit.</p></div></details>
+      <details><summary>Puis-je avoir MaPrimeRénov’ pour une pompe à chaleur&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>Selon votre situation et les critères en vigueur, certains équipements peuvent ouvrir droit à des aides comme MaPrimeRénov’. Les règles changent régulièrement&nbsp;: vérifiez votre éligibilité auprès de France Rénov’ avant de vous lancer.</p></div></details>
+      <details><summary>Dans quelles villes intervenez-vous&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>À Lille et dans la métropole lilloise. En cas de doute sur votre commune, un coup de fil suffit pour vérifier.</p></div></details>
+      <details><summary>Quelles marques de chaudières dépannez-vous&nbsp;?<span class="plus" aria-hidden="true"></span></summary><div class="rep"><p>Les marques courantes de chaudières, pompes à chaleur et chauffe-eau peuvent être prises en charge. Indiquez la marque et le modèle lors de votre appel&nbsp;: cela aide à préparer l’intervention.</p></div></details>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0V26C160 56 320 56 480 32S800 0 960 26 1280 60 1440 34V0Z" fill="#ffe1dc"/></svg>
+
+<!-- ===== CONTACT ===== -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="titre rv">
+      <svg class="perso" aria-hidden="true"><use href="#p-flamme"/></svg>
+      <h2>On se <em>parle</em>&nbsp;?</h2>
+      <p>Une panne, un projet, une question&nbsp;: écrivez-nous ou appelez directement.</p>
+    </div>
+    <div class="contact">
+      <div class="boite rv">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#ffd23f" stroke="#1f2340" stroke-width="3"/><path d="M20 10v10l7 4" stroke="#1f2340" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>Horaires</h3>
+        <ul class="jours" id="jours">
+          <li data-j="1"><b>Lundi</b><span>Sur rendez-vous</span></li>
+          <li data-j="2"><b>Mardi</b><span>Sur rendez-vous</span></li>
+          <li data-j="3"><b>Mercredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="4"><b>Jeudi</b><span>Sur rendez-vous</span></li>
+          <li data-j="5"><b>Vendredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="6"><b>Samedi</b><span>À confirmer</span></li>
+          <li data-j="0"><b>Dimanche</b><span>À confirmer</span></li>
+        </ul>
+        <p class="petit">Horaires indicatifs, à confirmer.</p>
+        <div class="zone">
+          <p><strong>Zone d’intervention&nbsp;:</strong> Lille et métropole lilloise</p>
+          <ul>
+            <li>Tél.&nbsp;: <a href="tel:+33328534868">03 28 53 48 68</a></li>
+            <li>Email&nbsp;: <a href="mailto:monptitdepanneur@gmail.com">monptitdepanneur@gmail.com</a></li>
+          </ul>
+          <a class="btn btn-myrtille" href="https://www.google.com/maps/search/?api=1&amp;query=Mon+P%27tit+D%C3%A9panneur+Lille" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+        </div>
+      </div>
+      <div class="boite rv d1">
+        <h3><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#d9f4ec" stroke="#1f2340" stroke-width="3"/><path d="M12 28h5l12-12-5-5-12 12z" fill="#ff5a4e" stroke="#1f2340" stroke-width="2.6" stroke-linejoin="round"/></svg>Demander un devis</h3>
+        <form id="form" novalidate>
+          <div class="duo">
+            <div class="ch"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name"></div>
+            <div class="ch"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="ch"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="ch"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Ex. : ma chaudière gaz se met en sécurité depuis ce matin, maison à Lille-Fives…"></textarea></div>
+          <button class="btn btn-tomate" type="submit" style="justify-self:start">Envoyer ma demande</button>
+          <p class="ok" id="ok" role="status"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#p-goutte"/></svg>Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30C120 0 240 0 360 24S600 60 720 36 960 0 1080 18 1320 54 1440 30V60Z" fill="#1f2340"/></svg>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="foot-logo">Mon P’tit Dépanneur</div>
+        <p>Chauffagiste dépannage à Lille&nbsp;: chaudière gaz ou fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+33328534868">03 28 53 48 68</a></li><li><a href="mailto:monptitdepanneur@gmail.com">monptitdepanneur@gmail.com</a></li></ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>Lundi – vendredi&nbsp;: sur rendez-vous</li><li><em>Horaires indicatifs, à confirmer</em></li></ul>
+      </div>
+      <div>
+        <h4>Zone &amp; label</h4>
+        <ul><li>Lille et métropole lilloise</li><li>QUALIBAT Remplacement chaudière</li></ul>
+      </div>
+    </div>
+    <div class="foot-bas"><span>© <span id="annee">2026</span> Mon P’tit Dépanneur</span><a href="#accueil" style="color:#fff">Retour en haut ↑</a></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel" href="tel:+33328534868" aria-label="Appeler le 03 28 53 48 68"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function fermer(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');}
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav'))fermer();});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else { els.forEach(function(e){e.classList.add('visible');}); }
+
+  var li=document.querySelector('#jours li[data-j="'+new Date().getDay()+'"]');
+  if(li)li.classList.add('auj');
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').classList.add('on');});
+  document.getElementById('annee').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

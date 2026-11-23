@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Chauffe And Co – Chauffagiste à Lambersart</title>
+<meta name="description" content="Happy Chauffe And Co, chauffagiste à Lambersart et dans la métropole lilloise : remplacement et dépannage de chaudières gaz ou fioul, radiateurs et chaudières électriques.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Fugaz+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cerise:#d7263d;
+  --cerise-fonce:#b31b30;
+  --creme:#fbefd9;
+  --creme-2:#f4e0bd;
+  --canard:#1b6f7a;
+  --canard-fonce:#14555e;
+  --moutarde:#eab543;
+  --choco:#3a2418;
+  --choco-doux:#5a3e2e;
+  --blanc:#fffaf0;
+  --display:'Fugaz One', 'Arial Black', sans-serif;
+  --texte:'Asap', system-ui, sans-serif;
+  --ombre-pleine:6px 6px 0 var(--choco);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:var(--texte);font-size:1.06rem;line-height:1.6;color:var(--choco);background:var(--creme);overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.13;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .14 0 0 0 0 .09 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+svg{display:block;max-width:100%}
+a{color:var(--canard-fonce)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0 0 .5em;color:var(--choco)}
+h2{font-size:clamp(2.1rem,5vw,3.6rem);letter-spacing:.01em}
+h2{text-wrap:balance}
+h2 .rouge{color:var(--cerise)}
+h3{font-size:1.4rem}
+p{margin:0 0 1em}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--choco);color:var(--creme);padding:.6em 1em;z-index:400}
+.skip:focus{left:10px;top:10px}
+:focus-visible{outline:3px dashed var(--cerise);outline-offset:4px}
+.trame{background-image:radial-gradient(rgba(58,36,24,.16) 1.4px,transparent 1.7px);background-size:11px 11px}
+.etiquette{display:inline-block;font-family:var(--display);font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;background:var(--choco);color:var(--moutarde);padding:.35em .9em .3em;border-radius:4px;transform:rotate(-2deg);margin-bottom:1rem}
+.titre-centre{text-align:center;max-width:780px;margin:0 auto 50px}
+.titre-centre p{font-size:1.12rem;color:var(--choco-doux)}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--display);font-size:1.15rem;letter-spacing:.02em;text-decoration:none;border:3px solid var(--choco);border-radius:999px;padding:.7em 1.5em .65em;cursor:pointer;box-shadow:5px 5px 0 var(--choco);transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--choco)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--choco)}
+.btn-rouge{background:var(--cerise);color:#fff}
+.btn-moutarde{background:var(--moutarde);color:var(--choco)}
+.btn-creme{background:var(--blanc);color:var(--choco)}
+.btn-canard{background:var(--canard);color:#fff}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:100;background:var(--creme);border-bottom:4px solid var(--choco);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 6px 0 rgba(58,36,24,.12)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--choco)}
+.logo svg{width:52px;height:52px;flex:none;transition:transform .6s}
+.logo:hover svg{transform:rotate(-14deg)}
+.logo b{font-family:var(--display);font-weight:400;font-size:1.3rem;line-height:.95;display:block;color:var(--cerise)}
+.logo i{font-style:normal;font-family:var(--display);font-size:.95rem;color:var(--canard)}
+.menu{display:flex;align-items:center;gap:1.4rem;list-style:none;margin:0;padding:0}
+.menu a:not(.btn){font-weight:800;text-decoration:none;color:var(--choco);text-transform:uppercase;font-size:.88rem;letter-spacing:.08em;padding:.3em 0;background:linear-gradient(var(--moutarde),var(--moutarde)) 0 100%/0 6px no-repeat;transition:background-size .3s}
+.menu a:not(.btn):hover{background-size:100% 6px}
+.menu .btn{font-size:1rem;padding:.5em 1.1em .45em;box-shadow:4px 4px 0 var(--choco)}
+.burger{display:none;width:52px;height:52px;border-radius:50%;border:3px solid var(--choco);background:var(--moutarde);cursor:pointer;position:relative;box-shadow:3px 3px 0 var(--choco)}
+.burger span{position:absolute;left:12px;right:12px;height:3px;background:var(--choco);border-radius:3px;transition:transform .3s,opacity .2s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:22.5px}.burger span:nth-child(3){top:30px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:110px 0 70px;overflow:hidden;background:var(--creme);border-bottom:4px solid var(--choco)}
+.soleil{position:absolute;left:50%;top:44%;width:2200px;height:2200px;margin:-1100px 0 0 -1100px;border-radius:50%;
+  background:repeating-conic-gradient(from 0deg,var(--moutarde) 0deg 7.5deg,var(--creme) 7.5deg 15deg);opacity:.55;animation:rayons 90s linear infinite}
+.soleil-coeur{position:absolute;left:50%;top:44%;width:min(620px,90vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,var(--moutarde) 0 58%,#f0c766 58% 64%,transparent 64%)}
+.hero .trame-coin{position:absolute;inset:0;background-image:radial-gradient(rgba(215,38,61,.35) 1.6px,transparent 2px);background-size:12px 12px;-webkit-mask-image:linear-gradient(160deg,#000 0,transparent 35%,transparent 70%,#000 100%);mask-image:linear-gradient(160deg,#000 0,transparent 35%,transparent 70%,#000 100%)}
+@keyframes rayons{to{transform:rotate(360deg)}}
+.hero-in{position:relative;text-align:center}
+.titre-geant{position:relative;display:inline-block;margin:0 auto;padding-right:.15em}
+.happy{display:block;font-family:var(--display);font-weight:400;font-size:clamp(5.2rem,24vw,17rem);line-height:.9;letter-spacing:.01em;color:var(--cerise);
+  text-shadow:.03em .03em 0 var(--creme),.055em .055em 0 var(--moutarde),.08em .08em 0 var(--canard),.105em .105em 0 var(--choco);
+  -webkit-text-stroke:.012em var(--choco);transform:rotate(-4deg);margin:0}
+.sous-titre{display:block;font-family:var(--display);font-size:clamp(1.6rem,4.6vw,3.3rem);color:var(--canard);transform:rotate(-4deg);margin-top:.15em;text-shadow:3px 3px 0 var(--creme),5px 5px 0 var(--choco)}
+.mascotte{position:absolute;width:clamp(120px,18vw,250px);right:-17%;bottom:-22%;filter:drop-shadow(6px 6px 0 var(--choco));animation:dandine 3.6s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes dandine{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(5deg) translateY(-8px)}}
+.vapeur{animation:vapeur 2.6s ease-in-out infinite}
+.vapeur:nth-of-type(2){animation-delay:.8s}
+.vapeur:nth-of-type(3){animation-delay:1.6s}
+@keyframes vapeur{0%{opacity:0;transform:translateY(10px)}50%{opacity:1}100%{opacity:0;transform:translateY(-14px)}}
+.yeux{animation:cligne 5s infinite;transform-box:fill-box;transform-origin:center}
+@keyframes cligne{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.accroche{position:relative;max-width:640px;margin:52px auto 26px;font-size:clamp(1.1rem,1.8vw,1.3rem);font-weight:500;background:var(--blanc);border:3px solid var(--choco);border-radius:18px;padding:18px 24px;box-shadow:var(--ombre-pleine)}
+.accroche strong{color:var(--cerise-fonce)}
+.hero-ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:18px}
+.badge-rond{position:absolute;width:132px;height:132px;display:grid;place-items:center;text-align:center;border-radius:50%;background:var(--canard);color:#fff;border:3px solid var(--choco);box-shadow:5px 5px 0 var(--choco);font-family:var(--display);font-size:1rem;line-height:1.05;padding:14px}
+.badge-rond::before{content:"";position:absolute;inset:6px;border-radius:50%;border:2px dashed rgba(251,239,217,.7)}
+.badge-rond small{display:block;font-family:var(--texte);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moutarde);margin-bottom:4px}
+.b1{left:4%;top:150px;transform:rotate(-12deg)}
+.b2{right:4%;bottom:150px;transform:rotate(10deg);background:var(--cerise)}
+
+/* ---------- Bandeau confiance ---------- */
+.bandeau{background:var(--canard);color:var(--creme);border-bottom:4px solid var(--choco);overflow:hidden;padding:18px 0}
+.defile{display:flex;gap:0;width:max-content;animation:defile 38s linear infinite}
+.defile ul{display:flex;align-items:center;list-style:none;margin:0;padding:0}
+.defile li{display:flex;align-items:center;gap:16px;font-family:var(--display);font-size:1.25rem;white-space:nowrap;padding-right:16px}
+.defile li::after{content:"";width:22px;height:22px;flex:none;margin-left:16px;background:var(--moutarde);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ---------- Services ---------- */
+.services{padding:100px 0 90px}
+.menu-services{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px}
+.carte{background:var(--blanc);border:3px solid var(--choco);border-radius:20px;padding:28px 26px 26px;box-shadow:8px 8px 0 var(--choco);position:relative;transition:transform .25s,box-shadow .25s}
+.carte:nth-child(odd){transform:rotate(-1deg)}
+.carte:nth-child(even){transform:rotate(1deg)}
+.carte:hover{transform:translate(-4px,-6px) rotate(0);box-shadow:14px 14px 0 var(--choco)}
+.carte .medaille{width:86px;height:86px;border-radius:50%;border:3px solid var(--choco);display:grid;place-items:center;margin:-62px 0 14px;background:var(--moutarde);box-shadow:4px 4px 0 var(--choco)}
+.carte:nth-child(3n+2) .medaille{background:var(--canard)}
+.carte:nth-child(3n) .medaille{background:var(--cerise)}
+.carte .medaille svg{width:50px;height:50px}
+.carte h3{color:var(--cerise-fonce)}
+.carte:nth-child(3n+2) h3{color:var(--canard-fonce)}
+.carte p{margin:0;color:var(--choco-doux)}
+.carte .ruban{position:absolute;top:16px;right:-10px;background:var(--choco);color:var(--moutarde);font-family:var(--display);font-size:.8rem;padding:.25em .8em;border-radius:3px 0 0 3px}
+.carte .ruban::after{content:"";position:absolute;right:0;bottom:-8px;border-left:10px solid #1e120b;border-bottom:8px solid transparent}
+
+/* ---------- Pourquoi ---------- */
+.pourquoi{background:var(--cerise);color:#fff;border-block:4px solid var(--choco);padding:90px 0;position:relative;overflow:hidden}
+.pourquoi::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(58,36,24,.28) 1.6px,transparent 2px);background-size:13px 13px;-webkit-mask-image:radial-gradient(circle at 90% 10%,#000,transparent 50%);mask-image:radial-gradient(circle at 90% 10%,#000,transparent 50%)}
+.pourquoi h2{color:var(--creme);text-shadow:4px 4px 0 var(--choco)}
+.pourquoi .titre-centre p{color:#fff}
+.sceaux{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.sceau{text-align:center}
+.sceau .disque{width:170px;height:170px;margin:0 auto 18px;position:relative;display:grid;place-items:center;transition:transform .5s}
+.sceau:hover .disque{transform:rotate(-12deg) scale(1.05)}
+.sceau .disque > svg{position:absolute;inset:0;width:100%;height:100%}
+.sceau .disque .pict{position:relative;width:64px;height:64px}
+.sceau h3{color:var(--creme);font-size:1.35rem;margin-bottom:.35em}
+.sceau p{color:#fff;font-size:1rem;margin:0;max-width:260px;margin-inline:auto}
+
+/* ---------- Étapes ---------- */
+.etapes{padding:100px 0 90px}
+.tickets{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ticket{position:relative;background:var(--moutarde);border:3px solid var(--choco);border-radius:14px;padding:26px 22px 24px;box-shadow:var(--ombre-pleine);transition:transform .25s,box-shadow .25s;
+  -webkit-mask:radial-gradient(circle 12px at 0 50%,transparent 11px,#000 12px) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 50%,transparent 11px,#000 12px) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 12px at 0 50%,transparent 11px,#000 12px) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 50%,transparent 11px,#000 12px) right/51% 100% no-repeat}
+.ticket:nth-child(2){background:#f6d58d}
+.ticket:nth-child(3){background:var(--moutarde)}
+.ticket:nth-child(4){background:#f6d58d}
+.ticket:hover{transform:translateY(-6px) rotate(-1deg)}
+.ticket .no{font-family:var(--display);font-size:4.2rem;line-height:.9;color:var(--cerise);text-shadow:3px 3px 0 var(--choco);display:block;margin-bottom:8px}
+.ticket .pointilles{border-top:3px dashed var(--choco);margin:12px 0 14px;opacity:.6}
+.ticket h3{font-size:1.3rem;margin-bottom:.2em}
+.ticket p{margin:0;font-size:1rem}
+
+/* ---------- À propos ---------- */
+.apropos{background:var(--canard);color:#fff;border-block:4px solid var(--choco);padding:90px 0;position:relative;overflow:hidden}
+.apropos .rayons-fond{position:absolute;right:-400px;top:50%;width:1000px;height:1000px;margin-top:-500px;border-radius:50%;background:repeating-conic-gradient(rgba(234,181,67,.16) 0 6deg,transparent 6deg 12deg)}
+.ap-grid{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.apropos h2{color:var(--creme);text-shadow:4px 4px 0 var(--choco)}
+.apropos h2 span{color:var(--moutarde)}
+.apropos p{font-size:1.1rem;color:#fff}
+.apropos strong{color:var(--moutarde)}
+.ap-mascotte{position:relative;max-width:340px;margin:0 auto}
+.bulle{position:relative;background:var(--blanc);color:var(--choco);border:3px solid var(--choco);border-radius:24px;padding:16px 20px;font-family:var(--display);font-size:1.25rem;line-height:1.15;box-shadow:5px 5px 0 var(--choco);margin-bottom:26px;text-align:center}
+.bulle::after{content:"";position:absolute;left:46%;bottom:-20px;width:26px;height:22px;background:var(--blanc);border-right:3px solid var(--choco);border-bottom:3px solid var(--choco);transform:skewX(30deg) rotate(20deg)}
+.ap-mascotte svg{width:220px;margin:0 auto;filter:drop-shadow(6px 6px 0 var(--choco))}
+
+/* ---------- Réalisations ---------- */
+.realisations{padding:100px 0 90px}
+.cartes-postales{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.postale{margin:0;background:var(--blanc);padding:14px 14px 18px;border:3px solid var(--choco);box-shadow:var(--ombre-pleine);transition:transform .3s,box-shadow .3s;position:relative}
+.postale:nth-child(3n+1){transform:rotate(-1.5deg)}
+.postale:nth-child(3n+2){transform:rotate(1deg)}
+.postale:nth-child(3n){transform:rotate(-.6deg)}
+.postale:hover{transform:rotate(0) translateY(-6px);box-shadow:12px 12px 0 var(--choco);z-index:2}
+.postale .cadre{border:2px dashed var(--choco-doux);overflow:hidden}
+.postale svg{width:100%;height:auto;aspect-ratio:4/3}
+.postale figcaption{padding:14px 4px 0;font-weight:700;font-size:1.02rem;line-height:1.35}
+.postale figcaption span{display:block;font-family:var(--display);font-weight:400;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cerise-fonce);margin-bottom:4px}
+.timbre{position:absolute;top:-14px;right:-14px;width:62px;height:62px;border-radius:50%;background:var(--cerise);border:3px solid var(--choco);color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:.72rem;line-height:1;text-align:center;transform:rotate(14deg)}
+.prix{margin:56px auto 0;max-width:820px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;text-align:center}
+.prix .etoile{width:150px;height:150px;flex:none;display:grid;place-items:center;position:relative}
+.prix .etoile svg{position:absolute;inset:0;width:100%;height:100%;animation:rayons 30s linear infinite}
+.prix .etoile b{position:relative;font-family:var(--display);font-weight:400;font-size:1.25rem;line-height:1;color:var(--choco);transform:rotate(-8deg)}
+.prix p{margin:0;max-width:420px;text-align:left;font-size:1.05rem}
+
+/* ---------- Avis ---------- */
+.avis{padding:0 0 100px}
+.avis-box{position:relative;background:var(--moutarde);border:4px solid var(--choco);border-radius:30px;box-shadow:10px 10px 0 var(--choco);padding:46px clamp(22px,5vw,60px);display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.avis-box .gros-coeur{width:130px}
+.avis-box h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:.25em}
+.avis-box p{margin:0 0 18px;font-size:1.08rem}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--creme-2);border-block:4px solid var(--choco);padding:90px 0}
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;align-items:start}
+.q{background:var(--blanc);border:3px solid var(--choco);border-radius:16px;box-shadow:4px 4px 0 var(--choco);overflow:hidden;transition:box-shadow .2s,transform .2s}
+.q:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--choco)}
+.q button{all:unset;box-sizing:border-box;width:100%;display:flex;gap:14px;align-items:center;justify-content:space-between;padding:18px 20px;cursor:pointer;font-weight:800;font-size:1.06rem;color:var(--choco)}
+.q button:focus-visible{outline:3px dashed var(--cerise);outline-offset:-6px}
+.q .signe{flex:none;position:relative;width:36px;height:36px;border-radius:50%;background:var(--cerise);border:2px solid var(--choco);transition:transform .35s,background .3s}
+.q .signe::before,.q .signe::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:3px;margin:-1.5px 0 0 -7px;background:#fff;border-radius:2px}
+.q .signe::after{transform:rotate(90deg)}
+.q.open .signe{transform:rotate(45deg);background:var(--canard)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.q.open .rep{grid-template-rows:1fr}
+.q .rep > div{overflow:hidden}
+.q .rep p{margin:0;padding:0 20px 20px;color:var(--choco-doux)}
+
+/* ---------- Contact ---------- */
+.contact{padding:100px 0}
+.ct-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+.panneau{background:var(--blanc);border:3px solid var(--choco);border-radius:22px;box-shadow:8px 8px 0 var(--choco);padding:30px}
+.panneau h3{color:var(--cerise-fonce);font-size:1.7rem}
+.horaires{width:100%;border-collapse:separate;border-spacing:0 6px;margin:6px 0}
+.horaires td{padding:9px 14px;background:var(--creme);font-weight:500}
+.horaires td:first-child{border-radius:10px 0 0 10px;font-weight:800}
+.horaires td:last-child{border-radius:0 10px 10px 0;text-align:right}
+.horaires tr.today td{background:var(--moutarde);color:var(--choco)}
+.horaires tr.today td:first-child::before{content:"★ ";color:var(--cerise-fonce)}
+.mention{font-size:.9rem;font-style:italic;color:var(--choco-doux);margin:4px 0 20px}
+.coord{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+.coord li{display:flex;gap:12px;align-items:flex-start}
+.coord .pastille{flex:none;width:38px;height:38px;border-radius:50%;background:var(--canard);border:2px solid var(--choco);display:grid;place-items:center;color:#fff}
+.coord svg{width:20px;height:20px}
+.coord a{font-weight:800;color:var(--choco);word-break:break-word}
+.coupon{position:relative;background:var(--blanc);border:3px dashed var(--choco);border-radius:22px;padding:34px 30px 30px;box-shadow:8px 8px 0 var(--cerise)}
+.coupon .ciseaux{position:absolute;top:-18px;left:30px;width:34px;height:34px;background:var(--creme);padding:4px;color:var(--choco)}
+.coupon-titre{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.coupon-titre h3{margin:0;font-size:1.9rem;color:var(--cerise-fonce)}
+.coupon-titre span{font-family:var(--display);background:var(--canard);color:#fff;padding:.3em .9em;border-radius:999px;font-size:.9rem;transform:rotate(3deg)}
+form{display:grid;gap:16px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:grid;gap:5px}
+label{font-weight:800;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+input,textarea{font:inherit;color:var(--choco);background:var(--creme);border:3px solid var(--choco);border-radius:12px;padding:.75em .9em;width:100%;transition:box-shadow .2s,background .2s}
+input:focus,textarea:focus{outline:none;background:#fff;box-shadow:4px 4px 0 var(--moutarde)}
+textarea{min-height:130px;resize:vertical}
+.form-msg{display:none;background:var(--moutarde);border:3px solid var(--choco);border-radius:12px;padding:12px 16px;font-weight:800}
+.form-msg.show{display:block}
+
+/* ---------- Footer ---------- */
+footer{background:var(--choco);color:var(--creme);padding:70px 0 0;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;left:50%;bottom:-700px;width:1400px;height:1400px;margin-left:-700px;border-radius:50%;background:repeating-conic-gradient(rgba(234,181,67,.07) 0 5deg,transparent 5deg 10deg);pointer-events:none}
+.ft-grid{position:relative;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding-bottom:50px}
+footer h3{color:var(--moutarde);font-size:1.25rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{color:var(--creme)}
+footer .logo{color:var(--creme)}
+footer .logo b{color:var(--moutarde)}
+footer .logo i{color:var(--creme)}
+.demo{position:relative;background:#24160e;color:#e8d6b8;text-align:center;font-size:.86rem;padding:14px 20px}
+
+/* ---------- Appel flottant ---------- */
+.appel-flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:90;width:64px;height:64px;border-radius:50%;background:var(--cerise);color:#fff;border:3px solid var(--choco);box-shadow:4px 4px 0 var(--choco);place-items:center;animation:sonne 4s ease-in-out infinite}
+.appel-flottant svg{width:28px;height:28px}
+@keyframes sonne{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-14deg)}92%{transform:rotate(12deg)}95%{transform:rotate(-8deg)}}
+
+/* ---------- Apparition ---------- */
+.reveal{opacity:0;transform:translateY(26px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.3,1.4,.5,1)}
+.reveal.visible{opacity:1;transform:none}
+.carte.reveal.visible:nth-child(odd){transform:rotate(-1deg)}
+.carte.reveal.visible:nth-child(even){transform:rotate(1deg)}
+.carte.reveal.visible:hover{transform:translate(-4px,-6px) rotate(0)}
+.postale.reveal.visible:nth-child(3n+1){transform:rotate(-1.5deg)}
+.postale.reveal.visible:nth-child(3n+2){transform:rotate(1deg)}
+.postale.reveal.visible:nth-child(3n){transform:rotate(-.6deg)}
+.postale.reveal.visible:hover{transform:rotate(0) translateY(-6px)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .menu{gap:1rem}
+  .menu a:not(.btn){font-size:.8rem}
+  .sceaux{grid-template-columns:repeat(2,1fr);gap:40px 26px}
+  .tickets{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .badge-rond{width:112px;height:112px;font-size:.88rem}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:fixed;top:78px;left:12px;right:12px;flex-direction:column;align-items:stretch;gap:4px;background:var(--blanc);border:3px solid var(--choco);border-radius:20px;box-shadow:8px 8px 0 var(--choco);padding:14px;transform:translateY(-10px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s}
+  .menu.open{transform:none;opacity:1;visibility:visible}
+  .menu a:not(.btn){display:block;padding:12px 14px;font-size:1rem;border-radius:10px;background:none}
+  .menu a:not(.btn):hover{background:var(--creme)}
+  .menu .btn{width:100%;margin-top:8px}
+  .menu-services,.cartes-postales{grid-template-columns:1fr 1fr}
+  .ap-grid,.ct-grid{grid-template-columns:1fr}
+  .faq-cols{grid-template-columns:1fr}
+  .badge-rond{display:none}
+}
+@media (max-width:768px){
+  .appel-flottant{display:grid}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .wrap{width:calc(100% - 32px)}
+  .hero{padding-top:150px}
+  .mascotte{right:-8%;top:-86px;bottom:auto;width:84px}
+  .accroche{margin-top:56px;padding:16px 18px}
+  .hero-ctas .btn{flex:1 1 100%}
+  .menu-services,.cartes-postales,.sceaux,.tickets,.ft-grid,.duo{grid-template-columns:1fr}
+  .menu-services{gap:52px}
+  .avis-box{grid-template-columns:1fr;text-align:center;padding:36px 22px}
+  .avis-box .gros-coeur{margin:0 auto;width:100px}
+  .panneau,.coupon{padding:24px 18px}
+  .prix p{text-align:center}
+  .timbre{right:-6px}
+  .defile li{font-size:1.05rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+  .reveal{opacity:1}
+  .defile{animation:none!important;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.6l8 5.6 8-5.6V7h-.4L12 12.2z"/></symbol>
+    <symbol id="i-devis" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h9l5 5v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm8 1.5V8h4.5zM8 12h8v2H8zm0 4h8v2H8zm0-8h4v2H8z"/></symbol>
+    <!-- Mascotte : radiateur en fonte souriant -->
+    <symbol id="radiateur" viewBox="0 0 240 260">
+      <g class="vapeur"><path d="M60 40c-10-10 10-16 0-28" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round"/></g>
+      <g class="vapeur"><path d="M120 34c-10-10 10-16 0-28" fill="none" stroke="#eab543" stroke-width="5" stroke-linecap="round"/></g>
+      <g class="vapeur"><path d="M180 40c-10-10 10-16 0-28" fill="none" stroke="#1b6f7a" stroke-width="5" stroke-linecap="round"/></g>
+      <!-- tuyau + robinet -->
+      <path d="M16 96h-8v30h8" fill="#1b6f7a" stroke="#3a2418" stroke-width="5" stroke-linejoin="round"/>
+      <rect x="0" y="80" width="18" height="12" rx="3" fill="#eab543" stroke="#3a2418" stroke-width="4"/>
+      <!-- colonnes -->
+      <g stroke="#3a2418" stroke-width="5">
+        <rect x="18" y="56" width="42" height="168" rx="20" fill="#d7263d"/>
+        <rect x="58" y="56" width="42" height="168" rx="20" fill="#d7263d"/>
+        <rect x="98" y="56" width="42" height="168" rx="20" fill="#d7263d"/>
+        <rect x="138" y="56" width="42" height="168" rx="20" fill="#d7263d"/>
+        <rect x="178" y="56" width="42" height="168" rx="20" fill="#d7263d"/>
+      </g>
+      <path d="M30 70v20M70 70v20M110 70v20M150 70v20M190 70v20" stroke="#f08a97" stroke-width="5" stroke-linecap="round"/>
+      <!-- visage -->
+      <rect x="44" y="104" width="152" height="86" rx="34" fill="#fbefd9" stroke="#3a2418" stroke-width="5"/>
+      <g class="yeux"><ellipse cx="92" cy="134" rx="9" ry="12" fill="#3a2418"/><ellipse cx="148" cy="134" rx="9" ry="12" fill="#3a2418"/><circle cx="95" cy="129" r="3" fill="#fff"/><circle cx="151" cy="129" r="3" fill="#fff"/></g>
+      <circle cx="70" cy="160" r="10" fill="#f08a97"/><circle cx="170" cy="160" r="10" fill="#f08a97"/>
+      <path d="M94 156c10 22 42 22 52 0z" fill="#3a2418"/>
+      <path d="M104 166c8 7 24 7 32 0" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round"/>
+      <!-- pieds -->
+      <path d="M36 222l-6 24h26l-4-24M186 222l4 24h-26l4-24" fill="#3a2418"/>
+      <ellipse cx="42" cy="248" rx="20" ry="7" fill="#3a2418"/><ellipse cx="198" cy="248" rx="20" ry="7" fill="#3a2418"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#accueil" aria-label="Happy Chauffe And Co, retour en haut">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="27" fill="#eab543" stroke="#3a2418" stroke-width="3"/>
+        <circle cx="30" cy="30" r="21" fill="none" stroke="#3a2418" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <g stroke="#3a2418" stroke-width="2.5" fill="#d7263d"><rect x="15" y="20" width="9" height="22" rx="4"/><rect x="25.5" y="20" width="9" height="22" rx="4"/><rect x="36" y="20" width="9" height="22" rx="4"/></g>
+        <path d="M22 33c4 5 12 5 16 0" fill="none" stroke="#fbefd9" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+      <span><b>Happy Chauffe</b><i>And Co · Lambersart</i></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pourquoi">Pourquoi nous</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn-rouge" href="tel:+33640238436"><svg aria-hidden="true"><use href="#i-tel"/></svg>06 40 23 84 36</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenu">
+<!-- ================= HERO ================= -->
+<section class="hero" id="accueil">
+  <div class="soleil" aria-hidden="true"></div>
+  <div class="soleil-coeur" aria-hidden="true"></div>
+  <div class="trame-coin" aria-hidden="true"></div>
+  <div class="badge-rond b1" aria-hidden="true"><span><small>Spécialité</small>Remplacement &amp; dépannage</span></div>
+  <div class="badge-rond b2" aria-hidden="true"><span><small>Basée à</small>Lambersart</span></div>
+  <div class="wrap hero-in">
+    <h1 class="titre-geant">
+      <span class="happy">HAPPY</span>
+      <span class="sous-titre">Chauffe And Co</span>
+      <svg class="mascotte" viewBox="0 0 240 260" aria-hidden="true"><use href="#radiateur"/></svg>
+    </h1>
+    <p class="accroche">Votre chaudière fait la grimace ? Le chauffagiste de <strong>Lambersart</strong> remplace et dépanne chaudières gaz, fioul et électriques pour que vos radiateurs retrouvent le sourire, même par un gris matin de janvier.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-rouge" href="tel:+33640238436"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+      <a class="btn btn-creme" href="#contact"><svg aria-hidden="true"><use href="#i-devis"/></svg>Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BANDEAU ================= -->
+<div class="bandeau" aria-label="En bref">
+  <div class="defile">
+    <ul>
+      <li>Remplacement &amp; dépannage</li>
+      <li>Chaudières gaz ou fioul</li>
+      <li>Radiateurs &amp; chaudières électriques</li>
+      <li>Lambersart &amp; métropole lilloise</li>
+      <li>Installée à Lambersart depuis environ quatre ans</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Remplacement &amp; dépannage</li>
+      <li>Chaudières gaz ou fioul</li>
+      <li>Radiateurs &amp; chaudières électriques</li>
+      <li>Lambersart &amp; métropole lilloise</li>
+      <li>Installée à Lambersart depuis environ quatre ans</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="services trame" id="services">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Au programme</span>
+      <h2>Le chaud, <span class="rouge">sous toutes ses formes</span></h2>
+      <p>Chaudière à bout de souffle, radiateur qui boude, panne un dimanche soir de février : voici ce que nous faisons, chez vous, à Lambersart et alentour.</p>
+    </div>
+    <div class="menu-services">
+      <article class="carte reveal">
+        <span class="ruban">Spécialité</span>
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><rect x="11" y="4" width="28" height="40" rx="6" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/><circle cx="25" cy="17" r="5" fill="none" stroke="#3a2418" stroke-width="3"/><path d="M25 37c-5-3-5-8 0-11 5 3 5 8 0 11z" fill="#d7263d" stroke="#3a2418" stroke-width="2.5"/></svg></div>
+        <h3>Remplacement de chaudière gaz ou fioul</h3>
+        <p>Dépose de l’ancien appareil et pose d’une chaudière neuve adaptée à votre maison et à votre usage.</p>
+      </article>
+      <article class="carte reveal d1">
+        <span class="ruban">Spécialité</span>
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><path d="M31 6a10 10 0 0 0-9 13L7 34a4 4 0 0 0 6 6l15-15a10 10 0 0 0 14-11l-6 5-6-2-1-6 5-5z" fill="#fbefd9" stroke="#3a2418" stroke-width="3" stroke-linejoin="round"/></svg></div>
+        <h3>Dépannage chauffage</h3>
+        <p>Plus de chauffage, plus d’eau chaude, voyant rouge qui clignote : on diagnostique et on remet en route.</p>
+      </article>
+      <article class="carte reveal d2">
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><g fill="#fbefd9" stroke="#3a2418" stroke-width="3"><rect x="6" y="12" width="9" height="28" rx="4"/><rect x="15" y="12" width="9" height="28" rx="4"/><rect x="24" y="12" width="9" height="28" rx="4"/><rect x="33" y="12" width="9" height="28" rx="4"/></g><path d="M22 4l-4 6h6l-3 6" fill="none" stroke="#eab543" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Radiateurs électriques</h3>
+        <p>Remplacement de vieux « grille-pain » par des radiateurs électriques plus confortables et mieux régulés.</p>
+      </article>
+      <article class="carte reveal">
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><rect x="12" y="5" width="26" height="38" rx="6" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/><path d="M27 12l-6 11h8l-6 12" fill="none" stroke="#d7263d" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Chaudière électrique</h3>
+        <p>Une solution compacte quand le gaz n’est pas disponible ou pas souhaité : installation et remplacement.</p>
+      </article>
+      <article class="carte reveal d1">
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><rect x="8" y="6" width="34" height="38" rx="5" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/><path d="M15 16h20M15 24h20M15 32h12" stroke="#3a2418" stroke-width="3" stroke-linecap="round"/><path d="M30 34l4 4 8-9" fill="none" stroke="#d7263d" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>La visite obligatoire de votre chaudière gaz ou fioul, avec réglages et attestation d’entretien.</p>
+      </article>
+      <article class="carte reveal d2">
+        <div class="medaille"><svg viewBox="0 0 50 50" aria-hidden="true"><path d="M8 28h34" stroke="#fbefd9" stroke-width="8" stroke-linecap="round"/><path d="M8 28h34" stroke="#3a2418" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/><circle cx="25" cy="18" r="7" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/><path d="M25 11v-5M20 6h10" stroke="#3a2418" stroke-width="3" stroke-linecap="round"/><path d="M14 36c-2 3 2 4 0 7M25 36c-2 3 2 4 0 7M36 36c-2 3 2 4 0 7" fill="none" stroke="#eab543" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3>Radiateurs &amp; circuit</h3>
+        <p>Purge, robinets thermostatiques, radiateur tiède en haut et froid en bas : on rééquilibre l’installation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Garanti sans chichis</span>
+      <h2>Pourquoi nous appeler&nbsp;?</h2>
+      <p>Une petite entreprise du coin, qui fait bien une chose : vous rendre la chaleur.</p>
+    </div>
+    <div class="sceaux">
+      <div class="sceau reveal">
+        <div class="disque"><svg viewBox="0 0 170 170" aria-hidden="true"><path d="M85.0 3.0L94.1 15.6L106.2 5.8L111.8 20.3L126.0 14.0L127.6 29.5L143.0 27.0L140.5 42.4L156.0 44.0L149.7 58.2L164.2 63.8L154.4 75.9L167.0 85.0L154.4 94.1L164.2 106.2L149.7 111.8L156.0 126.0L140.5 127.6L143.0 143.0L127.6 140.5L126.0 156.0L111.8 149.7L106.2 164.2L94.1 154.4L85.0 167.0L75.9 154.4L63.8 164.2L58.2 149.7L44.0 156.0L42.4 140.5L27.0 143.0L29.5 127.6L14.0 126.0L20.3 111.8L5.8 106.2L15.6 94.1L3.0 85.0L15.6 75.9L5.8 63.8L20.3 58.2L14.0 44.0L29.5 42.4L27.0 27.0L42.4 29.5L44.0 14.0L58.2 20.3L63.8 5.8L75.9 15.6z" fill="#eab543" stroke="#3a2418" stroke-width="4"/><circle cx="85" cy="85" r="58" fill="none" stroke="#3a2418" stroke-width="2.5" stroke-dasharray="5 5"/></svg>
+          <svg class="pict" viewBox="0 0 64 64" aria-hidden="true"><path d="M44 10a14 14 0 0 0-13 18L12 47a5 5 0 0 0 7 7l19-19a14 14 0 0 0 18-13l-8 6-8-2-2-8z" fill="#fbefd9" stroke="#3a2418" stroke-width="3.5" stroke-linejoin="round"/></svg></div>
+        <h3>Spécialiste du dépannage</h3>
+        <p>Le remplacement et le dépannage, c’est le cœur du métier de l’entreprise.</p>
+      </div>
+      <div class="sceau reveal d1">
+        <div class="disque"><svg viewBox="0 0 170 170" aria-hidden="true"><path d="M85.0 3.0L94.1 15.6L106.2 5.8L111.8 20.3L126.0 14.0L127.6 29.5L143.0 27.0L140.5 42.4L156.0 44.0L149.7 58.2L164.2 63.8L154.4 75.9L167.0 85.0L154.4 94.1L164.2 106.2L149.7 111.8L156.0 126.0L140.5 127.6L143.0 143.0L127.6 140.5L126.0 156.0L111.8 149.7L106.2 164.2L94.1 154.4L85.0 167.0L75.9 154.4L63.8 164.2L58.2 149.7L44.0 156.0L42.4 140.5L27.0 143.0L29.5 127.6L14.0 126.0L20.3 111.8L5.8 106.2L15.6 94.1L3.0 85.0L15.6 75.9L5.8 63.8L20.3 58.2L14.0 44.0L29.5 42.4L27.0 27.0L42.4 29.5L44.0 14.0L58.2 20.3L63.8 5.8L75.9 15.6z" fill="#fbefd9" stroke="#3a2418" stroke-width="4"/><circle cx="85" cy="85" r="58" fill="none" stroke="#3a2418" stroke-width="2.5" stroke-dasharray="5 5"/></svg>
+          <svg class="pict" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6a18 18 0 0 0-18 18c0 14 18 34 18 34s18-20 18-34A18 18 0 0 0 32 6z" fill="#d7263d" stroke="#3a2418" stroke-width="3.5"/><circle cx="32" cy="24" r="7" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/></svg></div>
+        <h3>Basée à Lambersart</h3>
+        <p>Installée ici depuis environ quatre ans, au plus près des maisons de la métropole.</p>
+      </div>
+      <div class="sceau reveal d2">
+        <div class="disque"><svg viewBox="0 0 170 170" aria-hidden="true"><path d="M85.0 3.0L94.1 15.6L106.2 5.8L111.8 20.3L126.0 14.0L127.6 29.5L143.0 27.0L140.5 42.4L156.0 44.0L149.7 58.2L164.2 63.8L154.4 75.9L167.0 85.0L154.4 94.1L164.2 106.2L149.7 111.8L156.0 126.0L140.5 127.6L143.0 143.0L127.6 140.5L126.0 156.0L111.8 149.7L106.2 164.2L94.1 154.4L85.0 167.0L75.9 154.4L63.8 164.2L58.2 149.7L44.0 156.0L42.4 140.5L27.0 143.0L29.5 127.6L14.0 126.0L20.3 111.8L5.8 106.2L15.6 94.1L3.0 85.0L15.6 75.9L5.8 63.8L20.3 58.2L14.0 44.0L29.5 42.4L27.0 27.0L42.4 29.5L44.0 14.0L58.2 20.3L63.8 5.8L75.9 15.6z" fill="#1b6f7a" stroke="#3a2418" stroke-width="4"/><circle cx="85" cy="85" r="58" fill="none" stroke="#fbefd9" stroke-width="2.5" stroke-dasharray="5 5"/></svg>
+          <svg class="pict" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 6h26l10 10v42H14z" fill="#fbefd9" stroke="#3a2418" stroke-width="3.5" stroke-linejoin="round"/><path d="M22 28h20M22 36h20M22 44h12" stroke="#3a2418" stroke-width="3.5" stroke-linecap="round"/></svg></div>
+        <h3>Devis clair</h3>
+        <p>Un devis détaillé avant tout remplacement : vous savez ce que vous payez.</p>
+      </div>
+      <div class="sceau reveal d3">
+        <div class="disque"><svg viewBox="0 0 170 170" aria-hidden="true"><path d="M85.0 3.0L94.1 15.6L106.2 5.8L111.8 20.3L126.0 14.0L127.6 29.5L143.0 27.0L140.5 42.4L156.0 44.0L149.7 58.2L164.2 63.8L154.4 75.9L167.0 85.0L154.4 94.1L164.2 106.2L149.7 111.8L156.0 126.0L140.5 127.6L143.0 143.0L127.6 140.5L126.0 156.0L111.8 149.7L106.2 164.2L94.1 154.4L85.0 167.0L75.9 154.4L63.8 164.2L58.2 149.7L44.0 156.0L42.4 140.5L27.0 143.0L29.5 127.6L14.0 126.0L20.3 111.8L5.8 106.2L15.6 94.1L3.0 85.0L15.6 75.9L5.8 63.8L20.3 58.2L14.0 44.0L29.5 42.4L27.0 27.0L42.4 29.5L44.0 14.0L58.2 20.3L63.8 5.8L75.9 15.6z" fill="#eab543" stroke="#3a2418" stroke-width="4"/><circle cx="85" cy="85" r="58" fill="none" stroke="#3a2418" stroke-width="2.5" stroke-dasharray="5 5"/></svg>
+          <svg class="pict" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="#fbefd9" stroke="#3a2418" stroke-width="3.5"/><circle cx="24" cy="27" r="3.5" fill="#3a2418"/><circle cx="40" cy="27" r="3.5" fill="#3a2418"/><path d="M21 38c6 8 16 8 22 0" fill="none" stroke="#d7263d" stroke-width="4" stroke-linecap="round"/></svg></div>
+        <h3>Conseils francs</h3>
+        <p>Réparer ou remplacer ? On vous dit honnêtement ce qui vaut le coup chez vous.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÉTAPES ================= -->
+<section class="etapes" id="methode">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Mode d’emploi</span>
+      <h2>Simple comme <span class="rouge">un coup de fil</span></h2>
+    </div>
+    <div class="tickets">
+      <div class="ticket reveal"><span class="no">01</span><h3>Vous appelez</h3><div class="pointilles"></div><p>Vous expliquez la panne ou le projet : type d’appareil, symptômes, âge de l’installation.</p></div>
+      <div class="ticket reveal d1"><span class="no">02</span><h3>On passe voir</h3><div class="pointilles"></div><p>Diagnostic sur place de la chaudière, des radiateurs et de l’arrivée d’énergie.</p></div>
+      <div class="ticket reveal d2"><span class="no">03</span><h3>Devis en main</h3><div class="pointilles"></div><p>Réparation ou remplacement : une proposition écrite, claire, à valider sans pression.</p></div>
+      <div class="ticket reveal d3"><span class="no">04</span><h3>Ça réchauffe&nbsp;!</h3><div class="pointilles"></div><p>Intervention, mise en service et quelques conseils pour garder la chaleur longtemps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="apropos" id="apropos">
+  <div class="rayons-fond" aria-hidden="true"></div>
+  <div class="wrap ap-grid">
+    <div class="reveal">
+      <span class="etiquette">À propos</span>
+      <h2>Une affaire <span>lambersartoise</span></h2>
+      <p><strong>Happy Chauffe And Co</strong> est un chauffagiste installé à <strong>Lambersart depuis environ quatre ans</strong>, spécialisé dans le remplacement et le dépannage des systèmes de chauffage.</p>
+      <p>Chaudières gaz ou fioul, radiateurs et chaudières électriques : l’entreprise intervient chez les particuliers de Lambersart et de la métropole lilloise, des maisons 1930 en brique aux appartements plus récents.</p>
+      <p>Son credo tient dans son nom : un chauffage qui marche, un client content, et des explications claires à chaque passage.</p>
+    </div>
+    <div class="ap-mascotte reveal d2" aria-hidden="true">
+      <div class="bulle">Installée à Lambersart depuis environ quatre ans&nbsp;!</div>
+      <svg viewBox="0 0 240 260"><use href="#radiateur"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉALISATIONS ================= -->
+<section class="realisations trame" id="realisations">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Cartes postales de chantier</span>
+      <h2>Réalisations <span class="rouge">types</span></h2>
+      <p>Des illustrations des interventions que nous menons au quotidien. Les vraies photos de chantier viendront les remplacer à la mise en ligne.</p>
+    </div>
+    <div class="cartes-postales">
+      <figure class="postale reveal">
+        <span class="timbre">Gaz</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#f6d58d"/>
+          <g opacity=".5">
+            <path d="M120 200L-40 0h40zM120 200L40 0h40zM120 200L120 0h40zM120 200L200 0h40zM120 200L280 0h40z" fill="#eab543"/>
+          </g>
+          <rect x="0" y="150" width="240" height="30" fill="#1b6f7a"/>
+          <rect x="82" y="28" width="76" height="110" rx="10" fill="#fbefd9" stroke="#3a2418" stroke-width="4"/>
+          <rect x="96" y="44" width="48" height="18" rx="4" fill="#3a2418"/>
+          <circle cx="108" cy="80" r="6" fill="none" stroke="#3a2418" stroke-width="3"/><circle cx="132" cy="80" r="6" fill="none" stroke="#3a2418" stroke-width="3"/>
+          <path d="M120 122c-8-5-8-14 0-20 8 6 8 15 0 20z" fill="#d7263d" stroke="#3a2418" stroke-width="3"/>
+          <path d="M100 138v14M114 138v14M126 138v14M140 138v14" stroke="#3a2418" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 60l12 8M200 60l-12 8M44 96h14M196 96h-14" stroke="#d7263d" stroke-width="4" stroke-linecap="round"/>
+        </svg></div>
+        <figcaption><span>Remplacement</span>Remplacement de chaudière gaz à condensation</figcaption>
+      </figure>
+      <figure class="postale reveal d1">
+        <span class="timbre">Fioul</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#cfe3e3"/>
+          <rect x="0" y="146" width="240" height="34" fill="#5a3e2e"/>
+          <path d="M0 146h240" stroke="#3a2418" stroke-width="4"/>
+          <rect x="40" y="50" width="70" height="96" rx="8" fill="#d7263d" stroke="#3a2418" stroke-width="4"/>
+          <rect x="52" y="64" width="46" height="16" rx="3" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/>
+          <circle cx="75" cy="110" r="14" fill="#eab543" stroke="#3a2418" stroke-width="4"/>
+          <path d="M110 70h30v-30" fill="none" stroke="#3a2418" stroke-width="6"/>
+          <rect x="140" y="90" width="70" height="56" rx="26" fill="#1b6f7a" stroke="#3a2418" stroke-width="4"/>
+          <path d="M160 90v-10h30v10" fill="none" stroke="#3a2418" stroke-width="4"/>
+          <text x="175" y="124" text-anchor="middle" font-family="Fugaz One, sans-serif" font-size="14" fill="#fbefd9">FIOUL</text>
+        </svg></div>
+        <figcaption><span>Dépannage</span>Dépannage d’une chaudière fioul en sous-sol</figcaption>
+      </figure>
+      <figure class="postale reveal d2">
+        <span class="timbre">Élec.</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#fbe3e3"/>
+          <rect x="30" y="20" width="80" height="70" rx="4" fill="#cfe3e3" stroke="#3a2418" stroke-width="4"/>
+          <path d="M70 20v70M30 55h80" stroke="#3a2418" stroke-width="3"/>
+          <rect x="0" y="150" width="240" height="30" fill="#eab543"/>
+          <rect x="60" y="100" width="130" height="44" rx="10" fill="#fbefd9" stroke="#3a2418" stroke-width="4"/>
+          <path d="M74 112h102M74 122h102M74 132h102" stroke="#d7263d" stroke-width="3" stroke-linecap="round"/>
+          <rect x="160" y="40" width="34" height="48" rx="6" fill="#fbefd9" stroke="#3a2418" stroke-width="3"/>
+          <path d="M179 50l-6 12h8l-6 12" fill="none" stroke="#d7263d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M70 144v8M180 144v8" stroke="#3a2418" stroke-width="4" stroke-linecap="round"/>
+        </svg></div>
+        <figcaption><span>Installation</span>Pose de radiateurs électriques à chaleur douce</figcaption>
+      </figure>
+      <figure class="postale reveal">
+        <span class="timbre">Élec.</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#f6d58d"/>
+          <circle cx="190" cy="40" r="22" fill="#d7263d" opacity=".8"/>
+          <rect x="0" y="150" width="240" height="30" fill="#1b6f7a"/>
+          <rect x="70" y="30" width="100" height="116" rx="10" fill="#fbefd9" stroke="#3a2418" stroke-width="4"/>
+          <rect x="86" y="46" width="68" height="26" rx="5" fill="#1b6f7a" stroke="#3a2418" stroke-width="3"/>
+          <text x="120" y="65" text-anchor="middle" font-family="Fugaz One, sans-serif" font-size="15" fill="#fbefd9">ON</text>
+          <path d="M126 86l-12 22h14l-12 24" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M90 146v8M150 146v8" stroke="#3a2418" stroke-width="4" stroke-linecap="round"/>
+        </svg></div>
+        <figcaption><span>Remplacement</span>Installation d’une chaudière électrique compacte</figcaption>
+      </figure>
+      <figure class="postale reveal d1">
+        <span class="timbre">Fonte</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#cfe3e3"/>
+          <path d="M0 0h240v20H0z" fill="#d7263d"/>
+          <rect x="0" y="146" width="240" height="34" fill="#5a3e2e"/>
+          <g stroke="#3a2418" stroke-width="4" fill="#d7263d"><rect x="50" y="60" width="26" height="86" rx="12"/><rect x="76" y="60" width="26" height="86" rx="12"/><rect x="102" y="60" width="26" height="86" rx="12"/><rect x="128" y="60" width="26" height="86" rx="12"/><rect x="154" y="60" width="26" height="86" rx="12"/></g>
+          <path d="M50 120h-14v26" fill="none" stroke="#3a2418" stroke-width="5"/>
+          <rect x="28" y="106" width="16" height="10" rx="2" fill="#eab543" stroke="#3a2418" stroke-width="3"/>
+          <path d="M80 40c-6-6 6-10 0-18M115 40c-6-6 6-10 0-18M150 40c-6-6 6-10 0-18" fill="none" stroke="#1b6f7a" stroke-width="4" stroke-linecap="round"/>
+        </svg></div>
+        <figcaption><span>Entretien</span>Purge et équilibrage de radiateurs en fonte</figcaption>
+      </figure>
+      <figure class="postale reveal d2">
+        <span class="timbre">Visite</span>
+        <div class="cadre"><svg viewBox="0 0 240 180" aria-hidden="true">
+          <rect width="240" height="180" fill="#fbe3e3"/>
+          <rect x="0" y="150" width="240" height="30" fill="#eab543"/>
+          <rect x="40" y="34" width="74" height="112" rx="10" fill="#fbefd9" stroke="#3a2418" stroke-width="4"/>
+          <rect x="52" y="48" width="50" height="16" rx="3" fill="#3a2418"/>
+          <path d="M77 122c-7-5-7-13 0-18 7 5 7 13 0 18z" fill="#d7263d" stroke="#3a2418" stroke-width="3"/>
+          <rect x="134" y="44" width="70" height="92" rx="6" fill="#fff" stroke="#3a2418" stroke-width="4"/>
+          <rect x="156" y="36" width="26" height="14" rx="3" fill="#1b6f7a" stroke="#3a2418" stroke-width="3"/>
+          <path d="M146 68h46M146 84h46M146 100h30" stroke="#3a2418" stroke-width="3" stroke-linecap="round"/>
+          <path d="M170 118l8 8 16-18" fill="none" stroke="#d7263d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></div>
+        <figcaption><span>Entretien</span>Entretien annuel et attestation de chaudière gaz</figcaption>
+      </figure>
+    </div>
+    <div class="prix reveal">
+      <div class="etoile">
+        <svg viewBox="0 0 150 150" aria-hidden="true"><path d="M75.0 3.0L85.1 17.9L99.6 7.3L104.0 24.8L121.3 19.8L119.4 37.7L137.4 39.0L129.5 55.2L145.9 62.5L133.0 75.0L145.9 87.5L129.5 94.8L137.4 111.0L119.4 112.3L121.3 130.2L104.0 125.2L99.6 142.7L85.1 132.1L75.0 147.0L64.9 132.1L50.4 142.7L46.0 125.2L28.7 130.2L30.6 112.3L12.6 111.0L20.5 94.8L4.1 87.5L17.0 75.0L4.1 62.5L20.5 55.2L12.6 39.0L30.6 37.7L28.7 19.8L46.0 24.8L50.4 7.3L64.9 17.9z" fill="#eab543" stroke="#3a2418" stroke-width="4"/></svg>
+        <b>Sur<br>devis</b>
+      </div>
+      <p><strong>Tarifs : sur devis.</strong> Chaque chantier est différent : le prix dépend de l’appareil, de l’accès et des travaux à prévoir. On vous explique tout avant de commencer.</p>
+      <a class="btn btn-moutarde" href="#contact">Mon devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="avis trame" id="avis">
+  <div class="wrap">
+    <div class="avis-box reveal">
+      <svg class="gros-coeur" viewBox="0 0 130 120" aria-hidden="true"><path d="M65 112S8 76 8 40C8 20 22 8 38 8c12 0 22 7 27 17C70 15 80 8 92 8c16 0 30 12 30 32 0 36-57 72-57 72z" fill="#d7263d" stroke="#3a2418" stroke-width="5"/><path d="M32 34c2-8 8-12 16-12" fill="none" stroke="#fbefd9" stroke-width="6" stroke-linecap="round"/></svg>
+      <div>
+        <h2>Votre avis compte&nbsp;!</h2>
+        <p>Les avis clients Google de Happy Chauffe And Co apparaîtront ici une fois le site en ligne. Votre chauffage a retrouvé le sourire grâce à nous ? Dites-le, ça aide vos voisins à choisir.</p>
+        <a class="btn btn-creme" href="https://www.google.com/search?q=Happy+Chauffe+And+Co+Lambersart" target="_blank" rel="noopener">Laisser un avis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Questions / réponses</span>
+      <h2>Vous vous demandez…</h2>
+    </div>
+    <div class="faq-cols">
+      <div class="q reveal"><button aria-expanded="false">L’entretien annuel de la chaudière est-il obligatoire ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>Oui, pour les chaudières gaz et fioul, un entretien par un professionnel est obligatoire chaque année. Il permet de vérifier la sécurité, d’optimiser les réglages et donne lieu à une attestation.</p></div></div></div>
+      <div class="q reveal d1"><button aria-expanded="false">Réparer ou remplacer ma vieille chaudière ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>Tout dépend de l’âge de l’appareil, de la panne et de la disponibilité des pièces. Après diagnostic, nous vous présentons les deux options honnêtement pour que vous puissiez décider.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false">Le devis est-il gratuit ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>Appelez-nous pour en parler : nous vous expliquons dès le premier contact comment se passe l’établissement du devis selon votre demande.</p></div></div></div>
+      <div class="q reveal d1"><button aria-expanded="false">Existe-t-il des aides comme MaPrimeRénov’ ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>Certains travaux de chauffage peuvent être aidés, selon votre situation et les critères en vigueur. Renseignez-vous auprès de France Rénov’ ; nous vous indiquons ce que nous savons sur votre projet.</p></div></div></div>
+      <div class="q reveal"><button aria-expanded="false">Sous quel délai pouvez-vous intervenir ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>Cela dépend de la période et de la nature de l’intervention. Pour une panne, appelez directement : on vous donne une idée réaliste du délai au téléphone.</p></div></div></div>
+      <div class="q reveal d1"><button aria-expanded="false">Où intervenez-vous ?<span class="signe" aria-hidden="true"></span></button><div class="rep"><div><p>À Lambersart et dans la métropole lilloise. Précisez votre commune lors de l’appel et nous vous confirmons si nous pouvons venir.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="titre-centre">
+      <span class="etiquette">Contact</span>
+      <h2>Un coup de froid&nbsp;? <span class="rouge">Un coup de fil.</span></h2>
+    </div>
+    <div class="ct-grid">
+      <div class="panneau reveal">
+        <h3>Horaires</h3>
+        <p style="margin:0 0 4px;font-weight:700">Lundi – vendredi : sur rendez-vous</p>
+        <table class="horaires" id="horaires">
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <p class="mention">Horaires indicatifs, à confirmer.</p>
+        <ul class="coord">
+          <li><span class="pastille"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span>Lambersart et métropole lilloise</span></li>
+          <li><span class="pastille"><svg aria-hidden="true"><use href="#i-tel"/></svg></span><a href="tel:+33640238436">06 40 23 84 36</a></li>
+          <li><span class="pastille"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><a href="mailto:happy.chauffe@gmail.com">happy.chauffe@gmail.com</a></li>
+        </ul>
+        <a class="btn btn-canard" href="https://www.google.com/maps/search/?api=1&amp;query=Lambersart" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Itinéraire</a>
+      </div>
+      <div class="coupon reveal d2">
+        <svg class="ciseaux" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="coupon-titre"><h3>Bon pour un devis</h3><span>À remplir</span></div>
+        <form id="form" novalidate>
+          <div class="duo">
+            <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+            <div class="champ"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          </div>
+          <div class="champ"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="message">Message</label><textarea id="message" name="message" placeholder="Ex. : chaudière gaz en panne à Lambersart, plus d’eau chaude depuis ce matin…"></textarea></div>
+          <button class="btn btn-rouge" type="submit">Envoyer le bon</button>
+          <p class="form-msg" id="form-msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap ft-grid">
+    <div>
+      <a class="logo" href="#accueil">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="#eab543" stroke="#fbefd9" stroke-width="3"/><g stroke="#3a2418" stroke-width="2.5" fill="#d7263d"><rect x="15" y="20" width="9" height="22" rx="4"/><rect x="25.5" y="20" width="9" height="22" rx="4"/><rect x="36" y="20" width="9" height="22" rx="4"/></g><path d="M22 33c4 5 12 5 16 0" fill="none" stroke="#fbefd9" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span><b>Happy Chauffe</b><i>And Co · Lambersart</i></span>
+      </a>
+      <p style="margin-top:16px">Chauffagiste à Lambersart : remplacement et dépannage de chaudières gaz ou fioul, radiateurs et chaudières électriques.</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li><a href="tel:+33640238436">06 40 23 84 36</a></li>
+        <li><a href="mailto:happy.chauffe@gmail.com">happy.chauffe@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul><li>Lundi – vendredi : sur rendez-vous</li><li>Horaires indicatifs, à confirmer</li></ul>
+    </div>
+    <div>
+      <h3>Zone</h3>
+      <ul><li>Lambersart</li><li>Métropole lilloise</li><li><a href="#services">Nos services</a></li><li><a href="#faq">FAQ</a></li></ul>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33640238436" aria-label="Appeler Happy Chauffe And Co"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>10)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  function setMenu(o){menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  var els=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')})}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  document.querySelectorAll('.q button').forEach(function(b){
+    b.addEventListener('click',function(){var q=b.parentNode,o=!q.classList.contains('open');q.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false')});
+  });
+
+  var row=document.querySelector('#horaires tr[data-j="'+new Date().getDay()+'"]');
+  if(row)row.classList.add('today');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').classList.add('show')});
+})();
+</script>
+</body>
+</html>
