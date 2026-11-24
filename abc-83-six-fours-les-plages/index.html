@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABC 83 – Pompes à chaleur et photovoltaïque à Six-Fours-les-Plages</title>
+<meta name="description" content="ABC 83, installateur à Six-Fours-les-Plages depuis 2018 : pompes à chaleur géothermiques, air-eau et air-air, panneaux photovoltaïques, chauffe-eau thermodynamiques et chaudières gaz ou fioul. Note 5,0/5 sur 8 avis Effy.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700;800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanc:#fafaf7;
+  --noir:#121212;
+  --gris:#8a8a85;        /* filets, décor uniquement */
+  --gris-texte:#5c5c58;  /* texte secondaire (6.5:1 sur blanc) */
+  --gris-clair:#e5e5e0;
+  --soleil:#ffb400;      /* accent unique : fonds et traits, jamais texte sur blanc */
+  --sans:"Albert Sans",system-ui,sans-serif;
+  --mono:"Martian Mono",ui-monospace,monospace;
+  --larg:1240px;
+  --gout:24px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{position:relative;margin:0;background:var(--blanc);color:var(--noir);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.025em;line-height:1.02}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gout)}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;line-height:1.5;font-weight:400}
+.gt{color:var(--gris-texte)}
+
+/* grille visible */
+.trame{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:0}
+.trame .wrap{height:100%}
+.trame .g12{height:100%}
+.trame i{border-left:1px solid var(--gris-clair);border-right:1px solid var(--gris-clair);opacity:.75}
+main,header,footer,nav,.demo{position:relative;z-index:1}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 22px;font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid var(--noir);transition:background .2s,color .2s,transform .2s;cursor:pointer;letter-spacing:-.01em}
+.btn .fl{font-family:var(--mono);font-size:.85rem;transition:transform .25s}
+.btn:hover .fl{transform:translateX(5px)}
+.btn-noir{background:var(--noir);color:var(--blanc)}
+.btn-noir:hover{background:var(--soleil);color:var(--noir);border-color:var(--soleil)}
+.btn-ligne{background:transparent;color:var(--noir)}
+.btn-ligne:hover{background:var(--noir);color:var(--blanc)}
+.btn svg{width:18px;height:18px}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(250,250,247,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--gris-clair)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.03em}
+.logo .pastille{width:26px;height:26px;border-radius:50%;background:var(--soleil);position:relative}
+.logo .pastille::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--blanc)}
+.logo small{font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:0;color:var(--gris-texte);margin-left:4px}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px;align-items:center}
+.menu a{display:flex;gap:6px;align-items:baseline;text-decoration:none;padding:8px 12px;font-size:.95rem;font-weight:500;transition:color .2s}
+.menu a span{font-family:var(--mono);font-size:.6rem;color:var(--gris-texte)}
+.menu a:hover{text-decoration:underline;text-decoration-color:var(--soleil);text-decoration-thickness:3px;text-underline-offset:6px}
+.menu .cta{background:var(--noir);color:var(--blanc);margin-left:10px;padding:10px 16px}
+.menu .cta:hover{background:var(--soleil);color:var(--noir);text-decoration:none}
+.burger{display:none;align-items:center;gap:10px;background:none;border:1.5px solid var(--noir);height:42px;padding:0 12px;font-family:var(--mono);font-size:.7rem;cursor:pointer;color:var(--noir)}
+.burger b{width:18px;height:10px;position:relative;display:block}
+.burger b::before,.burger b::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .25s,top .25s}
+.burger b::before{top:0}.burger b::after{top:8.5px}
+.burger[aria-expanded="true"] b::before{top:4px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{top:4px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{padding:112px 0 0}
+.meta-l{display:flex;flex-wrap:wrap;gap:6px 0;border-top:1.5px solid var(--noir);border-bottom:1px solid var(--gris-clair);padding:12px 0;margin-bottom:56px}
+.meta-l span{padding-right:22px;margin-right:22px;border-right:1px solid var(--gris-clair)}
+.meta-l span:last-child{border:0}
+.hero h1{grid-column:1/span 8;font-size:clamp(3rem,6vw,5.9rem);font-weight:800;letter-spacing:-.045em;line-height:.92}
+.hero h1 .l{display:block}
+.hero h1 .sol{position:relative;white-space:nowrap}
+.hero h1 .sol::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--soleil);z-index:-1;transform-origin:left;animation:trait 1s .5s cubic-bezier(.7,0,.2,1) both}
+@keyframes trait{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero h1 .g{color:var(--gris-texte);font-weight:300}
+.note{grid-column:10/span 3;align-self:end;border-top:1.5px solid var(--noir);padding-top:14px;text-decoration:none;display:block;transition:background .2s}
+.note:hover .chiffre{color:var(--noir)}
+.note .chiffre{font-size:clamp(5rem,10vw,9.4rem);font-weight:800;letter-spacing:-.06em;line-height:.85;display:block}
+.note .chiffre sup{font-size:.22em;letter-spacing:0;font-weight:500;vertical-align:top;margin-left:6px;position:relative;top:.4em}
+.note .etoiles{display:flex;gap:4px;margin:14px 0 10px}
+.note .etoiles i{width:14px;height:14px;background:var(--soleil);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.note .lien{display:flex;justify-content:space-between;border-top:1px solid var(--gris-clair);padding-top:10px}
+.note:hover .lien{text-decoration:underline}
+.intro{grid-column:1/span 5;margin-top:44px;font-size:1.2rem;line-height:1.5}
+.intro strong{font-weight:600}
+.hero-btns{grid-column:7/span 6;margin-top:44px;display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;justify-content:flex-end}
+.schema-wrap{margin-top:64px;border-top:1px solid var(--noir);border-bottom:1px solid var(--noir);position:relative}
+.schema-wrap .mono.leg{position:absolute;top:12px;left:0}
+.schema-wrap .mono.leg2{position:absolute;top:12px;right:0;text-align:right}
+.schema{display:block;width:100%;height:auto}
+.schema .t{fill:none;stroke:var(--noir);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.schema .tf{fill:none;stroke:var(--gris);stroke-width:1}
+.schema .ts{fill:none;stroke:var(--soleil);stroke-width:2.5;stroke-linecap:round}
+.schema .flux-j{fill:none;stroke:var(--soleil);stroke-width:3;stroke-dasharray:2 12;stroke-linecap:round;animation:flx 1.2s linear infinite}
+.schema .flux-n{fill:none;stroke:var(--noir);stroke-width:2;stroke-dasharray:2 10;stroke-linecap:round;animation:flx 1.6s linear infinite}
+@keyframes flx{to{stroke-dashoffset:-28}}
+.schema .rayon{animation:ray 3s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes ray{50%{transform:rotate(22deg) scale(1.06)}}
+.schema .helice{animation:rot 3s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes rot{to{transform:rotate(360deg)}}
+.schema text{font-family:var(--mono);font-size:11px;fill:var(--noir)}
+.schema text.g{fill:var(--gris-texte)}
+.leg-mob{display:none}
+
+/* sections */
+section{padding:120px 0;border-bottom:1px solid var(--gris-clair)}
+.s-tete{margin-bottom:56px;align-items:end}
+.s-tete .idx{grid-column:1/span 2;font-family:var(--mono);font-size:.8rem;padding-top:6px;border-top:1.5px solid var(--noir);align-self:start}
+.s-tete h2{grid-column:3/span 7;font-size:clamp(2.2rem,4.6vw,4.2rem);font-weight:800;letter-spacing:-.04em}
+.s-tete p{grid-column:10/span 3;margin:0;color:var(--gris-texte);font-size:.98rem}
+
+/* confiance */
+.confiance{padding:0;border-bottom:1.5px solid var(--noir)}
+.confiance ul{list-style:none;margin:0;padding:0}
+.confiance li{grid-column:span 3;padding:26px 0 24px;border-right:1px solid var(--gris-clair);padding-right:20px}
+.confiance li:last-child{border-right:0}
+.confiance b{display:block;font-size:1.5rem;font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:8px 0 4px}
+.confiance b .j{display:inline-block;width:.5em;height:.5em;background:var(--soleil);border-radius:50%;margin-left:6px;vertical-align:middle}
+.confiance a{text-decoration:none}
+.confiance a:hover b{text-decoration:underline}
+
+/* services */
+.serv-liste{border-top:1.5px solid var(--noir)}
+.serv{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gout);align-items:center;padding:30px 0;border-bottom:1px solid var(--gris-clair);transition:background .25s;position:relative}
+.serv::before{content:"";position:absolute;left:0;top:-1px;height:2px;width:0;background:var(--soleil);transition:width .5s cubic-bezier(.7,0,.2,1)}
+.serv:hover::before{width:100%}
+.serv .n{grid-column:span 1;font-family:var(--mono);font-size:.75rem}
+.serv .ico{grid-column:span 2;width:84px;height:64px}
+.serv .ico svg{width:100%;height:100%;fill:none;stroke:var(--noir);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.serv .ico .j{stroke:var(--soleil);stroke-width:2.2}
+.serv .ico .jf{fill:var(--soleil);stroke:none}
+.serv h3{grid-column:span 4;font-size:clamp(1.4rem,2.2vw,2rem);font-weight:700;letter-spacing:-.03em;transition:transform .3s}
+.serv:hover h3{transform:translateX(8px)}
+.serv p{grid-column:span 4;margin:0;color:var(--gris-texte);font-size:1rem}
+.serv .cat{grid-column:span 1;text-align:right;font-family:var(--mono);font-size:.62rem;color:var(--gris-texte)}
+
+/* pourquoi */
+.atouts{list-style:none;margin:0;padding:0;row-gap:0}
+.atout{grid-column:span 3;border-top:1.5px solid var(--noir);padding:22px 0 0}
+.atout .n{font-family:var(--mono);font-size:.75rem;display:flex;justify-content:space-between}
+.atout .n i{width:10px;height:10px;background:var(--gris-clair);transition:background .3s}
+.atout:hover .n i{background:var(--soleil)}
+.atout h3{font-size:1.5rem;letter-spacing:-.03em;margin:40px 0 12px;line-height:1.1}
+.atout p{margin:0;color:var(--gris-texte);font-size:.98rem}
+
+/* étapes */
+.etapes{background:var(--noir);color:var(--blanc);border-bottom:0}
+.etapes .s-tete .idx{border-color:var(--blanc)}
+.etapes .s-tete p{color:#b5b5b0}
+.etapes ol{list-style:none;margin:0;padding:0}
+.etape{grid-column:span 3;position:relative;padding-top:20px;border-top:1px solid #3a3a38}
+.etape .big{font-size:clamp(4rem,8vw,7rem);font-weight:800;letter-spacing:-.06em;line-height:.8;color:transparent;-webkit-text-stroke:1.5px #e5e5e0;display:block;margin-bottom:28px;transition:color .3s,-webkit-text-stroke-color .3s}
+.etape:hover .big{color:var(--soleil);-webkit-text-stroke-color:var(--soleil)}
+.etape h3{font-size:1.35rem;letter-spacing:-.02em;margin-bottom:10px}
+.etape p{color:#c4c4bf;font-size:.98rem;margin:0}
+.etape .mono{color:#b5b5b0;display:block;margin-bottom:10px}
+
+/* à propos */
+.ap-txt{grid-column:3/span 6}
+.ap-txt p{font-size:1.32rem;line-height:1.45;letter-spacing:-.01em}
+.ap-txt p:first-child::first-letter{font-weight:800}
+.ap-txt strong{font-weight:600;background:linear-gradient(transparent 62%,rgba(255,180,0,.45) 62%)}
+.ap-fiche{grid-column:10/span 3;align-self:start}
+.ap-fiche dl{margin:0;border-top:1.5px solid var(--noir)}
+.ap-fiche div{border-bottom:1px solid var(--gris-clair);padding:12px 0}
+.ap-fiche dt{font-family:var(--mono);font-size:.64rem;color:var(--gris-texte)}
+.ap-fiche dd{margin:4px 0 0;font-weight:600}
+.ap-idx{grid-column:1/span 2;font-family:var(--mono);font-size:.8rem;border-top:1.5px solid var(--noir);padding-top:6px;align-self:start}
+
+/* galerie */
+.gal{row-gap:var(--gout)}
+.pl{grid-column:span 4;margin:0;border:1px solid var(--gris-clair);background:var(--blanc);transition:border-color .25s,transform .3s}
+.pl:hover{border-color:var(--noir);transform:translateY(-3px)}
+.pl.w{grid-column:span 8}
+.pl .vue{height:300px;border-bottom:1px solid var(--gris-clair);background-image:linear-gradient(var(--gris-clair) 1px,transparent 1px),linear-gradient(90deg,var(--gris-clair) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+.pl .vue svg{width:100%;height:100%;display:block}
+.pl .vue .t{fill:none;stroke:var(--noir);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pl .vue .tf{fill:none;stroke:var(--gris);stroke-width:1}
+.pl .vue .j{fill:none;stroke:var(--soleil);stroke-width:2.4;stroke-linecap:round}
+.pl .vue .jf{fill:var(--soleil)}
+.pl .vue .blanc{fill:var(--blanc)}
+.pl figcaption{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:16px 18px;min-height:82px}
+.pl h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.2}
+.pl figcaption .mono{text-align:right;white-space:nowrap}
+
+/* avis */
+.avis-bloc{align-items:end}
+.avis-bloc .grand{grid-column:3/span 5;font-size:clamp(7rem,18vw,15rem);font-weight:800;letter-spacing:-.07em;line-height:.78}
+.avis-bloc .grand span{font-size:.2em;font-weight:400;letter-spacing:-.01em;color:var(--gris-texte)}
+.avis-bloc .droite{grid-column:9/span 4}
+.barre{height:10px;background:var(--gris-clair);margin:14px 0 18px;position:relative;overflow:hidden}
+.barre i{position:absolute;inset:0;background:var(--soleil);transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.7,0,.2,1) .2s}
+.vu .barre i{transform:scaleX(1)}
+.avis-bloc p{color:var(--gris-texte)}
+
+/* faq */
+.faq-l{grid-column:3/span 10;border-top:1.5px solid var(--noir)}
+details{border-bottom:1px solid var(--gris-clair)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:60px 1fr 40px;align-items:baseline;padding:24px 0;font-size:1.3rem;font-weight:600;letter-spacing:-.02em;line-height:1.3}
+summary::-webkit-details-marker{display:none}
+summary .mono{font-size:.7rem;color:var(--gris-texte)}
+summary .pm{font-family:var(--mono);font-weight:400;text-align:right;transition:transform .3s;font-size:1.2rem}
+details[open] summary .pm{transform:rotate(45deg)}
+summary:hover{color:#000}
+summary:hover .pm{color:var(--noir)}
+details .rep{padding:0 40px 26px 60px;color:var(--gris-texte);max-width:780px}
+details .rep p{margin:0}
+details[open]{background:linear-gradient(90deg,rgba(255,180,0,.09),transparent 60%)}
+
+/* contact */
+.ct-g{row-gap:40px}
+.ct-info{grid-column:1/span 4}
+.ct-form{grid-column:6/span 7}
+.bloc{border-top:1.5px solid var(--noir);padding-top:14px;margin-bottom:44px}
+.bloc .mono{display:flex;justify-content:space-between;margin-bottom:14px;gap:10px}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:grid;grid-template-columns:1fr auto;padding:8px 10px;border-bottom:1px solid var(--gris-clair)}
+.horaires li span:last-child{font-family:var(--mono);font-size:.72rem;color:var(--gris-texte);align-self:center}
+.horaires li.auj{background:var(--soleil)}
+.horaires li.auj span:first-child{font-weight:700}
+.horaires li.auj span:last-child{color:var(--noir)}
+address{font-style:normal;font-size:1.15rem;line-height:1.45;margin-bottom:18px}
+.ct-info .lien-mail{display:inline-block;font-weight:600;text-decoration:underline;text-decoration-color:var(--soleil);text-decoration-thickness:3px;text-underline-offset:5px;margin-bottom:22px;word-break:break-all}
+form{border:1.5px solid var(--noir);padding:36px;background:var(--blanc)}
+form h3{font-size:2rem;letter-spacing:-.035em;margin-bottom:6px}
+form .sous{color:var(--gris-texte);margin-bottom:28px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.champ{display:flex;flex-direction:column;margin-bottom:20px}
+.champ.plein{grid-column:1/-1}
+label{font-family:var(--mono);font-size:.66rem;margin-bottom:6px}
+input,select,textarea{font:inherit;font-size:1.05rem;padding:12px 0;border:0;border-bottom:1.5px solid var(--noir);background:transparent;color:var(--noir);border-radius:0;transition:border-color .2s,background .2s;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--soleil);background:rgba(255,180,0,.06)}
+input::placeholder,textarea::placeholder{color:#7a7a75}
+textarea{min-height:110px;resize:vertical}
+.types{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.types label{margin:0;cursor:pointer}
+.types input{position:absolute;opacity:0;width:1px}
+.types span{display:inline-block;font-family:var(--mono);font-size:.68rem;padding:9px 12px;border:1px solid var(--noir);transition:background .2s}
+.types input:checked+span{background:var(--soleil);border-color:var(--soleil)}
+.types input:focus-visible+span{outline:2px solid var(--noir);outline-offset:2px}
+.types label:hover span{background:var(--gris-clair)}
+.form-pied{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+.form-pied small{font-size:.85rem;color:var(--gris-texte);max-width:24em}
+.msg{display:none;margin-top:20px;padding:14px 16px;background:var(--soleil);font-weight:600}
+.msg.vu{display:block}
+
+/* pied */
+footer{background:var(--noir);color:var(--blanc);padding:80px 0 0}
+.pied-nom{grid-column:1/-1;font-size:clamp(5rem,17vw,16rem);font-weight:800;letter-spacing:-.05em;line-height:.8;margin-bottom:50px;display:flex;align-items:flex-end;gap:.08em}
+.pied-nom i{width:.22em;height:.22em;border-radius:50%;background:var(--soleil);margin-bottom:.06em;flex:none}
+.pied-col{grid-column:span 3;border-top:1px solid #3a3a38;padding-top:14px}
+.pied-col .mono{color:#b5b5b0;display:block;margin-bottom:12px}
+.pied-col p,.pied-col li{font-size:.95rem;margin:0 0 6px;color:#e5e5e0}
+.pied-col ul{list-style:none;margin:0;padding:0}
+.pied-col a{text-decoration:none}
+.pied-col a:hover{color:var(--soleil)}
+.pied-bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid #3a3a38;margin-top:50px;padding:20px 0;color:#b5b5b0}
+.demo{background:var(--blanc);color:var(--gris-texte);text-align:center;font-size:.78rem;padding:12px 16px;border-top:1px solid var(--gris-clair)}
+
+/* flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;height:56px;padding:0 20px;background:var(--soleil);color:var(--noir);border:1.5px solid var(--noir);align-items:center;gap:10px;font-weight:700;text-decoration:none;box-shadow:5px 5px 0 var(--noir)}
+.flottant svg{width:20px;height:20px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* responsive */
+@media (max-width:1100px){
+  .menu a span{display:none}
+}
+@media (max-width:960px){
+  :root{--gout:16px}
+  .burger{display:inline-flex}
+  .menu{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--blanc);border-bottom:1.5px solid var(--noir);padding:8px 16px 20px;gap:0;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:16px 0;border-bottom:1px solid var(--gris-clair);font-size:1.2rem}
+  .menu a span{display:inline}
+  .menu .cta{margin:16px 0 0;justify-content:center;padding:16px}
+  .hero h1{grid-column:1/-1}
+  .note{grid-column:1/span 6;margin-top:40px}
+  .intro{grid-column:1/-1}
+  .hero-btns{grid-column:1/-1;justify-content:flex-start;margin-top:24px}
+  .s-tete .idx{grid-column:1/-1;margin-bottom:20px}
+  .s-tete h2{grid-column:1/-1}
+  .s-tete p{grid-column:1/-1;margin-top:18px}
+  .serv .n{grid-column:span 1}
+  .serv .ico{grid-column:span 2}
+  .serv h3{grid-column:span 9}
+  .serv p{grid-column:4/span 9;margin-top:8px}
+  .serv .cat{display:none}
+  .atout{grid-column:span 6;margin-bottom:40px}
+  .etape{grid-column:span 6;margin-bottom:44px}
+  .ap-idx{grid-column:1/-1;margin-bottom:24px}
+  .ap-txt{grid-column:1/-1}
+  .ap-fiche{grid-column:1/-1;margin-top:20px}
+  .pl,.pl.w{grid-column:span 6}
+  .pl .vue{height:260px}
+  .avis-bloc .grand{grid-column:1/-1}
+  .avis-bloc .droite{grid-column:1/-1;margin-top:30px}
+  .faq-l{grid-column:1/-1}
+  .ct-info,.ct-form{grid-column:1/-1}
+  .pied-col{grid-column:span 6;margin-bottom:30px}
+  .confiance li{grid-column:span 6;border-bottom:1px solid var(--gris-clair)}
+  .confiance li:nth-child(2n){border-right:0}
+  .flottant{display:inline-flex}
+}
+@media (max-width:620px){
+  .g12{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .trame i:nth-child(n+5){display:none}
+  section{padding:84px 0}
+  .hero{padding-top:92px}
+  .meta-l{margin-bottom:36px}
+  .meta-l span{border:0;margin-right:14px;padding-right:0}
+  .hero h1{font-size:clamp(2.6rem,13vw,3.6rem)}
+  .note{grid-column:1/-1}
+  .intro{font-size:1.08rem}
+  .hero-btns .btn{flex:1 1 100%;justify-content:space-between}
+  .schema-wrap{margin-top:44px;margin-inline:-16px;border-left:0;border-right:0}
+  .schema-wrap .mono.leg{position:static;display:block;padding:12px 16px 0}
+  .schema-wrap .mono.leg2,.schema text{display:none}
+  .leg-mob{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;list-style:none;margin:0;padding:12px 16px 14px;border-top:1px solid var(--gris-clair)}
+  .leg-mob li{display:flex;gap:8px;align-items:center}
+  .leg-mob i{width:10px;height:10px;flex:none;background:var(--soleil)}
+  .leg-mob i.n{background:var(--noir)}
+  .serv{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .serv .n{grid-column:1/-1;margin-bottom:12px}
+  .serv .ico{grid-column:1/span 1;width:56px;height:46px}
+  .serv h3{grid-column:2/-1}
+  .serv p{grid-column:1/-1;margin-top:12px}
+  .atout,.etape,.pl,.pl.w,.pied-col,.confiance li{grid-column:1/-1}
+  .confiance li{border-right:0}
+  .atout h3{margin-top:22px}
+  .ap-txt p{font-size:1.15rem}
+  summary{grid-template-columns:40px 1fr 28px;font-size:1.12rem}
+  details .rep{padding:0 10px 22px 40px}
+  form{padding:26px 18px}
+  .champs{grid-template-columns:1fr}
+  .avis-bloc .grand{font-size:9rem}
+  footer{padding-bottom:80px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="trame" aria-hidden="true"><div class="wrap"><div class="g12"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="logo" href="#haut" aria-label="ABC 83, accueil"><span class="pastille" aria-hidden="true"></span>ABC 83<small>/ Six-Fours</small></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><b></b>MENU</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services"><span>01</span>Services</a></li>
+      <li><a href="#methode"><span>03</span>Méthode</a></li>
+      <li><a href="#realisations"><span>05</span>Installations</a></li>
+      <li><a href="#avis"><span>06</span>Avis</a></li>
+      <li><a href="#faq"><span>07</span>FAQ</a></li>
+      <li><a class="cta" href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="haut">
+  <div class="wrap">
+    <div class="meta-l mono rv"><span>ABC 83 — SASU</span><span>Chauffage · PAC · Photovoltaïque</span><span>83140 Six-Fours-les-Plages</span><span>Depuis 2018</span></div>
+    <div class="g12">
+      <h1 class="rv"><span class="l">Le <span class="sol">soleil</span> produit.</span><span class="l">La pompe chauffe.</span><span class="l g">Vous, vous profitez.</span></h1>
+      <a class="note rv d2" href="https://www.effy.fr/artisans/pro/653-abc-83" target="_blank" rel="noopener" aria-label="Note de 5,0 sur 5 sur 8 avis Effy, voir la source">
+        <span class="mono gt">Note moyenne</span>
+        <span class="chiffre">5,0<sup>/5</sup></span>
+        <span class="etoiles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="lien mono"><span>8 avis Effy</span><span>↗</span></span>
+      </a>
+      <p class="intro rv d1">Sur la presqu'île du Cap Sicié, le soleil brille généreusement presque toute l'année. <strong>ABC 83</strong> l'associe à vos besoins de chaleur : pompes à chaleur géothermiques, air-eau ou air-air, panneaux photovoltaïques, chauffe-eau thermodynamiques — et chaudières gaz ou fioul quand c'est la bonne réponse.</p>
+      <div class="hero-btns rv d2">
+        <a class="btn btn-noir" href="mailto:abc83.contact@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>Écrire un email <span class="fl">→</span></a>
+        <a class="btn btn-ligne" href="#contact">Demander un devis <span class="fl">→</span></a>
+      </div>
+    </div>
+
+    <div class="schema-wrap rv">
+      <span class="mono leg gt">Fig. 01 — Une maison, trois flux</span>
+      <span class="mono leg2 gt">Schéma de principe</span>
+      <svg class="schema" viewBox="0 0 1240 460" role="img" aria-label="Schéma : soleil, panneaux photovoltaïques sur le toit, pompe à chaleur en façade et ballon thermodynamique reliés par des flux d'énergie">
+        <!-- sol -->
+        <path class="t" d="M0 400H1240"/>
+        <path class="tf" d="M0 414H1240" stroke-dasharray="1 8"/>
+        <!-- soleil -->
+        <g transform="translate(150 120)">
+          <circle r="34" fill="#ffb400"/>
+          <g class="rayon"><path class="ts" d="M0-52v-16M0 52v16M-52 0h-16M52 0h16M-37-37l-11-11M37 37l11 11M-37 37l-11 11M37-37l11-11"/></g>
+        </g>
+        <text x="110" y="214">01 SOLEIL</text>
+        <!-- flux soleil vers panneaux -->
+        <path class="flux-j" d="M200 140C300 120 400 130 500 170"/>
+        <path class="flux-j" d="M196 168C300 180 380 190 462 202" style="animation-delay:-.4s"/>
+        <!-- maison -->
+        <path class="t" d="M420 400V250L640 110 860 250V400"/>
+        <path class="t" d="M396 262L640 100 884 262"/>
+        <!-- panneaux PV sur pan gauche -->
+        <g transform="translate(452 226) rotate(-33.6)">
+          <path class="t" d="M6 -4v-6M70 -4v-6M134 -4v-6M190 -4v-6"/>
+          <rect class="t" x="0" y="-24" width="62" height="14" fill="#fafaf7"/>
+          <rect class="t" x="64" y="-24" width="62" height="14" fill="#fafaf7"/>
+          <rect class="t" x="128" y="-24" width="62" height="14" fill="#fafaf7"/>
+          <path class="tf" d="M15.5-24v14M31-24v14M46.5-24v14M79.5-24v14M95-24v14M110.5-24v14M143.5-24v14M159-24v14M174.5-24v14"/>
+          <path class="ts" d="M0-27H190" stroke-width="2"/>
+        </g>
+        <text x="470" y="96" class="">02 PANNEAUX PV</text>
+        <path class="tf" d="M530 102l16 50"/>
+        <!-- intérieur -->
+        <path class="tf" d="M420 300H860" stroke-dasharray="3 6"/>
+        <rect class="t" x="470" y="320" width="70" height="80"/>
+        <path class="t" d="M760 400v-60h50v60"/>
+        <!-- onduleur -->
+        <rect class="t" x="560" y="270" width="40" height="22"/>
+        <text x="494" y="286" class="g">ONDULEUR</text>
+        <!-- ballon -->
+        <rect class="t" x="640" y="296" width="54" height="104" rx="14"/>
+        <rect class="t" x="640" y="276" width="54" height="22" rx="6"/>
+        <circle class="t" cx="656" cy="287" r="5"/>
+        <path class="tf" d="M650 330h34M650 350h34M650 370h34"/>
+        <text x="604" y="430">04 BALLON THERMO.</text>
+        <!-- radiateur / émetteur -->
+        <path class="t" d="M470 330h70M470 345h70M470 360h70M470 375h70" opacity=".5"/>
+        <text x="440" y="430" class="g">ÉMETTEURS</text>
+        <!-- flux électrique PV vers onduleur, puis ballon et PAC -->
+        <path class="flux-j" d="M580 160V270"/>
+        <path class="flux-j" d="M600 281H667V276" style="animation-delay:-.3s"/>
+        <path class="flux-j" d="M600 286C700 286 780 286 860 286 920 286 960 320 960 330" style="animation-delay:-.6s"/>
+        <!-- PAC extérieure -->
+        <rect class="t" x="900" y="330" width="130" height="70" rx="4"/>
+        <circle class="t" cx="944" cy="365" r="24"/>
+        <g class="helice"><path class="t" d="M944 365c-3-10 2-18 11-20-2 8-5 14-11 20zM944 365c10-3 18 2 20 11-8-2-14-5-20-11zM944 365c3 10-2 18-11 20 2-8 5-14 11-20zM944 365c-10 3-18-2-20-11 8 2 14 5 20 11z"/></g>
+        <path class="t" d="M990 340v50M1000 340v50M1010 340v50M1020 340v50" opacity=".6"/>
+        <text x="902" y="430">03 POMPE À CHALEUR</text>
+        <!-- flux chaleur PAC vers émetteurs -->
+        <path class="flux-n" d="M900 380H860M860 380C760 380 640 380 540 380"/>
+        <path class="flux-n" d="M900 350H880C870 350 870 330 860 330" style="animation-direction:reverse"/>
+        <!-- air -->
+        <path class="tf" d="M1060 340q14 25 0 50M1080 332q20 33 0 66"/>
+        <!-- géothermie -->
+        <path class="tf" d="M1140 400v52M1160 400v52" stroke-dasharray="4 4"/>
+        <path class="t" d="M1130 400h40"/>
+        <text x="1092" y="440" class="g">OPTION GÉO.</text>
+      </svg>
+      <ul class="leg-mob mono"><li><i></i>01 Soleil</li><li><i></i>02 Panneaux PV</li><li><i class="n"></i>03 Pompe à chaleur</li><li><i></i>04 Ballon thermo.</li></ul>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- confiance -->
+<section class="confiance" aria-label="En bref">
+  <div class="wrap">
+    <ul class="g12">
+      <li class="rv"><span class="mono gt">Création</span><b>Depuis 2018</b><span class="gt">Entreprise de Six-Fours</span></li>
+      <li class="rv d1"><a href="https://www.effy.fr/artisans/pro/653-abc-83" target="_blank" rel="noopener"><span class="mono gt">Avis Effy ↗</span><b>5,0/5<span class="j"></span></b><span class="gt">sur 8 avis</span></a></li>
+      <li class="rv d2"><span class="mono gt">Équipements</span><b>6 savoir-faire</b><span class="gt">PAC, PV, eau chaude, chaudière</span></li>
+      <li class="rv d3"><span class="mono gt">Adresse</span><b>Av. de Clair Ginet</b><span class="gt">83140 Six-Fours-les-Plages</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- services -->
+<section id="services">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">01 → Services</span>
+      <h2>Six réponses pour produire, chauffer, rafraîchir.</h2>
+      <p>De la sonde enterrée au panneau sur le toit, chaque équipement est choisi pour votre maison, pas l'inverse.</p>
+    </div>
+    <div class="serv-liste">
+      <article class="serv rv">
+        <span class="n">01.1</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><path d="M6 24h72"/><rect x="24" y="6" width="36" height="18"/><path d="M34 24v34M50 24v34"/><path class="j" d="M34 58q8 6 16 0"/><path d="M4 30h76" stroke-dasharray="2 5" opacity=".5"/></svg></div>
+        <h3>PAC géothermique</h3>
+        <p>Des capteurs dans le sol puisent une chaleur stable toute l'année, pour un chauffage discret et régulier.</p>
+        <span class="cat">SOL → EAU</span>
+      </article>
+      <article class="serv rv">
+        <span class="n">01.2</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><rect x="10" y="12" width="60" height="40" rx="2"/><circle cx="32" cy="32" r="13"/><path d="M32 32l8-6M32 32l-7 9M32 32l11 4"/><path d="M52 18v28M58 18v28M64 18v28"/><path class="j" d="M74 26q6 6 0 12"/></svg></div>
+        <h3>PAC air-eau</h3>
+        <p>Elle capte les calories de l'air extérieur pour alimenter radiateurs ou plancher chauffant, et souvent l'eau chaude.</p>
+        <span class="cat">AIR → EAU</span>
+      </article>
+      <article class="serv rv">
+        <span class="n">01.3</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><rect x="8" y="10" width="68" height="20" rx="5"/><path d="M14 24h56"/><path class="j" d="M24 38c0 5-4 5-4 10s4 5 4 10M42 38c0 5-4 5-4 10s4 5 4 10M60 38c0 5-4 5-4 10s4 5 4 10"/></svg></div>
+        <h3>PAC air-air · climatisation</h3>
+        <p>Rafraîchir quand les étés varois s'étirent, chauffer à la mi-saison : un seul équipement réversible.</p>
+        <span class="cat">AIR → AIR</span>
+      </article>
+      <article class="serv rv">
+        <span class="n">01.4</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><path d="M8 50l14-36h54L62 50z"/><path d="M27 14l-9 36M44 14l-6 36M62 14l-4 36M14 32h56"/><circle class="jf" cx="72" cy="10" r="6"/></svg></div>
+        <h3>Panneaux photovoltaïques</h3>
+        <p>Produire votre propre électricité sur le toit et la consommer en priorité, à commencer par vos équipements.</p>
+        <span class="cat">SOLEIL → ÉLEC.</span>
+      </article>
+      <article class="serv rv">
+        <span class="n">01.5</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><rect x="28" y="2" width="28" height="12" rx="3"/><rect x="28" y="14" width="28" height="44" rx="8"/><path class="j" d="M34 28h16M34 36h16M34 44h16"/><path d="M14 20q-8 8 0 16M20 16q-12 12 0 24" opacity=".6"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon équipé d'une petite pompe à chaleur produit l'eau chaude sanitaire avec une consommation maîtrisée.</p>
+        <span class="cat">AIR → ECS</span>
+      </article>
+      <article class="serv rv">
+        <span class="n">01.6</span>
+        <div class="ico"><svg viewBox="0 0 84 64"><rect x="24" y="4" width="36" height="50" rx="3"/><path d="M24 14h36"/><rect x="34" y="22" width="16" height="22" rx="8"/><path class="j" d="M42 40c-3-1-3.5-4.5-1.5-7 .2 1.4 1 2 1.5 2.4-.4-2.4.6-4.2 2.2-5.4-.2 2 1 3.2 1.2 5 .3 2.6-1 4.4-3.4 5z"/><path d="M32 54v6M42 54v6M52 54v6"/></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Pour les logements où elle reste pertinente : installation ou remplacement d'une chaudière gaz ou fioul.</p>
+        <span class="cat">COMBUSTION</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- pourquoi -->
+<section id="pourquoi">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">02 → Pourquoi ABC 83</span>
+      <h2>Moins de discours, plus de cohérence.</h2>
+      <p>Un même interlocuteur pour la production solaire et le chauffage : les équipements sont pensés ensemble.</p>
+    </div>
+    <ul class="g12 atouts">
+      <li class="atout rv"><span class="n">02.1<i></i></span><h3>Une vision d'ensemble</h3><p>Photovoltaïque, PAC et ballon dimensionnés ensemble pour que l'énergie produite serve d'abord chez vous.</p></li>
+      <li class="atout rv d1"><span class="n">02.2<i></i></span><h3>Toutes les technologies</h3><p>Géothermie, air-eau, air-air, thermodynamique ou chaudière : on compare avant de proposer.</p></li>
+      <li class="atout rv d2"><span class="n">02.3<i></i></span><h3>5,0/5 sur Effy</h3><p>Une note moyenne de 5,0 sur 8 avis clients publiés sur la plateforme Effy.</p></li>
+      <li class="atout rv d3"><span class="n">02.4<i></i></span><h3>Basé à Six-Fours</h3><p>Installé avenue de Clair Ginet depuis 2018, au plus près des chantiers de l'ouest varois.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- étapes -->
+<section class="etapes" id="methode">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">03 → Méthode</span>
+      <h2>Quatre étapes, dans l'ordre.</h2>
+      <p>Pas de pose précipitée : chaque projet commence par comprendre la maison.</p>
+    </div>
+    <ol class="g12">
+      <li class="etape rv"><span class="big">1</span><span class="mono">Contact</span><h3>Vous écrivez</h3><p>Un email ou le formulaire : quelques lignes sur votre logement et votre projet.</p></li>
+      <li class="etape rv d1"><span class="big">2</span><span class="mono">Visite</span><h3>On observe</h3><p>Toiture, orientation, surface, émetteurs, emplacement des unités : tout est relevé sur place.</p></li>
+      <li class="etape rv d2"><span class="big">3</span><span class="mono">Proposition</span><h3>On chiffre</h3><p>Un devis détaillé, avec les aides qui pourraient s'appliquer à votre situation.</p></li>
+      <li class="etape rv d3"><span class="big">4</span><span class="mono">Chantier</span><h3>On installe</h3><p>Pose, raccordements, mise en service et prise en main de vos équipements.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- à propos -->
+<section id="apropos">
+  <div class="wrap g12">
+    <span class="ap-idx rv">04 → À propos</span>
+    <div class="ap-txt rv d1">
+      <p><strong>ABC 83</strong> est une SASU créée en <strong>2018</strong> à Six-Fours-les-Plages, entre la plage de Bonnegrâce et les pentes boisées du Cap Sicié.</p>
+      <p>L'entreprise installe pompes à chaleur géothermiques, air-eau et air-air, panneaux photovoltaïques, chauffe-eau thermodynamiques ainsi que des chaudières gaz ou fioul.</p>
+      <p>Son idée est simple : sous le soleil varois, la production d'énergie et le chauffage gagnent à être pensés ensemble — de Sanary au Brusc, jusqu'à la rade de Toulon.</p>
+    </div>
+    <div class="ap-fiche rv d2">
+      <dl>
+        <div><dt>Raison sociale</dt><dd>ABC 83 — SASU</dd></div>
+        <div><dt>Création</dt><dd>2018</dd></div>
+        <div><dt>Adresse</dt><dd>156 av. de Clair Ginet<br>83140 Six-Fours-les-Plages</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:abc83.contact@gmail.com">abc83.contact@gmail.com</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- galerie -->
+<section id="realisations">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">05 → Installations</span>
+      <h2>Ce qu'on installe, en coupe.</h2>
+      <p>Configurations types illustrées. Chaque projet est étudié sur place : tarifs sur devis.</p>
+    </div>
+    <div class="g12 gal">
+      <figure class="pl w rv">
+        <div class="vue"><svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <path class="t" d="M80 260V150L320 50l240 100v110"/>
+          <g transform="translate(104 140) rotate(-22.6)">
+            <rect class="t blanc" x="0" y="-18" width="58" height="13"/><rect class="t blanc" x="61" y="-18" width="58" height="13"/><rect class="t blanc" x="122" y="-18" width="58" height="13"/>
+            <path class="tf" d="M14.5-18v13M29-18v13M43.5-18v13M75.5-18v13M90-18v13M104.5-18v13M136.5-18v13M151-18v13M165.5-18v13M6-5v5M174-5v5"/>
+            <path class="j" d="M0-21H180" stroke-width="2"/>
+          </g>
+          <circle class="jf" cx="660" cy="70" r="26"/><path class="j" d="M660 26v-12M660 114v12M616 70h-12M704 70h12M629 39l-8-8M691 101l8 8M629 101l-8 8M691 39l8-8"/>
+          <path class="j" d="M620 86C500 70 380 66 270 80" stroke-dasharray="3 10"/>
+          <path class="tf" d="M0 260H800"/>
+          <rect class="t" x="140" y="200" width="40" height="60"/><rect class="t" x="420" y="190" width="60" height="44"/><path class="t" d="M450 190v44"/>
+        </svg></div>
+        <figcaption><h3>Photovoltaïque en toiture</h3><span class="mono gt">05.1 · Sur devis</span></figcaption>
+      </figure>
+      <figure class="pl rv d1">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="t" d="M0 90H320"/>
+          <path class="t" d="M60 90V40l50-24 50 24v50"/>
+          <rect class="t" x="90" y="60" width="26" height="22"/>
+          <path class="t" d="M200 90v130M224 90v130"/><path class="j" d="M200 220q12 12 24 0"/>
+          <path class="tf" d="M150 70h62v20"/>
+          <path class="tf" d="M0 130H320M0 170H320M0 210H320" stroke-dasharray="2 6"/>
+          <text x="236" y="160" font-family="Martian Mono" font-size="9" fill="#5c5c58">SONDE</text>
+        </svg></div>
+        <figcaption><h3>PAC géothermique</h3><span class="mono gt">05.2 · Sur devis</span></figcaption>
+      </figure>
+      <figure class="pl rv">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="tf" d="M0 200H320"/>
+          <path class="t" d="M40 200V60h140v140"/>
+          <rect class="t" x="70" y="90" width="40" height="46"/><path class="t" d="M90 90v46"/>
+          <rect class="t" x="196" y="140" width="94" height="60" rx="3"/><circle class="t" cx="228" cy="170" r="20"/>
+          <path class="t" d="M228 170l10-8M228 170l-8 11M228 170l13 4"/>
+          <path class="t" d="M262 148v44M270 148v44M278 148v44"/>
+          <path class="j" d="M196 180h-16"/>
+          <path class="tf" d="M300 160q8 10 0 20M308 154q12 16 0 32"/>
+        </svg></div>
+        <figcaption><h3>PAC air-eau en façade</h3><span class="mono gt">05.3 · Sur devis</span></figcaption>
+      </figure>
+      <figure class="pl w rv d1">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="tf" d="M0 200H320"/>
+          <rect class="t" x="70" y="40" width="180" height="40" rx="8"/><path class="t" d="M84 68h152"/>
+          <circle class="jf" cx="232" cy="54" r="3"/>
+          <path class="j" d="M100 96c0 10-6 10-6 20s6 10 6 20M160 96c0 10-6 10-6 20s6 10 6 20M220 96c0 10-6 10-6 20s6 10 6 20"/>
+          <rect class="t" x="40" y="160" width="110" height="40"/>
+          <path class="t" d="M220 200v-50h50v50"/>
+        </svg></div>
+        <figcaption><h3>Climatisation réversible</h3><span class="mono gt">05.4 · Sur devis</span></figcaption>
+      </figure>
+      <figure class="pl w rv">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="tf" d="M0 214H320"/>
+          <rect class="t" x="110" y="30" width="100" height="150" rx="6"/><path class="t" d="M110 58h100"/>
+          <rect class="t" x="140" y="80" width="40" height="60" rx="20"/>
+          <path class="jf" d="M160 134c-8-3-9-12-4-18 .5 4 2.5 5.5 4 6-1-6 1.6-11 6-14-.6 5 2.6 8.4 3.2 13 .8 7-2.8 11.6-9.2 13z"/>
+          <path class="t" d="M130 180v34M160 180v34M190 180v34"/>
+          <path class="t" d="M160 30V12h40"/>
+        </svg></div>
+        <figcaption><h3>Chaudière gaz ou fioul</h3><span class="mono gt">05.5 · Sur devis</span></figcaption>
+      </figure>
+      <figure class="pl rv d1">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="tf" d="M0 214H320"/>
+          <rect class="t" x="130" y="20" width="60" height="28" rx="6"/><circle class="t" cx="148" cy="34" r="6"/>
+          <rect class="t" x="130" y="48" width="60" height="156" rx="16"/>
+          <path class="j" d="M144 90h32M144 112h32M144 134h32M144 156h32"/>
+          <path class="t" d="M142 204v10M178 204v10"/>
+          <path class="tf" d="M100 30q-12 12 0 24M84 24q-18 18 0 36"/>
+          <path class="t" d="M190 80h50v120"/>
+        </svg></div>
+        <figcaption><h3>Ballon thermodynamique</h3><span class="mono gt">05.6 · Sur devis</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- avis -->
+<section id="avis">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">06 → Avis clients</span>
+      <h2>La note, sans enjoliver.</h2>
+      <p>Note et nombre d'avis relevés sur la plateforme Effy. Consultez-les directement à la source.</p>
+    </div>
+    <div class="g12 avis-bloc rv">
+      <div class="grand" aria-label="5,0 sur 5">5,0<span>/5</span></div>
+      <div class="droite">
+        <span class="mono gt">Source : Effy · relevé novembre 2026</span>
+        <div class="barre" aria-hidden="true"><i></i></div>
+        <p><strong style="color:#121212">8 avis</strong> publiés sur la fiche ABC 83 d'Effy, pour une moyenne de 5,0 sur 5.</p>
+        <a class="btn btn-ligne" href="https://www.effy.fr/artisans/pro/653-abc-83" target="_blank" rel="noopener">Lire les avis sur Effy <span class="fl">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section id="faq">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">07 → Questions</span>
+      <h2>Ce qu'on nous demande souvent.</h2>
+      <p>Des réponses générales : chaque maison mérite une étude au cas par cas.</p>
+    </div>
+    <div class="g12">
+      <div class="faq-l rv">
+        <details open><summary><span class="mono">07.1</span>Photovoltaïque et pompe à chaleur, ça fonctionne ensemble ?<span class="pm">+</span></summary><div class="rep"><p>C'est souvent une association cohérente : l'électricité produite en journée peut alimenter en partie la pompe à chaleur ou le ballon thermodynamique. Le bénéfice réel dépend de vos usages et de la configuration du toit.</p></div></details>
+        <details><summary><span class="mono">07.2</span>Géothermie ou air-eau : comment choisir ?<span class="pm">+</span></summary><div class="rep"><p>La géothermie offre un rendement très stable mais demande des travaux de captage et un terrain adapté. L'air-eau est plus simple à installer. Une visite permet de comparer les deux selon votre parcelle.</p></div></details>
+        <details><summary><span class="mono">07.3</span>Existe-t-il des aides pour ces travaux ?<span class="pm">+</span></summary><div class="rep"><p>Selon les équipements et votre situation, des dispositifs comme MaPrimeRénov' ou les primes CEE pourraient s'appliquer. Les conditions évoluent : elles seront vérifiées au moment du devis, sans promesse de montant.</p></div></details>
+        <details><summary><span class="mono">07.4</span>Mon toit est-il adapté aux panneaux solaires ?<span class="pm">+</span></summary><div class="rep"><p>L'orientation, l'inclinaison, les ombres portées (pins, bâtiments voisins) et l'état de la couverture comptent. Le Var bénéficie d'un bon ensoleillement, mais chaque toiture s'étudie sur place.</p></div></details>
+        <details><summary><span class="mono">07.5</span>La climatisation réversible peut-elle remplacer mon chauffage ?<span class="pm">+</span></summary><div class="rep"><p>Dans certains logements bien isolés du littoral, une PAC air-air peut suffire ; ailleurs, elle reste un complément. Tout dépend de la surface, de l'isolation et de la répartition des pièces.</p></div></details>
+        <details><summary><span class="mono">07.6</span>Intervenez-vous en dehors de Six-Fours ?<span class="pm">+</span></summary><div class="rep"><p>L'entreprise est basée à Six-Fours-les-Plages et rayonne sur les communes voisines de l'ouest varois. Précisez votre commune dans le formulaire : la faisabilité sera confirmée en retour.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section id="contact">
+  <div class="wrap">
+    <div class="g12 s-tete rv">
+      <span class="idx">08 → Contact</span>
+      <h2>Parlons de votre maison.</h2>
+      <p>Par email ou via le formulaire. Les demandes sont traitées dans l'ordre d'arrivée.</p>
+    </div>
+    <div class="g12 ct-g">
+      <div class="ct-info">
+        <div class="bloc rv">
+          <div class="mono"><span>Horaires</span><span class="gt">indicatif · à confirmer</span></div>
+          <ul class="horaires" id="horaires">
+            <li data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+            <li data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+            <li data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+            <li data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="6"><span>Samedi</span><span>Fermé</span></li>
+            <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+          </ul>
+        </div>
+        <div class="bloc rv d1">
+          <div class="mono"><span>Adresse &amp; zone</span><span class="gt">83 · Var</span></div>
+          <address>ABC 83<br>156 avenue de Clair Ginet<br>83140 Six-Fours-les-Plages</address>
+          <a class="lien-mail" href="mailto:abc83.contact@gmail.com">abc83.contact@gmail.com</a>
+          <p class="gt" style="font-size:.95rem">Six-Fours, Le Brusc, Sanary-sur-Mer, La Seyne-sur-Mer, Ollioules, Saint-Mandrier et l'aire toulonnaise.</p>
+          <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=156+avenue+de+Clair+Ginet+83140+Six-Fours-les-Plages" target="_blank" rel="noopener">Itinéraire <span class="fl">↗</span></a>
+        </div>
+      </div>
+      <div class="ct-form">
+        <form id="form" class="rv" novalidate>
+          <h3>Demande de devis</h3>
+          <p class="sous">Trois minutes pour décrire votre projet.</p>
+          <div class="champs">
+            <div class="champ plein"><label>Projet</label>
+              <div class="types">
+                <label><input type="checkbox" name="t" value="pac-geo"><span>PAC géo.</span></label>
+                <label><input type="checkbox" name="t" value="pac-ae" checked><span>PAC air-eau</span></label>
+                <label><input type="checkbox" name="t" value="clim"><span>Clim air-air</span></label>
+                <label><input type="checkbox" name="t" value="pv"><span>Photovoltaïque</span></label>
+                <label><input type="checkbox" name="t" value="cet"><span>Ballon thermo.</span></label>
+                <label><input type="checkbox" name="t" value="chaud"><span>Chaudière</span></label>
+              </div>
+            </div>
+            <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+            <div class="champ"><label for="ville">Commune</label><input id="ville" placeholder="Six-Fours, Sanary…"></div>
+            <div class="champ"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+            <div class="champ"><label for="tel">Téléphone (facultatif)</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+            <div class="champ plein"><label for="msg-t">Message</label><textarea id="msg-t" placeholder="Surface, chauffage actuel, orientation du toit…"></textarea></div>
+          </div>
+          <div class="form-pied">
+            <small>Données utilisées uniquement pour répondre à votre demande.</small>
+            <button class="btn btn-noir" type="submit">Envoyer <span class="fl">→</span></button>
+          </div>
+          <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap g12">
+    <div class="pied-nom" aria-hidden="true">ABC 83<i></i></div>
+    <div class="pied-col"><span class="mono">ABC 83 — SASU</span><p>Pompes à chaleur, photovoltaïque, chauffe-eau thermodynamiques et chaudières à Six-Fours-les-Plages depuis 2018.</p></div>
+    <div class="pied-col"><span class="mono">Coordonnées</span><ul><li>156 avenue de Clair Ginet</li><li>83140 Six-Fours-les-Plages</li><li><a href="mailto:abc83.contact@gmail.com">abc83.contact@gmail.com</a></li></ul></div>
+    <div class="pied-col"><span class="mono">Horaires</span><ul><li>Lundi–vendredi : sur rendez-vous</li><li>Samedi/Dimanche : fermé</li><li>Horaires à confirmer</li></ul></div>
+    <div class="pied-col"><span class="mono">Navigation</span><ul><li><a href="#services">01 Services</a></li><li><a href="#realisations">05 Installations</a></li><li><a href="https://www.effy.fr/artisans/pro/653-abc-83" target="_blank" rel="noopener">06 Avis Effy ↗</a></li><li><a href="#contact">08 Contact</a></li></ul></div>
+  </div>
+  <div class="wrap pied-bas mono"><span>© <span id="annee">2026</span> ABC 83</span><span>Six-Fours-les-Plages · Var</span></div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="mailto:abc83.contact@gmail.com" aria-label="Écrire un email à ABC 83"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+
+<script>
+(function(){
+  var sv=document.querySelector('.schema');function vb(){sv.setAttribute('viewBox',innerWidth<620?'80 50 1110 380':'0 0 1240 460')}vb();addEventListener('resize',vb);
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false')})});
+  var j=new Date().getDay(),li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>

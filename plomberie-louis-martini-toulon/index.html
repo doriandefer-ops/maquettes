@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plomberie Louis Martini – Plombier chauffagiste à Toulon</title>
+<meta name="description" content="Plomberie Louis Martini, plombier chauffagiste à Toulon (40 rue Groignard) : chaudière gaz ou fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique et plomberie. Labels QUALIPAC. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marine:#0b2a5b;
+  --rouge:#e63946;     /* fond uniquement, texte noir dessus (5.1:1) */
+  --jaune:#ffd166;
+  --blanc:#ffffff;
+  --noir:#111111;
+  --marine-clair:#dfe7f4;
+  --creme:#fff6dc;
+  --bord:3px solid var(--noir);
+  --ombre:6px 6px 0 var(--noir);
+  --ombre-s:4px 4px 0 var(--noir);
+  --titre:"Bowlby One SC","Arial Black",Impact,sans-serif;
+  --texte:"Public Sans",system-ui,-apple-system,sans-serif;
+  --larg:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--blanc);color:var(--noir);font-family:var(--texte);font-size:1.02rem;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.02;margin:0;letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- boutons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--texte);font-weight:900;font-size:1.02rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:14px 22px;border:var(--bord);box-shadow:var(--ombre-s);background:var(--jaune);color:var(--noir);cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--noir)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--noir)}
+.btn--rouge{background:var(--rouge)}
+.btn--blanc{background:var(--blanc)}
+.btn--marine{background:var(--marine);color:var(--blanc)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px dashed var(--rouge);outline-offset:3px}
+
+/* ---------- navigation ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--blanc);border-bottom:var(--bord)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.marque__logo{width:44px;height:44px;flex:none;background:var(--rouge);border:var(--bord);box-shadow:3px 3px 0 var(--noir);display:grid;place-items:center;transform:rotate(-4deg)}
+.marque__logo svg{width:28px;height:28px}
+.marque__nom{font-family:var(--titre);font-size:1.12rem;line-height:.95;color:var(--marine)}
+.marque__nom small{display:block;font-family:var(--texte);font-weight:800;font-size:.68rem;letter-spacing:.16em;color:var(--noir);margin-top:4px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:8px 12px;font-weight:800;font-size:.92rem;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;border:2px solid transparent;transition:background .15s,border-color .15s}
+.menu a:hover{background:var(--jaune);border-color:var(--noir)}
+.menu a.btn{display:inline-flex;padding:10px 16px;font-size:.88rem;margin-left:8px;border:var(--bord)}
+.menu .btn:hover{background:var(--rouge)}
+.burger{display:none;width:50px;height:50px;border:var(--bord);background:var(--jaune);box-shadow:3px 3px 0 var(--noir);cursor:pointer;padding:0;place-items:center}
+.burger span{display:block;width:24px;height:3px;background:var(--noir);margin:4px auto;transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(11px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-11px) rotate(-45deg)}
+
+/* ---------- en-tête ---------- */
+.hero{padding:118px 0 70px;background:var(--marine);color:var(--blanc);position:relative;overflow:hidden;border-bottom:var(--bord)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.5px,transparent 1.6px);background-size:22px 22px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+.fanions{display:flex;gap:0;margin:0 0 22px;padding:0;list-style:none}
+.fanions li{width:26px;height:30px;clip-path:polygon(0 0,100% 0,50% 100%);margin-right:4px}
+.fanions li:nth-child(3n+1){background:var(--rouge)}
+.fanions li:nth-child(3n+2){background:var(--jaune)}
+.fanions li:nth-child(3n){background:var(--blanc)}
+.etiquette{display:inline-block;background:var(--jaune);color:var(--noir);border:var(--bord);box-shadow:var(--ombre-s);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;padding:6px 12px;transform:rotate(-2.5deg)}
+.hero h1{font-size:clamp(2.7rem,7.2vw,6.1rem);margin:22px 0 22px;text-shadow:5px 5px 0 var(--noir)}
+.hero h1 .r{color:var(--jaune)}
+.hero h1 .ligne{display:block}
+.hero__accroche{font-size:clamp(1.08rem,1.6vw,1.26rem);max-width:34em;color:#e9eef8;margin-bottom:28px}
+.hero__accroche strong{color:var(--blanc)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:16px}
+.hero__mini{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-weight:700;font-size:.95rem}
+.hero__mini span{display:inline-flex;align-items:center;gap:8px}
+.hero__mini svg{width:18px;height:18px;flex:none}
+
+.rade{position:relative;aspect-ratio:1/1.02;max-width:560px;margin-left:auto;width:100%}
+.rade__cadre{position:absolute;inset:0;background:var(--jaune);border:4px solid var(--noir);box-shadow:10px 10px 0 var(--noir);overflow:hidden}
+.rade__cadre svg{width:100%;height:100%}
+.tampons{position:absolute;right:-14px;top:22px;display:flex;flex-direction:column;align-items:flex-end;gap:14px;z-index:2}
+.tampon{display:flex;align-items:center;gap:10px;background:var(--blanc);color:var(--noir);border:var(--bord);box-shadow:var(--ombre-s);padding:9px 14px 9px 10px;font-weight:900;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;transition:transform .2s}
+.tampon small{display:block;font-weight:700;font-size:.66rem;letter-spacing:.12em;margin-top:2px}
+.tampon i{width:34px;height:34px;flex:none;border:2.5px solid var(--noir);border-radius:50%;display:grid;place-items:center;font-style:normal}
+.tampon i svg{width:20px;height:20px}
+.tampon:nth-child(1){transform:rotate(-5deg);background:var(--rouge)}
+.tampon:nth-child(1) i{background:var(--blanc)}
+.tampon:nth-child(2){transform:rotate(3deg);margin-right:26px}
+.tampon:nth-child(2) i{background:var(--jaune)}
+.tampon:nth-child(3){transform:rotate(-2deg);background:var(--jaune);margin-right:6px}
+.tampon:nth-child(3) i{background:var(--blanc)}
+.tampon:hover{transform:rotate(0) scale(1.04)}
+.rade__source{position:absolute;left:-12px;bottom:-16px;z-index:2;background:var(--noir);color:var(--blanc);font-size:.75rem;font-weight:700;letter-spacing:.06em;padding:6px 10px;transform:rotate(-2deg);text-transform:uppercase}
+.rade__source a{color:var(--jaune)}
+.voilier{animation:vogue 7s ease-in-out infinite alternate}
+@keyframes vogue{from{transform:translateX(0)}to{transform:translateX(-26px)}}
+.helice{transform-origin:center;transform-box:fill-box;animation:tourne 2.4s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+
+/* ---------- bandeau de confiance ---------- */
+.confiance{background:var(--jaune);border-bottom:var(--bord);overflow:hidden}
+.confiance ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
+.confiance li{display:flex;align-items:center;gap:10px;padding:18px 26px;font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;border-right:var(--bord)}
+.confiance li:last-child{border-right:0}
+.confiance svg{width:24px;height:24px;flex:none}
+.confiance a{text-decoration:none}
+.confiance a:hover{text-decoration:underline;text-decoration-thickness:3px}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:96px 0}
+.sec--creme{background:var(--creme);border-top:var(--bord);border-bottom:var(--bord)}
+.sec--marine{background:var(--marine);color:var(--blanc);border-top:var(--bord);border-bottom:var(--bord)}
+.sec--rouge{background:var(--rouge);border-top:var(--bord);border-bottom:var(--bord)}
+.tete{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:50px}
+.tete h2{font-size:clamp(2.1rem,4.6vw,3.6rem);max-width:15em}
+.tete p{max-width:30em;margin:0;font-size:1.06rem}
+.num{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.num b{background:var(--noir);color:var(--jaune);padding:4px 9px;font-family:var(--titre);font-weight:400;letter-spacing:.04em;font-size:.9rem}
+.sec--marine .num b{background:var(--jaune);color:var(--noir)}
+.surligne{background:linear-gradient(transparent 58%,var(--jaune) 58%,var(--jaune) 92%,transparent 92%);padding:0 .08em}
+.sec--creme .surligne{background:linear-gradient(transparent 58%,var(--rouge) 58%,var(--rouge) 92%,transparent 92%)}
+
+/* services */
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.carte{background:var(--blanc);border:var(--bord);box-shadow:var(--ombre);padding:26px 24px 24px;position:relative;transition:transform .18s,box-shadow .18s}
+.carte:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--noir)}
+.carte__ico{width:74px;height:74px;border:var(--bord);display:grid;place-items:center;margin-bottom:18px;transform:rotate(-3deg);transition:transform .2s}
+.carte:hover .carte__ico{transform:rotate(3deg) scale(1.05)}
+.carte__ico svg{width:48px;height:48px}
+.carte:nth-child(3n+1) .carte__ico{background:var(--jaune)}
+.carte:nth-child(3n+2) .carte__ico{background:var(--rouge)}
+.carte:nth-child(3n) .carte__ico{background:var(--marine-clair)}
+.carte h3{font-size:1.4rem;color:var(--marine);margin-bottom:10px}
+.carte p{margin:0;color:#2b2b2b}
+.carte__tag{position:absolute;top:-14px;right:16px;background:var(--noir);color:var(--blanc);font-weight:800;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;transform:rotate(3deg)}
+
+/* pourquoi */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.atout{border:var(--bord);background:var(--blanc);padding:24px 20px;box-shadow:var(--ombre-s);transition:transform .18s}
+.atout:nth-child(even){transform:translateY(22px)}
+.atout:hover{transform:translateY(-6px) rotate(-1deg)}
+.atout:nth-child(even):hover{transform:translateY(16px) rotate(1deg)}
+.atout svg{width:52px;height:52px;margin-bottom:14px}
+.atout h3{font-size:1.22rem;margin-bottom:8px}
+.atout p{margin:0;font-size:.98rem}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:e;border:var(--bord);box-shadow:var(--ombre);background:var(--blanc);color:var(--noir)}
+.etape{padding:30px 24px 28px;border-right:var(--bord);position:relative}
+.etape:last-child{border-right:0}
+.etape__n{font-family:var(--titre);font-size:3.4rem;line-height:1;color:var(--rouge);-webkit-text-stroke:2px var(--noir);display:block;margin-bottom:12px}
+.etape:nth-child(even){background:var(--creme)}
+.etape h3{font-size:1.2rem;margin-bottom:8px;color:var(--marine)}
+.etape p{margin:0;font-size:.97rem}
+.etape__fleche{position:absolute;right:-19px;top:40px;width:34px;height:34px;background:var(--jaune);border:var(--bord);border-radius:50%;display:grid;place-items:center;z-index:2;font-weight:900}
+.etape:last-child .etape__fleche{display:none}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.fiche{background:var(--blanc);border:var(--bord);box-shadow:var(--ombre);padding:0;transform:rotate(-1.5deg);color:var(--noir)}
+.fiche__tete{background:var(--rouge);border-bottom:var(--bord);padding:14px 20px;font-family:var(--titre);font-size:1.3rem;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fiche dl{margin:0;padding:8px 20px 14px}
+.fiche dl div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:12px 0;border-bottom:2px dashed #9a9a9a}
+.fiche dl div:last-child{border-bottom:0}
+.fiche dt{font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em;padding-top:2px}
+.fiche dd{margin:0;font-weight:600}
+.apropos__texte p{font-size:1.08rem}
+.apropos__texte h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:22px}
+.puces{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.puces li{border:2.5px solid var(--blanc);padding:6px 12px;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.real{border:var(--bord);background:var(--blanc);box-shadow:var(--ombre);margin:0;transition:transform .18s,box-shadow .18s}
+.real:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:10px 10px 0 var(--noir)}
+.real svg{width:100%;height:auto;aspect-ratio:4/3;border-bottom:var(--bord)}
+.real figcaption{padding:16px 18px 18px}
+.real h3{font-size:1.15rem;margin-bottom:6px;color:var(--marine)}
+.real p{margin:0 0 12px;font-size:.95rem}
+.prix{display:inline-block;background:var(--jaune);border:2.5px solid var(--noir);font-weight:900;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;padding:4px 10px;transform:rotate(-2deg)}
+.galerie__note{margin-top:30px;font-size:.92rem;font-weight:600}
+
+/* avis */
+.avis{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;background:var(--blanc);border:4px solid var(--noir);box-shadow:10px 10px 0 var(--noir);padding:38px 40px}
+.avis__ico{width:110px;height:110px;background:var(--jaune);border:var(--bord);display:grid;place-items:center;transform:rotate(-6deg)}
+.avis__ico svg{width:64px;height:64px}
+.avis h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:10px}
+.avis p{margin:0;max-width:40em}
+
+/* FAQ */
+.faq{max-width:900px;margin-inline:auto;display:grid;gap:16px}
+.q{border:var(--bord);background:var(--blanc);box-shadow:var(--ombre-s)}
+.q button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 22px;font-weight:800;font-size:1.06rem;line-height:1.35}
+.q button:hover{background:var(--jaune)}
+.q button:focus-visible{outline:3px dashed var(--rouge);outline-offset:-6px}
+.q__plus{width:34px;height:34px;flex:none;border:var(--bord);background:var(--rouge);display:grid;place-items:center;font-family:var(--titre);font-size:1.3rem;line-height:1;transition:transform .2s}
+.q button[aria-expanded="true"] .q__plus{transform:rotate(45deg);background:var(--jaune)}
+.q__r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.q__r>div{overflow:hidden}
+.q__r p{margin:0;padding:0 22px 20px;border-top:2px dashed #9a9a9a;padding-top:16px}
+.q.ouvert .q__r{grid-template-rows:1fr}
+
+/* horaires / contact */
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:start}
+.bloc{background:var(--blanc);border:var(--bord);box-shadow:var(--ombre);padding:28px;color:var(--noir)}
+.bloc + .bloc{margin-top:28px}
+.bloc h3{font-size:1.5rem;margin-bottom:14px;color:var(--marine)}
+.horaires{width:100%;border-collapse:collapse;font-weight:600}
+.horaires td{padding:9px 10px;border-bottom:2px solid #e5e5e5}
+.horaires td:last-child{text-align:right}
+.horaires tr.auj td{background:var(--jaune);border-bottom-color:var(--noir);font-weight:900}
+.horaires tr.auj td:first-child::after{content:" · aujourd'hui";font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+.indicatif{display:inline-block;margin-top:12px;font-size:.85rem;font-weight:700;background:var(--marine-clair);border:2px solid var(--noir);padding:4px 10px}
+.adresse{font-size:1.12rem;font-weight:700;margin:0 0 6px}
+.coord{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.coord a{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px;word-break:break-word}
+.form{display:grid;gap:16px}
+.form .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:6px;font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.form input,.form select,.form textarea{font:inherit;font-size:1rem;text-transform:none;letter-spacing:0;font-weight:500;border:var(--bord);padding:12px 14px;background:var(--blanc);color:var(--noir);border-radius:0;width:100%;transition:box-shadow .15s}
+.form input:focus,.form select:focus,.form textarea:focus{box-shadow:var(--ombre-s);outline:none}
+.form textarea{min-height:130px;resize:vertical}
+.retour{display:none;background:var(--jaune);border:var(--bord);padding:14px 16px;font-weight:800;margin:0}
+.retour.vu{display:block}
+
+/* pied */
+.pied{background:var(--noir);color:#f1f1f1;padding:70px 0 0}
+.pied__grille{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;padding-bottom:50px}
+.pied h3{font-family:var(--texte);font-weight:900;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jaune);margin-bottom:14px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--jaune);text-decoration:underline}
+.pied__nom{font-family:var(--titre);font-size:1.7rem;line-height:1;margin-bottom:14px;color:var(--blanc)}
+.pied__bas{border-top:2px solid #333;padding:18px 0;font-size:.86rem;color:#c9c9c9;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.demo{background:#1d1d1d;color:#bdbdbd;text-align:center;font-size:.8rem;padding:10px 16px;border-top:1px solid #2c2c2c}
+
+/* appel flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;width:62px;height:62px;border:var(--bord);background:var(--rouge);box-shadow:4px 4px 0 var(--noir);place-items:center;transform:rotate(-6deg)}
+.flottant svg{width:30px;height:30px}
+
+/* apparitions */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.vu{opacity:1;transform:none}
+.atout.rv.vu:nth-child(even){transform:translateY(22px)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .menu .lien-sec{display:none}
+}
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:56px}
+  .rade{margin:0 auto;max-width:520px}
+  .cartes,.galerie{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr)}
+  .etape:nth-child(2){border-right:0}
+  .etape:nth-child(-n+2){border-bottom:var(--bord)}
+  .etape:nth-child(2) .etape__fleche{display:none}
+  .apropos,.contact{grid-template-columns:1fr}
+  .pied__grille{grid-template-columns:1fr 1fr}
+  .avis{grid-template-columns:auto 1fr}
+  .avis .btn{grid-column:1/-1;justify-self:start}
+}
+@media (max-width:860px){
+  .burger{display:grid}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--jaune);border-bottom:var(--bord);padding:10px 16px 20px;transform:translateY(-120%);visibility:hidden;transition:transform .25s ease,visibility .25s}
+  .menu.ouvert{transform:none;visibility:visible}
+  .menu a{padding:14px 6px;border:0;border-bottom:2px solid var(--noir);font-size:1rem}
+  .menu .lien-sec{display:block}
+  .menu a.btn{display:flex;margin:16px 0 0;justify-content:center;background:var(--rouge);border:var(--bord)}
+  .flottant{display:grid}
+}
+@media (max-width:640px){
+  .sec{padding:70px 0}
+  .hero{padding:104px 0 60px}
+  .hero h1{text-shadow:3px 3px 0 var(--noir)}
+  .etiquette{font-size:.7rem;letter-spacing:.05em}
+  .hero__cta .btn{flex:1 1 100%;justify-content:center}
+  .cartes,.galerie,.atouts{grid-template-columns:1fr}
+  .atout:nth-child(even),.atout.rv.vu:nth-child(even){transform:none}
+  .atout:nth-child(even):hover{transform:translateY(-6px) rotate(1deg)}
+  .etapes{grid-template-columns:1fr}
+  .etape{border-right:0;border-bottom:var(--bord)}
+  .etape:last-child{border-bottom:0}
+  .etape__fleche{display:none}
+  .tampons{right:-6px;top:12px;gap:10px}
+  .tampon{font-size:.8rem;padding:7px 10px 7px 8px}
+  .tampon i{width:28px;height:28px}
+  .tampon i svg{width:16px;height:16px}
+  .rade__cadre{box-shadow:6px 6px 0 var(--noir)}
+  .rade__source{left:-4px}
+  .confiance li{border-right:0;border-bottom:2px solid var(--noir);width:100%;justify-content:flex-start;padding:14px 18px}
+  .confiance li:last-child{border-bottom:0}
+  .avis{grid-template-columns:1fr;padding:28px 22px;gap:22px}
+  .avis__ico{width:84px;height:84px}
+  .avis__ico svg{width:48px;height:48px}
+  .fiche dl div{grid-template-columns:1fr;gap:2px}
+  .form .duo{grid-template-columns:1fr}
+  .pied__grille{grid-template-columns:1fr}
+  .bloc{padding:22px 18px}
+  .marque__nom{font-size:.98rem}
+  .pied__bas{padding-bottom:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="marque" href="#accueil" aria-label="Plomberie Louis Martini, retour en haut">
+      <span class="marque__logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c-4 6-8 10-8 15a8 8 0 0 0 16 0c0-5-4-9-8-15z" fill="#fff"/><path d="M12.5 20a3.5 3.5 0 0 0 3.5 3.5"/></svg>
+      </span>
+      <span class="marque__nom">Louis Martini<small>Plomberie · Chauffage</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a class="lien-sec" href="#apropos">L'entreprise</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn btn--jaune" href="tel:+33787349434"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>07 87 34 94 34</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="accueil">
+<!-- ===== EN-TÊTE ===== -->
+<section class="hero" aria-labelledby="titre">
+  <div class="wrap">
+    <div class="hero__texte">
+      <ul class="fanions" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+      <span class="etiquette">Plombier chauffagiste · Toulon 83000</span>
+      <h1 id="titre"><span class="ligne">Plomberie</span><span class="ligne r">Louis Martini</span></h1>
+      <p class="hero__accroche">Quand le mistral s'engouffre dans la rade ou que l'été colle aux façades du centre-ville, votre confort ne devrait pas dépendre de la météo. <strong>Chaudière gaz ou fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique et plomberie</strong> : un artisan toulonnais, de la rue Groignard jusqu'à chez vous.</p>
+      <div class="hero__cta">
+        <a class="btn btn--rouge" href="tel:+33787349434"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a class="btn" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+      </div>
+      <div class="hero__mini">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>40 rue Groignard, Toulon</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Devis sur demande</span>
+      </div>
+    </div>
+
+    <div class="rade">
+      <div class="tampons" aria-label="Labels référencés">
+        <span class="tampon"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round"><path d="M12 3c-3 4-6 7-6 11a6 6 0 0 0 12 0c0-4-3-7-6-11z"/></svg></i><span>Qualipac<small>Chauffage</small></span></span>
+        <span class="tampon"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="4"/><path d="M10 15h4M10 11h4"/></svg></i><span>Qualipac<small>CET</small></span></span>
+        <span class="tampon"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></i><span>Chauffage+<small>Label</small></span></span>
+      </div>
+      <div class="rade__cadre">
+        <svg viewBox="0 0 500 510" role="img" aria-labelledby="svg-rade">
+          <title id="svg-rade">Illustration : la rade de Toulon, le Mont Faron, un voilier et une maison équipée d'une pompe à chaleur</title>
+          <!-- ciel -->
+          <rect width="500" height="510" fill="#ffd166"/>
+          <circle cx="110" cy="112" r="56" fill="#e63946" stroke="#111" stroke-width="4"/>
+          <g stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M110 30v18M110 176v18M28 112h18M174 112h18M52 54l13 13M155 157l13 13M52 170l13-13M155 67l13-13"/></g>
+          <!-- Mont Faron -->
+          <path d="M-10 268 C40 230 70 214 112 196 C150 180 170 168 205 150 C230 138 250 146 272 160 C300 178 318 170 345 176 C380 184 420 206 455 222 C480 234 500 240 520 246 V300 H-10Z" fill="#0b2a5b" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M150 182 l8 -10 8 10 M240 146 l7 -9 7 9 M330 176 l6 -8 6 8" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+          <!-- fort au sommet -->
+          <rect x="238" y="128" width="32" height="20" fill="#fff" stroke="#111" stroke-width="3.5"/>
+          <path d="M238 128v-6h6v6m6 0v-6h8v6m6 0v-6h6v6" fill="#fff" stroke="#111" stroke-width="3"/>
+          <!-- téléphérique -->
+          <path d="M60 290 L250 150" stroke="#111" stroke-width="2.5"/>
+          <g><rect x="150" y="214" width="20" height="14" fill="#e63946" stroke="#111" stroke-width="3"/><path d="M160 214v-8" stroke="#111" stroke-width="2.5"/></g>
+          <!-- mer -->
+          <rect x="-10" y="290" width="520" height="230" fill="#fff" />
+          <rect x="-10" y="290" width="520" height="230" fill="#0b2a5b" opacity=".16"/>
+          <path d="M-10 290 H520" stroke="#111" stroke-width="4"/>
+          <g fill="none" stroke="#0b2a5b" stroke-width="4" stroke-linecap="round"><path d="M20 330 q15 -10 30 0 t30 0"/><path d="M110 380 q15 -10 30 0 t30 0"/><path d="M30 440 q15 -10 30 0 t30 0"/><path d="M150 470 q15 -10 30 0 t30 0"/></g>
+          <!-- voilier -->
+          <g class="voilier">
+            <path d="M120 400 h110 l-16 24 h-80z" fill="#e63946" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M172 396 V292" stroke="#111" stroke-width="4"/>
+            <path d="M176 298 L226 392 H176Z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M168 312 L128 392 H168Z" fill="#ffd166" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M172 292 l22 6 -22 6z" fill="#e63946" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+          <!-- maison quai -->
+          <g>
+            <rect x="290" y="250" width="200" height="270" fill="#fff" stroke="#111" stroke-width="4"/>
+            <path d="M278 252 L390 196 L502 252Z" fill="#e63946" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M300 238 h180" stroke="#111" stroke-width="3" stroke-dasharray="10 8"/>
+            <!-- fenêtres -->
+            <g fill="#0b2a5b" stroke="#111" stroke-width="4"><rect x="312" y="280" width="46" height="58"/><rect x="420" y="280" width="46" height="58"/><rect x="420" y="372" width="46" height="58"/></g>
+            <g stroke="#ffd166" stroke-width="3"><path d="M335 280v58M312 309h46M443 280v58M420 309h46M443 372v58M420 401h46"/></g>
+            <g fill="#ffd166" stroke="#111" stroke-width="3"><rect x="304" y="276" width="8" height="66"/><rect x="358" y="276" width="8" height="66"/><rect x="412" y="276" width="8" height="66"/><rect x="466" y="276" width="8" height="66"/></g>
+            <!-- porte -->
+            <rect x="320" y="418" width="44" height="102" fill="#ffd166" stroke="#111" stroke-width="4"/>
+            <circle cx="355" cy="470" r="3.5" fill="#111"/>
+            <!-- PAC -->
+            <g>
+              <rect x="384" y="452" width="98" height="66" fill="#fff" stroke="#111" stroke-width="4"/>
+              <circle cx="418" cy="485" r="24" fill="#dfe7f4" stroke="#111" stroke-width="4"/>
+              <g class="helice"><path d="M418 485 l0 -19 q9 6 0 19 l16 9 q-10 6 -16 -9 l-16 9 q2 -11 16 -9z" fill="#0b2a5b" stroke="#111" stroke-width="2"/></g>
+              <circle cx="418" cy="485" r="4" fill="#111"/>
+              <path d="M452 466h20M452 476h20M452 486h20M452 496h20" stroke="#111" stroke-width="3"/>
+              <path d="M436 452 v-16 h30 v-30" fill="none" stroke="#111" stroke-width="4"/>
+              <path d="M446 452 v-10 h28 v-36" fill="none" stroke="#e63946" stroke-width="4"/>
+            </g>
+            <!-- souffle chaud / froid -->
+            <g fill="none" stroke-width="4" stroke-linecap="round"><path d="M372 462 q-10 -8 0 -16 t0 -16" stroke="#e63946"/><path d="M372 504 q-10 -8 0 -16" stroke="#0b2a5b"/></g>
+          </g>
+          <!-- quai -->
+          <rect x="-10" y="498" width="300" height="14" fill="#ffd166" stroke="#111" stroke-width="4"/>
+          <!-- fanions guirlande -->
+          <path d="M0 18 Q120 60 250 24 T500 30" fill="none" stroke="#111" stroke-width="3"/>
+          <g stroke="#111" stroke-width="2.5" stroke-linejoin="round"><path d="M30 28l14 26 10-22z" fill="#e63946"/><path d="M90 42l10 26 14-22z" fill="#fff"/><path d="M160 46l8 26 16-20z" fill="#0b2a5b"/><path d="M290 22l10 26 14-24z" fill="#e63946"/><path d="M360 18l10 26 14-24z" fill="#fff"/><path d="M430 22l10 26 14-24z" fill="#0b2a5b"/></g>
+        </svg>
+      </div>
+      <span class="rade__source">Labels : source <a href="https://www.hellowatt.fr/chauffage/chauffagistes/var/toulon" target="_blank" rel="noopener">HelloWatt</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONFIANCE ===== -->
+<section class="confiance" aria-label="Informations clés">
+  <ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Qualipac Chauffage</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Qualipac CET</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Chauffage+</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>EURL Martini · Toulon</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+33787349434">07 87 34 94 34</a></li>
+  </ul>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec" id="services" aria-labelledby="t-services">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <span class="num"><b>01</b>Services</span>
+        <h2 id="t-services">Le chaud, le froid, <span class="surligne">l'eau chaude</span> et tout le reste.</h2>
+      </div>
+      <p>Du remplacement de chaudière à la pompe à chaleur, de la clim pour les nuits de juillet à la fuite sous l'évier : un seul interlocuteur pour la maison.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte rv">
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="10" y="4" width="28" height="36" fill="#fff"/><rect x="15" y="10" width="18" height="8" fill="#0b2a5b"/><path d="M19 30c0-4 5-5 5-9 0 4 5 5 5 9a5 5 0 0 1-10 0z" fill="#e63946"/><path d="M18 40v5M30 40v5"/></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Installation, remplacement et mise en service de chaudières gaz ou fioul, avec un dimensionnement adapté à votre logement.</p>
+      </article>
+      <article class="carte rv">
+        <span class="carte__tag">Label QualiPAC</span>
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="12" width="42" height="26" fill="#fff"/><circle cx="18" cy="25" r="9" fill="#ffd166"/><path d="M18 16v18M9 25h18"/><path d="M33 18h8M33 24h8M33 30h8"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et pose de pompes à chaleur pour chauffer la maison efficacement, en remplacement ou en complément d'un système existant.</p>
+      </article>
+      <article class="carte rv">
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="8" width="40" height="16" rx="3" fill="#fff"/><path d="M10 19h28"/><path d="M14 30v8M24 30v12M34 30v8" stroke="#0b2a5b"/><path d="M11 33l3 3 3-3M21 37l3 3 3-3M31 33l3 3 3-3" stroke="#0b2a5b"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs réversibles et multisplits pour retrouver de la fraîcheur quand l'été varois s'installe, et un appoint de chaleur l'hiver.</p>
+      </article>
+      <article class="carte rv">
+        <span class="carte__tag">Label QualiPAC CET</span>
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="13" y="2" width="22" height="44" rx="8" fill="#fff"/><circle cx="24" cy="11" r="4" fill="#ffd166"/><path d="M18 22h12" /><path d="M18 30h12M18 36h12" stroke="#e63946"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Remplacement de votre cumulus par un ballon thermodynamique qui puise les calories de l'air pour produire l'eau chaude sanitaire.</p>
+      </article>
+      <article class="carte rv">
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M6 14h14v8h10a6 6 0 0 1 6 6v4h-8v-2a2 2 0 0 0-2-2H6z" fill="#fff"/><path d="M12 14V8M8 8h8"/><path d="M32 38c0-2 2-3 2-5 0 2 2 3 2 5a2 2 0 0 1-4 0z" fill="#0b2a5b"/></svg></div>
+        <h3>Plomberie</h3>
+        <p>Fuites, robinetterie, sanitaires, réseaux d'eau : les interventions du quotidien comme la rénovation d'une salle de bains.</p>
+      </article>
+      <article class="carte rv">
+        <div class="carte__ico" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="4" width="32" height="40" fill="#fff"/><path d="M14 14h20M14 21h20M14 28h12"/><path d="m27 36 4 4 8-9" stroke="#e63946"/></svg></div>
+        <h3>Conseil &amp; devis</h3>
+        <p>Visite, analyse de votre installation et proposition claire : on compare les solutions avant de choisir, sans engagement.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POURQUOI ===== -->
+<section class="sec sec--creme" aria-labelledby="t-pourquoi">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <span class="num"><b>02</b>Pourquoi nous choisir</span>
+        <h2 id="t-pourquoi">Un artisan, <span class="surligne">des labels</span>, un seul numéro.</h2>
+      </div>
+      <p>Pas de plateforme, pas de centre d'appel : vous parlez directement à celui qui viendra chez vous.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M26 4 8 10v13c0 12 8 21 18 25 10-4 18-13 18-25V10z" fill="#ffd166"/><path d="m18 26 6 6 11-12"/></svg>
+        <h3>Labels QualiPAC &amp; Chauffage+</h3>
+        <p>Référencé QUALIPAC Chauffage, QUALIPAC CET et CHAUFFAGE+ selon l'annuaire HelloWatt.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="26" cy="18" r="9" fill="#e63946"/><path d="M10 46c2-10 8-15 16-15s14 5 16 15"/></svg>
+        <h3>Un interlocuteur direct</h3>
+        <p>Du premier appel à la mise en service, le même artisan suit votre dossier et répond à vos questions.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M26 47s16-13 16-26a16 16 0 0 0-32 0c0 13 16 26 16 26z" fill="#dfe7f4"/><circle cx="26" cy="21" r="6" fill="#0b2a5b"/></svg>
+        <h3>Basé à Toulon</h3>
+        <p>Installé rue Groignard, au cœur de la ville : le Mourillon, le Cap Brun ou les quartiers ouest restent à portée.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 52 52" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M14 4h18l8 8v36H14z" fill="#fff"/><path d="M32 4v8h8"/><path d="M20 24h14M20 31h14M20 38h8"/><circle cx="12" cy="40" r="8" fill="#ffd166"/><path d="M12 36v4l3 2"/></svg>
+        <h3>Un devis lisible</h3>
+        <p>Chaque prestation est chiffrée sur devis détaillé, après avoir vu votre installation et compris vos besoins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ÉTAPES ===== -->
+<section class="sec sec--marine" aria-labelledby="t-etapes">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <span class="num"><b>03</b>Comment ça se passe</span>
+        <h2 id="t-etapes">Quatre étapes, <span style="color:var(--jaune)">zéro flou</span>.</h2>
+      </div>
+      <p>Que ce soit pour une chaudière qui fatigue ou un projet de pompe à chaleur, la démarche reste la même.</p>
+    </div>
+    <ol class="etapes rv" style="list-style:none;margin:0;padding:0">
+      <li class="etape"><span class="etape__n">1</span><h3>Vous appelez</h3><p>Un coup de fil au 07 87 34 94 34 ou un message via le formulaire : vous décrivez votre besoin.</p><span class="etape__fleche" aria-hidden="true">→</span></li>
+      <li class="etape"><span class="etape__n">2</span><h3>On vient voir</h3><p>Visite sur place pour examiner l'installation, le logement et les contraintes techniques.</p><span class="etape__fleche" aria-hidden="true">→</span></li>
+      <li class="etape"><span class="etape__n">3</span><h3>Devis détaillé</h3><p>Vous recevez une proposition écrite, poste par poste. Vous prenez le temps de décider.</p><span class="etape__fleche" aria-hidden="true">→</span></li>
+      <li class="etape"><span class="etape__n">4</span><h3>Pose &amp; mise en service</h3><p>Installation soignée, réglages, explications d'usage et chantier laissé propre.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section class="sec" id="apropos" aria-labelledby="t-apropos">
+  <div class="wrap apropos">
+    <div class="fiche rv" aria-label="Fiche entreprise">
+      <div class="fiche__tete"><span>Fiche d'identité</span><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 4h4v28H4z" fill="#111"/><path d="M8 5h22l-6 7 6 7H8z" fill="#fff" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+      <dl>
+        <div><dt>Enseigne</dt><dd>Plomberie Louis Martini</dd></div>
+        <div><dt>Société</dt><dd>EURL Martini</dd></div>
+        <div><dt>Métier</dt><dd>Plombier chauffagiste</dd></div>
+        <div><dt>Adresse</dt><dd>40 rue Groignard, 83000 Toulon</dd></div>
+        <div><dt>Labels</dt><dd>QUALIPAC Chauffage · QUALIPAC CET · CHAUFFAGE+ <small>(source HelloWatt)</small></dd></div>
+      </dl>
+    </div>
+    <div class="apropos__texte rv">
+      <span class="num"><b>04</b>L'entreprise</span>
+      <h2 id="t-apropos">Un plombier chauffagiste <span class="surligne">de la rue Groignard</span>.</h2>
+      <p>Plomberie Louis Martini, c'est l'activité de Louis Martini, exercée sous la forme de l'EURL Martini depuis son immatriculation en 2022, au 40 rue Groignard à Toulon.</p>
+      <p>L'entreprise intervient sur tout ce qui produit de la chaleur, du froid ou de l'eau chaude : chaudières à gaz ou fioul, pompes à chaleur et climatisation, chauffe-eau thermodynamiques, sans oublier la plomberie du quotidien.</p>
+      <p>Les labels QUALIPAC Chauffage, QUALIPAC CET et CHAUFFAGE+ qui lui sont associés sur l'annuaire HelloWatt témoignent d'un savoir-faire reconnu sur les équipements à énergie renouvelable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RÉALISATIONS ===== -->
+<section class="sec sec--creme" id="realisations" aria-labelledby="t-real">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <span class="num"><b>05</b>Types de chantiers</span>
+        <h2 id="t-real">Ce qu'on installe, <span class="surligne">en vrai</span>.</h2>
+      </div>
+      <p>Quelques exemples des installations que nous réalisons. Chaque logement est différent : les tarifs sont toujours établis sur devis.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'une chaudière murale gaz dans une cuisine">
+          <rect width="400" height="300" fill="#dfe7f4"/>
+          <path d="M0 230h400" stroke="#111" stroke-width="4"/><rect y="230" width="400" height="70" fill="#ffd166"/>
+          <g stroke="#111" stroke-width="3"><path d="M0 255h400M0 280h400M60 230v25M140 230v25M220 230v25M300 230v25M100 255v25M180 255v25M260 255v25M340 255v25"/></g>
+          <rect x="140" y="40" width="120" height="150" fill="#fff" stroke="#111" stroke-width="4"/>
+          <rect x="158" y="62" width="84" height="30" fill="#0b2a5b" stroke="#111" stroke-width="3"/>
+          <text x="200" y="83" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="18" fill="#ffd166">55°</text>
+          <circle cx="170" cy="120" r="8" fill="#e63946" stroke="#111" stroke-width="3"/><circle cx="200" cy="120" r="8" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="230" cy="120" r="8" fill="#fff" stroke="#111" stroke-width="3"/>
+          <path d="M155 190v40M175 190v40M200 190v40M225 190v40M245 190v40" stroke="#111" stroke-width="5"/>
+          <path d="M175 190v40" stroke="#e63946" stroke-width="5"/>
+          <path d="M200 40V0" stroke="#111" stroke-width="10"/><path d="M200 40V0" stroke="#fff" stroke-width="4"/>
+          <path d="M40 60h60v70H40z" fill="#fff" stroke="#111" stroke-width="4"/><path d="M70 60v70M40 95h60" stroke="#111" stroke-width="3"/>
+          <path d="M300 120h70v110h-70z" fill="#e63946" stroke="#111" stroke-width="4"/><path d="M335 120v110" stroke="#111" stroke-width="3"/>
+        </svg>
+        <figcaption><h3>Chaudière murale gaz</h3><p>Remplacement d'un ancien modèle, raccordements et mise en service.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'une pompe à chaleur air-eau posée en façade">
+          <rect width="400" height="300" fill="#ffd166"/>
+          <rect x="30" y="20" width="340" height="250" fill="#fff" stroke="#111" stroke-width="4"/>
+          <g stroke="#111" stroke-width="2" opacity=".35"><path d="M30 60h340M30 100h340M30 140h340M30 180h340M30 220h340"/></g>
+          <rect x="60" y="40" width="70" height="90" fill="#0b2a5b" stroke="#111" stroke-width="4"/><path d="M95 40v90M60 85h70" stroke="#ffd166" stroke-width="3"/>
+          <rect x="190" y="150" width="160" height="100" fill="#fff" stroke="#111" stroke-width="4"/>
+          <circle cx="245" cy="200" r="36" fill="#dfe7f4" stroke="#111" stroke-width="4"/>
+          <g class="helice"><path d="M245 200 l0 -28 q14 9 0 28 l24 14 q-15 9 -24 -14 l-24 14 q3 -17 24 -14z" fill="#0b2a5b" stroke="#111" stroke-width="2"/></g>
+          <path d="M300 168h36M300 184h36M300 200h36M300 216h36M300 232h36" stroke="#111" stroke-width="3"/>
+          <path d="M215 150V120h-40V40" fill="none" stroke="#111" stroke-width="5"/><path d="M232 150V110h-40V40" fill="none" stroke="#e63946" stroke-width="5"/>
+          <path d="M180 250h180v20H180z" fill="#111"/>
+          <path d="M150 190q-12-10 0-20t0-20" fill="none" stroke="#e63946" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <figcaption><h3>Pompe à chaleur en façade</h3><p>Unité extérieure posée sur support, liaisons vers le module intérieur.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'un climatiseur mural split dans un séjour">
+          <rect width="400" height="300" fill="#fff"/>
+          <rect y="0" width="400" height="300" fill="#e63946" opacity=".14"/>
+          <rect x="70" y="40" width="260" height="62" rx="10" fill="#fff" stroke="#111" stroke-width="4"/>
+          <path d="M86 86h228" stroke="#111" stroke-width="3"/><circle cx="300" cy="60" r="5" fill="#0b2a5b"/>
+          <g fill="none" stroke="#0b2a5b" stroke-width="4" stroke-linecap="round"><path d="M120 120q10 20 0 40t0 40"/><path d="M200 120q10 20 0 40t0 40"/><path d="M280 120q10 20 0 40t0 40"/></g>
+          <g stroke="#0b2a5b" stroke-width="3" stroke-linecap="round"><path d="M160 150l0 14M153 157h14M156 152l8 10M164 152l-8 10"/><path d="M240 175l0 14M233 182h14M236 177l8 10M244 177l-8 10"/></g>
+          <path d="M0 250h400" stroke="#111" stroke-width="4"/><rect y="250" width="400" height="50" fill="#0b2a5b"/>
+          <rect x="40" y="200" width="110" height="50" fill="#ffd166" stroke="#111" stroke-width="4"/><rect x="40" y="184" width="30" height="66" fill="#ffd166" stroke="#111" stroke-width="4"/>
+          <rect x="300" y="170" width="60" height="80" fill="#fff" stroke="#111" stroke-width="4"/><path d="M330 170v-20M318 150h24" stroke="#111" stroke-width="4"/>
+          <text x="330" y="218" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="20" fill="#0b2a5b">24°</text>
+        </svg>
+        <figcaption><h3>Climatisation réversible</h3><p>Split mural dans un séjour, pour des nuits d'été enfin respirables.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'un chauffe-eau thermodynamique dans un cellier">
+          <rect width="400" height="300" fill="#dfe7f4"/>
+          <path d="M0 260h400" stroke="#111" stroke-width="4"/><rect y="260" width="400" height="40" fill="#fff"/>
+          <rect x="150" y="28" width="100" height="232" rx="26" fill="#fff" stroke="#111" stroke-width="4"/>
+          <path d="M150 80h100" stroke="#111" stroke-width="4"/>
+          <circle cx="200" cy="54" r="14" fill="#ffd166" stroke="#111" stroke-width="3"/><path d="M200 44v20M190 54h20" stroke="#111" stroke-width="3"/>
+          <rect x="172" y="104" width="56" height="22" fill="#0b2a5b" stroke="#111" stroke-width="3"/>
+          <text x="200" y="121" text-anchor="middle" font-family="Arial Black,Arial" font-weight="900" font-size="14" fill="#ffd166">ECO</text>
+          <rect x="166" y="150" width="68" height="90" fill="#e63946" opacity=".2"/>
+          <path d="M175 240v-60M200 240v-80M225 240v-50" stroke="#e63946" stroke-width="6" stroke-linecap="round"/>
+          <path d="M250 50h60v-30M250 66h80v-46" fill="none" stroke="#111" stroke-width="5"/>
+          <path d="M60 140h60v120H60z" fill="#ffd166" stroke="#111" stroke-width="4"/><path d="M60 180h60M60 220h60" stroke="#111" stroke-width="3"/>
+          <path d="M310 170q-10-10 0-20t0-20M340 170q-10-10 0-20t0-20" fill="none" stroke="#0b2a5b" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <figcaption><h3>Ballon thermodynamique</h3><p>Remplacement d'un cumulus électrique classique dans un cellier ou un garage.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'une chaufferie fioul avec cuve">
+          <rect width="400" height="300" fill="#ffd166"/>
+          <path d="M0 250h400" stroke="#111" stroke-width="4"/><rect y="250" width="400" height="50" fill="#111"/>
+          <rect x="40" y="80" width="120" height="170" fill="#fff" stroke="#111" stroke-width="4"/>
+          <rect x="60" y="100" width="80" height="40" fill="#0b2a5b" stroke="#111" stroke-width="3"/>
+          <circle cx="100" cy="190" r="22" fill="#e63946" stroke="#111" stroke-width="4"/><path d="M100 176v28M86 190h28" stroke="#111" stroke-width="3"/>
+          <path d="M100 80V20h60" fill="none" stroke="#111" stroke-width="10"/><path d="M100 80V20h60" fill="none" stroke="#fff" stroke-width="4"/>
+          <rect x="220" y="140" width="150" height="110" rx="22" fill="#dfe7f4" stroke="#111" stroke-width="4"/>
+          <path d="M240 170h110M240 200h110" stroke="#111" stroke-width="3" opacity=".5"/>
+          <path d="M160 220h60" stroke="#111" stroke-width="5"/>
+          <circle cx="330" cy="120" r="14" fill="#fff" stroke="#111" stroke-width="3"/><path d="M330 120l6-6" stroke="#e63946" stroke-width="3"/>
+          <path d="M330 134v6" stroke="#111" stroke-width="4"/>
+        </svg>
+        <figcaption><h3>Chaufferie fioul</h3><p>Remplacement de chaudière fioul et reprise des raccordements existants.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Illustration d'une salle de bains avec lavabo et douche">
+          <rect width="400" height="300" fill="#fff"/>
+          <g stroke="#0b2a5b" stroke-width="2" opacity=".35"><path d="M0 40h400M0 80h400M0 120h400M0 160h400M0 200h400M50 0v240M100 0v240M150 0v240M200 0v240M250 0v240M300 0v240M350 0v240"/></g>
+          <path d="M0 240h400" stroke="#111" stroke-width="4"/><rect y="240" width="400" height="60" fill="#0b2a5b"/>
+          <path d="M40 150h120l-10 40H50z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M100 150v-30h18" fill="none" stroke="#111" stroke-width="5"/><path d="M100 190v50" stroke="#111" stroke-width="6"/>
+          <rect x="60" y="40" width="80" height="70" fill="#dfe7f4" stroke="#111" stroke-width="4"/>
+          <path d="M240 20v220M360 20v220" stroke="#111" stroke-width="4"/><path d="M240 20h120" stroke="#111" stroke-width="4"/>
+          <path d="M320 20v30" stroke="#111" stroke-width="4"/><path d="M300 50h40l-6 10h-28z" fill="#e63946" stroke="#111" stroke-width="3"/>
+          <g stroke="#0b2a5b" stroke-width="3" stroke-linecap="round"><path d="M306 72v14M314 72v20M322 72v14M330 72v20"/></g>
+          <rect x="190" y="200" width="30" height="40" fill="#ffd166" stroke="#111" stroke-width="3"/>
+        </svg>
+        <figcaption><h3>Plomberie &amp; sanitaires</h3><p>Robinetterie, douche, lavabo, alimentation et évacuations.</p><span class="prix">Tarif sur devis</span></figcaption>
+      </figure>
+    </div>
+    <p class="galerie__note">Illustrations représentatives des prestations proposées, et non photos de chantiers réels.</p>
+  </div>
+</section>
+
+<!-- ===== AVIS ===== -->
+<section class="sec" aria-labelledby="t-avis">
+  <div class="wrap">
+    <div class="avis rv">
+      <div class="avis__ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#111" stroke-width="3.5" stroke-linejoin="round"><path d="M32 6l7.6 15.6 17 2.4-12.3 12 2.9 17L32 45l-15.2 8 2.9-17L7.4 24l17-2.4z" fill="#e63946"/></svg></div>
+      <div>
+        <h2 id="t-avis">Votre avis compte</h2>
+        <p>Vous avez fait appel à Plomberie Louis Martini ? Quelques mots sur Google aident vos voisins toulonnais à trouver un artisan de confiance, et nous aident à progresser.</p>
+      </div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Plomberie+Louis+Martini+40+rue+Groignard+83000+Toulon" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec sec--creme" id="faq" aria-labelledby="t-faq">
+  <div class="wrap">
+    <div class="tete rv" style="justify-content:center;text-align:center">
+      <div>
+        <span class="num"><b>06</b>Questions fréquentes</span>
+        <h2 id="t-faq">On vous répond <span class="surligne">franchement</span>.</h2>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="q rv"><button aria-expanded="false">Une pompe à chaleur est-elle adaptée au climat toulonnais ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Les hivers doux du littoral varois sont en général favorables aux pompes à chaleur air-eau ou air-air, qui fonctionnent d'autant mieux que les températures extérieures restent modérées. Le choix dépend toutefois de l'isolation, des émetteurs en place et de la configuration du logement : c'est ce que permet de vérifier la visite préalable.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Puis-je bénéficier d'aides comme MaPrimeRénov' ou les CEE ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Selon votre situation, la nature des travaux et les règles en vigueur au moment du projet, certains équipements pourraient ouvrir droit à des aides telles que MaPrimeRénov' ou les primes CEE. Les conditions évoluent régulièrement : nous pouvons vous indiquer les pistes à étudier, et le site officiel france-renov.gouv.fr reste la référence pour vérifier votre éligibilité.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Faut-il remplacer ma chaudière gaz ou fioul ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Tout dépend de son âge, de son état et de votre consommation. Une chaudière bien entretenue peut encore rendre service ; dans d'autres cas, un remplacement par un modèle récent ou une solution hybride sera plus pertinent. Un diagnostic sur place permet de trancher sans précipitation.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Quelle différence entre un cumulus et un chauffe-eau thermodynamique ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Le cumulus chauffe l'eau uniquement par une résistance électrique. Le chauffe-eau thermodynamique intègre une petite pompe à chaleur qui récupère les calories de l'air ambiant ou extérieur, ce qui permet généralement de réduire la consommation d'électricité liée à l'eau chaude. Son emplacement doit être choisi avec soin (volume, bruit, ventilation).</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">La climatisation peut-elle aussi chauffer ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Oui, la plupart des climatiseurs actuels sont réversibles : ils rafraîchissent l'été et peuvent assurer un chauffage d'appoint, voire principal selon le logement, pendant l'hiver. Le dimensionnement est à adapter à la surface et à l'exposition des pièces.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Combien coûte une intervention ?<span class="q__plus" aria-hidden="true">+</span></button><div class="q__r"><div><p>Chaque chantier est différent, c'est pourquoi les prestations sont chiffrées sur devis, après échange ou visite. Le devis détaille le matériel et la main-d'œuvre pour que vous puissiez comparer en toute clarté.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="sec sec--marine" id="contact" aria-labelledby="t-contact">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <span class="num"><b>07</b>Contact</span>
+        <h2 id="t-contact">Parlons de <span style="color:var(--jaune)">votre projet</span>.</h2>
+      </div>
+      <p>Un appel suffit pour poser vos questions. Pour un devis, décrivez votre installation : on revient vers vous rapidement.</p>
+    </div>
+    <div class="contact">
+      <div>
+        <div class="bloc rv">
+          <h3>Où nous trouver</h3>
+          <p class="adresse">40 rue Groignard<br>83000 Toulon</p>
+          <ul class="coord">
+            <li>Tél. : <a href="tel:+33787349434">07 87 34 94 34</a></li>
+            <li>E-mail : <a href="mailto:plomberielouismartini@gmail.com">plomberielouismartini@gmail.com</a></li>
+          </ul>
+          <a class="btn btn--rouge" href="https://www.google.com/maps/search/?api=1&amp;query=40+rue+Groignard+83000+Toulon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 22 2l-9 19-2-8z"/></svg>Itinéraire</a>
+        </div>
+        <div class="bloc rv">
+          <h3>Horaires</h3>
+          <table class="horaires" id="horaires">
+            <tbody>
+              <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+              <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+              <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+            </tbody>
+          </table>
+          <span class="indicatif">Horaires indicatifs, à confirmer par téléphone</span>
+        </div>
+      </div>
+      <div class="bloc rv">
+        <h3>Demande de devis</h3>
+        <form class="form" id="form" novalidate>
+          <div class="duo">
+            <label>Nom<input type="text" name="nom" autocomplete="name" required></label>
+            <label>Téléphone<input type="tel" name="tel" autocomplete="tel" required></label>
+          </div>
+          <div class="duo">
+            <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+            <label>Commune<input type="text" name="ville" placeholder="Toulon, La Seyne…"></label>
+          </div>
+          <label>Votre besoin
+            <select name="besoin">
+              <option>Chaudière gaz ou fioul</option>
+              <option>Pompe à chaleur</option>
+              <option>Climatisation</option>
+              <option>Chauffe-eau thermodynamique</option>
+              <option>Plomberie</option>
+              <option>Autre demande</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" placeholder="Type de logement, équipement actuel, délai souhaité…"></textarea></label>
+          <button class="btn btn--rouge" type="submit" style="justify-self:start">Envoyer ma demande</button>
+          <p class="retour" id="retour" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="wrap pied__grille">
+    <div>
+      <p class="pied__nom">Plomberie<br>Louis Martini</p>
+      <p>Plombier chauffagiste à Toulon. Chaudières, pompes à chaleur, climatisation, chauffe-eau thermodynamiques et plomberie.</p>
+      <p style="font-size:.88rem;color:#c9c9c9">EURL Martini · QUALIPAC Chauffage · QUALIPAC CET · CHAUFFAGE+ (source HelloWatt)</p>
+    </div>
+    <div>
+      <h3>Coordonnées</h3>
+      <ul>
+        <li>40 rue Groignard<br>83000 Toulon</li>
+        <li><a href="tel:+33787349434">07 87 34 94 34</a></li>
+        <li><a href="mailto:plomberielouismartini@gmail.com" style="word-break:break-all">plomberielouismartini@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Horaires</h3>
+      <ul>
+        <li>Lundi–vendredi : sur rendez-vous</li>
+        <li>Samedi/Dimanche : fermé</li>
+        <li style="color:#c9c9c9;font-size:.88rem">Horaires à confirmer</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#apropos">L'entreprise</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact &amp; devis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap pied__bas">
+    <span>© <span id="annee">2026</span> Plomberie Louis Martini – EURL Martini, Toulon</span>
+    <span>Plomberie · Chauffage · Climatisation</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33787349434" aria-label="Appeler Plomberie Louis Martini au 07 87 34 94 34"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+(function(){
+  // burger
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function fermer(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');}
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  // apparitions
+  var els=document.querySelectorAll('.rv');
+  var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduit||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu');});}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }
+
+  // FAQ
+  document.querySelectorAll('.q button').forEach(function(btn){
+    btn.addEventListener('click',function(){var q=btn.parentElement,o=q.classList.toggle('ouvert');btn.setAttribute('aria-expanded',o?'true':'false');});
+  });
+
+  // jour actuel
+  var j=new Date().getDay(),tr=document.querySelector('#horaires tr[data-j="'+j+'"]');
+  if(tr)tr.classList.add('auj');
+
+  // formulaire
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var r=document.getElementById('retour');r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:reduit?'auto':'smooth'});});
+
+  document.getElementById('annee').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CP Clim Concept – Climatisation et chauffage à Toulon</title>
+<meta name="description" content="CP Clim Concept, à Toulon depuis 2012 : climatisation, pompe à chaleur, chaudière gaz ou fioul et chauffe-eau thermodynamique. Au pied du Mont Faron, devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#1b1036;
+  --nuit-2:#140b29;
+  --prune:#4b1d5e;
+  --corail:#ff6f61;
+  --orange:#ffa34d;
+  --glacier:#8fd3ff;
+  --blanc:#fbf8ff;
+  --doux:rgba(251,248,255,.8);   /* ~ 11:1 sur la nuit */
+  --verre:rgba(255,255,255,.07);
+  --verre-fort:rgba(255,255,255,.12);
+  --bord:rgba(255,255,255,.16);
+  --degrade:linear-gradient(120deg,var(--corail),var(--orange));
+  --titre:"Outfit",system-ui,sans-serif;
+  --texte:"Plus Jakarta Sans",system-ui,sans-serif;
+  --larg:1200px;
+  --rayon:26px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;font-family:var(--texte);color:var(--blanc);background:var(--nuit);line-height:1.65;font-size:1rem;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(60vw 50vw at 85% -10%,rgba(255,111,97,.22),transparent 60%),
+  radial-gradient(50vw 45vw at -10% 40%,rgba(75,29,94,.85),transparent 65%),
+  radial-gradient(45vw 40vw at 100% 85%,rgba(143,211,255,.10),transparent 60%),
+  linear-gradient(180deg,var(--nuit) 0%,var(--nuit-2) 100%)}
+a{color:inherit}
+img,svg{max-width:100%}
+h1,h2,h3,h4{font-family:var(--titre);margin:0;line-height:1.08;letter-spacing:-.02em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.verre{background:var(--verre);border:1px solid var(--bord);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border-radius:var(--rayon);box-shadow:0 20px 50px -20px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.14)}
+.grad{background:var(--degrade);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pastille{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.07);border:1px solid var(--bord);color:var(--blanc)}
+.pastille::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--degrade);box-shadow:0 0 12px var(--corail)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-family:var(--titre);font-weight:600;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-plein{background:var(--degrade);color:var(--nuit);box-shadow:0 12px 30px -10px rgba(255,111,97,.8)}
+.btn-plein:hover{transform:translateY(-3px);box-shadow:0 18px 36px -10px rgba(255,111,97,.95)}
+.btn-verre{background:rgba(255,255,255,.08);color:var(--blanc);border:1px solid rgba(255,255,255,.28);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.btn-verre:hover{background:rgba(255,255,255,.16);transform:translateY(-3px)}
+:focus-visible{outline:3px solid var(--glacier);outline-offset:3px}
+
+/* ---------- navigation ---------- */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:60}
+.nav .barre{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px;padding:0 10px 0 20px;border-radius:999px;background:rgba(27,16,54,.62);border:1px solid var(--bord);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);box-shadow:0 14px 40px -18px rgba(0,0,0,.7)}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:700;font-size:1.18rem;white-space:nowrap}
+.marque svg{width:34px;height:34px;flex:none}
+.marque span b{font-weight:300}
+.menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:9px 13px;border-radius:999px;text-decoration:none;font-size:.93rem;font-weight:500;color:var(--doux);transition:background .2s,color .2s}
+.menu a:hover{background:rgba(255,255,255,.09);color:var(--blanc)}
+.menu .appel a{background:var(--degrade);color:var(--nuit);font-weight:700;padding:10px 18px;margin-left:6px}
+.menu .appel a:hover{background:var(--degrade);filter:brightness(1.07)}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--bord);background:rgba(255,255,255,.08);color:var(--blanc);cursor:pointer;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .3s,background .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- en-tête ---------- */
+.hero{position:relative;padding:130px 0 70px;min-height:100vh;display:flex;align-items:center}
+.hero .grille{display:grid;grid-template-columns:1.02fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);font-weight:800;margin:22px 0 10px}
+.hero h1 small{display:block;font-size:.36em;font-weight:400;letter-spacing:.01em;color:var(--doux);margin-top:12px}
+.accroche{font-family:var(--titre);font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:500;line-height:1.3;margin:20px 0 16px;max-width:30ch}
+.hero p.chapo{color:var(--doux);font-size:1.07rem;max-width:52ch}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.mini-infos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.92rem;color:var(--doux)}
+.mini-infos span{display:inline-flex;align-items:center;gap:8px}
+.mini-infos svg{width:18px;height:18px;color:var(--orange)}
+
+.scene{position:relative;aspect-ratio:5/6;border-radius:34px;overflow:hidden;border:1px solid var(--bord);box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 8px rgba(255,255,255,.03)}
+.scene>svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.orbe{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75;pointer-events:none;animation:flotte 12s ease-in-out infinite}
+.orbe.o1{width:260px;height:260px;background:#ff6f61;top:-60px;right:-40px;opacity:.5}
+.orbe.o2{width:200px;height:200px;background:#8fd3ff;bottom:-80px;left:-50px;opacity:.25;animation-delay:-6s}
+@keyframes flotte{50%{transform:translate(20px,26px) scale(1.08)}}
+
+.telecommande{position:absolute;right:8%;bottom:6%;transform:rotate(-5deg);width:min(56%,270px);padding:20px 18px 22px;border-radius:40px;
+  background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.4);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);
+  box-shadow:0 30px 60px -20px rgba(20,8,40,.75),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -20px 40px -20px rgba(255,163,77,.35);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.telecommande:hover{transform:translateY(-8px) rotate(-2deg)}
+.telecommande::before{content:"";position:absolute;inset:6px 14px auto 14px;height:40%;border-radius:34px 34px 60% 60%;background:linear-gradient(180deg,rgba(255,255,255,.28),transparent);pointer-events:none}
+.tc-led{display:flex;justify-content:space-between;align-items:center;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--blanc);padding:0 6px 10px}
+.tc-led i{width:8px;height:8px;border-radius:50%;background:#7dffb2;box-shadow:0 0 10px #7dffb2}
+.ecran{position:relative;border-radius:24px;padding:16px 14px 14px;background:linear-gradient(160deg,rgba(27,16,54,.88),rgba(75,29,94,.82));border:1px solid rgba(255,255,255,.22);text-align:center;overflow:hidden}
+.ecran::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14) 0 30%,transparent 30%);pointer-events:none}
+.ecran .mode-lib{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--glacier);font-weight:700;transition:color .4s}
+.ecran .temp{font-family:var(--titre);font-weight:300;font-size:4.6rem;line-height:1;margin:6px 0 4px;letter-spacing:-.04em}
+.ecran .temp sup{font-size:.42em;font-weight:500;vertical-align:top;position:relative;top:.35em}
+.ventil{display:flex;justify-content:center;gap:4px;align-items:flex-end;height:16px}
+.ventil b{width:6px;border-radius:3px;background:var(--glacier);transition:background .4s}
+.ventil b:nth-child(1){height:5px}.ventil b:nth-child(2){height:9px}.ventil b:nth-child(3){height:13px}.ventil b:nth-child(4){height:16px;opacity:.3}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.mode{display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 2px 8px;border-radius:16px;border:1px solid rgba(255,255,255,.3);background:rgba(27,16,54,.35);color:var(--blanc);font:600 .7rem var(--texte);cursor:pointer;transition:background .3s,border-color .3s,transform .2s}
+.mode svg{width:20px;height:20px}
+.mode:hover{transform:translateY(-2px)}
+.mode[aria-pressed="true"]{background:rgba(255,255,255,.92);color:var(--nuit);border-color:#fff}
+.reglage{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.reglage button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(27,16,54,.4);color:var(--blanc);font:500 1.5rem/1 var(--titre);cursor:pointer;transition:background .2s,transform .2s}
+.reglage button:hover{background:rgba(255,255,255,.2);transform:scale(1.06)}
+.reglage span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blanc);font-weight:600}
+.etiquette{position:absolute;left:7%;top:6%;padding:12px 16px;border-radius:18px;font-size:.82rem;line-height:1.35;max-width:52%;background:rgba(27,16,54,.55);border:1px solid var(--bord);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.etiquette strong{display:block;font-family:var(--titre);font-size:.95rem}
+
+/* ---------- confiance ---------- */
+.confiance{position:relative;margin-top:-10px}
+.confiance .ruban{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:8px}
+.confiance .item{display:flex;align-items:center;gap:14px;padding:16px 18px;border-right:1px solid rgba(255,255,255,.1)}
+.confiance .item:last-child{border-right:0}
+.confiance .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,111,97,.3),rgba(255,163,77,.15));border:1px solid rgba(255,163,77,.35);flex:none}
+.confiance .ico svg{width:22px;height:22px;color:var(--orange)}
+.confiance strong{display:block;font-family:var(--titre);font-size:1.05rem;line-height:1.2}
+.confiance span{font-size:.86rem;color:var(--doux);line-height:1.35;display:block}
+.confiance a{text-decoration:none}
+
+/* ---------- sections ---------- */
+section{padding:110px 0 0}
+.tete{max-width:720px;margin-bottom:46px}
+.tete.centre{margin-inline:auto;text-align:center}
+.tete h2{font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:700;margin:18px 0 14px}
+.tete p{color:var(--doux);font-size:1.06rem;margin:0}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.carte{position:relative;padding:30px 28px 28px;overflow:hidden;transition:transform .35s ease,border-color .35s,background .35s}
+.carte::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;right:-80px;top:-80px;background:radial-gradient(circle,rgba(255,111,97,.35),transparent 70%);opacity:0;transition:opacity .4s}
+.carte:hover{transform:translateY(-6px);border-color:rgba(255,163,77,.5);background:rgba(255,255,255,.1)}
+.carte:hover::after{opacity:1}
+.carte .icone{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.22)}
+.carte .icone svg{width:36px;height:36px}
+.carte h3{font-size:1.32rem;font-weight:600;margin-bottom:10px}
+.carte p{color:var(--doux);margin:0;font-size:.97rem}
+.carte .tag{display:inline-block;margin-top:16px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--orange)}
+
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.atout{padding:28px 24px;transition:transform .3s}
+.atout:hover{transform:translateY(-5px)}
+.atout .num{font-family:var(--titre);font-size:3rem;font-weight:200;line-height:1;background:linear-gradient(180deg,var(--blanc),rgba(251,248,255,.25));-webkit-background-clip:text;background-clip:text;color:transparent}
+.atout h3{font-size:1.18rem;font-weight:600;margin:16px 0 8px}
+.atout p{color:var(--doux);font-size:.95rem;margin:0}
+
+.etapes{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:e}
+.etapes::before{content:"";position:absolute;left:6%;right:6%;top:36px;height:2px;background:linear-gradient(90deg,transparent,var(--corail),var(--orange),var(--glacier),transparent);opacity:.6}
+.etape{position:relative;text-align:center;padding:0 8px}
+.etape .rond{width:72px;height:72px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;font-family:var(--titre);font-weight:700;font-size:1.6rem;background:var(--nuit);border:1px solid rgba(255,255,255,.3);box-shadow:0 0 0 8px rgba(27,16,54,.9),0 0 30px -4px rgba(255,111,97,.7);position:relative;transition:transform .3s}
+.etape:hover .rond{transform:scale(1.08)}
+.etape .rond::before{content:"";position:absolute;inset:-1px;border-radius:50%;padding:2px;background:var(--degrade);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.etape h3{font-size:1.16rem;font-weight:600;margin-bottom:8px}
+.etape p{color:var(--doux);font-size:.94rem;margin:0}
+
+.apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+.apropos .visuel{position:relative;min-height:380px;overflow:hidden;padding:0}
+.apropos .visuel svg{position:absolute;inset:0;width:100%;height:100%}
+.apropos .texte{padding:44px 42px}
+.apropos .texte h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:700;margin:18px 0 20px}
+.apropos .texte p{color:var(--doux)}
+.fiche{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.fiche div{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.fiche dt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--glacier);font-weight:700}
+.fiche dd{margin:4px 0 0;font-family:var(--titre);font-weight:500;font-size:1.02rem;line-height:1.3}
+
+.galerie{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.real{overflow:hidden;grid-column:span 2;transition:transform .35s}
+.real.large{grid-column:span 3}
+.real:hover{transform:translateY(-6px)}
+.real .illu{position:relative;aspect-ratio:4/3;border-bottom:1px solid rgba(255,255,255,.12);overflow:hidden}
+.real .illu svg{width:100%;height:100%;display:block;transition:transform .6s ease}
+.real:hover .illu svg{transform:scale(1.04)}
+.real .leg{padding:20px 22px 22px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.real h3{font-size:1.12rem;font-weight:600;margin-bottom:4px}
+.real p{color:var(--doux);font-size:.9rem;margin:0}
+.prix{flex:none;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:rgba(255,163,77,.14);border:1px solid rgba(255,163,77,.45);color:var(--orange);white-space:nowrap}
+.note-galerie{margin-top:18px;font-size:.86rem;color:var(--doux);text-align:center}
+
+.avis{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;padding:40px 44px}
+.avis .etoiles{display:flex;gap:6px}
+.avis .etoiles svg{width:34px;height:34px}
+.avis h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;margin-bottom:8px}
+.avis p{color:var(--doux);margin:0}
+
+.faq{max-width:860px;margin-inline:auto;display:grid;gap:14px}
+.faq details{border-radius:20px;background:var(--verre);border:1px solid var(--bord);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:background .3s,border-color .3s}
+.faq details[open]{background:rgba(255,255,255,.1);border-color:rgba(255,163,77,.45)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 64px 22px 26px;position:relative;font-family:var(--titre);font-weight:600;font-size:1.12rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:rgba(255,255,255,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffa34d' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .rep{padding:0 26px 24px;color:var(--doux)}
+.faq .rep p{margin:0}
+
+.pratique{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pratique .bloc{padding:36px 34px}
+.pratique h3{font-size:1.5rem;font-weight:600;margin-bottom:6px}
+.indic{font-size:.85rem;color:var(--orange);font-weight:600;margin-bottom:18px}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:14px;border-bottom:1px solid rgba(255,255,255,.08);transition:background .3s}
+.horaires li span:last-child{color:var(--doux)}
+.horaires li.auj{background:linear-gradient(90deg,rgba(255,111,97,.28),rgba(255,163,77,.12));border-bottom-color:transparent;font-weight:700}
+.horaires li.auj span:last-child{color:var(--blanc)}
+.horaires li.auj span:first-child::after{content:"Aujourd’hui";margin-left:10px;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--blanc);color:var(--nuit);vertical-align:2px}
+.adresse{display:grid;gap:14px;margin:18px 0 26px}
+.adresse div{display:flex;gap:14px;align-items:flex-start}
+.adresse svg{width:22px;height:22px;color:var(--orange);flex:none;margin-top:3px}
+.adresse a{text-decoration:none;border-bottom:1px solid rgba(255,163,77,.5)}
+.adresse a:hover{color:var(--orange)}
+.mini-carte{border-radius:20px;overflow:hidden;border:1px solid var(--bord);margin-bottom:22px}
+.mini-carte svg{display:block;width:100%;height:auto}
+
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.contact .gauche h2{font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:700;margin:18px 0 16px}
+.contact .gauche p{color:var(--doux)}
+.contact .gros-tel{display:inline-block;font-family:var(--titre);font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;text-decoration:none;margin:8px 0 6px}
+.contact .gros-tel:hover{color:var(--orange)}
+form.verre{padding:34px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.plein{grid-column:1/-1}
+.champ label{font-size:.85rem;font-weight:600}
+.champ input,.champ select,.champ textarea{font:inherit;color:var(--blanc);background:rgba(27,16,54,.5);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:13px 15px;transition:border-color .2s,box-shadow .2s}
+.champ select option{color:#1b1036}
+.champ textarea{min-height:120px;resize:vertical}
+.champ input::placeholder,.champ textarea::placeholder{color:rgba(251,248,255,.55)}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:0;border-color:var(--orange);box-shadow:0 0 0 4px rgba(255,163,77,.2)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--doux);grid-column:1/-1}
+.consent input{margin-top:4px;accent-color:var(--corail)}
+form .btn{margin-top:22px;width:100%}
+.retour{display:none;margin-top:16px;padding:14px 16px;border-radius:14px;background:rgba(143,211,255,.14);border:1px solid rgba(143,211,255,.5);font-weight:600;text-align:center}
+.retour.on{display:block}
+
+footer{margin-top:110px;position:relative;border-top:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(20,11,41,.4),rgba(10,5,22,.9))}
+footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--corail),var(--orange),transparent)}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding:64px 0 44px}
+.pied h4{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--glacier);margin-bottom:14px;font-family:var(--texte);font-weight:700}
+.pied p{color:var(--doux);font-size:.93rem;margin:0 0 6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--orange)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.93rem;color:var(--doux)}
+.mentions{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;font-size:.82rem;color:rgba(251,248,255,.7);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo{background:#0c0618;color:rgba(251,248,255,.82);text-align:center;font-size:.8rem;padding:12px 16px}
+
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:55;width:60px;height:60px;border-radius:50%;background:var(--degrade);color:var(--nuit);align-items:center;justify-content:center;box-shadow:0 14px 30px -8px rgba(255,111,97,.9)}
+.appel-flottant svg{width:26px;height:26px}
+.appel-flottant::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,111,97,.6);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.9);opacity:1}to{transform:scale(1.35);opacity:0}}
+
+/* ---------- apparitions ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* ---------- adaptatif ---------- */
+@media (max-width:1080px){
+  .menu a{padding:9px 9px;font-size:.88rem}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .confiance .ruban{grid-template-columns:repeat(2,1fr)}
+  .confiance .item:nth-child(2){border-right:0}
+  .confiance .item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:inline-flex}
+  .menu{position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:14px;border-radius:26px;background:rgba(27,16,54,.95);border:1px solid var(--bord);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:14px 16px;font-size:1.05rem}
+  .menu .appel a{margin:6px 0 0;text-align:center}
+  .hero{min-height:0}
+  .hero .grille{grid-template-columns:1fr;gap:40px}
+  .scene{max-width:560px;width:100%;margin-inline:auto}
+  .etapes{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .etapes::before{display:none}
+  .apropos,.pratique,.contact{grid-template-columns:1fr}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .real,.real.large{grid-column:span 1}
+  .avis{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (max-width:640px){
+  section{padding-top:80px}
+  .nav{top:8px}
+  .nav .barre{padding:0 6px 0 14px;height:60px}
+  .marque{font-size:1.05rem}
+  .hero{padding:104px 0 50px}
+  .hero h1{margin-top:18px}
+  .btn{width:100%}
+  .services,.atouts,.galerie,.etapes{grid-template-columns:1fr}
+  .confiance .ruban{grid-template-columns:1fr}
+  .confiance .item{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)}
+  .confiance .item:last-child{border-bottom:0}
+  .telecommande{width:50%;right:5%;bottom:4%;padding:12px 10px 13px;border-radius:26px}
+  .tc-led{padding-bottom:6px;font-size:.6rem}
+  .ecran{padding:12px 10px 10px;border-radius:18px}
+  .ecran .temp{font-size:2.7rem}
+  .mode{font-size:.62rem;padding:7px 1px 6px;border-radius:12px}
+  .mode svg{width:17px;height:17px}
+  .reglage button{width:38px;height:38px;font-size:1.25rem}
+  .reglage span{font-size:.6rem}
+  .etiquette{display:none}
+  .apropos .texte,.pratique .bloc,form.verre{padding:28px 22px}
+  .fiche{grid-template-columns:1fr}
+  .champs{grid-template-columns:1fr}
+  .avis{padding:34px 22px}
+  .pied{grid-template-columns:1fr;padding-top:48px}
+  .appel-flottant{display:flex}
+  .horaires li span:last-child{white-space:nowrap}
+  .horaires li.auj span:first-child::after{content:"";display:inline-block;width:9px;height:9px;padding:0;vertical-align:1px;background:var(--orange);box-shadow:0 0 10px var(--orange)}
+  .demo{padding-bottom:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="barre">
+      <a class="marque" href="#accueil" aria-label="CP Clim Concept, retour en haut">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg-m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6f61"/><stop offset="1" stop-color="#ffa34d"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#lg-m)"/><path d="M20 9v22M10.5 14.5l19 11M29.5 14.5l-19 11" stroke="#1b1036" stroke-width="2.6" stroke-linecap="round"/><circle cx="20" cy="20" r="4.2" fill="#fbf8ff" stroke="#1b1036" stroke-width="2"/></svg>
+        <span>CP Clim <b>Concept</b></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="menu" id="menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#installations">Installations</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#infos">Horaires</a></li>
+          <li class="appel"><a href="tel:+33494252372">04 94 25 23 72</a></li>
+        </ul>
+      </nav>
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="accueil">
+<!-- ============ EN-TÊTE ============ -->
+<section class="hero">
+  <div class="wrap grille">
+    <div class="rv">
+      <span class="pastille">Toulon · au pied du Mont Faron · depuis 2012</span>
+      <h1>CP Clim <span class="grad">Concept</span><small>Climatisation, pompe à chaleur &amp; chauffage</small></h1>
+      <p class="accroche">De la canicule d’août aux matins de mistral, on règle votre maison sur le bon degré.</p>
+      <p class="chapo">Clim réversible, pompe à chaleur, chaudière gaz ou fioul, chauffe-eau thermodynamique : un seul installateur toulonnais pour le chaud, le froid et l’eau chaude, de la corniche Marius Escartefigue jusqu’aux quartiers de la rade.</p>
+      <div class="actions">
+        <a class="btn btn-plein" href="tel:+33494252372"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler le 04 94 25 23 72</a>
+        <a class="btn btn-verre" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+      </div>
+      <div class="mini-infos">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>83200 Toulon</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>cpclimconcept@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="scene rv d2" aria-label="Illustration : télécommande de climatisation en verre devant le Mont Faron et la rade au coucher du soleil">
+      <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1b1036"/><stop offset=".3" stop-color="#4b1d5e"/><stop offset=".55" stop-color="#b8405e"/><stop offset=".7" stop-color="#ff6f61"/><stop offset=".78" stop-color="#ffa34d"/>
+          </linearGradient>
+          <radialGradient id="soleil" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3d6"/><stop offset=".45" stop-color="#ffc27a"/><stop offset="1" stop-color="#ffa34d" stop-opacity="0"/></radialGradient>
+          <linearGradient id="mer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2575f"/><stop offset=".25" stop-color="#6a2a6b"/><stop offset="1" stop-color="#1b1036"/></linearGradient>
+          <linearGradient id="faron" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1650"/><stop offset="1" stop-color="#22123f"/></linearGradient>
+          <linearGradient id="faron2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b2a62"/><stop offset="1" stop-color="#45195a"/></linearGradient>
+        </defs>
+        <rect width="500" height="600" fill="url(#ciel)"/>
+        <!-- étoiles -->
+        <g fill="#fbf8ff"><circle cx="40" cy="40" r="1.2" opacity=".8"/><circle cx="120" cy="90" r=".9" opacity=".6"/><circle cx="210" cy="30" r="1.3" opacity=".7"/><circle cx="330" cy="70" r="1" opacity=".6"/><circle cx="450" cy="36" r="1.4" opacity=".8"/><circle cx="400" cy="120" r=".8" opacity=".5"/><circle cx="70" cy="150" r=".8" opacity=".5"/></g>
+        <!-- nuages fins -->
+        <g fill="#ffb38a" opacity=".35"><rect x="30" y="250" width="180" height="4" rx="2"/><rect x="70" y="262" width="120" height="3" rx="1.5"/><rect x="300" y="236" width="170" height="4" rx="2"/><rect x="340" y="248" width="90" height="3" rx="1.5"/></g>
+        <!-- soleil -->
+        <circle cx="105" cy="392" r="130" fill="url(#soleil)" opacity=".95"/>
+        <circle cx="105" cy="392" r="42" fill="#ffe0b0"/>
+        <!-- collines lointaines (Coudon) -->
+        <path d="M0 384 C40 372 80 376 120 370 C160 364 200 372 240 362 L240 400 L0 400Z" fill="url(#faron2)" opacity=".85"/>
+        <!-- Mont Faron : longue barre calcaire -->
+        <path d="M160 400 C182 366 204 316 236 276 C262 244 292 214 328 198 L392 186 C420 186 440 198 460 214 C480 228 495 236 510 240 L510 400Z" fill="url(#faron)"/>
+        <path d="M236 276 C262 244 292 214 328 198 L392 186 C420 186 440 198 460 214" stroke="#ff8a6a" stroke-width="2" fill="none" opacity=".55"/>
+        <!-- falaises : stries -->
+        <g stroke="#5d2468" stroke-width="2" opacity=".7" fill="none"><path d="M258 256 l-8 44"/><path d="M296 222 l-6 50"/><path d="M342 196 l-10 60"/><path d="M412 190 l-4 40"/></g>
+        <!-- mémorial / fort au sommet -->
+        <g fill="#22123f"><rect x="368" y="168" width="22" height="20"/><rect x="375" y="156" width="8" height="12"/><path d="M364 170h30l-4-6h-22z"/></g>
+        <!-- téléphérique -->
+        <path d="M378 176 C340 260 300 340 270 398" stroke="#fbf8ff" stroke-width=".8" opacity=".5" fill="none"/>
+        <rect x="316" y="296" width="10" height="8" rx="2" fill="#ffa34d" opacity=".9"/>
+        <!-- pinède -->
+        <g fill="#1b0f33"><circle cx="196" cy="368" r="8"/><circle cx="212" cy="360" r="7"/><circle cx="232" cy="334" r="8"/><circle cx="430" cy="200" r="8"/><circle cx="446" cy="208" r="7"/><circle cx="476" cy="226" r="9"/></g>
+        <!-- ville : lumières -->
+        <path d="M-10 400 L-10 376 L20 376 L20 366 L44 366 L44 380 L70 380 L70 360 L96 360 L96 374 L130 374 L130 368 L170 368 L170 380 L210 380 L210 362 L240 362 L240 372 L280 372 L280 358 L310 358 L310 376 L350 376 L350 364 L380 364 L380 378 L420 378 L420 366 L450 366 L450 380 L510 380 L510 400Z" fill="#170c2e"/>
+        <g fill="#ffc27a"><rect x="26" y="371" width="3" height="3"/><rect x="34" y="371" width="3" height="3"/><rect x="78" y="366" width="3" height="3"/><rect x="86" y="372" width="3" height="3"/><rect x="138" y="373" width="3" height="3"/><rect x="216" y="368" width="3" height="3"/><rect x="226" y="368" width="3" height="3"/><rect x="288" y="364" width="3" height="3"/><rect x="296" y="370" width="3" height="3"/><rect x="358" y="370" width="3" height="3"/><rect x="428" y="372" width="3" height="3"/><rect x="460" y="384" width="3" height="3"/></g>
+        <g fill="#8fd3ff" opacity=".8"><rect x="104" y="378" width="3" height="3"/><rect x="250" y="376" width="3" height="3"/><rect x="390" y="370" width="3" height="3"/></g>
+        <!-- mer de la rade -->
+        <rect y="400" width="500" height="200" fill="url(#mer)"/>
+        <g fill="#ffd8a8" transform="translate(-60 0)"><rect x="130" y="408" width="80" height="3" rx="1.5" opacity=".9"/><rect x="118" y="420" width="104" height="3" rx="1.5" opacity=".75"/><rect x="140" y="434" width="62" height="2.5" rx="1.2" opacity=".7"/><rect x="104" y="450" width="130" height="2.5" rx="1.2" opacity=".5"/><rect x="150" y="468" width="44" height="2" rx="1" opacity=".55"/><rect x="96" y="488" width="150" height="2" rx="1" opacity=".35"/><rect x="134" y="512" width="76" height="2" rx="1" opacity=".3"/></g>
+        <g stroke="#fbf8ff" stroke-width="1.2" opacity=".18" fill="none"><path d="M0 430 q20 -4 40 0 t40 0 t40 0"/><path d="M300 446 q20 -4 40 0 t40 0 t40 0 t40 0"/><path d="M20 520 q25 -5 50 0 t50 0"/><path d="M280 540 q25 -5 50 0 t50 0 t50 0"/></g>
+        <!-- voilier -->
+        <g transform="translate(200 424)"><path d="M0 18 h34 l-5 6 h-24z" fill="#170c2e"/><path d="M16 -14 v32 h-14z" fill="#2a1546"/><path d="M18 -8 v26 h12z" fill="#2a1546"/></g>
+        <!-- reflets de verre -->
+        <path d="M0 0 L500 0 L500 140 C380 90 220 70 0 120Z" fill="#fff" opacity=".04"/>
+      </svg>
+      <span class="orbe o1"></span><span class="orbe o2"></span>
+
+      <div class="telecommande" role="group" aria-label="Télécommande de démonstration">
+        <div class="tc-led"><span>CP Clim</span><i></i></div>
+        <div class="ecran">
+          <div class="mode-lib" id="mode-lib">Mode froid</div>
+          <div class="temp" aria-live="polite"><span id="temp">22</span><sup>°C</sup></div>
+          <div class="ventil" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+        </div>
+        <div class="modes">
+          <button class="mode" type="button" data-mode="froid" data-c="#8fd3ff" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>Froid</button>
+          <button class="mode" type="button" data-mode="chaud" data-c="#ffa34d" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>Chaud</button>
+          <button class="mode" type="button" data-mode="déshu" data-c="#c6b4ff" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg>Déshu</button>
+        </div>
+        <div class="reglage">
+          <button type="button" id="moins" aria-label="Baisser la température">−</button>
+          <span>Consigne</span>
+          <button type="button" id="plus" aria-label="Augmenter la température">+</button>
+        </div>
+      </div>
+      <div class="etiquette"><strong>Toulon, 19 h 40</strong>Le soleil plonge sur la rade, la maison reste à 22°.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<div class="confiance">
+  <div class="wrap">
+    <div class="ruban verre rv">
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div><div><strong>Depuis 2012</strong><span>Entreprise toulonnaise (SAS)</span></div></div>
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><div><strong>Au pied du Faron</strong><span>131 corniche Marius Escartefigue</span></div></div>
+      <div class="item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M4 7.5l16 9M20 7.5l-16 9"/></svg></div><div><strong>Chaud, froid, eau chaude</strong><span>Clim, PAC, chaudières, ballons</span></div></div>
+      <div class="item"><a href="tel:+33494252372" class="ico" aria-label="Appeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a><div><strong><a href="tel:+33494252372">04 94 25 23 72</a></strong><span>Devis sur demande</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="pastille">Nos services</span>
+      <h2>Trois métiers, <span class="grad">une seule maison tempérée</span></h2>
+      <p>Chaudière, pompe à chaleur, climatisation ou ballon d’eau chaude : on choisit avec vous l’équipement qui colle à votre logement, à votre budget et au climat varois.</p>
+    </div>
+    <div class="services">
+      <article class="carte verre rv">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="9" width="32" height="13" rx="4" stroke="#fbf8ff" stroke-width="2"/><path d="M8 18h24" stroke="#fbf8ff" stroke-width="2" stroke-linecap="round"/><circle cx="30" cy="13.5" r="1.4" fill="#8fd3ff"/><path d="M12 27c0 3-2 3-2 6M20 27c0 3-2 3-2 6M28 27c0 3-2 3-2 6" stroke="#8fd3ff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Split mural, multisplit ou gainable : de l’air frais pièce par pièce, silencieux et bien placé pour les nuits d’été.</p>
+        <span class="tag">Pose · mise en service</span>
+      </article>
+      <article class="carte verre rv d1">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="4" y="8" width="32" height="24" rx="3" stroke="#fbf8ff" stroke-width="2"/><circle cx="16" cy="20" r="7" stroke="#ffa34d" stroke-width="2"/><path d="M16 13v14M9 20h14M11 15l10 10M21 15L11 25" stroke="#ffa34d" stroke-width="1.4"/><path d="M27 13h5M27 17h5M27 21h5M27 25h5" stroke="#fbf8ff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Air/eau ou air/air réversible : elle chauffe l’hiver, rafraîchit l’été et puise l’essentiel de son énergie dans l’air extérieur.</p>
+        <span class="tag">Étude · installation</span>
+      </article>
+      <article class="carte verre rv d2">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="9" y="4" width="22" height="28" rx="3" stroke="#fbf8ff" stroke-width="2"/><rect x="14" y="9" width="12" height="5" rx="1.5" stroke="#8fd3ff" stroke-width="1.6"/><path d="M20 27c-3 0-4-2-4-4 0-3 4-5 4-8 0 3 4 5 4 8 0 2-1 4-4 4z" fill="#ff6f61"/><path d="M14 32v4M20 32v4M26 32v4" stroke="#fbf8ff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Chaudière gaz</h3>
+        <p>Remplacement ou installation d’une chaudière gaz à condensation, raccordement soigné et réglages adaptés à vos radiateurs.</p>
+        <span class="tag">Remplacement · réglage</span>
+      </article>
+      <article class="carte verre rv">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="6" y="10" width="20" height="24" rx="3" stroke="#fbf8ff" stroke-width="2"/><path d="M11 16h10M11 21h10" stroke="#fbf8ff" stroke-width="2" stroke-linecap="round"/><path d="M26 18h4a3 3 0 0 1 3 3v9" stroke="#ffa34d" stroke-width="2" stroke-linecap="round"/><path d="M33 4s3 3.4 3 5.6a3 3 0 0 1-6 0C30 7.4 33 4 33 4z" fill="#ffa34d"/><path d="M12 34v2M20 34v2" stroke="#fbf8ff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Chaudière fioul</h3>
+        <p>Entretien, remplacement ou conseil pour faire évoluer une installation fioul vers une solution plus économe.</p>
+        <span class="tag">Conseil · remplacement</span>
+      </article>
+      <article class="carte verre rv d1">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="11" y="6" width="18" height="30" rx="9" stroke="#fbf8ff" stroke-width="2"/><rect x="13" y="2" width="14" height="6" rx="2" stroke="#8fd3ff" stroke-width="1.6"/><circle cx="20" cy="5" r="1.5" fill="#8fd3ff"/><path d="M16 22h8M16 27h8" stroke="#ffa34d" stroke-width="2" stroke-linecap="round"/><path d="M20 14v4" stroke="#ff6f61" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon qui récupère les calories de l’air pour chauffer l’eau sanitaire : idéal dans un garage ou un cellier.</p>
+        <span class="tag">Dimensionnement · pose</span>
+      </article>
+      <article class="carte verre rv d2">
+        <div class="icone"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M25 6a8 8 0 0 0-7.6 10.4L6 27.8a3 3 0 1 0 4.2 4.2L21.6 20.6A8 8 0 0 0 32 13l-4.6 4.6-4.4-1.2-1.2-4.4L26.4 7.4A8 8 0 0 0 25 6z" stroke="#fbf8ff" stroke-width="2" stroke-linejoin="round"/><circle cx="8.6" cy="30.4" r="1.2" fill="#ff6f61"/></svg></div>
+        <h3>Entretien &amp; conseil</h3>
+        <p>Vérifications régulières, nettoyage des filtres, contrôle des réglages : un équipement suivi dure plus longtemps et consomme moins.</p>
+        <span class="tag">Suivi · dépannage</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POURQUOI ============ -->
+<section id="pourquoi">
+  <div class="wrap">
+    <div class="tete centre rv">
+      <span class="pastille">Pourquoi nous choisir</span>
+      <h2>Le confort, <span class="grad">sans prise de tête</span></h2>
+      <p>Ce qui compte quand on confie sa maison à un installateur : être écouté, compris et accompagné jusqu’au bout.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout verre rv"><div class="num">01</div><h3>Un seul interlocuteur</h3><p>Chauffage, climatisation et eau chaude : la même équipe pense l’ensemble, sans multiplier les intervenants.</p></div>
+      <div class="atout verre rv d1"><div class="num">02</div><h3>Pensé pour le Var</h3><p>Étés brûlants, mistral, air salin de la rade : on choisit et on place les appareils en conséquence.</p></div>
+      <div class="atout verre rv d2"><div class="num">03</div><h3>Un devis lisible</h3><p>Matériel, pose, mise en service : chaque poste est détaillé pour comparer en toute clarté.</p></div>
+      <div class="atout verre rv d3"><div class="num">04</div><h3>Toulonnais depuis 2012</h3><p>Une entreprise installée au pied du Faron, joignable directement par téléphone ou par mail.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTHODE ============ -->
+<section id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="pastille">Comment ça se passe</span>
+      <h2>Quatre étapes, <span class="grad">du premier appel au bon degré</span></h2>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><div class="rond">1</div><h3>Vous nous appelez</h3><p>Un échange pour comprendre votre logement, vos habitudes et ce qui ne va pas aujourd’hui.</p></div>
+      <div class="etape rv d1"><div class="rond">2</div><h3>Visite &amp; conseil</h3><p>On passe chez vous, on mesure, on regarde l’existant et on vous propose la solution adaptée.</p></div>
+      <div class="etape rv d2"><div class="rond">3</div><h3>Devis détaillé</h3><p>Vous recevez une proposition claire, avec le matériel et la pose. Vous prenez le temps de décider.</p></div>
+      <div class="etape rv d3"><div class="rond">4</div><h3>Pose &amp; réglages</h3><p>Installation propre, mise en service, explications sur l’usage… et on reste joignables ensuite.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section id="apropos">
+  <div class="wrap apropos">
+    <div class="visuel verre rv" aria-hidden="true">
+      <svg viewBox="0 0 480 420" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="ap-ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1550"/><stop offset=".6" stop-color="#7a2f6a"/><stop offset="1" stop-color="#ff8a5c"/></linearGradient>
+          <linearGradient id="ap-mur" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe9dc"/><stop offset="1" stop-color="#f0cdbb"/></linearGradient>
+        </defs>
+        <rect width="480" height="420" fill="url(#ap-ciel)"/>
+        <path d="M0 250 C80 220 150 210 230 200 C310 190 380 205 480 230 L480 420 L0 420Z" fill="#3a1650"/>
+        <g fill="#2a1046"><circle cx="40" cy="250" r="16"/><circle cx="70" cy="242" r="12"/><circle cx="430" cy="236" r="14"/></g>
+        <!-- maison provençale -->
+        <path d="M110 190 L240 120 L370 190Z" fill="#c24d3d"/>
+        <path d="M110 190 L240 120 L370 190" stroke="#8e3328" stroke-width="4" fill="none"/>
+        <g stroke="#a33f31" stroke-width="2" opacity=".6"><path d="M150 170 L330 170"/><path d="M180 152 L300 152"/></g>
+        <rect x="126" y="190" width="228" height="170" fill="url(#ap-mur)"/>
+        <rect x="150" y="218" width="44" height="58" rx="3" fill="#2a1550"/><rect x="150" y="218" width="44" height="58" rx="3" fill="#ffc27a" opacity=".55"/>
+        <path d="M172 218v58M150 246h44" stroke="#f0cdbb" stroke-width="3"/>
+        <rect x="142" y="218" width="8" height="58" fill="#5a8f86"/><rect x="194" y="218" width="8" height="58" fill="#5a8f86"/>
+        <rect x="286" y="218" width="44" height="58" rx="3" fill="#2a1550"/><rect x="286" y="218" width="44" height="58" rx="3" fill="#ffc27a" opacity=".45"/>
+        <path d="M308 218v58M286 246h44" stroke="#f0cdbb" stroke-width="3"/>
+        <rect x="278" y="218" width="8" height="58" fill="#5a8f86"/><rect x="330" y="218" width="8" height="58" fill="#5a8f86"/>
+        <path d="M220 360 v-62 a20 20 0 0 1 40 0 v62z" fill="#5a8f86"/>
+        <!-- unité extérieure -->
+        <g transform="translate(318 304)"><rect width="64" height="50" rx="5" fill="#fbf8ff" stroke="#c8bfd8" stroke-width="2"/><circle cx="24" cy="25" r="16" fill="#e8e2f2" stroke="#b6abc9" stroke-width="2"/><g stroke="#8f84a6" stroke-width="2"><path d="M24 11v28M10 25h28M14 15l20 20M34 15L14 35"/></g><path d="M46 12h12M46 18h12M46 24h12M46 30h12M46 36h12" stroke="#c8bfd8" stroke-width="2"/><rect x="6" y="50" width="6" height="8" fill="#8f84a6"/><rect x="52" y="50" width="6" height="8" fill="#8f84a6"/></g>
+        <path d="M350 304 V280 H330" stroke="#fbf8ff" stroke-width="3" fill="none"/>
+        <!-- souffle -->
+        <g stroke="#8fd3ff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".9"><path d="M396 316 q10 -6 20 0 t20 0"/><path d="M396 330 q10 -6 20 0 t20 0"/></g>
+        <rect x="0" y="358" width="480" height="62" fill="#2a1046"/>
+        <!-- pin parasol -->
+        <path d="M70 360 C74 320 80 290 86 262" stroke="#1b0f33" stroke-width="7" fill="none"/>
+        <ellipse cx="90" cy="250" rx="58" ry="22" fill="#1b0f33"/>
+        <ellipse cx="70" cy="240" rx="30" ry="14" fill="#241441"/>
+        <circle cx="400" cy="80" r="28" fill="#ffe0b0" opacity=".9"/>
+      </svg>
+    </div>
+    <div class="texte verre rv d1">
+      <span class="pastille">À propos</span>
+      <h2>Une entreprise de la rade, <span class="grad">au pied du Faron</span></h2>
+      <p>CP Clim Concept est une SAS toulonnaise créée en 2012, installée au 131 corniche Marius Escartefigue, là où la ville commence à grimper vers le Mont Faron.</p>
+      <p>Son métier : faire en sorte que chaque logement trouve le bon équilibre entre chaleur l’hiver et fraîcheur l’été, avec des chaudières gaz ou fioul, des pompes à chaleur, des climatisations et des chauffe-eau thermodynamiques.</p>
+      <p>Pour un premier contact, un simple appel ou un mail suffit : on vous rappelle pour en parler.</p>
+      <dl class="fiche">
+        <div><dt>Statut</dt><dd>SAS · créée en 2012</dd></div>
+        <div><dt>Adresse</dt><dd>131 corniche M. Escartefigue, Toulon</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33494252372">04 94 25 23 72</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:cpclimconcept@gmail.com">cpclimconcept@gmail.com</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTALLATIONS ============ -->
+<section id="installations">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="pastille">Types d’installations</span>
+      <h2>Ce que l’on pose, <span class="grad">en images</span></h2>
+      <p>Quelques exemples d’équipements que nous installons au quotidien. Chaque logement est différent : les tarifs sont établis sur devis, après visite.</p>
+    </div>
+    <div class="galerie">
+      <!-- split -->
+      <article class="real large verre rv">
+        <div class="illu"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b1a5a"/><stop offset="1" stop-color="#22123f"/></linearGradient></defs>
+          <rect width="400" height="300" fill="url(#g1)"/>
+          <rect x="0" y="236" width="400" height="64" fill="#1b1036"/>
+          <rect x="250" y="70" width="110" height="130" rx="4" fill="#ff8a5c" opacity=".7"/><rect x="250" y="70" width="110" height="130" rx="4" fill="none" stroke="#fbf8ff" stroke-width="4" opacity=".7"/><path d="M305 70v130M250 135h110" stroke="#fbf8ff" stroke-width="3" opacity=".6"/>
+          <path d="M250 160 C280 150 330 156 360 150 L360 200 L250 200Z" fill="#4b1d5e"/>
+          <g transform="translate(60 58)"><rect width="150" height="44" rx="12" fill="#fbf8ff"/><rect x="10" y="30" width="130" height="5" rx="2.5" fill="#d9d2e6"/><circle cx="132" cy="14" r="3" fill="#7dffb2"/></g>
+          <g stroke="#8fd3ff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".85"><path d="M80 116 q8 14 0 28 q-8 14 0 28"/><path d="M135 116 q8 14 0 28 q-8 14 0 28"/><path d="M190 116 q8 14 0 28 q-8 14 0 28"/></g>
+          <g transform="translate(60 196)"><rect width="120" height="40" rx="8" fill="#6b2a62"/><rect x="6" y="-14" width="50" height="20" rx="8" fill="#8a3a74"/><rect x="62" y="-14" width="52" height="20" rx="8" fill="#8a3a74"/></g>
+          <rect x="300" y="210" width="30" height="26" rx="3" fill="#2a1546"/><path d="M315 210 C305 190 330 180 315 166" stroke="#5a8f6a" stroke-width="5" fill="none"/><ellipse cx="322" cy="176" rx="10" ry="5" fill="#5a8f6a"/>
+        </svg></div>
+        <div class="leg"><div><h3>Split mural dans un séjour</h3><p>Unité intérieure discrète, flux d’air orienté loin du canapé.</p></div><span class="prix">Sur devis</span></div>
+      </article>
+      <!-- PAC façade -->
+      <article class="real large verre rv d1">
+        <div class="illu"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b1d5e"/><stop offset="1" stop-color="#ff6f61"/></linearGradient></defs>
+          <rect width="400" height="300" fill="url(#g2)"/>
+          <rect x="40" y="30" width="320" height="230" fill="#f3d9c9"/>
+          <g fill="#e6c4b1"><rect x="40" y="70" width="320" height="2"/><rect x="40" y="120" width="320" height="2"/><rect x="40" y="170" width="320" height="2"/><rect x="40" y="220" width="320" height="2"/></g>
+          <rect x="70" y="56" width="70" height="96" rx="3" fill="#2a1550"/><rect x="62" y="56" width="8" height="96" fill="#5a8f86"/><rect x="140" y="56" width="8" height="96" fill="#5a8f86"/>
+          <g transform="translate(200 168)"><rect width="132" height="84" rx="8" fill="#fbf8ff" stroke="#c8bfd8" stroke-width="3"/><circle cx="48" cy="42" r="30" fill="#ece6f4" stroke="#b6abc9" stroke-width="3"/><g stroke="#8f84a6" stroke-width="3"><path d="M48 14v56M20 42h56M28 22l40 40M68 22L28 62"/></g><circle cx="48" cy="42" r="6" fill="#8f84a6"/><path d="M92 16h30M92 26h30M92 36h30M92 46h30M92 56h30M92 66h30" stroke="#d2c9e0" stroke-width="3"/></g>
+          <rect x="206" y="252" width="14" height="10" fill="#6d6280"/><rect x="312" y="252" width="14" height="10" fill="#6d6280"/>
+          <path d="M240 168 V120 H170" stroke="#fbf8ff" stroke-width="5" fill="none"/><path d="M252 168 V128 H170" stroke="#d2c9e0" stroke-width="5" fill="none"/>
+          <rect x="0" y="260" width="400" height="40" fill="#2a1046"/>
+          <g fill="#ffa34d"><circle cx="350" cy="44" r="4"/></g>
+        </svg></div>
+        <div class="leg"><div><h3>Pompe à chaleur en façade</h3><p>Groupe extérieur sur supports, liaisons gainées et propres.</p></div><span class="prix">Sur devis</span></div>
+      </article>
+      <!-- chaudière gaz -->
+      <article class="real verre rv">
+        <div class="illu"><svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="225" fill="#2a1550"/>
+          <g fill="#352063"><rect x="0" y="0" width="300" height="12"/><rect x="20" y="30" width="40" height="40" rx="2"/><rect x="240" y="30" width="40" height="40" rx="2"/></g>
+          <rect x="105" y="26" width="90" height="120" rx="8" fill="#fbf8ff"/>
+          <rect x="120" y="44" width="60" height="22" rx="4" fill="#1b1036"/><text x="150" y="60" text-anchor="middle" font-family="Outfit,sans-serif" font-size="13" fill="#ffa34d">55°</text>
+          <circle cx="132" cy="84" r="6" fill="#d9d2e6"/><circle cx="168" cy="84" r="6" fill="#d9d2e6"/>
+          <path d="M150 120c-8 0-11-5-11-10 0-7 11-12 11-20 0 8 11 13 11 20 0 5-3 10-11 10z" fill="#ff6f61"/>
+          <g stroke="#c9a27a" stroke-width="5" fill="none"><path d="M120 146v40"/><path d="M140 146v50"/><path d="M160 146v50"/><path d="M180 146v40"/></g>
+          <rect x="150" y="10" width="14" height="16" fill="#b6abc9"/>
+          <rect x="0" y="200" width="300" height="25" fill="#1b1036"/>
+        </svg></div>
+        <div class="leg"><div><h3>Chaudière gaz murale</h3><p>Raccordements nets, réglages ajustés.</p></div><span class="prix">Sur devis</span></div>
+      </article>
+      <!-- ballon thermo -->
+      <article class="real verre rv d1">
+        <div class="illu"><svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="225" fill="#3a1a55"/>
+          <rect x="0" y="180" width="300" height="45" fill="#24123f"/>
+          <g fill="#4b2668"><rect x="20" y="40" width="60" height="8"/><rect x="20" y="80" width="60" height="8"/></g>
+          <g fill="#ffa34d" opacity=".8"><rect x="26" y="26" width="14" height="14" rx="2"/><rect x="46" y="30" width="12" height="10" rx="2"/><rect x="28" y="66" width="20" height="14" rx="2"/></g>
+          <rect x="120" y="22" width="80" height="166" rx="36" fill="#fbf8ff"/>
+          <rect x="126" y="10" width="68" height="34" rx="12" fill="#ece6f4" stroke="#c8bfd8" stroke-width="2"/>
+          <circle cx="160" cy="27" r="10" fill="none" stroke="#8f84a6" stroke-width="2"/>
+          <rect x="146" y="70" width="28" height="14" rx="3" fill="#1b1036"/><rect x="150" y="75" width="16" height="4" rx="2" fill="#8fd3ff"/>
+          <rect x="132" y="110" width="56" height="60" rx="10" fill="url(#g2)" opacity=".35"/>
+          <path d="M200 160h40v40" stroke="#ff6f61" stroke-width="5" fill="none"/><path d="M200 172h28v28" stroke="#8fd3ff" stroke-width="5" fill="none"/>
+          <g stroke="#8fd3ff" stroke-width="2" stroke-linecap="round" opacity=".7" fill="none"><path d="M220 30 q8 -6 16 0 t16 0"/><path d="M220 42 q8 -6 16 0 t16 0"/></g>
+        </svg></div>
+        <div class="leg"><div><h3>Ballon thermodynamique</h3><p>Installé au garage ou au cellier.</p></div><span class="prix">Sur devis</span></div>
+      </article>
+      <!-- chaudière fioul -->
+      <article class="real verre rv d2">
+        <div class="illu"><svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="225" fill="#2a1046"/>
+          <rect x="0" y="184" width="300" height="41" fill="#1b0b33"/>
+          <g fill="#3a1a55"><rect x="0" y="60" width="300" height="2"/><rect x="0" y="120" width="300" height="2"/></g>
+          <rect x="60" y="70" width="96" height="114" rx="6" fill="#fbf8ff"/>
+          <rect x="72" y="84" width="72" height="16" rx="3" fill="#1b1036"/><circle cx="84" cy="92" r="3" fill="#7dffb2"/>
+          <rect x="72" y="112" width="72" height="52" rx="4" fill="#ece6f4"/>
+          <circle cx="108" cy="138" r="14" fill="#1b1036"/><circle cx="108" cy="138" r="8" fill="#ff6f61"/><circle cx="108" cy="138" r="4" fill="#ffc27a"/>
+          <rect x="96" y="20" width="18" height="50" fill="#b6abc9"/>
+          <rect x="186" y="110" width="80" height="74" rx="20" fill="#5a3a7a"/><rect x="196" y="120" width="60" height="6" rx="3" fill="#7a5a9a"/>
+          <path d="M156 160 H186" stroke="#c9a27a" stroke-width="4"/>
+        </svg></div>
+        <div class="leg"><div><h3>Chaudière fioul</h3><p>Entretien, remplacement, conseil.</p></div><span class="prix">Sur devis</span></div>
+      </article>
+    </div>
+    <p class="note-galerie">Illustrations à titre indicatif : elles représentent des types d’équipements, pas des chantiers précis.</p>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section id="avis">
+  <div class="wrap">
+    <div class="avis verre rv">
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.3l6.6-.8z" fill="none" stroke="#ffa34d" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.3l6.6-.8z" fill="none" stroke="#ffa34d" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.3l6.6-.8z" fill="none" stroke="#ffa34d" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <h2>Votre avis compte</h2>
+        <p>Vous avez fait appel à CP Clim Concept pour une clim, une pompe à chaleur ou une chaudière ? Quelques mots sur Google aident vos voisins toulonnais à choisir leur installateur.</p>
+      </div>
+      <a class="btn btn-verre" href="https://www.google.com/search?q=CP+Clim+Concept+Toulon" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="tete centre rv">
+      <span class="pastille">Questions fréquentes</span>
+      <h2>On vous <span class="grad">répond franchement</span></h2>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary>Climatisation ou pompe à chaleur : quelle différence ?</summary>
+        <div class="rep"><p>Une climatisation réversible est en réalité une pompe à chaleur air/air : elle rafraîchit l’été et peut chauffer l’hiver. Une pompe à chaleur air/eau, elle, alimente vos radiateurs ou un plancher chauffant, et parfois l’eau chaude. Le bon choix dépend de votre logement et de votre installation actuelle : on en parle lors de la visite.</p></div>
+      </details>
+      <details>
+        <summary>Peut-on bénéficier d’aides comme MaPrimeRénov’ ou les CEE ?</summary>
+        <div class="rep"><p>Certains équipements (pompe à chaleur air/eau, chauffe-eau thermodynamique…) pourraient ouvrir droit à des aides comme MaPrimeRénov’ ou les primes CEE, selon vos revenus, votre logement et les règles en vigueur au moment des travaux. Les conditions évoluent régulièrement : nous vous conseillons de vérifier votre éligibilité sur les sites officiels avant de signer.</p></div>
+      </details>
+      <details>
+        <summary>Faut-il remplacer ma vieille chaudière fioul ?</summary>
+        <div class="rep"><p>Pas forcément tout de suite : une chaudière bien entretenue peut encore rendre service. Mais si elle tombe souvent en panne ou consomme beaucoup, il peut être intéressant d’étudier une alternative (chaudière plus récente, pompe à chaleur). Nous faisons le point avec vous, sans pression.</p></div>
+      </details>
+      <details>
+        <summary>Un chauffe-eau thermodynamique, c’est adapté à Toulon ?</summary>
+        <div class="rep"><p>Le climat doux du littoral varois est plutôt favorable à ce type de ballon, qui puise les calories dans l’air ambiant. Il faut toutefois un emplacement adapté (garage, cellier, buanderie) et un volume bien dimensionné selon le nombre de personnes du foyer.</p></div>
+      </details>
+      <details>
+        <summary>Combien coûte une installation ?</summary>
+        <div class="rep"><p>Tout dépend de l’équipement, de la surface à traiter et de la configuration des lieux (passage des liaisons, emplacement du groupe extérieur…). C’est pourquoi nous établissons un devis détaillé après visite.</p></div>
+      </details>
+      <details>
+        <summary>Faut-il entretenir une clim ou une pompe à chaleur ?</summary>
+        <div class="rep"><p>Oui. Un nettoyage régulier des filtres et un contrôle par un professionnel aident à garder un appareil performant, silencieux et sain. Pour certains équipements, un entretien périodique peut aussi être exigé par la réglementation : renseignez-vous auprès de nous.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOS PRATIQUES ============ -->
+<section id="infos">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="pastille">Infos pratiques</span>
+      <h2>Où et quand <span class="grad">nous trouver</span></h2>
+    </div>
+    <div class="pratique">
+      <div class="bloc verre rv">
+        <h3>Horaires</h3>
+        <p class="indic">Horaires indicatifs, à confirmer par téléphone</p>
+        <ul class="horaires" id="horaires">
+          <li data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+          <li data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+          <li data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+          <li data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+          <li data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+          <li data-j="6"><span>Samedi</span><span>Fermé</span></li>
+          <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+      </div>
+      <div class="bloc verre rv d1">
+        <h3>Adresse</h3>
+        <div class="mini-carte" aria-hidden="true">
+          <svg viewBox="0 0 400 170">
+            <rect width="400" height="170" fill="#22123f"/>
+            <path d="M0 40 C80 30 120 60 200 50 C280 40 330 20 400 30 L400 0 L0 0Z" fill="#3a1650"/>
+            <text x="300" y="22" font-family="Outfit,sans-serif" font-size="11" fill="#fbf8ff" opacity=".8" letter-spacing="2">MONT FARON</text>
+            <path d="M0 130 C60 120 120 140 200 128 C280 116 340 134 400 124 L400 170 L0 170Z" fill="#2b5a86" opacity=".7"/>
+            <text x="40" y="158" font-family="Outfit,sans-serif" font-size="11" fill="#fbf8ff" opacity=".85" letter-spacing="2">LA RADE</text>
+            <g stroke="#4b2a72" stroke-width="2" fill="none"><path d="M0 90 H400"/><path d="M120 50 V130"/><path d="M280 40 V125"/><path d="M40 60 L200 110 L380 70"/></g>
+            <path d="M0 80 C100 70 160 92 240 84 C300 78 350 70 400 74" stroke="#ffa34d" stroke-width="3" fill="none"/>
+            <g transform="translate(222 82)"><circle r="16" fill="#ff6f61" opacity=".25"/><path d="M0 4 C-8 -6 -10 -10 -10 -14 a10 10 0 0 1 20 0 c0 4 -2 8 -10 18z" transform="translate(0 -6)" fill="#ff6f61" stroke="#fbf8ff" stroke-width="2"/></g>
+          </svg>
+        </div>
+        <div class="adresse">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>131 corniche Marius Escartefigue<br>83200 Toulon</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33494252372">04 94 25 23 72</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg><a href="mailto:cpclimconcept@gmail.com">cpclimconcept@gmail.com</a></div>
+        </div>
+        <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=131+corniche+Marius+Escartefigue+83200+Toulon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact">
+    <div class="gauche rv">
+      <span class="pastille">Devis &amp; contact</span>
+      <h2>Parlons de <span class="grad">votre confort</span></h2>
+      <p>Décrivez votre projet en quelques lignes : type de logement, équipement actuel, ce que vous aimeriez changer. On revient vers vous pour en discuter.</p>
+      <a class="gros-tel" href="tel:+33494252372">04 94 25 23 72</a>
+      <p><a href="mailto:cpclimconcept@gmail.com">cpclimconcept@gmail.com</a></p>
+    </div>
+    <form class="verre rv d1" id="form" novalidate>
+      <div class="champs">
+        <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" type="text" placeholder="Votre nom" autocomplete="name"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" placeholder="06 00 00 00 00" autocomplete="tel"></div>
+        <div class="champ"><label for="mail">Email</label><input id="mail" name="mail" type="email" placeholder="vous@exemple.fr" autocomplete="email"></div>
+        <div class="champ"><label for="projet">Projet</label>
+          <select id="projet" name="projet"><option>Climatisation</option><option>Pompe à chaleur</option><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chauffe-eau thermodynamique</option><option>Entretien / autre</option></select></div>
+        <div class="champ plein"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Maison de 90 m² à Toulon, chaudière gaz de 2005, envie d’une clim dans les chambres…"></textarea></div>
+        <label class="consent"><input type="checkbox"> J’accepte d’être recontacté au sujet de ma demande.</label>
+      </div>
+      <button class="btn btn-plein" type="submit">Envoyer ma demande</button>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap pied">
+    <div>
+      <a class="marque" href="#accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#lg-m)"/><path d="M20 9v22M10.5 14.5l19 11M29.5 14.5l-19 11" stroke="#1b1036" stroke-width="2.6" stroke-linecap="round"/><circle cx="20" cy="20" r="4.2" fill="#fbf8ff" stroke="#1b1036" stroke-width="2"/></svg><span>CP Clim <b>Concept</b></span></a>
+      <p style="margin-top:14px">Climatisation, pompe à chaleur, chaudières gaz et fioul, chauffe-eau thermodynamique à Toulon depuis 2012.</p>
+    </div>
+    <div><h4>Coordonnées</h4><p>131 corniche Marius Escartefigue<br>83200 Toulon</p><p><a href="tel:+33494252372">04 94 25 23 72</a></p><p><a href="mailto:cpclimconcept@gmail.com">cpclimconcept@gmail.com</a></p></div>
+    <div><h4>Horaires</h4><p>Lundi–vendredi : sur rendez-vous</p><p>Samedi/Dimanche : fermé</p><p><em>Horaires indicatifs, à confirmer</em></p></div>
+    <div><h4>Services</h4><ul><li><a href="#services">Climatisation</a></li><li><a href="#services">Pompe à chaleur</a></li><li><a href="#services">Chaudière gaz ou fioul</a></li><li><a href="#services">Chauffe-eau thermodynamique</a></li></ul></div>
+  </div>
+  <div class="wrap mentions"><span>© <span id="annee">2026</span> CP Clim Concept – SAS – Toulon</span><span>Source des informations : annuaire HelloWatt</span></div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33494252372" aria-label="Appeler CP Clim Concept"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  function ferme(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');}
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',ferme);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')ferme();});
+
+  // jour actuel
+  var li=document.querySelector('#horaires li[data-j="'+new Date().getDay()+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+
+  // télécommande
+  var t=22,te=document.getElementById('temp'),lib=document.getElementById('mode-lib'),barres=document.querySelectorAll('.ventil b');
+  function maj(){te.textContent=t;}
+  document.getElementById('plus').addEventListener('click',function(){if(t<30){t++;maj();}});
+  document.getElementById('moins').addEventListener('click',function(){if(t>16){t--;maj();}});
+  document.querySelectorAll('.mode').forEach(function(btn){btn.addEventListener('click',function(){
+    document.querySelectorAll('.mode').forEach(function(x){x.setAttribute('aria-pressed','false');});
+    btn.setAttribute('aria-pressed','true');var c=btn.getAttribute('data-c');
+    lib.textContent='Mode '+btn.getAttribute('data-mode');lib.style.color=c;barres.forEach(function(x){x.style.background=c;});
+  });});
+
+  // FAQ : un seul ouvert
+  var ds=document.querySelectorAll('.faq details');
+  ds.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)ds.forEach(function(o){if(o!==d)o.open=false;});});});
+
+  // apparitions
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  } else els.forEach(function(e){e.classList.add('vu');});
+
+  // formulaire
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('retour').classList.add('on');});
+})();
+</script>
+</body>
+</html>

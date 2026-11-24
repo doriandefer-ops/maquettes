@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 JF Energie – Chauffagiste à Six-Fours-les-Plages</title>
+<meta name="description" content="2 JF Energie (Baudino Chauffage), chauffagiste à Six-Fours-les-Plages depuis 2004 : chaudières gaz et fioul, remplacement de chaudière, pompes à chaleur, climatisation et chauffe-eau thermodynamique. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0e1420;
+  --nuit-2:#121a29;
+  --ardoise:#1c2636;
+  --champagne:#d8c08a;
+  --cuivre:#b8743f;       /* texte seulement sur fond nuit (4.9:1) */
+  --cuivre-clair:#d39a68; /* variante lisible sur ardoise */
+  --petrole:#2c6e7a;      /* décoratif / fonds */
+  --ivoire:#f3eee4;
+  --ivoire-doux:#c9c4ba;  /* texte secondaire (9:1 sur nuit) */
+  --filet:rgba(216,192,138,.32);
+  --filet-fort:rgba(216,192,138,.6);
+  --titre:"Prata",Georgia,serif;
+  --texte:"Hind",system-ui,sans-serif;
+  --larg:1220px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--nuit);color:var(--ivoire);font-family:var(--texte);font-size:1.06rem;line-height:1.7;font-weight:400;overflow-x:hidden}
+a{color:inherit}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--titre);font-weight:400;margin:0;line-height:1.15;letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.pc{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--champagne)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* cadres à coins */
+.coins{position:relative}
+.coins::before,.coins::after{content:"";position:absolute;width:18px;height:18px;pointer-events:none;transition:width .4s,height .4s}
+.coins::before{top:-1px;left:-1px;border-top:1px solid var(--champagne);border-left:1px solid var(--champagne)}
+.coins::after{bottom:-1px;right:-1px;border-bottom:1px solid var(--champagne);border-right:1px solid var(--champagne)}
+.coins:hover::before,.coins:hover::after{width:44px;height:44px}
+
+/* filet titre */
+.filet-orne{display:flex;align-items:center;gap:14px;color:var(--champagne)}
+.filet-orne::before,.filet-orne::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--filet-fort))}
+.filet-orne::after{background:linear-gradient(90deg,var(--filet-fort),transparent)}
+.losange{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--champagne);flex:none}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;text-decoration:none;font-family:var(--texte);font-weight:600;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--champagne);transition:background .3s,color .3s,box-shadow .3s,transform .3s;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-or{background:var(--champagne);color:var(--nuit)}
+.btn-or:hover{background:var(--ivoire);border-color:var(--ivoire);box-shadow:0 0 0 6px rgba(216,192,138,.12),0 10px 40px rgba(184,116,63,.35);transform:translateY(-2px)}
+.btn-trait{background:transparent;color:var(--champagne)}
+.btn-trait:hover{background:rgba(216,192,138,.1);color:var(--ivoire);transform:translateY(-2px)}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+.nav.solide{background:rgba(14,20,32,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:var(--filet)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque svg{width:38px;height:38px;flex:none}
+.marque b{font-family:var(--titre);font-weight:400;font-size:1.3rem;color:var(--ivoire);display:block;line-height:1}
+.marque small{display:block;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);margin-top:5px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:8px 13px;text-decoration:none;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ivoire-doux);position:relative;transition:color .25s}
+.menu a::after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:1px;background:var(--champagne);transform:scaleX(0);transition:transform .3s}
+.menu a:hover{color:var(--ivoire)}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .tel-nav{border:1px solid var(--filet-fort);color:var(--champagne);margin-left:10px;padding:9px 16px;letter-spacing:.12em}
+.menu .tel-nav::after{display:none}
+.menu .tel-nav:hover{background:var(--champagne);color:var(--nuit)}
+.burger{display:none;width:48px;height:48px;background:none;border:1px solid var(--filet-fort);color:var(--champagne);cursor:pointer;position:relative}
+.burger span{position:absolute;left:13px;right:13px;height:1px;background:currentColor;transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;padding:120px 0 0;overflow:hidden;background:
+  radial-gradient(ellipse 70% 50% at 72% 38%,rgba(44,110,122,.28),transparent 70%),
+  radial-gradient(ellipse 50% 40% at 20% 0%,rgba(28,38,54,.9),transparent 70%),
+  linear-gradient(180deg,#0a0f19 0%,var(--nuit) 55%,#101a2a 100%)}
+.ciel{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.ciel circle{fill:var(--ivoire)}
+.ciel .scint{animation:scint 4s ease-in-out infinite}
+@keyframes scint{0%,100%{opacity:.25}50%{opacity:1}}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+.hero-txt .pc{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.hero-txt .pc::before{content:"";width:34px;height:1px;background:var(--champagne)}
+.hero h1{font-size:clamp(2.3rem,4.6vw,4rem);color:var(--ivoire)}
+.hero h1 em{font-style:normal;color:var(--champagne);display:block}
+.hero .accroche{font-size:1.14rem;color:var(--ivoire-doux);max-width:34em;margin:24px 0 32px;font-weight:300}
+.hero .accroche strong{color:var(--ivoire);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.labels{padding:0;margin-top:38px;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);display:flex;flex-wrap:wrap}
+.labels li{list-style:none;flex:1 1 0;min-width:150px;padding:14px 16px 12px;border-right:1px solid var(--filet);display:flex;flex-direction:column;gap:2px}
+.labels li:last-child{border-right:0}
+.labels b{font-size:.7rem;letter-spacing:.26em;font-weight:600;color:var(--champagne);text-transform:uppercase}
+.labels span{font-size:.82rem;color:var(--ivoire-doux);line-height:1.35}
+.labels ul{display:contents}
+
+.scene{position:relative;aspect-ratio:7/6;width:100%}
+.scene .geant{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--titre);font-size:clamp(9rem,25vw,24rem);line-height:.8;color:transparent;-webkit-text-stroke:1.4px rgba(216,192,138,.55);letter-spacing:-.02em;user-select:none;white-space:nowrap;transform:translateY(-6%)}
+.scene .geant span{background:linear-gradient(180deg,rgba(216,192,138,.10),transparent 80%);-webkit-background-clip:text;background-clip:text}
+.scene svg.trait{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lum{filter:drop-shadow(0 0 4px rgba(216,192,138,.7)) drop-shadow(0 0 14px rgba(216,192,138,.25))}
+.trait .s{fill:none;stroke:var(--champagne);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.trait .sf{fill:none;stroke:rgba(216,192,138,.5);stroke-width:1;stroke-linecap:round}
+.trait .dessin{stroke-dasharray:1400;stroke-dashoffset:1400;animation:trace 3.2s cubic-bezier(.6,.1,.2,1) .3s forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.flamme{transform-origin:50% 100%;transform-box:fill-box;animation:flamme 1.8s ease-in-out infinite alternate}
+@keyframes flamme{0%{transform:scaleY(.86) scaleX(1.04);opacity:.85}100%{transform:scaleY(1.08) scaleX(.95);opacity:1}}
+.helice{transform-origin:center;transform-box:fill-box;animation:tourne 5s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.halo-flamme{animation:halo 2.4s ease-in-out infinite alternate}
+@keyframes halo{from{opacity:.55}to{opacity:1}}
+.flux{stroke-dasharray:4 10;animation:flux 2.2s linear infinite}
+@keyframes flux{to{stroke-dashoffset:-28}}
+.cote{position:relative;z-index:1;display:block;width:100%;height:auto;margin-top:-40px}
+.legende-cote{position:absolute;right:4%;bottom:15%;z-index:2;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(216,192,138,.75)}
+
+/* ---------- CONFIANCE ---------- */
+.confiance{background:var(--nuit);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:26px 20px;display:flex;gap:14px;align-items:center;border-right:1px solid var(--filet)}
+.confiance li:last-child{border-right:0}
+.confiance svg{width:34px;height:34px;flex:none;stroke:var(--champagne);fill:none;stroke-width:1.3}
+.confiance b{display:block;font-family:var(--titre);font-weight:400;font-size:1.08rem;line-height:1.25}
+.confiance span{font-size:.84rem;color:var(--ivoire-doux);line-height:1.4;display:block}
+
+/* ---------- SECTIONS ---------- */
+section{padding:110px 0}
+.tete{max-width:720px;margin:0 auto 60px;text-align:center}
+.tete .filet-orne{margin-bottom:18px;justify-content:center}
+.tete h2{font-size:clamp(2rem,3.6vw,3rem)}
+.tete h2 em{font-style:normal;color:var(--champagne)}
+.tete p{color:var(--ivoire-doux);margin:18px auto 0;max-width:38em}
+.num-section{font-family:var(--titre);color:var(--cuivre);font-size:.95rem;letter-spacing:.1em}
+
+/* services */
+.services{background:linear-gradient(180deg,#101a2a,var(--nuit) 40%)}
+.grille-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.carte{background:linear-gradient(160deg,rgba(28,38,54,.95),rgba(18,26,41,.95));border:1px solid var(--filet);padding:34px 30px 30px;transition:transform .4s,border-color .4s,box-shadow .4s}
+.carte:hover{transform:translateY(-5px);border-color:var(--filet-fort);box-shadow:0 20px 50px rgba(0,0,0,.4),inset 0 0 60px rgba(184,116,63,.08)}
+.carte .ico{width:64px;height:64px;margin-bottom:22px}
+.carte .ico svg{width:100%;height:100%;fill:none;stroke:var(--champagne);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.carte .ico .cu{stroke:var(--cuivre-clair)}
+.carte h3{font-size:1.36rem;margin-bottom:10px}
+.carte p{color:var(--ivoire-doux);font-size:.98rem;margin:0}
+.carte .tag{display:inline-block;margin-top:18px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cuivre-clair);border-top:1px solid var(--filet);padding-top:10px}
+
+/* pourquoi */
+.pourquoi{background:var(--ardoise);position:relative;overflow:hidden}
+.pourquoi::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(216,192,138,.035) 46px 47px);pointer-events:none}
+.pq-grid{position:relative;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:60px;align-items:start}
+.pq-intro h2{font-size:clamp(2rem,3.4vw,2.8rem);margin:16px 0 20px}
+.pq-intro p{color:var(--ivoire-doux)}
+.atouts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--filet);border:1px solid var(--filet)}
+.atout{background:var(--ardoise);padding:34px 30px;transition:background .3s}
+.atout:hover{background:#212d40}
+.atout .n{font-family:var(--titre);font-size:2.4rem;color:transparent;-webkit-text-stroke:1px var(--champagne);line-height:1;display:block;margin-bottom:14px}
+.atout h3{font-size:1.24rem;margin-bottom:8px}
+.atout p{margin:0;color:var(--ivoire-doux);font-size:.97rem}
+
+/* étapes */
+.etapes ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;counter-reset:e}
+.etapes ol::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,var(--champagne),transparent)}
+.etapes li{text-align:center;padding:0 20px;position:relative}
+.etapes .rond{width:76px;height:76px;margin:0 auto 26px;border:1px solid var(--champagne);border-radius:50%;display:grid;place-items:center;font-family:var(--titre);font-size:1.6rem;color:var(--champagne);background:var(--nuit);position:relative;transition:box-shadow .4s}
+.etapes .rond::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px dashed rgba(216,192,138,.35)}
+.etapes li:hover .rond{box-shadow:0 0 30px rgba(216,192,138,.35)}
+.etapes h3{font-size:1.2rem;margin-bottom:8px}
+.etapes p{color:var(--ivoire-doux);font-size:.95rem;margin:0}
+
+/* à propos */
+.apropos{background:radial-gradient(ellipse at 85% 50%,rgba(184,116,63,.16),transparent 60%),var(--nuit-2);border-top:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.ap-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:70px;align-items:center}
+.ap-grid h2{font-size:clamp(2rem,3.4vw,2.8rem);margin:16px 0 26px}
+.ap-grid h2 em{font-style:normal;color:var(--champagne)}
+.ap-grid p{color:var(--ivoire-doux)}
+.ap-grid p strong{color:var(--ivoire);font-weight:500}
+.fiche{border:1px solid var(--filet-fort);padding:38px 34px;background:rgba(14,20,32,.6)}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:14px 22px}
+.fiche dt{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--champagne);padding-top:5px}
+.fiche dd{margin:0;font-size:1rem;border-bottom:1px solid var(--filet);padding-bottom:12px}
+.fiche .millesime{font-family:var(--titre);font-size:4.6rem;color:transparent;-webkit-text-stroke:1px var(--champagne);line-height:1;margin-bottom:6px}
+.fiche .millesime-l{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ivoire-doux);margin-bottom:26px;display:block}
+
+/* galerie */
+.galerie .grille-gal{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.planche{grid-column:span 2;background:var(--ardoise);border:1px solid var(--filet);display:flex;flex-direction:column;transition:transform .4s,border-color .4s}
+.planche.large{grid-column:span 3}
+.planche:hover{transform:translateY(-4px);border-color:var(--filet-fort)}
+.planche .vue{aspect-ratio:4/3;background:radial-gradient(ellipse at 50% 30%,rgba(44,110,122,.25),transparent 70%),#151e2d;border-bottom:1px solid var(--filet);overflow:hidden}
+.planche.large .vue{aspect-ratio:16/9}
+.planche .vue svg{width:100%;height:100%;display:block}
+.planche .vue svg *{vector-effect:non-scaling-stroke}
+.planche .cap{padding:20px 22px;display:flex;justify-content:space-between;gap:12px;align-items:flex-end}
+.planche h3{font-size:1.12rem}
+.planche .cap span{display:block;font-size:.84rem;color:var(--ivoire-doux);line-height:1.4;margin-top:4px}
+.planche .prix{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);white-space:nowrap;border:1px solid var(--filet);padding:6px 10px}
+.g-s{fill:none;stroke:var(--champagne);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.g-f{fill:none;stroke:rgba(216,192,138,.42);stroke-width:1}
+.g-c{fill:none;stroke:var(--cuivre-clair);stroke-width:1.3;stroke-linecap:round}
+.g-p{fill:none;stroke:#5fa7b3;stroke-width:1.3;stroke-linecap:round}
+.note-gal{text-align:center;color:var(--ivoire-doux);font-size:.88rem;margin-top:30px}
+
+/* avis */
+.avis{padding:90px 0}
+.avis-boite{max-width:860px;margin:0 auto;text-align:center;border:1px solid var(--filet-fort);padding:56px 40px;background:radial-gradient(ellipse at 50% 0%,rgba(216,192,138,.08),transparent 70%)}
+.avis-boite h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:16px 0 14px}
+.avis-boite p{color:var(--ivoire-doux);max-width:36em;margin:0 auto 28px}
+.etoiles{display:flex;justify-content:center;gap:8px;margin-bottom:6px}
+.etoiles svg{width:24px;height:24px;fill:none;stroke:var(--champagne);stroke-width:1.2}
+
+/* faq */
+.faq{background:var(--nuit-2);border-top:1px solid var(--filet)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:60px}
+.faq-grid h2{font-size:clamp(2rem,3.4vw,2.8rem);margin:16px 0 18px}
+.faq-grid .gauche p{color:var(--ivoire-doux)}
+details{border-bottom:1px solid var(--filet)}
+details:first-child{border-top:1px solid var(--filet)}
+summary{list-style:none;cursor:pointer;padding:24px 50px 24px 0;font-family:var(--titre);font-size:1.16rem;position:relative;transition:color .25s}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:8px;top:50%;width:12px;height:12px;border-right:1px solid var(--champagne);border-bottom:1px solid var(--champagne);transform:translateY(-70%) rotate(45deg);transition:transform .3s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+summary:hover{color:var(--champagne)}
+details .rep{padding:0 40px 24px 0;color:var(--ivoire-doux)}
+details .rep p{margin:0}
+
+/* contact */
+.contact{position:relative;overflow:hidden}
+.ct-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:50px;align-items:start}
+.bloc{border:1px solid var(--filet);background:var(--ardoise);padding:34px 32px;margin-bottom:22px}
+.bloc h3{font-size:1.3rem;margin-bottom:18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.bloc h3 small{font-family:var(--texte);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cuivre-clair)}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:flex;justify-content:space-between;padding:9px 12px;border-bottom:1px solid rgba(216,192,138,.14);font-size:.98rem;transition:background .3s}
+.horaires li span:last-child{color:var(--ivoire-doux)}
+.horaires li.auj{background:rgba(216,192,138,.12);border-left:2px solid var(--champagne)}
+.horaires li.auj span:first-child::after{content:" · aujourd'hui";font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--champagne)}
+.horaires li.auj span:last-child{color:var(--ivoire)}
+.adresse{font-style:normal;line-height:1.6;margin-bottom:20px}
+.adresse a{color:var(--champagne);text-decoration:none;border-bottom:1px solid var(--filet-fort)}
+.adresse a:hover{color:var(--ivoire)}
+.zone{font-size:.92rem;color:var(--ivoire-doux);margin:16px 0 20px}
+form{border:1px solid var(--filet-fort);padding:42px 38px;background:linear-gradient(170deg,rgba(28,38,54,.9),rgba(14,20,32,.9))}
+form h3{font-size:1.6rem;margin-bottom:6px}
+form .sous{color:var(--ivoire-doux);margin-bottom:28px;font-size:.96rem}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.plein{grid-column:1/-1}
+label{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--champagne)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ivoire);background:rgba(14,20,32,.7);border:1px solid rgba(216,192,138,.3);padding:13px 14px;border-radius:0;transition:border-color .3s,box-shadow .3s;width:100%}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--champagne) 50%),linear-gradient(135deg,var(--champagne) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+select option{background:var(--nuit)}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--champagne);box-shadow:0 0 0 3px rgba(216,192,138,.15)}
+input::placeholder,textarea::placeholder{color:#8f97a6}
+.form-pied{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.form-pied small{color:var(--ivoire-doux);font-size:.82rem;max-width:26em;line-height:1.45}
+.msg{display:none;margin-top:22px;padding:16px 18px;border:1px solid var(--champagne);background:rgba(216,192,138,.1);color:var(--ivoire)}
+.msg.vu{display:block}
+
+/* pied */
+footer{background:#0a0f18;border-top:1px solid var(--filet);padding:70px 0 0}
+.pied-grid{display:grid;grid-template-columns:minmax(0,4fr) repeat(3,minmax(0,2.6fr));gap:40px}
+footer h4{font-family:var(--texte);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne);font-weight:600;margin:0 0 16px}
+footer p,footer li{color:var(--ivoire-doux);font-size:.94rem;margin:0 0 6px}
+footer ul{list-style:none;margin:0;padding:0}
+footer a{text-decoration:none;transition:color .25s}
+footer a:hover{color:var(--champagne)}
+.pied-bas{margin-top:56px;border-top:1px solid var(--filet);padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:var(--ivoire-doux)}
+.demo{background:#06090f;color:#a9adb5;text-align:center;font-size:.78rem;padding:12px 16px;letter-spacing:.02em}
+
+/* bouton flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;width:60px;height:60px;border-radius:50%;background:var(--champagne);color:var(--nuit);align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(216,192,138,.18),0 10px 30px rgba(0,0,0,.5);text-decoration:none}
+.flottant svg{width:24px;height:24px}
+.flottant::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--champagne);animation:onde 2.6s ease-out infinite}
+@keyframes onde{from{transform:scale(1);opacity:.8}to{transform:scale(1.5);opacity:0}}
+
+/* apparitions */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:10px}
+  .scene{max-width:640px;margin:0 auto;aspect-ratio:7/5.4}
+  .grille-serv{grid-template-columns:1fr 1fr}
+  .pq-grid,.faq-grid,.ap-grid,.ct-grid{grid-template-columns:1fr;gap:40px}
+  .confiance ul{grid-template-columns:1fr 1fr}
+  .confiance li:nth-child(2){border-right:0}
+  .confiance li:nth-child(-n+2){border-bottom:1px solid var(--filet)}
+  .galerie .grille-gal{grid-template-columns:1fr 1fr}
+  .planche:last-child{grid-column:1/-1}
+  .planche:last-child .vue{aspect-ratio:16/7}
+  .planche,.planche.large{grid-column:span 1}
+  .pied-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .burger{display:block}
+  .menu{position:fixed;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#0a0f18;border-bottom:1px solid var(--filet);padding:10px 16px 24px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:16px 4px;border-bottom:1px solid var(--filet);font-size:.82rem}
+  .menu a::after{display:none}
+  .menu .tel-nav{margin:18px 0 0;text-align:center;border:1px solid var(--champagne)}
+  .etapes ol{grid-template-columns:1fr 1fr;gap:44px 0}
+  .etapes ol::before{display:none}
+  .flottant{display:flex}
+}
+@media (max-width:620px){
+  section{padding:80px 0}
+  .hero{padding-top:104px;min-height:0}
+  .hero .accroche{font-size:1.04rem}
+  .btns .btn{flex:1 1 100%}
+  .labels{flex-direction:column}
+  .labels li{border-right:0;border-bottom:1px solid var(--filet);flex-direction:row;justify-content:space-between;align-items:baseline;gap:12px;min-width:0}
+  .labels li:last-child{border-bottom:0}
+  .labels span{text-align:right}
+  .scene{aspect-ratio:1/1}
+  .scene .geant{font-size:46vw}
+  .grille-serv,.atouts,.galerie .grille-gal,.champs,.pied-grid{grid-template-columns:1fr}
+  .confiance ul{grid-template-columns:1fr}
+  .confiance li{border-right:0!important;border-bottom:1px solid var(--filet)}
+  .confiance li:last-child{border-bottom:0}
+  .etapes ol{grid-template-columns:1fr}
+  .carte,.atout{padding:28px 24px}
+  form{padding:30px 22px}
+  .bloc{padding:28px 22px}
+  .avis-boite{padding:44px 22px}
+  .fiche{padding:30px 22px}
+  .fiche dl{grid-template-columns:1fr;gap:4px}
+  .fiche dd{margin-bottom:10px}
+  .cote{margin-top:-10px;height:130px}
+  .legende-cote{display:none}
+  footer{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .trait .dessin{stroke-dashoffset:0}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="marque" href="#accueil" aria-label="2 JF Energie, accueil">
+      <svg viewBox="0 0 38 38" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="37" height="37" stroke="#d8c08a"/><path d="M4 4h6M4 4v6M34 34h-6M34 34v-6" stroke="#d8c08a" stroke-width="1.6"/><path d="M19 29c-5-2.6-5.2-7.4-2-11 .4 2 1.4 3 2.6 3.4-.6-3.4 1-6.4 3.4-8.4-.4 3 1.6 5 2.4 7.6 1 3.6-1 7.2-6.4 8.4z" stroke="#d39a68" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      <span><b>2 JF Energie</b><small>Baudino Chauffage</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Savoir-faire</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#maison">La maison</a></li>
+      <li><a href="#installations">Installations</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="tel-nav" href="tel:+33494626921">04 94 62 69 21</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- EN-TÊTE -->
+<header class="hero" id="accueil">
+  <svg class="ciel" id="ciel" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="pc rv">Chauffagiste · Six-Fours-les-Plages · depuis 2004</p>
+      <h1 class="rv d1">La chaleur bien réglée, <em>de la corniche au Brusc.</em></h1>
+      <p class="accroche rv d2">Quand le mistral descend du Gros Cerveau et que les soirées de janvier fraîchissent sur la rade, <strong>2 JF Energie</strong> — l'ancienne maison <strong>Baudino Chauffage</strong> — installe et remplace chaudières gaz et fioul, pompes à chaleur, climatisations et chauffe-eau thermodynamiques à Six-Fours et alentour.</p>
+      <div class="btns rv d3">
+        <a class="btn btn-or" href="tel:+33494626921"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn btn-trait" href="#contact">Demander un devis</a>
+      </div>
+      <ul class="labels rv d3" aria-label="Qualifications">
+        <li><b>Qualipac</b><span>Chauffage</span></li>
+        <li><b>Qualibat</b><span>Remplacement chaudière</span></li>
+        <li><b>Qualipac</b><span>Chauffe-eau thermo.</span></li>
+      </ul>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="geant"><span>2 JF</span></div>
+      <svg class="trait" viewBox="0 0 700 600">
+        <defs>
+          <radialGradient id="gFlamme" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#ffb070" stop-opacity=".9"/><stop offset=".5" stop-color="#b8743f" stop-opacity=".35"/><stop offset="1" stop-color="#b8743f" stop-opacity="0"/></radialGradient>
+          <linearGradient id="gFlam2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d8c08a"/><stop offset=".6" stop-color="#d39a68"/><stop offset="1" stop-color="#b8743f"/></linearGradient>
+        </defs>
+        <!-- mur et sol -->
+        <path class="sf" d="M20 520H680"/>
+        <path class="sf" d="M40 532H660" stroke-dasharray="2 8"/>
+        <!-- CHAUDIÈRE MURALE -->
+        <g class="lum">
+          <rect class="s dessin" x="120" y="110" width="200" height="290" rx="14"/>
+          <path class="s dessin" d="M120 160H320"/>
+          <rect class="s" x="150" y="128" width="62" height="18" rx="3"/>
+          <text x="156" y="142" font-family="Hind,sans-serif" font-size="13" fill="#d8c08a" letter-spacing="1">55°</text>
+          <circle class="s" cx="260" cy="137" r="9"/><circle class="s" cx="292" cy="137" r="9"/>
+          <path class="s" d="M260 130v7M292 137l5-4"/>
+          <!-- hublot flamme -->
+          <rect class="s" x="170" y="200" width="100" height="120" rx="50"/>
+          <ellipse class="halo-flamme" cx="220" cy="275" rx="60" ry="60" fill="url(#gFlamme)"/>
+          <g class="flamme">
+            <path d="M220 304c-22-8-26-30-12-50 2 10 7 14 12 16-4-16 4-30 16-38-2 14 8 22 10 34 4 18-6 32-26 38z" fill="url(#gFlam2)" opacity=".95"/>
+            <path d="M221 300c-10-5-11-16-4-25 1 6 4 8 7 9-1-8 2-14 7-18 0 8 5 12 5 18 1 9-5 14-15 16z" fill="#f3eee4" opacity=".8"/>
+          </g>
+          <path class="s" d="M170 345h100M170 360h100" opacity=".6"/>
+          <!-- tuyaux -->
+          <path class="s dessin" d="M160 400v40q0 14 14 14h0M200 400v70M240 400v70M280 400v40q0 14-14 14"/>
+          <path class="s" d="M150 470h140" opacity=".5"/>
+          <circle class="s" cx="200" cy="430" r="6"/><circle class="s" cx="240" cy="430" r="6"/>
+          <!-- conduit ventouse -->
+          <path class="s dessin" d="M220 110V70h-40"/>
+          <path class="s" d="M168 62v16"/>
+        </g>
+        <!-- liaison -->
+        <path class="sf flux" d="M320 300C380 300 380 380 430 380" stroke="#d39a68" stroke-width="1.4"/>
+        <path class="sf flux" d="M320 330C370 330 370 410 430 410" stroke="#5fa7b3" stroke-width="1.4" style="animation-direction:reverse"/>
+        <!-- POMPE À CHALEUR -->
+        <g class="lum">
+          <rect class="s dessin" x="430" y="320" width="230" height="170" rx="8"/>
+          <circle class="s dessin" cx="520" cy="405" r="62"/>
+          <circle class="s" cx="520" cy="405" r="52" opacity=".5"/>
+          <g class="helice">
+            <path class="s" d="M520 405c-6-18 4-36 22-40-4 16-10 28-22 40zM520 405c18-6 36 4 40 22-16-4-28-10-40-22zM520 405c6 18-4 36-22 40 4-16 10-28 22-40zM520 405c-18 6-36-4-40-22 16 4 28 10 40 22z"/>
+          </g>
+          <circle class="s" cx="520" cy="405" r="6"/>
+          <path class="s" d="M600 340v130M612 340v130M624 340v130M636 340v130M648 340v130" opacity=".55"/>
+          <path class="s" d="M450 490v16M640 490v16M440 506h30M630 506h30"/>
+        </g>
+        <!-- ondes air -->
+        <path class="sf" d="M676 380q14 25 0 50M690 370q20 35 0 70" stroke="#5fa7b3"/>
+        <!-- petite étoile repère -->
+        <path d="M600 70l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="#d8c08a" opacity=".85"/>
+      </svg>
+    </div>
+  </div>
+
+  <svg class="cote" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gMer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a3c"/><stop offset="1" stop-color="#0e1420"/></linearGradient>
+      <linearGradient id="gCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18222f"/><stop offset="1" stop-color="#0b111b"/></linearGradient>
+    </defs>
+    <!-- Cap Sicié et collines -->
+    <path d="M0 150C120 140 210 128 300 132S450 150 540 146 700 120 780 112 880 96 960 70 1060 34 1110 30 1170 52 1220 70 1290 92 1380 118L1440 128V180H0Z" fill="url(#gCap)"/>
+    <path d="M0 150C120 140 210 128 300 132S450 150 540 146 700 120 780 112 880 96 960 70 1060 34 1110 30 1170 52 1220 70 1290 92 1380 118L1440 128" fill="none" stroke="#d8c08a" stroke-opacity=".55" stroke-width="1"/>
+    <!-- chapelle sur la crête -->
+    <path d="M1104 31v-12h10v12M1109 19v-7M1106 15h6" fill="none" stroke="#d8c08a" stroke-opacity=".8" stroke-width="1"/>
+    <circle cx="1109" cy="10" r="1.6" fill="#d39a68"/>
+    <!-- îlots des Embiez -->
+    <path d="M150 168c20-8 40-10 70-6 10 2 14 6 0 6Z" fill="#141d2b" stroke="#d8c08a" stroke-opacity=".4"/>
+    <!-- mer -->
+    <rect x="0" y="170" width="1440" height="90" fill="url(#gMer)"/>
+    <g stroke="#d8c08a" stroke-linecap="round">
+      <path d="M1080 182h70M1060 194h110M1090 206h50M1070 218h90M1100 232h30" stroke-opacity=".35"/>
+      <path d="M200 190h80M420 204h40M640 186h60M800 214h70M300 230h50M900 196h40" stroke-opacity=".12"/>
+    </g>
+  </svg>
+  <span class="legende-cote">Cap Sicié · Six-Fours-les-Plages</span>
+</header>
+
+<!-- BANDEAU DE CONFIANCE -->
+<div class="confiance">
+  <ul class="wrap">
+    <li class="rv"><svg viewBox="0 0 34 34"><circle cx="17" cy="17" r="15"/><path d="M17 8v9l6 4"/></svg><div><b>Depuis 2004</b><span>Une entreprise installée à Six-Fours</span></div></li>
+    <li class="rv d1"><svg viewBox="0 0 34 34"><path d="M17 3l11 4v9c0 8-5 13-11 15C11 29 6 24 6 16V7z"/><path d="M12 17l4 4 7-8"/></svg><div><b>Qualipac &amp; Qualibat</b><span>3 qualifications listées sur HelloWatt</span></div></li>
+    <li class="rv d2"><svg viewBox="0 0 34 34"><path d="M17 31c-7-3-8-10-4-15 1 3 2 4 4 5-1-5 1-10 5-13 0 5 4 7 5 11 1 6-3 10-10 12z"/></svg><div><b>Gaz, fioul, PAC</b><span>Chauffage, clim et eau chaude</span></div></li>
+    <li class="rv d3"><svg viewBox="0 0 34 34"><path d="M17 31s-10-9-10-17a10 10 0 0 1 20 0c0 8-10 17-10 17z"/><circle cx="17" cy="14" r="3.5"/></svg><div><b>Avenue J.-F. Kennedy</b><span>Le Kennedy B6, 83140 Six-Fours</span></div></li>
+  </ul>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <div class="filet-orne"><span class="losange"></span><span class="pc">I · Savoir-faire</span><span class="losange"></span></div>
+      <h2>Le chauffage, l'air et l'eau chaude, <em>sous un même toit.</em></h2>
+      <p>De la chaudière qui ronronne au sous-sol jusqu'à la pompe à chaleur posée en façade, 2 JF Energie couvre l'essentiel du confort thermique d'une maison varoise.</p>
+    </div>
+    <div class="grille-serv">
+      <article class="carte coins rv">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="14" y="6" width="36" height="46" rx="4"/><path d="M14 16h36"/><rect x="24" y="24" width="16" height="20" rx="8"/><path class="cu" d="M32 41c-4-1.6-4.4-5.6-2-8.6.3 1.8 1.2 2.6 2 3-.6-2.8.6-5 2.6-6.4-.3 2.4 1.3 3.8 1.6 6 .5 3.2-1.2 5.4-4.2 6z"/><path d="M22 52v6M32 52v8M42 52v6"/></svg></div>
+        <h3>Chaudière gaz</h3>
+        <p>Installation de chaudières gaz, réglage de la combustion et mise en service soignée, pour une chaleur stable tout l'hiver.</p>
+        <span class="tag">Installation · réglage</span>
+      </article>
+      <article class="carte coins rv d1">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="10" y="14" width="30" height="40" rx="3"/><path d="M10 26h30"/><circle cx="25" cy="40" r="7"/><path class="cu" d="M25 44c-2.4-1-2.6-3.4-1.2-5 .2 1 .7 1.5 1.2 1.7-.3-1.6.4-3 1.6-3.8-.2 1.4.8 2.2 1 3.6.2 1.8-.8 3-2.6 3.5z"/><path d="M40 22h8a6 6 0 0 1 6 6v26"/><path d="M48 10c3 2 3 5 0 7"/><path d="M14 54v4M36 54v4"/></svg></div>
+        <h3>Chaudière fioul</h3>
+        <p>Pose et suivi des chaudières fioul, encore précieuses dans les maisons des collines non raccordées au gaz.</p>
+        <span class="tag">Fioul · maisons isolées</span>
+      </article>
+      <article class="carte coins rv d2">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="6" y="12" width="20" height="30" rx="3" opacity=".5"/><rect x="38" y="12" width="20" height="30" rx="3"/><path class="cu" d="M27 27h10M33 23l4 4-4 4"/><path d="M44 20h8M48 30a4 4 0 1 0 0 .1"/><path d="M12 42v8M20 42v8M44 42v8M52 42v8"/><path d="M4 54h56"/></svg></div>
+        <h3>Remplacement de chaudière</h3>
+        <p>Une vieille chaudière qui fatigue ? Dépose, choix du nouvel appareil adapté au logement et remise en route sans mauvaise surprise.</p>
+        <span class="tag">Qualibat remplacement</span>
+      </article>
+      <article class="carte coins rv">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="6" y="16" width="52" height="34" rx="3"/><circle cx="26" cy="33" r="12"/><path d="M26 33c-1-5 1-9 5-10-1 4-2 7-5 10zM26 33c5-1 9 1 10 5-4-1-7-2-10-5zM26 33c1 5-1 9-5 10 1-4 2-7 5-10zM26 33c-5 1-9-1-10-5 4 1 7 2 10 5z"/><path d="M44 22v22M49 22v22M54 22v22"/><path d="M12 50v6M52 50v6"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Pompes à chaleur pour le chauffage de la maison : étude du besoin, implantation discrète de l'unité extérieure et mise en service.</p>
+        <span class="tag">Qualipac chauffage</span>
+      </article>
+      <article class="carte coins rv d1">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="6" y="12" width="52" height="18" rx="4"/><path d="M12 24h40"/><path class="cu" d="M50 18h2"/><path d="M18 36c0 4-3 4-3 8s3 4 3 8M32 36c0 4-3 4-3 8s3 4 3 8M46 36c0 4-3 4-3 8s3 4 3 8"/><circle cx="54" cy="50" r="6"/><path d="M54 46v8M50 50h8M51 47l6 6M57 47l-6 6"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Splits et climatisation réversible pour traverser les étés varois au frais, et garder un appoint de chaleur à la mi-saison.</p>
+        <span class="tag">Air-air réversible</span>
+      </article>
+      <article class="carte coins rv d2">
+        <div class="ico"><svg viewBox="0 0 64 64"><rect x="18" y="4" width="28" height="12" rx="3"/><circle cx="28" cy="10" r="3"/><path d="M36 8h6M36 12h6"/><rect x="18" y="16" width="28" height="40" rx="6"/><path class="cu" d="M24 28h16M24 34h16M24 40h16" stroke-dasharray="3 3"/><path d="M26 56v4M38 56v4"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon qui puise les calories de l'air pour produire l'eau chaude sanitaire, avec une consommation électrique contenue.</p>
+        <span class="tag">Qualipac CET</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="pourquoi" id="pourquoi">
+  <div class="wrap pq-grid">
+    <div class="pq-intro rv">
+      <span class="pc">II · Nos atouts</span>
+      <h2>Un artisan du coin, qui connaît vos murs et vos hivers.</h2>
+      <p>Entre la presqu'île de Saint-Mandrier, Sanary et les hauteurs de Six-Fours, les maisons ne se ressemblent pas : villas des années 70, appartements face à la mer, mas en restanques. Chaque installation se pense au cas par cas.</p>
+      <a class="btn btn-trait" href="#contact" style="margin-top:12px">Parler de votre projet</a>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><span class="n">01</span><h3>Qualifié pour ce qu'il pose</h3><p>Qualipac chauffage, Qualipac CET et Qualibat remplacement de chaudière : des qualifications listées sur HelloWatt.</p></div>
+      <div class="atout rv d1"><span class="n">02</span><h3>Plusieurs énergies maîtrisées</h3><p>Gaz, fioul ou pompe à chaleur : le conseil part de votre logement, pas d'un produit à placer.</p></div>
+      <div class="atout rv d2"><span class="n">03</span><h3>Ancré à Six-Fours depuis 2004</h3><p>Une adresse fixe avenue Kennedy et un interlocuteur que l'on peut rappeler après les travaux.</p></div>
+      <div class="atout rv d3"><span class="n">04</span><h3>Pensé pour le climat varois</h3><p>Hivers doux mais venteux, étés brûlants : chauffage et rafraîchissement sont dimensionnés ensemble.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="etapes" id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <div class="filet-orne"><span class="losange"></span><span class="pc">III · Comment ça se passe</span><span class="losange"></span></div>
+      <h2>Quatre temps, <em>sans précipitation.</em></h2>
+    </div>
+    <ol>
+      <li class="rv"><div class="rond">I</div><h3>Premier échange</h3><p>Un appel ou un message pour décrire l'installation actuelle et ce que vous souhaitez changer.</p></li>
+      <li class="rv d1"><div class="rond">II</div><h3>Visite sur place</h3><p>Relevé du logement, de l'emplacement possible des appareils et des contraintes du bâti.</p></li>
+      <li class="rv d2"><div class="rond">III</div><h3>Devis détaillé</h3><p>Une proposition claire, matériel et pose inclus, avec les éventuelles aides évoquées.</p></li>
+      <li class="rv d3"><div class="rond">IV</div><h3>Pose &amp; mise en service</h3><p>Installation, réglages, explications d'usage : vous savez piloter votre équipement.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="apropos" id="maison">
+  <div class="wrap ap-grid">
+    <div class="rv">
+      <span class="pc">IV · La maison</span>
+      <h2>De Baudino Chauffage <em>à 2&nbsp;JF&nbsp;Energie.</em></h2>
+      <p>Créée en <strong>2004</strong> à Six-Fours-les-Plages, l'entreprise s'est d'abord fait connaître sous le nom de <strong>Baudino Chauffage</strong>, que beaucoup de clients du secteur ont encore en tête.</p>
+      <p>Aujourd'hui <strong>2 JF Energie</strong>, elle intervient sur les chaudières gaz et fioul — remplacement compris —, les pompes à chaleur, la climatisation et les chauffe-eau thermodynamiques.</p>
+      <p>L’adresse de l’entreprise est au <strong>Kennedy B6, avenue Président John Kennedy</strong> : un point de départ idéal pour rayonner entre le Brusc, Sanary, La Seyne et la rade de Toulon.</p>
+    </div>
+    <aside class="fiche coins rv d2">
+      <div class="millesime">2004</div>
+      <span class="millesime-l">Année de création</span>
+      <dl>
+        <dt>Enseigne</dt><dd>2 JF Energie</dd>
+        <dt>Nom historique</dt><dd>Baudino Chauffage</dd>
+        <dt>Métier</dt><dd>Chauffagiste · PAC · climatisation</dd>
+        <dt>Siège</dt><dd>83140 Six-Fours-les-Plages</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="galerie" id="installations">
+  <div class="wrap">
+    <div class="tete rv">
+      <div class="filet-orne"><span class="losange"></span><span class="pc">V · Installations types</span><span class="losange"></span></div>
+      <h2>Ce que l'on installe, <em>trait pour trait.</em></h2>
+      <p>Quelques configurations courantes dans les maisons et appartements du littoral. Chaque chantier est unique : tarifs sur devis.</p>
+    </div>
+    <div class="grille-gal">
+      <!-- chaufferie -->
+      <figure class="planche large rv" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 480 270" aria-hidden="true">
+          <path class="g-f" d="M0 230H480"/><path class="g-f" d="M40 0v230M440 0v230" stroke-dasharray="3 6"/>
+          <rect class="g-s" x="90" y="50" width="110" height="160" rx="8"/><path class="g-s" d="M90 78h110"/>
+          <rect class="g-s" x="118" y="100" width="54" height="70" rx="27"/>
+          <path d="M145 160c-10-4-11-13-5-20 1 4 3 6 5 7-1-7 2-12 7-16-1 6 3 9 4 14 2 8-3 13-11 15z" fill="#d39a68" opacity=".85"/>
+          <path class="g-s" d="M110 210v20M140 210v20M160 210v20M180 210v20"/>
+          <path class="g-c" d="M200 120h70v-60h100"/><path class="g-p" d="M200 150h90v-60h80"/>
+          <rect class="g-s" x="300" y="130" width="60" height="100" rx="30"/>
+          <circle class="g-s" cx="330" cy="40" r="14"/><path class="g-s" d="M330 30v10l7 4"/>
+          <path class="g-f" d="M380 60h40M380 90h40M380 120h40"/>
+          <text x="384" y="54" font-family="Hind" font-size="10" fill="#c9c4ba" letter-spacing="1">DÉPART</text>
+          <text x="384" y="84" font-family="Hind" font-size="10" fill="#c9c4ba" letter-spacing="1">RETOUR</text>
+        </svg></div>
+        <figcaption class="cap"><div><h3>Chaufferie gaz rénovée</h3><span>Chaudière murale, circuits départ / retour, ballon d'eau chaude</span></div><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <!-- PAC façade -->
+      <figure class="planche large rv d1" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 480 270" aria-hidden="true">
+          <path class="g-s" d="M60 230V100l140-60 140 60v130"/><path class="g-s" d="M40 108l160-70 160 70"/>
+          <path class="g-f" d="M60 130h280M60 160h280M60 190h280" stroke-dasharray="2 7"/>
+          <rect class="g-s" x="110" y="120" width="44" height="56"/><path class="g-s" d="M132 120v56M110 148h44"/>
+          <path class="g-s" d="M176 230v-66h48v66"/>
+          <rect class="g-s" x="250" y="120" width="44" height="56"/><path class="g-s" d="M272 120v56"/>
+          <rect class="g-s" x="350" y="160" width="100" height="70" rx="4"/><circle class="g-s" cx="388" cy="195" r="24"/>
+          <path class="g-s" d="M388 195l14-12M388 195l-12 16M388 195l18 6"/>
+          <path class="g-f" d="M424 168v54M432 168v54M440 168v54"/>
+          <path class="g-c" d="M350 200h-10"/>
+          <path class="g-p" d="M460 180q10 15 0 30M470 172q14 23 0 46"/>
+          <path class="g-f" d="M0 230H480"/>
+          <path d="M420 40l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#d8c08a"/>
+        </svg></div>
+        <figcaption class="cap"><div><h3>PAC air-eau en façade</h3><span>Unité extérieure sur plots, au pied d'une villa des collines</span></div><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <!-- split -->
+      <figure class="planche rv" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="g-f" d="M0 200H320"/>
+          <rect class="g-s" x="70" y="40" width="180" height="40" rx="10"/><path class="g-s" d="M84 68h152"/>
+          <circle cx="232" cy="54" r="2.4" fill="#5fa7b3"/>
+          <path class="g-p" d="M100 96c0 10-8 10-8 20s8 10 8 20M160 96c0 10-8 10-8 20s8 10 8 20M220 96c0 10-8 10-8 20s8 10 8 20"/>
+          <rect class="g-s" x="40" y="150" width="120" height="50"/><path class="g-s" d="M40 166h120"/>
+          <rect class="g-s" x="210" y="120" width="60" height="80" rx="2"/><path class="g-f" d="M216 130h48M216 140h48M216 150h48"/>
+          <path class="g-c" d="M260 18l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="none"/>
+        </svg></div>
+        <figcaption class="cap"><div><h3>Split mural</h3><span>Séjour rafraîchi l'été</span></div><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <!-- ballon -->
+      <figure class="planche rv d1" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="g-f" d="M0 214H320"/>
+          <rect class="g-s" x="120" y="20" width="80" height="34" rx="8"/><circle class="g-s" cx="146" cy="37" r="9"/><path class="g-s" d="M164 32h24M164 42h24"/>
+          <rect class="g-s" x="120" y="54" width="80" height="150" rx="14"/>
+          <path class="g-c" d="M136 90h48M136 112h48M136 134h48M136 156h48" stroke-dasharray="4 4"/>
+          <path class="g-s" d="M134 204v10M186 204v10"/>
+          <path class="g-c" d="M200 80h40v100"/><path class="g-p" d="M200 170h60v40"/>
+          <path class="g-p" d="M84 30q-12 12 0 24M66 26q-18 16 0 32"/>
+        </svg></div>
+        <figcaption class="cap"><div><h3>Ballon thermodynamique</h3><span>Eau chaude au garage</span></div><span class="prix">Sur devis</span></figcaption>
+      </figure>
+      <!-- remplacement -->
+      <figure class="planche rv d2" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 320 240" aria-hidden="true">
+          <path class="g-f" d="M0 210H320"/>
+          <rect class="g-f" x="40" y="60" width="80" height="120" rx="6" stroke-dasharray="4 4"/>
+          <path class="g-f" d="M56 80h48M56 96h48"/>
+          <path class="g-c" d="M136 120h46M170 108l12 12-12 12"/>
+          <rect class="g-s" x="200" y="50" width="80" height="120" rx="8"/><path class="g-s" d="M200 72h80"/>
+          <rect class="g-s" x="222" y="90" width="36" height="46" rx="18"/>
+          <path d="M240 130c-6-3-7-9-3-13 0 3 2 4 3 4-1-4 1-8 4-10 0 4 2 6 3 9 1 5-2 8-7 10z" fill="#d39a68"/>
+          <path class="g-s" d="M216 170v40M240 170v40M264 170v40"/>
+        </svg></div>
+        <figcaption class="cap"><div><h3>Remplacement chaudière</h3><span>Ancien appareil déposé</span></div><span class="prix">Sur devis</span></figcaption>
+      </figure>
+    </div>
+    <p class="note-gal">Illustrations d'installations types, non contractuelles.</p>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="avis-boite coins rv">
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.7 5.7 21.5l1.7-7.2L2 9.6 9 9z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.7 5.7 21.5l1.7-7.2L2 9.6 9 9z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.7 5.7 21.5l1.7-7.2L2 9.6 9 9z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.7 5.7 21.5l1.7-7.2L2 9.6 9 9z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.7 5.7 21.5l1.7-7.2L2 9.6 9 9z"/></svg>
+      </div>
+      <span class="pc">VI · Votre avis compte</span>
+      <h2>Vous avez fait appel à nous ?</h2>
+      <p>Un retour, même en deux lignes, aide vos voisins de Six-Fours et de la région toulonnaise à choisir leur chauffagiste. Votre avis Google sera le bienvenu.</p>
+      <a class="btn btn-trait" href="https://www.google.com/maps/search/?api=1&amp;query=2+JF+Energie+Six-Fours-les-Plages" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="gauche rv">
+      <span class="pc">VII · Questions fréquentes</span>
+      <h2>Avant de se lancer.</h2>
+      <p>Les réponses ci-contre sont générales : chaque logement est différent, et le plus simple reste d'en parler de vive voix.</p>
+      <a class="btn btn-trait" href="tel:+33494626921" style="margin-top:8px">04 94 62 69 21</a>
+    </div>
+    <div class="rv d1">
+      <details open><summary>Faut-il remplacer ma chaudière ou passer à une pompe à chaleur ?</summary><div class="rep"><p>Tout dépend du logement : isolation, émetteurs en place (radiateurs, plancher chauffant), énergie disponible et budget. Une visite permet de comparer honnêtement les deux options avant de décider.</p></div></details>
+      <details><summary>Une pompe à chaleur est-elle adaptée au climat de Six-Fours ?</summary><div class="rep"><p>Les hivers doux du littoral varois sont en général favorables aux pompes à chaleur. Il faut toutefois bien choisir l'emplacement de l'unité extérieure, à l'abri du mistral et des embruns quand c'est possible.</p></div></details>
+      <details><summary>Puis-je bénéficier d'aides pour mes travaux ?</summary><div class="rep"><p>Selon votre situation et l'équipement choisi, des dispositifs comme MaPrimeRénov' ou les primes CEE pourraient s'appliquer. Les conditions évoluent régulièrement : elles seront vérifiées au moment du devis, sans engagement de montant.</p></div></details>
+      <details><summary>Un chauffe-eau thermodynamique, c'est bruyant ?</summary><div class="rep"><p>Ces ballons intègrent un petit ventilateur : on l'installe de préférence dans un garage, une buanderie ou un cellier pour que le fonctionnement reste discret au quotidien.</p></div></details>
+      <details><summary>La climatisation peut-elle aussi chauffer ?</summary><div class="rep"><p>Oui, les climatiseurs réversibles (pompes à chaleur air-air) peuvent produire du chaud à la mi-saison ou en appoint. Leur intérêt dépend de la configuration des pièces.</p></div></details>
+      <details><summary>Comment obtenir un devis ?</summary><div class="rep"><p>Par téléphone au 04 94 62 69 21, par email ou via le formulaire ci-dessous. Une visite est généralement nécessaire pour chiffrer précisément l'installation.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="tete rv">
+      <div class="filet-orne"><span class="losange"></span><span class="pc">VIII · Contact</span><span class="losange"></span></div>
+      <h2>Parlons de <em>votre installation.</em></h2>
+    </div>
+    <div class="ct-grid">
+      <div>
+        <div class="bloc coins rv">
+          <h3>Horaires <small>Indicatif · horaires à confirmer</small></h3>
+          <ul class="horaires" id="horaires">
+            <li data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+            <li data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+            <li data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+            <li data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="6"><span>Samedi</span><span>Fermé</span></li>
+            <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+          </ul>
+        </div>
+        <div class="bloc coins rv d1">
+          <h3>Adresse &amp; zone</h3>
+          <address class="adresse">
+            2 JF Energie<br>Le Kennedy B6<br>3300 avenue Président John Kennedy<br>83140 Six-Fours-les-Plages<br>
+            <a href="tel:+33494626921">04 94 62 69 21</a><br>
+            <a href="mailto:baudino.chauffage@gmail.com">baudino.chauffage@gmail.com</a>
+          </address>
+          <p class="zone">Six-Fours-les-Plages, Le Brusc, Sanary-sur-Mer, La Seyne-sur-Mer, Saint-Mandrier et l'ouest toulonnais.</p>
+          <a class="btn btn-trait" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Kennedy+B6+3300+avenue+Pr%C3%A9sident+John+Kennedy+83140+Six-Fours-les-Plages" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <form id="form" class="rv d1" novalidate>
+        <h3>Demande de devis</h3>
+        <p class="sous">Quelques mots suffisent : nous revenons vers vous pour organiser une visite.</p>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          <div class="champ plein"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ plein"><label for="projet">Votre projet</label>
+            <select id="projet" name="projet">
+              <option>Remplacement de chaudière</option>
+              <option>Chaudière gaz ou fioul</option>
+              <option>Pompe à chaleur</option>
+              <option>Climatisation</option>
+              <option>Chauffe-eau thermodynamique</option>
+              <option>Autre demande</option>
+            </select></div>
+          <div class="champ plein"><label for="message">Message</label><textarea id="message" name="message" placeholder="Type de logement, équipement actuel, commune…"></textarea></div>
+        </div>
+        <div class="form-pied">
+          <small>Vos informations servent uniquement à répondre à votre demande.</small>
+          <button class="btn btn-or" type="submit">Envoyer la demande</button>
+        </div>
+        <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="pied-grid">
+      <div>
+        <a class="marque" href="#accueil" style="margin-bottom:18px">
+          <svg viewBox="0 0 38 38" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="37" height="37" stroke="#d8c08a"/><path d="M19 29c-5-2.6-5.2-7.4-2-11 .4 2 1.4 3 2.6 3.4-.6-3.4 1-6.4 3.4-8.4-.4 3 1.6 5 2.4 7.6 1 3.6-1 7.2-6.4 8.4z" stroke="#d39a68" stroke-width="1.3"/></svg>
+          <span><b>2 JF Energie</b><small>Baudino Chauffage</small></span>
+        </a>
+        <p>Chauffagiste à Six-Fours-les-Plages depuis 2004 : chaudières gaz et fioul, pompes à chaleur, climatisation, chauffe-eau thermodynamiques.</p>
+      </div>
+      <div><h4>Coordonnées</h4><ul><li>Le Kennedy B6</li><li>3300 av. Président John Kennedy</li><li>83140 Six-Fours-les-Plages</li><li><a href="tel:+33494626921">04 94 62 69 21</a></li><li><a href="mailto:baudino.chauffage@gmail.com">baudino.chauffage@gmail.com</a></li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Lundi–vendredi : sur rendez-vous</li><li>Samedi/Dimanche : fermé</li><li>Horaires à confirmer</li></ul></div>
+      <div><h4>Qualifications</h4><ul><li>QUALIPAC Chauffage</li><li>QUALIBAT Remplacement chaudière</li><li>QUALIPAC CET</li><li><a href="https://www.hellowatt.fr/pompe-a-chaleur/climatisation/installateur/six-fours-les-plages" target="_blank" rel="noopener">Source : HelloWatt</a></li></ul></div>
+    </div>
+    <div class="pied-bas"><span>© <span id="annee">2026</span> 2 JF Energie – Six-Fours-les-Plages</span><span>Chauffage · Pompe à chaleur · Climatisation</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33494626921" aria-label="Appeler 2 JF Energie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  /* ciel étoilé */
+  var ciel=document.getElementById('ciel'),ns='http://www.w3.org/2000/svg',s=7;
+  function r(){s=(s*9301+49297)%233280;return s/233280}
+  for(var i=0;i<170;i++){
+    var c=document.createElementNS(ns,'circle'),y=r()*620;
+    c.setAttribute('cx',(r()*1440).toFixed(1));c.setAttribute('cy',y.toFixed(1));
+    c.setAttribute('r',(r()*1.1+.3).toFixed(2));
+    c.setAttribute('opacity',(r()*.6+.2).toFixed(2));
+    if(i%5===0){c.setAttribute('class','scint');c.style.animationDelay=(r()*4).toFixed(2)+'s'}
+    ciel.appendChild(c);
+  }
+  /* nav */
+  var nav=document.getElementById('nav');
+  function sc(){nav.classList.toggle('solide',window.scrollY>30)}
+  sc();window.addEventListener('scroll',sc,{passive:true});
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');if(o)nav.classList.add('solide')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false')})});
+  /* horaires */
+  var j=new Date().getDay(),li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+  /* formulaire */
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+  /* apparitions */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>

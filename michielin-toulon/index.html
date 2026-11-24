@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michielin – Plombier chauffagiste à Toulon</title>
+<meta name="description" content="Michielin SARL, plombier chauffagiste à Toulon depuis 2004 : chaudières gaz et fioul, radiateurs et chaudières électriques, plomberie et climatisation. Devis sur demande au 06 26 74 19 18.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#f5f0e6;
+  --papier-2:#ece5d6;
+  --encre:#18181b;
+  --rade:#1d4e89;
+  --tomette:#b5432a;   /* 5:1 sur papier */
+  --ocre:#c99a3a;      /* décoratif uniquement */
+  --gris:#77736b;      /* filets et ornements */
+  --gris-txt:#57534c;  /* texte secondaire (≥ 6:1) */
+  --serif:"Libre Bodoni",Didot,"Bodoni 72",Georgia,serif;
+  --sans:"Work Sans",system-ui,sans-serif;
+  --larg:1260px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--sans);font-size:1rem;line-height:1.65;overflow-x:hidden;
+  background-image:repeating-linear-gradient(0deg,rgba(24,24,27,.018) 0 1px,transparent 1px 4px)}
+svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.pc{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.filet{border:0;border-top:1px solid var(--encre);margin:0}
+.filet-triple{border:0;height:7px;border-top:3px solid var(--encre);border-bottom:1px solid var(--encre);margin:0}
+.lettrine::first-letter{float:left;font-family:var(--serif);font-size:4.6em;line-height:.82;padding:.06em .1em 0 0;color:var(--tomette);font-weight:500}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:.95rem;letter-spacing:.04em;text-decoration:none;padding:14px 22px;border:1.5px solid var(--encre);cursor:pointer;transition:background .25s,color .25s,transform .25s;line-height:1.1;border-radius:0}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:var(--rade);border-color:var(--rade);color:#fff}
+.btn-plein:hover{background:var(--encre);border-color:var(--encre)}
+.btn-vide{background:transparent;color:var(--encre)}
+.btn-vide:hover{background:var(--encre);color:var(--papier)}
+.btn-tomette{background:var(--tomette);border-color:var(--tomette);color:#fff}
+.btn-tomette:hover{background:var(--encre);border-color:var(--encre)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--tomette);outline-offset:3px}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:60;background:rgba(245,240,230,.97);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-bottom:1px solid var(--encre)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
+.marque{text-decoration:none;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.marque b{font-family:var(--serif);font-size:1.75rem;font-weight:500;letter-spacing:-.01em}
+.marque b i{color:var(--tomette)}
+.marque span{font-variant:small-caps;font-family:var(--serif);letter-spacing:.12em;font-size:1rem;color:var(--gris-txt)}
+.menu{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:2px}
+.menu a{display:block;text-decoration:none;padding:8px 12px;font-size:.92rem;font-weight:500;position:relative}
+.menu a .n{font-family:var(--serif);font-style:italic;color:var(--tomette);margin-right:4px}
+.menu a:hover{color:var(--rade)}
+.menu a.tel{margin-left:10px;border:1.5px solid var(--encre);padding:9px 14px;font-weight:600}
+.menu a.tel:hover{background:var(--encre);color:var(--papier)}
+.burger{display:none;width:46px;height:42px;background:none;border:1.5px solid var(--encre);cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--encre);transition:transform .25s,opacity .2s}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:19.5px}.burger span:nth-child(3){top:26px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* manchette */
+.manchette{padding-top:70px}
+.manchette .ligne{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 0 10px;font-size:.8rem;color:var(--gris-txt)}
+.manchette .ligne b{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--encre);font-size:.95rem}
+.titre-journal{text-align:center;padding:18px 0 14px}
+.titre-journal .nom{font-family:var(--serif);font-size:clamp(2.6rem,8.2vw,7.6rem);line-height:.9;font-weight:500;letter-spacing:-.025em}
+.titre-journal .nom i{color:var(--tomette);font-weight:400}
+.titre-journal .devise{font-family:var(--serif);font-style:italic;color:var(--gris-txt);margin-top:10px;font-size:1.05rem}
+
+/* une (mosaïque 3 colonnes) */
+.une{display:grid;grid-template-columns:250px 1fr 390px;gap:0;border-bottom:1px solid var(--encre);margin-bottom:0}
+.une>div{padding:34px 30px}
+.une>div+div{border-left:1px solid var(--encre)}
+.une .col-g{padding-left:0}
+.une .col-d{padding-right:0}
+.sommaire h2{font-size:.78rem;font-family:var(--sans);font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding-bottom:10px;border-bottom:3px double var(--encre);margin-bottom:6px}
+.sommaire ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.sommaire li{counter-increment:s;border-bottom:1px solid rgba(24,24,27,.25)}
+.sommaire a{display:grid;grid-template-columns:34px 1fr;gap:4px;padding:12px 0;text-decoration:none;transition:padding .25s,color .25s}
+.sommaire a::before{content:counter(s,decimal-leading-zero);font-family:var(--serif);font-size:1.3rem;color:var(--tomette);line-height:1.1}
+.sommaire a b{font-family:var(--serif);font-size:1.12rem;font-weight:500;display:block;line-height:1.2}
+.sommaire a small{display:block;font-size:.8rem;color:var(--gris-txt);line-height:1.4;margin-top:2px}
+.sommaire a:hover{padding-left:6px;color:var(--rade)}
+.sommaire .meteo{margin-top:22px;padding:14px;border:1px solid var(--encre);font-size:.85rem;color:var(--gris-txt)}
+.sommaire .meteo b{display:block;font-family:var(--serif);font-size:1rem;color:var(--encre);font-weight:500;font-style:italic}
+.col-c{display:flex;flex-direction:column}
+.surtitre{display:flex;align-items:center;gap:12px;color:var(--tomette)}
+.surtitre::after{content:"";flex:1;height:1px;background:var(--tomette)}
+.une h1{font-size:clamp(2.6rem,5.3vw,5.2rem);line-height:.98;letter-spacing:-.02em;margin:18px 0 22px;font-weight:500}
+.une h1 em{font-style:italic;color:var(--rade);font-weight:400}
+.chapeau{font-family:var(--serif);font-size:1.28rem;line-height:1.5;color:#2b2a27;max-width:40ch}
+.chapeau::first-line{font-variant:small-caps;letter-spacing:.04em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.signature{margin-top:auto;padding-top:26px;display:flex;gap:16px;align-items:center;font-size:.86rem;color:var(--gris-txt)}
+.signature::before{content:"";width:40px;height:1px;background:var(--encre)}
+.fig{position:relative;margin:0}
+.fig svg{width:100%;height:auto}
+.fig figcaption{font-size:.82rem;color:var(--gris-txt);border-top:1px solid var(--encre);padding-top:8px;margin-top:8px;font-style:italic}
+.fig figcaption b{font-family:var(--serif);font-style:normal;font-weight:600;color:var(--encre)}
+.fig .macaron{position:absolute;top:-6px;right:-6px;width:128px;height:128px}
+.macaron .anneau{transform-origin:64px 64px;animation:tourne 30s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+
+/* bandeau confiance */
+.confiance{border-bottom:1px solid var(--encre)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:22px 22px;display:flex;gap:14px;align-items:center}
+.confiance li+li{border-left:1px solid var(--encre)}
+.confiance svg{width:40px;height:40px;flex:none;color:var(--rade)}
+.confiance b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:500;line-height:1.15}
+.confiance span{font-size:.84rem;color:var(--gris-txt)}
+.confiance a{text-decoration:none}
+.confiance a:hover b{color:var(--tomette)}
+
+/* rubriques */
+.rubrique{padding:92px 0}
+.tete{display:grid;grid-template-columns:120px 1fr;gap:0 30px;border-top:3px solid var(--encre);padding-top:16px;margin-bottom:46px}
+.tete .no{font-family:var(--serif);font-size:5.2rem;line-height:.8;color:var(--tomette);font-weight:400;font-style:italic}
+.tete .pc{color:var(--gris-txt);display:block;margin-bottom:8px}
+.tete h2{font-size:clamp(2.2rem,4.6vw,3.9rem);letter-spacing:-.015em}
+.tete h2 em{color:var(--rade);font-weight:400}
+.tete p{margin:14px 0 0;max-width:62ch;color:#3a3833;font-size:1.04rem}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--encre);border-left:1px solid var(--encre)}
+.service{padding:30px 28px 32px;border-right:1px solid var(--encre);border-bottom:1px solid var(--encre);position:relative;transition:background .3s}
+.service:hover{background:#fbf8f1}
+.service .ref{position:absolute;top:18px;right:22px;font-family:var(--serif);font-style:italic;color:var(--gris-txt);font-size:.95rem}
+.service svg{width:74px;height:74px;margin-bottom:16px;color:var(--encre);transition:transform .4s}
+.service:hover svg{transform:rotate(-4deg) scale(1.05)}
+.service h3{font-size:1.65rem;margin-bottom:10px}
+.service p{margin:0;color:#3a3833;font-size:.97rem}
+.service .tag{display:inline-block;margin-top:14px;font-variant:small-caps;font-family:var(--serif);letter-spacing:.08em;color:var(--tomette);font-size:1.02rem}
+
+/* éditorial / pourquoi */
+.edito{background:var(--encre);color:var(--papier)}
+.edito .tete{border-top-color:var(--papier)}
+.edito .tete .no{color:#e0896f}
+.edito .tete .pc{color:#bdb6a8}
+.edito .tete h2 em{color:#9cc0eb}
+.edito .tete p{color:#d9d2c4}
+.cols-edito{column-count:2;column-gap:56px;column-rule:1px solid rgba(245,240,230,.3);font-size:1.06rem;color:#e7e0d2;margin-bottom:50px}
+.cols-edito p{margin:0 0 1em}
+.cols-edito .lettrine::first-letter{color:#e0896f}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(245,240,230,.4)}
+.atout{padding:28px 24px 8px 0;transition:transform .3s}
+.atout+.atout{padding-left:24px;border-left:1px solid rgba(245,240,230,.25)}
+.atout .chiffre{font-family:var(--serif);font-size:2.6rem;font-style:italic;color:#e3b862;line-height:1}
+.atout h3{font-size:1.4rem;margin:12px 0 8px;color:#fff}
+.atout p{font-size:.95rem;color:#d9d2c4;margin:0}
+.atout:hover{transform:translateY(-4px)}
+
+/* étapes */
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.etape{padding:0 26px 0 0;position:relative}
+.etape+.etape{padding-left:26px;border-left:1px dotted var(--gris)}
+.etape .rom{font-family:var(--serif);font-size:4.2rem;line-height:1;color:var(--rade);font-weight:400;display:block;margin-bottom:10px;transition:color .3s}
+.etape:hover .rom{color:var(--tomette)}
+.etape h3{font-size:1.45rem;margin-bottom:8px}
+.etape h3::after{content:"";display:block;width:36px;height:2px;background:var(--ocre);margin-top:12px}
+.etape p{margin:0;font-size:.97rem;color:#3a3833}
+
+/* portrait */
+.portrait{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start}
+.portrait .texte{column-count:2;column-gap:40px;font-size:1.05rem}
+.portrait .texte p{margin:0 0 1em}
+.encadre{border:1px solid var(--encre);padding:26px;background:var(--papier-2);position:relative}
+.encadre::before{content:"";position:absolute;inset:5px;border:1px solid rgba(24,24,27,.35);pointer-events:none}
+.encadre h3{font-size:.76rem;font-family:var(--sans);letter-spacing:.22em;text-transform:uppercase;font-weight:600;text-align:center;border-bottom:3px double var(--encre);padding-bottom:10px;margin-bottom:12px}
+.encadre dl{margin:0}
+.encadre dt{font-variant:small-caps;font-family:var(--serif);letter-spacing:.08em;color:var(--tomette);font-size:1.02rem;margin-top:10px}
+.encadre dd{margin:0;padding-bottom:10px;border-bottom:1px dotted var(--gris)}
+.encadre dd:last-child{border-bottom:0}
+.encadre .grand{font-family:var(--serif);font-size:3.4rem;line-height:1;color:var(--encre);text-align:center;margin:16px 0 4px}
+.encadre .grand + p{text-align:center;font-size:.82rem;color:var(--gris-txt);margin:0}
+
+/* planches */
+.planches{background:var(--papier-2);border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)}
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.planche{margin:0;background:var(--papier);border:1px solid var(--encre);padding:14px;transition:transform .35s,box-shadow .35s}
+.planche:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:8px 10px 0 rgba(24,24,27,.12)}
+.planche svg{width:100%;height:auto;border:1px solid rgba(24,24,27,.35);background:#fbf8f1}
+.planche figcaption{padding:12px 2px 2px}
+.planche .figno{font-family:var(--serif);font-style:italic;color:var(--tomette)}
+.planche h3{font-size:1.3rem;margin:2px 0 6px}
+.planche p{font-size:.88rem;color:#3a3833;margin:0 0 10px}
+.planche .prix{font-variant:small-caps;font-family:var(--serif);letter-spacing:.06em;border-top:1px solid var(--encre);padding-top:8px;display:flex;justify-content:space-between;font-size:1rem}
+.note{margin-top:24px;font-size:.85rem;color:var(--gris-txt);font-style:italic}
+
+/* avis */
+.avis{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre);padding:34px 0}
+.avis svg{width:90px;height:90px}
+.avis h2{font-size:clamp(2rem,3.8vw,3rem);margin:6px 0 8px}
+.avis h2 em{color:var(--tomette)}
+.avis p{margin:0;color:#3a3833;max-width:58ch}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px}
+.faq-cote p{color:#3a3833}
+.faq-cote .fig{margin-top:22px;max-width:300px}
+.faq{border-top:3px solid var(--encre)}
+.faq-item{border-bottom:1px solid var(--encre)}
+.faq-q{width:100%;background:none;border:0;padding:20px 0;display:grid;grid-template-columns:44px 1fr 30px;gap:10px;align-items:baseline;text-align:left;cursor:pointer;font-family:var(--serif);font-size:1.32rem;line-height:1.25;color:var(--encre)}
+.faq-q .i{font-style:italic;color:var(--tomette)}
+.faq-q .s{font-family:var(--sans);font-size:1.5rem;font-weight:300;transition:transform .3s;text-align:center;line-height:1}
+.faq-q:hover{color:var(--rade)}
+.faq-q[aria-expanded="true"] .s{transform:rotate(45deg);color:var(--tomette)}
+.faq-r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.faq-r>div{overflow:hidden}
+.faq-r p{margin:0 0 22px 54px;color:#3a3833;max-width:64ch}
+.faq-item.ouvert .faq-r{grid-template-rows:1fr}
+
+/* pratique */
+.pratique{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)}
+.pratique>div{padding:34px 34px 34px 0}
+.pratique>div+div{padding:34px 0 34px 34px;border-left:1px solid var(--encre)}
+.pratique h3{font-size:2rem;margin-bottom:4px}
+.pratique .indic{font-style:italic;color:var(--gris-txt);font-size:.9rem;margin-bottom:16px}
+.horaires{width:100%;border-collapse:collapse;font-size:1rem}
+.horaires td{padding:11px 10px;border-bottom:1px dotted var(--gris)}
+.horaires td:first-child{font-family:var(--serif);font-size:1.12rem}
+.horaires td:last-child{text-align:right;color:#3a3833}
+.horaires tr.auj{background:var(--rade);color:#fff}
+.horaires tr.auj td{color:#fff;border-bottom-color:var(--rade)}
+.horaires tr.auj td:first-child::after{content:" — aujourd'hui";font-style:italic;font-size:.9rem}
+.carte{width:100%;height:auto;border:1px solid var(--encre);margin:6px 0 18px;background:#fbf8f1}
+.adresse{font-family:var(--serif);font-size:1.35rem;margin-bottom:6px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px}
+.contact .gros{display:block;font-family:var(--serif);font-size:clamp(2.4rem,4.6vw,3.8rem);text-decoration:none;line-height:1;margin:18px 0 10px;letter-spacing:-.01em}
+.contact .gros:hover{color:var(--tomette)}
+.contact .mail{color:var(--rade);font-weight:500;word-break:break-all}
+.contact ul{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--encre)}
+.contact li{padding:12px 0;border-bottom:1px dotted var(--gris);display:grid;grid-template-columns:110px 1fr;gap:10px;font-size:.97rem}
+.contact li b{font-variant:small-caps;font-family:var(--serif);letter-spacing:.06em;color:var(--tomette);font-weight:500;font-size:1.05rem}
+form{border:1px solid var(--encre);padding:34px;background:#fbf8f1;position:relative}
+form::before{content:"";position:absolute;inset:6px;border:1px solid rgba(24,24,27,.3);pointer-events:none}
+form h3{font-size:1.9rem;margin-bottom:4px}
+form .sous{font-style:italic;color:var(--gris-txt);font-size:.92rem;margin-bottom:18px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px}
+.champ{display:flex;flex-direction:column;gap:4px;position:relative}
+.champ.large{grid-column:1/-1}
+label{font-variant:small-caps;font-family:var(--serif);letter-spacing:.06em;font-size:1.05rem}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:1px solid var(--encre);padding:10px 2px;width:100%;border-radius:0;transition:border-color .2s,background .2s}
+select{border:1px solid var(--encre);padding:10px}
+input:focus,textarea:focus,select:focus{border-color:var(--rade);background:rgba(29,78,137,.05)}
+textarea{min-height:120px;resize:vertical;border:1px solid var(--encre);padding:10px}
+.envoi{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;position:relative}
+.envoi small{color:var(--gris-txt);font-size:.85rem}
+.msg-form{display:none;margin:18px 0 0;padding:14px 16px;border-left:4px solid var(--tomette);background:var(--papier-2);font-family:var(--serif);font-size:1.08rem;position:relative}
+.msg-form.visible{display:block}
+
+/* pied */
+footer{border-top:3px solid var(--encre);margin-top:0;padding-top:12px}
+footer .filet{margin-top:4px}
+.pied-nom{text-align:center;font-family:var(--serif);font-size:clamp(3rem,13vw,11rem);line-height:.95;letter-spacing:-.03em;padding:24px 0 10px}
+.pied-nom i{color:var(--tomette);font-weight:400}
+.pied{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--encre)}
+.pied>div{padding:28px 24px 34px 0}
+.pied>div+div{padding-left:24px;border-left:1px solid var(--encre)}
+.pied h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin-bottom:7px;font-size:.94rem}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--tomette)}
+.bas{border-top:1px solid var(--encre);padding:14px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.84rem;color:var(--gris-txt)}
+.demo{background:var(--encre);color:#d9d2c4;text-align:center;font-size:.82rem;padding:10px 16px 12px}
+
+/* appel flottant */
+.appel{display:none;position:fixed;left:16px;right:16px;bottom:14px;z-index:70;background:var(--rade);color:#fff;text-decoration:none;justify-content:center;align-items:center;gap:10px;padding:14px 18px;font-weight:600;box-shadow:0 0 0 1px var(--papier),0 0 0 2px var(--rade),0 10px 26px rgba(0,0,0,.25)}
+.appel svg{width:20px;height:20px}
+
+/* animations */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+.fig .vapeur path{stroke-dasharray:6 8;animation:vapeur 3s linear infinite}
+@keyframes vapeur{to{stroke-dashoffset:-28}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* responsive */
+@media (max-width:1180px){
+  .une{grid-template-columns:220px 1fr 320px}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+  .menu{position:fixed;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--papier);border-bottom:3px double var(--encre);padding:8px 16px 20px;transform:translateY(-120%);visibility:hidden;transition:transform .35s ease,visibility .35s}
+  .menu.ouvert{transform:none;visibility:visible}
+  .menu a{padding:14px 2px;border-bottom:1px solid rgba(24,24,27,.2);font-family:var(--serif);font-size:1.3rem}
+  .menu a.tel{margin:14px 0 0;text-align:center;font-family:var(--sans);font-size:1rem}
+  .burger{display:block}
+  .une{grid-template-columns:1fr 1fr;grid-template-areas:"c c" "g d"}
+  .col-c{grid-area:c;border-bottom:1px solid var(--encre)}
+  .col-g{grid-area:g}
+  .col-d{grid-area:d}
+  .une>div{padding:30px 0}
+  .une>.col-c{padding:30px 0}
+  .une>div+div{border-left:0}
+  .une .col-d{border-left:1px solid var(--encre);padding-left:28px}
+  .une .col-g{padding-right:28px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(3){padding-left:0;border-left:0}
+  .etapes{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .etape:nth-child(3){padding-left:0;border-left:0}
+  .portrait,.faq-wrap,.contact{grid-template-columns:1fr;gap:36px}
+  .confiance ul{grid-template-columns:repeat(2,1fr)}
+  .confiance li:nth-child(3){border-left:0}
+  .confiance li:nth-child(-n+2){border-bottom:1px solid var(--encre)}
+  .pied{grid-template-columns:1fr 1fr}
+  .pied>div:nth-child(3){padding-left:0;border-left:0}
+  .pied>div:nth-child(-n+2){border-bottom:1px solid var(--encre)}
+  .avis{grid-template-columns:auto 1fr}
+  .avis .btn{grid-column:1/-1;justify-self:start}
+  .appel{display:flex}
+  body{padding-bottom:76px}
+}
+@media (max-width:640px){
+  .rubrique{padding:66px 0}
+  .manchette .ligne span:nth-child(2){display:none}
+  .une{grid-template-columns:1fr;grid-template-areas:"c" "d" "g"}
+  .une .col-d{border-left:0;padding-left:0;border-bottom:1px solid var(--encre)}
+  .une .col-g{padding-right:0}
+  .chapeau{font-size:1.15rem}
+  .actions .btn{width:100%}
+  .fig .macaron{width:104px;height:104px;top:-4px;right:-2px}
+  .confiance ul{grid-template-columns:1fr}
+  .confiance li{padding:16px 0}
+  .confiance li+li{border-left:0;border-top:1px solid var(--encre)}
+  .confiance li:nth-child(-n+2){border-bottom:0}
+  .tete{grid-template-columns:1fr}
+  .tete .no{font-size:3.6rem;margin-bottom:10px}
+  .services,.atouts,.etapes,.galerie,.champs,.pied,.pratique{grid-template-columns:1fr}
+  .service{padding:26px 20px}
+  .cols-edito,.portrait .texte{column-count:1}
+  .atout,.atout+.atout{padding:24px 0 14px;border-left:0;border-bottom:1px solid rgba(245,240,230,.25)}
+  .etape,.etape+.etape{padding:0;border-left:0}
+  .pratique>div,.pratique>div+div{padding:28px 0;border-left:0}
+  .pratique>div+div{border-top:1px solid var(--encre)}
+  .avis{grid-template-columns:1fr;gap:16px}
+  .avis svg{width:70px;height:70px}
+  form{padding:26px 18px}
+  .faq-q{grid-template-columns:34px 1fr 24px;font-size:1.15rem}
+  .faq-r p{margin-left:0}
+  .contact li{grid-template-columns:1fr;gap:0}
+  .pied>div,.pied>div+div{padding:22px 0;border-left:0;border-bottom:1px solid var(--encre)}
+  .pied>div:last-child{border-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="haut">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Michielin, retour en haut"><b>Michielin<i>.</i></b><span>sarl · Toulon</span></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services"><span class="n">i.</span>Services</a></li>
+      <li><a href="#methode"><span class="n">ii.</span>Méthode</a></li>
+      <li><a href="#planches"><span class="n">iii.</span>Planches</a></li>
+      <li><a href="#faq"><span class="n">iv.</span>Questions</a></li>
+      <li><a href="#contact"><span class="n">v.</span>Contact</a></li>
+      <li><a class="tel" href="tel:+33626741918">06 26 74 19 18</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ============ MANCHETTE + UNE ============ -->
+<section class="manchette" aria-labelledby="titre-une">
+  <div class="wrap">
+    <div class="ligne"><span><b>La Gazette du bon chauffage</b> — édition toulonnaise</span><span>Plomberie · Chauffage · Climatisation</span><span id="date-jour">Toulon, Var</span></div>
+    <hr class="filet-triple">
+    <div class="titre-journal">
+      <div class="nom">Michielin <i>&amp;</i> le confort</div>
+      <p class="devise">Plombier chauffagiste à Toulon — depuis 2004</p>
+    </div>
+    <hr class="filet">
+
+    <div class="une">
+      <div class="col-g sommaire rv">
+        <h2>Au sommaire</h2>
+        <ol>
+          <li><a href="#services"><span><b>Chaudières gaz &amp; fioul</b><small>Pose, remplacement, entretien</small></span></a></li>
+          <li><a href="#services"><span><b>Radiateurs électriques</b><small>Et chaudières électriques</small></span></a></li>
+          <li><a href="#services"><span><b>Plomberie</b><small>Réseaux, sanitaires, fuites</small></span></a></li>
+          <li><a href="#methode"><span><b>Mode d'emploi</b><small>Du premier appel au chantier</small></span></a></li>
+          <li><a href="#planches"><span><b>Planches illustrées</b><small>Figures 2 à 5</small></span></a></li>
+          <li><a href="#pratique"><span><b>Pages pratiques</b><small>Horaires, adresse, itinéraire</small></span></a></li>
+        </ol>
+        <div class="meteo"><b>Bulletin de saison</b>Quand le mistral descend du Faron, mieux vaut un chauffage révisé avant les premiers froids.</div>
+      </div>
+
+      <div class="col-c rv">
+        <span class="surtitre pc">À la une · Toulon 83200</span>
+        <h1 id="titre-une">Le chaud, l'eau <em>et le bon réglage,</em> depuis 2004.</h1>
+        <p class="chapeau">Chaudière au gaz ou au fioul, radiateurs électriques, plomberie de la cuisine à la salle de bains : Michielin SARL accompagne les foyers toulonnais, de la rade aux collines, entreprise installée depuis 2004.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33626741918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler le 06 26 74 19 18</a>
+          <a class="btn btn-vide" href="#contact">Demander un devis</a>
+        </div>
+        <p class="signature">140 chemin du Galibier, 83200 Toulon</p>
+      </div>
+
+      <div class="col-d rv">
+        <figure class="fig">
+          <svg viewBox="0 0 380 420" aria-labelledby="fig1-t" role="img">
+            <title id="fig1-t">Gravure d'un radiateur en fonte et d'une chaudière murale</title>
+            <defs>
+              <pattern id="h1" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5" stroke="#18181b" stroke-width="1"/></pattern>
+              <pattern id="h2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".8"/></pattern>
+              <pattern id="h3" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 0v7" stroke="#18181b" stroke-width=".7"/></pattern>
+              <pattern id="hx" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5M0 0h5" stroke="#18181b" stroke-width=".7"/></pattern>
+            </defs>
+            <!-- mur & sol -->
+            <rect x="0" y="0" width="380" height="350" fill="url(#h3)" opacity=".22"/>
+            <path d="M0 350h380" stroke="#18181b" stroke-width="1.5"/>
+            <path d="M0 356h380M0 364h380" stroke="#18181b" stroke-width=".6"/>
+            <g stroke="#18181b" stroke-width=".7"><path d="M20 350l-14 70M80 350l-10 70M140 350l-6 70M200 350l-2 70M260 350l2 70M320 350l6 70"/></g>
+            <!-- chaudière murale -->
+            <g stroke="#18181b" stroke-width="1.4" fill="#fbf8f1">
+              <rect x="210" y="30" width="130" height="170" rx="6"/>
+              <rect x="210" y="30" width="18" height="170" fill="url(#h1)" stroke="none"/>
+              <path d="M210 150h130"/>
+              <rect x="240" y="60" width="74" height="34" rx="2" fill="#fbf8f1"/>
+              <path d="M248 70h58M248 78h40M248 86h50" stroke-width=".7"/>
+              <circle cx="254" cy="122" r="9"/><circle cx="296" cy="122" r="9"/>
+              <path d="M254 114v8M296 114v8" stroke-width="1.2"/>
+              <rect x="210" y="150" width="130" height="50" fill="url(#h2)"/>
+              <path d="M240 200v40M262 200v26h-18v14M284 200v40M318 200v40" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <path d="M275 30V8" stroke-width="10"/>
+            </g>
+            <g class="vapeur" fill="none" stroke="#1d4e89" stroke-width="1.4"><path d="M268 6c-6-8 6-12 0-20"/><path d="M282 6c-6-8 6-12 0-20"/></g>
+            <!-- radiateur fonte -->
+            <g stroke="#18181b" stroke-width="1.4" fill="#fbf8f1">
+              <path d="M36 220h196" stroke-width="5" stroke-linecap="round"/>
+              <g id="el">
+                <rect x="40" y="206" width="22" height="134" rx="10"/>
+                <rect x="47" y="220" width="8" height="106" rx="4" fill="url(#hx)"/>
+              </g>
+              <use href="#el" x="24"/><use href="#el" x="48"/><use href="#el" x="72"/><use href="#el" x="96"/><use href="#el" x="120"/><use href="#el" x="144"/><use href="#el" x="168"/>
+              <rect x="44" y="338" width="10" height="12" fill="#18181b"/><rect x="212" y="338" width="10" height="12" fill="#18181b"/>
+              <path d="M232 220h18v-4" stroke-width="5" fill="none"/>
+              <circle cx="240" cy="210" r="8"/><path d="M232 210h16" stroke-width="1"/>
+            </g>
+            <path d="M40 340c60 6 120 6 190 0" fill="none" stroke="#18181b" stroke-width=".6"/>
+            <!-- légendes -->
+            <g font-family="Libre Bodoni,Georgia,serif" font-style="italic" font-size="13" fill="#18181b">
+              <path d="M120 200l-30-40h-40" stroke="#18181b" stroke-width=".7" fill="none"/><text x="14" y="156">a. radiateur</text>
+              <path d="M336 180l18 64" stroke="#18181b" stroke-width=".7" fill="none"/><text x="290" y="262">b. chaudière</text>
+            </g>
+          </svg>
+          <svg class="macaron" viewBox="0 0 128 128" aria-label="Depuis 2004" role="img">
+            <defs><path id="cercle" d="M64 64m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+            <circle cx="64" cy="64" r="62" fill="#b5432a"/>
+            <circle cx="64" cy="64" r="56" fill="none" stroke="#f5f0e6" stroke-width="1"/>
+            <circle cx="64" cy="64" r="34" fill="none" stroke="#f5f0e6" stroke-width="1"/>
+            <g class="anneau"><text font-family="Work Sans,sans-serif" font-size="10.5" font-weight="600" letter-spacing="2.6" fill="#f5f0e6"><textPath href="#cercle">MICHIELIN · SARL · TOULON · VAR · </textPath></text></g>
+            <text x="64" y="58" text-anchor="middle" font-family="Libre Bodoni,Georgia,serif" font-style="italic" font-size="13" fill="#f5f0e6">depuis</text>
+            <text x="64" y="80" text-anchor="middle" font-family="Libre Bodoni,Georgia,serif" font-size="24" fill="#f5f0e6">2004</text>
+          </svg>
+          <figcaption><b>Fig. 1.</b> — Radiateur à colonnes (a) et chaudière murale (b) : les deux pièces maîtresses d'un chauffage central bien tenu.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<section class="confiance" aria-label="En bref">
+  <div class="wrap">
+    <ul>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="16"/><circle cx="20" cy="20" r="12" stroke-dasharray="2 3"/><path d="M14 22l4 4 8-10"/></svg><div><b>Depuis 2004</b><span>une entreprise installée depuis 2004</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 34V16l14-10 14 10v18z"/><path d="M16 34V22h8v12"/></svg><div><b>SARL toulonnaise</b><span>140 chemin du Galibier, 83200</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19z"/><path d="M16 26a4 4 0 0 0 4 4"/></svg><div><b>Gaz, fioul, électrique</b><span>Chauffage &amp; plomberie</span></div></li>
+      <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M10 5h7l3 8-4 2.5a17 17 0 0 0 9 9L27.5 20l8 3v7a3 3 0 0 1-3 3A26 26 0 0 1 7 8a3 3 0 0 1 3-3z"/></svg><div><a href="tel:+33626741918"><b>06 26 74 19 18</b></a><span>Devis sur demande</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="rubrique" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">i.</span>
+      <div><span class="pc">Rubrique première — Les services</span><h2>Ce que l'on fait, <em>et bien</em></h2><p>Du chauffage central à la petite fuite sous l'évier, un seul artisan pour suivre la maison. Voici, rubrique par rubrique, nos domaines d'intervention.</p></div>
+    </div>
+    <div class="services">
+      <article class="service rv"><span class="ref">§ 1.1</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="16" y="6" width="42" height="52" rx="3"/><path d="M16 42h42"/><rect x="25" y="14" width="24" height="12"/><path d="M28 18h18M28 22h12" stroke-width=".7"/><path d="M33 36c0-4 4-5 4-9 3 3 4 5 4 8a4 4 0 0 1-8 1z" stroke="#b5432a"/><path d="M18 44h38M18 48h38M18 52h38M18 56h38" stroke-width=".6"/><path d="M26 58v10M37 58v10M48 58v10" stroke-width="2.4"/></svg>
+        <h3>Chaudière gaz</h3><p>Installation, remplacement et mise en service de chaudières gaz, murales ou au sol, y compris à condensation.</p><span class="tag">pose · remplacement</span></article>
+      <article class="service rv"><span class="ref">§ 1.2</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="12" y="16" width="34" height="50" rx="2"/><path d="M12 30h34"/><path d="M14 32l30 32M14 40l22 24M14 48l14 16M22 32l22 24M30 32l14 16" stroke-width=".6"/><path d="M46 24h12a4 4 0 0 1 4 4v38"/><circle cx="29" cy="23" r="3"/><path d="M28 10c0-2 2-3 2-5 2 2 2 3 2 4a2 2 0 0 1-4 1z" stroke="#b5432a"/></svg>
+        <h3>Chaudière fioul</h3><p>Entretien, dépannage et remplacement de chaudières fioul, avec conseils sur l'avenir de l'installation.</p><span class="tag">entretien · rénovation</span></article>
+      <article class="service rv"><span class="ref">§ 1.3</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="18" width="58" height="38" rx="2"/><path d="M16 24v26M24 24v26M32 24v26M40 24v26M48 24v26M56 24v26" stroke-width=".8"/><rect x="54" y="10" width="10" height="8"/><path d="M57 14h4" stroke="#b5432a"/><path d="M14 56v6M60 56v6"/><path d="M36 4l-4 8h6l-4 8" stroke="#b5432a"/></svg>
+        <h3>Radiateurs électriques</h3><p>Pose et remplacement de radiateurs électriques à inertie ou à chaleur douce, pièce par pièce ou pour tout le logement.</p><span class="tag">fourniture · pose</span></article>
+      <article class="service rv"><span class="ref">§ 1.4</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="18" y="6" width="38" height="54" rx="4"/><rect x="26" y="14" width="22" height="10"/><path d="M38 30l-6 10h7l-5 10" stroke="#b5432a"/><path d="M20 56h34" stroke-width=".7"/><path d="M28 60v8M46 60v8" stroke-width="2.4"/></svg>
+        <h3>Chaudière électrique</h3><p>Une solution compacte, sans conduit de fumée, quand le gaz n'est pas disponible ou pas souhaité.</p><span class="tag">étude · installation</span></article>
+      <article class="service rv"><span class="ref">§ 1.5</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 14h26v10h14a8 8 0 0 1 8 8v8"/><path d="M10 22h18v10h14v8"/><rect x="50" y="40" width="16" height="6"/><path d="M58 50c-3 5-5 7-5 10a5 5 0 0 0 10 0c0-3-2-5-5-10z" stroke="#1d4e89"/><path d="M6 10v16" stroke-width="3"/></svg>
+        <h3>Plomberie</h3><p>Alimentation, évacuation, sanitaires et recherche de fuite : la plomberie de la maison, du compteur au robinet.</p><span class="tag">neuf · rénovation · fuite</span></article>
+      <article class="service rv"><span class="ref">§ 1.6</span>
+        <svg viewBox="0 0 74 74" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="14" width="62" height="22" rx="4"/><path d="M12 30h50" stroke-width=".7"/><path d="M14 26h46" stroke-width=".7"/><path d="M20 42c4 6-4 10 0 16M37 42c4 6-4 10 0 16M54 42c4 6-4 10 0 16" stroke="#1d4e89"/><circle cx="60" cy="20" r="1.5" fill="#b5432a" stroke="#b5432a"/></svg>
+        <h3>Climatisation</h3><p>Pour les étés varois qui s'éternisent : conseil et pose de climatiseurs adaptés à la pièce et à l'usage.</p><span class="tag">conseil · pose</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉDITORIAL / POURQUOI ============ -->
+<section class="rubrique edito" id="pourquoi">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">ii.</span>
+      <div><span class="pc">Rubrique deuxième — L'éditorial</span><h2>Pourquoi confier <em>sa maison</em> à Michielin</h2></div>
+    </div>
+    <div class="cols-edito rv">
+      <p class="lettrine">À Toulon, le chauffage a ses saisons courtes mais franches : quelques semaines de mistral glacé où une chaudière capricieuse se remarque vite, puis de longs étés où l'on ne pense plus qu'à la fraîcheur. Entre les deux, une installation se règle, s'entretient et se prépare.</p>
+      <p>C'est ce travail de fond que Michielin SARL mène depuis 2004 : connaître les équipements au gaz, au fioul ou à l'électricité, savoir quand réparer et quand remplacer, et intervenir aussi bien sur la tuyauterie que sur le générateur de chaleur. Une seule entreprise, un seul numéro, pour toute la maison.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><span class="chiffre">I.</span><h3>Installé depuis 2004</h3><p>Une SARL en activité depuis 2004, qui a vu passer bien des générations de chaudières.</p></div>
+      <div class="atout rv"><span class="chiffre">II.</span><h3>Plusieurs énergies</h3><p>Gaz, fioul ou électricité : le conseil part de votre logement, pas d'une seule technologie.</p></div>
+      <div class="atout rv"><span class="chiffre">III.</span><h3>Plomberie comprise</h3><p>Le circuit d'eau et le chauffage traités par le même artisan, sans renvoi de responsabilité.</p></div>
+      <div class="atout rv"><span class="chiffre">IV.</span><h3>Un interlocuteur direct</h3><p>Un numéro de portable, une réponse franche et un devis écrit avant toute intervention.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTHODE ============ -->
+<section class="rubrique" id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">iii.</span>
+      <div><span class="pc">Rubrique troisième — Mode d'emploi</span><h2>Comment ça se passe</h2><p>Quatre temps, simples et sans surprise, de votre appel à la remise en chauffe.</p></div>
+    </div>
+    <ol class="etapes">
+      <li class="etape rv"><span class="rom">I</span><h3>L'appel</h3><p>Vous décrivez la situation par téléphone ou via le formulaire : équipement, symptôme, projet.</p></li>
+      <li class="etape rv"><span class="rom">II</span><h3>Le diagnostic</h3><p>Un passage sur place pour voir l'installation, mesurer, et comprendre l'origine du problème.</p></li>
+      <li class="etape rv"><span class="rom">III</span><h3>Le devis</h3><p>Une proposition écrite et détaillée, avec les options possibles et leurs avantages respectifs.</p></li>
+      <li class="etape rv"><span class="rom">IV</span><h3>L'intervention</h3><p>Travaux réalisés proprement, essais, réglages et explications avant de quitter les lieux.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PORTRAIT ============ -->
+<section class="rubrique" id="apropos" style="padding-top:0">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">iv.</span>
+      <div><span class="pc">Rubrique quatrième — Portrait</span><h2>Une maison <em>toulonnaise</em> du chauffage</h2></div>
+    </div>
+    <div class="portrait">
+      <div class="texte rv">
+        <p class="lettrine">Michielin est une SARL de plomberie et de chauffage établie au 140 chemin du Galibier, à Toulon, dans le 83200. Créée en 2004, elle intervient sur les chaudières à gaz ou au fioul, les radiateurs et chaudières électriques, ainsi que sur la plomberie et la climatisation.</p>
+        <p>Son principe est simple : écouter le besoin, proposer la solution la plus adaptée au logement et au budget, puis réaliser le travail avec soin.</p>
+        <p>Pour un dépannage, un remplacement ou un simple conseil, l'entreprise se joint directement au 06 26 74 19 18 ou par courriel à michielin@hotmail.fr.</p>
+      </div>
+      <aside class="encadre rv">
+        <h3>Fiche signalétique</h3>
+        <dl>
+          <dt>Raison sociale</dt><dd>Michielin SARL</dd>
+          <dt>Métier</dt><dd>Plombier chauffagiste</dd>
+          <dt>Adresse</dt><dd>140 chemin du Galibier, 83200 Toulon</dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33626741918">06 26 74 19 18</a></dd>
+        </dl>
+        <p class="grand">2004</p>
+        <p>année de création</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANCHES ============ -->
+<section class="rubrique planches" id="planches">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">v.</span>
+      <div><span class="pc">Rubrique cinquième — Planches illustrées</span><h2>Quelques <em>installations</em> types</h2><p>Gravures de principe des travaux que nous réalisons le plus souvent. Chaque projet est unique : le prix est toujours établi sur devis.</p></div>
+    </div>
+    <div class="galerie">
+      <figure class="planche rv">
+        <svg viewBox="0 0 280 220" aria-hidden="true">
+          <defs><pattern id="g1" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".7"/></pattern><pattern id="g2" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 0v6" stroke="#18181b" stroke-width=".5"/></pattern></defs>
+          <rect width="280" height="180" fill="url(#g2)" opacity=".4"/><path d="M0 180h280" stroke="#18181b"/>
+          <g stroke="#18181b" stroke-width="1.2" fill="#fbf8f1"><rect x="90" y="20" width="100" height="130" rx="5"/><rect x="90" y="20" width="14" height="130" fill="url(#g1)" stroke="none"/><rect x="112" y="40" width="56" height="26"/><path d="M90 116h100"/><rect x="90" y="116" width="100" height="34" fill="url(#g1)"/><path d="M112 150v24M130 150v16h-10v8M150 150v24M170 150v24" stroke-width="4" stroke-linecap="round"/></g>
+          <path d="M140 20V6" stroke="#18181b" stroke-width="8"/>
+          <path d="M120 98c0-4 4-5 4-9 3 3 4 5 4 8a4 4 0 0 1-8 1z" fill="none" stroke="#b5432a" stroke-width="1.3"/>
+          <text x="10" y="210" font-family="Libre Bodoni,serif" font-style="italic" font-size="12" fill="#57534c">Pl. II — échelle libre</text>
+        </svg>
+        <figcaption><span class="figno">Fig. 2.</span><h3>Chaudière gaz murale</h3><p>Remplacement d'une ancienne chaudière par un modèle à condensation.</p><div class="prix"><span>Tarif</span><span>sur devis</span></div></figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 280 220" aria-hidden="true">
+          <defs><pattern id="g3" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".7"/></pattern></defs>
+          <rect x="0" y="0" width="280" height="180" fill="#f1ebde"/><path d="M0 180h280" stroke="#18181b"/>
+          <rect x="180" y="24" width="70" height="86" fill="#fbf8f1" stroke="#18181b"/><path d="M215 24v86M180 67h70" stroke="#18181b"/><path d="M186 30l24 30M194 30l16 20M222 30l22 30" stroke="#1d4e89" stroke-width=".7"/>
+          <g stroke="#18181b" stroke-width="1.2" fill="#fbf8f1"><rect x="26" y="96" width="130" height="64" rx="3"/><path d="M38 102v52M50 102v52M62 102v52M74 102v52M86 102v52M98 102v52M110 102v52M122 102v52M134 102v52M146 102v52" stroke-width=".7"/><rect x="132" y="86" width="18" height="10"/><path d="M36 160v10M146 160v10"/></g>
+          <rect x="26" y="150" width="130" height="10" fill="url(#g3)" stroke="none"/>
+          <g fill="none" stroke="#b5432a" stroke-width="1.2"><path d="M50 88c-4-6 4-8 0-14M80 88c-4-6 4-8 0-14M110 88c-4-6 4-8 0-14"/></g>
+          <text x="10" y="210" font-family="Libre Bodoni,serif" font-style="italic" font-size="12" fill="#57534c">Pl. III — séjour</text>
+        </svg>
+        <figcaption><span class="figno">Fig. 3.</span><h3>Radiateurs électriques</h3><p>Remplacement de convecteurs par des radiateurs à inertie, sous fenêtre.</p><div class="prix"><span>Tarif</span><span>sur devis</span></div></figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 280 220" aria-hidden="true">
+          <defs><pattern id="g4" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5M0 0h5" stroke="#18181b" stroke-width=".5"/></pattern></defs>
+          <path d="M0 180h280" stroke="#18181b"/>
+          <g stroke="#18181b" stroke-width="1" fill="none"><path d="M0 40h280M0 80h280M0 120h280M0 160h280" opacity=".35"/><path d="M40 0v180M80 0v180M120 0v180M160 0v180M200 0v180M240 0v180" opacity=".35"/></g>
+          <g stroke="#18181b" stroke-width="1.2" fill="#fbf8f1"><path d="M40 180v-60h70v60"/><ellipse cx="75" cy="120" rx="35" ry="6"/><rect x="60" y="100" width="30" height="20" rx="3"/><path d="M75 100v-14h8" stroke-width="2"/><path d="M160 180V60c0-10 50-10 50 0v120"/><path d="M160 60c0 10 50 10 50 0" /><rect x="160" y="70" width="50" height="110" fill="url(#g4)" stroke="none" opacity=".6"/></g>
+          <path d="M185 40v12" stroke="#18181b" stroke-width="3"/><circle cx="185" cy="34" r="8" fill="none" stroke="#18181b" stroke-width="1.2"/>
+          <path d="M110 150h50M110 158h50" stroke="#1d4e89" stroke-width="3"/>
+          <text x="10" y="210" font-family="Libre Bodoni,serif" font-style="italic" font-size="12" fill="#57534c">Pl. IV — salle d'eau</text>
+        </svg>
+        <figcaption><span class="figno">Fig. 4.</span><h3>Plomberie de salle d'eau</h3><p>Alimentations et évacuations reprises, vasque et douche raccordées.</p><div class="prix"><span>Tarif</span><span>sur devis</span></div></figcaption>
+      </figure>
+      <figure class="planche rv">
+        <svg viewBox="0 0 280 220" aria-hidden="true">
+          <defs><pattern id="g5" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".6"/></pattern></defs>
+          <rect width="280" height="180" fill="#f1ebde"/><path d="M0 180h280" stroke="#18181b"/>
+          <g stroke="#18181b" stroke-width="1.2" fill="#fbf8f1"><rect x="50" y="30" width="180" height="46" rx="10"/><path d="M60 64h160"/><rect x="60" y="64" width="160" height="12" fill="url(#g5)"/><circle cx="214" cy="42" r="2.5" fill="#b5432a" stroke="none"/></g>
+          <g fill="none" stroke="#1d4e89" stroke-width="1.3"><path d="M80 88c6 10-6 18 0 30"/><path d="M120 88c6 10-6 18 0 30"/><path d="M160 88c6 10-6 18 0 30"/><path d="M200 88c6 10-6 18 0 30"/></g>
+          <g stroke="#18181b" stroke-width="1.2" fill="#fbf8f1"><rect x="40" y="140" width="200" height="40"/><path d="M40 150h200" stroke-width=".7"/></g>
+          <g font-family="Libre Bodoni,serif" font-style="italic" font-size="22" fill="#18181b"><text x="248" y="120" text-anchor="end">☀</text></g>
+          <text x="10" y="210" font-family="Libre Bodoni,serif" font-style="italic" font-size="12" fill="#57534c">Pl. V — chambre</text>
+        </svg>
+        <figcaption><span class="figno">Fig. 5.</span><h3>Climatiseur mural</h3><p>Unité intérieure posée au-dessus d'une porte, liaisons dissimulées.</p><div class="prix"><span>Tarif</span><span>sur devis</span></div></figcaption>
+      </figure>
+    </div>
+    <p class="note">Illustrations de principe, non contractuelles.</p>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="rubrique" id="avis" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="avis rv">
+      <svg viewBox="0 0 90 90" fill="none" stroke="#18181b" stroke-width="1.2"><rect x="10" y="18" width="70" height="52"/><path d="M10 18l35 28 35-28"/><path d="M45 2l3 7 7 .5-5.5 4.5 2 7-6.5-4-6.5 4 2-7-5.5-4.5 7-.5z" fill="#b5432a" stroke="none"/><path d="M18 60h20M18 64h14" stroke-width=".7"/></svg>
+      <div><span class="pc" style="color:var(--gris-txt)">Courrier des lecteurs</span><h2>Votre avis <em>compte</em></h2><p>Vous avez fait appel à Michielin ? Partagez votre expérience sur Google : un témoignage sincère aide les Toulonnais à trouver le bon artisan.</p></div>
+      <a class="btn btn-vide" href="https://www.google.com/search?q=Michielin+SARL+Toulon" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="rubrique" id="faq">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">vi.</span>
+      <div><span class="pc">Rubrique sixième — Questions &amp; réponses</span><h2>Vous nous demandez <em>souvent</em></h2></div>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-cote rv">
+        <p>Des réponses générales, à vérifier selon votre situation. Pour un avis précis sur votre installation, un appel suffit.</p>
+        <a class="btn btn-tomette" href="tel:+33626741918">Poser ma question</a>
+        <figure class="fig" style="margin-top:28px">
+          <svg viewBox="0 0 300 150" aria-hidden="true"><defs><pattern id="fq" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".6"/></pattern></defs>
+            <path d="M10 120h280" stroke="#18181b"/><path d="M20 120c20-50 50-80 90-90 30 10 50 30 70 50 20-20 40-30 60-30 20 10 30 40 40 70" fill="url(#fq)" stroke="#18181b"/>
+            <path d="M0 130c30-6 60 6 90 0s60-6 90 0 60 6 90 0 30-4 30-4" fill="none" stroke="#1d4e89"/><path d="M0 140c30-6 60 6 90 0s60-6 90 0 60 6 90 0" fill="none" stroke="#1d4e89" opacity=".6"/>
+            <text x="98" y="22" font-family="Libre Bodoni,serif" font-style="italic" font-size="12" fill="#18181b">le Faron</text></svg>
+          <figcaption><b>Fig. 6.</b> — Le Faron veille sur la rade.</figcaption>
+        </figure>
+      </div>
+      <div class="faq rv">
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">1.</span><span>L'entretien de ma chaudière est-il obligatoire ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Pour les chaudières gaz et fioul de 4 à 400 kW, un entretien annuel par un professionnel est obligatoire. Il vérifie la sécurité et le bon fonctionnement, et donne lieu à une attestation.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">2.</span><span>Chaudière électrique ou radiateurs électriques ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Tout dépend du logement : une chaudière électrique s'appuie sur un réseau de radiateurs à eau existant, tandis que des radiateurs électriques autonomes conviennent bien sans circuit hydraulique. Une visite permet de comparer.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">3.</span><span>Faut-il remplacer une vieille chaudière fioul ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Pas forcément tout de suite : un bon entretien prolonge sa vie. Mais selon son âge, son rendement et le coût du combustible, un remplacement peut devenir pertinent. Nous vous présentons les options sans pression.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">4.</span><span>Existe-t-il des aides financières ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Certains travaux pourraient ouvrir droit à des aides comme MaPrimeRénov' ou les primes CEE, sous conditions de ressources, d'équipement et d'entreprise. Les règles changent régulièrement : le site france-renov.gouv.fr reste la référence avant tout engagement.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">5.</span><span>Intervenez-vous pour une fuite d'eau ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Oui, la plomberie fait partie de nos métiers. Coupez l'eau au compteur si la fuite est importante, puis appelez-nous pour convenir d'un passage.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="i">6.</span><span>Comment obtenir un devis ?</span><span class="s" aria-hidden="true">+</span></button><div class="faq-r"><div><p>Par téléphone au 06 26 74 19 18, par courriel à michielin@hotmail.fr ou via le formulaire ci-dessous. Après échange, et si besoin une visite, vous recevez un devis écrit.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRATIQUE ============ -->
+<section class="rubrique" id="pratique" style="padding-top:0">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">vii.</span>
+      <div><span class="pc">Rubrique septième — Pages pratiques</span><h2>Horaires <em>&amp;</em> adresse</h2></div>
+    </div>
+    <div class="pratique">
+      <div class="rv">
+        <h3>Horaires</h3>
+        <p class="indic">Indicatifs — horaires à confirmer par téléphone.</p>
+        <table class="horaires" id="horaires">
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+      </div>
+      <div class="rv">
+        <h3>Adresse &amp; secteur</h3>
+        <svg class="carte" viewBox="0 0 520 210" aria-hidden="true">
+          <defs><pattern id="mer" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 3h6" stroke="#1d4e89" stroke-width=".7"/></pattern><pattern id="relief" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v4" stroke="#18181b" stroke-width=".5"/></pattern></defs>
+          <path d="M0 130c50-10 90 10 140 0s80-30 130-20 70 30 120 20 90-20 130-10v90H0z" fill="url(#mer)"/>
+          <path d="M0 130c50-10 90 10 140 0s80-30 130-20 70 30 120 20 90-20 130-10" fill="none" stroke="#18181b"/>
+          <path d="M150 70c30-40 80-50 120-40 40 10 60 30 70 40" fill="url(#relief)" stroke="#18181b"/>
+          <path d="M190 210c20-30 60-40 100-30 20 6 30 20 40 30" fill="#f5f0e6" stroke="#18181b"/>
+          <g font-family="Libre Bodoni,Georgia,serif" font-style="italic" font-size="13" fill="#18181b"><text x="226" y="24">Mont Faron</text><text x="60" y="178">la rade</text><text x="350" y="196">Saint-Mandrier</text></g>
+          <circle cx="230" cy="98" r="7" fill="#b5432a"/><circle cx="230" cy="98" r="15" fill="none" stroke="#b5432a"/>
+          <text x="250" y="102" font-family="Work Sans,sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#18181b">TOULON</text>
+          <g stroke="#18181b"><path d="M480 20v26M474 26l6-6 6 6"/></g><text x="476" y="62" font-family="Libre Bodoni,serif" font-size="12" fill="#18181b">N</text>
+        </svg>
+        <p class="adresse">140 chemin du Galibier, 83200 Toulon</p>
+        <p style="color:#3a3833">Interventions à Toulon et dans les communes voisines de l'aire toulonnaise, selon la nature des travaux : renseignez-vous par téléphone.</p>
+        <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=140+chemin+du+Galibier+83200+Toulon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="rubrique" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="no">viii.</span>
+      <div><span class="pc">Rubrique huitième — Correspondance</span><h2>Demander <em>un devis</em></h2></div>
+    </div>
+    <div class="contact">
+      <div class="rv">
+        <p style="font-family:var(--serif);font-size:1.2rem;line-height:1.5">Un projet de chauffage, une panne, une question de plomberie ? Le plus direct reste encore le téléphone.</p>
+        <a class="gros" href="tel:+33626741918">06 26 74 19 18</a>
+        <a class="mail" href="mailto:michielin@hotmail.fr">michielin@hotmail.fr</a>
+        <ul>
+          <li><b>adresse</b><span>140 chemin du Galibier, 83200 Toulon</span></li>
+          <li><b>horaires</b><span>Lundi–vendredi sur rendez-vous (à confirmer)</span></li>
+          <li><b>devis</b><span>Écrit et détaillé, après échange ou visite</span></li>
+        </ul>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <h3>Votre demande</h3>
+        <p class="sous">Quelques lignes suffisent, nous vous recontactons.</p>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          <div class="champ"><label for="email">Courriel</label><input id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="champ"><label for="objet">Objet</label><select id="objet" name="objet"><option>Chaudière gaz ou fioul</option><option>Radiateurs / chaudière électrique</option><option>Plomberie</option><option>Climatisation</option><option>Autre demande</option></select></div>
+          <div class="champ large"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Décrivez votre installation ou votre projet…"></textarea></div>
+        </div>
+        <div class="envoi"><button class="btn btn-tomette" type="submit">Envoyer la demande</button><small>Sans engagement.</small></div>
+        <p class="msg-form" id="msg-form" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <hr class="filet">
+    <div class="pied-nom" aria-hidden="true">Michielin<i>.</i></div>
+    <div class="pied">
+      <div><h4>L'entreprise</h4><p style="font-size:.94rem;margin:0">Michielin SARL, plombier chauffagiste à Toulon depuis 2004 : chaudières gaz et fioul, électrique, plomberie, climatisation.</p></div>
+      <div><h4>Coordonnées</h4><ul><li>140 chemin du Galibier<br>83200 Toulon</li><li><a href="tel:+33626741918">06 26 74 19 18</a></li><li><a href="mailto:michielin@hotmail.fr">michielin@hotmail.fr</a></li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Lun–ven : sur rendez-vous</li><li>Sam–dim : fermé</li><li><em>Horaires à confirmer</em></li></ul></div>
+      <div><h4>Sommaire</h4><ul><li><a href="#services">Services</a></li><li><a href="#methode">Méthode</a></li><li><a href="#planches">Planches</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="bas"><span>© <span id="annee">2026</span> Michielin SARL — Toulon (Var)</span><a href="#haut">Retour à la une ↑</a></div>
+  </div>
+  <p class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</p>
+</footer>
+
+<a class="appel" href="tel:+33626741918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler Michielin</a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');});});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('vu');});
+
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var o=q.parentNode.classList.toggle('ouvert');q.setAttribute('aria-expanded',o);});});
+
+  var d=new Date(),r=document.querySelector('#horaires tr[data-j="'+d.getDay()+'"]');if(r)r.classList.add('auj');
+  try{var t=d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});document.getElementById('date-jour').textContent='Toulon, '+t;}catch(e){}
+  document.getElementById('annee').textContent=d.getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg-form').classList.add('visible');});
+})();
+</script>
+</body>
+</html>

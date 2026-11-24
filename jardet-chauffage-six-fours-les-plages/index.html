@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jardet Chauffage – Chauffagiste à Six-Fours-les-Plages</title>
+<meta name="description" content="Jardet Chauffage, chauffagiste à Six-Fours-les-Plages depuis 2018 : remplacement de chaudière fioul par pompe à chaleur, PAC air-eau et géothermique, chaudières gaz ou fioul, climatisation, chauffe-eau thermodynamique. QUALIPAC Chauffage et CET.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --terre:#b5532f;
+  --terre-fonce:#8f3f22;
+  --ocre:#d99a3f;
+  --olive:#5f6b34;
+  --lin:#f5ecdc;
+  --chaux:#fbf8f2;
+  --encre:#2e2118;
+  --encre-douce:#5a4636;   /* 7:1 sur chaux */
+  --kraft:#d8b98a;
+  --joint:#e6d3b5;
+  --titre:"Amatic SC",cursive;
+  --texte:"Alegreya Sans",system-ui,sans-serif;
+  --larg:1200px;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --enduit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='e'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='4' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .32 0 0 0 .16 -.02'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23e)'/%3E%3C/svg%3E");
+  --tomettes:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34.64' height='60'%3E%3Crect width='100%25' height='100%25' fill='%23e6d3b5'/%3E%3Cpolygon points='17.3,1.0 33.8,10.5 33.8,29.5 17.3,39.0 0.9,29.5 0.9,10.5' fill='%23b5532f'/%3E%3Cpolygon points='0.0,31.0 16.5,40.5 16.5,59.5 0.0,69.0 -16.5,59.5 -16.5,40.5' fill='%23a84a29'/%3E%3Cpolygon points='34.6,31.0 51.1,40.5 51.1,59.5 34.6,69.0 18.2,59.5 18.2,40.5' fill='%23a84a29'/%3E%3Cpolygon points='0.0,-29.0 16.5,-19.5 16.5,-0.5 0.0,9.0 -16.5,-0.5 -16.5,-19.5' fill='%23bf6038'/%3E%3Cpolygon points='34.6,-29.0 51.1,-19.5 51.1,-0.5 34.6,9.0 18.2,-0.5 18.2,-19.5' fill='%23bf6038'/%3E%3Cpolygon points='17.3,61.0 33.8,70.5 33.8,89.5 17.3,99.0 0.9,89.5 0.9,70.5' fill='%23b5532f'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--chaux) var(--grain);color:var(--encre);font-family:var(--texte);font-size:1.12rem;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--titre);font-weight:700;line-height:1;margin:0;letter-spacing:.02em}
+p{margin:0 0 1em}
+a{color:inherit}
+svg{display:block}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.crayon{filter:url(#crayon)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 24px;font-family:var(--texte);font-weight:800;font-size:1.06rem;text-decoration:none;border:2px solid var(--encre);border-radius:4px 10px 5px 12px/10px 4px 12px 5px;cursor:pointer;transition:transform .25s,box-shadow .25s,background .2s;white-space:nowrap;position:relative}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-terre{background:var(--terre);color:var(--chaux);box-shadow:4px 4px 0 var(--encre)}
+.btn-terre:hover{background:var(--terre-fonce);transform:translate(-2px,-2px) rotate(-.6deg);box-shadow:6px 6px 0 var(--encre)}
+.btn-papier{background:var(--chaux);color:var(--encre);box-shadow:4px 4px 0 var(--ocre)}
+.btn-papier:hover{transform:translate(-2px,-2px) rotate(.6deg);box-shadow:6px 6px 0 var(--ocre)}
+.btn-olive{background:var(--olive);color:var(--chaux);box-shadow:4px 4px 0 var(--encre)}
+.btn-olive:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre)}
+
+/* scotch */
+.scotch{position:absolute;width:110px;height:30px;background:rgba(240,228,196,.82);box-shadow:0 1px 2px rgba(46,33,24,.18);z-index:3;
+  -webkit-mask:linear-gradient(90deg,transparent 0 3px,#000 3px calc(100% - 3px),transparent 0),repeating-linear-gradient(#000 0 3px,transparent 3px 5px);mask:linear-gradient(90deg,transparent 0 3px,#000 3px calc(100% - 3px),transparent 0)}
+.scotch::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.25) 9px 10px)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(251,248,242,.95);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:2px solid var(--encre)}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:6px;background:var(--tomettes) 0 0/26px 45px;opacity:.9}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1}
+.logo svg{width:44px;height:44px;transition:transform .5s}
+.logo:hover svg{transform:rotate(-10deg)}
+.logo b{font-family:var(--titre);font-size:2.1rem;font-weight:700;display:block}
+.logo small{display:block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--terre)}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:6px 12px;text-decoration:none;font-family:var(--titre);font-weight:700;font-size:1.65rem;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:6px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 5 C 20 1, 40 7, 60 3 S 90 6, 99 3' fill='none' stroke='%23b5532f' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .btn{font-family:var(--texte);font-size:1rem;padding:9px 16px;margin-left:8px}
+.burger{display:none;background:var(--ocre);border:2px solid var(--encre);border-radius:6px 12px 6px 10px;height:46px;padding:0 14px;cursor:pointer;font-family:var(--titre);font-weight:700;font-size:1.5rem;color:var(--encre);align-items:center;gap:10px;box-shadow:3px 3px 0 var(--encre)}
+.burger i{display:block;width:20px;height:14px;position:relative;border-top:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transition:border-color .2s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;right:0;top:3.5px;height:2.5px;background:currentColor;transition:transform .3s}
+.burger[aria-expanded="true"] i{border-color:transparent}
+.burger[aria-expanded="true"] i::before{transform:rotate(45deg)}
+.burger[aria-expanded="true"] i::after{transform:rotate(-45deg)}
+
+/* héros */
+.hero{position:relative;min-height:100vh;min-height:100svh;padding:120px 0 0;overflow:hidden;display:flex;flex-direction:column;
+  background:var(--enduit),linear-gradient(180deg,var(--chaux) 0%,var(--lin) 100%)}
+.hero-grille{flex:1;display:grid;grid-template-columns:1.08fr 1fr;gap:56px;align-items:center;position:relative;z-index:2;padding-bottom:40px}
+.sol{position:relative;height:170px;margin-top:-90px;z-index:1;perspective:500px;overflow:hidden}
+.sol::before{content:"";position:absolute;left:-30%;right:-30%;top:0;height:340px;background:var(--tomettes) 0 0/52px 90px;transform:rotateX(58deg);transform-origin:top center;box-shadow:inset 0 30px 40px -10px rgba(46,33,24,.35)}
+.sol::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,248,242,.35),transparent 40%,rgba(46,33,24,.25))}
+.plinthe{position:relative;z-index:2;height:12px;background:var(--lin);border-top:2px solid var(--encre);border-bottom:2px solid rgba(46,33,24,.4)}
+
+.planche{position:relative;background:var(--kraft) var(--grain);padding:30px 26px 22px;transform:rotate(-2deg);box-shadow:0 18px 30px -14px rgba(46,33,24,.55),0 2px 0 rgba(46,33,24,.15);border-radius:3px;transition:transform .6s cubic-bezier(.3,1.4,.5,1)}
+.planche:hover{transform:rotate(-.6deg) scale(1.01)}
+.planche::before{content:"";position:absolute;inset:10px;border:1.5px dashed rgba(46,33,24,.35);pointer-events:none}
+.planche .s1{top:-12px;left:-26px;transform:rotate(-32deg)}
+.planche .s2{top:-12px;right:-26px;transform:rotate(30deg)}
+.planche .s3{bottom:-12px;right:40%;transform:rotate(-4deg);width:90px}
+.planche > svg:not(.tampon){width:100%;height:auto}
+.trace{stroke-dasharray:1400;stroke-dashoffset:1400;animation:trace 3.2s ease-out .3s forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.tampon{position:absolute;right:-34px;bottom:-44px;width:124px;height:124px;z-index:4;transform:rotate(-14deg);opacity:.88;mix-blend-mode:multiply}
+
+.hero-texte{position:relative}
+.sur{font-family:var(--titre);font-size:1.9rem;font-weight:700;color:var(--olive);display:inline-flex;align-items:center;gap:10px;margin-bottom:4px}
+.sur svg{width:40px;height:20px}
+.hero h1{font-size:clamp(4rem,9vw,7.6rem);line-height:.86;color:var(--encre)}
+.hero h1 em{font-style:normal;color:var(--terre);display:block;position:relative;width:max-content}
+.hero h1 em svg{position:absolute;left:-2%;bottom:-6px;width:104%;height:22px}
+.signe{margin:18px 0 6px;font-size:1.12rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.signe b{font-family:var(--titre);font-size:2.2rem;line-height:1;color:var(--terre);transform:rotate(-3deg);display:inline-block}
+.accroche{font-size:clamp(1.15rem,1.8vw,1.32rem);max-width:540px;margin:10px 0 26px;color:var(--encre)}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.note-main{position:absolute;right:-6px;top:-34px;font-family:var(--titre);font-weight:700;font-size:1.65rem;color:var(--terre-fonce);transform:rotate(7deg);line-height:1;text-align:center}
+.note-main svg{width:60px;height:40px;margin:4px auto 0}
+
+/* bandeau confiance */
+.confiance{background:var(--encre);color:var(--lin);padding:22px 0;position:relative;z-index:3}
+.confiance ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 34px}
+.confiance li{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.04rem;letter-spacing:.02em}
+.confiance li svg{width:26px;height:26px;flex:none}
+.confiance a{color:#f2c27a}
+.confiance li+li::before{content:"";width:8px;height:8px;background:var(--ocre);transform:rotate(45deg);margin-right:24px;display:none}
+
+/* sections */
+.sec{padding:110px 0;position:relative;overflow-x:clip}
+.entete{max-width:720px;margin:0 0 56px}
+.entete.centre{text-align:center;margin-inline:auto}
+.etiquette{display:inline-block;font-family:var(--titre);font-weight:700;font-size:1.7rem;color:var(--terre);margin-bottom:6px;position:relative;padding-left:44px}
+.etiquette::before{content:"";position:absolute;left:0;top:50%;width:34px;height:2.5px;background:var(--terre);border-radius:2px;transform:rotate(-4deg)}
+.entete h2,.h2{font-size:clamp(3rem,6vw,4.6rem)}
+.entete p{margin-top:14px;font-size:1.18rem;color:var(--encre-douce)}
+.surligne{background:linear-gradient(transparent 62%,rgba(217,154,63,.55) 62% 90%,transparent 90%);padding:0 4px}
+
+/* services : fiches kraft sur mur à la chaux */
+.services{background:var(--enduit),var(--lin)}
+.fiches{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 34px}
+.fiche{position:relative;background:var(--chaux) var(--grain);padding:34px 28px 26px;box-shadow:0 14px 24px -16px rgba(46,33,24,.6),0 1px 0 rgba(46,33,24,.12);transition:transform .45s cubic-bezier(.3,1.5,.5,1),box-shadow .3s}
+.fiche:nth-child(3n+1){transform:rotate(-1.2deg)}
+.fiche:nth-child(3n+2){transform:rotate(.8deg)}
+.fiche:nth-child(3n){transform:rotate(-.4deg)}
+.fiche:hover{transform:rotate(0) translateY(-8px);box-shadow:0 26px 34px -18px rgba(46,33,24,.65)}
+.fiche .scotch{top:-14px;left:50%;margin-left:-55px;transform:rotate(-3deg)}
+.fiche.vedette{background:var(--kraft) var(--grain);grid-column:span 2;grid-row:span 2;display:grid;grid-template-columns:1fr;gap:18px;align-content:center;padding:44px 44px 40px}
+.fiche.vedette .ico{width:260px;height:208px;margin:0 auto 6px}
+.fiche.vedette h3{font-size:3.1rem}
+.fiche.vedette p{font-size:1.2rem}
+.fiche .ico{width:78px;height:78px;margin-bottom:12px}
+.fiche .ico svg{width:100%;height:100%}
+.fiche h3{font-size:2.3rem;margin-bottom:8px;color:var(--encre)}
+.fiche p{margin:0;color:var(--encre-douce)}
+.fiche.vedette p{color:var(--encre)}
+.pastille-vedette{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;background:var(--terre);color:var(--chaux);padding:3px 10px;border-radius:3px;margin-bottom:8px}
+
+/* pourquoi : bloc olive */
+.pourquoi{background:var(--olive) var(--grain);color:var(--chaux)}
+.pourquoi .etiquette{color:#f2c27a}.pourquoi .etiquette::before{background:#f2c27a}
+.pourquoi .entete p{color:#ece6d2}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.atout{border-top:2px dashed rgba(251,248,242,.5);padding-top:22px;position:relative}
+.atout .n{font-family:var(--titre);font-size:4.4rem;line-height:.8;color:#f2c27a;font-weight:700;display:block;margin-bottom:10px;transition:transform .4s}
+.atout:hover .n{transform:rotate(-8deg) scale(1.1)}
+.atout h3{font-size:2.15rem;margin-bottom:8px}
+.atout p{color:#ece6d2;margin:0;font-size:1.05rem}
+.atout svg{position:absolute;right:0;top:20px;width:52px;height:52px;opacity:.9}
+
+/* étapes : carnet de chantier */
+.etapes{background:var(--chaux) var(--grain)}
+.carnet{position:relative;background:#fffdf7;padding:46px 46px 46px 86px;box-shadow:0 20px 40px -24px rgba(46,33,24,.55);border-radius:4px;
+  background-image:repeating-linear-gradient(transparent 0 33px,rgba(95,107,52,.22) 33px 34px),linear-gradient(90deg,transparent 64px,rgba(181,83,47,.45) 64px 66px,transparent 66px)}
+.carnet::before{content:"";position:absolute;left:18px;top:24px;bottom:24px;width:22px;background:radial-gradient(circle,var(--lin) 0 6px,var(--encre) 6px 7.5px,transparent 8px) 0 0/22px 44px repeat-y}
+.chemin{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.chemin li{position:relative}
+.chemin .num{width:70px;height:70px;display:grid;place-items:center;font-family:var(--titre);font-weight:700;font-size:2.8rem;color:var(--chaux);background:var(--terre);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);margin-bottom:14px;transition:transform .4s}
+.chemin li:nth-child(2) .num{background:#a84a29}.chemin li:nth-child(3) .num{background:#bf6038}.chemin li:nth-child(4) .num{background:var(--olive)}
+.chemin li:hover .num{transform:rotate(30deg)}
+.chemin h3{font-size:2.1rem;margin-bottom:4px}
+.chemin p{margin:0;color:var(--encre-douce);font-size:1.04rem;line-height:34px}
+.chemin li:not(:last-child)::after{content:"";position:absolute;top:22px;left:84px;right:-18px;height:24px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'%3E%3Cpath d='M2 14 C 30 4, 70 22, 108 11' fill='none' stroke='%232e2118' stroke-width='2' stroke-dasharray='5 5' stroke-linecap='round'/%3E%3Cpath d='M100 5 L110 11 L101 18' fill='none' stroke='%232e2118' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;opacity:.7}
+
+/* à propos */
+.apropos{background:var(--enduit),var(--lin)}
+.ap-grille{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.ap-texte p{font-size:1.15rem}
+.ap-texte .h2{margin-bottom:20px}
+.fiche-id{position:relative;background:var(--chaux) var(--grain);padding:38px 34px 30px;transform:rotate(1.5deg);box-shadow:0 20px 34px -18px rgba(46,33,24,.6)}
+.fiche-id .scotch{top:-14px;left:30px;transform:rotate(-6deg)}
+.fiche-id h3{font-size:2.6rem;color:var(--terre);margin-bottom:14px;border-bottom:2px solid var(--encre);padding-bottom:8px}
+.fiche-id dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.fiche-id dt{font-family:var(--titre);font-weight:700;font-size:1.6rem;line-height:1.1;color:var(--olive)}
+.fiche-id dd{margin:0;font-weight:500;border-bottom:1px dotted rgba(46,33,24,.4);padding-bottom:6px}
+.fiche-id .tampon2{position:absolute;right:-30px;bottom:-70px;width:130px;height:130px;transform:rotate(12deg);mix-blend-mode:multiply;opacity:.9}
+
+/* réalisations : croquis */
+.realis{background:var(--chaux) var(--grain)}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 36px}
+.croquis{margin:0;background:#fffdf7;padding:16px 16px 18px;box-shadow:0 14px 26px -16px rgba(46,33,24,.55);position:relative;transition:transform .45s cubic-bezier(.3,1.5,.5,1)}
+.croquis:nth-child(odd){transform:rotate(-1.5deg)}.croquis:nth-child(even){transform:rotate(1.2deg)}
+.croquis:hover{transform:rotate(0) scale(1.03);z-index:2}
+.croquis .scotch{top:-13px;left:50%;margin-left:-45px;width:90px;transform:rotate(4deg)}
+.croquis svg{width:100%;height:auto;aspect-ratio:4/3;background:repeating-linear-gradient(0deg,transparent 0 19px,rgba(95,107,52,.08) 19px 20px),repeating-linear-gradient(90deg,transparent 0 19px,rgba(95,107,52,.08) 19px 20px)}
+.croquis figcaption{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:12px}
+.croquis h3{font-size:2rem}
+.croquis small{display:block;color:var(--encre-douce);font-size:.98rem}
+.devis-tampon{flex:none;font-family:var(--titre);font-weight:700;font-size:1.35rem;color:var(--terre);border:2px solid var(--terre);padding:0 10px;border-radius:4px;transform:rotate(-6deg);line-height:1.3}
+.note-galerie{margin-top:40px;text-align:center;color:var(--encre-douce);font-style:italic}
+
+/* avis */
+.avis{background:var(--terre) var(--grain);color:var(--chaux);overflow:hidden}
+.avis::before{content:"";position:absolute;inset:0;background:var(--tomettes) 0 0/52px 90px;opacity:.12}
+.avis-grille{position:relative;display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;max-width:980px;margin:0 auto}
+.gros-tampon{width:270px;height:270px;transform:rotate(-8deg);transition:transform .6s cubic-bezier(.3,1.6,.5,1)}
+.gros-tampon:hover{transform:rotate(0) scale(1.04)}
+.avis h2{font-size:clamp(3rem,6vw,4.4rem);margin-bottom:12px}
+.avis p{font-size:1.18rem;color:#fbeee4}
+.etoiles{font-size:2rem;letter-spacing:6px;color:#ffd79a;margin-bottom:6px}
+.avis .btn-papier{box-shadow:4px 4px 0 var(--encre)}
+.avis .btn-papier:hover{box-shadow:6px 6px 0 var(--encre)}
+
+/* FAQ */
+.faq{background:var(--lin) var(--grain)}
+.faq-grille{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+.faq-grille .entete{position:sticky;top:110px;margin:0}
+.questions{display:grid;gap:14px}
+.q{background:var(--chaux);border:2px solid var(--encre);border-radius:4px 12px 6px 10px/10px 6px 12px 4px;transition:box-shadow .3s,transform .3s}
+.q:hover{transform:translateX(4px)}
+.q[open]{box-shadow:5px 5px 0 var(--ocre)}
+.q summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;font-weight:800;font-size:1.14rem}
+.q summary::-webkit-details-marker{display:none}
+.q summary svg{width:26px;height:26px;flex:none;transition:transform .4s}
+.q[open] summary svg{transform:rotate(45deg)}
+.q .rep{padding:0 20px 18px;color:var(--encre-douce)}
+.q .rep p{margin:0}
+
+/* infos pratiques */
+.pratique{background:var(--enduit),var(--chaux)}
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.panneau-bois{background:var(--olive) var(--grain);color:var(--chaux);padding:34px 32px;border-radius:6px;box-shadow:inset 0 0 0 6px rgba(46,33,24,.25),0 16px 30px -18px rgba(46,33,24,.7);position:relative}
+.panneau-bois::before,.panneau-bois::after{content:"";position:absolute;top:14px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e9e2cf,#8d856c)}
+.panneau-bois::before{left:14px}.panneau-bois::after{right:14px}
+.panneau-bois h3{font-size:2.6rem;margin-bottom:14px;color:#f2c27a}
+.horaires{list-style:none;margin:0 0 12px;padding:0}
+.horaires li{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;border-bottom:1px dashed rgba(251,248,242,.35);font-size:1.08rem;white-space:nowrap}
+.horaires li.auj{background:var(--chaux);color:var(--encre);border-radius:4px;font-weight:800;border-bottom-color:transparent;position:relative}
+.horaires li.auj span:first-child::after{content:" · aujourd'hui";font-weight:500;font-style:italic;color:var(--terre)}
+.indicatif{font-style:italic;color:#ece6d2;font-size:.98rem;margin:0 0 22px}
+.panneau-bois address{font-style:normal;font-size:1.12rem;margin-bottom:14px;font-weight:700}
+.panneau-bois .zone{color:#ece6d2}
+.panneau-bois .btn{margin-top:6px}
+.papier-ligne{background:#fffdf7;padding:34px 32px;position:relative;box-shadow:0 16px 30px -18px rgba(46,33,24,.6);transform:rotate(-.6deg)}
+.papier-ligne .scotch{top:-14px;right:40px;transform:rotate(5deg)}
+.papier-ligne h3{font-size:2.6rem;margin-bottom:4px;color:var(--terre)}
+.papier-ligne > p{color:var(--encre-douce);margin-bottom:18px}
+form{display:grid;gap:16px}
+label{display:grid;gap:4px;font-family:var(--titre);font-weight:700;font-size:1.5rem;line-height:1.1}
+input,select,textarea{font:inherit;font-family:var(--texte);font-size:1.06rem;color:var(--encre);background:transparent;border:0;border-bottom:2px solid var(--encre);padding:8px 4px;width:100%;border-radius:0;transition:border-color .2s,background .2s}
+select{background:var(--lin);border:2px solid var(--encre);border-radius:4px;padding:10px}
+textarea{min-height:110px;resize:vertical;border:2px solid var(--encre);border-radius:4px;background-image:repeating-linear-gradient(transparent 0 29px,rgba(95,107,52,.2) 29px 30px);line-height:30px;padding:4px 10px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terre);background-color:rgba(217,154,63,.12)}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.msg-form{display:none;margin:0;padding:12px 16px;border:2px dashed var(--terre);color:var(--terre-fonce);font-weight:800;background:var(--lin)}
+.msg-form.vu{display:block;animation:tamp .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes tamp{from{transform:scale(1.2) rotate(-3deg);opacity:0}to{transform:none;opacity:1}}
+
+/* pied */
+footer{background:var(--encre) var(--grain);color:var(--lin);padding:0;position:relative}
+footer .bordure{height:22px;background:var(--tomettes) 0 0/26px 45px;border-bottom:2px solid #1d140e}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:64px 0 50px}
+.pied h4{font-family:var(--titre);font-size:2rem;margin:0 0 12px;color:#f2c27a;font-weight:700}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{color:var(--lin);text-decoration:none}
+.pied a:hover{color:#f2c27a;text-decoration:underline}
+.pied p{color:#e2d6c2}
+.pied .logo small{color:#f2c27a}
+.mention{background:#1d140e;color:#d8cbb6;text-align:center;font-size:.88rem;padding:14px 16px}
+
+/* appel flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;height:58px;padding:0 20px 0 16px;border-radius:30px 8px 30px 30px;background:var(--terre);color:var(--chaux);border:2px solid var(--encre);box-shadow:3px 3px 0 var(--encre);align-items:center;gap:8px;text-decoration:none;font-weight:800;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;pointer-events:none}
+.flottant.visible{opacity:1;transform:none;pointer-events:auto}
+.flottant svg{width:22px;height:22px}
+
+/* apparition */
+.rv{opacity:0;translate:0 30px;transition:opacity .8s ease,translate .8s cubic-bezier(.2,.8,.3,1)}
+.rv.vu{opacity:1;translate:0 0}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* responsive */
+@media (max-width:1080px){
+  .fiches{grid-template-columns:repeat(2,1fr)}
+  .fiche.vedette{grid-column:span 2;grid-row:auto;grid-template-columns:170px 1fr;align-items:center;padding:34px 28px 26px}
+  .fiche.vedette .ico{width:170px;height:136px}
+  .atouts{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .chemin{grid-template-columns:repeat(2,1fr);row-gap:36px}
+  .chemin li::after{display:none}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  .burger{display:inline-flex}
+  .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--chaux) var(--grain);border-bottom:2px solid var(--encre);padding:10px 20px 20px;box-shadow:0 20px 30px -20px rgba(46,33,24,.6);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .4s ease,visibility .4s}
+  .menu.ouvert{clip-path:inset(0 0 0 0);visibility:visible}
+  .menu a{font-size:2rem;padding:8px 4px;border-bottom:1px dashed rgba(46,33,24,.3)}
+  .menu a:not(.btn)::after{left:4px;right:auto;width:120px}
+  .menu .btn{display:flex;margin:14px 0 0;font-size:1.08rem;border-bottom:2px solid var(--encre)}
+  .hero-grille{grid-template-columns:1fr;gap:56px}
+  .hero-texte{order:-1}
+  .note-main{display:none}
+  .ap-grille,.faq-grille,.infos{grid-template-columns:1fr;gap:50px}
+  .faq-grille .entete{position:static}
+  .avis-grille{grid-template-columns:1fr;text-align:center;gap:30px}
+  .gros-tampon{margin:0 auto;width:230px;height:230px}
+}
+@media (max-width:640px){
+  body{font-size:1.06rem}
+  .sec{padding:80px 0}
+  .fiches,.atouts,.chemin,.galerie{grid-template-columns:1fr}
+  .fiche.vedette{grid-column:auto;grid-template-columns:1fr;gap:10px}
+  .fiche.vedette .ico{width:160px;height:128px;margin:0}
+  .fiche.vedette h3{font-size:2.5rem}
+  .carnet{padding:36px 20px 30px 56px}
+  .carnet::before{left:8px}
+  .carnet{background-image:repeating-linear-gradient(transparent 0 33px,rgba(95,107,52,.22) 33px 34px),linear-gradient(90deg,transparent 44px,rgba(181,83,47,.45) 44px 46px,transparent 46px)}
+  .cta .btn{width:100%}
+  .planche{padding:24px 14px 16px}
+  .tampon{width:88px;height:88px;right:-8px;bottom:-34px}
+  .pied{grid-template-columns:1fr;gap:30px}
+  .ligne2{grid-template-columns:1fr}
+  .flottant{display:flex}
+  .sol{height:110px}
+  .mention{padding-bottom:90px}
+  .papier-ligne,.panneau-bois{padding:30px 22px}
+  .logo b{font-size:1.8rem}
+  .logo small{font-size:.68rem}
+  .fiche-id .tampon2{right:-4px;bottom:-62px;width:96px;height:96px}
+  .fiche-id{padding:34px 22px 30px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;translate:0 0}
+  .trace{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<!-- filtre crayon partagé -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="crayon"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter>
+  <symbol id="tel" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+  <symbol id="plus" viewBox="0 0 26 26"><path d="M13 4 C 12.6 10, 13.4 16, 13 22 M4 13.4 C 10 12.6, 16 13.4, 22 13" fill="none" stroke="#b5532f" stroke-width="2.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Jardet Chauffage – accueil">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="#b5532f" stroke="#2e2118" stroke-width="2"/><path d="M22 12c-6 7-7 12-3 17 1-4 3-5 3-5s1 3 4 5c3-5 1-11-4-17z" fill="#f5ecdc" stroke="#2e2118" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><b>Jardet Chauffage</b><small>Six-Fours-les-Plages</small></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i>Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Savoir-faire</a></li>
+      <li><a href="#realisations">Croquis</a></li>
+      <li><a href="#atelier">L'atelier</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a class="btn btn-terre" href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ HÉROS ============ -->
+<section class="hero">
+  <div class="wrap hero-grille">
+    <!-- planche kraft : croquis fioul → PAC -->
+    <div class="planche rv">
+      <span class="scotch s1"></span><span class="scotch s2"></span><span class="scotch s3"></span>
+      <svg viewBox="0 0 560 400" role="img" aria-label="Croquis annoté : à gauche une ancienne chaudière fioul avec sa cuve, une flèche « avant / après », à droite une pompe à chaleur air-eau extérieure et son module intérieur aux tuyauteries habillées">
+        <g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- titres -->
+          <text x="40" y="44" font-family="Amatic SC,cursive" font-weight="700" font-size="34" fill="#2e2118" stroke="none">avant</text>
+          <text x="370" y="44" font-family="Amatic SC,cursive" font-weight="700" font-size="34" fill="#5f6b34" stroke="none">après</text>
+          <!-- sol -->
+          <path d="M20 330 C 120 327, 220 333, 280 330" />
+          <path d="M300 330 C 380 327, 470 333, 545 330" />
+          <path d="M30 336 l8 -6 M60 336 l8 -6 M90 336 l8 -6 M120 336 l8 -6 M150 336 l8 -6 M180 336 l8 -6 M210 336 l8 -6 M240 336 l8 -6" stroke-width="1.2" opacity=".6"/>
+          <!-- AVANT : chaudière fioul -->
+          <path d="M48 130 L132 128 L134 330 L46 331 Z" fill="rgba(46,33,24,.06)"/>
+          <path d="M50 160 H130 M50 250 H130" />
+          <rect x="66" y="178" width="46" height="34" rx="3"/>
+          <circle cx="89" cy="195" r="9"/>
+          <path d="M60 268 H120 M60 280 H120 M60 292 H120" stroke-width="1.3"/>
+          <!-- conduit de fumée -->
+          <path d="M80 128 V82 Q80 70 92 70 H120 V40"/>
+          <path d="M96 128 V90 Q96 84 102 84 H136 V40"/>
+          <path d="M112 30 q6 -10 0 -18 M130 30 q6 -10 0 -18" stroke-width="1.6" opacity=".7"/>
+          <!-- cuve fioul -->
+          <rect x="150" y="236" width="104" height="94" rx="20"/>
+          <path d="M160 250 L244 316 M168 240 L250 306 M154 268 L222 324" stroke-width="1" opacity=".45"/>
+          <path d="M134 300 H150" />
+          <text x="166" y="290" font-family="Amatic SC,cursive" font-weight="700" font-size="24" fill="#2e2118" stroke="none">fioul</text>
+          <!-- croix -->
+          <path d="M40 120 L262 342 M262 120 L40 342" stroke="#b5532f" stroke-width="3" opacity=".55"/>
+          <!-- annotations avant -->
+          <path d="M134 150 C 150 130, 160 118, 172 108" stroke-width="1.4"/>
+          <text x="150" y="100" font-family="Amatic SC,cursive" font-weight="700" font-size="22" fill="#2e2118" stroke="none">vieille chaudière</text>
+
+          <!-- flèche avant / après -->
+          <path class="trace" d="M226 200 C 260 150, 320 150, 352 190" stroke="#b5532f" stroke-width="4"/>
+          <path d="M338 176 L354 194 L332 196" stroke="#b5532f" stroke-width="4"/>
+          <text x="236" y="146" font-family="Amatic SC,cursive" font-weight="700" font-size="26" fill="#b5532f" stroke="none">avant / après</text>
+
+          <!-- APRÈS : mur -->
+          <path d="M392 330 V100" stroke-width="3"/>
+          <path d="M392 110 l14 -10 M392 140 l14 -10 M392 170 l14 -10 M392 200 l14 -10 M392 230 l14 -10 M392 260 l14 -10 M392 290 l14 -10 M392 320 l14 -10" stroke-width="1.2" opacity=".55"/>
+          <!-- module hydraulique intérieur -->
+          <rect x="316" y="150" width="64" height="96" rx="6" fill="rgba(95,107,52,.12)"/>
+          <rect x="330" y="166" width="36" height="16" rx="3"/>
+          <circle cx="340" cy="174" r="2" fill="#2e2118"/>
+          <!-- tuyauteries habillées -->
+          <rect x="330" y="246" width="10" height="84" rx="3" fill="#f5ecdc"/>
+          <rect x="350" y="246" width="10" height="84" rx="3" fill="#f5ecdc"/>
+          <path d="M330 270 h10 M330 300 h10 M350 270 h10 M350 300 h10" stroke-width="1"/>
+          <!-- liaison vers PAC -->
+          <path d="M380 200 H430"/>
+          <path d="M380 212 H430"/>
+          <!-- PAC extérieure -->
+          <rect x="430" y="204" width="100" height="78" rx="6" fill="rgba(217,154,63,.18)"/>
+          <circle cx="466" cy="243" r="26"/>
+          <circle cx="466" cy="243" r="18" stroke-width="1.2"/>
+          <path d="M466 243 L466 222 M466 243 L484 254 M466 243 L448 254" stroke-width="1.8"/>
+          <path d="M502 220 V266 M512 220 V266 M520 220 V266" stroke-width="1.3"/>
+          <path d="M442 282 V300 H458 V282 M502 282 V300 H518 V282"/>
+          <path d="M424 300 H536 V306 H424 Z"/>
+          <path d="M440 330 V306 M520 330 V306" stroke-width="1.6"/>
+          <!-- soleil + vent -->
+          <circle cx="500" cy="108" r="16"/>
+          <path d="M500 82 v-8 M500 142 v-8 M474 108 h-8 M534 108 h-8 M482 90 l-6 -6 M518 126 l6 6 M482 126 l-6 6 M518 90 l6 -6" stroke-width="1.6"/>
+          <!-- annotations après -->
+          <path d="M360 290 C 330 310, 300 312, 284 304" stroke-width="1.4"/>
+          <text x="196" y="380" font-family="Amatic SC,cursive" font-weight="700" font-size="22" fill="#5f6b34" stroke="none">tuyauteries habillées, propres</text>
+          <path d="M290 362 C 300 340, 320 330, 334 326" stroke-width="1.3" stroke="#5f6b34"/>
+          <text x="436" y="196" font-family="Amatic SC,cursive" font-weight="700" font-size="22" fill="#5f6b34" stroke="none">PAC air-eau</text>
+          <text x="348" y="232" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34" stroke="none">module</text>
+        </g>
+      </svg>
+      <svg class="tampon" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="cercleT" d="M60 60 m-42 0 a42 42 0 1 1 84 0 a42 42 0 1 1 -84 0"/></defs>
+        <g fill="none" stroke="#5f6b34" stroke-width="3"><circle cx="60" cy="60" r="56"/><circle cx="60" cy="60" r="31" stroke-width="2"/></g>
+        <text font-family="Alegreya Sans,sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.2" fill="#5f6b34"><textPath href="#cercleT">JARDET CHAUFFAGE · SIX-FOURS ·</textPath></text>
+        <text x="60" y="58" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="19" fill="#5f6b34">fioul</text>
+        <text x="60" y="76" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="19" fill="#5f6b34">→ PAC</text>
+      </svg>
+    </div>
+
+    <div class="hero-texte rv d2">
+      <div class="note-main">à Six-Fours<br>depuis 2018<svg viewBox="0 0 60 40" aria-hidden="true"><path d="M50 4 C 40 20, 20 28, 8 30 M8 30 l10 -10 M8 30 l12 6" fill="none" stroke="#8f3f22" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+      <span class="sur"><svg viewBox="0 0 40 20" aria-hidden="true"><path d="M2 12 C 10 4, 18 18, 26 9 S 36 8, 38 10" fill="none" stroke="#5f6b34" stroke-width="2.5" stroke-linecap="round"/></svg>Chauffagiste à Six-Fours-les-Plages</span>
+      <h1>Jardet<em>Chauffage<svg viewBox="0 0 300 22" preserveAspectRatio="none" aria-hidden="true"><path class="trace" d="M4 14 C 60 6, 130 18, 200 9 S 280 10, 296 8" fill="none" stroke="#d99a3f" stroke-width="5" stroke-linecap="round"/></svg></em></h1>
+      <p class="signe">Votre artisan : <b>Philippe Jardet</b></p>
+      <p class="accroche">Dire adieu à la vieille chaudière fioul et passer à la pompe à chaleur, proprement, avec des finitions soignées jusqu'aux tuyauteries habillées. Le chauffage, comme on l'aime entre Le Brusc et la rade de Toulon.</p>
+      <div class="cta">
+        <a class="btn btn-terre" href="tel:+33611529607"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler le 06 11 52 96 07</a>
+        <a class="btn btn-papier" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z M14 7l3 3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>Demander un devis</a>
+      </div>
+    </div>
+  </div>
+  <div class="plinthe" aria-hidden="true"></div>
+  <div class="sol" aria-hidden="true" style="margin-top:0"></div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<div class="confiance">
+  <div class="wrap">
+    <ul>
+      <li><svg viewBox="0 0 26 26" aria-hidden="true"><polygon points="13,2 23,7.5 23,18.5 13,24 3,18.5 3,7.5" fill="#b5532f"/><text x="13" y="17" text-anchor="middle" font-size="9" font-weight="800" fill="#fbf8f2" font-family="Alegreya Sans,sans-serif">18</text></svg>Depuis 2018</li>
+      <li><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="none" stroke="#d99a3f" stroke-width="2"/><path d="M8 13.5l3.5 3.5L18 10" fill="none" stroke="#d99a3f" stroke-width="2.6" stroke-linecap="round"/></svg>QUALIPAC Chauffage</li>
+      <li><svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="none" stroke="#d99a3f" stroke-width="2"/><path d="M8 13.5l3.5 3.5L18 10" fill="none" stroke="#d99a3f" stroke-width="2.6" stroke-linecap="round"/></svg>QUALIPAC CET</li>
+      <li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 3c5 4 7 9 4 15-1 2-3 4-4 5-1-1-3-3-4-5-3-6-1-11 4-15z" fill="#5f6b34" stroke="#d99a3f" stroke-width="1.6"/></svg>Référencé Qualit'EnR</li>
+      <li><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2l3.2 6.6 7.2.9-5.3 5 1.4 7.2L13 18.2l-6.5 3.5 1.4-7.2-5.3-5 7.2-.9z" fill="#d99a3f"/></svg><a href="https://www.effy.fr/artisans/pro/828-jardet-chauffage" target="_blank" rel="noopener">4,8/5 · 6 avis Effy</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="etiquette">Savoir-faire</span>
+      <h2>Ce qui se prépare <span class="surligne">à l'atelier</span></h2>
+      <p>Du remplacement complet d'une installation fioul au simple chauffe-eau, chaque chantier est pensé pour durer et pour être beau à regarder.</p>
+    </div>
+    <div class="fiches">
+      <article class="fiche vedette rv">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 150 120" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="30" width="40" height="70" rx="3" fill="rgba(46,33,24,.08)"/><path d="M8 50 H48"/><circle cx="28" cy="72" r="8"/><path d="M4 26 L52 104 M52 26 L4 104" stroke="#b5532f" stroke-width="2.6"/><path d="M58 64 C 72 50, 86 50, 96 62" stroke="#b5532f" stroke-width="3"/><path d="M88 54 L97 63 L85 66" stroke="#b5532f" stroke-width="3"/><rect x="100" y="48" width="44" height="40" rx="4" fill="rgba(217,154,63,.3)"/><circle cx="116" cy="68" r="12"/><path d="M116 68 v-9 M116 68 l8 5 M116 68 l-8 5" stroke-width="1.6"/><path d="M134 54 V82 M139 54 V82" stroke-width="1.3"/><path d="M104 88 v10 M140 88 v10"/></g></svg></div>
+        <div>
+          <span class="pastille-vedette">La spécialité</span>
+          <h3>Remplacer sa chaudière fioul par une PAC</h3>
+          <p>Dépose de l'ancienne chaudière et de la cuve, pose d'une pompe à chaleur air-eau raccordée à vos radiateurs, et finitions propres avec tuyauteries habillées. Le chantier que l'entreprise connaît par cœur.</p>
+        </div>
+      </article>
+      <article class="fiche rv d1">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 78 78" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="66" height="44" rx="5" fill="rgba(217,154,63,.25)"/><circle cx="30" cy="40" r="15"/><path d="M30 40 v-11 M30 40 l9 6 M30 40 l-9 6" stroke-width="1.7"/><path d="M54 26 V56 M61 26 V56" stroke-width="1.4"/><path d="M14 62 v8 M64 62 v8"/></g></svg></div>
+        <h3>Pompe à chaleur air-eau</h3>
+        <p>Elle chauffe la maison et l'eau en puisant l'énergie de l'air : un bon partenaire pour les hivers doux du Var.</p>
+      </article>
+      <article class="fiche rv d2">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 78 78" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22 C 24 20, 54 24, 74 22" stroke="#5f6b34" stroke-width="3"/><path d="M8 34 l6 -4 M24 46 l6 -4 M48 38 l6 -4 M60 56 l6 -4 M14 64 l6 -4" stroke-width="1.2" opacity=".6"/><path d="M32 12 V64 Q32 72 39 72 Q46 72 46 64 V12" stroke-width="2.8"/><path d="M36 16 V62 M42 16 V62" stroke="#b5532f" stroke-width="1.3" stroke-dasharray="3 4"/></g></svg></div>
+        <h3>PAC géothermique</h3>
+        <p>La chaleur stable du sous-sol captée par sonde ou capteurs enterrés, pour un confort régulier toute l'année.</p>
+      </article>
+      <article class="fiche rv d3">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 78 78" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="8" width="42" height="58" rx="4" fill="rgba(181,83,47,.12)"/><rect x="26" y="16" width="26" height="12" rx="2"/><path d="M39 36 c-7 8 -7 15 0 19 c7 -4 7 -11 0 -19z" fill="rgba(181,83,47,.35)"/><path d="M28 66 v6 M50 66 v6"/></g></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Installation et remplacement de chaudières gaz ou fioul, quand ce choix reste le plus adapté à votre logement.</p>
+      </article>
+      <article class="fiche rv d1">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 78 78" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="66" height="24" rx="6" fill="rgba(95,107,52,.15)"/><path d="M14 32 H64"/><path d="M20 48 q5 6 0 12 q-5 6 0 12 M39 48 q5 6 0 12 q-5 6 0 12 M58 48 q5 6 0 12 q-5 6 0 12" stroke="#5f6b34"/></g></svg></div>
+        <h3>Climatisation</h3>
+        <p>Pour garder des nuits fraîches pendant les étés chauds de la côte, avec des appareils discrets et bien placés.</p>
+      </article>
+      <article class="fiche rv d2">
+        <span class="scotch"></span>
+        <div class="ico"><svg viewBox="0 0 78 78" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="4" width="30" height="12" rx="5" fill="rgba(217,154,63,.3)"/><rect x="20" y="14" width="38" height="58" rx="14"/><path d="M20 50 H58 V58 a14 14 0 0 1 -14 14 h-10 a14 14 0 0 1 -14 -14z" fill="rgba(181,83,47,.3)"/><path d="M32 26 q-4 5 0 10 M44 26 q-4 5 0 10" stroke="#b5532f"/></g></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon équipé d'une petite pompe à chaleur pour produire l'eau chaude sanitaire en consommant moins.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POURQUOI ============ -->
+<section class="sec pourquoi">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="etiquette">Pourquoi Jardet Chauffage</span>
+      <h2>Le travail bien fait, à l'ancienne</h2>
+      <p>Une petite entreprise, un interlocuteur, et l'attention portée à ce qui se voit comme à ce qui ne se voit pas.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv d1"><span class="n">i.</span><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="18" r="9" fill="none" stroke="#f2c27a" stroke-width="2.4"/><path d="M10 46c2-10 9-15 16-15s14 5 16 15" fill="none" stroke="#f2c27a" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Un seul interlocuteur</h3><p>Vous échangez directement avec Philippe Jardet, le dirigeant, du premier contact à la mise en service.</p></div>
+      <div class="atout rv d2"><span class="n">ii.</span><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M8 36h36M14 36V20h24v16" fill="none" stroke="#f2c27a" stroke-width="2.4" stroke-linecap="round"/><rect x="18" y="36" width="5" height="12" fill="none" stroke="#f2c27a" stroke-width="2"/><rect x="29" y="36" width="5" height="12" fill="none" stroke="#f2c27a" stroke-width="2"/></svg><h3>Des finitions soignées</h3><p>Tuyauteries habillées, raccords alignés, chantier rendu propre : le détail fait la différence.</p></div>
+      <div class="atout rv d3"><span class="n">iii.</span><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 6l16 6v12c0 11-7 19-16 22-9-3-16-11-16-22V12z" fill="none" stroke="#f2c27a" stroke-width="2.4" stroke-linejoin="round"/><path d="M18 26l6 6 10-11" fill="none" stroke="#f2c27a" stroke-width="2.6" stroke-linecap="round"/></svg><h3>Qualifié QUALIPAC</h3><p>QUALIPAC Chauffage et QUALIPAC CET, référencé Qualit'EnR pour les énergies renouvelables.</p></div>
+      <div class="atout rv d4"><span class="n">iv.</span><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 46s-14-13-14-24a14 14 0 0 1 28 0c0 11-14 24-14 24z" fill="none" stroke="#f2c27a" stroke-width="2.4"/><circle cx="26" cy="22" r="5" fill="none" stroke="#f2c27a" stroke-width="2.2"/></svg><h3>Installé à Six-Fours</h3><p>Une entreprise du coin, qui connaît les maisons de la presqu'île et leur climat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉTAPES ============ -->
+<section class="sec etapes">
+  <div class="wrap">
+    <div class="entete centre rv">
+      <span class="etiquette">Comment ça se passe</span>
+      <h2>Le carnet de chantier</h2>
+    </div>
+    <div class="carnet rv">
+      <ol class="chemin">
+        <li><div class="num">1</div><h3>Premier coup de fil</h3><p>Vous expliquez votre installation actuelle et ce que vous souhaitez changer.</p></li>
+        <li><div class="num">2</div><h3>Visite et relevés</h3><p>On regarde la chaufferie, les radiateurs, la place disponible dehors et dedans.</p></li>
+        <li><div class="num">3</div><h3>Devis détaillé</h3><p>Matériel, dépose, pose et finitions : tout est écrit, poste par poste.</p></li>
+        <li><div class="num">4</div><h3>Chantier et mise en route</h3><p>Installation, réglages, explications, et un chantier laissé propre.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="sec apropos" id="atelier">
+  <div class="wrap ap-grille">
+    <div class="ap-texte rv">
+      <span class="etiquette">L'atelier</span>
+      <h2 class="h2">Une SARL à taille humaine</h2>
+      <p>Jardet Chauffage est une SARL créée en août 2018 et dirigée par Philippe Jardet, installée rue Gabriel, à Six-Fours-les-Plages.</p>
+      <p>L'entreprise pose et remplace chaudières gaz ou fioul, pompes à chaleur air-eau et géothermiques, climatisations et chauffe-eau thermodynamiques, avec une affection particulière pour les passages du fioul à la pompe à chaleur.</p>
+      <p>Qualifiée QUALIPAC Chauffage et QUALIPAC CET et référencée Qualit'EnR, elle met un point d'honneur à soigner les finitions, jusqu'aux tuyauteries habillées.</p>
+    </div>
+    <div class="fiche-id rv d2">
+      <span class="scotch"></span>
+      <h3>Fiche de l'entreprise</h3>
+      <dl>
+        <dt>Nom</dt><dd>Jardet Chauffage (SARL)</dd>
+        <dt>Dirigeant</dt><dd>Philippe Jardet</dd>
+        <dt>Création</dt><dd>Août 2018</dd>
+        <dt>Adresse</dt><dd>246 rue Gabriel, Résidence Lei Cigalouns, 83140 Six-Fours-les-Plages</dd>
+        <dt>Labels</dt><dd>QUALIPAC Chauffage · QUALIPAC CET · Qualit'EnR</dd>
+      </dl>
+      <svg class="tampon2" viewBox="0 0 130 130" aria-hidden="true">
+        <defs><path id="cercleT2" d="M65 65 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs>
+        <g fill="none" stroke="#b5532f" stroke-width="3"><circle cx="65" cy="65" r="60"/><circle cx="65" cy="65" r="34" stroke-width="2"/></g>
+        <text font-family="Alegreya Sans,sans-serif" font-weight="800" font-size="12" letter-spacing="2.6" fill="#b5532f"><textPath href="#cercleT2">ARTISAN CHAUFFAGISTE · VAR ·</textPath></text>
+        <text x="65" y="62" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#b5532f">depuis</text>
+        <text x="65" y="84" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="26" fill="#b5532f">2018</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RÉALISATIONS ============ -->
+<section class="sec realis" id="realisations">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="etiquette">Croquis de chantiers</span>
+      <h2>Le genre d'installations <span class="surligne">qu'on réalise</span></h2>
+      <p>Des esquisses au crayon pour illustrer les chantiers types. Chaque maison a ses contraintes : les tarifs sont toujours établis sur devis.</p>
+    </div>
+    <div class="galerie">
+      <figure class="croquis rv d1"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 200 H300"/><path d="M40 200 V80 L120 40 L200 80 V200"/><path d="M40 80 H200"/><path d="M50 74 l8 -6 M70 64 l8 -6 M90 54 l8 -6 M140 54 l8 6 M160 64 l8 6 M180 74 l8 6" stroke-width="1.2"/>
+          <rect x="70" y="110" width="34" height="40"/><path d="M87 110 V150 M70 130 H104" stroke-width="1.2"/><rect x="140" y="140" width="34" height="60"/>
+          <rect x="216" y="150" width="76" height="50" rx="4" fill="rgba(217,154,63,.22)"/><circle cx="244" cy="175" r="16"/><path d="M244 175 v-10 M244 175 l9 5 M244 175 l-9 5" stroke-width="1.4"/><path d="M272 158 V192 M280 158 V192" stroke-width="1.2"/>
+          <path d="M200 170 H216 M200 178 H216"/><path d="M228 200 V208 M282 200 V208"/>
+          <path d="M234 132 C 250 120, 270 126, 282 116" stroke="#5f6b34" stroke-width="1.4"/>
+        </g><text x="236" y="112" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">groupe extérieur</text></svg>
+        <figcaption><div><h3>PAC air-eau en façade</h3><small>Groupe posé sur supports, liaisons courtes</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+      <figure class="croquis rv d2"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 210 H300"/><path d="M30 30 V210 M30 30 H290"/>
+          <rect x="60" y="70" width="70" height="104" rx="5" fill="rgba(95,107,52,.12)"/><rect x="74" y="84" width="42" height="18" rx="2"/>
+          <rect x="70" y="174" width="12" height="36" fill="#f5ecdc"/><rect x="92" y="174" width="12" height="36" fill="#f5ecdc"/><rect x="114" y="174" width="12" height="36" fill="#f5ecdc"/>
+          <path d="M82 190 H92 M104 190 H114" stroke-width="1"/>
+          <rect x="170" y="60" width="64" height="150" rx="24"/><path d="M170 160 H234" stroke-width="1.4"/><path d="M178 170 L226 202 M178 186 L210 206 M196 166 L232 190" stroke-width="1" opacity=".5"/>
+          <path d="M130 120 H170 M130 130 H170"/>
+        </g><text x="180" y="44" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">ballon + module</text></svg>
+        <figcaption><div><h3>Chaufferie refaite</h3><small>Module hydraulique, tuyauteries habillées</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+      <figure class="croquis rv d3"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 70 C 100 66, 220 74, 300 70" stroke="#5f6b34" stroke-width="3"/>
+          <path d="M30 100 l10 -6 M90 140 l10 -6 M220 120 l10 -6 M260 180 l10 -6 M60 200 l10 -6" stroke-width="1.2" opacity=".6"/>
+          <path d="M30 120 C 100 116, 200 126, 300 120 M30 170 C 120 166, 210 176, 300 170" stroke-width="1" stroke-dasharray="4 6"/>
+          <rect x="40" y="30" width="80" height="40"/><path d="M34 32 L80 6 L126 32"/>
+          <path d="M120 54 H170 V70"/><path d="M160 70 V214 Q160 226 172 226 Q184 226 184 214 V70" stroke-width="3"/>
+          <path d="M166 80 V210 M178 80 V210" stroke="#b5532f" stroke-width="1.2" stroke-dasharray="3 5"/>
+        </g><text x="196" y="150" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">sonde verticale</text></svg>
+        <figcaption><div><h3>Géothermie</h3><small>Captage vertical en boucle fermée</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+      <figure class="croquis rv d1"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 30 H300 M20 210 H300"/><rect x="200" y="90" width="80" height="120"/><path d="M240 90 V210 M200 150 H280" stroke-width="1.2"/>
+          <rect x="40" y="50" width="150" height="40" rx="8" fill="rgba(95,107,52,.12)"/><path d="M50 78 H180"/><circle cx="176" cy="62" r="2.5" fill="#2e2118"/>
+          <path d="M70 104 q6 8 0 16 q-6 8 0 16 M115 104 q6 8 0 16 q-6 8 0 16 M160 104 q6 8 0 16 q-6 8 0 16" stroke="#5f6b34"/>
+          <path d="M60 180 h90 v30 h-90z" /><path d="M60 180 l10 -14 h70 l10 14" stroke-width="1.4"/>
+        </g><text x="40" y="22" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">split mural, chambre</text></svg>
+        <figcaption><div><h3>Climatisation</h3><small>Unité intérieure discrète et bien placée</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+      <figure class="croquis rv d2"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 210 H300"/><rect x="120" y="30" width="80" height="26" rx="10" fill="rgba(217,154,63,.25)"/><path d="M134 40 h52 M134 47 h52" stroke-width="1.2"/>
+          <rect x="112" y="52" width="96" height="158" rx="34"/><rect x="140" y="80" width="40" height="22" rx="4"/>
+          <path d="M112 160 H208" stroke-width="1.4"/><path d="M120 170 L190 208 M124 186 L160 208 M140 164 L204 198" stroke-width="1" opacity=".45"/>
+          <path d="M208 120 H260 V210 M208 140 H250 V210"/>
+        </g><text x="220" y="100" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">au garage</text></svg>
+        <figcaption><div><h3>Chauffe-eau thermodynamique</h3><small>Eau chaude sanitaire économe</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+      <figure class="croquis rv d3"><span class="scotch"></span>
+        <svg viewBox="0 0 320 240" aria-hidden="true"><g class="crayon" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 30 H300 M20 210 H300"/>
+          <rect x="110" y="44" width="100" height="130" rx="6" fill="rgba(181,83,47,.1)"/><rect x="126" y="60" width="68" height="28" rx="3"/><circle cx="144" cy="74" r="4"/><circle cx="176" cy="74" r="4"/>
+          <path d="M160 108 c-12 14 -12 26 0 32 c12 -6 12 -18 0 -32z" stroke="#b5532f"/>
+          <rect x="124" y="174" width="10" height="36" fill="#f5ecdc"/><rect x="144" y="174" width="10" height="36" fill="#f5ecdc"/><rect x="164" y="174" width="10" height="36" fill="#f5ecdc"/><rect x="184" y="174" width="10" height="36" fill="#f5ecdc"/>
+          <path d="M160 44 V20"/>
+        </g><text x="220" y="120" font-family="Amatic SC,cursive" font-weight="700" font-size="20" fill="#5f6b34">gaz ou fioul</text></svg>
+        <figcaption><div><h3>Chaudière murale</h3><small>Raccordements alignés et habillés</small></div><span class="devis-tampon">sur devis</span></figcaption>
+      </figure>
+    </div>
+    <p class="note-galerie rv">Croquis d'illustration — les photos de vrais chantiers prendront leur place à la mise en ligne.</p>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec avis" id="avis">
+  <div class="wrap avis-grille">
+    <svg class="gros-tampon rv" viewBox="0 0 270 270" role="img" aria-label="Tampon : 4,8 sur 5, 6 avis Effy">
+      <defs><path id="cercleA" d="M135 135 m-100 0 a100 100 0 1 1 200 0 a100 100 0 1 1 -200 0"/></defs>
+      <circle cx="135" cy="135" r="128" fill="#fbf8f2"/>
+      <g fill="none" stroke="#b5532f"><circle cx="135" cy="135" r="120" stroke-width="4"/><circle cx="135" cy="135" r="112" stroke-width="1.5"/><circle cx="135" cy="135" r="80" stroke-width="2.5"/></g>
+      <text font-family="Alegreya Sans,sans-serif" font-weight="800" font-size="17" letter-spacing="4" fill="#b5532f"><textPath href="#cercleA">NOTE EFFY · 6 AVIS · NOTE EFFY · 6 AVIS ·</textPath></text>
+      <text x="135" y="150" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="76" fill="#2e2118">4,8</text>
+      <text x="135" y="182" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="28" fill="#b5532f">sur 5</text>
+    </svg>
+    <div class="rv d2">
+      <div class="etoiles" aria-hidden="true">★★★★★</div>
+      <h2>4,8/5 sur 6 avis Effy</h2>
+      <p>La note attribuée par les clients de Jardet Chauffage sur la plateforme Effy, après leurs travaux de rénovation énergétique, notamment des remplacements de chaudière fioul par pompe à chaleur.</p>
+      <a class="btn btn-papier" href="https://www.effy.fr/artisans/pro/828-jardet-chauffage" target="_blank" rel="noopener">Lire les avis sur Effy<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap faq-grille">
+    <div class="entete rv">
+      <span class="etiquette">Questions</span>
+      <h2>Ce qu'on nous demande souvent</h2>
+      <p>Une autre question ? Le plus simple reste d'appeler : <a href="tel:+33611529607"><strong>06 11 52 96 07</strong></a>.</p>
+    </div>
+    <div class="questions">
+      <details class="q rv"><summary>Peut-on remplacer une chaudière fioul par une pompe à chaleur ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>Dans de nombreux cas, oui : une pompe à chaleur air-eau peut souvent se raccorder au circuit de radiateurs existant. La faisabilité dépend de l'isolation, des émetteurs et de la place disponible, ce que permet de vérifier une visite.</p></div></details>
+      <details class="q rv"><summary>Que devient l'ancienne cuve à fioul ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>La cuve doit en général être vidangée, dégazée puis neutralisée ou retirée selon sa configuration. Les modalités sont précisées au moment du devis.</p></div></details>
+      <details class="q rv"><summary>Existe-t-il des aides pour ces travaux ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>Selon votre situation, certains travaux pourraient être éligibles à des aides comme MaPrimeRénov' ou les primes CEE. Les conditions évoluent régulièrement : elles se vérifient au cas par cas, avant de signer le devis.</p></div></details>
+      <details class="q rv"><summary>Air-eau ou géothermie, que choisir ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>La PAC air-eau est la plus répandue et la plus simple à installer. La géothermie offre une source de chaleur très stable, mais demande un terrain adapté et des travaux de captage. Les deux peuvent être comparées pour votre maison.</p></div></details>
+      <details class="q rv"><summary>Que signifient les qualifications QUALIPAC ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>QUALIPAC est une qualification délivrée par Qualit'EnR aux installateurs de pompes à chaleur. Jardet Chauffage détient les mentions QUALIPAC Chauffage et QUALIPAC CET (chauffe-eau thermodynamique).</p></div></details>
+      <details class="q rv"><summary>Combien coûte une installation ?<svg aria-hidden="true"><use href="#plus"/></svg></summary><div class="rep"><p>Chaque logement est différent : le prix dépend de l'équipement, de la puissance et des travaux annexes. Un devis détaillé est établi après échange et visite.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOS + CONTACT ============ -->
+<section class="sec pratique" id="contact">
+  <div class="wrap">
+    <div class="entete centre rv">
+      <span class="etiquette">Infos pratiques</span>
+      <h2>Passez un coup de fil, ou laissez un mot</h2>
+    </div>
+    <div class="infos">
+      <div class="panneau-bois rv d1">
+        <h3>Horaires</h3>
+        <ul class="horaires" id="horaires">
+          <li data-j="1"><span>Lundi</span><span>sur rendez-vous</span></li>
+          <li data-j="2"><span>Mardi</span><span>sur rendez-vous</span></li>
+          <li data-j="3"><span>Mercredi</span><span>sur rendez-vous</span></li>
+          <li data-j="4"><span>Jeudi</span><span>sur rendez-vous</span></li>
+          <li data-j="5"><span>Vendredi</span><span>sur rendez-vous</span></li>
+          <li data-j="6"><span>Samedi</span><span>fermé</span></li>
+          <li data-j="0"><span>Dimanche</span><span>fermé</span></li>
+        </ul>
+        <p class="indicatif">Horaires indicatifs, à confirmer par téléphone.</p>
+        <h3>Adresse</h3>
+        <address>246 rue Gabriel<br>Résidence Lei Cigalouns<br>83140 Six-Fours-les-Plages</address>
+        <p class="zone">Interventions à Six-Fours-les-Plages, Sanary-sur-Mer, La Seyne-sur-Mer, Saint-Mandrier, Ollioules et autour de la rade de Toulon.</p>
+        <a class="btn btn-papier" href="https://www.google.com/maps/search/?api=1&amp;query=246+rue+Gabriel+83140+Six-Fours-les-Plages" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>Itinéraire</a>
+      </div>
+      <div class="papier-ligne rv d2">
+        <span class="scotch"></span>
+        <h3>Un mot pour Philippe</h3>
+        <p>Décrivez votre projet, vous serez rappelé pour en parler.</p>
+        <form id="form" novalidate>
+          <div class="ligne2">
+            <label>Nom<input type="text" name="nom" autocomplete="name"></label>
+            <label>Téléphone<input type="tel" name="tel" autocomplete="tel"></label>
+          </div>
+          <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+          <label>Le projet
+            <select name="projet">
+              <option>Remplacer ma chaudière fioul (PAC)</option>
+              <option>Pompe à chaleur air-eau</option>
+              <option>Pompe à chaleur géothermique</option>
+              <option>Chaudière gaz ou fioul</option>
+              <option>Climatisation</option>
+              <option>Chauffe-eau thermodynamique</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message"></textarea></label>
+          <button class="btn btn-terre" type="submit">Envoyer ma demande</button>
+          <p class="msg-form" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="bordure" aria-hidden="true"></div>
+  <div class="wrap pied">
+    <div>
+      <a href="#top" class="logo"><svg viewBox="0 0 44 44" aria-hidden="true"><polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="#b5532f" stroke="#f5ecdc" stroke-width="2"/><path d="M22 12c-6 7-7 12-3 17 1-4 3-5 3-5s1 3 4 5c3-5 1-11-4-17z" fill="#f5ecdc"/></svg><span><b>Jardet Chauffage</b><small>SARL · depuis 2018</small></span></a>
+      <p style="margin-top:14px">Chauffagiste à Six-Fours-les-Plages, dirigé par Philippe Jardet. QUALIPAC Chauffage, QUALIPAC CET, référencé Qualit'EnR.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+33611529607">06 11 52 96 07</a></li>
+        <li><a href="mailto:jardet.philippe@free.fr">jardet.philippe@free.fr</a></li>
+        <li>246 rue Gabriel, Rés. Lei Cigalouns<br>83140 Six-Fours-les-Plages</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul>
+        <li>Lundi–vendredi : sur rendez-vous</li>
+        <li>Samedi/Dimanche : fermé</li>
+        <li><em>Horaires à confirmer</em></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Savoir-faire</h4>
+      <ul>
+        <li><a href="#services">Fioul → pompe à chaleur</a></li>
+        <li><a href="#services">PAC air-eau et géothermie</a></li>
+        <li><a href="#services">Chaudière gaz ou fioul</a></li>
+        <li><a href="#services">Climatisation</a></li>
+        <li><a href="#services">Chauffe-eau thermodynamique</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mention">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33611529607" aria-label="Appeler Jardet Chauffage"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');});});
+
+  var li=document.querySelector('#horaires li[data-j="'+new Date().getDay()+'"]');if(li)li.classList.add('auj');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('msg');msg.classList.remove('vu');void msg.offsetWidth;msg.classList.add('vu');});
+
+  var fl=document.querySelector('.flottant');function chk(){fl.classList.toggle('visible',scrollY>window.innerHeight*.7);}addEventListener('scroll',chk,{passive:true});chk();
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('vu');});
+})();
+</script>
+</body>
+</html>
