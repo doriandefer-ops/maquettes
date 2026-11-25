@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AERM CFC – Chauffagiste et pompe à chaleur à Mulhouse</title>
+<meta name="description" content="AERM CFC, chauffagiste à Mulhouse (68) : installation de chaudières gaz et fioul, dépannage chauffage, pompes à chaleur, climatisation et chauffe-eau thermodynamiques. Mulhouse et Sud-Alsace, devis gratuit.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charbon:#111418;
+  --ardoise:#1f252c;
+  --ardoise-2:#181d22;
+  --or:#c9a45c;
+  --or-clair:#e2c68c;
+  --bordeaux:#6e2233;
+  --ivoire:#f2ece0;
+  --gris:#9a948a;
+  --filet:rgba(201,164,92,.28);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Lato",system-ui,sans-serif;
+  --larg:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--charbon);color:var(--ivoire);font-family:var(--sans);font-weight:400;font-size:1.0625rem;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05;letter-spacing:-.005em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.caps{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--or)}
+.gr{color:var(--gris)}
+em.or{font-style:italic;color:var(--or-clair)}
+
+/* cadres à coins */
+.coins{position:relative;background:
+  linear-gradient(var(--or),var(--or)) top left/22px 1px no-repeat,
+  linear-gradient(var(--or),var(--or)) top left/1px 22px no-repeat,
+  linear-gradient(var(--or),var(--or)) top right/22px 1px no-repeat,
+  linear-gradient(var(--or),var(--or)) top right/1px 22px no-repeat,
+  linear-gradient(var(--or),var(--or)) bottom left/22px 1px no-repeat,
+  linear-gradient(var(--or),var(--or)) bottom left/1px 22px no-repeat,
+  linear-gradient(var(--or),var(--or)) bottom right/22px 1px no-repeat,
+  linear-gradient(var(--or),var(--or)) bottom right/1px 22px no-repeat}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 26px;font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid var(--or);cursor:pointer;transition:background .3s,color .3s,box-shadow .3s,transform .3s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-or{background:var(--or);color:var(--charbon)}
+.btn-or:hover{background:var(--or-clair);box-shadow:0 0 34px rgba(201,164,92,.45);transform:translateY(-2px)}
+.btn-ligne{background:transparent;color:var(--ivoire)}
+.btn-ligne:hover{background:rgba(201,164,92,.1);color:var(--or-clair);transform:translateY(-2px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(17,20,24,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--filet)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .mono{width:40px;height:40px;border:1px solid var(--or);display:grid;place-items:center;font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--or);position:relative}
+.logo .mono::after{content:"";position:absolute;inset:3px;border:1px solid var(--filet)}
+.logo b{display:block;font-family:var(--serif);font-weight:600;font-size:1.3rem;letter-spacing:.14em;line-height:1}
+.logo small{display:block;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);margin-top:3px}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:4px;align-items:center}
+.menu a{display:block;text-decoration:none;padding:8px 12px;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ivoire);transition:color .25s}
+.menu a:hover{color:var(--or)}
+.menu .cta{border:1px solid var(--or);color:var(--or);margin-left:10px;padding:10px 16px}
+.menu .cta:hover{background:var(--or);color:var(--charbon)}
+.burger{display:none;align-items:center;gap:10px;background:none;border:1px solid var(--or);color:var(--or);height:44px;padding:0 14px;font-family:var(--sans);font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
+.burger b{width:18px;height:10px;position:relative;display:block}
+.burger b::before,.burger b::after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s,top .3s}
+.burger b::before{top:0}.burger b::after{top:9px}
+.burger[aria-expanded="true"] b::before{top:4.5px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{top:4.5px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;padding:72px 0 0;display:grid;grid-template-columns:1.05fr 1fr;overflow:hidden;background:radial-gradient(ellipse 60% 55% at 26% 58%,rgba(201,164,92,.16),transparent 70%),linear-gradient(180deg,var(--charbon),#14181d 60%,var(--charbon))}
+.hero-vis{position:relative;display:flex;align-items:flex-end;justify-content:center;padding:40px 24px 0;border-right:1px solid var(--filet)}
+.hero-vis svg{width:100%;max-width:600px;height:auto;display:block}
+.hero-txt{display:flex;flex-direction:column;justify-content:center;padding:60px clamp(24px,5vw,80px) 70px}
+.sigle{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.sigle span{font-family:var(--sans);font-weight:700;font-size:.85rem;letter-spacing:.6em;color:var(--or)}
+.sigle i{flex:1;max-width:90px;height:1px;background:var(--or)}
+.hero h1{font-size:clamp(2.7rem,5.2vw,4.9rem);font-weight:500;line-height:1}
+.hero h1 em{font-style:italic;color:var(--or-clair);font-weight:400}
+.hero .chapo{font-size:1.12rem;color:#d9d2c4;max-width:34em;margin:26px 0 36px;font-weight:300}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:44px;padding-top:22px;border-top:1px solid var(--filet);font-size:.85rem;color:var(--gris)}
+.hero .meta span::before{content:"◆";color:var(--or);font-size:.55rem;margin-right:10px;vertical-align:2px}
+.flamme{transform-box:fill-box;transform-origin:50% 100%;animation:flam 1.6s ease-in-out infinite alternate}
+.flamme.f2{animation-duration:1.1s;animation-delay:-.4s}
+@keyframes flam{0%{transform:scaleY(.86) scaleX(1.04);opacity:.85}50%{transform:scaleY(1.08) scaleX(.95);opacity:1}100%{transform:scaleY(.94) scaleX(1.02);opacity:.9}}
+.halo{animation:halo 3.2s ease-in-out infinite alternate}
+@keyframes halo{from{opacity:.45}to{opacity:.9}}
+.fumee{animation:fum 7s linear infinite;opacity:0}
+.fumee.d2{animation-delay:-3.5s}
+@keyframes fum{0%{transform:translateY(0);opacity:0}20%{opacity:.5}100%{transform:translateY(-60px);opacity:0}}
+.lueur{filter:drop-shadow(0 0 4px rgba(226,198,140,.55))}
+
+/* bandeau confiance */
+.confiance{border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);background:var(--ardoise-2)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:26px 22px;border-left:1px solid var(--filet);display:flex;gap:14px;align-items:flex-start}
+.confiance li:first-child{border-left:0}
+.confiance .num{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--or);line-height:1}
+.confiance b{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:600;line-height:1.2}
+.confiance small{display:block;color:var(--gris);font-size:.85rem;line-height:1.45;margin-top:3px}
+
+/* sections */
+section{position:relative}
+.sec{padding:120px 0}
+.sec-alt{background:var(--ardoise)}
+.tete{text-align:center;max-width:720px;margin:0 auto 64px}
+.tete .romain{display:inline-flex;align-items:center;gap:16px;margin-bottom:18px}
+.tete .romain::before,.tete .romain::after{content:"";width:46px;height:1px;background:var(--or)}
+.tete h2{font-size:clamp(2.2rem,4.2vw,3.5rem)}
+.tete p{color:var(--gris);margin-top:18px;font-size:1.05rem}
+.orn{display:block;margin:22px auto 0;width:120px;height:14px}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.carte{padding:38px 32px 34px;background-color:rgba(17,20,24,.55);border:1px solid rgba(201,164,92,.12);transition:transform .4s,background-color .4s,box-shadow .4s}
+.carte:hover{transform:translateY(-6px);background-color:rgba(31,37,44,.9);box-shadow:0 24px 50px -24px rgba(0,0,0,.8),0 0 40px -10px rgba(201,164,92,.25)}
+.carte .ic{width:58px;height:58px;margin-bottom:24px;color:var(--or)}
+.carte .ic svg{width:100%;height:100%}
+.carte .n{position:absolute;top:24px;right:28px;font-family:var(--serif);font-style:italic;color:var(--gris);font-size:1.05rem}
+.carte h3{font-size:1.65rem;margin-bottom:10px}
+.carte p{color:#c9c2b5;font-size:.97rem;margin:0}
+
+/* pourquoi */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--filet)}
+.atout{padding:40px 28px 10px;border-left:1px solid var(--filet)}
+.atout:first-child{border-left:0}
+.atout .r{font-family:var(--serif);font-size:3.2rem;color:var(--or);line-height:1;font-weight:400}
+.atout h3{font-size:1.45rem;margin:16px 0 10px}
+.atout p{color:var(--gris);font-size:.96rem}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:e}
+.etape{padding:34px 26px;text-align:center}
+.etape .rond{width:74px;height:74px;margin:0 auto 22px;border:1px solid var(--or);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:1.7rem;color:var(--or);position:relative;transition:box-shadow .4s}
+.etape .rond::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px solid var(--filet)}
+.etape:hover .rond{box-shadow:0 0 30px rgba(201,164,92,.35)}
+.etape h3{font-size:1.45rem;margin-bottom:8px}
+.etape p{color:var(--gris);font-size:.95rem;margin:0}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.apropos .vis{padding:30px}
+.apropos .vis svg{width:100%;height:auto;display:block}
+.apropos h2{font-size:clamp(2.2rem,4vw,3.3rem);margin:16px 0 26px}
+.apropos p{color:#d3ccbe}
+.fiche{margin-top:30px;border-top:1px solid var(--filet)}
+.fiche div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--filet);font-size:.95rem}
+.fiche dt{color:var(--gris);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;padding-top:4px}
+.fiche dd{margin:0;text-align:right}
+.fiche a{color:var(--or-clair);text-decoration:none}
+.fiche a:hover{text-decoration:underline}
+
+/* solutions */
+.solutions{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sol{background:var(--charbon);border:1px solid rgba(201,164,92,.14);overflow:hidden;transition:transform .4s,border-color .4s}
+.sol:hover{transform:translateY(-6px);border-color:rgba(201,164,92,.5)}
+.sol .ill{aspect-ratio:16/10;background:radial-gradient(ellipse at 50% 80%,rgba(201,164,92,.14),transparent 70%),var(--ardoise-2);border-bottom:1px solid var(--filet);display:grid;place-items:center}
+.sol .ill svg{width:78%;height:auto}
+.sol .c{padding:28px 28px 30px}
+.sol .caps{font-size:.62rem}
+.sol h3{font-size:1.6rem;margin:10px 0 10px}
+.sol p{color:var(--gris);font-size:.95rem}
+.sol .prix{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--filet);padding-top:14px;margin-top:6px;font-size:.85rem}
+.sol .prix b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.15rem;color:var(--or-clair)}
+
+/* avis */
+.avis{max-width:860px;margin:0 auto;text-align:center;padding:64px clamp(24px,6vw,80px)}
+.avis .guil{font-family:var(--serif);font-size:6rem;line-height:.5;color:var(--or);display:block;height:40px}
+.avis h2{font-size:clamp(2.2rem,4vw,3.2rem);margin:12px 0 20px}
+.avis p{color:#d3ccbe;max-width:36em;margin:0 auto 30px}
+.etoiles{display:flex;justify-content:center;gap:10px;margin-bottom:28px}
+.etoiles svg{width:26px;height:26px;fill:none;stroke:var(--or);stroke-width:1.2}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.q{border-bottom:1px solid var(--filet)}
+.q:first-child{border-top:1px solid var(--filet)}
+.q button{width:100%;display:flex;gap:22px;align-items:baseline;background:none;border:0;color:var(--ivoire);text-align:left;padding:26px 4px;cursor:pointer;font-family:var(--serif);font-size:1.4rem;font-weight:500;line-height:1.3}
+.q button .r{font-style:italic;color:var(--or);font-size:1.05rem;min-width:30px}
+.q button .t{flex:1}
+.q button .pl{width:14px;height:14px;position:relative;flex:none;align-self:center}
+.q button .pl::before,.q button .pl::after{content:"";position:absolute;background:var(--or);transition:transform .3s}
+.q button .pl::before{left:0;right:0;top:6.5px;height:1px}
+.q button .pl::after{top:0;bottom:0;left:6.5px;width:1px}
+.q button[aria-expanded="true"] .pl::after{transform:scaleY(0)}
+.q button:hover .t{color:var(--or-clair)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.q .rep>div{overflow:hidden}
+.q .rep p{padding:0 4px 26px 56px;color:var(--gris);margin:0}
+.q.ouvert .rep{grid-template-rows:1fr}
+
+/* horaires */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.bloc{padding:44px 40px;background-color:var(--charbon)}
+.bloc h3{font-size:1.9rem;margin:12px 0 22px}
+.horaires{list-style:none;margin:0;padding:0}
+.horaires li{display:flex;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(201,164,92,.14);font-size:.97rem}
+.horaires li span:last-child{color:var(--gris)}
+.horaires li.auj{background:rgba(201,164,92,.1);border-left:2px solid var(--or)}
+.horaires li.auj span:first-child::after{content:"aujourd'hui";margin-left:10px;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:700}
+.horaires li.auj span:last-child{color:var(--ivoire)}
+.note{font-size:.8rem;color:var(--gris);margin-top:16px;font-style:italic}
+.zone-carte{margin:6px 0 26px;border:1px solid var(--filet)}
+.zone-carte svg{display:block;width:100%;height:auto}
+.bloc .ligne{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.bloc .ligne svg{width:18px;height:18px;color:var(--or);flex:none;margin-top:5px}
+.bloc .ligne a{text-decoration:none}
+.bloc .ligne a:hover{color:var(--or-clair)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(2.2rem,4vw,3.3rem);margin:16px 0 22px}
+.contact .gauche p{color:#d3ccbe}
+.contact .tel{display:block;font-family:var(--serif);font-size:2.3rem;color:var(--or-clair);text-decoration:none;margin:26px 0 6px;line-height:1.1}
+.contact .tel:hover{color:var(--or)}
+.form{padding:44px 40px;background-color:var(--ardoise)}
+.form .ch{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form label{display:block;margin-bottom:18px}
+.form label span{display:block;font-size:.64rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--or);margin-bottom:8px}
+.form input,.form select,.form textarea{width:100%;background:var(--charbon);border:1px solid rgba(201,164,92,.25);color:var(--ivoire);font-family:var(--sans);font-size:1rem;padding:14px 14px;border-radius:0;transition:border-color .25s,box-shadow .25s}
+.form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--or) 50%),linear-gradient(135deg,var(--or) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.form textarea{min-height:120px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px rgba(201,164,92,.18)}
+.form .btn{width:100%;margin-top:6px}
+.msg{display:none;margin-top:18px;padding:16px 18px;border:1px solid var(--or);background:rgba(110,34,51,.45);font-size:.95rem}
+.msg.vu{display:block}
+
+/* footer */
+footer{background:#0c0e11;border-top:1px solid var(--filet);padding:80px 0 0}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:60px}
+.pied h4{font-family:var(--sans);font-size:.66rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin:0 0 18px}
+.pied p,.pied li{color:var(--gris);font-size:.93rem}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin-bottom:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--or-clair)}
+.bas{border-top:1px solid var(--filet);padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:var(--gris)}
+.demo{background:var(--bordeaux);color:var(--ivoire);text-align:center;font-size:.78rem;padding:10px 16px;letter-spacing:.04em}
+
+/* bouton flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:70;width:60px;height:60px;border-radius:50%;background:var(--or);color:var(--charbon);align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(201,164,92,.18),0 12px 30px rgba(0,0,0,.6)}
+.flottant svg{width:24px;height:24px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .flamme,.halo,.fumee{animation:none}
+  .fumee{opacity:0}
+  *{transition-duration:0s!important}
+}
+
+/* responsive */
+@media (max-width:1060px){
+  .menu a{padding:8px 8px;letter-spacing:.14em}
+  .atouts,.etapes{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(3){border-left:0}
+  .confiance ul{grid-template-columns:repeat(2,1fr)}
+  .confiance li:nth-child(3){border-left:0}
+  .confiance li:nth-child(n+3){border-top:1px solid var(--filet)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:inline-flex}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--charbon);border-bottom:1px solid var(--filet);padding:10px 16px 22px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .menu.ouvert{opacity:1;transform:none;visibility:visible}
+  .menu a{padding:15px 6px;border-bottom:1px solid rgba(201,164,92,.14);font-size:.78rem}
+  .menu .cta{margin:16px 0 0;text-align:center}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-txt{order:-1;padding:56px 16px 40px}
+  .hero-vis{border-right:0;border-top:1px solid var(--filet);padding:30px 16px 0}
+  .hero-vis svg{max-width:460px}
+  .services,.solutions{grid-template-columns:1fr 1fr}
+  .apropos,.contact,.infos{grid-template-columns:1fr;gap:40px}
+  .apropos .vis{max-width:460px;margin:0 auto;width:100%}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .sec{padding:84px 0}
+  .tete{margin-bottom:44px}
+  .services,.solutions,.atouts,.etapes,.confiance ul{grid-template-columns:1fr}
+  .atout{border-left:0;border-top:1px solid var(--filet);padding:30px 4px 6px}
+  .atout:first-child{border-top:0}
+  .confiance li{border-left:0!important;border-top:1px solid var(--filet)}
+  .confiance li:first-child{border-top:0}
+  .hero .btns .btn{flex:1 1 100%}
+  .form,.bloc{padding:32px 22px}
+  .form .ch{grid-template-columns:1fr;gap:0}
+  .q button{font-size:1.2rem;gap:14px}
+  .q .rep p{padding-left:48px}
+  .pied{grid-template-columns:1fr}
+  .flottant{display:flex}
+  .contact .tel{font-size:2rem}
+  .sigle span{letter-spacing:.45em}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a href="#accueil" class="logo" aria-label="AERM CFC, retour en haut">
+      <span class="mono">A</span>
+      <span><b>AERM CFC</b><small>Chauffage · Mulhouse</small></span>
+    </a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><b></b>Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#infos">Horaires</a></li>
+      <li><a href="#contact" class="cta">Devis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <div class="hero-vis" aria-hidden="true">
+    <svg viewBox="0 0 600 640" fill="none">
+      <defs>
+        <radialGradient id="gl" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e2c68c" stop-opacity=".55"/><stop offset="1" stop-color="#c9a45c" stop-opacity="0"/></radialGradient>
+        <linearGradient id="fl1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#c9a45c"/><stop offset=".6" stop-color="#e2c68c"/><stop offset="1" stop-color="#f2ece0"/></linearGradient>
+        <linearGradient id="arr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f252c"/><stop offset="1" stop-color="#111418"/></linearGradient>
+        <clipPath id="arche"><path d="M110 640V250a190 190 0 0 1 380 0v390z"/></clipPath>
+      </defs>
+      <!-- usines mulhousiennes : sheds et cheminées -->
+      <g fill="#1b2027">
+        <rect x="24" y="190" width="24" height="420"/><rect x="20" y="182" width="32" height="12"/>
+        <rect x="70" y="290" width="16" height="320"/><rect x="67" y="284" width="22" height="8"/>
+        <rect x="548" y="150" width="24" height="460"/><rect x="544" y="142" width="32" height="12"/>
+        <rect x="512" y="300" width="14" height="300"/>
+        <path d="M0 640V420l36-46v46l36-46v46l36-46v46l36-46v266z"/>
+        <path d="M456 640V400l36-46v46l36-46v46l36-46v46l36-46v266z"/>
+      </g>
+      <g stroke="#c9a45c" stroke-opacity=".4" stroke-width="1">
+        <path d="M0 420l36-46v46l36-46v46l36-46v46l36-46"/>
+        <path d="M456 400l36-46v46l36-46v46l36-46v46l36-46"/>
+        <path d="M24 374V190h24v184M548 354V150h24v204M70 374V290h16v84"/>
+        <path d="M28 220h16M28 250h16M552 180h16M552 210h16"/>
+      </g>
+      <g fill="#c9a45c" fill-opacity=".22">
+        <rect x="10" y="460" width="14" height="22"/><rect x="46" y="460" width="14" height="22"/><rect x="82" y="460" width="14" height="22"/>
+        <rect x="10" y="510" width="14" height="22"/><rect x="46" y="510" width="14" height="22"/>
+        <rect x="506" y="440" width="14" height="22"/><rect x="542" y="440" width="14" height="22"/><rect x="578" y="440" width="14" height="22"/>
+        <rect x="542" y="490" width="14" height="22"/><rect x="578" y="490" width="14" height="22"/>
+      </g>
+      <g stroke="#9a948a" stroke-opacity=".5">
+        <path class="fumee" d="M36 172c-8-10 8-18 0-28s8-18 0-28"/>
+        <path class="fumee d2" d="M560 132c-8-10 8-18 0-28s8-18 0-28"/>
+      </g>
+      <!-- arche -->
+      <circle class="halo" cx="300" cy="360" r="220" fill="url(#gl)"/>
+      <path d="M110 640V250a190 190 0 0 1 380 0v390z" fill="url(#arr)" fill-opacity=".92"/>
+      <g clip-path="url(#arche)" stroke="#c9a45c" stroke-opacity=".14">
+        <path d="M110 300h380M110 380h380M110 460h380M110 540h380M110 620h380"/>
+        <path d="M170 300v80M250 300v80M330 300v80M410 300v80M210 380v80M290 380v80M370 380v80M450 380v80M170 460v80M250 460v80M330 460v80M410 460v80M210 540v80M290 540v80M370 540v80M450 540v80"/>
+      </g>
+      <g class="lueur" stroke="#c9a45c" stroke-width="2">
+        <path d="M110 640V250a190 190 0 0 1 380 0v390"/>
+        <path d="M96 640V250a204 204 0 0 1 408 0v390" stroke-width="1" stroke-opacity=".6"/>
+      </g>
+      <g stroke="#c9a45c" stroke-width="1"><path d="M300 46v-18M286 40l14-12 14 12"/><circle cx="300" cy="56" r="4"/></g>
+      <path d="M140 250a160 160 0 0 1 320 0" stroke="#c9a45c" stroke-opacity=".4" stroke-dasharray="2 8"/>
+      <!-- chaudière murale -->
+      <g class="lueur" stroke="#e2c68c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="215" y="190" width="170" height="250" rx="14"/>
+        <path d="M215 238h170"/>
+        <rect x="245" y="206" width="70" height="20" rx="3"/>
+        <circle cx="342" cy="216" r="7"/><circle cx="364" cy="216" r="7"/>
+        <rect x="250" y="270" width="100" height="120" rx="50"/>
+        <path d="M232 412h136" stroke-opacity=".5"/>
+        <path d="M238 440v54M268 440v74M300 440v64M332 440v74M362 440v54"/>
+        <path d="M228 494h20M258 514h20M290 504h20M322 514h20M352 494h20"/>
+        <path d="M268 514v126M332 514v126"/>
+      </g>
+      <text x="266" y="221" font-family="Lato,sans-serif" font-size="11" fill="#e2c68c" letter-spacing="2">58°C</text>
+      <g transform="translate(300 380)">
+        <path class="flamme" d="M0 0c-30 0-38-26-24-48 6-10 8-20 4-32 18 8 28 24 24 40 6-4 10-12 10-20 12 14 18 30 12 42C22-6 12 0 0 0z" fill="url(#fl1)" fill-opacity=".9" stroke="#f2ece0" stroke-width="1"/>
+        <path class="flamme f2" d="M0-4c-14 0-18-12-12-24 3-6 4-12 2-18 10 6 16 16 14 26 4-2 6-6 6-10 6 8 8 16 4 22C10-6 6-4 0-4z" fill="#f2ece0" fill-opacity=".85"/>
+      </g>
+      <path d="M262 382h76" stroke="#e2c68c" stroke-width="2" stroke-linecap="round"/>
+      <g fill="#c9a45c"><circle cx="268" cy="640" r="0"/></g>
+      <!-- sol -->
+      <path d="M0 639h600" stroke="#c9a45c" stroke-opacity=".5"/>
+    </svg>
+  </div>
+  <div class="hero-txt">
+    <div class="sigle rv"><span>AERM · CFC</span><i></i></div>
+    <h1 class="rv d1">La chaleur bien faite, <em>au cœur de Mulhouse</em></h1>
+    <p class="chapo rv d2">Chaudières gaz et fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques : AERM CFC installe et dépanne vos équipements de chauffage dans la cité manufacturière et tout le Sud-Alsace.</p>
+    <div class="btns rv d3">
+      <a href="tel:+33389664484" class="btn btn-or"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a>
+      <a href="#contact" class="btn btn-ligne">Demander un devis</a>
+    </div>
+    <div class="meta rv d3"><span>03 89 66 44 84</span><span>Mulhouse · Haut-Rhin</span><span>Devis gratuit</span></div>
+  </div>
+</header>
+
+<div class="confiance">
+  <div class="wrap">
+    <ul>
+      <li><span class="num">I</span><div><b>Basé à Mulhouse</b><small>Haut-Rhin (68)</small></div></li>
+      <li><span class="num">II</span><div><b>Mulhouse et Sud-Alsace</b><small>Zone d'intervention</small></div></li>
+      <li><span class="num">III</span><div><b>Gaz · fioul · PAC</b><small>Chaudières et pompes à chaleur</small></div></li>
+      <li><span class="num">IV</span><div><b>Clim et eau chaude</b><small>Climatisation, chauffe-eau thermodynamique</small></div></li>
+    </ul>
+  </div>
+</div>
+
+<main>
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre I</span>
+      <h2>Nos savoir-faire</h2>
+      <p>De la chaudière traditionnelle aux équipements thermodynamiques, un seul interlocuteur pour la chaleur et le confort de votre logement.</p>
+      <svg class="orn" viewBox="0 0 120 14" fill="none" stroke="#c9a45c"><path d="M0 7h46M74 7h46"/><path d="M60 1l6 6-6 6-6-6z"/></svg>
+    </div>
+    <div class="services">
+      <article class="carte coins rv">
+        <span class="n">i.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="12" y="4" width="24" height="34" rx="3"/><path d="M12 12h24"/><path d="M24 31c-4 0-6-3-4-7 1-2 1-4 0-6 4 2 6 5 5 8 2-1 2-3 2-4 2 3 2 9-3 9z"/><path d="M17 38v6M24 38v6M31 38v6"/></svg></div>
+        <h3>Chaudière gaz</h3>
+        <p>Installation et remplacement de chaudières gaz murales ou au sol, mise en service et réglages soignés.</p>
+      </article>
+      <article class="carte coins rv d1">
+        <span class="n">ii.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="6" y="14" width="22" height="28" rx="2"/><path d="M6 22h22M12 30h10M12 35h10"/><path d="M28 30h6v-14h8v26H32"/><path d="M38 10c0-3 2-4 2-6M34 10c0-3 2-4 2-6"/></svg></div>
+        <h3>Chaudière fioul</h3>
+        <p>Pose de chaudières fioul, raccordement à l'installation existante et conseils pour un fonctionnement optimal.</p>
+      </article>
+      <article class="carte coins rv d2">
+        <span class="n">iii.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 6a9 9 0 0 0-8 12L7 33a4 4 0 0 0 6 6l15-15a9 9 0 0 0 12-8l-5 3-5-2-1-5z"/><circle cx="10" cy="36" r="1"/></svg></div>
+        <h3>Dépannage chauffage</h3>
+        <p>Panne, perte de pression, radiateurs froids : diagnostic et remise en route de votre chauffage dans le secteur.</p>
+      </article>
+      <article class="carte coins rv">
+        <span class="n">iv.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="4" y="12" width="40" height="26" rx="2"/><circle cx="18" cy="25" r="8"/><path d="M18 17v16M10 25h16M12.5 19.5l11 11M23.5 19.5l-11 11" stroke-width="1"/><path d="M32 18h8M32 23h8M32 28h8M32 33h8"/><path d="M8 38v4M40 38v4"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et installation de pompes à chaleur pour chauffer votre logement avec les calories de l'air extérieur.</p>
+      </article>
+      <article class="carte coins rv d1">
+        <span class="n">v.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="40" height="16" rx="3"/><path d="M10 21h28"/><path d="M14 32l-2 6M24 32v8M34 32l2 6"/><path d="M38 15h2"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs réversibles pour un été frais et une mi-saison tempérée, pose discrète et propre.</p>
+      </article>
+      <article class="carte coins rv d2">
+        <span class="n">vi.</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="14" y="2" width="20" height="10" rx="2"/><path d="M18 7h6M28 7h2"/><rect x="12" y="12" width="24" height="32" rx="10"/><path d="M24 22c-3 4-5 7-5 10a5 5 0 0 0 10 0c0-3-2-6-5-10z"/><path d="M18 44v2M30 44v2"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Production d'eau chaude sanitaire économe en énergie, dimensionnée selon les besoins du foyer.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="pourquoi">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre II</span>
+      <h2>Pourquoi nous confier <em class="or">votre chauffage</em></h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><span class="r">I</span><h3>Toutes énergies</h3><p>Gaz, fioul, électricité thermodynamique : nous vous conseillons sans parti pris sur l'énergie la plus adaptée.</p></div>
+      <div class="atout rv d1"><span class="r">II</span><h3>Un artisan local</h3><p>Installé à Mulhouse, nous connaissons le bâti du Sud-Alsace, des maisons de cité aux appartements anciens.</p></div>
+      <div class="atout rv d2"><span class="r">III</span><h3>Devis clair</h3><p>Un devis gratuit et détaillé, établi après visite, pour décider en toute sérénité.</p></div>
+      <div class="atout rv d3"><span class="r">IV</span><h3>Installation et dépannage</h3><p>Le même interlocuteur pour poser votre équipement et intervenir s'il tombe en panne.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre III</span>
+      <h2>Comment ça se passe</h2>
+      <p>Une démarche simple, du premier appel à la mise en service.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><div class="rond">I</div><h3>Prise de contact</h3><p>Vous appelez ou remplissez le formulaire en décrivant votre projet ou votre panne.</p></div>
+      <div class="etape rv d1"><div class="rond">II</div><h3>Visite et diagnostic</h3><p>Nous étudions votre logement, votre installation actuelle et vos besoins.</p></div>
+      <div class="etape rv d2"><div class="rond">III</div><h3>Devis gratuit</h3><p>Vous recevez une proposition détaillée, sans engagement.</p></div>
+      <div class="etape rv d3"><div class="rond">IV</div><h3>Intervention</h3><p>Installation ou réparation, mise en service et explications sur l'utilisation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="apropos">
+  <div class="wrap apropos">
+    <div class="vis coins rv" aria-hidden="true">
+      <svg viewBox="0 0 420 360" fill="none" stroke="#c9a45c" stroke-linejoin="round">
+        <path d="M0 330h420" stroke-opacity=".6"/>
+        <path d="M20 330V200l40-40v40l40-40v40l40-40v40l40-40v170" stroke-width="1.5"/>
+        <path d="M60 160v40M100 160v40M140 160v40M180 160v40" stroke-opacity=".4"/>
+        <path d="M40 250h20v40H40zM90 250h20v40H90zM140 250h20v40h-20z" stroke-opacity=".6"/>
+        <rect x="250" y="60" width="30" height="270" stroke-width="1.5"/><rect x="244" y="52" width="42" height="10" stroke-width="1.5"/>
+        <path d="M255 100h20M255 130h20M255 160h20" stroke-opacity=".5"/>
+        <path d="M300 330V230h100v100" stroke-width="1.5"/><path d="M300 230l50-36 50 36" stroke-width="1.5"/>
+        <rect x="330" y="270" width="40" height="60" stroke-opacity=".6"/>
+        <path class="fumee" d="M265 44c-10-12 10-20 0-32" stroke="#9a948a"/>
+        <text x="210" y="352" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-size="16" fill="#9a948a" stroke="none">Mulhouse, cité manufacturière</text>
+      </svg>
+    </div>
+    <div class="rv d1">
+      <span class="caps">Chapitre IV · À propos</span>
+      <h2>AERM CFC, chauffagiste <em class="or">mulhousien</em></h2>
+      <p>AERM CFC est une entreprise de chauffage basée à Mulhouse, dans le Haut-Rhin. Elle installe des chaudières gaz et fioul, intervient en dépannage de chauffage et pose des pompes à chaleur, des climatiseurs et des chauffe-eau thermodynamiques.</p>
+      <p>Elle accompagne les particuliers de Mulhouse et du Sud-Alsace dans le remplacement de leur chauffage et le passage vers des équipements plus économes, avec un devis gratuit établi après étude.</p>
+      <dl class="fiche">
+        <div><dt>Ville</dt><dd>Mulhouse (68)</dd></div>
+        <div><dt>Secteur</dt><dd>Mulhouse et Sud-Alsace</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33389664484">03 89 66 44 84</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:aermcfc@gmail.com">aermcfc@gmail.com</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="solutions">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre V</span>
+      <h2>Quelle solution pour quel logement ?</h2>
+      <p>Chaque logement a ses contraintes. Voici des repères ; le choix final se fait toujours après visite. Tarifs sur devis.</p>
+    </div>
+    <div class="solutions">
+      <article class="sol rv">
+        <div class="ill" aria-hidden="true">
+          <svg viewBox="0 0 240 150" fill="none" stroke="#c9a45c" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M20 140h200" stroke-opacity=".5"/>
+            <path d="M40 140V60h100v80M30 64l60-40 60 40"/>
+            <rect x="60" y="80" width="22" height="22" stroke-opacity=".6"/><rect x="98" y="80" width="22" height="22" stroke-opacity=".6"/>
+            <rect x="160" y="70" width="44" height="60" rx="5" stroke="#e2c68c"/><path d="M160 84h44" stroke="#e2c68c"/>
+            <path d="M182 118c-6 0-8-5-5-10 1-2 1-5 0-7 5 2 8 6 7 10 2-1 3-3 3-5 3 4 3 12-5 12z" stroke="#e2c68c"/>
+            <path d="M140 110h20" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <div class="c">
+          <span class="caps">Maison raccordée au gaz</span>
+          <h3>Chaudière gaz</h3>
+          <p>Le remplacement d'une ancienne chaudière gaz par un modèle récent conserve votre réseau de radiateurs.</p>
+          <div class="prix"><span class="gr">Tarif</span><b>sur devis</b></div>
+        </div>
+      </article>
+      <article class="sol rv d1">
+        <div class="ill" aria-hidden="true">
+          <svg viewBox="0 0 240 150" fill="none" stroke="#c9a45c" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M20 140h200" stroke-opacity=".5"/>
+            <path d="M30 140V60h110v80M20 64l65-40 65 40"/>
+            <rect x="50" y="80" width="22" height="22" stroke-opacity=".6"/><rect x="96" y="96" width="26" height="44" stroke-opacity=".6"/>
+            <rect x="160" y="84" width="58" height="44" rx="3" stroke="#e2c68c"/><circle cx="182" cy="106" r="14" stroke="#e2c68c"/>
+            <path d="M182 92v28M168 106h28" stroke="#e2c68c" stroke-width="1"/><path d="M204 94v24M210 94v24" stroke="#e2c68c" stroke-width="1"/>
+            <path d="M166 128v8M212 128v8"/>
+            <path d="M140 110h20" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <div class="c">
+          <span class="caps">Maison individuelle</span>
+          <h3>Pompe à chaleur</h3>
+          <p>Une alternative au fioul ou au gaz, à étudier selon l'isolation et les émetteurs ; aides possibles selon éligibilité.</p>
+          <div class="prix"><span class="gr">Tarif</span><b>sur devis</b></div>
+        </div>
+      </article>
+      <article class="sol rv d2">
+        <div class="ill" aria-hidden="true">
+          <svg viewBox="0 0 240 150" fill="none" stroke="#c9a45c" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M20 140h200" stroke-opacity=".5"/>
+            <rect x="40" y="20" width="90" height="120"/>
+            <path d="M40 60h90M40 100h90" stroke-opacity=".5"/>
+            <rect x="52" y="30" width="18" height="20" stroke-opacity=".6"/><rect x="100" y="30" width="18" height="20" stroke-opacity=".6"/>
+            <rect x="52" y="70" width="18" height="20" stroke-opacity=".6"/><rect x="100" y="70" width="18" height="20" stroke-opacity=".6"/>
+            <rect x="150" y="40" width="64" height="20" rx="4" stroke="#e2c68c"/><path d="M158 52h48" stroke="#e2c68c"/>
+            <path d="M166 68l-3 8M182 68v10M198 68l3 8" stroke="#e2c68c" stroke-linecap="round"/>
+            <rect x="168" y="94" width="30" height="44" rx="12" stroke="#e2c68c"/>
+          </svg>
+        </div>
+        <div class="c">
+          <span class="caps">Appartement · maison</span>
+          <h3>Clim et eau chaude</h3>
+          <p>Climatisation réversible et chauffe-eau thermodynamique pour gagner en confort, été comme hiver.</p>
+          <div class="prix"><span class="gr">Tarif</span><b>sur devis</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="avis">
+  <div class="wrap">
+    <div class="avis coins rv">
+      <span class="guil" aria-hidden="true">“</span>
+      <span class="caps">Chapitre VI</span>
+      <h2>Vos avis comptent</h2>
+      <svg class="orn" style="margin:0 auto 26px" viewBox="0 0 120 14" fill="none" stroke="#c9a45c"><path d="M0 7h46M74 7h46"/><path d="M60 1l6 6-6 6-6-6z"/></svg>
+      <p>AERM CFC est intervenu chez vous à Mulhouse ou dans le Sud-Alsace ? Votre retour aide d'autres particuliers à choisir leur chauffagiste en confiance. Prenez une minute pour partager votre expérience sur Google.</p>
+      <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=AERM+CFC+Mulhouse" target="_blank" rel="noopener">Laisser un avis sur Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre VII</span>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq rv">
+      <div class="q"><button aria-expanded="false"><span class="r">i.</span><span class="t">Faut-il remplacer ma chaudière ou passer à une pompe à chaleur ?</span><span class="pl"></span></button><div class="rep"><div><p>Tout dépend de votre logement, de son isolation, de vos radiateurs et de l'énergie disponible. Une visite permet de comparer les options et de vous proposer la plus adaptée.</p></div></div></div>
+      <div class="q"><button aria-expanded="false"><span class="r">ii.</span><span class="t">Puis-je bénéficier d'aides comme MaPrimeRénov' ?</span><span class="pl"></span></button><div class="rep"><div><p>Certaines aides publiques peuvent financer une partie des travaux, selon votre éligibilité, vos revenus et le type d'équipement. Les conditions évoluent régulièrement : renseignez-vous sur France Rénov' avant de signer un devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false"><span class="r">iii.</span><span class="t">Intervenez-vous pour un dépannage de chauffage ?</span><span class="pl"></span></button><div class="rep"><div><p>Oui, AERM CFC intervient en dépannage chauffage à Mulhouse et dans le Sud-Alsace. Appelez pour décrire le problème et convenir d'un rendez-vous.</p></div></div></div>
+      <div class="q"><button aria-expanded="false"><span class="r">iv.</span><span class="t">Le devis est-il gratuit ?</span><span class="pl"></span></button><div class="rep"><div><p>Oui, le devis est gratuit et sans engagement. Il est établi après étude de votre besoin pour être précis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false"><span class="r">v.</span><span class="t">Un chauffe-eau thermodynamique convient-il à mon logement ?</span><span class="pl"></span></button><div class="rep"><div><p>Il demande un emplacement adapté (volume, ventilation) et se dimensionne selon le nombre de personnes du foyer. Nous vérifions ces points lors de la visite.</p></div></div></div>
+      <div class="q"><button aria-expanded="false"><span class="r">vi.</span><span class="t">Quelle zone couvrez-vous ?</span><span class="pl"></span></button><div class="rep"><div><p>L'entreprise est basée à Mulhouse et intervient dans l'agglomération et le Sud-Alsace. Contactez-nous pour confirmer pour votre commune.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="infos">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="romain caps">Chapitre VIII</span>
+      <h2>Horaires et secteur</h2>
+    </div>
+    <div class="infos">
+      <div class="bloc coins rv">
+        <span class="caps">Horaires</span>
+        <h3>Sur rendez-vous</h3>
+        <ul class="horaires" id="horaires">
+          <li data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+          <li data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+          <li data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+          <li data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+          <li data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+          <li data-j="6"><span>Samedi</span><span>Fermé</span></li>
+          <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+        <p class="note">Horaires indicatifs · à confirmer</p>
+      </div>
+      <div class="bloc coins rv d1">
+        <span class="caps">Zone d'intervention</span>
+        <h3>Mulhouse et Sud-Alsace</h3>
+        <div class="zone-carte" aria-hidden="true">
+          <svg viewBox="0 0 400 170" fill="none">
+            <rect width="400" height="170" fill="#161a1f"/>
+            <path d="M330 0c-10 40 10 70 0 100s10 50 0 70" stroke="#3a4552" stroke-width="6"/>
+            <path d="M0 140c60-20 120 10 180-10s120-30 220-10" stroke="#252c34" stroke-width="2"/>
+            <circle cx="170" cy="85" r="62" stroke="#c9a45c" stroke-opacity=".35" stroke-dasharray="3 6"/>
+            <circle cx="170" cy="85" r="34" stroke="#c9a45c" stroke-opacity=".5"/>
+            <circle cx="170" cy="85" r="6" fill="#c9a45c"/>
+            <text x="212" y="78" font-family="Cormorant Garamond,serif" font-size="18" fill="#f2ece0">Mulhouse</text>
+            <text x="342" y="40" font-family="Lato,sans-serif" font-size="9" fill="#9a948a" letter-spacing="2">RHIN</text>
+            <text x="20" y="28" font-family="Lato,sans-serif" font-size="9" fill="#9a948a" letter-spacing="2">HAUT-RHIN · 68</text>
+          </svg>
+        </div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Mulhouse (68) · intervention à domicile</span></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+33389664484">03 89 66 44 84</a></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg><a href="mailto:aermcfc@gmail.com">aermcfc@gmail.com</a></div>
+        <a class="btn btn-ligne" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&amp;query=AERM+CFC+Mulhouse" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap contact">
+    <div class="gauche rv">
+      <span class="caps">Chapitre IX · Contact</span>
+      <h2>Parlons de <em class="or">votre projet</em></h2>
+      <p>Installation, remplacement ou dépannage : décrivez votre besoin, nous revenons vers vous pour un devis gratuit.</p>
+      <a class="tel" href="tel:+33389664484">03 89 66 44 84</a>
+      <p class="gr"><a href="mailto:aermcfc@gmail.com" style="text-decoration:none">aermcfc@gmail.com</a></p>
+    </div>
+    <form class="form coins rv d1" id="form" novalidate>
+      <div class="ch">
+        <label><span>Nom</span><input type="text" name="nom" autocomplete="name"></label>
+        <label><span>Téléphone</span><input type="tel" name="tel" autocomplete="tel"></label>
+      </div>
+      <div class="ch">
+        <label><span>Email</span><input type="email" name="email" autocomplete="email"></label>
+        <label><span>Commune</span><input type="text" name="commune"></label>
+      </div>
+      <label><span>Votre besoin</span>
+        <select name="besoin">
+          <option>Chaudière gaz</option>
+          <option>Chaudière fioul</option>
+          <option>Dépannage chauffage</option>
+          <option>Pompe à chaleur</option>
+          <option>Climatisation</option>
+          <option>Chauffe-eau thermodynamique</option>
+          <option>Autre</option>
+        </select>
+      </label>
+      <label><span>Message</span><textarea name="message"></textarea></label>
+      <button class="btn btn-or" type="submit">Envoyer la demande</button>
+      <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a href="#accueil" class="logo" style="margin-bottom:18px"><span class="mono">A</span><span><b>AERM CFC</b><small>Chauffage · Mulhouse</small></span></a>
+        <p style="margin-top:18px">Chaudières gaz et fioul, dépannage chauffage, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Mulhouse et dans le Sud-Alsace.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li>Mulhouse (68)</li>
+          <li><a href="tel:+33389664484">03 89 66 44 84</a></li>
+          <li><a href="mailto:aermcfc@gmail.com">aermcfc@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Lun – ven : sur rendez-vous</li>
+          <li>Sam – dim : fermé</li>
+          <li><i>Indicatifs, à confirmer</i></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Devis gratuit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bas"><span>© <span id="annee">2026</span> AERM CFC · Mulhouse</span><span>Tarifs sur devis</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33389664484" aria-label="Appeler AERM CFC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu')})});
+  document.querySelectorAll('.q button').forEach(function(q){q.addEventListener('click',function(){var p=q.parentNode,o=p.classList.toggle('ouvert');q.setAttribute('aria-expanded',o)})});
+  var j=new Date().getDay(),li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>

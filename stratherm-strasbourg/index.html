@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratherm – Pompes à chaleur et climatisation à Strasbourg</title>
+<meta name="description" content="Stratherm, installateur qualifié QUALIPAC Chauffage et QUALIPAC CET à Strasbourg et dans l'Eurométropole : pompes à chaleur air/eau, climatisation réversible, chauffe-eau thermodynamique et systèmes de chauffage. Devis gratuit.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0b1426;
+  --ardoise:#1f3352;
+  --gres:#d9826f;
+  --rose:#f5c2b3;
+  --cyan:#7fe3ff;
+  --blanc:#f5f7ff;
+  --texte:#c9d2e6;          /* texte secondaire sur nuit */
+  --verre:rgba(255,255,255,.06);
+  --verre-fort:rgba(255,255,255,.1);
+  --bord:rgba(245,247,255,.14);
+  --titre:"Urbanist",system-ui,sans-serif;
+  --corps:"Figtree",system-ui,sans-serif;
+  --larg:1200px;
+  --r:22px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--nuit);color:var(--blanc);font-family:var(--corps);font-size:1.0625rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{position:relative}
+body::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(60vw 50vw at 85% -10%,rgba(127,227,255,.14),transparent 60%),
+  radial-gradient(55vw 45vw at -10% 30%,rgba(217,130,111,.13),transparent 60%),
+  radial-gradient(70vw 60vw at 60% 110%,rgba(31,51,82,.9),transparent 70%),
+  linear-gradient(180deg,#0b1426 0%,#0e1a31 45%,#0b1426 100%)}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--titre);margin:0;line-height:1.05;letter-spacing:-.02em;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* flocons */
+.neige{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.neige i{position:absolute;top:-10px;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.35;animation:tombe linear infinite}
+@keyframes tombe{to{transform:translate3d(30px,105vh,0)}}
+
+/* verre */
+.verre{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid var(--bord);border-radius:var(--r);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 20px 50px -20px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08)}
+
+/* orbes */
+.orbe{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;z-index:-1}
+.orbe.c{background:rgba(127,227,255,.22)}
+.orbe.g{background:rgba(217,130,111,.25)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--titre);font-weight:700;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;letter-spacing:.005em}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gres{background:linear-gradient(135deg,#f0a08c,var(--gres));color:#1a0f0c;box-shadow:0 10px 30px -10px rgba(217,130,111,.7)}
+.btn-gres:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(217,130,111,.85)}
+.btn-verre{background:rgba(255,255,255,.07);color:var(--blanc);border-color:var(--bord);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-verre:hover{background:rgba(127,227,255,.12);border-color:rgba(127,227,255,.5);transform:translateY(-2px)}
+
+.surtitre{display:inline-flex;align-items:center;gap:10px;font-family:var(--titre);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+.surtitre::before{content:"";width:22px;height:1px;background:currentColor}
+.titre-s{font-size:clamp(2rem,4.2vw,3.2rem);max-width:18ch}
+.titre-s em{font-style:normal;background:linear-gradient(90deg,var(--rose),var(--gres));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{color:var(--texte);max-width:58ch;margin-top:16px}
+section{position:relative;padding:110px 0}
+main{overflow-x:clip}
+
+/* nav pilule */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:60;pointer-events:none}
+.nav .pilule{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px;padding:0 10px 0 20px;border-radius:999px;background:rgba(11,20,38,.55);border:1px solid var(--bord);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo svg{width:30px;height:30px}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px;align-items:center}
+.menu a{display:block;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:.95rem;font-weight:500;color:var(--texte);transition:background .2s,color .2s}
+.menu a:hover{background:rgba(255,255,255,.08);color:var(--blanc)}
+.menu .cta a{background:var(--blanc);color:var(--nuit);font-weight:700;margin-left:6px;display:flex;gap:8px;align-items:center}
+.menu .cta a:hover{background:var(--cyan);color:var(--nuit)}
+.menu .cta svg{width:16px;height:16px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--bord);background:rgba(255,255,255,.06);color:var(--blanc);cursor:pointer;align-items:center;justify-content:center}
+.burger b{width:18px;height:12px;position:relative;display:block}
+.burger b::before,.burger b::after,.burger b i{content:"";position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor;transition:transform .25s,top .25s,opacity .2s}
+.burger b::before{top:0}.burger b i{top:5px}.burger b::after{top:10px}
+.burger[aria-expanded="true"] b::before{top:5px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{top:5px;transform:rotate(-45deg)}
+.burger[aria-expanded="true"] b i{opacity:0}
+
+/* hero */
+.hero{padding:150px 0 90px;min-height:100vh;display:flex;align-items:center}
+.hero .grille{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.puce{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;font-size:.85rem;font-weight:500;color:var(--texte);margin-bottom:26px}
+.puce b{display:inline-flex;align-items:center;gap:6px;background:rgba(127,227,255,.15);color:var(--cyan);font-family:var(--titre);font-weight:700;padding:3px 10px;border-radius:999px;font-size:.78rem;letter-spacing:.04em}
+.puce b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.hero h1{font-size:clamp(2.7rem,6vw,5.2rem);font-weight:800;letter-spacing:-.035em;line-height:.98}
+.hero h1 .dg{background:linear-gradient(100deg,var(--rose) 10%,var(--gres) 55%,#f0a08c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .gl{background:linear-gradient(100deg,var(--blanc),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .chapo{font-size:1.15rem;color:var(--texte);max-width:50ch;margin:26px 0 34px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .infos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:.92rem;color:var(--texte)}
+.hero .infos span{display:flex;align-items:center;gap:8px}
+.hero .infos svg{width:16px;height:16px;color:var(--cyan)}
+.scene{position:relative;aspect-ratio:1/1.02;width:100%;max-width:560px;justify-self:end}
+.scene>svg{width:100%;height:100%}
+.carte-q{position:absolute;left:-4%;bottom:12%;padding:16px 18px;width:220px;animation:flotte 6s ease-in-out infinite}
+.carte-q .t{display:flex;align-items:center;gap:10px;font-family:var(--titre);font-weight:800;font-size:1.05rem;letter-spacing:.06em}
+.carte-q .t svg{width:30px;height:30px}
+.carte-q ul{list-style:none;margin:10px 0 0;padding:0;font-size:.82rem;color:var(--texte)}
+.carte-q li{display:flex;gap:8px;align-items:center;padding:3px 0}
+.carte-q li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan)}
+.carte-t{position:absolute;right:2%;top:14%;padding:12px 16px;display:flex;align-items:center;gap:12px;animation:flotte 7s ease-in-out infinite reverse}
+.carte-t .v{font-family:var(--titre);font-weight:800;font-size:1.5rem;color:var(--rose);line-height:1}
+.carte-t small{display:block;font-size:.75rem;color:var(--texte);line-height:1.3}
+@keyframes flotte{50%{transform:translateY(-12px)}}
+.ventilo{transform-origin:center;transform-box:fill-box;animation:tourne 2.4s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.souffle path{stroke-dasharray:6 10;animation:souffle 2s linear infinite}
+@keyframes souffle{to{stroke-dashoffset:-32}}
+.lueur{animation:lueur 4s ease-in-out infinite}
+@keyframes lueur{50%{opacity:.45}}
+
+/* bandeau confiance */
+.confiance{padding:0 0 30px}
+.confiance .bande{display:grid;grid-template-columns:repeat(4,1fr);padding:8px}
+.confiance .it{display:flex;gap:14px;align-items:center;padding:18px 20px;border-right:1px solid var(--bord)}
+.confiance .it:last-child{border:0}
+.confiance .ic{width:44px;height:44px;flex:none;border-radius:14px;display:grid;place-items:center;background:rgba(127,227,255,.1);color:var(--cyan)}
+.confiance .ic.g{background:rgba(217,130,111,.15);color:var(--rose)}
+.confiance .ic svg{width:22px;height:22px}
+.confiance b{display:block;font-family:var(--titre);font-size:1.02rem;line-height:1.2}
+.confiance small{color:var(--texte);font-size:.85rem;line-height:1.35;display:block}
+
+/* services */
+.entete{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:50px;flex-wrap:wrap}
+.entete>*{flex:1 1 380px}
+.entete .intro{max-width:52ch;margin:0}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.serv{padding:28px 26px 26px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.serv::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-60px;top:-60px;background:radial-gradient(circle,rgba(127,227,255,.25),transparent 70%);opacity:0;transition:opacity .35s}
+.serv:hover{transform:translateY(-6px);border-color:rgba(127,227,255,.4)}
+.serv:hover::after{opacity:1}
+.serv .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(127,227,255,.16),rgba(217,130,111,.12));border:1px solid var(--bord);margin-bottom:22px}
+.serv .ic svg{width:36px;height:36px}
+.serv h3{font-size:1.3rem;margin-bottom:8px}
+.serv p{color:var(--texte);font-size:.97rem;margin:0}
+.serv .tag{display:inline-block;margin-top:16px;font-size:.75rem;font-weight:600;letter-spacing:.05em;color:var(--cyan);border:1px solid rgba(127,227,255,.35);border-radius:999px;padding:3px 10px}
+
+/* atouts */
+.atouts .grille{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start}
+.atouts .liste{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.atout{padding:26px}
+.atout .n{font-family:var(--titre);font-weight:800;font-size:.85rem;color:var(--nuit);background:var(--rose);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;margin-bottom:16px}
+.atout h3{font-size:1.15rem;margin-bottom:6px}
+.atout p{color:var(--texte);font-size:.95rem;margin:0}
+
+/* étapes */
+.etapes ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.etapes ol::before{content:"";position:absolute;top:34px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(127,227,255,.5),rgba(217,130,111,.5),transparent)}
+.etape{position:relative;text-align:left}
+.etape .rond{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-family:var(--titre);font-weight:800;font-size:1.4rem;margin-bottom:22px;position:relative;z-index:1;background:rgba(11,20,38,.75)}
+.etape:nth-child(odd) .rond{color:var(--cyan)}
+.etape:nth-child(even) .rond{color:var(--rose)}
+.etape h3{font-size:1.2rem;margin-bottom:8px}
+.etape p{color:var(--texte);font-size:.95rem;margin:0}
+
+/* à propos */
+.apropos .boite{display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden}
+.apropos .txt{padding:56px}
+.apropos .txt p{color:var(--texte)}
+.apropos .txt p strong{color:var(--blanc)}
+.apropos .vis{position:relative;background:linear-gradient(160deg,rgba(31,51,82,.8),rgba(11,20,38,.6));border-left:1px solid var(--bord);min-height:360px;display:grid;place-items:center;padding:30px}
+.apropos .vis svg{width:100%;max-width:520px}
+.fiche{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px}
+.fiche li{display:flex;gap:12px;align-items:baseline;font-size:.95rem;border-top:1px solid var(--bord);padding-top:10px}
+.fiche li span{flex:0 0 120px;color:var(--cyan);font-family:var(--titre);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* solutions */
+.solutions .cartes{grid-template-columns:repeat(4,1fr)}
+.sol{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s}
+.sol:hover{transform:translateY(-6px)}
+.sol .ill{height:170px;background:linear-gradient(180deg,rgba(31,51,82,.9),rgba(11,20,38,.4));border-bottom:1px solid var(--bord);display:grid;place-items:center;overflow:hidden}
+.sol .ill svg{width:100%;height:100%}
+.sol .c{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.sol small{font-family:var(--titre);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--rose)}
+.sol h3{font-size:1.18rem;margin:6px 0 8px}
+.sol p{color:var(--texte);font-size:.93rem;margin:0 0 16px}
+.sol .prix{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:.85rem;border-top:1px dashed var(--bord);padding-top:12px;color:var(--texte)}
+.sol .prix b{color:var(--cyan);font-family:var(--titre)}
+
+/* avis */
+.avis .boite{padding:60px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;position:relative;overflow:hidden}
+.avis .etoiles{display:flex;gap:6px}
+.avis .etoiles svg{width:34px;height:34px}
+.avis h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:10px}
+.avis p{color:var(--texte);margin:0;max-width:56ch}
+
+/* faq */
+.faq .grille{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq details{margin-bottom:12px;padding:0;overflow:hidden;transition:border-color .25s}
+.faq details[open]{border-color:rgba(127,227,255,.4)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:var(--titre);font-weight:700;font-size:1.08rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--bord);position:relative;transition:transform .3s,background .3s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.faq details[open] summary i{background:rgba(127,227,255,.15);color:var(--cyan)}
+.faq details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.faq details p{padding:0 22px 20px;margin:0;color:var(--texte);font-size:.97rem}
+.faq summary:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
+
+/* horaires + contact */
+.infos-pratiques .grille{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.bloc{padding:34px}
+.bloc h3{font-size:1.4rem;margin-bottom:6px}
+.bloc .sous{color:var(--texte);font-size:.9rem;margin-bottom:20px}
+#horaires{list-style:none;margin:0;padding:0}
+#horaires li{display:flex;justify-content:space-between;padding:11px 14px;border-radius:12px;font-size:.97rem;color:var(--texte)}
+#horaires li:nth-child(odd){background:rgba(255,255,255,.03)}
+#horaires li b{color:var(--blanc);font-weight:600}
+#horaires li.auj{background:rgba(127,227,255,.12);color:var(--blanc);box-shadow:inset 0 0 0 1px rgba(127,227,255,.4)}
+#horaires li.auj b::after{content:"Aujourd'hui";margin-left:10px;font-size:.7rem;font-weight:700;color:var(--nuit);background:var(--cyan);padding:2px 8px;border-radius:999px;vertical-align:2px}
+.note-h{font-size:.82rem;color:var(--texte);margin-top:14px;display:flex;gap:8px;align-items:center}
+.note-h::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+.zone-carte{margin:6px 0 22px;border-radius:16px;overflow:hidden;border:1px solid var(--bord);background:rgba(11,20,38,.5)}
+.zone-carte svg{width:100%;height:auto}
+.coord{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:12px}
+.coord li{display:flex;gap:12px;align-items:center;font-size:.98rem}
+.coord svg{width:20px;height:20px;color:var(--cyan);flex:none}
+.coord a{text-decoration:none;border-bottom:1px solid rgba(127,227,255,.35)}
+.coord a:hover{color:var(--cyan)}
+
+.contact .boite{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;overflow:hidden}
+.contact .gauche{padding:52px;background:linear-gradient(160deg,rgba(217,130,111,.18),rgba(31,51,82,.3));border-right:1px solid var(--bord)}
+.contact .gauche p{color:var(--texte)}
+.contact .gauche .btn{margin-top:10px;width:100%}
+form{padding:52px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.plein{grid-column:1/-1}
+.champ label{font-size:.85rem;font-weight:600;color:var(--texte)}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:.98rem;color:var(--blanc);background:rgba(255,255,255,.05);border:1px solid var(--bord);border-radius:14px;padding:13px 15px;transition:border-color .2s,background .2s}
+.champ select option{background:var(--ardoise);color:var(--blanc)}
+.champ textarea{min-height:120px;resize:vertical}
+.champ input::placeholder,.champ textarea::placeholder{color:#8e9ab3}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--cyan);background:rgba(127,227,255,.07)}
+.form-pied{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px;flex-wrap:wrap}
+.form-pied small{color:var(--texte);font-size:.82rem}
+.msg{display:none;margin:18px 0 0;padding:14px 16px;border-radius:14px;background:rgba(127,227,255,.12);border:1px solid rgba(127,227,255,.4);color:var(--blanc);font-weight:600}
+.msg.vu{display:block}
+
+/* pied */
+footer{padding:80px 0 30px;border-top:1px solid var(--bord);background:linear-gradient(180deg,rgba(31,51,82,.3),rgba(11,20,38,.9));margin-top:40px}
+footer .grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h4{font-family:var(--titre);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.95rem;color:var(--texte)}
+footer a{text-decoration:none}
+footer a:hover{color:var(--blanc)}
+footer .desc{color:var(--texte);font-size:.95rem;max-width:36ch;margin-top:16px}
+.pied-bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:56px;padding-top:22px;border-top:1px solid var(--bord);font-size:.85rem;color:var(--texte)}
+.demo{text-align:center;font-size:.8rem;padding:12px 16px;background:#070d1a;color:#a8b3cc;border-top:1px solid var(--bord)}
+
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;align-items:center;gap:8px;padding:0 20px;height:54px;border-radius:999px;background:linear-gradient(135deg,#f0a08c,var(--gres));color:#1a0f0c;font-family:var(--titre);font-weight:800;text-decoration:none;box-shadow:0 12px 30px -8px rgba(217,130,111,.8)}
+.flottant svg{width:20px;height:20px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+@media (max-width:1080px){
+  .cartes,.solutions .cartes{grid-template-columns:repeat(2,1fr)}
+  .confiance .bande{grid-template-columns:repeat(2,1fr)}
+  .confiance .it:nth-child(2){border-right:0}
+  .confiance .it:nth-child(-n+2){border-bottom:1px solid var(--bord)}
+  .atouts .grille,.faq .grille{grid-template-columns:1fr;gap:40px}
+  .etapes ol{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .etapes ol::before{display:none}
+  footer .grille{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .menu{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;padding:12px;border-radius:24px;background:rgba(11,20,38,.97);border:1px solid var(--bord);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.ouvert{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:14px 16px;font-size:1.05rem}
+  .menu .cta a{margin:6px 0 0;justify-content:center}
+  .nav .wrap{position:relative}
+  .burger{display:flex}
+  .hero{min-height:0;padding-top:120px}
+  .hero .grille{grid-template-columns:1fr}
+  .scene{justify-self:center;max-width:500px}
+  .apropos .boite,.contact .boite,.infos-pratiques .grille{grid-template-columns:1fr}
+  .apropos .vis{border-left:0;border-top:1px solid var(--bord)}
+  .contact .gauche{border-right:0;border-bottom:1px solid var(--bord)}
+  .avis .boite{grid-template-columns:1fr;text-align:left;gap:24px}
+}
+@media (max-width:640px){
+  section{padding:76px 0}
+  .cartes,.solutions .cartes,.atouts .liste,.etapes ol,.champs{grid-template-columns:1fr}
+  .confiance .bande{grid-template-columns:1fr}
+  .confiance .it{border-right:0;border-bottom:1px solid var(--bord)}
+  .confiance .it:last-child{border-bottom:0}
+  .hero .actions .btn{flex:1 1 100%}
+  .carte-q{left:0;bottom:4%;width:190px;padding:12px 14px}
+  .carte-t{display:none}
+  .apropos .txt,.contact .gauche,form,.avis .boite{padding:30px 22px}
+  .bloc{padding:26px 20px}
+  .apropos .vis{min-height:0;padding:24px 10px}
+  .fiche li{flex-direction:column;gap:2px}
+  .fiche li span{flex:none}
+  footer .grille{grid-template-columns:1fr}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  .neige{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="neige" aria-hidden="true" id="neige"></div>
+
+<!-- symboles réutilisables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGres" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5c2b3"/><stop offset=".45" stop-color="#d9826f"/><stop offset="1" stop-color="#8f4e43"/></linearGradient>
+    <linearGradient id="gGresS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8665a"/><stop offset=".5" stop-color="#d9826f"/><stop offset="1" stop-color="#a95a4e"/></linearGradient>
+    <linearGradient id="gCyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fe3ff"/><stop offset="1" stop-color="#f5c2b3"/></linearGradient>
+    <linearGradient id="gPac" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f7ff"/><stop offset="1" stop-color="#b9c4dc"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="pilule">
+      <a class="logo" href="#accueil" aria-label="Stratherm – accueil">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="url(#gCyan)" opacity=".18"/><path d="M16 4l3 9h-6z" fill="#d9826f"/><rect x="11" y="13" width="10" height="13" rx="1.5" fill="#d9826f"/><circle cx="16" cy="18" r="2.6" fill="#0b1426"/><path d="M6 26h20" stroke="#7fe3ff" stroke-width="2" stroke-linecap="round"/></svg>
+        Stratherm
+      </a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><b><i></i></b></button>
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#infos">Zone &amp; horaires</a></li>
+        <li class="cta"><a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg>Devis gratuit</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="orbe c" style="width:420px;height:420px;right:-120px;top:60px"></div>
+  <div class="orbe g" style="width:380px;height:380px;left:-160px;bottom:-60px"></div>
+  <div class="wrap grille">
+    <div class="rv">
+      <div class="puce verre"><b>QUALIPAC</b>Chauffage &amp; CET · Strasbourg et Eurométropole</div>
+      <h1>Quand l'hiver tombe sur <span class="dg">Strasbourg</span>, <span class="gl">gardez la chaleur.</span></h1>
+      <p class="chapo">Stratherm installe des pompes à chaleur air/eau, des climatisations réversibles et des chauffe-eau thermodynamiques dans les maisons et appartements de Strasbourg et de l'Eurométropole. Un confort stable sous la neige comme en plein été.</p>
+      <div class="actions">
+        <a class="btn btn-gres" href="tel:+33783249043"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler le 07 83 24 90 43</a>
+        <a class="btn btn-verre" href="#contact">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="infos">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Strasbourg (67)</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Devis gratuit</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Tarifs sur devis</span>
+      </div>
+    </div>
+
+    <div class="scene rv d2" aria-hidden="true">
+      <svg viewBox="0 0 560 570">
+        <defs>
+          <radialGradient id="halo" cx=".5" cy=".42" r=".55"><stop offset="0" stop-color="#7fe3ff" stop-opacity=".22"/><stop offset=".6" stop-color="#1f3352" stop-opacity=".2"/><stop offset="1" stop-color="#0b1426" stop-opacity="0"/></radialGradient>
+          <radialGradient id="solR" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#26406a"/><stop offset=".7" stop-color="#1a2b48" stop-opacity=".7"/><stop offset="1" stop-color="#0b1426" stop-opacity="0"/></radialGradient><linearGradient id="neigeL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f5f7ff" stop-opacity="0"/><stop offset=".5" stop-color="#f5f7ff" stop-opacity=".55"/><stop offset="1" stop-color="#f5f7ff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="vitre" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#f0a08c"/></linearGradient>
+        </defs>
+        <circle cx="280" cy="240" r="260" fill="url(#halo)"/>
+        <!-- lune -->
+        <circle cx="96" cy="96" r="24" fill="#f5f7ff" opacity=".9"/>
+        <circle cx="107" cy="88" r="22" fill="#132039"/>
+        <!-- étoiles -->
+        <g fill="#f5f7ff"><circle cx="300" cy="60" r="1.6" class="lueur"/><circle cx="150" cy="130" r="1.1"/><circle cx="500" cy="190" r="1.4" class="lueur"/><circle cx="60" cy="210" r="1"/><circle cx="380" cy="40" r="1.2"/><circle cx="520" cy="320" r="1"/></g>
+
+        <!-- cathédrale -->
+        <g>
+          <!-- maisons alentour -->
+          <path d="M20 470V380l40-34 40 34v90zM460 470v-80l36-30 36 30v80z" fill="#16243e"/>
+          <path d="M60 346l40 34H20z M496 360l36 30h-72z" fill="#1f3352"/>
+          <g fill="#ffd9a8" opacity=".75"><rect x="40" y="400" width="10" height="14" rx="2"/><rect x="68" y="400" width="10" height="14" rx="2"/><rect x="480" y="410" width="10" height="14" rx="2"/><rect x="505" y="410" width="10" height="14" rx="2"/></g>
+          <!-- nef arrière -->
+          <path d="M110 470V362l36-28h248l36 28v108z" fill="#8f4e43" opacity=".45"/><path d="M110 362l36-28h248l36 28" fill="none" stroke="#f5c2b3" stroke-opacity=".5" stroke-width="2"/>
+          <!-- façade -->
+          <path d="M160 470V196h220v274z" fill="url(#gGres)"/>
+          <!-- tour sud (droite) plate -->
+          <path d="M300 196V150h80v46z" fill="url(#gGres)"/>
+          <path d="M296 150h88v-8h-88z" fill="#f5c2b3"/>
+          <!-- tour nord + flèche -->
+          <path d="M160 196V150h80v46z" fill="url(#gGres)"/>
+          <path d="M156 150h88v-8h-88z" fill="#f5c2b3"/>
+          <path d="M172 142V92h56v50z" fill="url(#gGres)"/>
+          <path d="M168 92h64v-6h-64z" fill="#f5c2b3"/>
+          <path d="M178 86L200 6l22 80z" fill="url(#gGres)"/>
+          <g stroke="#8f4e43" stroke-width="1.2" opacity=".7"><path d="M185 70h30M188 56h24M191 42h18M194 28h12"/></g>
+          <path d="M200 6v-10" stroke="#f5c2b3" stroke-width="2"/>
+          <!-- tourelles d'escalier -->
+          <g fill="#c06e5e"><rect x="174" y="98" width="6" height="44"/><rect x="220" y="98" width="6" height="44"/></g>
+          <!-- dentelle verticale façade -->
+          <g stroke="#8f4e43" stroke-width="1.4" opacity=".55">
+            <path d="M176 200v260M196 200v260M344 200v260M364 200v260M176 152v38M196 152v38M216 152v38M324 152v38M344 152v38M364 152v38M186 100v38M200 100v38M214 100v38"/>
+          </g>
+          <!-- rosace -->
+          <circle cx="270" cy="262" r="44" fill="#8f4e43"/>
+          <circle cx="270" cy="262" r="38" fill="url(#vitre)" class="lueur"/>
+          <g stroke="#8f4e43" stroke-width="2.4" fill="none">
+            <circle cx="270" cy="262" r="14"/>
+            <path d="M270 224v76M232 262h76M243 235l54 54M297 235l-54 54"/>
+          </g>
+          <!-- galerie -->
+          <path d="M160 320h220v10H160z" fill="#f5c2b3" opacity=".7"/>
+          <g fill="#8f4e43"><rect x="216" y="338" width="10" height="34" rx="5"/><rect x="236" y="338" width="10" height="34" rx="5"/><rect x="256" y="338" width="10" height="34" rx="5"/><rect x="276" y="338" width="10" height="34" rx="5"/><rect x="296" y="338" width="10" height="34" rx="5"/><rect x="316" y="338" width="10" height="34" rx="5"/></g>
+          <!-- portail -->
+          <path d="M238 470v-56a32 32 0 0 1 64 0v56z" fill="#5d3029"/>
+          <path d="M246 470v-52a24 24 0 0 1 48 0v52z" fill="url(#vitre)" opacity=".55"/>
+          <path d="M270 400l-18-18h36z" fill="#f5c2b3" opacity=".8"/>
+          <path d="M180 470v-36a14 14 0 0 1 28 0v36zM332 470v-36a14 14 0 0 1 28 0v36z" fill="#5d3029"/>
+          <!-- fenêtres de tour -->
+          <g fill="#5d3029"><path d="M184 190v-26a8 8 0 0 1 16 0v26zM206 190v-26a8 8 0 0 1 16 0v26zM318 190v-26a8 8 0 0 1 16 0v26zM340 190v-26a8 8 0 0 1 16 0v26zM190 136v-26a6 6 0 0 1 12 0v26zM204 136v-26a6 6 0 0 1 12 0v26z"/></g>
+          <!-- neige sur les corniches -->
+          <g fill="#f5f7ff" opacity=".85"><path d="M156 142h88v-3c-20-4-60-4-88 0z"/><path d="M296 142h88v-3c-20-4-60-4-88 0z"/><path d="M168 86h64v-3c-14-3-46-3-64 0z"/></g>
+        </g>
+
+        <!-- sol enneigé -->
+        <ellipse cx="280" cy="500" rx="300" ry="64" fill="url(#solR)"/>
+        <path d="M40 470c80-12 160-16 240-12s160 8 240 14" stroke="url(#neigeL)" stroke-width="2.5" fill="none"/>
+
+        <!-- unité extérieure PAC -->
+        <g transform="translate(316 400)">
+          <ellipse cx="100" cy="132" rx="118" ry="12" fill="#000" opacity=".35"/>
+          <rect x="0" y="0" width="200" height="128" rx="14" fill="url(#gPac)"/>
+          <rect x="0" y="0" width="200" height="128" rx="14" fill="none" stroke="#fff" stroke-opacity=".7"/>
+          <rect x="10" y="10" width="112" height="108" rx="10" fill="#d7deec"/>
+          <circle cx="66" cy="64" r="44" fill="#1f3352"/>
+          <circle cx="66" cy="64" r="44" fill="none" stroke="#9aa8c4" stroke-width="2"/>
+          <g class="ventilo"><path d="M66 64c-2-22 8-34 20-34-4 12-10 24-20 34zM66 64c22-2 34 8 34 20-12-4-24-10-34-20zM66 64c2 22-8 34-20 34 4-12 10-24 20-34zM66 64c-22 2-34-8-34-20 12 4 24 10 34 20z" fill="#7fe3ff" opacity=".9"/><circle cx="66" cy="64" r="6" fill="#f5f7ff"/></g>
+          <g stroke="#9aa8c4" stroke-width="1.2" opacity=".8"><path d="M24 30h84M20 44h92M18 58h96M18 72h96M20 86h92M24 100h84"/></g>
+          <g stroke="#9aa8c4" stroke-width="2"><path d="M136 22h50M136 32h50M136 42h50M136 52h50M136 62h50M136 72h50"/></g>
+          <rect x="138" y="88" width="46" height="22" rx="5" fill="#1f3352"/>
+          <circle cx="150" cy="99" r="3.5" fill="#7fe3ff" class="lueur"/>
+          <text x="160" y="103" font-family="Urbanist,sans-serif" font-size="10" font-weight="700" fill="#f5f7ff">A/E</text>
+          <path d="M14 128v10M186 128v10" stroke="#8a96b0" stroke-width="5" stroke-linecap="round"/>
+          <path d="M0 -2h200" stroke="#f5f7ff" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="carte-q verre">
+        <div class="t"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="url(#gCyan)" stroke-width="2"/><path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#7fe3ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>QUALIPAC</div>
+        <ul><li>Chauffage</li><li>CET · chauffe-eau thermo.</li></ul>
+      </div>
+      <div class="carte-t verre">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7fe3ff" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M4 6l16 12M20 6L4 18M9 3l3 3 3-3M9 21l3-3 3 3"/></svg>
+        <div><span class="v">Dehors</span><small>froid d'hiver<br>dedans, au chaud</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<div class="confiance">
+  <div class="wrap">
+    <div class="bande verre rv">
+      <div class="it"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg></div><div><b>QUALIPAC Chauffage</b><small>Qualification RGE pompes à chaleur</small></div></div>
+      <div class="it"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg></div><div><b>QUALIPAC CET</b><small>Qualification RGE chauffe-eau thermo.</small></div></div>
+      <div class="it"><div class="ic g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><b>Strasbourg (67)</b><small>et communes de l'Eurométropole</small></div></div>
+      <div class="it"><div class="ic g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><div><b>PAC · Clim · CET</b><small>et systèmes de chauffage</small></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="orbe c" style="width:300px;height:300px;left:40%;top:10%"></div>
+  <div class="wrap">
+    <div class="entete">
+      <div class="rv"><span class="surtitre">Nos services</span><h2 class="titre-s">Du chauffage à l'eau chaude, <em>une seule équipe</em>.</h2></div>
+      <p class="intro rv d1">Étude, installation et mise en service : Stratherm accompagne chaque projet de confort thermique, de la maison de quartier à l'appartement en ville.</p>
+    </div>
+    <div class="cartes">
+      <article class="serv verre rv">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="32" height="22" rx="3" stroke="#f5f7ff" stroke-width="2"/><circle cx="16" cy="20" r="7" stroke="#7fe3ff" stroke-width="2"/><path d="M16 13v14M9 20h14" stroke="#7fe3ff" stroke-width="1.6"/><path d="M27 14h5M27 18h5M27 22h5" stroke="#f5c2b3" stroke-width="2"/><path d="M8 31v3M32 31v3" stroke="#f5f7ff" stroke-width="2"/></svg></div>
+        <h3>Pompe à chaleur air/eau</h3>
+        <p>Elle capte les calories de l'air extérieur pour alimenter radiateurs ou plancher chauffant, même par temps froid.</p>
+        <span class="tag">QUALIPAC Chauffage</span>
+      </article>
+      <article class="serv verre rv d1">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="32" height="13" rx="3" stroke="#f5f7ff" stroke-width="2"/><path d="M9 17h22" stroke="#f5f7ff" stroke-width="1.6"/><path d="M12 26c0 3-2 3-2 6M20 26c0 3-2 3-2 6M28 26c0 3-2 3-2 6" stroke="#7fe3ff" stroke-width="2"/><circle cx="31" cy="12.5" r="1.4" fill="#f5c2b3"/></svg></div>
+        <h3>Climatisation réversible</h3>
+        <p>Fraîcheur pendant les étés strasbourgeois, appoint de chaleur à la mi-saison : un seul équipement pour les deux.</p>
+        <span class="tag">Chaud &amp; froid</span>
+      </article>
+      <article class="serv verre rv d2">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="4" width="16" height="32" rx="8" stroke="#f5f7ff" stroke-width="2"/><path d="M12 20h16" stroke="#f5f7ff" stroke-width="1.4"/><path d="M20 26c-2.5 0-3.5-2-3.5-3.3 0-2 3.5-5.7 3.5-5.7s3.5 3.7 3.5 5.7c0 1.3-1 3.3-3.5 3.3z" stroke="#7fe3ff" stroke-width="1.8"/><circle cx="20" cy="10" r="2.2" stroke="#f5c2b3" stroke-width="1.8"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Un ballon couplé à une petite pompe à chaleur produit l'eau chaude sanitaire en consommant moins d'électricité.</p>
+        <span class="tag">QUALIPAC CET</span>
+      </article>
+      <article class="serv verre rv">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30V14M12 30V14M18 30V14M24 30V14M30 30V14" stroke="#f5f7ff" stroke-width="2.4"/><path d="M4 14h30M4 30h30" stroke="#f5f7ff" stroke-width="2"/><path d="M34 18h3M34 26h3" stroke="#f5c2b3" stroke-width="2"/><path d="M10 9c0-2 2-2 2-4M18 9c0-2 2-2 2-4M26 9c0-2 2-2 2-4" stroke="#7fe3ff" stroke-width="1.8"/></svg></div>
+        <h3>Systèmes de chauffage</h3>
+        <p>Raccordement aux radiateurs existants, plancher chauffant, émetteurs basse température : un réseau pensé pour votre générateur.</p>
+        <span class="tag">Étude &amp; pose</span>
+      </article>
+      <article class="serv verre rv d1">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 34V18L20 7l14 11v16z" stroke="#f5f7ff" stroke-width="2"/><path d="M20 34v-8" stroke="#f5f7ff" stroke-width="2"/><path d="M13 21l3 3-3 3M27 21l-3 3 3 3" stroke="#7fe3ff" stroke-width="2"/><path d="M20 15v-3" stroke="#f5c2b3" stroke-width="2"/></svg></div>
+        <h3>Remplacement d'ancien chauffage</h3>
+        <p>Passage d'une chaudière vieillissante ou de convecteurs électriques à une pompe à chaleur, avec étude de faisabilité.</p>
+        <span class="tag">Rénovation</span>
+      </article>
+      <article class="serv verre rv d2">
+        <div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="14" stroke="#f5f7ff" stroke-width="2"/><path d="M20 11v9l6 4" stroke="#7fe3ff" stroke-width="2.2"/><path d="M31 8l3-3M9 8L6 5" stroke="#f5c2b3" stroke-width="2"/></svg></div>
+        <h3>Conseil &amp; mise en service</h3>
+        <p>Réglages, explication du fonctionnement et conseils d'utilisation pour profiter pleinement de votre installation.</p>
+        <span class="tag">Accompagnement</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ATOUTS -->
+<section class="atouts">
+  <div class="orbe g" style="width:340px;height:340px;right:-80px;top:20%"></div>
+  <div class="wrap grille">
+    <div class="rv">
+      <span class="surtitre">Pourquoi Stratherm</span>
+      <h2 class="titre-s">Des installations <em>pensées pour l'hiver alsacien</em>.</h2>
+      <p class="intro">Les hivers rhénans sont longs et humides : le choix et le dimensionnement de l'équipement comptent autant que sa pose. C'est là que l'expertise d'un installateur qualifié fait la différence.</p>
+      <a class="btn btn-verre" href="#contact" style="margin-top:12px">Parler de mon projet</a>
+    </div>
+    <div class="liste">
+      <div class="atout verre rv"><div class="n">01</div><h3>Doublement qualifié</h3><p>QUALIPAC Chauffage et QUALIPAC CET : deux qualifications RGE qui couvrent la pompe à chaleur et le chauffe-eau thermodynamique.</p></div>
+      <div class="atout verre rv d1"><div class="n">02</div><h3>Interlocuteur local</h3><p>Basé à Strasbourg, Stratherm intervient dans la ville et les communes de l'Eurométropole.</p></div>
+      <div class="atout verre rv d2"><div class="n">03</div><h3>Le bon équipement</h3><p>Pompe à chaleur, climatisation ou ballon thermodynamique : la solution est choisie selon votre logement, pas l'inverse.</p></div>
+      <div class="atout verre rv d3"><div class="n">04</div><h3>Devis clair et gratuit</h3><p>Une proposition détaillée, poste par poste, avant tout engagement de votre part.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ETAPES -->
+<section class="etapes" id="methode">
+  <div class="wrap">
+    <div class="entete">
+      <div class="rv"><span class="surtitre">Comment ça se passe</span><h2 class="titre-s">Quatre étapes, <em>zéro surprise</em>.</h2></div>
+    </div>
+    <ol>
+      <li class="etape rv"><div class="rond verre">1</div><h3>Premier échange</h3><p>Par téléphone ou via le formulaire : vous décrivez votre logement et votre chauffage actuel.</p></li>
+      <li class="etape rv d1"><div class="rond verre">2</div><h3>Visite technique</h3><p>Relevés sur place : surfaces, isolation, émetteurs, emplacement de l'unité extérieure.</p></li>
+      <li class="etape rv d2"><div class="rond verre">3</div><h3>Devis détaillé</h3><p>Une proposition chiffrée et gratuite, avec les démarches d'aides possibles selon éligibilité.</p></li>
+      <li class="etape rv d3"><div class="rond verre">4</div><h3>Pose &amp; mise en service</h3><p>Installation, réglages et prise en main expliquée avant le départ de l'équipe.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- A PROPOS -->
+<section class="apropos" id="apropos">
+  <div class="wrap">
+    <div class="boite verre rv">
+      <div class="txt">
+        <span class="surtitre">À propos</span>
+        <h2 class="titre-s" style="margin-bottom:22px">Stratherm, la chaleur <em>made in Strasbourg</em>.</h2>
+        <p><strong>Stratherm est une entreprise strasbourgeoise spécialisée dans les pompes à chaleur air/eau, la climatisation réversible et le chauffe-eau thermodynamique.</strong></p>
+        <p>Titulaire des qualifications QUALIPAC Chauffage et QUALIPAC CET, elle réalise aussi l'installation de systèmes de chauffage pour les particuliers de Strasbourg et de l'Eurométropole.</p>
+        <p>Son objectif : proposer à chaque foyer une solution de chauffage et d'eau chaude adaptée, durable et bien dimensionnée.</p>
+        <ul class="fiche">
+          <li><span>Secteur</span>Strasbourg et Eurométropole (67)</li>
+          <li><span>Qualifications</span>QUALIPAC Chauffage · QUALIPAC CET</li>
+          <li><span>Contact</span><div><a href="tel:+33783249043">07 83 24 90 43</a> · <a href="mailto:stratherm@outlook.fr">stratherm@outlook.fr</a></div></li>
+        </ul>
+      </div>
+      <div class="vis" aria-hidden="true">
+        <svg viewBox="0 0 420 300">
+          <defs><linearGradient id="eau" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7fe3ff"/><stop offset="1" stop-color="#d9826f"/></linearGradient></defs>
+          <!-- schéma : air → PAC → maison -->
+          <g fill="none" stroke="#f5f7ff" stroke-opacity=".25" stroke-dasharray="3 6"><path d="M20 150h380"/></g>
+          <g transform="translate(20 110)"><circle cx="40" cy="40" r="38" fill="rgba(127,227,255,.08)" stroke="#7fe3ff" stroke-opacity=".5"/><g stroke="#7fe3ff" stroke-width="2" stroke-linecap="round" fill="none"><path d="M18 30h30a8 8 0 1 0-8-8"/><path d="M18 42h40a8 8 0 1 1-8 8"/></g></g>
+          <text x="60" y="210" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" fill="#c9d2e6">Air extérieur</text>
+          <g transform="translate(150 105)"><rect width="110" height="90" rx="12" fill="#f5f7ff"/><circle cx="42" cy="45" r="30" fill="#1f3352"/><g class="ventilo"><path d="M42 45c-1-15 5-23 14-23-3 8-7 16-14 23zM42 45c15-1 23 5 23 14-8-3-16-7-23-14zM42 45c1 15-5 23-14 23 3-8 7-16 14-23zM42 45c-15 1-23-5-23-14 8 3 16 7 23 14z" fill="#7fe3ff"/></g><path d="M82 22h18M82 32h18M82 42h18M82 52h18" stroke="#9aa8c4" stroke-width="2"/></g>
+          <text x="205" y="220" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" fill="#c9d2e6">Pompe à chaleur</text>
+          <g transform="translate(300 88)"><path d="M10 112V48L50 14l40 34v64z" fill="rgba(217,130,111,.15)" stroke="#d9826f" stroke-width="2"/><path d="M28 112V76h24v36" fill="none" stroke="#d9826f" stroke-width="2"/><rect x="60" y="62" width="18" height="18" rx="2" fill="#ffd9a8" opacity=".8"/><path d="M26 96h48M26 104h48" stroke="#f5c2b3" stroke-width="2" opacity="0"/></g>
+          <text x="350" y="220" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" fill="#c9d2e6">Votre logement</text>
+          <g class="souffle" fill="none" stroke="url(#eau)" stroke-width="3" stroke-linecap="round"><path d="M100 150h46"/><path d="M262 150h40"/></g>
+          <text x="210" y="60" text-anchor="middle" font-family="Urbanist,sans-serif" font-size="20" font-weight="800" fill="#f5f7ff">Calories de l'air → chaleur</text>
+          <text x="210" y="82" text-anchor="middle" font-family="Figtree,sans-serif" font-size="13" fill="#c9d2e6">Principe d'une pompe à chaleur air/eau</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions" id="solutions">
+  <div class="orbe c" style="width:320px;height:320px;left:-100px;top:30%"></div>
+  <div class="wrap">
+    <div class="entete">
+      <div class="rv"><span class="surtitre">Quelle solution pour quel logement</span><h2 class="titre-s">Votre habitat, <em>votre équipement</em>.</h2></div>
+      <p class="intro rv d1">Quelques repères pour s'orienter. Chaque projet reste étudié au cas par cas lors de la visite technique — tous les tarifs sont établis sur devis.</p>
+    </div>
+    <div class="cartes">
+      <article class="sol verre rv">
+        <div class="ill" aria-hidden="true"><svg viewBox="0 0 260 170"><path d="M40 150V80l60-46 60 46v70z" fill="#d9826f" opacity=".9"/><path d="M30 84l70-56 70 56" fill="none" stroke="#f5c2b3" stroke-width="5" stroke-linejoin="round"/><g stroke="#5d3029" stroke-width="3"><path d="M40 108h120M70 84v66M130 84v66M40 108l30 42M130 108l30 42"/></g><rect x="88" y="118" width="24" height="32" fill="#5d3029"/><rect x="178" y="118" width="54" height="34" rx="5" fill="#f5f7ff"/><circle cx="196" cy="135" r="12" fill="#1f3352"/><g class="ventilo"><path d="M196 135l0-10 4 6zM196 135l10 0-6 4zM196 135l0 10-4-6zM196 135l-10 0 6-4z" fill="#7fe3ff"/></g><path d="M0 152h260" stroke="#f5f7ff" stroke-opacity=".4" stroke-width="2"/></svg></div>
+        <div class="c"><small>Maison individuelle</small><h3>PAC air/eau</h3><p>Pour remplacer une chaudière et alimenter radiateurs ou plancher chauffant.</p><div class="prix">Tarif <b>sur devis</b></div></div>
+      </article>
+      <article class="sol verre rv d1">
+        <div class="ill" aria-hidden="true"><svg viewBox="0 0 260 170"><rect x="70" y="20" width="120" height="132" fill="#1f3352" stroke="#f5f7ff" stroke-opacity=".3"/><g fill="#ffd9a8" opacity=".85"><rect x="84" y="34" width="22" height="20"/><rect x="119" y="34" width="22" height="20"/><rect x="154" y="34" width="22" height="20"/><rect x="84" y="70" width="22" height="20"/><rect x="154" y="70" width="22" height="20"/><rect x="84" y="106" width="22" height="20"/><rect x="119" y="106" width="22" height="20"/></g><rect x="114" y="66" width="32" height="28" fill="#0b1426" stroke="#7fe3ff" stroke-width="2"/><rect x="118" y="70" width="24" height="9" rx="2" fill="#f5f7ff"/><g stroke="#7fe3ff" stroke-width="1.6" stroke-linecap="round" fill="none" class="souffle"><path d="M122 84c0 4-2 4-2 8M130 84c0 4-2 4-2 8M138 84c0 4-2 4-2 8"/></g><path d="M0 152h260" stroke="#f5f7ff" stroke-opacity=".4" stroke-width="2"/></svg></div>
+        <div class="c"><small>Appartement</small><h3>Climatisation réversible</h3><p>Rafraîchir l'été et chauffer à la mi-saison, pièce par pièce.</p><div class="prix">Tarif <b>sur devis</b></div></div>
+      </article>
+      <article class="sol verre rv d2">
+        <div class="ill" aria-hidden="true"><svg viewBox="0 0 260 170"><rect x="104" y="18" width="52" height="128" rx="26" fill="#f5f7ff"/><rect x="104" y="18" width="52" height="40" rx="20" fill="#d7deec"/><circle cx="130" cy="38" r="10" fill="#1f3352"/><g class="ventilo"><path d="M130 38l0-7 3 4zM130 38l7 0-4 3zM130 38l0 7-3-4zM130 38l-7 0 4-3z" fill="#7fe3ff"/></g><rect x="114" y="70" width="32" height="64" rx="10" fill="url(#eau2)"/><defs><linearGradient id="eau2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d9826f"/><stop offset="1" stop-color="#7fe3ff"/></linearGradient></defs><path d="M156 120h40v-30" fill="none" stroke="#d9826f" stroke-width="4" stroke-linecap="round"/><path d="M190 84h12" stroke="#f5c2b3" stroke-width="4" stroke-linecap="round"/><path d="M196 92c0 6-3 6-3 10" stroke="#7fe3ff" stroke-width="2" fill="none"/><path d="M0 150h260" stroke="#f5f7ff" stroke-opacity=".4" stroke-width="2"/></svg></div>
+        <div class="c"><small>Tous logements</small><h3>Chauffe-eau thermodynamique</h3><p>Remplacer un cumulus électrique classique pour l'eau chaude sanitaire.</p><div class="prix">Tarif <b>sur devis</b></div></div>
+      </article>
+      <article class="sol verre rv d3">
+        <div class="ill" aria-hidden="true"><svg viewBox="0 0 260 170"><g fill="none" stroke="#f5f7ff" stroke-width="3" stroke-linecap="round"><path d="M60 140V70M80 140V70M100 140V70M120 140V70M140 140V70"/></g><path d="M52 70h96M52 140h96" stroke="#f5f7ff" stroke-width="4" stroke-linecap="round"/><path d="M148 130h30a10 10 0 0 0 10-10V60" fill="none" stroke="#d9826f" stroke-width="4" stroke-linecap="round"/><path d="M148 80h18a6 6 0 0 0 6-6V60" fill="none" stroke="#7fe3ff" stroke-width="4" stroke-linecap="round"/><g fill="none" stroke="#f5c2b3" stroke-width="2" stroke-linecap="round" class="souffle"><path d="M70 60c0-8 6-8 6-16M100 60c0-8 6-8 6-16M130 60c0-8 6-8 6-16"/></g><path d="M0 150h260" stroke="#f5f7ff" stroke-opacity=".4" stroke-width="2"/></svg></div>
+        <div class="c"><small>Rénovation</small><h3>Réseau de chauffage</h3><p>Adapter radiateurs et circuits pour un fonctionnement basse température.</p><div class="prix">Tarif <b>sur devis</b></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="boite verre rv">
+      <div class="orbe g" style="width:260px;height:260px;right:-60px;top:-80px"></div>
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="none" stroke="#f5c2b3" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="none" stroke="#f5c2b3" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="none" stroke="#7fe3ff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <span class="surtitre">Avis clients</span>
+        <h2>Vos avis comptent.</h2>
+        <p>Vous avez fait appel à Stratherm pour une pompe à chaleur, une climatisation ou un chauffe-eau ? Partagez votre expérience sur Google : votre retour aide d'autres habitants de l'Eurométropole à choisir leur installateur.</p>
+      </div>
+      <a class="btn btn-gres" href="https://www.google.com/maps/search/?api=1&amp;query=Stratherm%20Strasbourg" target="_blank" rel="noopener">Laisser un avis Google<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap grille">
+    <div class="rv">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2 class="titre-s">Vos questions, <em>nos réponses</em>.</h2>
+      <p class="intro">Des réponses générales pour vous orienter. Pour votre situation précise, un échange avec Stratherm reste le plus simple.</p>
+      <a class="btn btn-verre" href="tel:+33783249043" style="margin-top:12px">Poser ma question par téléphone</a>
+    </div>
+    <div class="rv d1">
+      <details class="verre" open><summary>Une pompe à chaleur air/eau fonctionne-t-elle en plein hiver à Strasbourg ?<i aria-hidden="true"></i></summary><p>Oui, les pompes à chaleur air/eau actuelles sont conçues pour fonctionner par temps froid. Leur rendement baisse lorsque la température chute, d'où l'importance d'un dimensionnement adapté à votre logement et au climat local, étudié lors de la visite.</p></details>
+      <details class="verre"><summary>Puis-je bénéficier d'aides comme MaPrimeRénov' ?<i aria-hidden="true"></i></summary><p>Des aides comme MaPrimeRénov' ou les primes CEE peuvent s'appliquer selon votre éligibilité (revenus, logement, type de travaux). Elles exigent en général un installateur qualifié RGE : Stratherm est titulaire des qualifications QUALIPAC Chauffage et QUALIPAC CET.</p></details>
+      <details class="verre"><summary>Mes radiateurs actuels sont-ils compatibles ?<i aria-hidden="true"></i></summary><p>Cela dépend du type de radiateurs et de la température d'eau nécessaire. Beaucoup d'installations existantes peuvent être conservées, parfois avec quelques adaptations. La visite technique permet de le vérifier.</p></details>
+      <details class="verre"><summary>Où placer l'unité extérieure ?<i aria-hidden="true"></i></summary><p>Au sol, sur support mural ou en terrasse selon la configuration, en tenant compte du bruit, de l'écoulement des condensats et du voisinage. En copropriété, l'accord du syndic peut être nécessaire.</p></details>
+      <details class="verre"><summary>Quel est l'intérêt d'un chauffe-eau thermodynamique ?<i aria-hidden="true"></i></summary><p>Il chauffe l'eau grâce à une petite pompe à chaleur intégrée, ce qui réduit généralement la consommation par rapport à un ballon électrique classique. Son emplacement (local, garage, cave) se choisit avec soin.</p></details>
+      <details class="verre"><summary>Combien coûte une installation ?<i aria-hidden="true"></i></summary><p>Chaque logement est différent : le prix dépend de l'équipement, de la puissance et des travaux annexes. Stratherm établit un devis gratuit et détaillé après étude de votre projet.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS PRATIQUES -->
+<section class="infos-pratiques" id="infos">
+  <div class="wrap">
+    <div class="entete"><div class="rv"><span class="surtitre">Infos pratiques</span><h2 class="titre-s">Horaires &amp; <em>zone d'intervention</em>.</h2></div></div>
+    <div class="grille">
+      <div class="bloc verre rv">
+        <h3>Horaires</h3>
+        <p class="sous">Prise de rendez-vous par téléphone ou par email.</p>
+        <ul id="horaires">
+          <li data-j="1"><b>Lundi</b><span>Sur rendez-vous</span></li>
+          <li data-j="2"><b>Mardi</b><span>Sur rendez-vous</span></li>
+          <li data-j="3"><b>Mercredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="4"><b>Jeudi</b><span>Sur rendez-vous</span></li>
+          <li data-j="5"><b>Vendredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="6"><b>Samedi</b><span>Fermé</span></li>
+          <li data-j="0"><b>Dimanche</b><span>Fermé</span></li>
+        </ul>
+        <p class="note-h">Horaires indicatifs · à confirmer</p>
+      </div>
+      <div class="bloc verre rv d1">
+        <h3>Strasbourg et Eurométropole</h3>
+        <p class="sous">Entreprise basée à Strasbourg (67).</p>
+        <div class="zone-carte" aria-hidden="true">
+          <svg viewBox="0 0 400 170">
+            <path d="M330 0c-14 40 10 70-6 100s-4 50 8 70" stroke="#7fe3ff" stroke-opacity=".5" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <text x="352" y="60" font-family="Figtree,sans-serif" font-size="11" fill="#7fe3ff" opacity=".8">Rhin</text>
+            <circle cx="190" cy="88" r="70" fill="rgba(217,130,111,.1)" stroke="#d9826f" stroke-dasharray="4 6"/>
+            <circle cx="190" cy="84" r="26" fill="rgba(217,130,111,.18)"/>
+            <path d="M190 64l6 16h-12z" fill="#d9826f"/><rect x="183" y="80" width="14" height="16" rx="2" fill="#d9826f"/><circle cx="190" cy="87" r="3" fill="#0b1426"/>
+            <text x="190" y="128" text-anchor="middle" font-family="Urbanist,sans-serif" font-size="14" font-weight="800" fill="#f5f7ff">Strasbourg</text>
+            <text x="190" y="44" text-anchor="middle" font-family="Figtree,sans-serif" font-size="10.5" letter-spacing="1" fill="#c9d2e6">EUROMÉTROPOLE</text>
+          </svg>
+        </div>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33783249043">07 83 24 90 43</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:stratherm@outlook.fr">stratherm@outlook.fr</a></li>
+        </ul>
+        <a class="btn btn-verre" href="https://www.google.com/maps/search/?api=1&amp;query=Stratherm%20Strasbourg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="orbe c" style="width:360px;height:360px;right:10%;top:0"></div>
+  <div class="wrap">
+    <div class="boite verre rv">
+      <div class="gauche">
+        <span class="surtitre">Devis gratuit</span>
+        <h2 class="titre-s" style="margin-bottom:18px">Parlons de <em>votre confort</em>.</h2>
+        <p>Décrivez votre projet : Stratherm vous recontacte pour en discuter et organiser une visite technique si nécessaire.</p>
+        <ul class="coord" style="margin-top:24px">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33783249043">07 83 24 90 43</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:stratherm@outlook.fr">stratherm@outlook.fr</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Strasbourg et Eurométropole</li>
+        </ul>
+        <a class="btn btn-gres" href="tel:+33783249043">Appeler maintenant</a>
+      </div>
+      <form id="form" novalidate>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          <div class="champ"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="commune">Commune</label><input id="commune" placeholder="Strasbourg, Illkirch, Schiltigheim…"></div>
+          <div class="champ plein"><label for="projet">Projet</label>
+            <select id="projet"><option>Pompe à chaleur air/eau</option><option>Climatisation réversible</option><option>Chauffe-eau thermodynamique</option><option>Système de chauffage</option><option>Autre demande</option></select>
+          </div>
+          <div class="champ plein"><label for="message">Message</label><textarea id="message" placeholder="Type de logement, surface, chauffage actuel…"></textarea></div>
+        </div>
+        <div class="form-pied">
+          <small>Vos données servent uniquement à répondre à votre demande.</small>
+          <button class="btn btn-gres" type="submit">Envoyer ma demande</button>
+        </div>
+        <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grille">
+    <div>
+      <a class="logo" href="#accueil"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="url(#gCyan)" opacity=".18"/><path d="M16 4l3 9h-6z" fill="#d9826f"/><rect x="11" y="13" width="10" height="13" rx="1.5" fill="#d9826f"/><circle cx="16" cy="18" r="2.6" fill="#0b1426"/><path d="M6 26h20" stroke="#7fe3ff" stroke-width="2" stroke-linecap="round"/></svg>Stratherm</a>
+      <p class="desc">Pompes à chaleur air/eau, climatisation réversible, chauffe-eau thermodynamique et systèmes de chauffage à Strasbourg. QUALIPAC Chauffage · QUALIPAC CET.</p>
+    </div>
+    <div><h4>Coordonnées</h4><ul><li><a href="tel:+33783249043">07 83 24 90 43</a></li><li><a href="mailto:stratherm@outlook.fr">stratherm@outlook.fr</a></li><li>Strasbourg et Eurométropole (67)</li></ul></div>
+    <div><h4>Horaires</h4><ul><li>Lun.–ven. : sur rendez-vous</li><li>Sam.–dim. : fermé</li><li>Horaires à confirmer</li></ul></div>
+    <div><h4>Navigation</h4><ul><li><a href="#services">Services</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis gratuit</a></li></ul></div>
+  </div>
+  <div class="wrap pied-bas"><span>© <span id="annee">2026</span> Stratherm · Strasbourg</span><span>Tarifs sur devis</span></div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33783249043" aria-label="Appeler Stratherm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu')})});
+  var li=document.querySelector('#horaires li[data-j="'+new Date().getDay()+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+  var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduit){var n=document.getElementById('neige');for(var i=0;i<26;i++){var f=document.createElement('i');var s=1+Math.random()*2.4;f.style.cssText='left:'+(Math.random()*100)+'%;width:'+s+'px;height:'+s+'px;opacity:'+(.12+Math.random()*.25)+';animation-duration:'+(14+Math.random()*16)+'s;animation-delay:-'+(Math.random()*30)+'s';n.appendChild(f)}}
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduit){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>

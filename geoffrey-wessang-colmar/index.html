@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geoffrey Wessang – Chauffagiste, plombier et électricien à Colmar</title>
+<meta name="description" content="Geoffrey Wessang, artisan à Colmar (68000) : chaudière gaz ou fioul, pompe à chaleur, climatisation, chauffe-eau thermodynamique, plomberie et électricité. Un seul interlocuteur à Colmar et environs.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vin:#7b2234;
+  --vigne:#5c7a3a;
+  --creme:#f7f0e2;
+  --bois:#6a4a30;
+  --ocre:#c99545;
+  --encre:#2a211b;
+  --encre-2:#5a4a3e;   /* texte secondaire, 7:1 sur crème */
+  --papier-clair:#fbf6ea;
+  --main:"Kalam",cursive;
+  --serif:"Source Serif 4",Georgia,serif;
+  --larg:1160px;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .12 0 0 0 0 .08 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --fibres:repeating-linear-gradient(97deg,rgba(106,74,48,.035) 0 2px,transparent 2px 9px),repeating-linear-gradient(-8deg,rgba(106,74,48,.03) 0 1px,transparent 1px 13px);
+  --planches:repeating-linear-gradient(180deg,transparent 0 126px,rgba(30,18,10,.45) 126px 128px,rgba(255,230,200,.08) 128px 129px),repeating-linear-gradient(180deg,rgba(255,235,210,.035) 0 3px,rgba(20,10,5,.06) 3px 6px,rgba(255,235,210,.02) 6px 11px,rgba(20,10,5,.04) 11px 14px),radial-gradient(ellipse 260px 22px at 22% 40px,rgba(30,18,10,.22),transparent 70%),radial-gradient(ellipse 200px 16px at 76% 190px,rgba(30,18,10,.2),transparent 70%),linear-gradient(90deg,#634329,#73523a 30%,#6a4a30 55%,#5e4029 80%,#6c4c31);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--creme);background-image:var(--fibres);color:var(--encre);font-family:var(--serif);font-size:1.075rem;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.13;pointer-events:none;z-index:200;mix-blend-mode:multiply}
+a{color:inherit}
+h1,h2,h3{font-family:var(--main);font-weight:700;margin:0;line-height:1.1}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+section{padding:96px 0;position:relative}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:4px 10px 5px 12px/10px 4px 12px 5px;font-family:var(--serif);font-weight:700;font-size:1.02rem;text-decoration:none;cursor:pointer;border:2px solid var(--encre);transition:transform .25s,box-shadow .25s,background .2s,color .2s;box-shadow:3px 4px 0 var(--encre)}
+.btn:hover{transform:translate(-2px,-3px) rotate(-.6deg);box-shadow:6px 7px 0 var(--encre)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--encre)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-vin{background:var(--vin);color:var(--creme)}
+.btn-vin:hover{background:#8f2a3f}
+.btn-papier{background:var(--papier-clair);color:var(--encre)}
+.btn-papier:hover{background:#fff}
+.btn-vigne{background:var(--vigne);color:#fff}
+
+/* titres de section */
+.s-tete{max-width:720px;margin:0 0 52px}
+.s-tete.c{margin-inline:auto;text-align:center}
+.sur{display:inline-block;font-family:var(--main);font-size:1.15rem;color:var(--vigne);transform:rotate(-2deg);margin-bottom:6px}
+.sur::before{content:"~ "}.sur::after{content:" ~"}
+.s-tete h2{font-size:clamp(2.2rem,4.6vw,3.4rem);color:var(--vin)}
+.s-tete p{color:var(--encre-2);margin:14px 0 0;font-size:1.1rem}
+.trait{display:block;width:180px;height:14px;margin-top:6px}
+.s-tete.c .trait{margin-inline:auto}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(247,240,226,.94);background-image:var(--fibres);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--encre);box-shadow:0 3px 0 rgba(42,33,27,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .mono{width:42px;height:42px;border-radius:50%;background:var(--vin);color:var(--creme);display:grid;place-items:center;font-family:var(--main);font-weight:700;font-size:1.15rem;border:2px solid var(--encre);transform:rotate(-6deg);transition:transform .4s}
+.logo:hover .mono{transform:rotate(8deg)}
+.logo b{font-family:var(--main);font-size:1.35rem;line-height:1;display:block}
+.logo small{display:block;font-size:.78rem;color:var(--encre-2);letter-spacing:.06em}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:4px;align-items:center}
+.menu a{display:block;text-decoration:none;padding:8px 12px;font-size:1rem;position:relative}
+.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:3px;background:var(--ocre);border-radius:3px;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover::after{transform:scaleX(1)}
+.menu .cta{background:var(--vin);color:var(--creme);border:2px solid var(--encre);border-radius:4px 10px 5px 12px/10px 4px 12px 5px;margin-left:8px;font-weight:700;padding:8px 16px}
+.menu .cta::after{display:none}
+.menu .cta:hover{background:#8f2a3f}
+.burger{display:none;align-items:center;gap:10px;background:var(--papier-clair);border:2px solid var(--encre);height:44px;padding:0 14px;font-family:var(--main);font-size:1.05rem;cursor:pointer;color:var(--encre);border-radius:4px 10px 5px 12px/10px 4px 12px 5px}
+.burger b{width:20px;height:12px;position:relative;display:block}
+.burger b::before,.burger b::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;transition:transform .25s,top .25s;border-radius:2px}
+.burger b::before{top:1px}.burger b::after{top:9px}
+.burger[aria-expanded="true"] b::before{top:5px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{top:5px;transform:rotate(-45deg)}
+
+/* en-tête : bandeau + carte de visite */
+.bandeau{position:relative;padding-top:68px}
+.paysage{display:block;width:100%;height:clamp(280px,40vw,560px);border-bottom:2px solid var(--encre)}
+.paysage .nuage{animation:nuage 26s ease-in-out infinite alternate}
+.paysage .nuage.b{animation-duration:34s}
+@keyframes nuage{to{transform:translateX(70px)}}
+.paysage .soleil{transform-box:fill-box;transform-origin:center;animation:rayons 60s linear infinite}
+@keyframes rayons{to{transform:rotate(360deg)}}
+.paysage .cigogne{animation:vole 18s ease-in-out infinite}
+@keyframes vole{0%{transform:translate(0,0)}50%{transform:translate(-120px,-18px)}100%{transform:translate(0,0)}}
+.paysage .aile{transform-box:fill-box;transform-origin:50% 100%;animation:bat 1.2s ease-in-out infinite}
+@keyframes bat{50%{transform:scaleY(-.6)}}
+.mention{position:absolute;top:96px;left:max(16px,calc(50% - 580px));font-family:var(--main);font-size:1.15rem;color:var(--bois);transform:rotate(-3deg)}
+.carte-zone{position:relative;z-index:5;margin-top:-190px;padding:0 16px}
+.carte-v{position:relative;max-width:900px;margin:0 auto;background:var(--papier-clair);background-image:var(--fibres),linear-gradient(160deg,#fffaf0,#f3e9d4);border:1.5px solid rgba(42,33,27,.35);border-radius:6px;padding:44px 48px 40px;box-shadow:0 2px 0 #e6dac2,0 4px 0 #ddd0b5,0 6px 0 #d3c4a6,0 26px 40px -10px rgba(42,33,27,.45);transform:rotate(-2deg);animation:flotte 6s ease-in-out infinite;display:grid;grid-template-columns:1.25fr .9fr;gap:34px}
+@keyframes flotte{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-1.3deg) translateY(-8px)}}
+.carte-v::before{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(123,34,52,.35);border-radius:3px;pointer-events:none}
+.carte-v .coin{position:absolute;width:38px;height:38px;border-color:var(--vin);border-style:solid;border-width:0;opacity:.7}
+.carte-v .coin.a{top:20px;left:20px;border-top-width:3px;border-left-width:3px}
+.carte-v .coin.b{bottom:20px;right:20px;border-bottom-width:3px;border-right-width:3px}
+.carte-v .metier-haut{font-family:var(--main);color:var(--vigne);font-size:1.15rem}
+.carte-v h1{font-size:clamp(2.8rem,6vw,4.6rem);color:var(--vin);line-height:.95;margin:4px 0 12px;letter-spacing:-.01em}
+.carte-v .metiers{font-size:1.02rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--encre);margin-bottom:14px;display:flex;flex-wrap:wrap;gap:4px 14px}
+.carte-v .metiers span{display:inline-flex;align-items:center;gap:14px}
+.carte-v .metiers span+span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ocre);margin-left:-8px}
+.carte-v .accroche{color:var(--encre-2);font-size:1.12rem;font-style:italic;margin:0}
+.carte-v .droite{border-left:1.5px dashed rgba(42,33,27,.3);padding-left:32px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.carte-v .tel-l{font-family:var(--main);font-size:.98rem;color:var(--encre-2);line-height:1}
+.carte-v .tel{font-family:var(--main);font-weight:700;font-size:clamp(1.9rem,3.2vw,2.4rem);color:var(--encre);text-decoration:none;line-height:1.05;white-space:nowrap}
+.carte-v .tel:hover{color:var(--vin)}
+.carte-v .zone{font-size:.95rem;color:var(--encre-2);margin:0}
+.carte-v .btns{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.tampon{position:absolute;right:-26px;top:-34px;width:118px;height:118px;border-radius:50%;border:3px solid var(--vin);color:var(--vin);display:grid;place-items:center;text-align:center;font-family:var(--main);font-weight:700;font-size:.92rem;line-height:1.05;transform:rotate(14deg);background:rgba(251,246,234,.85);opacity:.92}
+.tampon::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px solid var(--vin)}
+.tampon small{display:block;font-size:.72rem;font-weight:400}
+.croquis-carte{position:absolute;left:44%;bottom:18px;width:86px;opacity:.5}
+
+/* confiance */
+.confiance{padding:120px 0 34px}
+.etiquettes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px}
+.etiquettes span{display:inline-flex;align-items:center;gap:9px;background:var(--papier-clair);border:1.5px solid var(--encre);padding:7px 16px 7px 12px;border-radius:3px 14px 3px 14px;font-size:.98rem;font-weight:600;box-shadow:2px 3px 0 rgba(42,33,27,.18);transition:transform .3s}
+.etiquettes span:nth-child(odd){transform:rotate(-1.2deg)}.etiquettes span:nth-child(even){transform:rotate(1deg)}
+.etiquettes span:hover{transform:rotate(0) translateY(-3px)}
+.etiquettes svg{width:20px;height:20px;flex:none}
+
+/* services */
+.fiches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.fiche{position:relative;background:var(--papier-clair);background-image:var(--fibres);border:1.5px solid rgba(42,33,27,.4);border-radius:3px;padding:30px 28px 28px;box-shadow:4px 6px 0 rgba(106,74,48,.25);transition:transform .35s,box-shadow .35s}
+.fiche:nth-child(3n+1){transform:rotate(-.8deg)}.fiche:nth-child(3n+2){transform:rotate(.6deg)}.fiche:nth-child(3n){transform:rotate(-.4deg)}
+.fiche:hover{transform:rotate(0) translateY(-6px);box-shadow:8px 12px 0 rgba(106,74,48,.3)}
+.fiche::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;margin-left:-45px;background:rgba(201,149,69,.45);transform:rotate(-3deg);border-left:2px dotted rgba(255,255,255,.5);border-right:2px dotted rgba(255,255,255,.5)}
+.fiche .ico{width:96px;height:80px;display:block;margin-bottom:12px}
+.fiche h3{font-size:1.6rem;color:var(--vin);margin-bottom:6px}
+.fiche p{margin:0;color:var(--encre-2);font-size:1rem}
+.fiche .src{display:inline-block;margin-top:12px;font-family:var(--main);font-size:.92rem;color:var(--vigne)}
+
+/* pourquoi */
+.pq-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.atout{position:relative;padding-top:6px}
+.atout .rond{width:92px;height:92px;position:relative;display:grid;place-items:center;margin-bottom:14px}
+.atout .rond svg.cercle{position:absolute;inset:0;width:100%;height:100%}
+.atout .rond svg.dedans{width:48px;height:48px;position:relative}
+.atout h3{font-size:1.45rem;margin-bottom:6px}
+.atout p{margin:0;color:var(--encre-2);font-size:1rem}
+.atout .cercle path{stroke-dasharray:320;stroke-dashoffset:320;transition:stroke-dashoffset 1.4s ease .2s}
+.atout.vu .cercle path{stroke-dashoffset:0}
+
+/* étapes sur bois */
+.bois{background:var(--planches);color:var(--creme);border-top:2px solid var(--encre);border-bottom:2px solid var(--encre)}
+.bois .s-tete h2{color:var(--creme)}
+.bois .sur{color:#e9c98d}
+.bois .s-tete p{color:#eadfcb}
+.etapes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;counter-reset:e}
+.etape{position:relative;background:var(--creme);background-image:var(--fibres);color:var(--encre);padding:30px 24px 26px;border-radius:50% 50% 6px 6px/22px 22px 6px 6px;border:2px solid var(--encre);box-shadow:0 10px 20px -6px rgba(0,0,0,.45);text-align:center}
+.etape::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--ocre);border-radius:inherit;pointer-events:none}
+.etape .num{font-family:var(--main);font-weight:700;font-size:3rem;line-height:1;color:var(--vin);display:block}
+.etape .orn{display:block;width:70px;height:10px;margin:6px auto 12px}
+.etape h3{font-size:1.4rem;margin-bottom:6px}
+.etape p{margin:0;font-size:.98rem;color:var(--encre-2)}
+.clou{position:absolute;top:12px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d9c3a0,#6a4a30);box-shadow:0 1px 1px rgba(0,0,0,.5)}
+.clou.g{left:16px}.clou.d{right:16px}
+
+/* à propos */
+.ap-g{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ap-croquis{position:relative;background:var(--papier-clair);background-image:var(--fibres),repeating-linear-gradient(180deg,transparent 0 31px,rgba(92,122,58,.16) 31px 32px);border:1.5px solid rgba(42,33,27,.35);padding:26px;transform:rotate(1.6deg);box-shadow:6px 8px 0 rgba(106,74,48,.22)}
+.ap-croquis::before{content:"";position:absolute;top:-14px;left:28px;width:110px;height:28px;background:rgba(201,149,69,.45);transform:rotate(-6deg)}
+.ap-croquis svg{display:block;width:100%;height:auto}
+.ap-croquis figcaption{font-family:var(--main);font-size:1.05rem;color:var(--encre-2);text-align:center;margin-top:6px}
+.ap-txt p{font-size:1.1rem}
+.signature{font-family:var(--main);font-size:2rem;color:var(--vin);transform:rotate(-4deg);display:inline-block;margin-top:6px}
+.carnet{list-style:none;margin:22px 0 0;padding:0;border-top:1.5px dashed rgba(42,33,27,.35)}
+.carnet li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1.5px dashed rgba(42,33,27,.35);font-size:1rem}
+.carnet li span:first-child{font-family:var(--main);color:var(--vigne);font-size:1.08rem}
+.carnet li span:last-child{font-weight:600;text-align:right;word-break:break-word}
+.carnet a{text-decoration:none}
+.carnet a:hover{color:var(--vin);text-decoration:underline}
+
+/* solutions : étiquettes de vin */
+.solutions{background:linear-gradient(180deg,rgba(201,149,69,.12),rgba(201,149,69,0))}
+.etiq-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.etiq{position:relative;background:var(--papier-clair);background-image:var(--fibres);border:2px solid var(--encre);border-radius:14px;padding:12px;transition:transform .35s}
+.etiq:hover{transform:translateY(-8px) rotate(-1deg)}
+.etiq .cadre{border:1.5px solid var(--vin);border-radius:8px;padding:18px 16px 18px;text-align:center;height:100%;display:flex;flex-direction:column}
+.etiq .cadre svg{width:100%;height:120px;display:block;margin-bottom:6px}
+.etiq .pour{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--encre-2);font-weight:600}
+.etiq h3{font-size:1.55rem;color:var(--vin);margin:4px 0 8px}
+.etiq p{font-size:.97rem;color:var(--encre-2);margin:0 0 14px}
+.etiq .prix{margin-top:auto;font-family:var(--main);font-size:1.15rem;border-top:1.5px solid var(--vin);padding-top:10px;color:var(--encre)}
+.etiq .prix b{color:var(--vin)}
+
+/* avis */
+.avis-p{position:relative;max-width:780px;margin:0 auto;background:var(--papier-clair);background-image:var(--fibres);border:1.5px solid rgba(42,33,27,.35);padding:52px 48px 44px;text-align:center;transform:rotate(-1deg);box-shadow:6px 8px 0 rgba(106,74,48,.22)}
+.avis-p::before,.avis-p::after{content:"";position:absolute;top:-14px;width:100px;height:28px;background:rgba(201,149,69,.45)}
+.avis-p::before{left:30px;transform:rotate(-8deg)}.avis-p::after{right:30px;transform:rotate(7deg)}
+.avis-p h2{font-size:clamp(2.2rem,4.6vw,3.2rem);color:var(--vin);margin-bottom:12px}
+.avis-p p{color:var(--encre-2);max-width:560px;margin:0 auto 26px}
+.avis-p .plume{width:84px;height:84px;margin:0 auto 10px;display:block}
+
+/* faq */
+.faq-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-l details{border-bottom:1.5px dashed rgba(42,33,27,.4)}
+.faq-l details:first-child{border-top:1.5px dashed rgba(42,33,27,.4)}
+.faq-l summary{list-style:none;cursor:pointer;padding:18px 4px;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:var(--main);font-weight:700;font-size:1.3rem;line-height:1.25;transition:color .2s}
+.faq-l summary:hover{color:var(--vin)}
+.faq-l summary::-webkit-details-marker{display:none}
+.faq-l .pm{flex:none;width:34px;height:34px;transition:transform .35s}
+.faq-l details[open] .pm{transform:rotate(45deg)}
+.faq-l .rep{padding:0 4px 20px;color:var(--encre-2)}
+.faq-l .rep p{margin:0}
+.faq-croquis{position:sticky;top:110px}
+.faq-croquis svg{width:100%;height:auto;display:block;max-width:360px}
+
+/* contact */
+.contact{background:linear-gradient(180deg,rgba(92,122,58,.1),rgba(92,122,58,.02))}
+.ct-g{display:grid;grid-template-columns:.95fr 1.05fr;gap:36px;align-items:start}
+.bloc{background:var(--papier-clair);background-image:var(--fibres);border:1.5px solid rgba(42,33,27,.4);padding:28px;margin-bottom:24px;box-shadow:4px 6px 0 rgba(106,74,48,.2)}
+.bloc h3{font-size:1.6rem;color:var(--vin);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px}
+.bloc h3 small{font-family:var(--serif);font-weight:400;font-style:italic;font-size:.88rem;color:var(--encre-2)}
+.horaires{list-style:none;margin:12px 0 0;padding:0}
+.horaires li{display:flex;justify-content:space-between;gap:12px;padding:8px 10px;border-bottom:1px dotted rgba(42,33,27,.4)}
+.horaires li.auj{background:rgba(201,149,69,.25);font-weight:700;border-radius:4px}
+.horaires li.auj span:first-child::after{content:" ← aujourd'hui";font-family:var(--main);font-weight:400;color:var(--vin)}
+.bloc .zone-t{color:var(--encre-2);margin:10px 0 16px}
+.coord{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.coord a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;word-break:break-all}
+.coord a:hover{color:var(--vin);text-decoration:underline}
+.coord svg{width:20px;height:20px;flex:none;color:var(--vin)}
+form{position:relative;background:var(--papier-clair);background-image:var(--fibres),repeating-linear-gradient(180deg,transparent 0 35px,rgba(123,34,52,.08) 35px 36px);border:1.5px solid rgba(42,33,27,.4);padding:34px 34px 30px 52px;box-shadow:6px 8px 0 rgba(106,74,48,.22)}
+form::before{content:"";position:absolute;top:0;bottom:0;left:30px;border-left:2px solid rgba(123,34,52,.35)}
+form h3{font-size:2rem;color:var(--vin)}
+form .sous{color:var(--encre-2);margin:2px 0 20px}
+.choix{display:flex;flex-wrap:wrap;gap:8px 10px;margin-bottom:18px}
+.choix label{cursor:pointer}
+.choix input{position:absolute;opacity:0}
+.choix span{display:inline-block;padding:5px 14px;border:1.5px solid var(--encre);border-radius:3px 12px 3px 12px;font-size:.95rem;background:#fff;transition:background .2s,color .2s}
+.choix input:checked+span{background:var(--vin);color:var(--creme)}
+.choix input:focus-visible+span{outline:3px solid var(--ocre);outline-offset:2px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.champ{display:flex;flex-direction:column}
+.champ.plein{grid-column:1/-1}
+.champ label{font-family:var(--main);font-size:1.1rem;color:var(--vigne)}
+.champ input,.champ textarea{font:inherit;color:var(--encre);background:transparent;border:0;border-bottom:2px solid var(--encre);padding:6px 2px;min-width:0;border-radius:0}
+.champ textarea{min-height:110px;resize:vertical;border:2px solid var(--encre);padding:10px;background:rgba(255,255,255,.5)}
+.champ input:focus,.champ textarea:focus{outline:none;border-color:var(--vin);background:rgba(201,149,69,.12)}
+.form-pied{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;margin-top:22px}
+.form-pied small{color:var(--encre-2);max-width:260px;font-style:italic}
+.msg{display:none;margin:18px 0 0;padding:12px 16px;border:2px dashed var(--vigne);background:rgba(92,122,58,.12);font-family:var(--main);font-size:1.15rem;color:var(--encre)}
+.msg.vu{display:block}
+
+/* pied */
+footer{background:var(--planches);color:var(--creme);padding:70px 0 0;border-top:2px solid var(--encre)}
+.pied-g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{font-family:var(--main);font-size:1.35rem;margin:0 0 10px;color:#e9c98d;font-weight:700}
+footer ul{list-style:none;margin:0;padding:0;line-height:2}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline;text-decoration-color:var(--ocre)}
+footer .nom{font-family:var(--main);font-weight:700;font-size:2.2rem;line-height:1}
+footer p{color:#eadfcb}
+.pied-bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:44px;padding:18px 0;border-top:1px solid rgba(247,240,226,.25);font-size:.92rem;color:#e3d6bf}
+.demo{background:#2a211b;color:#d9ccb5;text-align:center;font-size:.85rem;padding:12px 16px;font-style:italic}
+
+/* flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:70;height:56px;padding:0 20px;background:var(--vin);color:var(--creme);border:2px solid var(--encre);border-radius:4px 12px 5px 14px/12px 4px 14px 5px;align-items:center;gap:10px;font-weight:700;text-decoration:none;box-shadow:3px 4px 0 var(--encre)}
+.flottant svg{width:20px;height:20px}
+
+/* apparition */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.vu{opacity:1;transform:none}
+.fiche.rv.vu:nth-child(3n+1){transform:rotate(-.8deg)}.fiche.rv.vu:nth-child(3n+2){transform:rotate(.6deg)}.fiche.rv.vu:nth-child(3n){transform:rotate(-.4deg)}
+.fiche.rv.vu:hover{transform:rotate(0) translateY(-6px)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media (max-width:1020px){
+  .fiches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pq-g,.etapes,.etiq-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ap-g,.ct-g,.faq-g{grid-template-columns:1fr}
+  .faq-croquis{display:none}
+  .pied-g{grid-template-columns:1fr 1fr}
+  .carte-v{grid-template-columns:1fr;gap:22px;padding:40px 36px 34px}
+  .carte-v .droite{border-left:0;border-top:1.5px dashed rgba(42,33,27,.3);padding:20px 0 0}
+  .carte-v .btns{flex-direction:row;flex-wrap:wrap}
+  .croquis-carte{display:none}
+}
+@media (max-width:860px){
+  .burger{display:inline-flex}
+  .menu{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--creme);background-image:var(--fibres);border-bottom:2px solid var(--encre);padding:10px 16px 18px;box-shadow:0 12px 20px -8px rgba(42,33,27,.35);display:none}
+  .menu.ouvert{display:flex}
+  .menu a{padding:13px 6px;font-size:1.1rem;border-bottom:1px dashed rgba(42,33,27,.3)}
+  .menu a::after{display:none}
+  .menu .cta{margin:12px 0 0;text-align:center;border-bottom:2px solid var(--encre)}
+}
+@media (max-width:640px){
+  section{padding:72px 0}
+  .fiches,.pq-g,.etapes,.etiq-g,.champs,.pied-g{grid-template-columns:1fr}
+  .paysage{height:320px}
+  .mention{top:84px;font-size:1rem}
+  .carte-zone{margin-top:-80px}
+  .carte-v{padding:34px 24px 28px;transform:rotate(-1.2deg);animation-name:flotte-m}
+  @keyframes flotte-m{0%,100%{transform:rotate(-1.2deg) translateY(0)}50%{transform:rotate(-.6deg) translateY(-5px)}}
+  .carte-v .btns{flex-direction:column}
+  .carte-v .btns .btn{width:100%}
+  .tampon{width:86px;height:86px;right:6px;top:-44px;font-size:.74rem}
+  .carte-v .metiers{gap:8px;font-size:.84rem}
+  .carte-v .metiers span{border:1.5px solid rgba(42,33,27,.45);border-radius:3px 10px 3px 10px;padding:2px 10px;background:#fff}
+  .carte-v .metiers span+span::before{display:none}
+  .tampon small{font-size:.6rem}
+  .confiance{padding:80px 0 20px}
+  .etiquettes{justify-content:flex-start}
+  .fiche{padding:26px 22px 24px}
+  .avis-p{padding:44px 22px 34px}
+  form{padding:28px 20px 24px 40px}
+  form::before{left:22px}
+  .flottant{display:inline-flex}
+  footer{padding-bottom:80px}
+  .logo small{display:none}
+  .horaires li.auj span:first-child::after{content:" ←"}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .atout .cercle path{stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="3" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="crayon2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="2" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Geoffrey Wessang, retour en haut"><span class="mono" aria-hidden="true">GW</span><span><b>Geoffrey Wessang</b><small>Artisan · Colmar</small></span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><b></b>Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#apropos">L'artisan</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="cta" href="#devis">Demander un devis</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="bandeau" id="accueil">
+  <svg class="paysage" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Coteaux de vignes alsaciens autour d'un village à colombages et son clocher, avec une cigogne dans le ciel">
+    <defs>
+      <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efd9ae"/><stop offset=".6" stop-color="#f5e8cc"/><stop offset="1" stop-color="#f7f0e2"/></linearGradient>
+    </defs>
+    <rect width="1440" height="520" fill="url(#ciel)"/>
+    <!-- soleil -->
+    <g transform="translate(1110 118)">
+      <g class="soleil" filter="url(#crayon2)"><path d="M0 -92V-74M0 74V92M-92 0H-74M74 0H92M-65 -65l13 13M52 52l13 13M65 -65l-13 13M-52 52l-13 13" stroke="#b9822f" stroke-width="3" stroke-linecap="round"/></g>
+      <circle r="56" fill="#c99545" stroke="#2a211b" stroke-width="2.5" filter="url(#crayon)"/>
+      <path d="M-30 -20 q14 -18 34 -16" fill="none" stroke="#f7f0e2" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+    </g>
+    <!-- nuages au trait -->
+    <g class="nuage" fill="#fbf6ea" stroke="#2a211b" stroke-width="2.2" filter="url(#crayon)"><path d="M180 118 q-4 -26 24 -26 q8 -22 36 -16 q18 -14 38 4 q26 -2 26 22 q0 16 -18 16 H196 q-18 0 -16 0z"/></g>
+    <g class="nuage b" fill="#fbf6ea" stroke="#2a211b" stroke-width="2.2" filter="url(#crayon)"><path d="M820 84 q-2 -20 20 -20 q8 -18 30 -12 q16 -10 30 4 q20 0 20 16 q0 12 -14 12 H834 q-14 0 -14 0z"/></g>
+    <!-- cigogne -->
+    <g class="cigogne" transform="translate(560 96)">
+      <g filter="url(#crayon2)">
+        <path class="aile" d="M-6 0 Q-30 -26 -58 -18 Q-36 -10 -10 4Z" fill="#fbf6ea" stroke="#2a211b" stroke-width="2"/>
+        <path d="M-58 -18 Q-44 -14 -34 -12" stroke="#2a211b" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="0" cy="4" rx="22" ry="8" fill="#fbf6ea" stroke="#2a211b" stroke-width="2"/>
+        <path d="M18 0 Q30 -4 38 -2" fill="none" stroke="#2a211b" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="40" cy="-2" r="4" fill="#fbf6ea" stroke="#2a211b" stroke-width="1.8"/>
+        <path d="M43 -2 L62 2" stroke="#b5462f" stroke-width="3" stroke-linecap="round"/>
+        <path d="M-20 6 L-48 14M-20 8 L-48 18" stroke="#b5462f" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-14 0 Q0 10 14 2" fill="none" stroke="#2a211b" stroke-width="4" stroke-linecap="round"/>
+      </g>
+    </g>
+    <!-- Vosges et château au loin -->
+    <path d="M-10 214 Q200 124 420 174 Q640 96 880 164 Q1140 104 1450 176 V520 H-10Z" fill="#b7b48d" stroke="#2a211b" stroke-width="2" stroke-opacity=".5" filter="url(#crayon)"/>
+    <g transform="translate(330 150)" fill="#9c9774" stroke="#2a211b" stroke-width="1.8" stroke-opacity=".6"><path d="M0 12V-10h8v-6h6v6h8v-18h10v18h6V12Z"/><path d="M14 -24 l5 -8 l5 8" fill="none"/></g>
+    <!-- colline du village -->
+    <path d="M-10 272 Q380 190 760 250 Q1100 198 1450 250 V520 H-10Z" fill="#a3b373" stroke="#2a211b" stroke-width="2.5" filter="url(#crayon)"/>
+    <!-- village -->
+    <g filter="url(#crayon2)" stroke="#2a211b" stroke-width="2.2" stroke-linejoin="round">
+      <!-- maisons gauche -->
+      <rect x="566" y="206" width="44" height="40" fill="#f3e3c3"/><path d="M560 208 L588 168 L616 208Z" fill="#7b2234"/><path d="M576 214v20M600 214v20M566 226h44" stroke="#6a4a30" stroke-width="2"/>
+      <rect x="608" y="196" width="52" height="50" fill="#e9b99c"/><path d="M602 198 L634 150 L666 198Z" fill="#a0533a"/><rect x="620" y="208" width="10" height="13" fill="#fbf6ea"/><rect x="640" y="208" width="10" height="13" fill="#fbf6ea"/><path d="M608 226h52M616 230l12 16M652 230l-12 16" stroke="#6a4a30" stroke-width="2"/>
+      <rect x="658" y="210" width="40" height="36" fill="#f0d79a"/><path d="M653 212 L678 178 L703 212Z" fill="#7b2234"/><rect x="672" y="222" width="10" height="12" fill="#fbf6ea"/>
+      <!-- église -->
+      <rect x="700" y="182" width="80" height="64" fill="#efe3cb"/><path d="M694 184 L740 150 L786 184Z" fill="#8a5a3a"/>
+      <path d="M730 246v-22a10 10 0 0 1 20 0v22" fill="#6a4a30"/>
+      <rect x="752" y="98" width="32" height="148" fill="#efe3cb"/>
+      <circle cx="768" cy="126" r="8" fill="#fbf6ea"/><path d="M768 126v-5M768 126l4 2" stroke-width="1.6"/>
+      <rect x="762" y="148" width="12" height="18" rx="6" fill="#2a211b" stroke="none"/>
+      <path d="M748 100 L768 26 L788 100Z" fill="#7b2234"/>
+      <path d="M752 82h32" stroke="#f7f0e2" stroke-width="1.5" opacity=".7"/>
+      <path d="M768 26V12M762 17h12" stroke-width="2.4"/>
+      <!-- maisons droite -->
+      <rect x="784" y="200" width="50" height="46" fill="#f3e3c3"/><path d="M778 202 L809 160 L840 202Z" fill="#a0533a"/><path d="M784 222h50M792 202v20M826 202v20M800 228l18 18M818 228l-18 18" stroke="#6a4a30" stroke-width="2"/>
+      <rect x="822" y="150" width="8" height="20" fill="#a0533a"/>
+      <rect x="832" y="212" width="46" height="34" fill="#e8c7a8"/><path d="M827 214 L855 182 L883 214Z" fill="#7b2234"/><rect x="848" y="222" width="12" height="12" fill="#fbf6ea"/>
+      <rect x="876" y="216" width="36" height="30" fill="#f0d79a"/><path d="M871 218 L894 190 L917 218Z" fill="#8a5a3a"/>
+      <!-- nid de cigogne -->
+      <ellipse cx="826" cy="150" rx="14" ry="5" fill="#8a5a3a"/><path d="M813 148 l26 2 M815 152 l22 -3" stroke-width="1.4"/>
+      <path d="M822 146 q-2 -12 4 -16 l6 -2 q4 8 -2 16z" fill="#fbf6ea" stroke-width="1.8"/><path d="M830 130 l9 3" stroke="#b5462f" stroke-width="2.4" stroke-linecap="round"/>
+      <!-- arbres -->
+      <circle cx="540" cy="224" r="18" fill="#5c7a3a"/><path d="M540 242v8" stroke-width="2.4"/>
+      <circle cx="930" cy="222" r="16" fill="#6e8c45"/><path d="M930 238v10" stroke-width="2.4"/>
+      <circle cx="956" cy="228" r="11" fill="#5c7a3a"/>
+    </g>
+    <g opacity=".55"><path d="M-10 282 Q380 206 760 262" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M-10 282 Q380 206 760 262" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M-10 298 Q380 223 760 277" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M-10 298 Q380 223 760 277" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M-10 314 Q380 240 760 292" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M-10 314 Q380 240 760 292" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M-10 330 Q380 257 760 307" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M-10 330 Q380 257 760 307" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M-10 346 Q380 274 760 322" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M-10 346 Q380 274 760 322" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M760 262 Q1100 214 1450 262" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M760 262 Q1100 214 1450 262" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M760 277 Q1100 230 1450 276" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M760 277 Q1100 230 1450 276" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M760 292 Q1100 246 1450 290" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M760 292 Q1100 246 1450 290" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M760 307 Q1100 262 1450 304" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M760 307 Q1100 262 1450 304" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/><path d="M760 322 Q1100 278 1450 318" fill="none" stroke="#4e6a2f" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0.5 7"/><path d="M760 322 Q1100 278 1450 318" fill="none" stroke="#4e6a2f" stroke-width="1.2" opacity=".55"/></g><path d="M-10 344 Q360 262 790 392 L790 520 L-10 520Z" fill="#7f9a4e" stroke="#2a211b" stroke-width="2.5" filter="url(#crayon)"/><path d="M-10 360 Q360 282 790 408" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 360 Q360 282 790 408" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 382 Q360 307 790 423" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 382 Q360 307 790 423" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 404 Q360 332 790 438" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 404 Q360 332 790 438" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 426 Q360 357 790 453" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 426 Q360 357 790 453" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 448 Q360 382 790 468" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 448 Q360 382 790 468" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 470 Q360 407 790 483" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 470 Q360 407 790 483" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 492 Q360 432 790 498" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 492 Q360 432 790 498" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M-10 514 Q360 457 790 513" fill="none" stroke="#3f5a26" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M-10 514 Q360 457 790 513" fill="none" stroke="#3f5a26" stroke-width="1.2" opacity=".55"/><path d="M640 410 Q1050 272 1450 312 L1450 520 L640 520Z" fill="#6f8c44" stroke="#2a211b" stroke-width="2.5" filter="url(#crayon)"/><path d="M660 428 Q1050 292 1450 330" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 428 Q1050 292 1450 330" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 444 Q1050 316 1450 352" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 444 Q1050 316 1450 352" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 460 Q1050 340 1450 374" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 460 Q1050 340 1450 374" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 476 Q1050 364 1450 396" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 476 Q1050 364 1450 396" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 492 Q1050 388 1450 418" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 492 Q1050 388 1450 418" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 508 Q1050 412 1450 440" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 508 Q1050 412 1450 440" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 524 Q1050 436 1450 462" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 524 Q1050 436 1450 462" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 540 Q1050 460 1450 484" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 540 Q1050 460 1450 484" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/><path d="M660 556 Q1050 484 1450 506" fill="none" stroke="#344d1f" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.5 12"/><path d="M660 556 Q1050 484 1450 506" fill="none" stroke="#344d1f" stroke-width="1.2" opacity=".55"/>
+    <!-- petit chemin -->
+    <path d="M770 520 Q720 470 760 430 Q800 400 770 388" fill="none" stroke="#e9d6ae" stroke-width="14" stroke-linecap="round" opacity=".9"/>
+    <!-- piquets & ceps au premier plan -->
+    <g stroke="#2a211b" stroke-width="2.5" stroke-linecap="round" filter="url(#crayon2)">
+      <path d="M60 520V440M140 520V452M1300 520V420M1380 520V410" stroke="#6a4a30" stroke-width="5"/>
+      <path d="M60 452 Q100 446 140 462M1300 432 Q1340 420 1380 422" fill="none" stroke-width="1.8"/>
+      <circle cx="92" cy="456" r="7" fill="#5c7a3a"/><circle cx="104" cy="462" r="5" fill="#7b2234"/><circle cx="110" cy="468" r="5" fill="#7b2234"/><circle cx="100" cy="470" r="5" fill="#7b2234"/>
+      <circle cx="1334" cy="432" r="7" fill="#5c7a3a"/><circle cx="1346" cy="440" r="5" fill="#7b2234"/><circle cx="1352" cy="446" r="5" fill="#7b2234"/><circle cx="1342" cy="448" r="5" fill="#7b2234"/>
+    </g>
+  </svg>
+  <span class="mention" aria-hidden="true">Colmar · au pied des vignes</span>
+
+  <div class="carte-zone">
+    <div class="carte-v">
+      <span class="coin a" aria-hidden="true"></span><span class="coin b" aria-hidden="true"></span>
+      <div class="tampon" aria-hidden="true"><span>COLMAR<small>68000</small>artisan</span></div>
+      <div>
+        <span class="metier-haut">Votre artisan à Colmar</span>
+        <h1>Geoffrey Wessang</h1>
+        <div class="metiers"><span>Chauffagiste</span><span>Plombier</span><span>Électricien</span></div>
+        <p class="accroche">Chaudière, pompe à chaleur, climatisation, eau chaude, tuyaux et courant : un seul artisan, un seul numéro, de la cave au grenier.</p>
+      </div>
+      <div class="droite">
+        <span class="tel-l">Un seul numéro :</span>
+        <a class="tel" href="tel:+33672009295">06 72 00 92 95</a>
+        <p class="zone">Colmar et environs · devis gratuit</p>
+        <div class="btns">
+          <a class="btn btn-vin" href="tel:+33672009295"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler Geoffrey</a>
+          <a class="btn btn-papier" href="#devis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>Demander un devis</a>
+        </div>
+      </div>
+      <svg class="croquis-carte" viewBox="0 0 86 60" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="34" height="46" rx="4"/><circle cx="21" cy="26" r="7"/><path d="M12 44h18M38 20h14q8 0 8 8v18"/><path d="M56 46h8"/><path d="M70 14q6 6 0 12q-6 6 0 12" stroke="#c99545"/></g></svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="confiance" aria-label="En bref">
+  <div class="wrap etiquettes">
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Colmar (68000)</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>Colmar et environs</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 15c-2 0-2-3 0-5 2 2 2 5 0 5z"/></svg>Chaudière gaz ou fioul</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="10" cy="12" r="3.5"/><path d="M16 9h2M16 12h2M16 15h2"/></svg>Pompe à chaleur &amp; climatisation</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="5"/><path d="M10 9h4"/></svg>Chauffe-eau thermodynamique</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8a4 4 0 0 1 4 4v8"/><path d="M4 5v6M14 20h4"/></svg>Plomberie</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg>Électricité</span>
+    <span class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="#7b2234" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Un seul interlocuteur</span>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <span class="sur">Le savoir-faire</span>
+      <h2>Ce que Geoffrey fait pour vous</h2>
+      <svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M2 9 Q40 2 80 8 T178 6" fill="none" stroke="#c99545" stroke-width="3.5" stroke-linecap="round"/></svg>
+      <p>Du chauffage à l'eau chaude, de la plomberie à l'électricité : les différents métiers de la maison, réunis chez un même artisan.</p>
+    </div>
+    <div class="fiches">
+      <article class="fiche rv">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="6" width="40" height="64" rx="5"/><rect x="34" y="16" width="24" height="12" rx="2"/><path d="M46 56c-6 0-7-8 0-14 7 6 6 14 0 14z" fill="#c99545" fill-opacity=".5"/><path d="M36 70v6M56 70v6M66 46h14v26"/><path d="M14 30q-6 6 0 12t0 12" stroke="#7b2234"/></g></svg>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Installation, remplacement et entretien de chaudières, pour un chauffage fiable tout l'hiver.</p>
+      </article>
+      <article class="fiche rv d1">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="18" width="62" height="44" rx="5"/><circle cx="32" cy="40" r="14"/><path d="M32 40l8-6M32 40l-8 6M32 40l6 8M32 40l-6-8" stroke="#5c7a3a"/><path d="M54 28h10M54 36h10M54 44h10M54 52h10"/><path d="M18 62v8M64 62v8"/><path d="M80 26q6 4 0 8t0 8" stroke="#c99545"/></g></svg>
+        <h3>Pompe à chaleur</h3>
+        <p>Une solution qui puise les calories de l'air pour chauffer la maison, étudiée selon votre logement.</p>
+      </article>
+      <article class="fiche rv d2">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="14" width="72" height="22" rx="6"/><path d="M20 28h56"/><path d="M28 44q4 8 0 16M48 44q4 8 0 16M68 44q4 8 0 16" stroke="#5c7a3a"/><circle cx="74" cy="21" r="1.5" fill="#7b2234"/></g></svg>
+        <h3>Climatisation</h3>
+        <p>Des étés plus doux dans la plaine d'Alsace, avec une climatisation bien placée et bien réglée.</p>
+      </article>
+      <article class="fiche rv">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="4" width="30" height="72" rx="14"/><rect x="38" y="14" width="18" height="10" rx="3"/><path d="M40 48h14M40 56h14" stroke="#c99545"/><path d="M42 76v-0M32 40H18v20M62 40h14v20"/><path d="M14 66h8M72 66h8" stroke="#7b2234"/></g></svg>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>De l'eau chaude sanitaire produite en récupérant la chaleur de l'air : un équipement à considérer.</p>
+      </article>
+      <article class="fiche rv d1">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h34a14 14 0 0 1 14 14v18"/><path d="M8 30h30a8 8 0 0 1 8 8v14"/><rect x="40" y="52" width="22" height="8" rx="2"/><path d="M51 64v4M47 72q4 6 8 0" stroke="#5c7a3a"/><path d="M70 16l14 14M84 16L70 30" stroke="#7b2234"/><path d="M4 16v18"/></g></svg>
+        <h3>Plomberie</h3>
+        <p>Raccordements, sanitaires, petites et grandes interventions sur l'eau de la maison.</p>
+      </article>
+      <article class="fiche rv d2">
+        <svg class="ico" viewBox="0 0 96 80" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="10" width="40" height="60" rx="4"/><path d="M24 22h24M24 32h24M24 42h24" /><circle cx="28" cy="22" r="0"/><path d="M30 52l-4 8h8l-4 8" stroke="#c99545"/><path d="M56 30h12q10 0 10 10v20" /><path d="M72 60h12M74 66h8" stroke="#7b2234"/></g></svg>
+        <h3>Électricité</h3>
+        <p>Travaux électriques courants, en lien avec vos équipements de chauffage ou indépendamment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pourquoi" style="padding-top:24px">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <span class="sur">Pourquoi lui</span>
+      <h2>L'artisan, tout simplement</h2>
+      <svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M2 7 Q50 12 90 6 T178 8" fill="none" stroke="#5c7a3a" stroke-width="3.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="pq-g">
+      <div class="atout rv"><div class="rond"><svg class="cercle" viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C74 4 88 24 86 48 C84 74 62 88 42 86 C18 84 4 64 6 42 C8 20 26 7 50 8" fill="rgba(201,149,69,.18)" stroke="#7b2234" stroke-width="2.5" stroke-linecap="round"/></svg><svg class="dedans" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="8"/><path d="M8 42c2-9 8-13 16-13s14 4 16 13"/></g></svg></div><h3>Un seul interlocuteur</h3><p>Vous parlez à l'artisan qui vient chez vous, du premier appel jusqu'à la fin du chantier.</p></div>
+      <div class="atout rv d1"><div class="rond"><svg class="cercle" viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C74 4 88 24 86 48 C84 74 62 88 42 86 C18 84 4 64 6 42 C8 20 26 7 50 8" fill="rgba(92,122,58,.15)" stroke="#7b2234" stroke-width="2.5" stroke-linecap="round"/></svg><svg class="dedans" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8a9 9 0 0 0-10 12L8 32a4 4 0 0 0 6 6l12-12a9 9 0 0 0 12-10l-5 5-5-1-1-5z"/></g></svg></div><h3>Plusieurs métiers</h3><p>Chauffage, plomberie et électricité : moins d'intervenants à coordonner pour vous.</p></div>
+      <div class="atout rv d2"><div class="rond"><svg class="cercle" viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C74 4 88 24 86 48 C84 74 62 88 42 86 C18 84 4 64 6 42 C8 20 26 7 50 8" fill="rgba(123,34,52,.1)" stroke="#7b2234" stroke-width="2.5" stroke-linecap="round"/></svg><svg class="dedans" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40h36M10 40V24l8-8 8 8v16M26 40V12l6-6 6 6v28"/><path d="M16 30h4M32 18h0"/></g></svg></div><h3>Un artisan d'ici</h3><p>Installé à Colmar, il connaît les maisons du secteur, des anciennes bâtisses aux pavillons récents.</p></div>
+      <div class="atout rv d3"><div class="rond"><svg class="cercle" viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C74 4 88 24 86 48 C84 74 62 88 42 86 C18 84 4 64 6 42 C8 20 26 7 50 8" fill="rgba(201,149,69,.18)" stroke="#7b2234" stroke-width="2.5" stroke-linecap="round"/></svg><svg class="dedans" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M18 26l5 5 9-10"/></g></svg></div><h3>Un devis clair</h3><p>Chaque intervention est chiffrée sur devis, après avoir vu votre installation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bois" id="etapes">
+  <div class="wrap">
+    <div class="s-tete c rv">
+      <span class="sur">Comment ça se passe</span>
+      <h2>Quatre étapes, sans détour</h2>
+      <p>Une méthode d'artisan : on regarde, on explique, on chiffre, puis on fait.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><i class="clou g"></i><i class="clou d"></i><span class="num">1</span><svg class="orn" viewBox="0 0 70 10" aria-hidden="true"><path d="M2 5h24M44 5h24M35 1l4 4-4 4-4-4z" fill="#c99545" stroke="#c99545" stroke-width="1.6"/></svg><h3>Votre appel</h3><p>Vous expliquez votre besoin : panne, remplacement, nouveau projet.</p></div>
+      <div class="etape rv d1"><i class="clou g"></i><i class="clou d"></i><span class="num">2</span><svg class="orn" viewBox="0 0 70 10" aria-hidden="true"><path d="M2 5h24M44 5h24M35 1l4 4-4 4-4-4z" fill="#c99545" stroke="#c99545" stroke-width="1.6"/></svg><h3>La visite</h3><p>Geoffrey passe voir l'installation existante et les contraintes du logement.</p></div>
+      <div class="etape rv d2"><i class="clou g"></i><i class="clou d"></i><span class="num">3</span><svg class="orn" viewBox="0 0 70 10" aria-hidden="true"><path d="M2 5h24M44 5h24M35 1l4 4-4 4-4-4z" fill="#c99545" stroke="#c99545" stroke-width="1.6"/></svg><h3>Le devis</h3><p>Une proposition écrite et détaillée, gratuite, pour décider en connaissance de cause.</p></div>
+      <div class="etape rv d3"><i class="clou g"></i><i class="clou d"></i><span class="num">4</span><svg class="orn" viewBox="0 0 70 10" aria-hidden="true"><path d="M2 5h24M44 5h24M35 1l4 4-4 4-4-4z" fill="#c99545" stroke="#c99545" stroke-width="1.6"/></svg><h3>Les travaux</h3><p>Réalisation, mise en service et explications avant de vous laisser profiter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap ap-g">
+    <figure class="ap-croquis rv" style="margin:0">
+      <svg viewBox="0 0 420 300" role="img" aria-label="Croquis : la caisse à outils de l'artisan devant une chaudière, un ballon d'eau chaude et un tableau électrique" filter="url(#crayon2)">
+        <g fill="none" stroke="#2a211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 262H410"/>
+          <rect x="30" y="70" width="86" height="150" rx="6" fill="#fbf6ea"/><rect x="44" y="86" width="58" height="26" rx="3"/><path d="M73 196c-10 0-12-14 0-24 12 10 10 24 0 24z" fill="#c99545" fill-opacity=".45"/><path d="M50 220v42M96 220v42M116 150h30v112"/>
+          <rect x="160" y="40" width="70" height="180" rx="34" fill="#fbf6ea"/><rect x="176" y="62" width="38" height="20" rx="4"/><path d="M180 150h30M180 162h30" stroke="#5c7a3a"/><path d="M180 220v42M210 220v42"/>
+          <rect x="270" y="50" width="70" height="96" rx="4" fill="#fbf6ea"/><path d="M282 68h46M282 84h46M282 100h46"/><path d="M296 112l-6 12h10l-6 12" stroke="#c99545"/><path d="M340 98h40v-60" /><path d="M370 38h20"/>
+          <path d="M252 262v-46h132v46" fill="#d9b98a" fill-opacity=".55"/><path d="M290 216v-14h56v14"/><path d="M252 236h132"/>
+          <path d="M276 208l-26 -30M262 196l8 -8" stroke="#7b2234"/><path d="M362 210l18 -38l8 4l-14 36" stroke="#7b2234"/>
+          <path d="M120 40q8 6 0 12t0 12M136 34q8 6 0 12t0 12" stroke="#7b2234"/>
+        </g>
+      </svg>
+      <figcaption>chauffage · eau · électricité</figcaption>
+    </figure>
+    <div class="ap-txt rv d1">
+      <span class="sur">L'artisan</span>
+      <div class="s-tete" style="margin-bottom:22px"><h2>Geoffrey Wessang, artisan indépendant à Colmar</h2></div>
+      <p>Geoffrey Wessang est un artisan installé à Colmar, dans le Haut-Rhin. Il intervient sur le chauffage, chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques, mais aussi en plomberie et en électricité.</p>
+      <p>Travailler avec un artisan indépendant, c'est avoir un interlocuteur unique : la personne qui répond au téléphone est celle qui vient chez vous et qui réalise le travail.</p>
+      <span class="signature">Geoffrey W.</span>
+      <ul class="carnet">
+        <li><span>Basé à</span><span>Colmar (68000)</span></li>
+        <li><span>Secteur</span><span>Colmar et environs</span></li>
+        <li><span>Téléphone</span><span><a href="tel:+33672009295">06 72 00 92 95</a></span></li>
+        <li><span>Email</span><span><a href="mailto:wessang10@gmail.com">wessang10@gmail.com</a></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="solutions" id="solutions">
+  <div class="wrap">
+    <div class="s-tete c rv">
+      <span class="sur">Quelle solution pour quel logement</span>
+      <h2>À chaque maison son cépage</h2>
+      <svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M2 9 Q40 2 80 8 T178 6" fill="none" stroke="#c99545" stroke-width="3.5" stroke-linecap="round"/></svg>
+      <p>Quelques repères pour s'y retrouver. La visite reste indispensable pour choisir la bonne solution.</p>
+    </div>
+    <div class="etiq-g">
+      <article class="etiq rv"><div class="cadre">
+        <svg viewBox="0 0 160 120" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M30 60 L80 24 L130 60"/><rect x="40" y="56" width="80" height="56"/><path d="M40 76h80M60 56l20 20M100 56l-20 20" stroke="#6a4a30"/><rect x="56" y="86" width="24" height="26" fill="#fbf6ea"/><rect x="60" y="90" width="16" height="10" rx="2"/><path d="M68 108c-3 0-4-4 0-6 4 2 3 6 0 6z" fill="#c99545"/></g></svg>
+        <span class="pour">Chauffage central existant</span>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Remplacement d'une chaudière fatiguée ou entretien régulier de votre appareil.</p>
+        <div class="prix">Tarif : <b>sur devis</b></div>
+      </div></article>
+      <article class="etiq rv d1"><div class="cadre">
+        <svg viewBox="0 0 160 120" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 58 L64 26 L108 58"/><rect x="28" y="54" width="72" height="58"/><rect x="48" y="70" width="18" height="18"/><rect x="112" y="80" width="40" height="32" rx="3" fill="#fbf6ea"/><circle cx="126" cy="96" r="9"/><path d="M126 96l5-4M126 96l-5 4" stroke="#5c7a3a"/><path d="M100 98h12" stroke-dasharray="3 3"/></g></svg>
+        <span class="pour">Maison à rénover</span>
+        <h3>Pompe à chaleur</h3>
+        <p>À étudier selon l'isolation, les radiateurs en place et la surface à chauffer.</p>
+        <div class="prix">Tarif : <b>sur devis</b></div>
+      </div></article>
+      <article class="etiq rv d2"><div class="cadre">
+        <svg viewBox="0 0 160 120" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="62" y="10" width="36" height="102" rx="17" fill="#fbf6ea"/><rect x="70" y="24" width="20" height="12" rx="3"/><path d="M70 70h20M70 80h20" stroke="#c99545"/><path d="M62 90H36v22M98 90h26v22"/><path d="M30 40q6 6 0 12M130 40q6 6 0 12" stroke="#7b2234"/></g></svg>
+        <span class="pour">Eau chaude sanitaire</span>
+        <h3>Chauffe-eau thermo.</h3>
+        <p>Une alternative au ballon électrique classique, selon la place disponible.</p>
+        <div class="prix">Tarif : <b>sur devis</b></div>
+      </div></article>
+      <article class="etiq rv d3"><div class="cadre">
+        <svg viewBox="0 0 160 120" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="14" width="120" height="96" rx="4"/><path d="M80 14v96"/><rect x="34" y="26" width="34" height="12" rx="4" fill="#fbf6ea"/><path d="M40 48q3 6 0 12M52 48q3 6 0 12M64 48q3 6 0 12" stroke="#5c7a3a"/><path d="M96 40h30M96 50h30" /><path d="M100 70h22v30h-22z"/><path d="M111 76l-4 8h8l-4 8" stroke="#c99545"/></g></svg>
+        <span class="pour">Confort d'été · rénovation</span>
+        <h3>Clim, plomberie, élec</h3>
+        <p>Climatisation, travaux de plomberie ou d'électricité, seuls ou en complément.</p>
+        <div class="prix">Tarif : <b>sur devis</b></div>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <div class="avis-p rv">
+      <svg class="plume" viewBox="0 0 84 84" aria-hidden="true" filter="url(#crayon2)"><g fill="none" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M64 10C40 14 24 34 20 64l8-6c4-10 10-18 20-22-8 0-12 2-16 4 6-12 18-22 32-30z" fill="rgba(201,149,69,.3)"/><path d="M20 64L12 74"/><path d="M34 74h38" stroke="#2a211b"/></g></svg>
+      <h2>Vos avis comptent</h2>
+      <p>Geoffrey est intervenu chez vous ? Quelques mots sur votre expérience aident vos voisins de Colmar et des environs à trouver le bon artisan. Votre avis sera le bienvenu sur Google.</p>
+      <a class="btn btn-vin" href="https://www.google.com/maps/search/?api=1&amp;query=Geoffrey+Wessang+Colmar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Laisser un avis sur Google</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:40px">
+  <div class="wrap faq-g">
+    <div>
+      <div class="s-tete rv">
+        <span class="sur">Questions fréquentes</span>
+        <h2>On en parle souvent autour d'un café</h2>
+        <p>Des réponses générales et prudentes : chaque logement mérite son diagnostic.</p>
+      </div>
+      <div class="faq-croquis rv" aria-hidden="true">
+        <svg viewBox="0 0 360 220" filter="url(#crayon2)"><g fill="none" stroke="#2a211b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M100 120h90v40a30 30 0 0 1-30 30h-30a30 30 0 0 1-30-30z" fill="#fbf6ea"/><path d="M190 132h12a14 14 0 0 1 0 28h-12"/><path d="M80 200h130"/><path d="M128 102q-8-10 0-20t0-20M150 102q-8-10 0-20t0-20" stroke="#c99545"/><path d="M240 60c16-4 30 4 34 18s-6 26-20 26l-8 14-2-16c-12-6-18-36-4-42z" stroke="#7b2234"/><path d="M252 76q6-8 12 0q0 6-6 8v4M258 96v1" stroke="#7b2234"/></g></svg>
+      </div>
+    </div>
+    <div class="faq-l">
+      <details class="rv" open><summary>Pouvez-vous entretenir ma chaudière fioul ou gaz ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>Oui, l'entretien des chaudières gaz et fioul fait partie des interventions proposées. Pour les chaudières, un entretien annuel est en principe obligatoire : il permet aussi de vérifier le bon fonctionnement et la sécurité de l'appareil.</p></div></details>
+      <details class="rv"><summary>Passer de la chaudière à la pompe à chaleur, c'est possible ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>Souvent, oui, mais cela dépend de l'isolation, des radiateurs existants et de la température d'eau nécessaire. Une visite permet de dire si la pompe à chaleur est adaptée ou si une autre solution est préférable.</p></div></details>
+      <details class="rv"><summary>Existe-t-il des aides pour ces travaux ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>Certains équipements peuvent ouvrir droit à des dispositifs comme MaPrimeRénov' ou les primes énergie, selon éligibilité et selon les conditions en vigueur. Elles évoluent régulièrement : il est conseillé de vérifier votre situation avant de signer.</p></div></details>
+      <details class="rv"><summary>Un chauffe-eau thermodynamique, c'est pour moi ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>Il demande un emplacement adapté (volume, aération, cave ou garage par exemple) et convient bien à de nombreux foyers. Le choix de la capacité dépend du nombre de personnes et de vos habitudes.</p></div></details>
+      <details class="rv"><summary>Vous faites aussi la plomberie et l'électricité ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>Oui, Geoffrey Wessang intervient aussi en plomberie et en électricité. C'est pratique lorsqu'un projet de chauffage demande des raccordements d'eau ou une adaptation électrique : un seul artisan pour l'ensemble.</p></div></details>
+      <details class="rv"><summary>Dans quel secteur intervenez-vous ?<svg class="pm" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#fbf6ea" stroke="#7b2234" stroke-width="2"/><path d="M17 10v14M10 17h14" stroke="#7b2234" stroke-width="2.4" stroke-linecap="round"/></svg></summary><div class="rep"><p>À Colmar et dans les environs. Précisez votre commune lors de votre appel ou dans le formulaire : la possibilité d'intervenir vous sera confirmée.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="s-tete rv">
+      <span class="sur">Contact</span>
+      <h2>Un coup de fil, et on en parle</h2>
+      <svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M2 7 Q50 12 90 6 T178 8" fill="none" stroke="#7b2234" stroke-width="3.5" stroke-linecap="round"/></svg>
+    </div>
+    <div class="ct-g">
+      <div>
+        <div class="bloc rv">
+          <h3>Horaires <small>horaires indicatifs · à confirmer</small></h3>
+          <ul class="horaires" id="horaires">
+            <li data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></li>
+            <li data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></li>
+            <li data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></li>
+            <li data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></li>
+            <li data-j="6"><span>Samedi</span><span>Fermé</span></li>
+            <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+          </ul>
+        </div>
+        <div class="bloc rv d1">
+          <h3>Zone d'intervention <small>Haut-Rhin</small></h3>
+          <p class="zone-t">Artisan basé à Colmar (68000), intervenant à Colmar et environs.</p>
+          <div class="coord">
+            <a href="tel:+33672009295"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>06 72 00 92 95</a>
+            <a href="mailto:wessang10@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>wessang10@gmail.com</a>
+          </div>
+          <a class="btn btn-vigne" href="https://www.google.com/maps/search/?api=1&amp;query=Geoffrey+Wessang+Colmar+68000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Itinéraire</a>
+        </div>
+      </div>
+      <form id="devis" class="rv d1" novalidate>
+        <h3>Demande de devis</h3>
+        <p class="sous">Gratuit, sans engagement. Geoffrey vous recontacte pour en parler.</p>
+        <div class="choix" role="group" aria-label="Nature des travaux">
+          <label><input type="checkbox" name="t" value="chaudiere" checked><span>Chaudière</span></label>
+          <label><input type="checkbox" name="t" value="pac"><span>Pompe à chaleur</span></label>
+          <label><input type="checkbox" name="t" value="clim"><span>Climatisation</span></label>
+          <label><input type="checkbox" name="t" value="cet"><span>Chauffe-eau thermo.</span></label>
+          <label><input type="checkbox" name="t" value="plomberie"><span>Plomberie</span></label>
+          <label><input type="checkbox" name="t" value="elec"><span>Électricité</span></label>
+        </div>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="commune">Commune</label><input id="commune" placeholder="Colmar, Ingersheim…"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+          <div class="champ"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ plein"><label for="message">Votre besoin</label><textarea id="message" placeholder="Type d'équipement, âge de l'installation, ce qui ne va pas…"></textarea></div>
+        </div>
+        <div class="form-pied">
+          <small>Vos coordonnées servent uniquement à répondre à votre demande.</small>
+          <button class="btn btn-vin" type="submit">Envoyer la demande</button>
+        </div>
+        <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire sera activé à la mise en ligne.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap pied-g">
+    <div><div class="nom">Geoffrey Wessang</div><p style="margin-top:10px">Artisan chauffagiste, plombier et électricien à Colmar : chaudières gaz et fioul, pompes à chaleur, climatisation, chauffe-eau thermodynamiques.</p></div>
+    <div><h4>Coordonnées</h4><ul><li>Colmar (68000)</li><li><a href="tel:+33672009295">06 72 00 92 95</a></li><li><a href="mailto:wessang10@gmail.com">wessang10@gmail.com</a></li></ul></div>
+    <div><h4>Horaires</h4><ul><li>Lun.–ven. : sur rendez-vous</li><li>Sam.–dim. : fermé</li><li>Horaires à confirmer</li></ul></div>
+    <div><h4>Plan du site</h4><ul><li><a href="#services">Services</a></li><li><a href="#solutions">Solutions</a></li><li><a href="#avis">Avis</a></li><li><a href="#devis">Devis gratuit</a></li></ul></div>
+  </div>
+  <div class="wrap pied-bas"><span>© <span id="annee">2026</span> Geoffrey Wessang</span><span>Colmar · Haut-Rhin · Alsace</span></div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33672009295" aria-label="Appeler Geoffrey Wessang au 06 72 00 92 95"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu')})});
+  var j=new Date().getDay(),li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+  document.getElementById('annee').textContent=new Date().getFullYear();
+  document.getElementById('devis').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduit){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>
