@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H2G Chaud &amp; Froid – chauffagiste à Auzeville-Tolosane</title>
+<meta name="description" content="H2G Chaud & Froid, chauffagiste du sud-est toulousain (Auzeville-Tolosane, Vigoulet-Auzil) : pompe à chaleur, climatisation, chauffe-eau thermodynamique, chaudière gaz ou fioul et panneaux photovoltaïques. QualiPV Elec, QualiPAC Chauffage, QualiPAC CET (RGE).">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Merriweather+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+--tuile:#b4502d;
+--tuile-f:#8f3d21;
+--ble:#e2b65a;
+--ciel:#9cc3d6;
+--ciel-f:#5f93ab;
+--tournesol:#f0c419;
+--papier:#f7f0e3;
+--papier2:#efe4cf;
+--encre:#2f241c;
+--encre2:#5a4a3c;
+--main:"Caveat Brush","Comic Sans MS",cursive;
+--sans:"Merriweather Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .18 0 0 0 0 .14 0 0 0 0 .1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;color:var(--encre);font-family:var(--sans);font-size:16.5px;line-height:1.7;font-weight:300;overflow-x:hidden;
+background-color:var(--papier);background-image:var(--grain),radial-gradient(circle at 20% 10%,rgba(226,182,90,.14),transparent 40%),radial-gradient(circle at 90% 60%,rgba(156,195,214,.16),transparent 45%)}
+svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--main);font-weight:400;line-height:1.05;margin:0;color:var(--encre)}
+p{margin:0 0 1em}
+b,strong{font-weight:700}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.main{font-family:var(--main)}
+.surligne{background:linear-gradient(transparent 58%,rgba(240,196,25,.6) 58%,rgba(240,196,25,.6) 88%,transparent 88%);padding:0 .1em}
+
+/* ruban adhésif */
+.scotch{position:absolute;width:110px;height:30px;background:rgba(240,228,190,.72);border-left:2px dashed rgba(255,255,255,.4);border-right:2px dashed rgba(255,255,255,.4);box-shadow:0 1px 3px rgba(47,36,28,.12);z-index:3}
+.scotch.bleu{background:rgba(156,195,214,.65)}
+.scotch.jaune{background:rgba(240,196,25,.55)}
+
+/* tuiles canal */
+.tuiles{height:34px;background:
+radial-gradient(ellipse 22px 15px at 22px 0,var(--tuile) 92%,transparent 100%) 0 0/44px 17px repeat-x,
+radial-gradient(ellipse 22px 15px at 0 17px,var(--tuile-f) 92%,transparent 100%) 0 17px/44px 17px repeat-x,
+radial-gradient(ellipse 22px 15px at 44px 17px,var(--tuile-f) 92%,transparent 100%) 0 17px/44px 17px repeat-x;
+filter:drop-shadow(0 3px 0 rgba(47,36,28,.18))}
+.tuiles.inv{transform:scaleY(-1)}
+
+/* ---------- Navigation ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(247,240,227,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 2px 0 rgba(47,36,28,.08)}
+.nav .wrap{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .pastille{width:48px;height:48px;flex:none}
+.logo .t{font-family:var(--main);font-size:1.7rem;line-height:.9;color:var(--encre)}
+.logo .t small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tuile);font-weight:600;margin-top:4px}
+.menu{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.86rem;font-weight:400;padding:8px 12px;border-radius:30px;transition:background .25s,color .25s}
+.menu a:hover{background:rgba(226,182,90,.3)}
+.menu .devis a{background:var(--tuile);color:#fff;font-weight:600;padding:9px 18px;margin-left:6px;box-shadow:2px 3px 0 var(--encre)}
+.menu .devis a:hover{background:var(--tuile-f)}
+.burger{display:none;width:48px;height:48px;border:2px solid var(--encre);border-radius:50%;background:var(--papier);cursor:pointer;align-items:center;justify-content:center;color:var(--encre)}
+.burger b{width:20px;height:14px;position:relative;display:block}
+.burger b::before,.burger b::after,.burger b i{content:"";position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor;transition:transform .3s,top .3s,opacity .2s}
+.burger b::before{top:0}.burger b i{top:6px}.burger b::after{top:12px}
+.burger[aria-expanded="true"] b::before{top:6px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] b::after{top:6px;transform:rotate(-45deg)}
+.burger[aria-expanded="true"] b i{opacity:0}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;font-family:var(--sans);font-weight:700;font-size:.95rem;text-decoration:none;border:2px solid var(--encre);border-radius:12px 18px 14px 16px/16px 12px 18px 14px;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-tuile{background:var(--tuile);color:#fff;box-shadow:4px 4px 0 var(--encre)}
+.btn-tuile:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre)}
+.btn-papier{background:#fffaf0;color:var(--encre);box-shadow:4px 4px 0 var(--ble)}
+.btn-papier:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ble)}
+
+/* ---------- Hero ---------- */
+.hero{padding:130px 0 0;position:relative;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center;padding-bottom:40px}
+.etiquette{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tuile);background:#fffaf0;border:1.5px dashed var(--tuile);padding:6px 14px;border-radius:30px;transform:rotate(-1.5deg)}
+.hero h1{font-size:clamp(3.2rem,7vw,6rem);margin:22px 0 10px;line-height:.92}
+.hero h1 .ch{color:var(--tuile)}
+.hero h1 .fr{color:var(--ciel-f)}
+.hero h1 .amp{color:var(--ble);font-size:.8em}
+.hero .sous{font-family:var(--main);font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--encre2);transform:rotate(-1deg);display:inline-block;margin-bottom:18px}
+.hero .accroche{font-size:1.06rem;max-width:520px;color:var(--encre2)}
+.hero .btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.fleche-main{position:relative;margin-top:22px;font-family:var(--main);font-size:1.3rem;color:var(--tuile);display:flex;align-items:center;gap:8px}
+.fleche-main svg{width:60px;height:34px}
+.feuille{position:relative;transform:rotate(2.2deg);transition:transform .6s}
+.feuille:hover{transform:rotate(.8deg) scale(1.01)}
+.feuille .papier{background:#fffdf6;background-image:linear-gradient(rgba(156,195,214,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(156,195,214,.22) 1px,transparent 1px),var(--grain);background-size:22px 22px,22px 22px,180px 180px;padding:18px;box-shadow:0 2px 0 rgba(47,36,28,.06),0 26px 40px -22px rgba(47,36,28,.55),6px 8px 0 -2px var(--papier2);position:relative}
+.feuille .papier::after{content:"";position:absolute;right:0;bottom:0;width:46px;height:46px;background:linear-gradient(135deg,transparent 50%,#e8dcc4 50%);box-shadow:-3px -3px 6px rgba(47,36,28,.08)}
+.feuille .s1{top:-14px;left:40px;transform:rotate(-6deg)}
+.feuille .s2{top:-12px;right:36px;transform:rotate(7deg)}
+.feuille .s3{bottom:-12px;left:46%;transform:rotate(-3deg)}
+.feuille svg{width:100%;height:auto}
+.feuille .tampon{position:absolute;left:-58px;bottom:-92px;width:128px;height:128px;transform:rotate(-14deg);z-index:4;mix-blend-mode:multiply;opacity:.9}
+.vent path{stroke-dasharray:6 8;animation:souffle 2.4s linear infinite}
+@keyframes souffle{to{stroke-dashoffset:-28}}
+.rayons{transform-origin:72px 70px;animation:tourne 30s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.flocon{animation:tombe 6s ease-in-out infinite}
+.flocon.f2{animation-delay:-2s}.flocon.f3{animation-delay:-4s}
+@keyframes tombe{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.helice-pac{transform-box:fill-box;transform-origin:center;animation:tourne 3s linear infinite}
+.chaleur path{animation:ondule 2.6s ease-in-out infinite}
+@keyframes ondule{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+.champs-ble{display:block;width:100%;height:auto;margin-top:-6px}
+.tournesol-tete{transform-box:fill-box;transform-origin:center;animation:balance 5s ease-in-out infinite}
+@keyframes balance{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+
+/* ---------- Bandeau confiance ---------- */
+.confiance{background:var(--encre);color:var(--papier);position:relative}
+.confiance ul{list-style:none;margin:0;padding:22px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 26px}
+.confiance li{display:flex;align-items:center;gap:10px;font-size:.9rem}
+.confiance li svg{width:26px;height:26px;color:var(--tournesol);flex:none}
+.confiance li b{font-weight:600;color:#fff}
+.confiance .sep{width:6px;height:6px;border-radius:50%;background:var(--tuile);align-self:center}
+
+/* ---------- Sections ---------- */
+section{padding:110px 0;position:relative}
+.tete{max-width:720px;margin:0 auto 60px;text-align:center}
+.tete .note{font-family:var(--main);font-size:1.5rem;color:var(--tuile);display:inline-block;transform:rotate(-2deg)}
+.tete h2{font-size:clamp(2.5rem,5vw,3.8rem);margin:6px 0 14px}
+.tete p{color:var(--encre2)}
+.trait{display:block;width:180px;height:14px;margin:0 auto}
+
+/* Services */
+.grille-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 30px}
+.fiche{position:relative;background:#fffdf6;background-image:repeating-linear-gradient(transparent 0 29px,rgba(156,195,214,.35) 29px 30px);background-position:0 64px;padding:34px 28px 26px;box-shadow:0 18px 30px -20px rgba(47,36,28,.5),0 1px 0 rgba(47,36,28,.08);transition:transform .35s,box-shadow .35s}
+.fiche::before{content:"";position:absolute;top:0;bottom:0;left:22px;width:1.5px;background:rgba(180,80,45,.35)}
+.fiche:nth-child(3n+1){transform:rotate(-1.2deg)}
+.fiche:nth-child(3n+2){transform:rotate(.9deg)}
+.fiche:nth-child(3n){transform:rotate(-.5deg)}
+.fiche:hover{transform:rotate(0) translateY(-6px);box-shadow:0 26px 36px -20px rgba(47,36,28,.6)}
+.fiche .scotch{top:-13px;left:50%;margin-left:-50px;width:100px;transform:rotate(-3deg)}
+.fiche:nth-child(even) .scotch{transform:rotate(4deg)}
+.fiche .ico{width:74px;height:74px;margin:0 0 12px 12px}
+.fiche h3{font-size:2rem;margin:0 0 6px 12px;line-height:1}
+.fiche p{font-size:.93rem;color:var(--encre2);margin:0 0 0 12px;line-height:30px}
+.fiche .pt{display:inline-block;margin:12px 0 0 12px;font-family:var(--main);font-size:1.15rem;color:var(--tuile)}
+
+/* Chaud & froid */
+.saisons{background:linear-gradient(90deg,rgba(180,80,45,.1),rgba(180,80,45,.1) 50%,rgba(156,195,214,.22) 50%,rgba(156,195,214,.22));border-top:2px dashed rgba(47,36,28,.25);border-bottom:2px dashed rgba(47,36,28,.25)}
+.saisons .grid{display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:center}
+.saison{text-align:center;padding:10px}
+.saison svg{width:170px;height:170px;margin:0 auto 10px}
+.saison h3{font-size:2.6rem}
+.saison.chaud h3{color:var(--tuile)}
+.saison.froid h3{color:var(--ciel-f)}
+.saison p{max-width:360px;margin:10px auto 0;color:var(--encre2)}
+.saison ul{list-style:none;padding:0;margin:16px auto 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.saison li{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:20px;background:#fffdf6;border:1.5px solid currentColor}
+.saison.chaud li{color:var(--tuile)}
+.saison.froid li{color:var(--ciel-f)}
+.milieu{font-family:var(--main);font-size:5.5rem;color:var(--ble);line-height:1;text-shadow:3px 3px 0 var(--encre);transform:rotate(-8deg)}
+.saisons .titre-c{text-align:center;margin-bottom:46px}
+.saisons .titre-c h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+.saisons .titre-c p{max-width:620px;margin:10px auto 0;color:var(--encre2)}
+
+/* Atouts */
+.atouts .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.atout{text-align:center;padding:30px 20px;border:2px solid var(--encre);border-radius:255px 15px 225px 15px/15px 225px 15px 255px;background:#fffdf6;transition:transform .3s,background .3s}
+.atout:hover{transform:rotate(-1deg) scale(1.03);background:#fff7e0}
+.atout svg{width:64px;height:64px;margin:0 auto 14px}
+.atout h3{font-size:1.75rem;margin-bottom:6px}
+.atout p{font-size:.9rem;color:var(--encre2);margin:0}
+
+/* Étapes */
+.etapes{background:var(--papier2);background-image:var(--grain)}
+.chemin{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative}
+.chemin>svg.pointilles{position:absolute;top:30px;left:8%;width:84%;height:60px;pointer-events:none}
+.etape{position:relative;text-align:center;z-index:1}
+.etape .num{width:92px;height:92px;margin:0 auto 16px;position:relative;display:grid;place-items:center;font-family:var(--main);font-size:3rem;color:var(--encre)}
+.etape .num svg{position:absolute;inset:0;width:100%;height:100%}
+.etape h3{font-size:1.85rem;margin-bottom:6px}
+.etape p{font-size:.92rem;color:var(--encre2);max-width:240px;margin:0 auto}
+
+/* À propos */
+.apropos .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.apropos h2{font-size:clamp(2.4rem,4.6vw,3.5rem);margin:6px 0 20px}
+.apropos .note{font-family:var(--main);font-size:1.5rem;color:var(--tuile)}
+.apropos p{color:var(--encre2)}
+.postit{margin-top:26px;background:var(--tournesol);padding:20px 24px;max-width:420px;transform:rotate(-2deg);box-shadow:0 14px 22px -14px rgba(47,36,28,.55);font-family:var(--main);font-size:1.4rem;line-height:1.3;position:relative}
+.postit .scotch{top:-14px;left:30px;width:80px;transform:rotate(-8deg)}
+.carte-zone{position:relative;transform:rotate(-1.5deg)}
+.carte-zone .papier{background:#fffdf6;padding:16px;box-shadow:0 22px 34px -22px rgba(47,36,28,.55)}
+.carte-zone .scotch{top:-12px;right:30px;transform:rotate(6deg)}
+
+/* Réalisations */
+.realisations{background:linear-gradient(180deg,transparent,rgba(226,182,90,.12))}
+.grille-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.polaroid{margin:0;background:#fff;padding:12px 12px 16px;box-shadow:0 16px 26px -16px rgba(47,36,28,.55);transition:transform .35s;position:relative}
+.polaroid:nth-child(odd){transform:rotate(-2deg)}
+.polaroid:nth-child(even){transform:rotate(1.6deg)}
+.polaroid:hover{transform:rotate(0) scale(1.04);z-index:2}
+.polaroid .scotch{top:-12px;left:50%;margin-left:-38px;width:76px;height:24px}
+.polaroid .ph{aspect-ratio:1/1;background:#fbf6ea;background-image:var(--grain);border:1px solid rgba(47,36,28,.1)}
+.polaroid .ph svg{width:100%;height:100%}
+.polaroid figcaption{font-family:var(--main);font-size:1.35rem;text-align:center;margin-top:10px;line-height:1.1}
+.polaroid figcaption small{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tuile);font-weight:600;margin-bottom:4px}
+.devis-note{margin:60px auto 0;max-width:860px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;background:#fffdf6;border:2px dashed var(--tuile);padding:30px 36px;border-radius:6px;position:relative}
+.devis-note .gros{font-family:var(--main);font-size:3rem;color:var(--tuile);line-height:.95;transform:rotate(-4deg)}
+.devis-note p{margin:0;color:var(--encre2)}
+.devis-note ul{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem}
+.devis-note li::before{content:"✓ ";color:var(--tuile);font-weight:700}
+
+/* Avis */
+.avis-bloc{max-width:760px;margin:0 auto;text-align:center;position:relative;background:#fffdf6;padding:56px 44px 50px;box-shadow:0 22px 36px -24px rgba(47,36,28,.55);transform:rotate(-.6deg)}
+.avis-bloc .scotch.a{top:-14px;left:60px;transform:rotate(-8deg)}
+.avis-bloc .scotch.b{top:-14px;right:60px;transform:rotate(8deg)}
+.avis-bloc h2{font-size:clamp(2.5rem,5vw,3.6rem);margin:8px 0 14px}
+.avis-bloc p{color:var(--encre2);max-width:520px;margin:0 auto 26px}
+.avis-bloc .coeurs{display:flex;justify-content:center;gap:8px}
+.avis-bloc .coeurs svg{width:38px;height:38px}
+
+/* FAQ */
+.faq .grid{display:grid;grid-template-columns:.8fr 1.4fr;gap:60px;align-items:start}
+.faq .tete{text-align:left;margin:0}
+.faq .tete .trait{margin:0}
+.acc{display:flex;flex-direction:column;gap:14px}
+.q{background:#fffdf6;border:2px solid var(--encre);border-radius:14px 20px 16px 18px/18px 14px 20px 16px;transition:box-shadow .3s}
+.q.ouvert{box-shadow:5px 5px 0 var(--ble)}
+.q button{width:100%;background:none;border:0;font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--encre);text-align:left;padding:18px 58px 18px 22px;cursor:pointer;position:relative;line-height:1.45}
+.q button::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:var(--main);font-size:2.2rem;color:var(--tuile);transition:transform .3s;line-height:1}
+.q button[aria-expanded="true"]::after{transform:translateY(-50%) rotate(45deg)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.q .rep>div{overflow:hidden}
+.q .rep p{padding:0 22px 20px;margin:0;color:var(--encre2);font-size:.95rem}
+.q.ouvert .rep{grid-template-rows:1fr}
+
+/* Infos */
+.infos{background:var(--papier2);background-image:var(--grain)}
+.infos .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:stretch}
+.mini-champ{display:block;width:100%;height:auto;margin-top:18px}
+.bloc-papier{position:relative;background:#fffdf6;padding:36px 34px;box-shadow:0 20px 32px -22px rgba(47,36,28,.55)}
+.bloc-papier .scotch{top:-13px;left:34px;transform:rotate(-5deg)}
+.bloc-papier h3{font-size:2.2rem;margin-bottom:14px}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:9px 10px;border-bottom:1.5px dashed rgba(47,36,28,.2);font-size:.95rem}
+.horaires td:last-child{text-align:right}
+.horaires tr.auj td{background:rgba(240,196,25,.35);font-weight:600}
+.horaires tr.auj td:first-child::after{content:" ← aujourd'hui";font-family:var(--main);font-weight:400;font-size:1.15rem;color:var(--tuile)}
+.indic{font-family:var(--main);font-size:1.2rem;color:var(--tuile);margin:14px 0 0}
+.zone-liste{list-style:none;padding:0;margin:14px 0 22px}
+.zone-liste li{padding:6px 0 6px 30px;position:relative}
+.zone-liste li::before{content:"";position:absolute;left:0;top:11px;width:16px;height:16px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--tuile)}
+.avert{font-size:.82rem;color:var(--encre2);font-style:italic;margin-top:14px}
+
+/* Contact */
+.contact .grid{display:grid;grid-template-columns:.9fr 1.2fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(2.5rem,5vw,3.6rem);margin:6px 0 18px}
+.coord{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:14px}
+.coord li{display:flex;gap:14px;align-items:center;background:#fffdf6;padding:14px 18px;border-radius:12px;border:1.5px solid rgba(47,36,28,.18)}
+.coord svg{width:34px;height:34px;flex:none}
+.coord small{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tuile);font-weight:600}
+.coord a,.coord b{font-weight:700;text-decoration:none;font-size:1.02rem;word-break:break-word}
+.coord a:hover{color:var(--tuile)}
+.cahier{position:relative;background:#fffdf6;padding:40px 38px 34px 64px;background-image:repeating-linear-gradient(transparent 0 33px,rgba(156,195,214,.5) 33px 34px);box-shadow:0 24px 38px -24px rgba(47,36,28,.6);transform:rotate(.6deg)}
+.cahier::before{content:"";position:absolute;top:0;bottom:0;left:42px;width:2px;background:rgba(180,80,45,.45)}
+.cahier .trous{position:absolute;left:12px;top:30px;bottom:30px;display:flex;flex-direction:column;justify-content:space-between}
+.cahier .trous i{width:14px;height:14px;border-radius:50%;background:var(--papier2);box-shadow:inset 1px 1px 2px rgba(47,36,28,.3)}
+.cahier .scotch{top:-14px;right:50px;transform:rotate(5deg)}
+.cahier h3{font-size:2.2rem;margin-bottom:12px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px}
+.champ{display:flex;flex-direction:column}
+.champ.plein{grid-column:1/-1}
+.champ label{font-family:var(--main);font-size:1.3rem;color:var(--tuile);line-height:1.2}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:2px solid var(--encre);padding:8px 2px;outline:none;border-radius:0;width:100%}
+.champ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--encre) 50%),linear-gradient(135deg,var(--encre) 50%,transparent 50%);background-position:calc(100% - 14px) 55%,calc(100% - 8px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.champ textarea{min-height:110px;resize:vertical;border:2px solid var(--encre);border-radius:8px;padding:10px;margin-top:6px;background:rgba(255,255,255,.6)}
+.champ input:focus,.champ select:focus{border-bottom-color:var(--tuile);background:rgba(240,196,25,.12)}
+.champ textarea:focus{border-color:var(--tuile)}
+.form-bas{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:26px}
+.form-bas small{font-size:.8rem;color:var(--encre2);max-width:280px}
+.msg{display:none;margin-top:20px;padding:16px 18px;background:var(--tournesol);font-family:var(--main);font-size:1.35rem;line-height:1.25;transform:rotate(-1deg);box-shadow:0 10px 18px -12px rgba(47,36,28,.6)}
+.msg.vu{display:block}
+
+/* Pied */
+footer{background:var(--encre);color:#e8dcc8;position:relative;padding:70px 0 0;margin-top:30px}
+footer .tuiles{position:absolute;top:-30px;left:0;right:0}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:46px}
+.pied h4{font-family:var(--main);font-weight:400;font-size:1.6rem;color:var(--tournesol);margin:0 0 12px}
+.pied p,.pied li{font-size:.9rem;color:#d6c9b4}
+.pied ul{list-style:none;padding:0;margin:0}
+.pied li{padding:3px 0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--tournesol)}
+.pied .logo .t{color:#fff}
+.bas{border-top:1px dashed rgba(247,240,227,.25);padding:18px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.8rem;color:#bcae98}
+.demo{background:#1f1812;color:#a8998a;text-align:center;font-size:.76rem;padding:11px 20px}
+
+/* Flottant */
+.flottant{position:fixed;right:16px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;display:none;place-items:center;background:var(--tuile);color:#fff;border:2px solid var(--encre);box-shadow:3px 4px 0 var(--encre)}
+.flottant svg{width:26px;height:26px}
+
+/* Révélation */
+.rv{opacity:0;translate:0 26px;transition:opacity .8s ease,translate .8s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;translate:0 0}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* Responsive */
+@media (max-width:1040px){
+.hero .grid{grid-template-columns:1fr;gap:50px}
+.feuille{max-width:620px;margin:0 auto;width:100%}
+.grille-serv{grid-template-columns:repeat(2,1fr)}
+.atouts .grid{grid-template-columns:repeat(2,1fr)}
+.grille-gal{grid-template-columns:repeat(2,1fr)}
+.apropos .grid,.faq .grid,.contact .grid,.infos .grid{grid-template-columns:1fr;gap:46px}
+.pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+.burger{display:flex}
+.menu{position:fixed;top:74px;left:0;right:0;bottom:0;flex-direction:column;justify-content:center;gap:12px;background:var(--papier);background-image:var(--grain);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility .3s}
+.menu.ouvert{opacity:1;visibility:visible;transform:none}
+.menu a{font-family:var(--main);font-size:2rem;padding:6px 18px}
+.menu .devis a{font-size:1.8rem;margin:8px 0 0}
+.nav.menu-ouvert{background:var(--papier)}
+.chemin{grid-template-columns:1fr 1fr;row-gap:40px}
+.chemin>svg.pointilles{display:none}
+.saisons .grid{grid-template-columns:1fr;gap:10px}
+.saisons{background:linear-gradient(180deg,rgba(180,80,45,.1),rgba(180,80,45,.1) 50%,rgba(156,195,214,.22) 50%,rgba(156,195,214,.22))}
+.milieu{font-size:4rem;text-align:center}
+.flottant{display:grid}
+}
+@media (max-width:600px){
+body{font-size:16px}
+.wrap{width:calc(100% - 32px)}
+section{padding:80px 0}
+.hero{padding-top:106px}
+.hero .btns .btn{width:100%}
+.grille-serv,.atouts .grid,.chemin{grid-template-columns:1fr}
+.grille-gal{grid-template-columns:1fr 1fr;gap:20px 14px}
+.polaroid{padding:8px 8px 12px}
+.polaroid figcaption{font-size:1.1rem}
+.polaroid figcaption small{font-size:.56rem;letter-spacing:.06em}
+.champs{grid-template-columns:1fr}
+.cahier{padding:34px 20px 28px 50px}
+.cahier::before{left:34px}
+.cahier .trous{left:8px}
+.bloc-papier{padding:30px 22px}
+.avis-bloc{padding:48px 22px 40px}
+.devis-note{grid-template-columns:1fr;padding:26px 22px;text-align:center}
+.devis-note ul{justify-content:center}
+.pied{grid-template-columns:1fr}
+.feuille .tampon{width:84px;height:84px;left:-6px;bottom:-74px}
+.champs-ble{height:84px}
+.etiquette{font-size:.64rem;letter-spacing:.03em;padding:6px 12px}
+.hero .sous{line-height:1.15;font-size:1.45rem}
+.fleche-main{font-size:1.15rem;line-height:1.2}
+.logo .t{font-size:1.45rem}
+.form-bas .btn{width:100%}
+.confiance ul{justify-content:flex-start;padding:20px 0}
+.confiance .sep{display:none}
+.confiance li{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+.rv{opacity:1;translate:0 0}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<filter id="crayon" x="-5%" y="-5%" width="110%" height="110%">
+<feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="3" result="t"/>
+<feDisplacementMap in="SourceGraphic" in2="t" scale="2.2"/>
+</filter>
+</defs>
+</svg>
+
+<header class="nav" id="nav">
+<div class="wrap">
+<a class="logo" href="#accueil" aria-label="H2G Chaud &amp; Froid, retour en haut">
+<svg class="pastille" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fffdf6" stroke="#2f241c" stroke-width="2"/><path d="M24 2a22 22 0 0 0 0 44z" fill="#b4502d" opacity=".9"/><path d="M24 2a22 22 0 0 1 0 44z" fill="#9cc3d6"/><text x="24" y="30" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="17" fill="#2f241c">H2G</text></svg>
+<span class="t">H2G Chaud &amp; Froid<small>Sud-est toulousain</small></span>
+</a>
+<nav aria-label="Navigation principale">
+<ul class="menu" id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#saisons">Chaud &amp; froid</a></li>
+<li><a href="#methode">Déroulé</a></li>
+<li><a href="#realisations">Réalisations</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li class="devis"><a href="#contact">Devis</a></li>
+</ul>
+</nav>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><b><i></i></b></button>
+</div>
+</header>
+
+<main>
+<!-- ================= EN-TÊTE ================= -->
+<section class="hero" id="accueil">
+<div class="wrap grid">
+<div>
+<span class="etiquette rv">● Auzeville‑Tolosane · Vigoulet‑Auzil · sud‑est toulousain</span>
+<h1 class="rv d1"><span class="ch">Chaud</span> <span class="amp">&amp;</span> <span class="fr">Froid</span></h1>
+<span class="sous rv d1">par H2G, au pied des coteaux du Lauragais</span>
+<p class="accroche rv d2">Une pompe à chaleur qui vous chauffe l'hiver et vous rafraîchit l'été, un ballon thermodynamique pour l'eau chaude, des panneaux solaires sur vos tuiles canal… et la chaudière gaz ou fioul toujours bien suivie. <b>Une seule équipe, toute l'année.</b></p>
+<div class="btns rv d3">
+<a class="btn btn-tuile" href="tel:+33615943894"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler le 06 15 94 38 94</a>
+<a class="btn btn-papier" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg>Demander un devis</a>
+</div>
+<div class="fleche-main rv d3" aria-hidden="true">
+<svg viewBox="0 0 60 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6c10 18 30 24 50 18"/><path d="M46 16l8 8-10 4"/></svg>
+3 qualifications RGE, devis sur demande
+</div>
+</div>
+
+<div class="feuille rv d2">
+<span class="scotch s1"></span><span class="scotch bleu s2"></span>
+<div class="papier">
+<svg viewBox="0 0 560 440" role="img" aria-label="Croquis&nbsp;: maison aux tuiles canal avec panneaux solaires, pompe à chaleur et ballon thermodynamique, moitié chaude avec soleil d'hiver, moitié fraîche avec flocons">
+<defs>
+<clipPath id="cGauche"><rect x="0" y="0" width="280" height="460"/></clipPath>
+<clipPath id="cDroite"><rect x="280" y="0" width="280" height="460"/></clipPath>
+</defs>
+<!-- lavis de fond -->
+<rect x="10" y="10" width="270" height="380" fill="#b4502d" opacity=".09"/>
+<rect x="280" y="10" width="270" height="380" fill="#9cc3d6" opacity=".25"/>
+<text x="26" y="44" font-family="Caveat Brush, cursive" font-size="30" fill="#b4502d">l'hiver : chaud</text>
+<text x="534" y="44" text-anchor="end" font-family="Caveat Brush, cursive" font-size="30" fill="#5f93ab">l'été : frais</text>
+<!-- soleil d'hiver -->
+<g filter="url(#crayon)">
+<circle cx="72" cy="104" r="20" fill="#f0c419" stroke="#2f241c" stroke-width="2"/>
+<g class="rayons" style="transform-origin:72px 104px" stroke="#e2b65a" stroke-width="2.5" stroke-linecap="round">
+<path d="M72 72v-10M72 136v10M40 104h-10M104 104h10M50 82l-7-7M94 126l7 7M94 82l7-7M50 126l-7 7"/>
+</g>
+</g>
+<!-- flocons -->
+<g stroke="#5f93ab" stroke-width="2" stroke-linecap="round" fill="none">
+<g class="flocon"><path d="M470 80v28M456 94h28M460 84l20 20M480 84l-20 20"/></g>
+<g class="flocon f2"><path d="M516 126v18M507 135h18M510 129l12 12M522 129l-12 12"/></g>
+<g class="flocon f3"><path d="M420 120v14M413 127h14M416 122l8 10M424 122l-8 10"/></g>
+</g>
+<!-- séparation -->
+<path d="M280 60 V400" stroke="#2f241c" stroke-width="1.5" stroke-dasharray="6 7" opacity=".45"/>
+
+<!-- MAISON -->
+<g filter="url(#crayon)" stroke="#2f241c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+<!-- murs -->
+<path d="M150 230 L150 372 L410 372 L410 230" fill="#fbf3e2"/>
+<!-- toit tuiles canal -->
+<path d="M126 236 L280 150 L434 236 Z" fill="#d98a5f"/>
+<g fill="none" stroke="#8f3d21" stroke-width="1.6">
+<path d="M150 222 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0"/>
+<path d="M178 206 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0"/>
+<path d="M206 190 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0"/>
+<path d="M236 174 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0"/>
+</g>
+<!-- génoise -->
+<path d="M138 236 H422" stroke-width="2"/>
+<path d="M144 242 H416" stroke-width="1.2" stroke-dasharray="4 4"/>
+<!-- panneaux solaires (côté droit du toit) -->
+<g fill="#2c4a63" stroke="#2f241c" stroke-width="1.8">
+<path d="M300 172 L352 172 L380 210 L322 210 Z"/>
+</g>
+<g stroke="#9cc3d6" stroke-width="1" fill="none">
+<path d="M326 172 L351 210 M313 191 L366 191"/>
+</g>
+<!-- cheminée -->
+<path d="M190 200 V170 H210 V188" fill="#fbf3e2"/>
+<!-- fenêtres -->
+<rect x="178" y="262" width="44" height="50" fill="#fff6dc"/>
+<path d="M200 262v50M178 287h44" stroke-width="1.4"/>
+<path d="M170 262h-6v50h6M230 262h6v50h-6" stroke-width="1.4" fill="#b4502d"/>
+<rect x="338" y="262" width="44" height="50" fill="#e6f1f6"/>
+<path d="M360 262v50M338 287h44" stroke-width="1.4"/>
+<path d="M330 262h-6v50h6M390 262h6v50h-6" stroke-width="1.4" fill="#9cc3d6"/>
+<!-- porte -->
+<path d="M258 372 V306 q22 -18 44 0 V372" fill="#b4502d"/>
+<circle cx="292" cy="342" r="2" fill="#2f241c"/>
+</g>
+
+<!-- ballon thermodynamique (découpe intérieure côté gauche) -->
+<g filter="url(#crayon)" stroke="#2f241c" stroke-width="2" fill="#fffdf6">
+<rect x="232" y="318" width="20" height="48" rx="9"/>
+<path d="M232 330h20" stroke-width="1.2"/>
+</g>
+<!-- PAC extérieure côté droit -->
+<g filter="url(#crayon)" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round">
+<rect x="430" y="318" width="74" height="52" rx="4" fill="#fffdf6"/>
+<circle cx="456" cy="344" r="17" fill="#e6f1f6"/>
+<path d="M486 326v38M492 326v38" stroke-width="1.4"/>
+<path d="M436 370v6M498 370v6"/>
+<path d="M430 344 H410" stroke-width="2" stroke-dasharray="3 3"/>
+</g>
+<g class="helice-pac" stroke="#2f241c" stroke-width="1.8" fill="none"><path d="M456 344 q6 -10 0 -14 M456 344 q10 6 14 0 M456 344 q-6 10 0 14 M456 344 q-10 -6 -14 0"/></g>
+<!-- souffle frais -->
+<g class="vent" stroke="#5f93ab" stroke-width="2.4" fill="none" stroke-linecap="round">
+<path d="M512 330 q14 -6 28 0"/><path d="M512 344 q16 -4 32 2"/><path d="M512 358 q14 4 26 -2"/>
+</g>
+<!-- chaleur côté gauche -->
+<g class="chaleur" stroke="#b4502d" stroke-width="2.4" fill="none" stroke-linecap="round">
+<path d="M120 300 q-6 -8 0 -16 q6 -8 0 -16"/><path d="M104 312 q-6 -8 0 -16 q6 -8 0 -16" style="animation-delay:-.8s"/><path d="M136 314 q-6 -8 0 -16 q6 -8 0 -16" style="animation-delay:-1.6s"/>
+</g>
+<!-- sol -->
+<path d="M14 376 Q140 368 280 376 T548 374" stroke="#2f241c" stroke-width="2" fill="none" filter="url(#crayon)"/>
+<g stroke="#e2b65a" stroke-width="2" stroke-linecap="round">
+<path d="M24 376v-16M30 376v-12M36 376v-18M42 376v-10M50 376v-15M58 376v-11M66 376v-17"/>
+</g>
+<g stroke="#7f9b4d" stroke-width="2" fill="none"><path d="M86 376v-30"/></g>
+<circle cx="86" cy="340" r="9" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="86" cy="340" r="3.5" fill="#5a3b1e"/>
+
+<!-- annotations -->
+<g font-family="Caveat Brush, cursive" fill="#2f241c">
+<text x="352" y="122" font-size="22">panneaux PV</text>
+<text x="352" y="142" font-size="17" fill="#5a4a3c">= votre électricité</text>
+<text x="420" y="300" font-size="22">PAC réversible</text>
+<text x="24" y="232" font-size="22">ballon thermo</text>
+<text x="24" y="252" font-size="17" fill="#5a4a3c">eau chaude</text>
+<text x="26" y="420" font-size="22" fill="#b4502d">tuiles canal ✓</text>
+<text x="540" y="428" text-anchor="end" font-size="18" fill="#5a4a3c">croquis à adapter à votre maison</text>
+</g>
+<g stroke="#2f241c" stroke-width="1.8" fill="none" stroke-linecap="round">
+<path d="M372 148 q-2 14 -22 26"/><path d="M344 168 l6 6 -8 2"/>
+<path d="M470 306 q-4 6 -10 8"/>
+<path d="M60 260 Q70 352 224 344"/><path d="M214 337 l10 7 -10 6"/>
+<path d="M64 400 Q52 300 130 242"/><path d="M118 244 l12 -2 -3 11"/>
+</g>
+</svg>
+</div>
+<svg class="tampon" viewBox="0 0 130 130" aria-hidden="true">
+<defs><path id="cercleT" d="M65 65 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs>
+<g filter="url(#crayon)">
+<circle cx="65" cy="65" r="60" fill="none" stroke="#b4502d" stroke-width="3.5"/>
+<circle cx="65" cy="65" r="34" fill="none" stroke="#b4502d" stroke-width="2"/>
+<text font-family="Merriweather Sans, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.4" fill="#b4502d"><textPath href="#cercleT">CHAUD &amp; FROID · H2G · 31320 ·</textPath></text>
+<text x="65" y="62" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="22" fill="#b4502d">Chaud</text>
+<text x="65" y="82" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="22" fill="#b4502d">&amp; Froid</text>
+</g>
+</svg>
+</div>
+</div>
+
+<!-- champs de blé & tournesols -->
+<svg class="champs-ble" viewBox="0 0 1440 150" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+<path d="M0 70 Q240 20 480 60 T960 50 T1440 60 V150 H0Z" fill="#e2b65a" opacity=".55"/>
+<path d="M0 100 Q300 60 620 96 T1240 84 T1440 92 V150 H0Z" fill="#e2b65a"/>
+<path d="M0 126 Q360 104 720 124 T1440 118 V150 H0Z" fill="#c9973f"/>
+<g stroke="#8a6a2a" stroke-width="1.2" opacity=".55" fill="none">
+<path d="M0 112 Q300 80 620 110 T1240 98 T1440 104"/><path d="M0 120 Q300 92 620 118 T1240 108 T1440 112"/>
+</g>
+<g stroke="#6f8a3e" stroke-width="2.5">
+<path d="M1080 98v-46M1120 102v-56M1160 98v-42M1200 102v-50M1250 96v-40"/>
+</g>
+<g class="tournesols">
+<g class="tournesol-tete"><circle cx="1080" cy="50" r="13" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="1080" cy="50" r="5" fill="#5a3b1e"/></g>
+<g class="tournesol-tete" style="animation-delay:-1s"><circle cx="1120" cy="44" r="15" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="1120" cy="44" r="6" fill="#5a3b1e"/></g>
+<g class="tournesol-tete" style="animation-delay:-2s"><circle cx="1160" cy="54" r="12" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="1160" cy="54" r="4.5" fill="#5a3b1e"/></g>
+<g class="tournesol-tete" style="animation-delay:-3s"><circle cx="1200" cy="50" r="14" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="1200" cy="50" r="5.5" fill="#5a3b1e"/></g>
+<g class="tournesol-tete" style="animation-delay:-1.5s"><circle cx="1250" cy="54" r="12" fill="#f0c419" stroke="#2f241c" stroke-width="1.5"/><circle cx="1250" cy="54" r="4.5" fill="#5a3b1e"/></g>
+</g>
+</svg>
+</section>
+
+<!-- ================= CONFIANCE ================= -->
+<div class="confiance">
+<div class="wrap">
+<ul>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M8 12l3 3 5-6"/></svg><span><b>QualiPV Elec</b></span></li>
+<li class="sep" aria-hidden="true"></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M8 12l3 3 5-6"/></svg><span><b>QualiPAC Chauffage</b></span></li>
+<li class="sep" aria-hidden="true"></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M8 12l3 3 5-6"/></svg><span><b>QualiPAC CET</b> · RGE</span></li>
+<li class="sep" aria-hidden="true"></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Sud‑est toulousain</b> (31320 et alentours)</span></li>
+</ul>
+</div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+<div class="wrap">
+<div class="tete rv">
+<span class="note">ce qu'on fait chez vous</span>
+<h2>Du toit à la chaufferie</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#b4502d" stroke-width="3" stroke-linecap="round"/></svg>
+<p>Installation, entretien et dépannage&nbsp;: H2G Chaud &amp; Froid couvre le chauffage, la fraîcheur, l'eau chaude et la production d'électricité solaire.</p>
+</div>
+<div class="grille-serv">
+<article class="fiche rv">
+<span class="scotch jaune"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle cx="62" cy="16" r="8" fill="#f0c419"/><path d="M62 2v4M62 26v4M48 16h4M72 16h4"/><path d="M8 66 L22 34 H62 L74 66 Z" fill="#2c4a63"/><path d="M15 50h52M41 34v32M28 34l-6 32M54 34l6 32" stroke="#9cc3d6" stroke-width="1.6"/><path d="M8 66h66"/></svg>
+<h3>Panneaux photovoltaïques</h3>
+<p>Pose de panneaux solaires pour produire une partie de votre électricité, en intégrant la toiture existante.</p>
+<span class="pt">→ QualiPV Elec</span>
+</article>
+<article class="fiche rv d1">
+<span class="scotch bleu"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="20" width="58" height="42" rx="4" fill="#fffdf6"/><circle cx="30" cy="41" r="14" fill="#e6f1f6"/><path d="M30 41c5-7 0-10 0-10M30 41c7 5 10 0 10 0M30 41c-5 7 0 10 0 10M30 41c-7-5-10 0-10 0"/><path d="M52 26v30M57 26v30"/><path d="M68 30q6-4 10 0M68 42q6-4 10 0" stroke="#5f93ab"/><path d="M12 62v6M58 62v6"/></svg>
+<h3>Pompe à chaleur</h3>
+<p>PAC air/eau pour le chauffage&nbsp;: étude du logement, choix de l'appareil, pose et mise en service.</p>
+<span class="pt">→ QualiPAC Chauffage</span>
+</article>
+<article class="fiche rv d2">
+<span class="scotch"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="14" width="68" height="24" rx="6" fill="#fffdf6"/><path d="M14 31h52"/><circle cx="64" cy="22" r="2" fill="#2f241c"/><path d="M22 46q-4 8 0 16M40 46v20M58 46q4 8 0 16" stroke="#5f93ab"/><path d="M36 70l4-4 4 4" stroke="#5f93ab"/></svg>
+<h3>Climatisation</h3>
+<p>Climatisation réversible pour garder la maison au frais quand le soleil tape sur les coteaux.</p>
+<span class="pt">→ fraîcheur l'été</span>
+</article>
+<article class="fiche rv">
+<span class="scotch bleu"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="24" y="4" width="32" height="70" rx="16" fill="#fffdf6"/><path d="M24 22h32"/><circle cx="40" cy="13" r="4" fill="#9cc3d6"/><path d="M32 38c3-3 5-3 8 0s5 3 8 0M32 48c3-3 5-3 8 0s5 3 8 0M32 58c3-3 5-3 8 0s5 3 8 0" stroke="#b4502d"/></svg>
+<h3>Chauffe‑eau thermodynamique</h3>
+<p>Un ballon qui récupère les calories de l'air pour l'eau chaude sanitaire, dimensionné selon le foyer.</p>
+<span class="pt">→ QualiPAC CET</span>
+</article>
+<article class="fiche rv d1">
+<span class="scotch jaune"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="16" y="6" width="48" height="58" rx="4" fill="#fffdf6"/><path d="M16 18h48"/><circle cx="26" cy="12" r="2"/><circle cx="34" cy="12" r="2"/><path d="M40 54c-8 0-11-5-10-10 1-4 5-6 5-12 4 3 7 7 6 11 3-2 4-4 4-7 4 4 6 9 5 13-1 4-5 5-10 5z" fill="#f0c419"/><path d="M28 64v10M52 64v10M36 64v6M44 64v6"/></svg>
+<h3>Chaudière gaz ou fioul</h3>
+<p>Installation, remplacement, entretien et dépannage de chaudières gaz ou fioul, en toute sécurité.</p>
+<span class="pt">→ chaleur l'hiver</span>
+</article>
+<article class="fiche rv d2">
+<span class="scotch"></span>
+<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M50 8a14 14 0 0 0-13 19L10 54a6 6 0 0 0 8 8l27-27a14 14 0 0 0 19-13l-9 9-7-2-2-7 9-9a14 14 0 0 0-5-3z" fill="#fffdf6"/><circle cx="14" cy="58" r="2" fill="#2f241c"/><path d="M58 52l8 8M62 48l8 8M54 56l8 8" stroke="#b4502d"/></svg>
+<h3>Entretien &amp; dépannage</h3>
+<p>Visites d'entretien, diagnostic de panne et remise en route de vos équipements, toutes saisons.</p>
+<span class="pt">→ sur rendez‑vous</span>
+</article>
+</div>
+</div>
+</section>
+
+<!-- ================= CHAUD & FROID ================= -->
+<section class="saisons" id="saisons">
+<div class="wrap">
+<div class="titre-c rv">
+<span class="main" style="font-size:1.5rem;color:var(--tuile)">pourquoi « Chaud &amp; Froid »&nbsp;?</span>
+<h2>Deux saisons, une même installation</h2>
+<p>Le nom dit tout&nbsp;: H2G s'occupe de votre confort quand il gèle sur le Lauragais comme quand l'été écrase la plaine toulousaine.</p>
+</div>
+<div class="grid">
+<div class="saison chaud rv">
+<svg viewBox="0 0 170 170" aria-hidden="true">
+<circle cx="85" cy="85" r="78" fill="#fffdf6" stroke="#b4502d" stroke-width="2.5" stroke-dasharray="5 6"/>
+<g filter="url(#crayon)"><circle cx="85" cy="76" r="26" fill="#f0c419" stroke="#2f241c" stroke-width="2.2"/></g>
+<g class="rayons" style="transform-origin:85px 76px" stroke="#b4502d" stroke-width="3" stroke-linecap="round"><path d="M85 38v-10M85 114v10M47 76h-10M123 76h10M58 49l-7-7M112 103l7 7M112 49l7-7M58 103l-7 7"/></g>
+<path d="M46 122 q39 -12 78 0" stroke="#2f241c" stroke-width="2" fill="none"/>
+<text x="85" y="143" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="16" fill="#b4502d">bien au chaud</text>
+</svg>
+<h3>Chaud, l'hiver</h3>
+<p>Pompe à chaleur, chaudière gaz ou fioul, eau chaude par ballon thermodynamique&nbsp;: un chauffage régulier et suivi.</p>
+<ul><li>PAC air/eau</li><li>Chaudière</li><li>Ballon thermo</li></ul>
+</div>
+<div class="milieu" aria-hidden="true">&amp;</div>
+<div class="saison froid rv d1">
+<svg viewBox="0 0 170 170" aria-hidden="true">
+<circle cx="85" cy="85" r="78" fill="#fffdf6" stroke="#5f93ab" stroke-width="2.5" stroke-dasharray="5 6"/>
+<g stroke="#5f93ab" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#crayon)">
+<path d="M85 42v68M56 59l58 34M56 93l58-34"/>
+<path d="M85 42l-8 8M85 42l8 8M85 110l-8-8M85 110l8-8M56 59l3 11M56 59l11-3M114 93l-3-11M114 93l-11 3M56 93l11 3M56 93l3-11M114 59l-11-3M114 59l-3 11"/>
+</g>
+<path d="M46 122 q39 -12 78 0" stroke="#2f241c" stroke-width="2" fill="none"/>
+<text x="85" y="143" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="16" fill="#5f93ab">bien au frais</text>
+</svg>
+<h3>Froid, l'été</h3>
+<p>Climatisation et PAC réversible pour rafraîchir la maison, et des panneaux solaires qui produisent justement quand il fait beau.</p>
+<ul><li>Clim réversible</li><li>PAC réversible</li><li>Photovoltaïque</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="atouts" id="atouts">
+<div class="wrap">
+<div class="tete rv">
+<span class="note">les bonnes raisons</span>
+<h2>Pourquoi faire appel à H2G</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#e2b65a" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+<div class="grid">
+<div class="atout rv"><svg viewBox="0 0 64 64" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round"><path d="M32 4l22 8v16c0 14-9 24-22 32C19 52 10 42 10 28V12z" fill="#fff3c8"/><path d="M22 32l7 7 13-15" stroke="#b4502d" stroke-width="3" stroke-linecap="round"/></svg><h3>Trois qualifications</h3><p>QualiPV Elec, QualiPAC Chauffage et QualiPAC CET&nbsp;: un professionnel RGE pour le solaire, la PAC et l'eau chaude.</p></div>
+<div class="atout rv d1"><svg viewBox="0 0 64 64" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round"><circle cx="20" cy="32" r="14" fill="#f4c7b4"/><circle cx="44" cy="32" r="14" fill="#d7e8f0"/><path d="M20 26v12M14 32h12" stroke="#b4502d" stroke-width="2.5"/><path d="M38 32h12" stroke="#5f93ab" stroke-width="2.5"/></svg><h3>Été comme hiver</h3><p>Une même équipe pour le chauffage et la fraîcheur&nbsp;: un interlocuteur qui connaît toute votre installation.</p></div>
+<div class="atout rv d2"><svg viewBox="0 0 64 64" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M8 52 L32 16 L56 52 Z" fill="#fde7a3"/><path d="M20 52v-10h24v10"/><path d="M14 44 q18 -6 36 0" stroke="#b4502d"/><path d="M6 52h52"/></svg><h3>Toitures du coin</h3><p>Des maisons aux tuiles canal, des coteaux, des pavillons&nbsp;: des poses pensées pour l'habitat du sud‑est toulousain.</p></div>
+<div class="atout rv d3"><svg viewBox="0 0 64 64" fill="none" stroke="#2f241c" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><rect x="12" y="8" width="40" height="50" rx="4" fill="#fffdf6"/><path d="M20 20h24M20 30h24M20 40h14" stroke="#5a4a3c"/><path d="M38 44l4 4 8-10" stroke="#b4502d" stroke-width="3"/></svg><h3>Devis clair</h3><p>Une proposition écrite après échange et visite, et des informations sur les aides possibles selon éligibilité.</p></div>
+</div>
+</div>
+</section>
+
+<!-- ================= ÉTAPES ================= -->
+<section class="etapes" id="methode">
+<div class="wrap">
+<div class="tete rv">
+<span class="note">pas à pas</span>
+<h2>Comment ça se passe</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#9cc3d6" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+<div class="chemin">
+<svg class="pointilles" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 Q125 0 250 30 T500 30 T750 30 T1000 30" fill="none" stroke="#2f241c" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" opacity=".55"/></svg>
+<div class="etape rv"><div class="num"><svg viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C72 4 88 22 86 48 C84 72 66 88 44 86 C20 84 4 66 6 42 C8 20 24 8 50 8" fill="#fffdf6" stroke="#b4502d" stroke-width="3" stroke-linecap="round"/></svg><span style="position:relative">1</span></div><h3>Un coup de fil</h3><p>Vous appelez ou écrivez&nbsp;: on fait le point sur votre maison et votre besoin, chaud, froid ou les deux.</p></div>
+<div class="etape rv d1"><div class="num"><svg viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C72 4 88 22 86 48 C84 72 66 88 44 86 C20 84 4 66 6 42 C8 20 24 8 50 8" fill="#fffdf6" stroke="#e2b65a" stroke-width="3" stroke-linecap="round"/></svg><span style="position:relative">2</span></div><h3>La visite</h3><p>Passage sur place&nbsp;: toiture, emplacement de la PAC ou du ballon, état de la chaudière actuelle.</p></div>
+<div class="etape rv d2"><div class="num"><svg viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C72 4 88 22 86 48 C84 72 66 88 44 86 C20 84 4 66 6 42 C8 20 24 8 50 8" fill="#fffdf6" stroke="#5f93ab" stroke-width="3" stroke-linecap="round"/></svg><span style="position:relative">3</span></div><h3>Le devis</h3><p>Une proposition détaillée, avec les pistes d'aides financières selon votre éligibilité.</p></div>
+<div class="etape rv d3"><div class="num"><svg viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6 C72 4 88 22 86 48 C84 72 66 88 44 86 C20 84 4 66 6 42 C8 20 24 8 50 8" fill="#fffdf6" stroke="#f0c419" stroke-width="3" stroke-linecap="round"/></svg><span style="position:relative">4</span></div><h3>La pose</h3><p>Installation, mise en service, explications, puis entretien régulier pour durer.</p></div>
+</div>
+</div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="apropos" id="apropos">
+<div class="wrap grid">
+<div>
+<span class="note rv">qui sommes‑nous&nbsp;?</span>
+<h2 class="rv d1">H2G Chaud &amp; Froid, <span class="surligne">côté sud‑est toulousain</span></h2>
+<p class="rv d1">H2G Chaud &amp; Froid est une entreprise de chauffage et de climatisation installée dans le secteur d'Auzeville‑Tolosane et de Vigoulet‑Auzil (31320), au sud‑est de Toulouse.</p>
+<p class="rv d2">Elle intervient sur les pompes à chaleur, la climatisation, les chauffe‑eau thermodynamiques, les chaudières gaz ou fioul et les panneaux photovoltaïques. L'entreprise est qualifiée RGE QualiPV Elec, QualiPAC Chauffage et QualiPAC CET.</p>
+<p class="rv d2">Chaque projet commence par un échange et, si besoin, une visite, pour proposer une solution adaptée à votre maison.</p>
+<div class="postit rv d3"><span class="scotch"></span>Chauffage l'hiver, fraîcheur l'été&nbsp;: un seul numéro, le 06 15 94 38 94.</div>
+</div>
+<div class="carte-zone rv d2">
+<span class="scotch bleu"></span>
+<div class="papier">
+<svg viewBox="0 0 460 380" role="img" aria-label="Croquis de la zone&nbsp;: sud-est de Toulouse, Auzeville-Tolosane et Vigoulet-Auzil, Canal du Midi et coteaux">
+<rect width="460" height="380" fill="#fbf6ea"/>
+<g stroke="#9cc3d6" stroke-opacity=".35"><path d="M0 40h460M0 80h460M0 120h460M0 160h460M0 200h460M0 240h460M0 280h460M0 320h460M0 360h460"/></g>
+<!-- coteaux -->
+<path d="M0 300 Q80 250 160 290 T320 270 T460 290 V380 H0Z" fill="#e2b65a" opacity=".45"/>
+<path d="M0 330 Q100 300 200 330 T460 320 V380 H0Z" fill="#e2b65a" opacity=".6"/>
+<!-- Garonne -->
+<path d="M60 0 C 90 80, 40 140, 90 220 S 120 320, 80 380" fill="none" stroke="#5f93ab" stroke-width="7" opacity=".7" filter="url(#crayon)"/>
+<!-- canal -->
+<path d="M182 100 C 240 150, 300 200, 450 230" fill="none" stroke="#5f93ab" stroke-width="3" stroke-dasharray="10 5" filter="url(#crayon)"/>
+<!-- Toulouse -->
+<g filter="url(#crayon)"><rect x="120" y="70" width="60" height="40" fill="#f4c7b4" stroke="#2f241c" stroke-width="2"/></g>
+<!-- zone -->
+<ellipse cx="270" cy="200" rx="120" ry="80" fill="#b4502d" fill-opacity=".1" stroke="#b4502d" stroke-width="2.5" stroke-dasharray="7 6" filter="url(#crayon)"/>
+<circle cx="292" cy="178" r="7" fill="#b4502d" stroke="#2f241c" stroke-width="1.5"/>
+<circle cx="232" cy="226" r="7" fill="#b4502d" stroke="#2f241c" stroke-width="1.5"/>
+<g font-family="Caveat Brush, cursive" fill="#2f241c">
+<text x="114" y="62" font-size="24">Toulouse</text>
+<text x="300" y="160" font-size="22">Auzeville‑Tolosane</text>
+<text x="130" y="254" font-size="22">Vigoulet‑Auzil</text>
+<text x="368" y="262" font-size="17" fill="#5f93ab" transform="rotate(8 368 262)">canal du Midi</text>
+<text x="16" y="200" font-size="17" fill="#5f93ab" transform="rotate(-80 16 200)">Garonne</text>
+<text x="250" y="320" font-size="20" fill="#8a6a2a">coteaux du Lauragais →</text>
+<text x="262" y="96" font-size="18" fill="#b4502d">zone d'intervention (31320)</text>
+</g>
+<path d="M280 102 q-14 10 -14 22" stroke="#b4502d" stroke-width="1.8" fill="none"/><path d="M260 116 l6 8 5-8" stroke="#b4502d" stroke-width="1.8" fill="none"/>
+<!-- rose des vents -->
+<g transform="translate(410 50)" stroke="#2f241c" stroke-width="1.5" fill="none"><circle r="18"/><path d="M0 -24 L5 0 L0 24 L-5 0Z" fill="#f0c419"/><text y="-28" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="14" fill="#2f241c" stroke="none">N</text></g>
+</svg>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= RÉALISATIONS ================= -->
+<section class="realisations" id="realisations">
+<div class="wrap">
+<div class="tete rv">
+<span class="note">quelques croquis</span>
+<h2>Exemples d'installations</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#b4502d" stroke-width="3" stroke-linecap="round"/></svg>
+<p>Des illustrations de configurations courantes, pour se faire une idée. Votre projet sera dessiné pour votre maison.</p>
+</div>
+<div class="grille-gal">
+<figure class="polaroid rv">
+<span class="scotch jaune"></span>
+<div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<g filter="url(#crayon)"><path d="M20 120 L100 60 L180 120 Z" fill="#d98a5f"/><path d="M40 118 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0 q6 -6 12 0" stroke="#8f3d21" stroke-width="1.3"/>
+<path d="M108 74 L140 74 L164 108 L128 108 Z" fill="#2c4a63"/><path d="M124 74 L146 108 M118 91 H152" stroke="#9cc3d6" stroke-width="1"/>
+<path d="M34 120 V176 H166 V120" fill="#fbf3e2"/></g>
+<circle cx="40" cy="36" r="12" fill="#f0c419"/><path d="M40 16v6M40 50v6M20 36h6M54 36h6" stroke="#e2b65a"/>
+<path d="M10 178h180"/>
+</svg></div>
+<figcaption><small>Exemple d'installation</small>Panneaux PV sur tuiles canal</figcaption>
+</figure>
+<figure class="polaroid rv d1">
+<span class="scotch bleu"></span>
+<div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<g filter="url(#crayon)"><path d="M20 30 H120 V176 H20" fill="#fbf3e2"/><path d="M20 30 V176" />
+<rect x="44" y="60" width="44" height="52" fill="#e6f1f6"/><path d="M66 60v52M44 86h44" stroke-width="1.2"/>
+<rect x="112" y="128" width="64" height="44" rx="3" fill="#fffdf6"/><circle cx="136" cy="150" r="14" fill="#e6f1f6"/><path d="M160 134v32M165 134v32" stroke-width="1.2"/></g>
+<path d="M136 150l8-6M136 150l-8 6M136 150l6 8M136 150l-6-8" stroke-width="1.2"/>
+<path d="M180 140 q10 -4 16 0M180 152 q10 -4 16 0" stroke="#5f93ab"/>
+<path d="M10 178h180"/>
+</svg></div>
+<figcaption><small>Exemple d'installation</small>PAC en façade</figcaption>
+</figure>
+<figure class="polaroid rv d2">
+<span class="scotch"></span>
+<div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<g filter="url(#crayon)"><rect x="72" y="22" width="56" height="150" rx="28" fill="#fffdf6"/><path d="M72 56h56"/><circle cx="100" cy="40" r="8" fill="#e6f1f6"/>
+<rect x="88" y="70" width="24" height="12" rx="2"/></g>
+<path d="M84 104c4-4 8-4 16 0s12 4 16 0M84 120c4-4 8-4 16 0s12 4 16 0M84 136c4-4 8-4 16 0s12 4 16 0" stroke="#b4502d"/>
+<path d="M128 146h34v28M72 150H40v24" stroke-width="1.6"/>
+<text x="140" y="80" font-family="Caveat Brush, cursive" font-size="18" fill="#b4502d" stroke="none">eau</text><text x="140" y="98" font-family="Caveat Brush, cursive" font-size="18" fill="#b4502d" stroke="none">chaude</text>
+<path d="M10 180h180"/>
+</svg></div>
+<figcaption><small>Exemple d'installation</small>Ballon thermodynamique</figcaption>
+</figure>
+<figure class="polaroid rv d3">
+<span class="scotch jaune"></span>
+<div class="ph"><svg viewBox="0 0 200 200" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<g filter="url(#crayon)"><rect x="60" y="20" width="80" height="108" rx="5" fill="#fffdf6"/><path d="M60 42h80"/><circle cx="74" cy="31" r="3"/><circle cx="86" cy="31" r="3"/><rect x="106" y="27" width="24" height="8" rx="1"/></g>
+<path d="M100 112c-12 0-16-8-14-16 2-6 8-10 8-18 6 4 10 10 8 16 4-2 6-6 6-10 6 6 8 14 6 20-2 6-8 8-14 8z" fill="#f0c419"/>
+<path d="M76 128v32H56M92 128v44M108 128v44M124 128v32h20" stroke-width="1.8"/>
+<path d="M10 180h180"/>
+</svg></div>
+<figcaption><small>Exemple d'installation</small>Chaudière gaz murale</figcaption>
+</figure>
+</div>
+
+<div class="devis-note rv">
+<div class="gros">Tarifs&nbsp;:<br>sur devis</div>
+<div>
+<p>Chaque maison est différente&nbsp;: surface, isolation, toiture, équipement existant. Le prix est établi après échange et visite, avant tout engagement.</p>
+<ul><li>Photovoltaïque</li><li>Pompe à chaleur</li><li>Climatisation</li><li>Ballon thermo</li><li>Chaudière gaz/fioul</li><li>Entretien</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="avis" id="avis">
+<div class="wrap">
+<div class="avis-bloc rv">
+<span class="scotch a"></span><span class="scotch bleu b"></span>
+<div class="coeurs" aria-hidden="true">
+<svg viewBox="0 0 40 40" fill="#f4c7b4" stroke="#b4502d" stroke-width="2"><path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20z"/></svg>
+<svg viewBox="0 0 40 40" fill="#fff3c8" stroke="#e2b65a" stroke-width="2"><path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20z"/></svg>
+<svg viewBox="0 0 40 40" fill="#d7e8f0" stroke="#5f93ab" stroke-width="2"><path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20z"/></svg>
+</div>
+<span class="main" style="font-size:1.5rem;color:var(--tuile);display:block;margin-top:10px">votre retour</span>
+<h2>Vos avis comptent</h2>
+<p>H2G Chaud &amp; Froid est passé chez vous pour une PAC, une clim, un ballon ou des panneaux&nbsp;? Quelques mots de votre part aident vos voisins du sud‑est toulousain à choisir.</p>
+<a class="btn btn-papier" href="mailto:h2g.chauffage@yahoo.com?subject=Mon%20avis%20sur%20H2G%20Chaud%20%26%20Froid">Laisser un avis</a>
+</div>
+</div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+<div class="wrap grid">
+<div class="tete rv">
+<span class="note">on nous demande souvent</span>
+<h2>Questions fréquentes</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#e2b65a" stroke-width="3" stroke-linecap="round"/></svg>
+<p style="margin-top:16px">Des réponses générales ; votre situation sera étudiée au cas par cas.</p>
+</div>
+<div class="acc rv d1">
+<div class="q"><button aria-expanded="false">Une pompe à chaleur peut‑elle aussi rafraîchir la maison&nbsp;?</button><div class="rep"><div><p>Certaines pompes à chaleur sont dites réversibles&nbsp;: elles chauffent l'hiver et peuvent rafraîchir l'été. Tout dépend du modèle (air/air ou air/eau) et des émetteurs de la maison. C'est un point à vérifier lors de la visite.</p></div></div></div>
+<div class="q"><button aria-expanded="false">Des panneaux solaires sur des tuiles canal, c'est possible&nbsp;?</button><div class="rep"><div><p>Oui, dans de nombreux cas, avec des systèmes de fixation adaptés à ce type de couverture. L'orientation, l'inclinaison, l'ombrage et l'état de la toiture sont étudiés avant de proposer une installation. Des règles d'urbanisme locales peuvent aussi s'appliquer.</p></div></div></div>
+<div class="q"><button aria-expanded="false">Quelles aides pour une PAC ou un ballon thermodynamique&nbsp;?</button><div class="rep"><div><p>Des dispositifs comme MaPrimeRénov' ou les primes énergie peuvent exister, selon éligibilité (revenus, logement, type de travaux). Le recours à une entreprise RGE est en général requis. Les règles évoluent&nbsp;: renseignez‑vous auprès de France Rénov' avant de signer.</p></div></div></div>
+<div class="q"><button aria-expanded="false">Faut‑il entretenir sa chaudière chaque année&nbsp;?</button><div class="rep"><div><p>L'entretien annuel d'une chaudière gaz ou fioul est en règle générale obligatoire. Il permet de vérifier la sécurité, le rendement et la combustion, et donne lieu à une attestation.</p></div></div></div>
+<div class="q"><button aria-expanded="false">Combien de temps dure l'installation d'une PAC&nbsp;?</button><div class="rep"><div><p>Cela varie selon la configuration&nbsp;: remplacement simple d'une chaudière ou création d'un nouveau circuit. La durée indicative est précisée dans le devis, après la visite.</p></div></div></div>
+<div class="q"><button aria-expanded="false">Dans quelles communes intervenez‑vous&nbsp;?</button><div class="rep"><div><p>Le secteur principal est celui d'Auzeville‑Tolosane, de Vigoulet‑Auzil et du sud‑est toulousain. Appelez en indiquant votre commune pour confirmer l'intervention.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- ================= INFOS ================= -->
+<section class="infos" id="infos">
+<div class="wrap">
+<div class="tete rv">
+<span class="note">pratique</span>
+<h2>Horaires &amp; secteur</h2>
+<svg class="trait" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 9 Q45 2 90 8 T176 6" fill="none" stroke="#9cc3d6" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+<div class="grid">
+<div class="bloc-papier rv">
+<span class="scotch jaune"></span>
+<h3>Horaires</h3>
+<table class="horaires" id="horaires">
+<tbody>
+<tr data-j="1"><td>Lundi</td><td>sur rendez‑vous</td></tr>
+<tr data-j="2"><td>Mardi</td><td>sur rendez‑vous</td></tr>
+<tr data-j="3"><td>Mercredi</td><td>sur rendez‑vous</td></tr>
+<tr data-j="4"><td>Jeudi</td><td>sur rendez‑vous</td></tr>
+<tr data-j="5"><td>Vendredi</td><td>sur rendez‑vous</td></tr>
+<tr data-j="6"><td>Samedi</td><td>fermé</td></tr>
+<tr data-j="0"><td>Dimanche</td><td>fermé</td></tr>
+</tbody>
+</table>
+<p class="indic">horaires indicatifs, à confirmer par téléphone</p>
+</div>
+<div class="bloc-papier rv d1">
+<span class="scotch bleu"></span>
+<h3>Où intervient H2G&nbsp;?</h3>
+<p>Zone d'intervention&nbsp;:</p>
+<ul class="zone-liste">
+<li><b>Auzeville‑Tolosane</b></li>
+<li><b>Vigoulet‑Auzil</b></li>
+<li>et le <b>sud‑est toulousain</b> (31320 et alentours)</li>
+</ul>
+<a class="btn btn-tuile" href="https://www.google.com/maps/search/?api=1&amp;query=H2G%20Chaud%20%26%20Froid%2031320" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+<p class="avert">Intervention à domicile, sur rendez‑vous.</p>
+<svg class="mini-champ" viewBox="0 0 400 70" aria-hidden="true"><path d="M0 50 Q100 30 200 46 T400 40 V70 H0Z" fill="#e2b65a" opacity=".6"/><path d="M0 60 Q120 48 240 60 T400 56 V70 H0Z" fill="#c9973f" opacity=".7"/><g stroke="#6f8a3e" stroke-width="2"><path d="M300 52V24M330 50V18M360 52V26"/></g><g fill="#f0c419" stroke="#2f241c" stroke-width="1.3"><circle cx="300" cy="22" r="8"/><circle cx="330" cy="16" r="9"/><circle cx="360" cy="24" r="7"/></g><g fill="#5a3b1e"><circle cx="300" cy="22" r="3"/><circle cx="330" cy="16" r="3.4"/><circle cx="360" cy="24" r="2.6"/></g><path d="M30 40 L60 22 L90 40Z M38 40 V56 H82 V40" fill="#d98a5f" stroke="#2f241c" stroke-width="1.5"/></svg>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+<div class="wrap grid">
+<div>
+<span class="note main rv" style="font-size:1.5rem;color:var(--tuile)">un projet, une panne&nbsp;?</span>
+<h2 class="rv d1">Écrivez‑nous, on vous rappelle</h2>
+<p class="rv d1" style="color:var(--encre2)">Décrivez votre maison et votre besoin&nbsp;: chauffage, clim, eau chaude, panneaux solaires ou entretien de chaudière.</p>
+<ul class="coord rv d2">
+<li><svg viewBox="0 0 34 34" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round"><circle cx="17" cy="17" r="15" fill="#f4c7b4"/><path d="M11 9h3l2 4-2 1.5a8 8 0 0 0 4.5 4.5L20 17l4 2v3a1.5 1.5 0 0 1-1.5 1.5A12.5 12.5 0 0 1 9.5 10.5 1.5 1.5 0 0 1 11 9z"/></svg><div><small>Téléphone</small><a href="tel:+33615943894">06 15 94 38 94</a></div></li>
+<li><svg viewBox="0 0 34 34" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round"><circle cx="17" cy="17" r="15" fill="#d7e8f0"/><rect x="9" y="11" width="16" height="12" rx="1"/><path d="M9 12l8 6 8-6"/></svg><div><small>Email</small><a href="mailto:h2g.chauffage@yahoo.com">h2g.chauffage@yahoo.com</a></div></li>
+<li><svg viewBox="0 0 34 34" fill="none" stroke="#2f241c" stroke-width="2" stroke-linejoin="round"><circle cx="17" cy="17" r="15" fill="#fff3c8"/><path d="M17 26s-6-5-6-10a6 6 0 0 1 12 0c0 5-6 10-6 10z"/><circle cx="17" cy="16" r="2"/></svg><div><small>Secteur</small><b>Auzeville‑Tolosane, Vigoulet‑Auzil et sud‑est toulousain</b></div></li>
+</ul>
+</div>
+<form class="cahier rv d1" id="form" novalidate>
+<span class="scotch"></span>
+<div class="trous" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<h3>Demande de devis</h3>
+<div class="champs">
+<div class="champ"><label for="nom">Votre nom</label><input id="nom" name="nom" autocomplete="name"></div>
+<div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+<div class="champ"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
+<div class="champ"><label for="ville">Commune</label><input id="ville" name="ville"></div>
+<div class="champ plein"><label for="besoin">Votre besoin</label>
+<select id="besoin" name="besoin"><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe‑eau thermodynamique</option><option>Panneaux photovoltaïques</option><option>Chaudière gaz ou fioul</option><option>Entretien / dépannage</option><option>Autre</option></select>
+</div>
+<div class="champ plein"><label for="message">Quelques mots sur votre projet</label><textarea id="message" name="message"></textarea></div>
+</div>
+<div class="form-bas">
+<small>Vos coordonnées servent uniquement à répondre à votre demande.</small>
+<button class="btn btn-tuile" type="submit">Envoyer ma demande</button>
+</div>
+<div class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire n'envoie rien pour l'instant. En attendant&nbsp;: 06 15 94 38 94 ou h2g.chauffage@yahoo.com</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="tuiles" aria-hidden="true"></div>
+<div class="wrap pied">
+<div>
+<a class="logo" href="#accueil" style="margin-bottom:14px">
+<svg class="pastille" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fffdf6" stroke="#f7f0e3" stroke-width="2"/><path d="M24 2a22 22 0 0 0 0 44z" fill="#b4502d"/><path d="M24 2a22 22 0 0 1 0 44z" fill="#9cc3d6"/><text x="24" y="30" text-anchor="middle" font-family="Caveat Brush, cursive" font-size="17" fill="#2f241c">H2G</text></svg>
+<span class="t">H2G Chaud &amp; Froid<small style="color:var(--ble)">Sud-est toulousain</small></span>
+</a>
+<p>Chauffage l'hiver, fraîcheur l'été&nbsp;: pompe à chaleur, climatisation, chauffe‑eau thermodynamique, chaudière gaz ou fioul, panneaux photovoltaïques.</p>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:+33615943894">06 15 94 38 94</a></li>
+<li><a href="mailto:h2g.chauffage@yahoo.com">h2g.chauffage@yahoo.com</a></li>
+<li>Auzeville‑Tolosane, Vigoulet‑Auzil et sud‑est toulousain</li>
+</ul>
+</div>
+<div>
+<h4>Horaires</h4>
+<ul><li>Lundi – vendredi</li><li>sur rendez‑vous</li><li><em>horaires indicatifs</em></li></ul>
+</div>
+<div>
+<h4>Qualifications</h4>
+<ul><li>QualiPV Elec</li><li>QualiPAC Chauffage</li><li>QualiPAC CET</li><li>Entreprise RGE</li></ul>
+</div>
+</div>
+<div class="wrap bas"><span>© <span id="annee"></span> H2G Chaud &amp; Froid</span><span>Tarifs sur devis</span></div>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33615943894" aria-label="Appeler H2G Chaud et Froid au 06 15 94 38 94"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+(function(){
+var nav=document.getElementById('nav');
+function onScroll(){nav.classList.toggle('solid',window.scrollY>20)}
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+function fermer(){m.classList.remove('ouvert');nav.classList.remove('menu-ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu');document.body.style.overflow=''}
+b.addEventListener('click',function(){
+var o=!m.classList.contains('ouvert');
+m.classList.toggle('ouvert',o);nav.classList.toggle('menu-ouvert',o);
+b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+document.body.style.overflow=o?'hidden':'';
+});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer()});
+
+document.querySelectorAll('.q button').forEach(function(bt){
+bt.addEventListener('click',function(){var q=bt.parentNode,o=!q.classList.contains('ouvert');q.classList.toggle('ouvert',o);bt.setAttribute('aria-expanded',o)});
+});
+
+var tr=document.querySelector('#horaires tr[data-j="'+new Date().getDay()+'"]');if(tr)tr.classList.add('auj');
+document.getElementById('annee').textContent=new Date().getFullYear();
+
+document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').classList.add('vu')});
+
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('vu')})}
+})();
+</script>
+</body>
+</html>

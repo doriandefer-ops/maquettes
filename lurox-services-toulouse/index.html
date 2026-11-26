@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lurox Services – chauffagiste à Toulouse | chaudière gaz, fioul et électrique</title>
+<meta name="description" content="Lurox Services, chauffagiste à Toulouse (31000) et environs : installation, remplacement, entretien et dépannage de chaudières gaz et fioul, radiateurs et chaudières électriques. Devis au 06 63 13 24 29.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bleu:#1d4a78;--rouge:#c8402e;--moutarde:#e6a93a;--creme:#f5ead3;--brique:#d77a62;--encre:#231d1a;
+  --creme2:#efe0c0;--bleu-f:#163a5f;
+  --t:'Rozha One',Georgia,serif;--f:'Mulish',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:var(--f);color:var(--encre);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14 0 0 0 0 .11 0 0 0 0 .1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--t);font-weight:400;line-height:1.08;margin:0}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--f);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.88rem;
+  text-decoration:none;padding:1em 1.6em;border:2px solid var(--encre);outline:2px solid var(--encre);outline-offset:3px;color:var(--creme);background:var(--rouge);cursor:pointer;transition:transform .2s,background .2s,outline-offset .2s}
+.btn:hover{transform:translateY(-2px);outline-offset:6px}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-bleu{background:var(--bleu)}
+.btn-creme{background:var(--creme);color:var(--encre)}
+.btn-moutarde{background:var(--moutarde);color:var(--encre)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--bleu);color:var(--creme);border-bottom:4px double var(--moutarde)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;white-space:nowrap}
+.logo svg{width:46px;height:46px;flex:none}
+.logo span{font-family:var(--t);font-size:1.45rem;line-height:1}
+.logo small{display:block;font-family:var(--f);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--moutarde);margin-top:3px}
+.menu{display:flex;align-items:center;gap:6px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;padding:.5em .8em;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:.8em;right:.8em;bottom:.2em;height:2px;background:var(--moutarde);transform:scaleX(0);transition:transform .25s}
+.menu a:not(.btn):hover::after{transform:scaleX(1)}
+.menu .btn{margin-left:10px;padding:.75em 1.1em;font-size:.76rem;outline-color:var(--creme);border-color:var(--creme)}
+.burger{display:none;width:48px;height:48px;background:transparent;border:2px solid var(--creme);outline:2px solid var(--creme);outline-offset:2px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:2.5px;background:var(--creme);transition:transform .25s,opacity .2s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:29px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;padding:112px 0 70px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:
+   radial-gradient(circle at 50% 42%,rgba(245,234,211,.0) 0,rgba(29,74,120,.0) 30%),
+   repeating-conic-gradient(from 0deg at 50% 40%,var(--moutarde) 0 6deg,#eab552 6deg 12deg);}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,transparent 0 18%,rgba(200,64,46,.16) 60%,rgba(35,29,26,.32) 100%);pointer-events:none}
+.timbre-zone{position:relative;z-index:2;width:min(860px,100%);padding:0 16px}
+.timbre{--trou:10px;position:relative;margin:0 auto;padding:22px;
+  background:radial-gradient(circle at 11px 11px,transparent 7px,var(--creme) 7.6px) -11px -11px/22px 22px;
+  filter:drop-shadow(0 18px 22px rgba(35,29,26,.35));transform:rotate(-1.5deg);transition:transform .6s}
+.timbre:hover{transform:rotate(0)}
+.timbre-in{background:var(--creme);border:3px solid var(--encre);padding:10px;position:relative}
+.timbre-in::before{content:"";position:absolute;inset:5px;border:1.5px solid var(--encre);pointer-events:none;z-index:2}
+.timbre svg.scene{width:100%;height:auto;aspect-ratio:16/10;background:var(--bleu)}
+.timbre .bas{display:flex;justify-content:space-between;align-items:flex-end;padding:10px 8px 2px;gap:10px}
+.timbre .bas .nom{font-family:var(--t);font-size:clamp(1rem,2.4vw,1.5rem);letter-spacing:.06em;text-transform:uppercase;color:var(--bleu)}
+.timbre .bas .val{font-family:var(--t);font-size:clamp(1.8rem,4.6vw,3rem);line-height:.8;color:var(--rouge)}
+.timbre .bas .val small{font-family:var(--f);font-size:.3em;font-weight:800;letter-spacing:.1em;vertical-align:top}
+.cachet{position:absolute;right:-24px;top:-52px;width:clamp(120px,19vw,180px);z-index:4;pointer-events:none}
+.cachet .roue{animation:tourne 22s linear infinite;transform-origin:50% 50%;transform-box:view-box}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.oblit{position:absolute;right:120px;top:-6px;width:clamp(140px,26vw,260px);z-index:3;opacity:.82;pointer-events:none}
+
+.hero-txt{position:relative;z-index:2;margin-top:42px;padding:0 16px}
+.ruban{display:inline-block;background:var(--rouge);color:var(--creme);font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem;padding:.55em 2.2em;position:relative;margin-bottom:16px;
+  clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);color:var(--encre);text-shadow:3px 3px 0 var(--creme),6px 6px 0 rgba(35,29,26,.25);letter-spacing:.01em}
+.accroche{font-size:clamp(1.08rem,1.7vw,1.32rem);font-weight:600;max-width:36em;margin:14px auto 28px}
+.accroche em{font-style:italic;font-weight:500}
+.cta{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+
+/* CONFIANCE */
+.confiance{background:var(--bleu);color:var(--creme);padding:26px 0;border-block:6px double var(--moutarde);position:relative}
+.conf-l{display:flex;justify-content:center;align-items:center;gap:18px 24px;font-size:.96rem;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+.conf-l li{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.06em}
+.conf-l li svg{width:36px;height:36px;flex:none}
+.conf-l .sep{width:10px;height:10px;background:var(--moutarde);transform:rotate(45deg)}
+
+/* SECTIONS */
+.sec{padding:96px 0;position:relative}
+.tete{text-align:center;max-width:760px;margin:0 auto 54px}
+.surtitre{display:inline-flex;align-items:center;gap:14px;font-weight:800;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rouge);margin-bottom:14px}
+.surtitre::before,.surtitre::after{content:"";width:34px;height:6px;border-block:2px solid currentColor}
+.titre{font-size:clamp(2.1rem,4.6vw,3.5rem);color:var(--bleu)}
+.tete p{margin:16px auto 0;font-size:1.06rem;max-width:36em}
+
+/* SERVICES : petits timbres */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 30px}
+.carte{padding:14px;background:radial-gradient(circle at 8px 8px,transparent 5px,#fffaf0 5.6px) -8px -8px/16px 16px;filter:drop-shadow(0 8px 10px rgba(35,29,26,.16));transition:transform .3s}
+.carte:nth-child(odd){transform:rotate(-.8deg)}.carte:nth-child(even){transform:rotate(.9deg)}
+.carte:hover{transform:rotate(0) translateY(-6px)}
+.carte-in{border:2px solid var(--encre);background:#fffaf0;padding:24px 22px 22px;height:100%;position:relative;outline:1px solid var(--encre);outline-offset:-7px}
+.carte .ic{width:84px;height:84px;margin-bottom:14px;border-radius:50%;display:grid;place-items:center;background:var(--creme2);border:2px solid var(--encre)}
+.carte:nth-child(3n+2) .ic{background:#f2cbbd}
+.carte:nth-child(3n+3) .ic{background:#cfdbe8}
+.carte .ic svg{width:54px;height:54px}
+.carte h3{font-size:1.45rem;color:var(--bleu);margin-bottom:8px}
+.carte p{margin:0;font-size:.98rem}
+.carte .prix{position:absolute;top:16px;right:18px;font-family:var(--t);color:var(--rouge);font-size:1.5rem;line-height:1}
+
+/* POURQUOI */
+.pourquoi{background:var(--bleu);color:var(--creme);overflow:hidden}
+.pourquoi .titre{color:var(--creme)}
+.pourquoi .surtitre{color:var(--moutarde)}
+.pourquoi::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 120%,rgba(245,234,211,.05) 0 5deg,transparent 5deg 10deg);pointer-events:none}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
+.atout{text-align:center}
+.badge{width:150px;height:150px;margin:0 auto 18px;position:relative;display:grid;place-items:center}
+.badge svg.dent{position:absolute;inset:0;width:100%;height:100%;transition:transform .8s}
+.atout:hover .badge svg.dent{transform:rotate(45deg)}
+.badge svg.pic{position:relative;width:62px;height:62px}
+.atout h3{font-size:1.4rem;color:var(--moutarde);margin-bottom:8px}
+.atout p{margin:0;font-size:.97rem;opacity:.92}
+
+/* ETAPES : enveloppes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:e}
+.env{background:#fffaf0;border:2px solid var(--encre);position:relative;padding:74px 20px 24px;
+  background-image:repeating-linear-gradient(135deg,var(--rouge) 0 12px,#fffaf0 12px 24px,var(--bleu) 24px 36px,#fffaf0 36px 48px);background-size:100% 10px;background-repeat:no-repeat;background-position:0 100%}
+.env::before{content:"";position:absolute;left:0;right:0;top:0;height:56px;background:var(--creme2);clip-path:polygon(0 0,100% 0,50% 100%);border-bottom:0}
+.env::after{content:"";position:absolute;left:50%;top:40px;width:34px;height:34px;margin-left:-17px;border-radius:50%;background:var(--rouge);box-shadow:inset 0 0 0 3px #a8321f,inset 0 0 0 6px var(--rouge),inset 0 0 0 7px #a8321f}
+.env .n{position:absolute;left:50%;top:40px;width:34px;margin-left:-17px;text-align:center;line-height:34px;font-family:var(--t);color:var(--creme);z-index:2;font-size:1.05rem}
+.env h3{font-size:1.32rem;color:var(--bleu);margin:10px 0 8px;text-align:center}
+.env p{margin:0 0 10px;font-size:.96rem;text-align:center}
+.trace{display:block;height:20px;margin:30px auto 0;max-width:760px;background:radial-gradient(circle,var(--bleu) 2px,transparent 2.5px) 0 50%/16px 6px repeat-x;position:relative}
+
+/* A PROPOS */
+.apropos{background:var(--creme2)}
+.ap-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.lettre{background:#fffaf0;border:2px solid var(--encre);padding:34px 30px;position:relative;transform:rotate(-1.2deg);box-shadow:12px 12px 0 var(--bleu)}
+.lettre::before{content:"";position:absolute;inset:8px;border:1px solid var(--encre);pointer-events:none}
+.lettre .tampon{position:absolute;right:20px;top:20px;width:92px;transform:rotate(12deg)}
+.lettre .l{font-family:var(--t);font-size:1.4rem;color:var(--bleu);margin-bottom:18px;padding-right:96px}
+.lettre dl{margin:0;display:grid;gap:12px}
+.lettre dt{font-weight:800;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rouge)}
+.lettre dd{margin:0;font-size:1.04rem;font-weight:600;border-bottom:1.5px dotted var(--encre);padding-bottom:6px;word-break:break-word}
+.ap-txt .surtitre{margin-bottom:10px}
+.ap-txt .titre{margin-bottom:20px}
+.ap-txt p{font-size:1.06rem}
+
+/* GALERIE */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.carte-post{background:#fffaf0;border:2px solid var(--encre);padding:12px 12px 16px;box-shadow:0 10px 18px rgba(35,29,26,.14);transition:transform .3s;margin:0}
+.carte-post:nth-child(1){transform:rotate(-2deg)}.carte-post:nth-child(2){transform:rotate(1.5deg)}.carte-post:nth-child(3){transform:rotate(-1deg)}.carte-post:nth-child(4){transform:rotate(2deg)}
+.carte-post:hover{transform:rotate(0) scale(1.03)}
+.carte-post svg{width:100%;height:auto;aspect-ratio:4/3;border:1.5px solid var(--encre)}
+.carte-post figcaption{padding-top:12px;text-align:center}
+.carte-post strong{display:block;font-family:var(--t);font-weight:400;font-size:1.2rem;color:var(--bleu);line-height:1.15}
+.carte-post span{font-size:.82rem;font-style:italic;font-weight:500}
+.tarifs{margin-top:64px;display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;border:3px double var(--encre);outline:2px solid var(--encre);outline-offset:6px;padding:30px 34px;background:#fffaf0}
+.tarifs .sceau{width:118px}
+.tarifs h3{font-size:2rem;color:var(--rouge);margin-bottom:6px}
+.tarifs p{margin:0}
+.tarifs ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:8px 20px;font-weight:700;font-size:.94rem}
+.tarifs ul li::before{content:"✦ ";color:var(--moutarde)}
+
+/* AVIS */
+.avis{background:var(--brique);color:var(--encre)}
+.avis-box{max-width:820px;margin:0 auto;background:var(--creme);border:2px solid var(--encre);outline:2px solid var(--encre);outline-offset:7px;padding:46px 40px;text-align:center;position:relative}
+.avis-box .ailes{width:150px;margin:0 auto 14px}
+.avis-box h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--bleu);margin-bottom:12px}
+.avis-box p{max-width:34em;margin:0 auto 24px}
+
+/* FAQ */
+.faq-l{max-width:860px;margin:0 auto}
+.q{border-bottom:2px solid var(--encre)}
+.q:first-child{border-top:2px solid var(--encre)}
+.q summary{list-style:none;cursor:pointer;padding:22px 60px 22px 6px;font-family:var(--t);font-size:clamp(1.12rem,2vw,1.34rem);color:var(--bleu);position:relative;line-height:1.3}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{content:"";position:absolute;right:8px;top:50%;width:36px;height:36px;margin-top:-18px;border-radius:50%;border:2px solid var(--encre);
+  background:var(--moutarde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 4v12M4 10h12' stroke='%23231d1a' stroke-width='2.4'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .3s,background-color .3s}
+.q[open] summary::after{transform:rotate(45deg);background-color:var(--brique)}
+.q .rep{padding:0 6px 22px;max-width:46em}
+.q .rep p{margin:0}
+
+/* CONTACT */
+.contact{background:var(--bleu);color:var(--creme)}
+.contact .titre{color:var(--creme)}
+.contact .surtitre{color:var(--moutarde)}
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:start}
+.cadre{background:var(--creme);color:var(--encre);border:3px solid var(--encre);outline:2px solid var(--creme);outline-offset:6px;padding:30px}
+.cadre h3{font-size:1.7rem;color:var(--bleu);margin-bottom:16px}
+.coord{display:grid;gap:14px;margin-bottom:26px}
+.coord a,.coord div{display:flex;align-items:center;gap:14px;text-decoration:none;font-weight:700;word-break:break-word}
+.coord .pi{width:44px;height:44px;flex:none;border-radius:50%;border:2px solid var(--encre);display:grid;place-items:center;background:var(--moutarde)}
+.coord .pi svg{width:22px;height:22px}
+.coord a:hover span{color:var(--rouge)}
+table.h{width:100%;border-collapse:collapse;margin-bottom:8px}
+table.h td{padding:8px 6px;border-bottom:1.5px dotted var(--encre)}
+table.h td:last-child{text-align:right;font-weight:600}
+table.h tr.auj td{background:var(--moutarde);font-weight:800}
+table.h tr.auj td:first-child::after{content:" · aujourd'hui";font-size:.76rem;font-weight:700;color:var(--encre)}
+.note{font-size:.86rem;font-style:italic;margin:10px 0 18px}
+.form-l{background:#fffaf0;
+  background-image:repeating-linear-gradient(transparent 0 33px,rgba(29,74,120,.16) 33px 34px);}
+form{display:grid;gap:16px}
+.champ{display:grid;gap:4px}
+.champ label{font-weight:800;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rouge)}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:1rem;border:0;border-bottom:2px solid var(--encre);padding:10px 4px;background:transparent;width:100%;border-radius:0;color:var(--encre)}
+.champ textarea{border:2px solid var(--encre);padding:10px}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--rouge);background:rgba(230,169,58,.12)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.msg{display:none;margin:0;border:2px dashed var(--rouge);padding:14px;font-weight:700;color:var(--rouge);background:var(--creme)}
+.msg.on{display:block}
+
+/* FOOTER */
+footer{background:var(--encre);color:var(--creme);padding:66px 0 0;border-top:6px double var(--moutarde)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding-bottom:44px}
+footer h4{font-family:var(--t);font-weight:400;font-size:1.3rem;color:var(--moutarde);margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.95rem}
+footer a{text-decoration:none}
+footer a:hover{color:var(--moutarde)}
+footer p{font-size:.95rem;opacity:.85}
+.f-bas{border-top:1px solid rgba(245,234,211,.2);padding:18px 0;font-size:.84rem;opacity:.75;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo{background:var(--creme2);color:var(--encre);text-align:center;font-size:.8rem;padding:10px 16px;
+  border-top:6px solid transparent;border-image:repeating-linear-gradient(90deg,var(--rouge) 0 14px,var(--creme) 14px 22px,var(--bleu) 22px 36px,var(--creme) 36px 44px) 6}
+
+.appel-flot{display:none;position:fixed;right:16px;bottom:16px;z-index:70;width:62px;height:62px;border-radius:50%;background:var(--rouge);border:2px solid var(--creme);outline:2px solid var(--rouge);outline-offset:2px;place-items:center;box-shadow:0 8px 16px rgba(35,29,26,.35)}
+.appel-flot svg{width:28px;height:28px}
+
+/* ANIMATIONS SCENE */
+.avion{animation:vol 16s linear -5s infinite}
+@keyframes vol{0%{transform:translate(-260px,40px)}50%{transform:translate(420px,-10px)}100%{transform:translate(1100px,30px)}}
+.avion-b{animation:tangage 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tangage{50%{transform:translateY(-8px) rotate(-3deg)}}
+.helice{animation:hel .25s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes hel{50%{transform:scaleY(.15)}}
+.rayons{animation:tourne 80s linear infinite;transform-box:fill-box;transform-origin:center}
+.fumee{animation:fum 4s ease-in-out infinite}
+@keyframes fum{0%{opacity:0;transform:translateY(10px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-30px)}}
+.flamme{animation:fl 1.2s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes fl{50%{transform:scaleY(1.18)}}
+.chaleur{animation:ch 3s ease-in-out infinite}
+@keyframes ch{0%,100%{opacity:.2}50%{opacity:.95}}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.vu{opacity:1;transform:none}
+.carte.rv.vu:nth-child(odd){transform:rotate(-.8deg)}.carte.rv.vu:nth-child(even){transform:rotate(.9deg)}
+.carte.rv.vu:hover{transform:rotate(0) translateY(-6px)}
+.carte-post.rv.vu:nth-child(1){transform:rotate(-2deg)}.carte-post.rv.vu:nth-child(2){transform:rotate(1.5deg)}.carte-post.rv.vu:nth-child(3){transform:rotate(-1deg)}.carte-post.rv.vu:nth-child(4){transform:rotate(2deg)}
+.carte-post.rv.vu:hover{transform:rotate(0) scale(1.03)}
+.lettre.rv.vu{transform:rotate(-1.2deg)}
+
+@media (max-width:1040px){
+  .menu a{padding:.5em .55em;letter-spacing:.08em}
+  .serv-grid{grid-template-columns:repeat(2,1fr)}
+  .atouts,.etapes,.gal-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bleu);border-bottom:6px double var(--moutarde);padding:8px 20px 24px;
+    transform:translateY(-130%);transition:transform .35s ease;max-height:calc(100vh - 72px);overflow:auto}
+  .menu.ouvert{transform:none}
+  .menu a{display:block;font-family:var(--t);text-transform:none;letter-spacing:.01em;font-weight:400;font-size:1.5rem;padding:12px 2px;border-bottom:1px solid rgba(245,234,211,.25)}
+  .menu a:not(.btn)::after{display:none}
+  .menu .btn{margin:20px 4px 4px;font-family:var(--f);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;display:flex}
+  .c-grid,.ap-grid{grid-template-columns:1fr}
+  .tarifs{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .tarifs ul{justify-content:center}
+  .appel-flot{display:grid}
+  .oblit{right:90px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero{min-height:auto;padding:100px 0 60px}
+  .timbre{padding:16px;background-size:16px 16px;background-position:-8px -8px;background-image:radial-gradient(circle at 8px 8px,transparent 5px,var(--creme) 5.6px)}
+  .timbre-in{padding:6px}
+  .timbre-in::before{inset:3px}
+  .cachet{right:10px;top:-44px;width:96px}
+  .ruban{letter-spacing:.14em;padding:.55em 1.6em;font-size:.72rem}
+  .timbre .bas .nom{font-size:.82rem}
+  .oblit{right:70px;top:-10px;width:130px}
+  .serv-grid,.atouts,.etapes,.gal-grid,.f-grid,.duo{grid-template-columns:1fr}
+  .sec{padding:72px 0}
+  .btn{width:100%}
+  .cta{gap:18px;padding:0 6px}
+  .lettre{padding:28px 20px;transform:none;box-shadow:8px 8px 0 var(--bleu)}
+  .lettre .tampon{width:70px;right:14px;top:14px}
+  .lettre .l{padding-right:70px;font-size:1.2rem}
+  .cadre{padding:22px 18px}
+  .avis-box{padding:36px 20px}
+  .tarifs{padding:26px 18px}
+  .conf-l{flex-direction:column;align-items:flex-start;gap:14px;padding-left:6px}
+  .conf-l .sep{display:none}
+  .logo span{font-size:1.2rem}
+  .logo svg{width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+  .avion{transform:translate(380px,0)}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#haut" class="logo" aria-label="Lurox Services, retour en haut">
+      <svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="21" fill="#e6a93a" stroke="#f5ead3" stroke-width="2"/><circle cx="23" cy="23" r="16" fill="none" stroke="#231d1a" stroke-width="1.2" stroke-dasharray="2 2"/><path d="M10 25l13-4 13 4-13-1z" fill="#c8402e"/><path d="M14 20h18" stroke="#231d1a" stroke-width="2"/><path d="M14 27h18" stroke="#231d1a" stroke-width="2"/><circle cx="23" cy="23" r="3" fill="#231d1a"/></svg>
+      <span>Lurox Services<small>Chauffage · Toulouse</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#etapes">Déroulé</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#devis" class="btn">Devis gratuit</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="haut">
+<section class="hero">
+  <div class="timbre-zone">
+    <svg class="oblit" viewBox="0 0 260 80" aria-hidden="true"><g fill="none" stroke="#231d1a" stroke-width="3.2" stroke-linecap="round"><path d="M0 14q16-10 32 0t32 0 32 0 32 0 32 0 32 0 32 0 32 0"/><path d="M0 30q16-10 32 0t32 0 32 0 32 0 32 0 32 0 32 0 32 0"/><path d="M0 46q16-10 32 0t32 0 32 0 32 0 32 0 32 0 32 0 32 0"/><path d="M0 62q16-10 32 0t32 0 32 0 32 0 32 0 32 0 32 0 32 0"/></g></svg>
+    <svg class="cachet" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="cercle" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1 -144 0"/></defs>
+      <g class="roue">
+        <circle cx="100" cy="100" r="92" fill="rgba(245,234,211,.55)" stroke="#c8402e" stroke-width="4"/>
+        <circle cx="100" cy="100" r="58" fill="none" stroke="#c8402e" stroke-width="3"/>
+        <text font-family="Mulish, sans-serif" font-weight="800" font-size="17" fill="#c8402e"><textPath href="#cercle" textLength="446" lengthAdjust="spacing">TOULOUSE · 31000 · PAR AVION · CHAUFFAGE ·</textPath></text>
+      </g>
+      <text x="100" y="94" text-anchor="middle" font-family="Rozha One, serif" font-size="28" fill="#c8402e">31</text>
+      <text x="100" y="118" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="12" letter-spacing="2" fill="#c8402e">POSTE</text>
+    </svg>
+
+    <div class="timbre" id="timbre">
+      <div class="timbre-in">
+        <svg class="scene" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration : un biplan survole les toits de Toulouse au-dessus d'une chaudière et d'un radiateur">
+          <defs>
+            <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4a78"/><stop offset=".62" stop-color="#2f6496"/><stop offset="1" stop-color="#d77a62"/></linearGradient>
+            <pattern id="hachure" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" stroke="#231d1a" stroke-width="1.4" opacity=".35"/></pattern>
+            <pattern id="tuiles" width="16" height="10" patternUnits="userSpaceOnUse"><path d="M0 10q8-10 16 0" fill="none" stroke="#231d1a" stroke-width="1.2" opacity=".45"/></pattern>
+          </defs>
+          <rect width="800" height="500" fill="url(#ciel)"/>
+          <!-- soleil a rayons -->
+          <g transform="translate(400 300)">
+            <g class="rayons">
+              <path d="M0 0L-30-420L30-420Z M0 0L-30 420L30 420Z M0 0L-420-30L-420 30Z M0 0L420-30L420 30Z M0 0L-318-276L-274-318Z M0 0L318-276L274-318Z M0 0L-318 276L-274 318Z M0 0L318 276L274 318Z M0 0L-160-388L-108-406Z M0 0L160-388L108-406Z M0 0L-388-160L-406-108Z M0 0L388-160L406-108Z M0 0L-160 388L-108 406Z M0 0L160 388L108 406Z M0 0L-388 160L-406 108Z M0 0L388 160L406 108Z" fill="#e6a93a" opacity=".26"/>
+            </g>
+            <circle r="96" fill="#e6a93a"/>
+            <circle r="96" fill="url(#hachure)" opacity=".4"/>
+            <circle r="110" fill="none" stroke="#e6a93a" stroke-width="3" stroke-dasharray="4 8" opacity=".8"/>
+          </g>
+          <!-- nuages -->
+          <g fill="#f5ead3" opacity=".9">
+            <path d="M80 120q10-28 40-20 14-22 42-6 30-4 30 26H74q-12 0 6 0z"/>
+            <path d="M600 90q8-22 32-16 12-18 34-4 24-4 24 20H594z"/>
+          </g>
+          <!-- avion -->
+          <g class="avion">
+            <g class="avion-b" transform="translate(0 185)">
+              <path d="M-170 26q30-6 60 0" stroke="#f5ead3" stroke-width="3" stroke-dasharray="8 8" fill="none" opacity=".8"/>
+              <path d="M-104 30q24-8 48 0" stroke="#f5ead3" stroke-width="3" stroke-dasharray="8 8" fill="none" opacity=".6"/>
+              <!-- aile haute -->
+              <rect x="-14" y="-6" width="104" height="12" rx="6" fill="#c8402e" stroke="#231d1a" stroke-width="2.5"/>
+              <!-- haubans -->
+              <path d="M10 6v26M66 6v26M10 6l56 26M66 6L10 32" stroke="#231d1a" stroke-width="2"/>
+              <!-- fuselage -->
+              <path d="M-40 30q20-14 90-12q36 2 50 14q-14 12-50 12q-70 2-90-14z" fill="#f5ead3" stroke="#231d1a" stroke-width="2.5"/>
+              <path d="M-40 30l-14-20h16l14 16z" fill="#c8402e" stroke="#231d1a" stroke-width="2.5"/>
+              <path d="M10 26h40" stroke="#1d4a78" stroke-width="4"/>
+              <circle cx="40" cy="22" r="6" fill="#231d1a"/>
+              <!-- aile basse -->
+              <rect x="-8" y="32" width="96" height="10" rx="5" fill="#c8402e" stroke="#231d1a" stroke-width="2.5"/>
+              <!-- train -->
+              <path d="M30 44l-6 12M50 44l6 12" stroke="#231d1a" stroke-width="2.5"/>
+              <circle cx="22" cy="58" r="6" fill="#231d1a"/><circle cx="58" cy="58" r="6" fill="#231d1a"/>
+              <!-- helice -->
+              <circle cx="102" cy="32" r="5" fill="#231d1a"/>
+              <ellipse class="helice" cx="106" cy="32" rx="3" ry="22" fill="#231d1a" opacity=".75"/>
+              <!-- sac postal -->
+              <path d="M-26 20h18v12h-18z" fill="#e6a93a" stroke="#231d1a" stroke-width="1.8"/>
+            </g>
+          </g>
+          <!-- toits arriere -->
+          <path d="M0 360L40 330L80 350L120 316L160 340L210 300L250 330V280h14v30L300 340L340 318L380 340L430 310L470 336L520 300L560 330L600 312L650 340L700 318L760 342L800 326V500H0Z" fill="#b8624d"/>
+          <!-- clocher generique -->
+          <g transform="translate(232 196)">
+            <path d="M8 104V44h36v60z" fill="#d77a62" stroke="#231d1a" stroke-width="2.5"/>
+            <path d="M14 44V18h24v26z" fill="#d77a62" stroke="#231d1a" stroke-width="2.5"/>
+            <path d="M12 18L26-14L40 18z" fill="#c8402e" stroke="#231d1a" stroke-width="2.5"/>
+            <path d="M20 70h12v-14a6 6 0 00-12 0zM20 36h12v-8a6 6 0 00-12 0z" fill="#231d1a" opacity=".75"/>
+          </g>
+          <!-- maisons avant -->
+          <g stroke="#231d1a" stroke-width="2.5">
+            <path d="M-10 400l70-50 70 50v100H-10z" fill="#d77a62"/>
+            <path d="M-20 404l80-58 80 58" fill="none" stroke-width="10" stroke="#c8402e"/>
+            <rect x="30" y="420" width="26" height="34" fill="#f5ead3"/>
+            <path d="M120 420l90-60 90 60v80H120z" fill="#e6a93a"/>
+            <path d="M110 424l100-68 100 68" fill="none" stroke-width="10" stroke="#c8402e"/>
+            <rect x="150" y="440" width="28" height="36" fill="#f5ead3"/><rect x="236" y="440" width="28" height="36" fill="#f5ead3"/>
+            <rect x="244" y="352" width="18" height="40" fill="#d77a62"/>
+          </g>
+          <path class="fumee" d="M253 344q-10-14 0-26t0-24" fill="none" stroke="#f5ead3" stroke-width="5" stroke-linecap="round"/>
+          <!-- interieur : chaudiere + radiateur dans une fenetre-cadre -->
+          <g transform="translate(470 330)">
+            <rect x="0" y="0" width="330" height="180" fill="#f5ead3" stroke="#231d1a" stroke-width="3"/>
+            <rect x="0" y="0" width="330" height="180" fill="url(#tuiles)" opacity=".25"/>
+            <path d="M0 0h330" stroke="#c8402e" stroke-width="8"/>
+            <!-- chaudiere murale -->
+            <rect x="34" y="22" width="92" height="124" rx="6" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/>
+            <rect x="46" y="34" width="68" height="28" rx="3" fill="#1d4a78" stroke="#231d1a" stroke-width="2"/>
+            <text x="80" y="54" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="15" fill="#e6a93a">60°</text>
+            <circle cx="60" cy="82" r="7" fill="#c8402e" stroke="#231d1a" stroke-width="2"/><circle cx="80" cy="82" r="7" fill="#e6a93a" stroke="#231d1a" stroke-width="2"/><circle cx="100" cy="82" r="7" fill="#fffaf0" stroke="#231d1a" stroke-width="2"/>
+            <rect x="58" y="100" width="44" height="30" rx="3" fill="#231d1a"/>
+            <path class="flamme" d="M80 126c-10-4-10-14-2-22 0 6 4 6 4 2 6 6 8 16-2 20z" fill="#e6a93a"/>
+            <path d="M54 146v20M72 146v20M90 146v20M108 146v20" stroke="#231d1a" stroke-width="3.5"/>
+            <!-- tuyau vers radiateur -->
+            <path d="M108 166h60v-18" fill="none" stroke="#c8402e" stroke-width="5"/>
+            <!-- radiateur -->
+            <g transform="translate(160 76)">
+              <rect x="0" y="0" width="140" height="74" rx="5" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/>
+              <path d="M16 8v58M32 8v58M48 8v58M64 8v58M80 8v58M96 8v58M112 8v58M128 8v58" stroke="#231d1a" stroke-width="3" stroke-linecap="round"/>
+              <path d="M10 74v12M130 74v12" stroke="#231d1a" stroke-width="4"/>
+            </g>
+            <g fill="none" stroke="#c8402e" stroke-width="3.5" stroke-linecap="round">
+              <path class="chaleur" d="M190 66q-8-10 0-20t0-20"/>
+              <path class="chaleur" d="M230 66q-8-10 0-20t0-20" style="animation-delay:.6s"/>
+              <path class="chaleur" d="M270 66q-8-10 0-20t0-20" style="animation-delay:1.2s"/>
+            </g>
+          </g>
+        </svg>
+        <div class="bas">
+          <span class="nom">Poste aérienne du chauffage</span>
+          <span class="val">31<small> TOULOUSE</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-txt">
+    <span class="ruban">Chauffagiste · Toulouse &amp; environs</span>
+    <h1>Lurox Services</h1>
+    <p class="accroche">Gaz, fioul ou électrique : votre chaleur arrive <em>à bon port</em>. Installation, remplacement, entretien et dépannage de chaudières et de radiateurs, de la Garonne aux communes voisines.</p>
+    <div class="cta">
+      <a href="tel:+33663132429" class="btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="#f5ead3"/></svg>Appeler</a>
+      <a href="#devis" class="btn btn-bleu"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" fill="none" stroke="#f5ead3" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="#f5ead3" stroke-width="2"/></svg>Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<section class="confiance" aria-label="En bref">
+  <div class="wrap">
+    <ul class="conf-l">
+      <li><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3a10 10 0 00-10 10c0 8 10 20 10 20s10-12 10-20A10 10 0 0018 3z" fill="#e6a93a" stroke="#f5ead3" stroke-width="2"/><circle cx="18" cy="13" r="3.5" fill="#1d4a78"/></svg>Toulouse (31000) et environs</li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="8" y="4" width="20" height="28" rx="3" fill="#f5ead3" stroke="#231d1a" stroke-width="2"/><path d="M18 26c-5-2-5-7-1-11 0 3 2 3 2 1 3 3 4 8-1 10z" fill="#c8402e"/></svg>Gaz · fioul · électrique</li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 6h18l6 6v18H6z" fill="#f5ead3" stroke="#231d1a" stroke-width="2"/><path d="M11 17h14M11 22h14M11 27h8" stroke="#1d4a78" stroke-width="2"/></svg>Devis gratuit</li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="#e6a93a" stroke="#f5ead3" stroke-width="2"/><path d="M18 9v9l6 4" fill="none" stroke="#231d1a" stroke-width="2.5"/></svg>Entretien &amp; dépannage</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Nos services</span>
+      <h2 class="titre">Une collection de savoir-faire, timbre par timbre</h2>
+      <p>Chaudières gaz et fioul, radiateurs et chaudières électriques : nous intervenons de la pose à l'entretien, pour que la chaleur ne manque jamais à l'appel.</p>
+    </div>
+    <div class="serv-grid">
+      <article class="carte rv"><div class="carte-in"><span class="prix">I</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="12" y="4" width="30" height="40" rx="3" fill="#fffaf0" stroke="#231d1a" stroke-width="2.5"/><rect x="17" y="9" width="20" height="8" fill="#1d4a78"/><path d="M27 38c-6-2-6-8-1-13 0 4 3 4 3 1 4 4 5 10-2 12z" fill="#c8402e"/><path d="M18 44v6M27 44v6M36 44v6" stroke="#231d1a" stroke-width="2.5"/></svg></div><h3>Chaudière gaz</h3><p>Installation et mise en service de chaudières gaz, avec raccordement soigné à votre réseau de chauffage.</p></div></article>
+      <article class="carte rv"><div class="carte-in"><span class="prix">II</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="8" y="12" width="38" height="34" rx="3" fill="#fffaf0" stroke="#231d1a" stroke-width="2.5"/><path d="M8 22h38" stroke="#231d1a" stroke-width="2"/><circle cx="18" cy="17" r="2.5" fill="#c8402e"/><circle cx="26" cy="17" r="2.5" fill="#e6a93a"/><path d="M27 6c-4 3-4 6 0 6s4-3 0-6z" fill="#231d1a"/><rect x="16" y="28" width="22" height="12" fill="#231d1a"/><path d="M27 38c-3-1-3-4-1-6 0 2 2 2 2 0 2 2 2 5-1 6z" fill="#e6a93a"/></svg></div><h3>Chaudière fioul</h3><p>Pose, réglage et suivi des chaudières fioul, et conseils sur l'évolution possible de votre installation.</p></div></article>
+      <article class="carte rv"><div class="carte-in"><span class="prix">III</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M10 20a18 18 0 0131-8" fill="none" stroke="#231d1a" stroke-width="3"/><path d="M42 4v9h-9" fill="none" stroke="#231d1a" stroke-width="3"/><path d="M44 34a18 18 0 01-31 8" fill="none" stroke="#c8402e" stroke-width="3"/><path d="M12 50v-9h9" fill="none" stroke="#c8402e" stroke-width="3"/><rect x="20" y="18" width="14" height="18" rx="2" fill="#fffaf0" stroke="#231d1a" stroke-width="2"/></svg></div><h3>Remplacement</h3><p>Votre vieille chaudière fatigue ? Dépose de l'ancien appareil et pose d'un modèle adapté à votre logement.</p></div></article>
+      <article class="carte rv"><div class="carte-in"><span class="prix">IV</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><path d="M34 6a10 10 0 00-9 14L8 37l8 8 17-17a10 10 0 0013-9l-6 6-7-2-2-7z" fill="#fffaf0" stroke="#231d1a" stroke-width="2.5" stroke-linejoin="round"/><circle cx="13" cy="40" r="2" fill="#c8402e"/></svg></div><h3>Entretien annuel</h3><p>Nettoyage, contrôle de la combustion et des sécurités, réglages : la visite qui fait durer votre chaudière.</p></div></article>
+      <article class="carte rv"><div class="carte-in"><span class="prix">V</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="20" fill="#fffaf0" stroke="#231d1a" stroke-width="2.5"/><path d="M30 10L18 30h9l-3 14 12-20h-9z" fill="#e6a93a" stroke="#231d1a" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Dépannage</h3><p>Plus de chauffage, plus d'eau chaude, chaudière en sécurité : recherche de la panne et remise en route.</p></div></article>
+      <article class="carte rv"><div class="carte-in"><span class="prix">VI</span><div class="ic"><svg viewBox="0 0 54 54" aria-hidden="true"><rect x="6" y="14" width="42" height="26" rx="3" fill="#fffaf0" stroke="#231d1a" stroke-width="2.5"/><path d="M14 19v16M21 19v16M28 19v16M35 19v16M42 19v16" stroke="#231d1a" stroke-width="2.2"/><path d="M10 40v6M44 40v6" stroke="#231d1a" stroke-width="2.5"/><path d="M30 2l-5 8h4l-2 6 6-9h-4z" fill="#c8402e"/></svg></div><h3>Électrique</h3><p>Radiateurs et chaudières électriques : choix, installation et remplacement pour un chauffage simple à piloter.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Pourquoi nous confier votre chauffage</span>
+      <h2 class="titre">Le soin d'un courrier livré en main propre</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv">
+        <div class="badge"><svg class="dent" viewBox="0 0 150 150" aria-hidden="true"><path id="dent1" fill="#e6a93a" stroke="#231d1a" stroke-width="2" d="M75.0 3.0L82.1 12.4L91.0 4.8L95.8 15.5L106.2 10.1L108.5 21.7L119.9 18.7L119.5 30.5L131.3 30.1L128.3 41.5L139.9 43.8L134.5 54.2L145.2 59.0L137.6 67.9L147.0 75.0L137.6 82.1L145.2 91.0L134.5 95.8L139.9 106.2L128.3 108.5L131.3 119.9L119.5 119.5L119.9 131.3L108.5 128.3L106.2 139.9L95.8 134.5L91.0 145.2L82.1 137.6L75.0 147.0L67.9 137.6L59.0 145.2L54.2 134.5L43.8 139.9L41.5 128.3L30.1 131.3L30.5 119.5L18.7 119.9L21.7 108.5L10.1 106.2L15.5 95.8L4.8 91.0L12.4 82.1L3.0 75.0L12.4 67.9L4.8 59.0L15.5 54.2L10.1 43.8L21.7 41.5L18.7 30.1L30.5 30.5L30.1 18.7L41.5 21.7L43.8 10.1L54.2 15.5L59.0 4.8L67.9 12.4Z"/><circle cx="75" cy="75" r="48" fill="#1d4a78" stroke="#f5ead3" stroke-width="2" stroke-dasharray="3 4"/></svg><svg class="pic" viewBox="0 0 62 62" aria-hidden="true"><rect x="16" y="6" width="30" height="42" rx="3" fill="#f5ead3" stroke="#231d1a" stroke-width="2.5"/><path d="M31 40c-6-2-6-8-1-13 0 4 3 4 3 1 4 4 5 10-2 12z" fill="#c8402e"/><path d="M8 54h46" stroke="#f5ead3" stroke-width="3"/></svg></div>
+        <h3>Trois énergies</h3><p>Gaz, fioul et électrique : un même interlocuteur, quel que soit votre mode de chauffage.</p>
+      </div>
+      <div class="atout rv">
+        <div class="badge"><svg class="dent" viewBox="0 0 150 150" aria-hidden="true"><use href="#dent1"/><circle cx="75" cy="75" r="48" fill="#c8402e" stroke="#f5ead3" stroke-width="2" stroke-dasharray="3 4"/></svg><svg class="pic" viewBox="0 0 62 62" aria-hidden="true"><path d="M8 14h46v34H8z" fill="#f5ead3" stroke="#231d1a" stroke-width="2.5"/><path d="M8 14l23 18 23-18" fill="none" stroke="#231d1a" stroke-width="2.5"/></svg></div>
+        <h3>Devis clair</h3><p>Une proposition écrite et détaillée, avant tout engagement de votre part.</p>
+      </div>
+      <div class="atout rv">
+        <div class="badge"><svg class="dent" viewBox="0 0 150 150" aria-hidden="true"><use href="#dent1"/><circle cx="75" cy="75" r="48" fill="#1d4a78" stroke="#f5ead3" stroke-width="2" stroke-dasharray="3 4"/></svg><svg class="pic" viewBox="0 0 62 62" aria-hidden="true"><path d="M31 6a14 14 0 00-14 14c0 11 14 30 14 30s14-19 14-30A14 14 0 0031 6z" fill="#e6a93a" stroke="#231d1a" stroke-width="2.5"/><circle cx="31" cy="20" r="5" fill="#f5ead3" stroke="#231d1a" stroke-width="2"/></svg></div>
+        <h3>Ancrage toulousain</h3><p>Basés à Toulouse, nous intervenons en ville et dans les communes environnantes.</p>
+      </div>
+      <div class="atout rv">
+        <div class="badge"><svg class="dent" viewBox="0 0 150 150" aria-hidden="true"><use href="#dent1"/><circle cx="75" cy="75" r="48" fill="#c8402e" stroke="#f5ead3" stroke-width="2" stroke-dasharray="3 4"/></svg><svg class="pic" viewBox="0 0 62 62" aria-hidden="true"><path d="M40 6a11 11 0 00-10 15L10 41l9 9 20-20a11 11 0 0015-10l-7 7-7-2-2-7z" fill="#f5ead3" stroke="#231d1a" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+        <h3>Suivi dans la durée</h3><p>Après l'installation, l'entretien et le dépannage restent assurés par la même équipe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="etapes">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Comment ça se passe</span>
+      <h2 class="titre">Votre projet, du départ à l'arrivée</h2>
+    </div>
+    <div class="etapes">
+      <div class="env rv"><span class="n">1</span><h3>Premier contact</h3><p>Un appel ou un email : vous décrivez votre chauffage actuel et votre besoin.</p></div>
+      <div class="env rv"><span class="n">2</span><h3>Visite</h3><p>Nous venons voir l'installation, les contraintes du logement et les solutions possibles.</p></div>
+      <div class="env rv"><span class="n">3</span><h3>Devis</h3><p>Vous recevez une proposition détaillée, gratuite et sans engagement.</p></div>
+      <div class="env rv"><span class="n">4</span><h3>Intervention</h3><p>Pose ou réparation, essais, mise en service et explications sur l'utilisation.</p></div>
+    </div>
+    <span class="trace" aria-hidden="true"></span>
+  </div>
+</section>
+
+<section class="sec apropos" id="apropos">
+  <div class="wrap ap-grid">
+    <div class="lettre rv">
+      <svg class="tampon" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#c8402e" stroke-width="3"/><circle cx="50" cy="50" r="34" fill="none" stroke="#c8402e" stroke-width="1.5"/><text x="50" y="47" text-anchor="middle" font-family="Rozha One, serif" font-size="16" fill="#c8402e">31000</text><text x="50" y="64" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="8.5" letter-spacing=".8" fill="#c8402e">TOULOUSE</text></svg>
+      <p class="l">Lurox Services</p>
+      <dl>
+        <dt>Métier</dt><dd>Chauffagiste – chaudières &amp; radiateurs</dd>
+        <dt>Énergies</dt><dd>Gaz, fioul, électrique</dd>
+        <dt>Secteur</dt><dd>Toulouse (31000) et environs</dd>
+        <dt>Écrire</dt><dd>jerome.duquesne@sfr.fr</dd>
+      </dl>
+    </div>
+    <div class="ap-txt rv">
+      <span class="surtitre">À propos</span>
+      <h2 class="titre">Un chauffagiste toulousain, toutes énergies</h2>
+      <p>Lurox Services est une entreprise de chauffage installée à Toulouse (31000). Nous intervenons sur les chaudières à gaz et au fioul, de l'installation au remplacement, sans oublier l'entretien et le dépannage.</p>
+      <p>Nous installons également radiateurs et chaudières électriques, pour les logements où cette solution est la plus pertinente. Toulousains comme habitants des environs peuvent nous joindre directement par téléphone ou par email.</p>
+      <a href="#contact" class="btn btn-moutarde" style="margin-top:8px">Nous écrire</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="realisations">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Réalisations</span>
+      <h2 class="titre">Cartes postales de chantier</h2>
+      <p>Quelques types d'installations sur lesquelles nous intervenons. Ces illustrations seront remplacées par des photos de chantiers.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="carte-post rv"><svg viewBox="0 0 240 180" aria-hidden="true"><rect width="240" height="180" fill="#cfdbe8"/><rect y="120" width="240" height="60" fill="#d77a62"/><rect x="80" y="26" width="80" height="112" rx="6" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/><rect x="92" y="38" width="56" height="22" fill="#1d4a78"/><text x="120" y="54" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="12" fill="#e6a93a">GAZ</text><rect x="100" y="76" width="40" height="34" fill="#231d1a"/><path d="M120 106c-7-3-7-10-1-15 0 4 3 4 3 1 5 5 6 11-2 14z" fill="#e6a93a"/><path d="M96 138v22M112 138v22M128 138v22M144 138v22" stroke="#231d1a" stroke-width="4"/></svg><figcaption><strong>Chaudière gaz murale</strong><span>Exemple d'installation</span></figcaption></figure>
+      <figure class="carte-post rv"><svg viewBox="0 0 240 180" aria-hidden="true"><rect width="240" height="180" fill="#efe0c0"/><path d="M0 150h240" stroke="#231d1a" stroke-width="3"/><rect x="30" y="50" width="100" height="100" rx="4" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/><path d="M30 76h100" stroke="#231d1a" stroke-width="2.5"/><circle cx="48" cy="63" r="5" fill="#c8402e"/><circle cx="64" cy="63" r="5" fill="#e6a93a"/><rect x="50" y="92" width="60" height="40" fill="#231d1a"/><path d="M80 128c-8-3-8-11-1-17 0 4 3 4 3 1 6 5 7 13-2 16z" fill="#e6a93a"/><rect x="150" y="70" width="64" height="80" rx="8" fill="#c8402e" stroke="#231d1a" stroke-width="3"/><text x="182" y="116" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="12" fill="#f5ead3">FIOUL</text><path d="M80 50V24h50" fill="none" stroke="#231d1a" stroke-width="5"/></svg><figcaption><strong>Chaufferie fioul</strong><span>Exemple d'installation</span></figcaption></figure>
+      <figure class="carte-post rv"><svg viewBox="0 0 240 180" aria-hidden="true"><rect width="240" height="180" fill="#f2cbbd"/><rect x="40" y="18" width="70" height="62" fill="#cfdbe8" stroke="#231d1a" stroke-width="3"/><path d="M75 18v62M40 49h70" stroke="#231d1a" stroke-width="2"/><rect x="26" y="96" width="188" height="56" rx="5" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/><path d="M44 104v40M62 104v40M80 104v40M98 104v40M116 104v40M134 104v40M152 104v40M170 104v40M188 104v40" stroke="#231d1a" stroke-width="3.5" stroke-linecap="round"/><path d="M40 152v16M200 152v16" stroke="#231d1a" stroke-width="4"/><g fill="none" stroke="#c8402e" stroke-width="3" stroke-linecap="round"><path d="M150 86q-6-8 0-16t0-16"/><path d="M180 86q-6-8 0-16t0-16"/></g></svg><figcaption><strong>Radiateurs remplacés</strong><span>Exemple d'installation</span></figcaption></figure>
+      <figure class="carte-post rv"><svg viewBox="0 0 240 180" aria-hidden="true"><rect width="240" height="180" fill="#cfdbe8"/><rect y="140" width="240" height="40" fill="#b8624d"/><rect x="60" y="22" width="76" height="118" rx="6" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/><rect x="72" y="36" width="52" height="20" fill="#1d4a78"/><path d="M100 72l-12 22h10l-4 20 16-26h-10z" fill="#e6a93a" stroke="#231d1a" stroke-width="2" stroke-linejoin="round"/><rect x="156" y="70" width="52" height="40" rx="4" fill="#fffaf0" stroke="#231d1a" stroke-width="3"/><circle cx="182" cy="90" r="11" fill="none" stroke="#c8402e" stroke-width="3"/><path d="M182 82v8" stroke="#c8402e" stroke-width="3"/><path d="M136 90h20" stroke="#231d1a" stroke-width="3" stroke-dasharray="4 3"/></svg><figcaption><strong>Chaudière électrique</strong><span>Exemple d'installation</span></figcaption></figure>
+    </div>
+
+    <div class="tarifs rv">
+      <svg class="sceau" viewBox="0 0 120 120" aria-hidden="true"><use href="#dent1" transform="scale(.8)"/><circle cx="60" cy="60" r="36" fill="#c8402e" stroke="#f5ead3" stroke-width="2" stroke-dasharray="3 4"/><text x="60" y="56" text-anchor="middle" font-family="Rozha One, serif" font-size="17" fill="#f5ead3">DEVIS</text><text x="60" y="74" text-anchor="middle" font-family="Mulish, sans-serif" font-weight="800" font-size="10" letter-spacing="1.5" fill="#f5ead3">GRATUIT</text></svg>
+      <div>
+        <h3>Tarifs : sur devis</h3>
+        <p>Chaque installation est différente : le prix dépend de l'appareil, de l'énergie et des travaux de raccordement.</p>
+        <ul><li>Installation</li><li>Remplacement</li><li>Entretien</li><li>Dépannage</li></ul>
+      </div>
+      <a href="#devis" class="btn">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec avis" id="avis">
+  <div class="wrap">
+    <div class="avis-box rv">
+      <svg class="ailes" viewBox="0 0 150 70" aria-hidden="true"><path d="M75 20c-20-16-50-18-72-10 18 4 30 10 38 18-10 0-20 2-28 6 18 2 34 8 46 18" fill="#e6a93a" stroke="#231d1a" stroke-width="2"/><path d="M75 20c20-16 50-18 72-10-18 4-30 10-38 18 10 0 20 2 28 6-18 2-34 8-46 18" fill="#e6a93a" stroke="#231d1a" stroke-width="2"/><circle cx="75" cy="34" r="16" fill="#c8402e" stroke="#231d1a" stroke-width="2"/><path d="M75 25l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#f5ead3"/></svg>
+      <h2>Vos avis comptent</h2>
+      <p>Lurox Services est intervenu chez vous pour une chaudière ou des radiateurs ? Racontez-nous comment cela s'est passé : votre retour aide d'autres habitants de Toulouse et des environs à choisir leur chauffagiste en confiance.</p>
+      <a href="mailto:jerome.duquesne@sfr.fr?subject=Mon%20avis%20sur%20Lurox%20Services" class="btn btn-bleu">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2 class="titre">Courrier des lecteurs</h2>
+    </div>
+    <div class="faq-l rv">
+      <details class="q"><summary>L'entretien de ma chaudière est-il obligatoire&nbsp;?</summary><div class="rep"><p>Oui, pour les chaudières gaz, fioul ou bois dont la puissance est comprise entre 4 et 400 kW, un entretien annuel par un professionnel est obligatoire. Une attestation vous est remise à l'issue de la visite. Les chaudières électriques ne sont pas concernées, mais un contrôle reste conseillé.</p></div></details>
+      <details class="q"><summary>Quand faut-il envisager de remplacer sa chaudière&nbsp;?</summary><div class="rep"><p>Pannes à répétition, consommation qui grimpe, pièces devenues difficiles à trouver ou confort insuffisant sont des signaux à prendre en compte. Lors d'une visite, nous faisons le point sur l'état de votre appareil avant de vous conseiller.</p></div></details>
+      <details class="q"><summary>Puis-je encore installer une chaudière fioul&nbsp;?</summary><div class="rep"><p>La réglementation encadre désormais fortement l'installation de chaudières fioul neuves et favorise le passage à d'autres énergies. Les règles dépendent de votre situation : nous vous expliquons les options possibles lors du devis.</p></div></details>
+      <details class="q"><summary>Existe-t-il des aides pour changer mon chauffage&nbsp;?</summary><div class="rep"><p>Certains travaux peuvent ouvrir droit à des aides comme MaPrimeRénov' ou les primes CEE, selon votre éligibilité, vos revenus et l'équipement choisi. Les conditions évoluant régulièrement, il est conseillé de les vérifier sur les sites officiels avant de s'engager.</p></div></details>
+      <details class="q"><summary>Radiateurs électriques ou chaudière électrique&nbsp;: que choisir&nbsp;?</summary><div class="rep"><p>Des radiateurs électriques se posent pièce par pièce sans réseau d'eau, tandis qu'une chaudière électrique alimente des radiateurs à eau existants. Le bon choix dépend de votre logement et de votre installation actuelle.</p></div></details>
+      <details class="q"><summary>Ma chaudière s'est mise en sécurité, que faire&nbsp;?</summary><div class="rep"><p>Vous pouvez consulter la notice pour une éventuelle remise en route simple. Si le problème revient ou si vous sentez une odeur de gaz, ne forcez pas : coupez l'alimentation, aérez, et faites appel à un professionnel (en cas d'odeur de gaz, contactez aussi le numéro d'urgence de votre fournisseur).</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="surtitre">Contact</span>
+      <h2 class="titre">Envoyez-nous un mot</h2>
+    </div>
+    <div class="c-grid">
+      <div class="cadre rv">
+        <h3>Coordonnées</h3>
+        <div class="coord">
+          <a href="tel:+33663132429"><span class="pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="#231d1a"/></svg></span><span>06 63 13 24 29</span></a>
+          <a href="mailto:jerome.duquesne@sfr.fr"><span class="pi" style="background:#f2cbbd"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" fill="none" stroke="#231d1a" stroke-width="2"/><path d="M2 6l10 7 10-7" fill="none" stroke="#231d1a" stroke-width="2"/></svg></span><span>jerome.duquesne@sfr.fr</span></a>
+          <div><span class="pi" style="background:#cfdbe8"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z" fill="none" stroke="#231d1a" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="#231d1a"/></svg></span><span>Toulouse (31000) et environs</span></div>
+        </div>
+        <h3>Horaires</h3>
+        <table class="h" id="horaires">
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>Fermé</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>Fermé</td></tr>
+        </table>
+        <p class="note">Horaires indicatifs à confirmer par téléphone.</p>
+        <a class="btn btn-bleu" href="https://www.google.com/maps/search/?api=1&amp;query=Lurox%20Services%20Toulouse" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z" fill="#e6a93a" stroke="#f5ead3" stroke-width="1.6"/></svg>Itinéraire</a>
+      </div>
+
+      <div class="cadre form-l rv" id="devis">
+        <h3>Demande de devis</h3>
+        <form id="form" novalidate>
+          <div class="duo">
+            <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name"></div>
+            <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="champ"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
+          <div class="duo">
+            <div class="champ"><label for="type">Énergie</label><select id="type" name="type"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Électrique</option><option>Je ne sais pas</option></select></div>
+            <div class="champ"><label for="obj">Objet</label><select id="obj" name="obj"><option>Installation</option><option>Remplacement</option><option>Entretien</option><option>Dépannage</option></select></div>
+          </div>
+          <div class="champ"><label for="txt">Votre message</label><textarea id="txt" name="txt" rows="4" placeholder="Commune, type de logement, appareil actuel…"></textarea></div>
+          <button type="submit" class="btn">Envoyer la lettre</button>
+          <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire n'envoie rien pour l'instant. Contactez-nous au 06 63 13 24 29 ou à jerome.duquesne@sfr.fr.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#haut" class="logo" style="margin-bottom:14px"><svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="21" fill="#e6a93a" stroke="#f5ead3" stroke-width="2"/><circle cx="23" cy="23" r="16" fill="none" stroke="#231d1a" stroke-width="1.2" stroke-dasharray="2 2"/><path d="M10 25l13-4 13 4-13-1z" fill="#c8402e"/><path d="M14 20h18M14 27h18" stroke="#231d1a" stroke-width="2"/><circle cx="23" cy="23" r="3" fill="#231d1a"/></svg><span>Lurox Services<small>Chauffage · Toulouse</small></span></a>
+        <p>Chauffagiste à Toulouse (31000) et environs : chaudières gaz et fioul, radiateurs et chaudières électriques. Installation, remplacement, entretien, dépannage.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33663132429">06 63 13 24 29</a></li>
+          <li><a href="mailto:jerome.duquesne@sfr.fr">jerome.duquesne@sfr.fr</a></li>
+          <li>Toulouse (31000) et environs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul>
+          <li>Sur rendez-vous</li>
+          <li>Du lundi au vendredi</li>
+          <li>(indicatif, à confirmer)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Chaudière gaz &amp; fioul</a></li>
+          <li><a href="#services">Radiateurs électriques</a></li>
+          <li><a href="#services">Entretien &amp; dépannage</a></li>
+          <li><a href="#devis">Devis gratuit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bas"><span>© Lurox Services – Toulouse</span><span>Chauffage gaz · fioul · électrique</span></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a href="tel:+33663132429" class="appel-flot" aria-label="Appeler Lurox Services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="#f5ead3"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function fermer(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Ouvrir le menu')}
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer()});
+
+  /* aligne la largeur du timbre sur le pas des perforations */
+  var t=document.getElementById('timbre');
+  function cale(){t.style.width='';var pas=innerWidth<=560?16:22,w=t.parentNode.clientWidth-32;t.style.width=(Math.floor(w/pas)*pas)+'px'}
+  function cale2(){cale();t.style.paddingBottom='';var pas=innerWidth<=560?16:22,h=t.offsetHeight,base=parseFloat(getComputedStyle(t).paddingBottom);t.style.paddingBottom=(base+((pas-h%pas)%pas))+'px'}
+  cale2();addEventListener('resize',cale2);if(document.fonts)document.fonts.ready.then(cale2);
+
+  var j=new Date().getDay(),r=document.querySelector('#horaires tr[data-j="'+j+'"]');if(r)r.classList.add('auj');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var msg=document.getElementById('msg');msg.classList.add('on');msg.scrollIntoView({behavior:'smooth',block:'nearest'})});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('vu')});
+})();
+</script>
+</body>
+</html>

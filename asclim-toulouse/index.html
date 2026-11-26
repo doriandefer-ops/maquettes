@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asclim – chauffagiste et climatisation à Toulouse</title>
+<meta name="description" content="ASCLIM, installateur certifié RGE QualiPAC à Toulouse depuis 2017 : climatisation réversible, pompe à chaleur air-eau, PAC géothermique, chauffe-eau thermodynamique et photovoltaïque. Particuliers et professionnels en Haute-Garonne et départements voisins.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0d0b2a;
+  --nuit2:#15113d;
+  --violet:#4b2a8a;
+  --violette:#8a5cf6;
+  --brique:#f08a6c;
+  --menthe:#7ff0d0;
+  --blanc:#f7f5ff;
+  --texte:rgba(247,245,255,.74);
+  --doux:rgba(247,245,255,.56);
+  --bord:rgba(247,245,255,.14);
+  --bord-fort:rgba(247,245,255,.24);
+  --titre:"Sora",system-ui,sans-serif;
+  --corps:"DM Sans",system-ui,sans-serif;
+  --larg:1220px;
+  --r:24px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--nuit);color:var(--blanc);font-family:var(--corps);font-size:1.0625rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
+.ciel{position:absolute;inset:0;z-index:-3;pointer-events:none;background:
+  radial-gradient(70vw 55vw at 100% 0%,rgba(138,92,246,.30),transparent 62%),
+  radial-gradient(60vw 50vw at 0% 18%,rgba(75,42,138,.55),transparent 65%),
+  radial-gradient(55vw 40vw at 70% 34%,rgba(240,138,108,.13),transparent 60%),
+  radial-gradient(60vw 50vw at 10% 62%,rgba(127,240,208,.07),transparent 60%),
+  radial-gradient(70vw 60vw at 90% 82%,rgba(138,92,246,.20),transparent 65%),
+  linear-gradient(180deg,#0d0b2a 0%,#16113f 22%,#0d0b2a 48%,#130f36 74%,#0d0b2a 100%)}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--titre);margin:0;line-height:1.08;letter-spacing:-.025em;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* verre */
+.verre{position:relative;background:linear-gradient(150deg,rgba(255,255,255,.10),rgba(255,255,255,.03) 60%);border:1px solid var(--bord);border-radius:var(--r);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);box-shadow:0 24px 60px -28px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.12)}
+.verre::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.10),transparent 32%);opacity:.6}
+
+/* orbes + traînées */
+.orbe{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:-1}
+.orbe.v{background:rgba(138,92,246,.38)}
+.orbe.b{background:rgba(240,138,108,.28)}
+.orbe.m{background:rgba(127,240,208,.18)}
+.trainees{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;overflow:visible}
+.trainees path{fill:none;stroke-linecap:round}
+.trainee{stroke-dasharray:240 1400;animation:vol 9s linear infinite}
+.trainee.t2{animation-duration:12s;animation-delay:-4s}
+.trainee.t3{animation-duration:15s;animation-delay:-8s}
+@keyframes vol{from{stroke-dashoffset:1640}to{stroke-dashoffset:0}}
+
+/* navigation */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:14px 0;transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.plein{background:rgba(13,11,42,.72);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--bord);padding:10px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--titre);font-weight:800;font-size:1.3rem;letter-spacing:.06em}
+.logo svg{width:38px;height:38px}
+.logo small{display:block;font-family:var(--corps);font-weight:500;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-top:-2px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;font-size:.95rem;color:var(--texte);transition:color .2s,background .2s}
+.menu a:hover{color:var(--blanc);background:rgba(255,255,255,.07)}
+.nav-tel{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;background:linear-gradient(135deg,var(--violette),var(--brique));color:#fff;box-shadow:0 10px 30px -10px rgba(240,138,108,.6);white-space:nowrap}
+.nav-tel svg{width:17px;height:17px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:1px solid var(--bord-fort);background:rgba(255,255,255,.06);color:var(--blanc);cursor:pointer;align-items:center;justify-content:center}
+.burger span{position:relative;display:block;width:20px;height:2px;background:currentColor;border-radius:2px;transition:background .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:currentColor;border-radius:2px;transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.ouvert .burger span{background:transparent}
+.nav.ouvert .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;text-decoration:none;font-weight:600;font-size:1rem;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-feu{background:linear-gradient(135deg,var(--violette) 0%,#c06fd6 50%,var(--brique) 100%);color:#fff;box-shadow:0 16px 40px -14px rgba(240,138,108,.75)}
+.btn-feu:hover{transform:translateY(-2px);box-shadow:0 22px 48px -14px rgba(240,138,108,.9)}
+.btn-verre{background:rgba(255,255,255,.08);border-color:var(--bord-fort);color:var(--blanc);backdrop-filter:blur(10px)}
+.btn-verre:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+
+/* hero bento */
+.hero{position:relative;padding:118px 0 70px;overflow:hidden}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(118px,auto);gap:16px}
+.b-titre{grid-column:1/8;grid-row:1/4;padding:44px 44px 40px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.b-illu{grid-column:8/13;grid-row:1/4;padding:0;overflow:hidden;min-height:420px}
+.b-note{grid-column:1/5;grid-row:4/5}
+.b-rge{grid-column:5/9;grid-row:4/5}
+.b-an{grid-column:9/11;grid-row:4/5}
+.b-zone{grid-column:11/13;grid-row:4/5}
+.carte-mini{padding:22px 24px;display:flex;flex-direction:column;justify-content:center;gap:6px;transition:transform .35s,border-color .35s}
+.carte-mini:hover{transform:translateY(-4px);border-color:var(--bord-fort)}
+.etiquette{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--menthe);font-weight:600}
+.etiquette::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--menthe);box-shadow:0 0 12px var(--menthe)}
+.b-titre h1{font-size:clamp(2.6rem,5.6vw,4.9rem);font-weight:800;letter-spacing:-.04em;margin:18px 0 18px}
+.b-titre h1 .grad{background:linear-gradient(100deg,#fff 0%,#d8c8ff 35%,var(--brique) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.b-titre h1 small{display:block;font-size:.38em;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin-top:12px;color:var(--blanc)}
+.chapo{font-size:1.1rem;color:var(--texte);max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.b-titre .deco{position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;border:1px dashed rgba(247,245,255,.12)}
+.b-titre .deco2{position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(138,92,246,.3)}
+.gros{font-family:var(--titre);font-weight:800;font-size:2.1rem;letter-spacing:-.03em;line-height:1}
+.gros span{font-size:.55em;color:var(--doux);font-weight:600}
+.etoiles{display:flex;gap:3px;color:#ffc97a}
+.etoiles svg{width:17px;height:17px}
+.mini-txt{font-size:.88rem;color:var(--texte);line-height:1.4}
+.mini-txt a{color:var(--menthe);text-decoration:none;font-weight:600}
+.mini-txt a:hover{text-decoration:underline}
+.b-note .ligne{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.b-rge .ligne{display:flex;align-items:center;gap:14px}
+.sceau{width:52px;height:52px;flex:none}
+.b-illu{background:linear-gradient(180deg,#2a1868,#7a3f9e 55%,#1a1240 92%)}
+.b-illu svg{width:100%;height:100%}
+.flux{stroke-dasharray:6 10;animation:souffle 1.6s linear infinite}
+.flux.lent{animation-duration:2.4s}
+@keyframes souffle{to{stroke-dashoffset:-32}}
+.helice{transform-box:fill-box;transform-origin:center;animation:tourne 1.4s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.vague{animation:monte 3s ease-in-out infinite}
+.vague.v2{animation-delay:-1s}.vague.v3{animation-delay:-2s}
+@keyframes monte{0%{opacity:0;transform:translateY(8px)}40%{opacity:1}100%{opacity:0;transform:translateY(-18px)}}
+.clignote{animation:clig 2.4s ease-in-out infinite}
+@keyframes clig{50%{opacity:.25}}
+
+/* bandeau confiance */
+.confiance{padding:8px 0 30px}
+.confiance .verre{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 26px;padding:20px 30px;border-radius:999px}
+.confiance .item{display:flex;align-items:center;gap:10px;font-size:.95rem;color:var(--texte)}
+.confiance .item b{color:var(--blanc);font-weight:600}
+.confiance svg{width:22px;height:22px;color:var(--menthe);flex:none}
+
+/* sections */
+section{position:relative}
+main{overflow-x:clip}
+.bloc{padding:96px 0}
+.entete{max-width:720px;margin-bottom:48px}
+.entete.centre{margin-inline:auto;text-align:center}
+.surtitre{display:inline-block;font-family:var(--titre);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brique);font-weight:600;margin-bottom:14px}
+h2{font-size:clamp(2rem,3.8vw,3.1rem)}
+h2 em{font-style:normal;background:linear-gradient(100deg,var(--violette),var(--brique));-webkit-background-clip:text;background-clip:text;color:transparent}
+.entete p{color:var(--texte);margin-top:16px;font-size:1.08rem}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{padding:28px 24px 26px;transition:transform .35s,border-color .35s,background .35s;overflow:hidden}
+.service:hover{transform:translateY(-6px);border-color:rgba(138,92,246,.55);background:linear-gradient(150deg,rgba(138,92,246,.18),rgba(255,255,255,.03) 70%)}
+.service .ico{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(140deg,rgba(138,92,246,.35),rgba(240,138,108,.22));border:1px solid var(--bord-fort);margin-bottom:20px}
+.service .ico svg{width:30px;height:30px;color:var(--blanc)}
+.service h3{font-size:1.14rem;margin-bottom:10px;letter-spacing:-.015em}
+.service p{color:var(--texte);font-size:.95rem;margin:0;line-height:1.55}
+.service .num{position:absolute;right:20px;top:18px;font-family:var(--titre);font-size:.75rem;color:var(--doux);letter-spacing:.1em}
+
+/* atouts */
+.atouts-grille{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.atouts-liste{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.atout{padding:26px 24px}
+.atout .pastille{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(127,240,208,.13);color:var(--menthe);margin-bottom:16px;border:1px solid rgba(127,240,208,.3)}
+.atout .pastille svg{width:22px;height:22px}
+.atout h3{font-size:1.08rem;margin-bottom:8px}
+.atout p{color:var(--texte);font-size:.94rem;margin:0}
+.cockpit{padding:34px;overflow:hidden}
+.cockpit svg{width:100%;height:auto}
+.cockpit .leg{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:.86rem;color:var(--texte)}
+.cockpit .leg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;counter-reset:e}
+.etapes::before{content:"";position:absolute;left:4%;right:4%;top:46px;height:2px;background:linear-gradient(90deg,transparent,var(--violette),var(--brique),var(--menthe),transparent);opacity:.6}
+.etape{padding:30px 24px;text-align:left}
+.etape .n{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-family:var(--titre);font-weight:800;font-size:1.4rem;background:linear-gradient(140deg,var(--violet),var(--violette));border:1px solid var(--bord-fort);margin-bottom:22px;box-shadow:0 12px 30px -10px rgba(138,92,246,.8)}
+.etape:nth-child(2) .n{background:linear-gradient(140deg,var(--violette),#c06fd6)}
+.etape:nth-child(3) .n{background:linear-gradient(140deg,#c06fd6,var(--brique))}
+.etape:nth-child(4) .n{background:linear-gradient(140deg,#3fb59b,var(--menthe));color:var(--nuit)}
+.etape h3{font-size:1.12rem;margin-bottom:8px}
+.etape p{color:var(--texte);font-size:.94rem;margin:0}
+
+/* à propos */
+.apropos-grille{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch}
+.apropos-txt{padding:44px}
+.apropos-txt p{color:var(--texte)}
+.apropos-txt p strong{color:var(--blanc)}
+.fiche{padding:36px;display:grid;gap:0}
+.fiche dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0}
+.fiche dt,.fiche dd{padding:15px 0;border-bottom:1px solid var(--bord);margin:0}
+.fiche dt{font-family:var(--titre);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);padding-right:24px;padding-top:18px}
+.fiche dd{color:var(--blanc)}
+.fiche dd a{color:var(--menthe);text-decoration:none}
+.fiche dl > :nth-last-child(-n+2){border-bottom:0}
+.depts{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.depts span{padding:5px 12px;border-radius:999px;border:1px solid var(--bord-fort);font-size:.85rem;background:rgba(255,255,255,.05)}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.real{overflow:hidden;padding:0;transition:transform .35s}
+.real:hover{transform:translateY(-6px)}
+.real .vue{aspect-ratio:4/3.4;background:linear-gradient(160deg,#2a1a63,#14103a);border-bottom:1px solid var(--bord)}
+.real .vue svg{width:100%;height:100%}
+.real figcaption{padding:18px 20px 20px}
+.real figcaption b{display:block;font-family:var(--titre);font-size:1rem;margin-bottom:3px}
+.real figcaption span{font-size:.84rem;color:var(--doux)}
+.tarifs{margin-top:22px;padding:28px 34px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tarifs h3{font-size:1.35rem;margin-bottom:6px}
+.tarifs p{margin:0;color:var(--texte);max-width:640px}
+.prix{font-family:var(--titre);font-weight:800;font-size:1.6rem;background:linear-gradient(100deg,var(--menthe),#c9fff0);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+
+/* avis */
+.avis-carte{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding:46px 50px;overflow:hidden}
+.jauge{position:relative;width:180px;height:180px}
+.jauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.jauge .val{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--titre)}
+.jauge .val b{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;line-height:1}
+.jauge .val small{display:block;font-size:.8rem;color:var(--doux);font-weight:500;margin-top:4px}
+.avis-carte h3{font-size:1.6rem;margin-bottom:10px}
+.avis-carte p{color:var(--texte);margin:0 0 6px}
+.avis-carte .etoiles svg{width:24px;height:24px}
+
+/* faq */
+.faq-grille{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.faq-liste{display:grid;gap:12px}
+.q{border-radius:20px;overflow:hidden}
+.q button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;color:var(--blanc);font-family:var(--titre);font-size:1.02rem;font-weight:600;text-align:left;padding:22px 24px;cursor:pointer;letter-spacing:-.01em}
+.q button .plus{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--bord-fort);display:grid;place-items:center;transition:transform .3s,background .3s}
+.q button .plus svg{width:14px;height:14px}
+.q.ouvert button .plus{transform:rotate(45deg);background:var(--violette);border-color:var(--violette)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep > div{overflow:hidden}
+.q .rep p{padding:0 24px 22px;margin:0;color:var(--texte)}
+
+/* infos pratiques */
+.infos-grille{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.horaires{padding:36px}
+.horaires h3,.lieu h3{font-size:1.3rem;margin-bottom:6px}
+.indic{font-size:.85rem;color:var(--doux);margin-bottom:18px}
+.horaires table{width:100%;border-collapse:collapse}
+.horaires td{white-space:nowrap;padding:12px 14px;border-bottom:1px solid var(--bord);font-size:.98rem}
+.horaires tr:last-child td{border-bottom:0}
+.horaires td:last-child{text-align:right;color:var(--texte)}
+.horaires tr.auj td{background:rgba(138,92,246,.26);color:var(--blanc);font-weight:600}
+.horaires tr.auj td:first-child{border-radius:12px 0 0 12px}
+.horaires tr.auj td:last-child{border-radius:0 12px 12px 0}
+.horaires tr.auj td:first-child::after{content:"Aujourd'hui";margin-left:10px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--menthe);color:var(--nuit);font-weight:700;vertical-align:middle}
+.lieu{padding:36px;display:flex;flex-direction:column}
+.plan{flex:1;min-height:200px;border-radius:18px;margin:16px 0 20px;overflow:hidden;border:1px solid var(--bord);background:#120f35}
+.plan svg{width:100%;height:100%}
+.lieu address{font-style:normal;color:var(--texte);margin-bottom:18px}
+.lieu address b{color:var(--blanc);font-family:var(--titre)}
+
+/* contact */
+.contact-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:start}
+.contact-info{padding:40px}
+.contact-info p{color:var(--texte)}
+.coord{display:grid;gap:12px;margin-top:22px}
+.coord a,.coord div{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--bord);text-decoration:none;transition:background .25s,border-color .25s;overflow-wrap:anywhere}
+.coord a:hover{background:rgba(138,92,246,.16);border-color:rgba(138,92,246,.5)}
+.coord svg{width:22px;height:22px;color:var(--menthe);flex:none}
+.coord small{display:block;font-size:.75rem;color:var(--doux);letter-spacing:.08em;text-transform:uppercase}
+form.verre{padding:40px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.plein{grid-column:1/-1}
+.champ label{font-size:.86rem;color:var(--texte);font-weight:500}
+.champ input,.champ select,.champ textarea{width:100%;font:inherit;font-size:1rem;color:var(--blanc);background:rgba(13,11,42,.5);border:1px solid var(--bord-fort);border-radius:14px;padding:13px 15px;transition:border-color .2s,box-shadow .2s}
+.champ select option{background:var(--nuit2)}
+.champ textarea{min-height:130px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;border-color:var(--violette);box-shadow:0 0 0 4px rgba(138,92,246,.25)}
+.choix{display:flex;gap:10px;flex-wrap:wrap}
+.choix label{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid var(--bord-fort);cursor:pointer;font-size:.92rem;color:var(--blanc)}
+.choix input{accent-color:var(--violette)}
+form .btn{margin-top:22px;width:100%}
+.retour{display:none;margin-top:18px;padding:16px 18px;border-radius:16px;background:rgba(127,240,208,.12);border:1px solid rgba(127,240,208,.4);color:var(--blanc);font-size:.95rem}
+.retour.vu{display:block}
+
+/* footer */
+footer{padding:70px 0 30px;border-top:1px solid var(--bord);margin-top:40px;background:linear-gradient(180deg,rgba(75,42,138,.18),transparent)}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.pied h4{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux);margin-bottom:16px;font-weight:600}
+.pied p,.pied li{color:var(--texte);font-size:.94rem}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--menthe)}
+.bas{margin-top:46px;padding-top:22px;border-top:1px solid var(--bord);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--doux)}
+.demo{background:#08071d;color:rgba(247,245,255,.6);text-align:center;font-size:.82rem;padding:12px 16px;border-top:1px solid var(--bord)}
+
+/* appel flottant */
+.flottant{position:fixed;right:16px;bottom:18px;z-index:60;display:none;align-items:center;gap:8px;padding:14px 20px;border-radius:999px;background:linear-gradient(135deg,var(--violette),var(--brique));color:#fff;font-weight:700;text-decoration:none;box-shadow:0 18px 40px -10px rgba(240,138,108,.8)}
+.flottant svg{width:20px;height:20px}
+
+/* animations */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* responsive */
+@media (max-width:1080px){
+  .menu{display:none}
+  .burger{display:inline-flex}
+  .nav .nav-tel{display:none}
+  .nav.ouvert .menu{display:flex;position:absolute;top:calc(100% + 8px);left:16px;right:16px;flex-direction:column;align-items:stretch;padding:14px;border-radius:22px;background:rgba(21,17,61,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--bord-fort);box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+  .nav.ouvert .menu a{padding:14px 18px;font-size:1.05rem;color:var(--blanc)}
+  .nav.ouvert .menu .m-tel{display:block}
+  .bento{grid-template-columns:repeat(6,1fr)}
+  .b-titre{grid-column:1/-1;grid-row:auto}
+  .b-illu{grid-column:1/-1;grid-row:auto;min-height:0;aspect-ratio:480/470;max-height:640px}
+  .b-note,.b-rge{grid-column:span 3;grid-row:auto}
+  .b-an,.b-zone{grid-column:span 3;grid-row:auto}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts-grille,.apropos-grille,.faq-grille,.contact-grille{grid-template-columns:1fr}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr)}
+  .etapes::before{display:none}
+  .faq-grille .entete{position:static!important}
+  .pied{grid-template-columns:1fr 1fr}
+  .avis-carte{grid-template-columns:auto 1fr}
+  .avis-carte .btn{grid-column:1/-1;justify-self:start}
+}
+.menu .m-tel{display:none}
+.menu .m-tel a{margin-top:6px;text-align:center;background:linear-gradient(135deg,var(--violette),var(--brique));font-weight:700}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .hero{padding:96px 0 50px}
+  .bento{grid-template-columns:1fr 1fr;gap:12px}
+  .b-titre{padding:30px 22px 26px}
+  .b-titre h1{font-size:2.9rem}
+  .b-note,.b-rge{grid-column:1/-1}
+  .b-an,.b-zone{grid-column:span 1}
+  .carte-mini{padding:18px}
+  .actions .btn{width:100%}
+  .confiance .verre{border-radius:24px;padding:20px 22px;flex-direction:column}
+  .bloc{padding:70px 0}
+  .services,.atouts-liste,.galerie,.etapes,.champs,.infos-grille,.pied{grid-template-columns:1fr}
+  .apropos-txt,.fiche,.contact-info,form.verre,.horaires,.lieu,.cockpit{padding:26px 22px}
+  .fiche dl{grid-template-columns:1fr}
+  .fiche dt{padding-bottom:0;border-bottom:0}
+  .fiche dd{padding-top:4px}
+  .avis-carte{grid-template-columns:1fr;padding:32px 24px;gap:24px;text-align:left}
+  .jauge{width:150px;height:150px}
+  .tarifs{padding:24px}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:84px}
+  .gros{font-size:1.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="ciel" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Asclim, retour à l'accueil">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a5cf6"/><stop offset="1" stop-color="#f08a6c"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#lg)"/><path d="M9 26c6-1 10-6 13-13 1 6 4 10 9 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M12 31h16" stroke="#7ff0d0" stroke-width="2.6" stroke-linecap="round"/><path d="M27 9l4 1-2 3" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>ASCLIM<small>Clim · PAC · Toulouse</small></span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#atouts">Pourquoi nous</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="m-tel"><a href="tel:+33617174175">Appeler le 06 17 17 41 75</a></li>
+    </ul>
+    <a class="nav-tel" href="tel:+33617174175"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 17 17 41 75</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="orbe v" style="width:520px;height:520px;right:-160px;top:-120px"></div>
+  <div class="orbe b" style="width:420px;height:420px;left:-180px;top:260px"></div>
+  <div class="orbe m" style="width:300px;height:300px;left:45%;bottom:-120px"></div>
+  <svg class="trainees" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="tr1" x1="0" x2="1"><stop offset="0" stop-color="#7ff0d0" stop-opacity="0"/><stop offset="1" stop-color="#7ff0d0"/></linearGradient>
+      <linearGradient id="tr2" x1="0" x2="1"><stop offset="0" stop-color="#f08a6c" stop-opacity="0"/><stop offset="1" stop-color="#f08a6c"/></linearGradient>
+    </defs>
+    <path d="M-60 640C300 520 620 300 1500 120" stroke="rgba(247,245,255,.06)" stroke-width="1.5"/>
+    <path d="M-60 780C420 700 900 520 1500 470" stroke="rgba(247,245,255,.05)" stroke-width="1.5"/>
+    <path class="trainee" d="M-60 640C300 520 620 300 1500 120" stroke="url(#tr1)" stroke-width="2.4"/>
+    <path class="trainee t2" d="M-60 780C420 700 900 520 1500 470" stroke="url(#tr2)" stroke-width="2"/>
+    <path class="trainee t3" d="M200 -40C500 160 1000 260 1500 260" stroke="rgba(216,200,255,.7)" stroke-width="1.6"/>
+  </svg>
+
+  <div class="wrap bento">
+    <div class="verre b-titre rv">
+      <span class="deco" aria-hidden="true"></span><span class="deco2" aria-hidden="true"></span>
+      <div>
+        <span class="etiquette">Toulouse · allées Jean Jaurès</span>
+        <h1><span class="grad">Asclim</span><small>Votre climat intérieur, réglé comme un cockpit : frais en juillet, chaud en janvier.</small></h1>
+        <p class="chapo">Climatisation réversible, pompes à chaleur air-eau et géothermiques, chauffe-eau thermodynamique et photovoltaïque : ASCLIM installe, entretient et dépanne vos équipements thermiques, chez les particuliers comme chez les professionnels.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-feu" href="tel:+33617174175"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn btn-verre" href="#contact">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div class="verre b-illu rv d1" aria-hidden="true">
+      <svg viewBox="0 0 480 470" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="aube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1868"/><stop offset=".55" stop-color="#7a3f9e"/><stop offset="1" stop-color="#f08a6c"/></linearGradient>
+          <linearGradient id="briq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9775c"/><stop offset="1" stop-color="#a9503d"/></linearGradient>
+          <linearGradient id="tuile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c25a3f"/><stop offset="1" stop-color="#8d3b2a"/></linearGradient>
+          <linearGradient id="int" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe6c9"/><stop offset="1" stop-color="#f7c2a4"/></linearGradient>
+          <pattern id="brk" width="22" height="10" patternUnits="userSpaceOnUse"><path d="M0 0h22M0 5h22M11 0v5M0 5v5M22 5v5" stroke="#8f3e2d" stroke-width=".8" opacity=".45" fill="none"/></pattern>
+          <radialGradient id="soleil" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd7a3"/><stop offset=".5" stop-color="#f08a6c" stop-opacity=".6"/><stop offset="1" stop-color="#f08a6c" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="480" height="470" fill="url(#aube)"/>
+        <circle cx="370" cy="300" r="120" fill="url(#soleil)"/>
+        <!-- étoiles -->
+        <g fill="#fff"><circle cx="40" cy="40" r="1.3" class="clignote"/><circle cx="130" cy="70" r="1"/><circle cx="260" cy="30" r="1.4"/><circle cx="420" cy="60" r="1.1" class="clignote"/><circle cx="330" cy="110" r=".9"/></g>
+        <!-- avion + traînée -->
+        <path d="M-10 150C120 120 230 80 340 52" stroke="#fff" stroke-opacity=".55" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="2 6"/>
+        <g transform="translate(346 48) rotate(-14)"><path d="M0 0l-22-3 -4-9 -5 1 2 9 -12 -1 -5-6 -4 1 3 7 -3 7 4 1 5-6 12-1 -2 9 5 1 4-9z" fill="#f7f5ff" transform="scale(-1 1)"/></g>
+        <!-- silhouette ville au loin -->
+        <path d="M0 330h40v-18h14v-30h8v30h20v-12h26v-26l10-10 10 10v26h30v-16h22v16h40l6-40h4l6 40h30v-20h30v20h50v-14h30v14h50v-26h24v26h30v60H0z" fill="#3a1f6e" opacity=".75"/>
+        <!-- sol -->
+        <rect y="400" width="480" height="70" fill="#1a1240"/>
+        <path d="M0 400h480" stroke="#f7f5ff" stroke-opacity=".15"/>
+        <!-- maison -->
+        <path d="M70 400V236h300v164z" fill="url(#briq)"/>
+        <path d="M70 400V236h300v164z" fill="url(#brk)"/>
+        <!-- toit tuiles canal -->
+        <path d="M52 240L220 170l168 70z" fill="url(#tuile)"/>
+        <g stroke="#6e2c1f" stroke-width="1.2" opacity=".6"><path d="M90 230L220 176 350 230"/><path d="M110 222L220 182 330 222"/></g>
+        <path d="M52 240h336" stroke="#5c2418" stroke-width="5"/>
+        <g fill="#e0806a" opacity=".6"><circle cx="70" cy="242" r="3"/><circle cx="90" cy="242" r="3"/><circle cx="110" cy="242" r="3"/><circle cx="130" cy="242" r="3"/><circle cx="150" cy="242" r="3"/><circle cx="170" cy="242" r="3"/><circle cx="190" cy="242" r="3"/><circle cx="210" cy="242" r="3"/><circle cx="230" cy="242" r="3"/><circle cx="250" cy="242" r="3"/><circle cx="270" cy="242" r="3"/><circle cx="290" cy="242" r="3"/><circle cx="310" cy="242" r="3"/><circle cx="330" cy="242" r="3"/><circle cx="350" cy="242" r="3"/><circle cx="370" cy="242" r="3"/></g>
+        <!-- génoise -->
+        <path d="M70 252h300" stroke="#f3c3a8" stroke-width="3" opacity=".5"/>
+        <!-- grande baie avec split intérieur -->
+        <rect x="96" y="272" width="150" height="104" rx="4" fill="url(#int)"/>
+        <rect x="96" y="272" width="150" height="104" rx="4" fill="none" stroke="#f7f5ff" stroke-width="4"/>
+        <path d="M171 272v104" stroke="#f7f5ff" stroke-width="3"/>
+        <!-- split mural -->
+        <rect x="112" y="284" width="90" height="24" rx="8" fill="#fff"/>
+        <rect x="118" y="302" width="78" height="3" rx="1.5" fill="#d9d4ef"/>
+        <circle cx="192" cy="292" r="2.2" fill="#7ff0d0" class="clignote"/>
+        <g stroke="#3fc6a6" stroke-width="2.4" fill="none" stroke-linecap="round">
+          <path class="flux" d="M120 314c4 12 -4 22 0 34"/>
+          <path class="flux lent" d="M140 314c4 12 -4 22 0 34"/>
+          <path class="flux" d="M160 314c4 12 -4 22 0 34"/>
+          <path class="flux lent" d="M180 314c4 12 -4 22 0 34"/>
+        </g>
+        <!-- volets -->
+        <rect x="84" y="272" width="10" height="104" fill="#5b3fa6"/>
+        <rect x="248" y="272" width="10" height="104" fill="#5b3fa6"/>
+        <!-- fenêtre étage / lucarne -->
+        <rect x="286" y="272" width="54" height="64" rx="3" fill="#ffe0c0"/>
+        <rect x="286" y="272" width="54" height="64" rx="3" fill="none" stroke="#f7f5ff" stroke-width="3"/>
+        <path d="M313 272v64M286 304h54" stroke="#f7f5ff" stroke-width="2"/>
+        <!-- liaison frigorifique -->
+        <path d="M202 296h20v-38h126v80" fill="none" stroke="#f7f5ff" stroke-opacity=".7" stroke-width="2.5" stroke-dasharray="1 0"/>
+        <!-- unité extérieure clim sur console -->
+        <g>
+          <rect x="330" y="338" width="62" height="44" rx="5" fill="#eceaf8"/>
+          <circle cx="352" cy="360" r="15" fill="#c9c4e3"/>
+          <g class="helice"><path d="M352 347v26M339 360h26M343 351l18 18M361 351l-18 18" stroke="#6a5aa8" stroke-width="3" stroke-linecap="round"/></g>
+          <circle cx="352" cy="360" r="3" fill="#4b2a8a"/>
+          <g fill="#a39bc9"><rect x="372" y="346" width="14" height="2" rx="1"/><rect x="372" y="352" width="14" height="2" rx="1"/><rect x="372" y="358" width="14" height="2" rx="1"/></g>
+          <path d="M334 382l-4 10M388 382l4 10" stroke="#2a1a55" stroke-width="3"/>
+        </g>
+        <!-- PAC air-eau au sol -->
+        <g>
+          <rect x="392" y="330" width="78" height="70" rx="6" fill="#f7f5ff"/>
+          <circle cx="420" cy="365" r="22" fill="#d6d0ee"/>
+          <g class="helice" style="animation-duration:1s"><path d="M420 345v40M400 365h40M406 351l28 28M434 351l-28 28" stroke="#4b2a8a" stroke-width="3.5" stroke-linecap="round"/></g>
+          <circle cx="420" cy="365" r="4" fill="#f08a6c"/>
+          <rect x="450" y="342" width="12" height="18" rx="2" fill="#2a1a55"/>
+          <circle cx="456" cy="350" r="2" fill="#7ff0d0" class="clignote"/>
+        </g>
+        <!-- flux chaleur PAC -->
+        <g stroke="#ffd3b5" stroke-width="2.4" fill="none" stroke-linecap="round">
+          <path class="vague" d="M408 322c-5-6 5-12 0-18"/>
+          <path class="vague v2" d="M424 322c-5-6 5-12 0-18"/>
+          <path class="vague v3" d="M440 322c-5-6 5-12 0-18"/>
+        </g>
+        <!-- tuyau PAC vers maison -->
+        <path d="M392 392h-22" stroke="#f08a6c" stroke-width="3"/>
+        <!-- porte -->
+        <path d="M268 400v-48a16 16 0 0 1 32 0v48z" fill="#3b2470"/>
+        <circle cx="292" cy="378" r="2" fill="#ffd3b5"/>
+        <!-- étiquettes -->
+        <g font-family="DM Sans, sans-serif" font-size="12" font-weight="600">
+          <rect x="16" y="420" width="112" height="28" rx="14" fill="rgba(13,11,42,.6)" stroke="rgba(127,240,208,.5)"/>
+          <circle cx="32" cy="434" r="4" fill="#7ff0d0"/>
+          <text x="42" y="438" fill="#f7f5ff">Air rafraîchi</text>
+          <rect x="138" y="420" width="132" height="28" rx="14" fill="rgba(13,11,42,.6)" stroke="rgba(240,138,108,.6)"/>
+          <circle cx="154" cy="434" r="4" fill="#f08a6c"/>
+          <text x="164" y="438" fill="#f7f5ff">Chaleur captée</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="verre carte-mini b-note rv d2">
+      <div class="ligne">
+        <div class="gros">4,9<span>/5</span></div>
+        <div class="etoiles" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg>
+        </div>
+      </div>
+      <p class="mini-txt" style="margin:0">37 avis clients sur Effy · <a href="https://www.effy.fr/artisans/pro/2521-asclim" target="_blank" rel="noopener">voir la source</a></p>
+    </div>
+    <div class="verre carte-mini b-rge rv d2">
+      <div class="ligne">
+        <svg class="sceau" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="#7ff0d0" stroke-width="2" stroke-dasharray="3 3"/><circle cx="26" cy="26" r="18" fill="rgba(127,240,208,.15)" stroke="#7ff0d0" stroke-width="1.5"/><path d="M18 26l5 5 11-11" fill="none" stroke="#7ff0d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <div style="font-family:var(--titre);font-weight:700;font-size:1.15rem">RGE QualiPAC</div>
+          <p class="mini-txt" style="margin:0">QualiPAC Chauffage + QualiPAC CET</p>
+        </div>
+      </div>
+    </div>
+    <div class="verre carte-mini b-an rv d3">
+      <span class="mini-txt">Depuis</span>
+      <div class="gros">2017</div>
+    </div>
+    <div class="verre carte-mini b-zone rv d4">
+      <span class="mini-txt">Interventions</span>
+      <div class="gros" style="font-size:1.5rem">31 + 7&nbsp;dép.</div>
+    </div>
+  </div>
+</section>
+
+<div class="confiance">
+  <div class="wrap">
+    <div class="verre rv">
+      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span><b>RGE QualiPAC</b> Chauffage &amp; CET</span></div>
+      <div class="item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><span><b>4,9/5</b> · 37 avis Effy</span></div>
+      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span><b>Toulouse</b> &amp; 7 départements voisins</span></div>
+      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg><span><b>Particuliers</b> &amp; professionnels</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="surtitre">Services</span>
+      <h2>Du froid, du chaud, <em>et l'énergie du soleil.</em></h2>
+      <p>Un même interlocuteur pour l'ensemble de vos équipements thermiques : étude, fourniture, pose, mise en service, entretien et dépannage.</p>
+    </div>
+    <div class="services">
+      <article class="verre service rv"><span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="7" width="26" height="9" rx="3"/><path d="M7 13h18"/><path d="M9 20c1 2-1 4 0 6M16 20c1 2-1 4 0 6M23 20c1 2-1 4 0 6"/></svg></div>
+        <h3>Climatisation réversible</h3><p>Splits muraux ou consoles qui rafraîchissent l'été et chauffent à la mi-saison, posés avec soin.</p></article>
+      <article class="verre service rv d1"><span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="8" width="26" height="18" rx="3"/><circle cx="13" cy="17" r="5.5"/><path d="M13 12v10M8 17h10"/><path d="M23 13v8"/></svg></div>
+        <h3>Pompe à chaleur air-eau</h3><p>La solution pour remplacer une chaudière fioul ou gaz, en gardant vos radiateurs ou votre plancher chauffant.</p></article>
+      <article class="verre service rv d2"><span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="7"/><path d="M16 9v8"/><circle cx="16" cy="20" r="3"/><path d="M12 3c0-1 8-1 8 0"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3><p>Un ballon qui puise les calories de l'air pour produire votre eau chaude sanitaire.</p></article>
+      <article class="verre service rv d3"><span class="num">04</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 12l12-8 12 8"/><path d="M2 16h28"/><path d="M11 16v13M21 16v13"/><path d="M11 22h-3M21 25h3M11 28h-3"/></svg></div>
+        <h3>PAC géothermique</h3><p>Le sol comme source de chaleur stable toute l'année, pour un chauffage particulièrement régulier.</p></article>
+      <article class="verre service rv"><span class="num">05</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 25l4-14h18l-4 14z"/><path d="M7 18h18M16 11l-2 14"/><circle cx="25" cy="6" r="2.5"/><path d="M25 1v1M29 6h1M28 3l1-1"/></svg></div>
+        <h3>Panneaux photovoltaïques</h3><p>Produire une partie de votre électricité sur votre toiture, en complément de vos équipements.</p></article>
+      <article class="verre service rv d1"><span class="num">06</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 4a6 6 0 0 0-5.6 8.2L4 22.6V28h5.4l10.4-10.4A6 6 0 0 0 28 12l-4 1-3-3 1-4z"/></svg></div>
+        <h3>Entretien</h3><p>Contrôles, nettoyage et réglages pour que votre PAC ou votre clim garde son rendement.</p></article>
+      <article class="verre service rv d2"><span class="num">07</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 3L7 18h8l-2 11 12-16h-8z"/></svg></div>
+        <h3>Dépannage</h3><p>Panne, code erreur, baisse de performance : diagnostic et remise en route de vos équipements.</p></article>
+      <article class="verre service rv d3"><span class="num">08</span>
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="9" width="24" height="19" rx="2"/><path d="M11 9V5h10v4M4 16h24M14 16v3h4v-3"/></svg></div>
+        <h3>Locaux professionnels</h3><p>Bureaux, commerces, ateliers : confort thermique des équipes et des clients, sur étude.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="atouts" style="padding-top:40px">
+  <div class="orbe v" style="width:380px;height:380px;left:-120px;top:20%"></div>
+  <div class="wrap atouts-grille">
+    <div>
+      <div class="entete rv" style="margin-bottom:32px">
+        <span class="surtitre">Pourquoi ASCLIM</span>
+        <h2>Un vol sans <em>turbulences</em>, de l'étude à la mise en service.</h2>
+      </div>
+      <div class="atouts-liste">
+        <div class="verre atout rv"><div class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Certifié RGE QualiPAC</h3><p>Qualification pour la pose de PAC et de chauffe-eau thermodynamiques, utile pour les aides selon votre éligibilité.</p></div>
+        <div class="verre atout rv d1"><div class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Chaud, froid et solaire</h3><p>Clim, PAC, eau chaude, photovoltaïque : une vision d'ensemble de votre logement plutôt qu'un appareil isolé.</p></div>
+        <div class="verre atout rv d2"><div class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 12h6M9 16h6"/></svg></div><h3>Particuliers et pros</h3><p>Maison, appartement, bureaux ou commerce : une approche adaptée à chaque type de bâtiment.</p></div>
+        <div class="verre atout rv d3"><div class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Rayon Occitanie</h3><p>Depuis Toulouse, jusqu'au Gers, au Tarn, à l'Aveyron, à l'Aude ou à l'Ariège.</p></div>
+      </div>
+    </div>
+    <div class="verre cockpit rv d2" aria-hidden="true">
+      <svg viewBox="0 0 460 360">
+        <defs><linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="#7ff0d0"/><stop offset=".5" stop-color="#8a5cf6"/><stop offset="1" stop-color="#f08a6c"/></linearGradient></defs>
+        <text x="0" y="18" fill="rgba(247,245,255,.55)" font-family="Sora,sans-serif" font-size="12" letter-spacing="2">TABLEAU DE BORD CONFORT</text>
+        <!-- grand cadran -->
+        <path d="M70 250a160 160 0 0 1 320 0" fill="none" stroke="rgba(247,245,255,.1)" stroke-width="18" stroke-linecap="round"/>
+        <path d="M70 250a160 160 0 0 1 320 0" fill="none" stroke="url(#arc)" stroke-width="18" stroke-linecap="round"/>
+        <g stroke="rgba(247,245,255,.45)" stroke-width="2"><path d="M88 250h-14M386 250h14M230 108v-14M117 137l-10-10M343 137l10-10"/></g>
+        <g transform="rotate(28 230 250)"><path d="M230 250L230 192" stroke="#f7f5ff" stroke-width="4" stroke-linecap="round"/></g>
+        <circle cx="230" cy="250" r="14" fill="#f7f5ff"/><circle cx="230" cy="250" r="6" fill="#4b2a8a"/>
+        <text x="230" y="172" text-anchor="middle" fill="#f7f5ff" font-family="Sora,sans-serif" font-size="40" font-weight="800">21°</text>
+        <text x="62" y="282" fill="#7ff0d0" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">FROID</text>
+        <text x="398" y="282" text-anchor="end" fill="#f08a6c" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">CHAUD</text>
+        <!-- mini cadrans -->
+        <g transform="translate(40 300)">
+          <rect width="116" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(247,245,255,.14)"/>
+          <path d="M14 38c8-8 16 4 24-4s16 4 24-4 16 4 24-4" fill="none" stroke="#7ff0d0" stroke-width="2" class="flux lent"/>
+          <text x="14" y="18" fill="rgba(247,245,255,.6)" font-family="DM Sans,sans-serif" font-size="10">FLUX D'AIR</text>
+        </g>
+        <g transform="translate(172 300)">
+          <rect width="116" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(247,245,255,.14)"/>
+          <rect x="14" y="28" width="88" height="8" rx="4" fill="rgba(247,245,255,.12)"/><rect x="14" y="28" width="62" height="8" rx="4" fill="#8a5cf6"/>
+          <text x="14" y="18" fill="rgba(247,245,255,.6)" font-family="DM Sans,sans-serif" font-size="10">EAU CHAUDE</text>
+        </g>
+        <g transform="translate(304 300)">
+          <rect width="116" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(247,245,255,.14)"/>
+          <circle cx="26" cy="35" r="7" fill="#f08a6c"/>
+          <text x="14" y="16" fill="rgba(247,245,255,.6)" font-family="DM Sans,sans-serif" font-size="10">SOLAIRE</text>
+          <text x="42" y="39" fill="#f7f5ff" font-family="DM Sans,sans-serif" font-size="12" font-weight="600">en toiture</text>
+        </g>
+      </svg>
+      <div class="leg"><span><i style="background:#7ff0d0"></i>Rafraîchir</span><span><i style="background:#8a5cf6"></i>Réguler</span><span><i style="background:#f08a6c"></i>Chauffer</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="entete centre rv">
+      <span class="surtitre">Comment ça se passe</span>
+      <h2>Quatre étapes, <em>un plan de vol clair.</em></h2>
+    </div>
+    <ol class="etapes" style="list-style:none;padding:0;margin:0">
+      <li class="verre etape rv"><div class="n">01</div><h3>Premier contact</h3><p>Vous appelez ou remplissez le formulaire : on échange sur votre logement, vos équipements actuels et vos attentes.</p></li>
+      <li class="verre etape rv d1"><div class="n">02</div><h3>Visite et étude</h3><p>Relevé sur place, choix du matériel et du dimensionnement adaptés, puis devis détaillé.</p></li>
+      <li class="verre etape rv d2"><div class="n">03</div><h3>Installation</h3><p>Pose propre des unités intérieures et extérieures, raccordements et protection de votre intérieur.</p></li>
+      <li class="verre etape rv d3"><div class="n">04</div><h3>Mise en service</h3><p>Réglages, explications d'utilisation, puis entretien et dépannage dans la durée si besoin.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloc" id="apropos" style="padding-top:40px">
+  <div class="wrap apropos-grille">
+    <div class="verre apropos-txt rv">
+      <span class="surtitre">À propos</span>
+      <h2 style="margin-bottom:22px">Une entreprise toulousaine <em>du confort thermique.</em></h2>
+      <p><strong>ASCLIM</strong> est une entreprise créée en 2017 et installée au 59 allées Jean Jaurès, au cœur de Toulouse.</p>
+      <p>Elle est certifiée <strong>RGE QualiPAC</strong>, en QualiPAC Chauffage et QualiPAC CET, et intervient sur la climatisation réversible, les pompes à chaleur air-eau et géothermiques, les chauffe-eau thermodynamiques et les panneaux photovoltaïques.</p>
+      <p>Installation, entretien et dépannage : ASCLIM accompagne aussi bien les particuliers que les professionnels, à Toulouse et dans les départements limitrophes.</p>
+    </div>
+    <div class="verre fiche rv d1">
+      <dl>
+        <dt>Société</dt><dd>ASCLIM</dd>
+        <dt>Adresse</dt><dd>59 allées Jean Jaurès<br>31000 Toulouse</dd>
+        <dt>Création</dt><dd>2017</dd>
+        <dt>Label</dt><dd>RGE QualiPAC Chauffage et QualiPAC CET</dd>
+        <dt>Clients</dt><dd>Particuliers et professionnels</dd>
+        <dt>Zone</dt><dd>Toulouse et départements limitrophes
+          <div class="depts"><span>Haute-Garonne</span><span>Gers</span><span>Tarn</span><span>Tarn-et-Garonne</span><span>Aveyron</span><span>Aude</span><span>Ariège</span></div></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="realisations">
+  <div class="orbe b" style="width:360px;height:360px;right:-120px;top:10%"></div>
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="surtitre">Réalisations</span>
+      <h2>Le type d'installations <em>que nous posons.</em></h2>
+      <p>Illustrations indicatives des équipements mis en œuvre au quotidien.</p>
+    </div>
+    <div class="galerie">
+      <figure class="verre real rv" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 300 255" aria-hidden="true">
+          <rect width="300" height="255" fill="#211a55"/>
+          <rect x="0" y="190" width="300" height="65" fill="#2c2266"/>
+          <rect x="40" y="60" width="120" height="100" rx="4" fill="#3a2f80"/><path d="M40 110h120M100 60v100" stroke="#4b3f97" stroke-width="3"/>
+          <rect x="170" y="50" width="110" height="30" rx="10" fill="#f7f5ff"/><rect x="178" y="70" width="94" height="4" rx="2" fill="#cfc8ec"/><circle cx="268" cy="60" r="2.5" fill="#7ff0d0" class="clignote"/>
+          <g stroke="#7ff0d0" stroke-width="2.4" fill="none" stroke-linecap="round"><path class="flux" d="M190 86c4 14-4 26 0 40"/><path class="flux lent" d="M215 86c4 14-4 26 0 40"/><path class="flux" d="M240 86c4 14-4 26 0 40"/><path class="flux lent" d="M262 86c4 14-4 26 0 40"/></g>
+          <rect x="60" y="170" width="160" height="34" rx="8" fill="#8a5cf6" opacity=".8"/><rect x="66" y="160" width="40" height="18" rx="6" fill="#a789f8"/><rect x="170" y="160" width="40" height="18" rx="6" fill="#a789f8"/>
+          <path d="M250 200v-30h14v30" fill="#2e7f6c"/><circle cx="257" cy="160" r="16" fill="#3fb59b"/>
+        </svg></div>
+        <figcaption><b>Split mural en séjour</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="verre real rv d1" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 300 255" aria-hidden="true">
+          <defs><pattern id="brk2" width="20" height="9" patternUnits="userSpaceOnUse"><path d="M0 0h20M0 4.5h20M10 0v4.5M0 4.5v4.5M20 4.5v4.5" stroke="#8f3e2d" stroke-width=".8" opacity=".5" fill="none"/></pattern></defs>
+          <rect width="300" height="255" fill="#c96c52"/><rect width="300" height="255" fill="url(#brk2)"/>
+          <rect x="0" y="210" width="300" height="45" fill="#3a2a5c"/>
+          <rect x="30" y="40" width="70" height="90" rx="3" fill="#ffe0c0" stroke="#f7f5ff" stroke-width="4"/><path d="M65 40v90" stroke="#f7f5ff" stroke-width="3"/>
+          <rect x="140" y="130" width="130" height="86" rx="8" fill="#f7f5ff"/><circle cx="185" cy="173" r="30" fill="#d6d0ee"/>
+          <g class="helice"><path d="M185 145v56M157 173h56M165 153l40 40M205 153l-40 40" stroke="#4b2a8a" stroke-width="4" stroke-linecap="round"/></g><circle cx="185" cy="173" r="5" fill="#f08a6c"/>
+          <rect x="232" y="146" width="24" height="30" rx="3" fill="#2a1a55"/>
+          <g stroke="#ffe1cf" stroke-width="2.4" fill="none" stroke-linecap="round"><path class="vague" d="M170 120c-5-6 5-12 0-18"/><path class="vague v2" d="M190 120c-5-6 5-12 0-18"/><path class="vague v3" d="M210 120c-5-6 5-12 0-18"/></g>
+          <path d="M140 200h-30v-70" fill="none" stroke="#4b2a8a" stroke-width="4"/>
+        </svg></div>
+        <figcaption><b>PAC air-eau en façade</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="verre real rv d2" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 300 255" aria-hidden="true">
+          <rect width="300" height="255" fill="#1d1850"/>
+          <g stroke="#2b2468" stroke-width="2"><path d="M0 60h300M0 120h300M0 180h300M75 0v255M150 0v255M225 0v255"/></g>
+          <rect x="0" y="220" width="300" height="35" fill="#2c2266"/>
+          <rect x="110" y="30" width="80" height="190" rx="36" fill="#f7f5ff"/>
+          <rect x="110" y="30" width="80" height="48" rx="24" fill="#d6d0ee"/>
+          <g class="helice" style="animation-duration:2s"><path d="M150 40v28M136 54h28" stroke="#4b2a8a" stroke-width="3" stroke-linecap="round"/></g>
+          <rect x="130" y="100" width="40" height="20" rx="4" fill="#2a1a55"/><text x="150" y="114" text-anchor="middle" fill="#7ff0d0" font-family="Sora,sans-serif" font-size="11" font-weight="700">55°</text>
+          <rect x="140" y="140" width="20" height="60" rx="10" fill="rgba(138,92,246,.2)"/><rect x="140" y="160" width="20" height="40" rx="10" fill="#f08a6c"/>
+          <path d="M120 220v14M180 220v14" stroke="#8a5cf6" stroke-width="5"/>
+          <path d="M190 200h60v30" fill="none" stroke="#f08a6c" stroke-width="4"/><path d="M110 210h-50v20" fill="none" stroke="#7ff0d0" stroke-width="4"/>
+        </svg></div>
+        <figcaption><b>Ballon thermodynamique</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="verre real rv d3" style="margin:0">
+        <div class="vue"><svg viewBox="0 0 300 255" aria-hidden="true">
+          <defs><linearGradient id="ciel2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b2a8a"/><stop offset="1" stop-color="#f08a6c"/></linearGradient></defs>
+          <rect width="300" height="255" fill="url(#ciel2)"/>
+          <circle cx="240" cy="60" r="26" fill="#ffd7a3"/><circle cx="240" cy="60" r="40" fill="#ffd7a3" opacity=".25" class="clignote"/>
+          <path d="M20 255V160l130-80 130 80v95z" fill="#b65a44"/>
+          <path d="M8 168L150 78l142 90" fill="none" stroke="#6e2c1f" stroke-width="10" stroke-linejoin="round"/>
+          <g transform="translate(150 78)">
+            <path d="M-92 72L-10 20h64L-28 72z" fill="#241c63" stroke="#cfc8ec" stroke-width="2"/>
+            <g stroke="#6f62c4" stroke-width="1.5"><path d="M-71 59h62M-51 46h62M-31 33h62M-60 72l22-52M-34 72l26-52M-8 72l26-52"/></g>
+          </g>
+          <rect x="120" y="190" width="60" height="65" fill="#3b2470"/>
+          <g stroke="#ffd7a3" stroke-width="2" stroke-dasharray="3 5" class="flux lent"><path d="M220 82l-60 40"/></g>
+        </svg></div>
+        <figcaption><b>Photovoltaïque en toiture</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+    </div>
+    <div class="verre tarifs rv">
+      <div>
+        <h3>Tarifs</h3>
+        <p>Chaque logement est différent : surface, isolation, émetteurs existants, contraintes d'installation. Le prix est établi après étude, avec un devis détaillé.</p>
+      </div>
+      <div class="prix">Sur devis</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="avis" style="padding-top:40px">
+  <div class="wrap">
+    <div class="verre avis-carte rv">
+      <div class="jauge" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><linearGradient id="jg" x1="0" x2="1"><stop offset="0" stop-color="#8a5cf6"/><stop offset="1" stop-color="#f08a6c"/></linearGradient></defs><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(247,245,255,.1)" stroke-width="10"/><circle cx="60" cy="60" r="52" fill="none" stroke="url(#jg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="320.4 326.7"/></svg>
+        <div class="val"><div><b>4,9</b><small>sur 5</small></div></div>
+      </div>
+      <div>
+        <span class="surtitre">Avis clients</span>
+        <h3>4,9/5 sur 37 avis Effy</h3>
+        <div class="etoiles" aria-label="5 étoiles" style="margin:10px 0 14px">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg>
+        </div>
+        <p>Les avis sont publiés par des clients sur la page d'ASCLIM du site Effy. Retrouvez-les en intégralité à la source.</p>
+      </div>
+      <a class="btn btn-verre" href="https://www.effy.fr/artisans/pro/2521-asclim" target="_blank" rel="noopener">Lire les avis sur Effy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="faq">
+  <div class="wrap faq-grille">
+    <div class="entete rv" style="position:sticky;top:110px">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2>Avant le <em>décollage.</em></h2>
+      <p>Des réponses générales pour y voir plus clair. Pour votre cas précis, le plus simple reste d'en parler de vive voix.</p>
+      <a class="btn btn-feu" href="tel:+33617174175" style="margin-top:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 17 17 41 75</a>
+    </div>
+    <div class="faq-liste">
+      <div class="verre q rv"><button aria-expanded="false">Une pompe à chaleur peut-elle remplacer ma chaudière fioul ou gaz ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>Dans de nombreux cas, oui : une PAC air-eau peut se raccorder au circuit de chauffage existant (radiateurs ou plancher chauffant). La faisabilité dépend notamment de l'isolation, des émetteurs et de la place disponible ; c'est l'objet de la visite technique.</p></div></div></div>
+      <div class="verre q rv"><button aria-expanded="false">Puis-je bénéficier d'aides comme MaPrimeRénov' ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>Certaines aides publiques peuvent s'appliquer aux pompes à chaleur et chauffe-eau thermodynamiques, selon éligibilité (revenus, logement, type de travaux). Elles exigent généralement un installateur RGE, ce qui est le cas d'ASCLIM. Les montants et conditions évoluent : renseignez-vous sur les sites officiels avant de vous engager.</p></div></div></div>
+      <div class="verre q rv"><button aria-expanded="false">Climatisation réversible ou PAC air-eau : quelle différence ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>La climatisation réversible (air-air) souffle de l'air chaud ou froid directement dans les pièces. La PAC air-eau chauffe l'eau de votre circuit de chauffage, et souvent l'eau chaude sanitaire. Le bon choix dépend de votre logement et de vos usages.</p></div></div></div>
+      <div class="verre q rv"><button aria-expanded="false">Faut-il entretenir une pompe à chaleur ou une clim ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>Oui. Un entretien régulier aide à préserver le rendement et la durée de vie de l'équipement, et certaines installations sont soumises à des contrôles réglementaires selon leur puissance et le fluide utilisé.</p></div></div></div>
+      <div class="verre q rv"><button aria-expanded="false">La géothermie est-elle adaptée à mon terrain ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>Une PAC géothermique demande une étude préalable : surface ou accès pour les capteurs, nature du sol, éventuelles démarches administratives. Elle offre en contrepartie une source de chaleur très stable. Nous pouvons en discuter lors de la visite.</p></div></div></div>
+      <div class="verre q rv"><button aria-expanded="false">Intervenez-vous en dehors de Toulouse ?<span class="plus"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span></button><div class="rep"><div><p>Oui : ASCLIM intervient à Toulouse et dans les départements limitrophes : Haute-Garonne, Gers, Tarn, Tarn-et-Garonne, Aveyron, Aude et Ariège. Indiquez votre commune dans le formulaire.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="infos" style="padding-top:40px">
+  <div class="wrap infos-grille">
+    <div class="verre horaires rv">
+      <span class="surtitre">Horaires</span>
+      <h3>Sur rendez-vous</h3>
+      <p class="indic">Horaires indicatifs, à confirmer par téléphone.</p>
+      <table>
+        <tbody>
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="verre lieu rv d1">
+      <span class="surtitre">Adresse</span>
+      <h3>Allées Jean Jaurès, Toulouse</h3>
+      <div class="plan" aria-hidden="true">
+        <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="200" fill="#151140"/>
+          <g stroke="rgba(247,245,255,.08)" stroke-width="1"><path d="M0 40h400M0 90h400M0 150h400M60 0v200M150 0v200M260 0v200M340 0v200"/></g>
+          <path d="M-20 180C80 150 120 60 240 40S380 10 420 0" fill="none" stroke="#3a2f80" stroke-width="16"/>
+          <path d="M40 200L360 20" stroke="#8a5cf6" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+          <path d="M40 200L360 20" stroke="#cbb6ff" stroke-width="2" stroke-dasharray="6 8" class="flux lent"/>
+          <circle cx="210" cy="93" r="26" fill="rgba(240,138,108,.2)" class="clignote"/>
+          <path d="M210 100s-14-13-14-24a14 14 0 0 1 28 0c0 11-14 24-14 24z" fill="#f08a6c"/><circle cx="210" cy="76" r="5" fill="#fff"/>
+          <text x="232" y="128" fill="rgba(247,245,255,.7)" font-family="DM Sans,sans-serif" font-size="12">allées Jean Jaurès</text>
+        </svg>
+      </div>
+      <address><b>ASCLIM</b><br>59 allées Jean Jaurès, 31000 Toulouse</address>
+      <a class="btn btn-verre" href="https://www.google.com/maps/search/?api=1&amp;query=ASCLIM%2059%20all%C3%A9es%20Jean%20Jaur%C3%A8s%2031000%20Toulouse" target="_blank" rel="noopener" style="align-self:flex-start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="contact">
+  <div class="orbe v" style="width:420px;height:420px;right:-140px;bottom:0"></div>
+  <div class="wrap contact-grille">
+    <div class="verre contact-info rv">
+      <span class="surtitre">Contact</span>
+      <h2 style="margin-bottom:16px">Parlons de <em>votre projet.</em></h2>
+      <p>Clim, pompe à chaleur, eau chaude ou photovoltaïque : décrivez votre besoin, ASCLIM vous recontacte pour en discuter et organiser une visite.</p>
+      <div class="coord">
+        <a href="tel:+33617174175"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><small>Téléphone</small>06 17 17 41 75</span></a>
+        <a href="mailto:asclim31@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><small>Email</small>asclim31@gmail.com</span></a>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span><small>Adresse</small>59 allées Jean Jaurès, 31000 Toulouse</span></div>
+      </div>
+    </div>
+    <form class="verre rv d1" id="form" novalidate>
+      <div class="champs">
+        <div class="champ plein">
+          <label>Vous êtes</label>
+          <div class="choix"><label><input type="radio" name="profil" value="particulier" checked> Particulier</label><label><input type="radio" name="profil" value="pro"> Professionnel</label></div>
+        </div>
+        <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 ..."></div>
+        <div class="champ"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+        <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Toulouse, Blagnac, Albi..."></div>
+        <div class="champ plein"><label for="besoin">Votre projet</label>
+          <select id="besoin" name="besoin">
+            <option>Climatisation réversible</option>
+            <option>Pompe à chaleur air-eau (remplacement de chaudière)</option>
+            <option>Chauffe-eau thermodynamique</option>
+            <option>PAC géothermique</option>
+            <option>Panneaux photovoltaïques</option>
+            <option>Entretien</option>
+            <option>Dépannage</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="champ plein"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Surface, équipement actuel, délai souhaité..."></textarea></div>
+      </div>
+      <button class="btn btn-feu" type="submit">Envoyer ma demande<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l16-8-6 16-2-6z"/></svg></button>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – ce formulaire n'envoie rien pour l'instant. Pour un devis, appelez le 06 17 17 41 75 ou écrivez à asclim31@gmail.com.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a class="logo" href="#accueil" style="margin-bottom:16px"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="12" fill="url(#lg)"/><path d="M9 26c6-1 10-6 13-13 1 6 4 10 9 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M12 31h16" stroke="#7ff0d0" stroke-width="2.6" stroke-linecap="round"/></svg><span>ASCLIM</span></a>
+        <p>Climatisation, pompes à chaleur, chauffe-eau thermodynamique et photovoltaïque à Toulouse. Entreprise certifiée RGE QualiPAC (QualiPAC Chauffage et QualiPAC CET).</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:+33617174175">06 17 17 41 75</a></li>
+          <li><a href="mailto:asclim31@gmail.com">asclim31@gmail.com</a></li>
+          <li>59 allées Jean Jaurès<br>31000 Toulouse</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>Sur rendez-vous, du lundi au vendredi</li><li style="color:var(--doux);font-size:.85rem">Horaires indicatifs à confirmer</li></ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#avis">Avis</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul>
+      </div>
+    </div>
+    <div class="bas"><span>© ASCLIM · Toulouse</span><span>Haute-Garonne · Gers · Tarn · Tarn-et-Garonne · Aveyron · Aude · Ariège</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33617174175" aria-label="Appeler ASCLIM"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function scroll(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',scroll,{passive:true});scroll();
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var first=document.querySelector('.q');if(first){first.classList.add('ouvert');first.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

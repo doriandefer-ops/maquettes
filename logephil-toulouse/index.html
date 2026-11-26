@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logephil – chauffagiste et géothermie à Toulouse</title>
+<meta name="description" content="Logephil, à Toulouse (31400) : fourniture et installation de pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques et chaudières gaz ou fioul. Demande de devis.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#f7f7f4;
+  --noir:#101010;
+  --gris:#8d8d88;
+  --gris-txt:#5d5d58;
+  --clair:#e4e4df;
+  --vert:#0a8f6a;
+  --titre:"Inter Tight",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --larg:1320px;
+  --gout:24px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--fond);color:var(--noir);font-family:var(--titre);font-size:1.0625rem;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.035em;line-height:.98}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.grille{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gout)}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;text-transform:uppercase}
+.v{color:var(--vert)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* repères de colonnes */
+.reperes{position:absolute;inset:0;pointer-events:none;z-index:0}
+.reperes .wrap{height:100%;display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gout)}
+.reperes span{border-left:1px solid rgba(16,16,16,.05);border-right:1px solid rgba(16,16,16,.05);height:100%}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(247,247,244,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--noir)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque b{font-weight:800;font-size:1.15rem;letter-spacing:-.03em}
+.marque .mono{color:var(--gris-txt);font-size:.68rem}
+.marque svg{width:26px;height:26px}
+.menu{display:flex;list-style:none;margin:0;padding:0;gap:2px}
+.menu a{display:flex;gap:6px;align-items:baseline;padding:8px 12px;text-decoration:none;font-size:.94rem;font-weight:500;border-radius:2px;transition:background .2s,color .2s}
+.menu a i{font-style:normal;font-family:var(--mono);font-size:.68rem;color:var(--vert)}
+.menu a:hover{background:var(--noir);color:var(--fond)}
+.nav-tel{font-family:var(--mono);font-size:.85rem;font-weight:500;text-decoration:none;padding:9px 14px;border:1px solid var(--noir);white-space:nowrap;transition:background .2s,color .2s}
+.nav-tel:hover{background:var(--noir);color:var(--fond)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--noir);background:transparent;cursor:pointer;align-items:center;justify-content:center;color:var(--noir)}
+.burger span{position:relative;width:18px;height:1.5px;background:currentColor;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:currentColor;transition:transform .25s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.ouvert .burger span{background:transparent}
+.nav.ouvert .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 20px;font-family:var(--titre);font-weight:600;font-size:1.02rem;text-decoration:none;border:1px solid var(--noir);cursor:pointer;transition:background .2s,color .2s,transform .2s;letter-spacing:-.01em}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-noir{background:var(--noir);color:var(--fond)}
+.btn-noir:hover{background:var(--vert);border-color:var(--vert)}
+.btn-trait{background:transparent;color:var(--noir)}
+.btn-trait:hover{background:var(--noir);color:var(--fond)}
+.btn .pt{width:8px;height:8px;border-radius:50%;background:var(--vert);display:inline-block;margin-right:10px}
+
+/* hero */
+.hero{position:relative;padding-top:64px;overflow:hidden}
+.hero .meta{position:relative;z-index:2;padding:22px 0 0;border-bottom:1px solid var(--noir)}
+.hero .meta .grille{padding-bottom:14px}
+.hero .meta .mono{color:var(--gris-txt)}
+.hero .meta .c1{grid-column:1/4}.hero .meta .c2{grid-column:4/7}.hero .meta .c3{grid-column:7/10}.hero .meta .c4{grid-column:10/13;text-align:right}
+.geant{position:relative;z-index:1;margin:0;font-weight:900;letter-spacing:-.03em;line-height:.8;white-space:nowrap;font-size:19.4vw;padding-top:.08em;margin-left:-.04em}
+.geant .l{display:inline-block}
+.coupe{position:relative;z-index:2;margin-top:-2.5%}
+.coupe svg{width:100%;height:auto;overflow:visible}
+.coupe .lab{font-family:var(--mono);font-size:13px;fill:var(--noir);letter-spacing:.02em}
+.coupe .lab.g{fill:var(--gris-txt)}
+.coupe .lab.big{font-size:15px;font-weight:600}
+.coupe .lab.m-only{display:none}
+.chaleur{animation:monte 3.2s linear infinite}
+@keyframes monte2{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{opacity:1}100%{transform:translateY(-160px);opacity:0}}
+@keyframes monte{0%{transform:translateY(0);opacity:0}12%{opacity:1}85%{opacity:1}100%{transform:translateY(-300px);opacity:0}}
+.fluide{stroke-dasharray:6 8;animation:circule 1.4s linear infinite}
+@keyframes circule{to{stroke-dashoffset:-28}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+.hero-bas{position:relative;z-index:2;border-top:1px solid var(--noir);padding:36px 0 64px}
+.hero-bas .c-num{grid-column:1/3}
+.hero-bas .c-txt{grid-column:3/9}
+.hero-bas .c-act{grid-column:9/13;display:flex;flex-direction:column;gap:10px}
+.accroche{font-size:clamp(2rem,3.7vw,3.4rem);font-weight:700;letter-spacing:-.03em;line-height:.98;margin-bottom:22px}
+.accroche em{font-style:normal;color:var(--vert)}
+.chapo{font-size:1.12rem;color:var(--gris-txt);max-width:620px;margin:0}
+.c-act .mono{color:var(--gris-txt);margin-top:8px;line-height:1.7}
+
+/* bandeau confiance */
+.confiance{border-top:1px solid var(--noir);border-bottom:1px solid var(--noir);background:var(--fond)}
+.confiance .grille > div{padding:22px 0;grid-column:span 3;display:flex;gap:14px;align-items:flex-start;border-left:1px solid var(--clair);padding-left:18px}
+.confiance .grille > div:first-child{border-left:0;padding-left:0}
+.confiance svg{width:26px;height:26px;flex:none;margin-top:2px}
+.confiance b{display:block;font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.confiance span{font-size:.9rem;color:var(--gris-txt)}
+
+/* sections */
+.bloc{padding:110px 0 0}
+.tete{border-top:1px solid var(--noir);padding-top:18px;margin-bottom:56px;align-items:start}
+.tete .num{grid-column:1/4;display:flex;gap:16px;align-items:baseline}
+.tete .num b{font-family:var(--mono);font-weight:500;font-size:.85rem;color:var(--vert)}
+.tete h2{grid-column:4/11;font-size:clamp(2.5rem,5.6vw,5.4rem);letter-spacing:-.045em;line-height:.92;font-weight:800}
+.tete p{grid-column:4/10;margin-top:22px;color:var(--gris-txt);font-size:1.1rem}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--noir);border-left:1px solid var(--noir)}
+.service{border-right:1px solid var(--noir);border-bottom:1px solid var(--noir);padding:28px 28px 34px;min-height:300px;display:flex;flex-direction:column;position:relative;background:var(--fond);transition:background .25s}
+.service .haut{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto}
+.service .haut .mono{color:var(--gris-txt)}
+.service svg{width:64px;height:64px}
+.service h3{font-size:1.6rem;letter-spacing:-.04em;margin:40px 0 10px;font-weight:700}
+.service p{color:var(--gris-txt);margin:0;font-size:.98rem;max-width:34ch}
+.service::after{content:"";position:absolute;left:-1px;top:-1px;width:0;height:3px;background:var(--vert);transition:width .35s}
+.service:hover{background:#fff}
+.service:hover::after{width:calc(100% + 2px)}
+
+/* atouts */
+.atouts{border-top:1px solid var(--noir)}
+.atout{border-bottom:1px solid var(--noir);padding:28px 0;align-items:baseline;transition:padding .25s}
+.atout .n{grid-column:1/2;font-family:var(--mono);font-size:.85rem;color:var(--vert)}
+.atout h3{grid-column:2/7;font-size:clamp(1.5rem,2.4vw,2.2rem);letter-spacing:-.045em;font-weight:700}
+.atout p{grid-column:7/12;margin:0;color:var(--gris-txt)}
+.atout .fl{grid-column:12/13;justify-self:end;width:22px;height:22px;transition:transform .25s}
+.atout:hover .fl{transform:translateX(6px);color:var(--vert)}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gout);list-style:none;margin:0;padding:0}
+.etape{border-top:1px solid var(--noir);padding-top:22px;position:relative}
+.etape::before{content:"";position:absolute;top:-2px;left:0;height:3px;background:var(--vert);width:calc(25% * var(--i))}
+.etape .gn{font-weight:800;font-size:clamp(4rem,7vw,6.6rem);letter-spacing:-.07em;line-height:.85;margin-bottom:24px}
+.etape .gn span{color:var(--vert)}
+.etape h3{font-size:1.35rem;letter-spacing:-.03em;margin-bottom:10px}
+.etape p{color:var(--gris-txt);margin:0;font-size:.98rem}
+
+/* à propos */
+.apropos .c-txt{grid-column:4/9}
+.apropos .c-txt p{font-size:1.25rem;line-height:1.5;letter-spacing:-.015em}
+.apropos .c-txt p:first-child{font-size:clamp(1.6rem,2.5vw,2.2rem);line-height:1.15;letter-spacing:-.035em;font-weight:600}
+.apropos .c-fiche{grid-column:10/13}
+.fiche{border-top:1px solid var(--noir)}
+.fiche div{border-bottom:1px solid var(--clair);padding:14px 0}
+.fiche dt{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;color:var(--gris-txt);margin-bottom:4px}
+.fiche dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none;border-bottom:1px solid var(--vert)}
+
+/* réalisations */
+.figures{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gout)}
+.fig{margin:0}
+.fig .cadre{aspect-ratio:1/1.1;border:1px solid var(--noir);background:#fff;position:relative;overflow:hidden}
+.fig .cadre svg{width:100%;height:100%}
+.fig .cadre::before{content:attr(data-n);position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.7rem;color:var(--gris-txt)}
+.fig figcaption{padding-top:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.fig figcaption b{font-weight:600;font-size:1.05rem;letter-spacing:-.02em}
+.fig figcaption span{font-family:var(--mono);font-size:.7rem;color:var(--gris-txt);text-transform:uppercase;text-align:right}
+.fig:hover .cadre{border-color:var(--vert)}
+.tarif{margin-top:48px;border-top:1px solid var(--noir);border-bottom:1px solid var(--noir);padding:26px 0;align-items:center}
+.tarif .mono{grid-column:1/4;color:var(--gris-txt)}
+.tarif p{grid-column:4/10;margin:0;color:var(--gris-txt)}
+.tarif b{grid-column:10/13;justify-self:end;font-size:clamp(2rem,3.4vw,3rem);letter-spacing:-.05em;font-weight:800}
+.tarif b span{color:var(--vert)}
+
+/* avis */
+.avis{background:var(--noir);color:var(--fond);margin-top:110px;padding:90px 0;position:relative;overflow:hidden}
+.avis .reperes span{border-color:rgba(247,247,244,.05)}
+.avis .grille{position:relative;z-index:1;align-items:end}
+.avis .mono{grid-column:1/4;color:#b9b9b3;align-self:start}
+.avis .c-av{grid-column:4/13}
+.avis h2{font-size:clamp(3rem,7vw,7rem);letter-spacing:-.065em;line-height:.88;font-weight:800}
+.avis h2 span{color:var(--vert)}
+.avis p{grid-column:4/9;margin:30px 0 0;color:#cfcfc9;font-size:1.12rem}
+.avis .act{grid-column:9/13;display:flex;flex-direction:column;gap:10px;margin-top:30px}
+.avis .btn{border-color:var(--fond)}
+.avis .btn-noir{background:var(--fond);color:var(--noir)}
+.avis .btn-noir:hover{background:var(--vert);color:#fff;border-color:var(--vert)}
+.avis .btn-trait{color:var(--fond)}
+.avis .btn-trait:hover{background:var(--fond);color:var(--noir)}
+.etoiles-vides{display:flex;gap:8px;margin-bottom:26px}
+.etoiles-vides svg{width:30px;height:30px}
+
+/* faq */
+.faq{border-top:1px solid var(--noir)}
+.q{border-bottom:1px solid var(--noir)}
+.q button{width:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gout);align-items:baseline;background:none;border:0;padding:24px 0;cursor:pointer;text-align:left;color:var(--noir);font-family:var(--titre)}
+.q button .n{grid-column:1/2;font-family:var(--mono);font-size:.8rem;color:var(--vert)}
+.q button .t{grid-column:2/12;font-size:clamp(1.15rem,1.8vw,1.55rem);font-weight:600;letter-spacing:-.03em;line-height:1.2}
+.q button .plus{grid-column:12/13;justify-self:end;width:22px;height:22px;position:relative;transition:transform .3s}
+.q button .plus::before,.q button .plus::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.q button .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.q.ouvert button .plus{transform:rotate(45deg);color:var(--vert)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep > div{overflow:hidden}
+.q .rep p{margin:0 0 26px;color:var(--gris-txt);max-width:70ch}
+.q .rep .grille > p{grid-column:2/10}
+
+/* infos */
+.infos .c-h{grid-column:1/7}
+.infos .c-a{grid-column:7/13}
+.infos h3{font-size:1.9rem;letter-spacing:-.04em;margin-bottom:6px}
+.indic{font-family:var(--mono);font-size:.74rem;color:var(--gris-txt);text-transform:uppercase;margin-bottom:22px}
+table{width:100%;border-collapse:collapse;border-top:1px solid var(--noir)}
+td{padding:13px 0;border-bottom:1px solid var(--clair);font-size:1rem}
+td:last-child{text-align:right;font-family:var(--mono);font-size:.85rem;color:var(--gris-txt)}
+tr.auj td{border-bottom-color:var(--noir);font-weight:600}
+tr.auj td:first-child::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--vert);margin-right:10px;vertical-align:middle}
+tr.auj td:first-child::after{content:"Aujourd'hui";font-family:var(--mono);font-size:.68rem;text-transform:uppercase;color:var(--vert);margin-left:10px;font-weight:500}
+tr.auj td:last-child{color:var(--noir)}
+.plan{border:1px solid var(--noir);background:#fff;aspect-ratio:16/9;margin-bottom:18px}
+.plan svg{width:100%;height:100%}
+.infos address{font-style:normal;margin-bottom:20px;font-size:1.1rem}
+.infos address .mono{display:block;color:var(--gris-txt);margin-bottom:4px}
+
+/* contact */
+.contact .c-g{grid-column:1/5}
+.contact .c-f{grid-column:6/13}
+.contact .c-g h3{font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-.05em;margin-bottom:18px}
+.contact .c-g p{color:var(--gris-txt)}
+.coords{border-top:1px solid var(--noir);margin-top:28px}
+.coords a,.coords div{display:block;padding:16px 0;border-bottom:1px solid var(--clair);text-decoration:none;overflow-wrap:anywhere;transition:padding .2s,color .2s}
+.coords a:hover{padding-left:8px;color:var(--vert)}
+.coords small{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;color:var(--gris-txt);margin-bottom:2px}
+.coords b{font-weight:600;font-size:1.15rem;letter-spacing:-.02em}
+form{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gout);row-gap:26px}
+.ch{display:flex;flex-direction:column;gap:6px}
+.ch.pl{grid-column:1/-1}
+.ch label{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;color:var(--gris-txt)}
+.ch input,.ch select,.ch textarea{font:inherit;font-size:1.08rem;color:var(--noir);background:transparent;border:0;border-bottom:1px solid var(--noir);padding:10px 0;border-radius:0;-webkit-appearance:none;appearance:none}
+.ch select{background-image:linear-gradient(45deg,transparent 50%,var(--noir) 50%),linear-gradient(135deg,var(--noir) 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 6px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.ch textarea{min-height:110px;resize:vertical}
+.ch input:focus,.ch select:focus,.ch textarea:focus{outline:none;border-bottom:2px solid var(--vert)}
+.ch input::placeholder,.ch textarea::placeholder{color:#a3a39e}
+form .btn{grid-column:1/-1;justify-self:start;min-width:300px}
+.retour{grid-column:1/-1;display:none;border-left:3px solid var(--vert);padding:12px 16px;background:#fff;margin:0}
+.retour.vu{display:block}
+
+/* footer */
+footer{margin-top:120px;background:var(--noir);color:var(--fond);padding:70px 0 0;overflow:hidden}
+footer .grille > div{grid-column:span 3}
+footer h4{font-family:var(--mono);font-weight:500;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:#a9a9a3;margin-bottom:14px}
+footer p,footer li{color:#d9d9d3;font-size:.95rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{color:#5fd3ae}
+.pied-geant{font-weight:900;font-size:min(19.4vw,290px);letter-spacing:-.03em;line-height:.78;margin:60px 0 0 -.04em;color:transparent;-webkit-text-stroke:1px rgba(247,247,244,.28);white-space:nowrap;user-select:none}
+.bas{border-top:1px solid rgba(247,247,244,.2);padding:18px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;color:#a9a9a3;text-transform:uppercase}
+.demo{background:var(--fond);color:var(--gris-txt);text-align:center;font-family:var(--mono);font-size:.74rem;padding:12px 16px;border-top:1px solid var(--noir)}
+.flottant{position:fixed;right:16px;bottom:16px;z-index:60;display:none;align-items:center;gap:10px;padding:14px 18px;background:var(--noir);color:var(--fond);text-decoration:none;font-weight:600;border:1px solid var(--noir);box-shadow:4px 4px 0 var(--vert)}
+.flottant svg{width:18px;height:18px}
+
+/* animations */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}
+
+/* responsive */
+@media (max-width:1100px){
+  .menu{display:none}
+  .burger{display:inline-flex}
+  .nav-tel{display:none}
+  .nav.ouvert .menu{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--fond);border-bottom:1px solid var(--noir);padding:8px 16px 18px}
+  .nav.ouvert .menu a{padding:16px 4px;font-size:1.3rem;font-weight:600;letter-spacing:-.03em;border-bottom:1px solid var(--clair);border-radius:0}
+  .nav.ouvert .menu .m-tel a{border:1px solid var(--noir);margin-top:14px;justify-content:center;background:var(--noir);color:var(--fond);font-size:1.05rem}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .figures{grid-template-columns:repeat(2,1fr);row-gap:36px}
+  .etapes{grid-template-columns:repeat(2,1fr);row-gap:48px}
+  .hero-bas .c-num{display:none}
+  .hero-bas .c-txt{grid-column:1/8}
+  .hero-bas .c-act{grid-column:8/13}
+  .apropos .c-txt{grid-column:1/8}
+  .apropos .c-fiche{grid-column:9/13}
+  footer .grille > div{grid-column:span 6;margin-bottom:30px}
+}
+.menu .m-tel{display:none}
+@media (max-width:1100px){.nav.ouvert .menu .m-tel{display:block}}
+@media (max-width:720px){
+  :root{--gout:16px}
+  body{font-size:1rem}
+  .hero .meta .c1{grid-column:1/7}.hero .meta .c2{display:none}.hero .meta .c3{display:none}.hero .meta .c4{grid-column:7/13}
+  .geant{font-size:21.6vw;padding-top:.12em}
+  .coupe{margin-top:-7%}
+  .coupe .lab{font-size:22px}
+  .coupe .lab.big{font-size:24px}
+  .coupe .lab.d-only{display:none}
+  .coupe .lab.m-only{display:inline}
+  .coupe .d-only{display:none}
+  .hero-bas{padding:28px 0 50px}
+  .hero-bas .c-txt,.hero-bas .c-act{grid-column:1/-1}
+  .hero-bas .c-act{margin-top:28px}
+  .confiance .grille > div{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--clair)}
+  .confiance .grille > div:first-child{border-top:0}
+  .bloc{padding-top:80px}
+  .tete{margin-bottom:36px}
+  .tete .num,.tete h2,.tete p{grid-column:1/-1}
+  .tete h2{margin-top:18px}
+  .services{grid-template-columns:1fr}
+  .service{min-height:0}
+  .service h3{margin-top:26px}
+  .atout .n{grid-column:1/3}
+  .atout h3{grid-column:3/13}
+  .atout p{grid-column:3/13;margin-top:10px}
+  .atout .fl{display:none}
+  .etapes{grid-template-columns:1fr;row-gap:40px}
+  .apropos .c-txt,.apropos .c-fiche{grid-column:1/-1}
+  .apropos .c-fiche{margin-top:20px}
+  .figures{grid-template-columns:1fr}
+  .tarif .mono,.tarif p,.tarif b{grid-column:1/-1}
+  .tarif b{justify-self:start;margin-top:12px}
+  .tarif p{margin-top:10px}
+  .avis{padding:70px 0}
+  .avis .mono,.avis .c-av,.avis p,.avis .act{grid-column:1/-1}
+  .avis h2{margin-top:20px}
+  .q button .n{grid-column:1/3}
+  .q button .t{grid-column:3/12}
+  .q .rep .grille > p{grid-column:3/13}
+  .infos .c-h,.infos .c-a{grid-column:1/-1}
+  .infos .c-a{margin-top:56px}
+  .contact .c-g,.contact .c-f{grid-column:1/-1}
+  .contact .c-f{margin-top:44px}
+  form{grid-template-columns:1fr}
+  form .btn{min-width:0;width:100%}
+  footer .grille > div{grid-column:1/-1}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:80px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="marque" href="#accueil" aria-label="Logephil, retour à l'accueil">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect x=".5" y=".5" width="25" height="25" fill="none" stroke="#101010"/><path d="M0 9h26" stroke="#101010"/><path d="M9 9v14M17 9v14" stroke="#0a8f6a" stroke-width="2"/><path d="M13 3l5 4H8z" fill="#101010"/></svg>
+      <b>Logephil</b><span class="mono">Toulouse 31400</span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#services"><i>01</i>Services</a></li>
+      <li><a href="#atouts"><i>02</i>Atouts</a></li>
+      <li><a href="#methode"><i>03</i>Méthode</a></li>
+      <li><a href="#apropos"><i>04</i>À propos</a></li>
+      <li><a href="#realisations"><i>05</i>Réalisations</a></li>
+      <li><a href="#faq"><i>06</i>FAQ</a></li>
+      <li><a href="#contact"><i>07</i>Contact</a></li>
+      <li class="m-tel"><a href="tel:+33561543575">Appeler le 05 61 54 35 75</a></li>
+    </ul>
+    <a class="nav-tel" href="tel:+33561543575">05 61 54 35 75</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="reperes" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+  <div class="meta">
+    <div class="wrap grille">
+      <span class="mono c1">Chauffage — Géothermie</span>
+      <span class="mono c2">Fourniture + installation</span>
+      <span class="mono c3">16 av. André Bousquairol</span>
+      <span class="mono c4">Toulouse <span class="v">●</span> 31400</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1 class="geant" id="geant" aria-label="Logephil, chauffagiste à Toulouse"><span class="l" id="geantL">LOGEPHIL</span></h1>
+  </div>
+  <div class="wrap coupe" aria-hidden="true">
+    <svg id="coupeSvg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMin meet">
+      <defs>
+        <pattern id="pts" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#8d8d88" opacity=".55"/></pattern>
+        <pattern id="hach" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v12" stroke="#8d8d88" stroke-width="1" opacity=".4"/></pattern>
+        <pattern id="croix" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 0l16 16M16 0L0 16" stroke="#8d8d88" stroke-width=".8" opacity=".35"/></pattern>
+        <marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#101010"/></marker>
+      </defs>
+      <!-- strates -->
+      <rect x="0" y="130" width="1200" height="85" fill="#f7f7f4"/>
+      <rect x="0" y="130" width="1200" height="85" fill="url(#pts)"/>
+      <rect x="0" y="215" width="1200" height="130" fill="#efefea"/>
+      <rect x="0" y="215" width="1200" height="130" fill="url(#hach)"/>
+      <rect x="0" y="345" width="1200" height="175" fill="#e4e4df"/>
+      <rect x="0" y="345" width="1200" height="175" fill="url(#croix)"/>
+      <path d="M0 130h1200" stroke="#101010" stroke-width="2"/>
+      <path d="M0 215h1200M0 345h1200" stroke="#101010" stroke-width="1"/>
+      <!-- herbe -->
+      <g stroke="#101010" stroke-width="1"><path d="M560 130l-4-8M566 130l2-9M620 130l-3-7M626 130l3-8M915 130l-4-8M921 130l2-9M1100 130l-3-7M1106 130l3-8M1160 130l-4-8"/></g>
+      <!-- étiquettes de strates -->
+      <text class="lab big d-only" x="24" y="160">01</text><text class="lab g d-only" x="58" y="160">Sol superficiel</text>
+      <text class="lab big d-only" x="24" y="245">02</text><text class="lab g d-only" x="58" y="245">Couches intermédiaires</text>
+      <text class="lab big d-only" x="24" y="375">03</text><text class="lab g d-only" x="58" y="375">Couches profondes — température stable</text>
+      <text class="lab big m-only" x="632" y="164">01</text>
+      <text class="lab big m-only" x="632" y="250">02</text>
+      <text class="lab big m-only" x="632" y="380">03</text>
+      <!-- légende desktop -->
+      <g class="d-only">
+        <path d="M330 280H930" stroke="#101010" stroke-width="1" stroke-dasharray="2 4"/>
+        <circle cx="930" cy="280" r="3" fill="#101010"/>
+        <text class="lab" x="58" y="285">A — Sondes géothermiques verticales</text>
+        <path d="M330 440H996" stroke="#101010" stroke-width="1" stroke-dasharray="2 4"/>
+        <circle cx="996" cy="440" r="3" fill="#0a8f6a"/>
+        <text class="lab" x="58" y="445"><tspan fill="#0a8f6a">B</tspan> — Chaleur du sol captée par le fluide</text>
+      </g>
+      <!-- maison (coupe) -->
+      <g>
+        <path d="M690 130V62h220v68" fill="#f7f7f4" stroke="#101010" stroke-width="2"/>
+        <path d="M672 66L800 8l128 58" fill="#f7f7f4" stroke="#101010" stroke-width="2" stroke-linejoin="miter"/>
+        <path d="M690 96h220" stroke="#101010" stroke-width="1"/>
+        <!-- PAC géothermique -->
+        <rect x="712" y="100" width="44" height="30" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+        <circle cx="747" cy="108" r="2.5" fill="#0a8f6a" class="pulse"/>
+        <text class="lab" x="717" y="122" style="font-size:10px">PAC</text>
+        <!-- ballon -->
+        <rect x="770" y="100" width="22" height="30" rx="10" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+        <!-- radiateur / plancher -->
+        <path d="M830 112h60M830 118h60M830 124h60" stroke="#101010" stroke-width="1"/>
+        <path d="M756 116h14M792 112h38" stroke="#0a8f6a" stroke-width="2"/>
+        <!-- fenêtres étage -->
+        <rect x="720" y="70" width="30" height="20" fill="none" stroke="#101010"/><rect x="850" y="70" width="30" height="20" fill="none" stroke="#101010"/>
+      </g>
+      <!-- collecteur horizontal -->
+      <path d="M734 130v18h196M734 148" fill="none" stroke="#0a8f6a" stroke-width="2"/>
+      <path d="M742 130v10h314" fill="none" stroke="#101010" stroke-width="1.4"/>
+      <path class="fluide" d="M734 148h196" stroke="#f7f7f4" stroke-width="1.2"/>
+      <!-- sondes en U -->
+      <g fill="none" stroke-width="2">
+        <path d="M930 140v330a6 6 0 0 0 12 0V148" stroke="#0a8f6a"/>
+        <path d="M993 140v330a6 6 0 0 0 12 0V148" stroke="#0a8f6a"/>
+        <path d="M1056 140v330a6 6 0 0 0 12 0V148" stroke="#0a8f6a"/>
+      </g>
+      <path d="M942 148h51M1005 148h51" stroke="#0a8f6a" stroke-width="2"/>
+      <g fill="none" stroke="#101010" stroke-width="1">
+        <path d="M936 140v330M999 140v330M1062 140v330" stroke-dasharray="2 6" opacity=".55"/>
+      </g>
+      <!-- flèches de chaleur (animées) -->
+      <g fill="none" stroke="#0a8f6a" stroke-width="2" stroke-linecap="square">
+        <g class="chaleur"><path d="M930 458l6-8 6 8" transform="translate(-30 0)"/></g>
+        <g class="chaleur" style="animation-delay:-1.1s"><path d="M993 458l6-8 6 8" transform="translate(-30 0)"/></g>
+        <g class="chaleur" style="animation-delay:-2.1s"><path d="M1056 458l6-8 6 8" transform="translate(-30 0)"/></g>
+        <g class="chaleur" style="animation-delay:-1.6s"><path d="M930 458l6-8 6 8" transform="translate(32 0)"/></g>
+        <g class="chaleur" style="animation-delay:-.5s"><path d="M993 458l6-8 6 8" transform="translate(32 0)"/></g>
+        <g class="chaleur" style="animation-delay:-2.7s"><path d="M1056 458l6-8 6 8" transform="translate(32 0)"/></g>
+      </g>
+      <!-- flèches latérales -->
+      <g stroke="#101010" stroke-width="1" marker-end="url(#fl)">
+        <path d="M852 410h36"/><path d="M852 260h36"/><path d="M1138 410h-26" /><path d="M1138 260h-26"/>
+      </g>
+      <!-- règle de profondeur -->
+      <g>
+        <path d="M1160 130V470" stroke="#101010" stroke-width="1.5"/>
+        <g stroke="#101010" stroke-width="1">
+          <path d="M1152 130h16M1156 164h8M1156 198h8M1156 232h8M1156 266h8M1152 300h16M1156 334h8M1156 368h8M1156 402h8M1156 436h8M1152 470h16"/>
+        </g>
+        <text class="lab big" x="1146" y="152" text-anchor="end">0 m</text>
+        <text class="lab big" x="1146" y="305" text-anchor="end">−50 m</text>
+        <text class="lab big" x="1146" y="490" text-anchor="end">−100 m</text>
+      </g>
+      <text class="lab g d-only" x="24" y="505">Fig. 00 — Coupe schématique d'une installation géothermique sur sondes verticales (profondeurs indicatives)</text>
+    </svg>
+  </div>
+  <div class="hero-bas">
+    <div class="wrap grille">
+      <div class="c-num mono">§ 00<br><span class="v">Accueil</span></div>
+      <div class="c-txt rv">
+        <p class="accroche">La chaleur est déjà sous vos pieds. <em>Logephil</em> la fait monter chez vous.</p>
+        <p class="chapo">Pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques, chaudières gaz ou fioul : Logephil fournit et installe votre système de chauffage à Toulouse.</p>
+      </div>
+      <div class="c-act rv d1">
+        <a class="btn btn-noir" href="tel:+33561543575"><span><span class="pt"></span>Appeler</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+        <a class="btn btn-trait" href="#contact">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="mono">05 61 54 35 75<br>logephil.climatisation@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="confiance">
+  <div class="wrap grille">
+    <div class="rv"><svg viewBox="0 0 26 26" fill="none" stroke="#101010" stroke-width="1.4" aria-hidden="true"><circle cx="13" cy="13" r="11"/><path d="M8 13l3.5 3.5L18 10" stroke="#0a8f6a" stroke-width="2"/></svg><p style="margin:0"><b>Annuaire Qualit'EnR</b><span>Référencée pour PAC et chauffe-eau thermodynamique</span></p></div>
+    <div class="rv d1"><svg viewBox="0 0 26 26" fill="none" stroke="#101010" stroke-width="1.4" aria-hidden="true"><path d="M3 13h20"/><path d="M8 13v10M18 13v10" stroke="#0a8f6a" stroke-width="2"/><path d="M13 3l8 6H5z"/></svg><p style="margin:0"><b>Géothermie</b><span>Pompes à chaleur sol-eau</span></p></div>
+    <div class="rv d2"><svg viewBox="0 0 26 26" fill="none" stroke="#101010" stroke-width="1.4" aria-hidden="true"><rect x="3" y="7" width="20" height="14"/><path d="M3 11h20"/><path d="M9 16h8" stroke="#0a8f6a" stroke-width="2"/></svg><p style="margin:0"><b>Fourniture + installation</b><span>Un seul interlocuteur</span></p></div>
+    <div class="rv d3"><svg viewBox="0 0 26 26" fill="none" stroke="#101010" stroke-width="1.4" aria-hidden="true"><path d="M13 23s-8-7-8-13a8 8 0 0 1 16 0c0 6-8 13-8 13z"/><circle cx="13" cy="10" r="2.5" fill="#0a8f6a" stroke="none"/></svg><p style="margin:0"><b>Toulouse 31400</b><span>16 avenue André Bousquairol</span></p></div>
+  </div>
+</div>
+
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>01</b>Services</div>
+      <h2>Six façons de chauffer juste.</h2>
+      <p>De la géothermie à la chaudière, Logephil fournit le matériel et assure son installation.</p>
+    </div>
+    <div class="services">
+      <article class="service rv">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><path d="M4 22h56"/><path d="M14 10l10-6 10 6v12H14z"/><path d="M40 22v36a3 3 0 0 0 6 0V22M50 22v36a3 3 0 0 0 6 0V22" stroke="#0a8f6a" stroke-width="2"/><path d="M4 36h30M4 50h30" stroke="#8d8d88" stroke-dasharray="2 3"/></svg><span class="mono">01 / 06</span></div>
+        <h3>PAC géothermique</h3><p>Capter la chaleur stable du sol par sondes ou capteurs pour chauffer toute la maison.</p>
+      </article>
+      <article class="service rv d1">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><rect x="6" y="16" width="52" height="36"/><circle cx="26" cy="34" r="12"/><path d="M26 22v24M14 34h24" /><path d="M46 24v20" stroke="#0a8f6a" stroke-width="2"/><path d="M10 10c3-3 6 3 9 0s6 3 9 0" stroke="#0a8f6a" stroke-width="2"/></svg><span class="mono">02 / 06</span></div>
+        <h3>PAC air-eau</h3><p>Puiser les calories de l'air extérieur pour alimenter radiateurs ou plancher chauffant.</p>
+      </article>
+      <article class="service rv d2">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><rect x="20" y="4" width="24" height="56" rx="12"/><path d="M20 18h24"/><path d="M32 30v16" stroke="#0a8f6a" stroke-width="2"/><circle cx="32" cy="48" r="4" stroke="#0a8f6a" stroke-width="2"/></svg><span class="mono">03 / 06</span></div>
+        <h3>Chauffe-eau thermodynamique</h3><p>Un ballon équipé d'une pompe à chaleur pour produire l'eau chaude sanitaire.</p>
+      </article>
+      <article class="service rv">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><rect x="12" y="6" width="40" height="52"/><rect x="20" y="14" width="24" height="14"/><path d="M32 50c-6-4-6-10 0-14 6 4 6 10 0 14z" stroke="#0a8f6a" stroke-width="2"/><path d="M12 58h40"/></svg><span class="mono">04 / 06</span></div>
+        <h3>Chaudière gaz</h3><p>Fourniture et installation de chaudières gaz pour le chauffage et l'eau chaude.</p>
+      </article>
+      <article class="service rv d1">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><rect x="8" y="14" width="30" height="44"/><path d="M14 22h18M14 28h18"/><path d="M44 58V30a8 8 0 0 1 8-8h4" /><path d="M23 50c-5-3-5-8 0-11 5 3 5 8 0 11z" stroke="#0a8f6a" stroke-width="2"/><rect x="48" y="38" width="12" height="20"/></svg><span class="mono">05 / 06</span></div>
+        <h3>Chaudière fioul</h3><p>Pose ou remplacement d'une chaudière fioul, avec un conseil sur les alternatives possibles.</p>
+      </article>
+      <article class="service rv d2">
+        <div class="haut"><svg viewBox="0 0 64 64" fill="none" stroke="#101010" stroke-width="1.5" aria-hidden="true"><path d="M8 56h48"/><path d="M14 56V30l18-14 18 14v26"/><path d="M26 56V40h12v16"/><path d="M44 10l8 8M52 10l-8 8" stroke="#0a8f6a" stroke-width="2"/></svg><span class="mono">06 / 06</span></div>
+        <h3>Fourniture et pose</h3><p>Choix du matériel, livraison, installation et mise en service : un seul interlocuteur.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="atouts">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>02</b>Pourquoi Logephil</div>
+      <h2>Quatre raisons, sans détour.</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout grille rv"><span class="n">02.1</span><h3>La géothermie comme spécialité</h3><p>Une source de chaleur présente sous chaque terrain, peu sensible aux variations de la météo.</p><svg class="fl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="atout grille rv"><span class="n">02.2</span><h3>Référencée Qualit'EnR</h3><p>Présente dans l'annuaire Qualit'EnR pour les pompes à chaleur et les chauffe-eau thermodynamiques.</p><svg class="fl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="atout grille rv"><span class="n">02.3</span><h3>Toutes les énergies</h3><p>PAC, thermodynamique, gaz ou fioul : la solution est choisie selon votre logement, pas l'inverse.</p><svg class="fl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div class="atout grille rv"><span class="n">02.4</span><h3>Un seul interlocuteur</h3><p>Le matériel et sa pose sont gérés par la même entreprise, de l'étude jusqu'à la mise en service.</p><svg class="fl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>03</b>Comment ça se passe</div>
+      <h2>De l'appel à la mise en service.</h2>
+    </div>
+    <ol class="etapes">
+      <li class="etape rv" style="--i:1"><div class="gn">0<span>1</span></div><h3>Échange</h3><p>Vous décrivez votre logement, votre chauffage actuel et votre projet, par téléphone ou via le formulaire.</p></li>
+      <li class="etape rv d1" style="--i:2"><div class="gn">0<span>2</span></div><h3>Étude sur place</h3><p>Visite technique : surfaces, émetteurs, terrain pour la géothermie, contraintes d'implantation.</p></li>
+      <li class="etape rv d2" style="--i:3"><div class="gn">0<span>3</span></div><h3>Devis détaillé</h3><p>Une proposition chiffrée, avec le matériel retenu et les étapes du chantier.</p></li>
+      <li class="etape rv d3" style="--i:4"><div class="gn">0<span>4</span></div><h3>Pose et réglages</h3><p>Fourniture, installation, mise en service et explications pour bien utiliser votre équipement.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloc apropos" id="apropos">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>04</b>À propos</div>
+      <h2>Logephil, Toulouse.</h2>
+    </div>
+    <div class="grille">
+      <div class="c-txt rv">
+        <p>Logephil est une entreprise toulousaine installée au 16 avenue André Bousquairol, dans le 31400.</p>
+        <p>Elle fournit et installe des pompes à chaleur géothermiques et air-eau, des chauffe-eau thermodynamiques, ainsi que des chaudières gaz ou fioul.</p>
+        <p>L'entreprise est référencée dans l'annuaire Qualit'EnR pour les pompes à chaleur et les chauffe-eau thermodynamiques.</p>
+      </div>
+      <div class="c-fiche rv d1">
+        <dl class="fiche">
+          <div><dt>Raison</dt><dd>Logephil</dd></div>
+          <div><dt>Adresse</dt><dd>16 avenue André Bousquairol<br>31400 Toulouse</dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33561543575">05 61 54 35 75</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:logephil.climatisation@gmail.com">logephil.climatisation@gmail.com</a></dd></div>
+          <div><dt>Annuaire</dt><dd>Qualit'EnR — PAC et chauffe-eau thermodynamique</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="realisations">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>05</b>Réalisations</div>
+      <h2>Planches d'installation.</h2>
+      <p>Schémas indicatifs des types d'équipements posés par Logephil.</p>
+    </div>
+    <div class="figures">
+      <figure class="fig rv">
+        <div class="cadre" data-n="FIG. 01"><svg viewBox="0 0 300 330" aria-hidden="true">
+          <path d="M0 120h300" stroke="#101010" stroke-width="1.5"/>
+          <rect x="0" y="120" width="300" height="210" fill="#f7f7f4"/>
+          <path d="M0 200h300" stroke="#e4e4df"/><path d="M0 270h300" stroke="#e4e4df"/>
+          <path d="M40 120V74h90v46M30 78l55-32 55 32" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+          <rect x="54" y="96" width="24" height="24" fill="none" stroke="#101010"/>
+          <path d="M66 120v12h120" fill="none" stroke="#0a8f6a" stroke-width="2"/>
+          <g fill="none" stroke="#0a8f6a" stroke-width="2"><path d="M180 132v170a5 5 0 0 0 10 0V132"/><path d="M230 132v170a5 5 0 0 0 10 0V132"/></g>
+          <path d="M190 132h40" stroke="#0a8f6a" stroke-width="2"/>
+          <g stroke="#0a8f6a" stroke-width="1.6" fill="none" class="chaleur" style="animation-name:monte2;animation-duration:3.4s"><path d="M204 300l6-6 6 6"/></g>
+        </svg></div>
+        <figcaption><b>Sondes verticales</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="fig rv d1">
+        <div class="cadre" data-n="FIG. 02"><svg viewBox="0 0 300 330" aria-hidden="true">
+          <path d="M40 270V60h160v210" fill="none" stroke="#101010" stroke-width="1.5"/>
+          <path d="M0 270h300" stroke="#101010" stroke-width="1.5"/>
+          <rect x="70" y="90" width="50" height="70" fill="none" stroke="#101010"/>
+          <rect x="196" y="200" width="88" height="70" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+          <circle cx="228" cy="235" r="24" fill="none" stroke="#101010"/>
+          <g style="transform-origin:228px 235px;animation:tourne 2s linear infinite"><path d="M228 213v44M206 235h44" stroke="#0a8f6a" stroke-width="2"/></g>
+          <path d="M264 212v46" stroke="#101010"/>
+          <path d="M196 250h-40v-30H60v40" fill="none" stroke="#0a8f6a" stroke-width="2"/>
+          <g stroke="#101010" stroke-width="1" fill="none"><path d="M220 186c-4-4 4-8 0-12M236 186c-4-4 4-8 0-12"/></g>
+          <path d="M56 260h40" stroke="#101010" stroke-width="5"/>
+        </svg></div>
+        <figcaption><b>PAC air-eau en façade</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="fig rv d2">
+        <div class="cadre" data-n="FIG. 03"><svg viewBox="0 0 300 330" aria-hidden="true">
+          <path d="M0 290h300" stroke="#101010" stroke-width="1.5"/>
+          <rect x="110" y="40" width="80" height="240" rx="40" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+          <path d="M110 100h80" stroke="#101010"/>
+          <circle cx="150" cy="70" r="16" fill="none" stroke="#101010"/>
+          <path d="M150 54v32M134 70h32" stroke="#0a8f6a" stroke-width="1.6"/>
+          <rect x="138" y="140" width="24" height="110" fill="none" stroke="#101010"/>
+          <rect x="138" y="190" width="24" height="60" fill="#0a8f6a" opacity=".9"/>
+          <path d="M120 280v10M180 280v10" stroke="#101010" stroke-width="3"/>
+          <path d="M190 230h60v60M110 250H50v40" fill="none" stroke="#101010" stroke-dasharray="3 3"/>
+          <text x="256" y="226" font-family="IBM Plex Mono,monospace" font-size="10" fill="#5d5d58">ECS</text>
+        </svg></div>
+        <figcaption><b>Ballon thermodynamique</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="fig rv d3">
+        <div class="cadre" data-n="FIG. 04"><svg viewBox="0 0 300 330" aria-hidden="true">
+          <path d="M0 290h300" stroke="#101010" stroke-width="1.5"/>
+          <rect x="60" y="70" width="90" height="140" fill="#fff" stroke="#101010" stroke-width="1.5"/>
+          <rect x="74" y="86" width="62" height="34" fill="none" stroke="#101010"/>
+          <path d="M105 190c-12-8-12-22 0-30 12 8 12 22 0 30z" fill="none" stroke="#0a8f6a" stroke-width="2" class="pulse"/>
+          <path d="M80 210v80M130 210v80" stroke="#101010"/>
+          <path d="M105 70V30h120" fill="none" stroke="#101010" stroke-width="1.5"/>
+          <g fill="none" stroke="#101010"><rect x="190" y="200" width="80" height="60"/><path d="M200 210v40M212 210v40M224 210v40M236 210v40M248 210v40M260 210v40"/></g>
+          <path d="M150 230h40" stroke="#0a8f6a" stroke-width="2"/><path d="M150 250h40" stroke="#101010"/>
+        </svg></div>
+        <figcaption><b>Chaufferie gaz ou fioul</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+    </div>
+    <div class="tarif grille rv">
+      <span class="mono">Tarifs</span>
+      <p>Chaque projet dépend du logement, du terrain et du matériel retenu. Le prix est établi après étude, sous forme de devis détaillé.</p>
+      <b>Sur devis<span>.</span></b>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="reperes" aria-hidden="true"><div class="wrap"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+  <div class="wrap grille">
+    <span class="mono">§ Avis clients</span>
+    <div class="c-av rv">
+      <div class="etoiles-vides" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f7f7f4" stroke-width="1.2"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#f7f7f4" stroke-width="1.2"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#f7f7f4" stroke-width="1.2"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#f7f7f4" stroke-width="1.2"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#0a8f6a" stroke-width="1.2"><path d="M12 2l3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg>
+      </div>
+      <h2>Vos avis<br>comptent<span>.</span></h2>
+    </div>
+    <p class="rv">Vous avez fait installer une pompe à chaleur, un chauffe-eau ou une chaudière par Logephil ? Votre retour aide les prochains clients à se décider. Partagez votre expérience sur la plateforme de votre choix, ou écrivez directement à l'entreprise.</p>
+    <div class="act rv d1">
+      <a class="btn btn-noir" href="mailto:logephil.climatisation@gmail.com?subject=Mon%20avis%20sur%20mon%20installation">Partager mon avis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-trait" href="tel:+33561543575">05 61 54 35 75<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="faq">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>06</b>Questions fréquentes</div>
+      <h2>Ce qu'on nous demande.</h2>
+    </div>
+    <div class="faq">
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.1</span><span class="t">Comment fonctionne une pompe à chaleur géothermique ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>Un fluide circule dans des capteurs enterrés (sondes verticales ou réseau horizontal) et se charge de la chaleur du sol. La pompe à chaleur, installée dans le logement, élève ensuite cette température pour alimenter le chauffage et, selon le modèle, l'eau chaude sanitaire.</p></div></div></div></div>
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.2</span><span class="t">Mon terrain permet-il la géothermie ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>Cela dépend de la surface disponible, de l'accès pour le forage, de la nature du sol et des règles locales. Une étude préalable est indispensable ; si la géothermie n'est pas adaptée, une PAC air-eau peut être une alternative.</p></div></div></div></div>
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.3</span><span class="t">Quelles aides peuvent s'appliquer, comme MaPrimeRénov' ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>Des aides publiques existent pour certaines pompes à chaleur et certains chauffe-eau thermodynamiques, selon éligibilité (ressources, logement, type de travaux) et sous conditions sur l'installateur. Les dispositifs évoluent régulièrement : vérifiez les conditions en vigueur sur les sites officiels avant de signer.</p></div></div></div></div>
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.4</span><span class="t">PAC air-eau ou géothermique : laquelle choisir ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>La géothermie s'appuie sur une température du sol stable, mais demande des travaux de captage. La PAC air-eau est plus simple à installer, avec des performances qui varient davantage avec la température extérieure. Le choix se fait après étude du logement et du terrain.</p></div></div></div></div>
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.5</span><span class="t">Installez-vous encore des chaudières gaz ou fioul ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>Oui, Logephil propose la fourniture et l'installation de chaudières gaz ou fioul. Selon votre situation, les solutions par pompe à chaleur peuvent aussi être étudiées, et la réglementation sur les nouveaux équipements fioul est à prendre en compte.</p></div></div></div></div>
+      <div class="q rv"><button aria-expanded="false"><span class="n">06.6</span><span class="t">Qu'est-ce qu'un chauffe-eau thermodynamique ?</span><span class="plus"></span></button><div class="rep"><div><div class="grille"><p>C'est un ballon d'eau chaude couplé à une petite pompe à chaleur qui récupère les calories de l'air (ambiant ou extérieur). Il peut remplacer un cumulus électrique classique ; son emplacement se décide lors de la visite.</p></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc infos" id="infos">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>07</b>Infos pratiques</div>
+      <h2>Horaires et adresse.</h2>
+    </div>
+    <div class="grille">
+      <div class="c-h rv">
+        <h3>Sur rendez-vous</h3>
+        <p class="indic">Horaires indicatifs — à confirmer par téléphone</p>
+        <table>
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="c-a rv d1">
+        <div class="plan" aria-hidden="true">
+          <svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice">
+            <rect width="480" height="270" fill="#fff"/>
+            <g stroke="#e4e4df" stroke-width="1"><path d="M0 45h480M0 90h480M0 135h480M0 180h480M0 225h480M60 0v270M120 0v270M180 0v270M240 0v270M300 0v270M360 0v270M420 0v270"/></g>
+            <path d="M-10 210L490 70" stroke="#101010" stroke-width="2"/>
+            <path d="M150 -10L230 280" stroke="#101010" stroke-width="1"/>
+            <path d="M330 -10C300 100 360 180 320 280" fill="none" stroke="#101010" stroke-width="1" stroke-dasharray="4 4"/>
+            <circle cx="240" cy="137" r="18" fill="none" stroke="#0a8f6a" class="pulse"/>
+            <circle cx="240" cy="137" r="6" fill="#0a8f6a"/>
+            <path d="M246 131l30-30h150" fill="none" stroke="#101010"/>
+            <rect x="278" y="80" width="160" height="17" fill="#fff"/><text x="282" y="93" font-family="IBM Plex Mono,monospace" font-size="12" fill="#101010">16 AV. A. BOUSQUAIROL</text>
+            <text x="14" y="258" font-family="IBM Plex Mono,monospace" font-size="10" fill="#5d5d58">PLAN SCHÉMATIQUE — 31400</text>
+          </svg>
+        </div>
+        <address><span class="mono">Adresse</span>Logephil<br>16 avenue André Bousquairol, 31400 Toulouse</address>
+        <a class="btn btn-noir" href="https://www.google.com/maps/search/?api=1&amp;query=Logephil%2016%20avenue%20Andr%C3%A9%20Bousquairol%2031400%20Toulouse" target="_blank" rel="noopener">Itinéraire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc contact" id="contact">
+  <div class="wrap">
+    <div class="tete grille rv">
+      <div class="num mono"><b>08</b>Contact</div>
+      <h2>Demander un devis.</h2>
+    </div>
+    <div class="grille">
+      <div class="c-g rv">
+        <h3>Parlons de votre chauffage.</h3>
+        <p>Décrivez votre logement et votre projet : Logephil vous recontacte pour en discuter et prévoir une visite.</p>
+        <div class="coords">
+          <a href="tel:+33561543575"><small>Téléphone</small><b>05 61 54 35 75</b></a>
+          <a href="mailto:logephil.climatisation@gmail.com"><small>Email</small><b>logephil.climatisation@gmail.com</b></a>
+          <div><small>Adresse</small><b>16 avenue André Bousquairol, 31400 Toulouse</b></div>
+        </div>
+      </div>
+      <div class="c-f rv d1">
+        <form id="form" novalidate>
+          <div class="ch"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="ch"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="05 ou 06 …"></div>
+          <div class="ch"><label for="mail">Email</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="ch"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Toulouse…"></div>
+          <div class="ch pl"><label for="projet">Projet</label>
+            <select id="projet" name="projet">
+              <option>Pompe à chaleur géothermique</option>
+              <option>Pompe à chaleur air-eau</option>
+              <option>Chauffe-eau thermodynamique</option>
+              <option>Chaudière gaz</option>
+              <option>Chaudière fioul</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
+          <div class="ch pl"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Surface, chauffage actuel, terrain disponible…"></textarea></div>
+          <button class="btn btn-noir" type="submit">Envoyer la demande<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+          <p class="retour" id="retour" role="status">Maquette de démonstration – ce formulaire n'envoie rien pour l'instant. Contactez Logephil au 05 61 54 35 75 ou à logephil.climatisation@gmail.com.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap grille">
+    <div><h4>Logephil</h4><p>Fourniture et installation de pompes à chaleur géothermiques et air-eau, chauffe-eau thermodynamiques et chaudières gaz ou fioul à Toulouse. Référencée dans l'annuaire Qualit'EnR (PAC et chauffe-eau thermodynamique).</p></div>
+    <div><h4>Coordonnées</h4><ul><li><a href="tel:+33561543575">05 61 54 35 75</a></li><li><a href="mailto:logephil.climatisation@gmail.com" style="overflow-wrap:anywhere">logephil.climatisation@gmail.com</a></li><li>16 avenue André Bousquairol<br>31400 Toulouse</li></ul></div>
+    <div><h4>Horaires</h4><ul><li>Sur rendez-vous, du lundi au vendredi</li><li style="color:#a9a9a3;font-size:.85rem">Horaires indicatifs à confirmer</li></ul></div>
+    <div><h4>Plan du site</h4><ul><li><a href="#services">01 Services</a></li><li><a href="#methode">03 Méthode</a></li><li><a href="#realisations">05 Réalisations</a></li><li><a href="#faq">06 FAQ</a></li><li><a href="#contact">08 Contact</a></li></ul></div>
+  </div>
+  <div class="wrap"><div class="pied-geant" aria-hidden="true">LOGEPHIL</div></div>
+  <div class="wrap bas"><span>© Logephil — Toulouse</span><span>Annuaire Qualit'EnR · PAC &amp; CET</span></div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33561543575" aria-label="Appeler Logephil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<style>@keyframes tourne{to{transform:rotate(360deg)}}</style>
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  /* ajuste le texte géant à la largeur de la grille */
+  var g=document.getElementById('geant'),svg=document.getElementById('coupeSvg'),mq=window.matchMedia('(max-width:720px)');
+  function ajuste(){
+    g.style.fontSize='';var w=g.parentElement.clientWidth,s=parseFloat(getComputedStyle(g).fontSize);
+    var r=document.getElementById('geantL').getBoundingClientRect().width;if(r>0){g.style.fontSize=(s*w/r*0.995)+'px';}
+    svg.setAttribute('viewBox',mq.matches?'600 0 600 520':'0 0 1200 520');
+  }
+  ajuste();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ajuste);
+  window.addEventListener('resize',ajuste);
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var f1=document.querySelector('.q');if(f1){f1.classList.add('ouvert');f1.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entretien Chaudière 31 – chauffagiste à Colomiers</title>
+<meta name="description" content="Entretien Chaudière 31, chauffagiste à Colomiers et dans l'ouest toulousain : entretien annuel de chaudière gaz ou fioul avec attestation, dépannage, remplacement de chaudière, pompe à chaleur, climatisation et chauffe-eau thermodynamique. Qualifié QUALIBAT.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lilas:#c9b8ff;
+  --lilas-pale:#ece5ff;
+  --menthe:#9ff0d1;
+  --menthe-pale:#dcfbef;
+  --peche:#ffc2a1;
+  --peche-pale:#ffe6d8;
+  --beurre:#ffe59a;
+  --beurre-pale:#fff4cc;
+  --creme:#fffaf3;
+  --encre:#2b2148;
+  --encre-douce:#4d4470;
+  --titre:"Baloo 2",system-ui,sans-serif;
+  --corps:"Quicksand",system-ui,sans-serif;
+  --larg:1180px;
+  --r:28px;
+  --ombre:0 18px 40px -18px rgba(43,33,72,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--creme);color:var(--encre-douce);font-family:var(--corps);font-size:1.0625rem;line-height:1.65;font-weight:500;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--titre);color:var(--encre);margin:0;line-height:1.08;font-weight:800;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+
+/* boutons pilule */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--titre);font-weight:700;font-size:1.1rem;text-decoration:none;padding:.72em 1.5em .62em;border-radius:999px;border:2.5px solid var(--encre);cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;line-height:1.1}
+.btn svg{width:20px;height:20px;flex:none;margin-top:-2px}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn:active{transform:scale(.97)}
+.btn-encre{background:var(--encre);color:var(--creme);box-shadow:0 5px 0 var(--lilas)}
+.btn-encre:hover{box-shadow:0 8px 0 var(--lilas)}
+.btn-menthe{background:var(--menthe);color:var(--encre);box-shadow:0 5px 0 var(--encre)}
+.btn-menthe:hover{box-shadow:0 8px 0 var(--encre)}
+.btn-creme{background:var(--creme);color:var(--encre);box-shadow:0 5px 0 var(--encre)}
+
+/* navigation */
+.nav{position:fixed;top:12px;left:0;right:0;z-index:50}
+.nav .barre{position:relative;display:flex;align-items:center;justify-content:space-between;gap:14px;background:rgba(255,250,243,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:2px solid var(--encre);border-radius:999px;padding:8px 10px 8px 16px;box-shadow:0 10px 30px -18px rgba(43,33,72,.5)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font-family:var(--titre);font-size:1.22rem;color:var(--encre);line-height:1;font-weight:800}
+.logo b span{color:#8d6cf0}
+.menu{display:flex;gap:2px;list-style:none;margin:0;padding:0;align-items:center}
+.menu a{display:block;text-decoration:none;font-weight:700;color:var(--encre);padding:8px 14px;border-radius:999px;transition:background .2s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.menu a:hover{background:var(--lilas-pale);transform:translateY(-2px)}
+.menu .tel-nav{background:var(--menthe);border:2px solid var(--encre);margin-left:6px}
+.menu .tel-nav:hover{background:var(--beurre)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:2px solid var(--encre);background:var(--beurre);cursor:pointer;position:relative;flex:none}
+.burger span{position:absolute;left:12px;right:12px;height:2.5px;border-radius:2px;background:var(--encre);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:20.5px}.burger span:nth-child(3){top:26px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* ---------- héro texte géant ---------- */
+.hero{position:relative;padding:120px 0 70px;overflow:hidden;min-height:780px}
+.hero-scene{position:relative;min-height:600px}
+.geant{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:min(960px,84%);pointer-events:none}
+.geant svg{width:100%;height:auto;overflow:visible}
+.geant .chiffre{font-family:"Baloo 2",sans-serif;font-weight:800}
+.blob-bouge{animation:morph 12s ease-in-out infinite;transform-origin:center}
+@keyframes morph{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.04) rotate(3deg)}}
+.hero-txt{position:relative;z-index:3;max-width:560px;padding-top:40px}
+.badge-zone{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--encre);border-radius:999px;padding:6px 16px 6px 8px;font-weight:700;color:var(--encre);font-size:.95rem}
+.badge-zone i{width:26px;height:26px;border-radius:50%;background:var(--peche);display:grid;place-items:center;font-style:normal}
+.badge-zone i svg{width:15px;height:15px}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.4rem);margin:18px 0 0;line-height:.98;text-shadow:3px 0 0 var(--creme),-3px 0 0 var(--creme),0 3px 0 var(--creme),0 -3px 0 var(--creme),3px 3px 0 var(--creme),-3px -3px 0 var(--creme),3px -3px 0 var(--creme),-3px 3px 0 var(--creme)}
+.hero h1 .surl{position:relative;display:inline-block;z-index:0}
+.hero h1 .surl::after{content:"";position:absolute;left:-4px;right:-6px;bottom:.1em;height:.34em;background:var(--menthe);border-radius:999px;z-index:-1;transform:rotate(-1.5deg)}
+.hero .accroche{font-size:1.2rem;max-width:30ch;margin:20px 0 28px;color:var(--encre-douce);background:rgba(255,250,243,.75);border-radius:18px}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px}
+.mascotte{position:absolute;z-index:2;right:21%;bottom:-20px;width:min(340px,30%);animation:rebond 3.2s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes rebond{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1.5deg)}}
+.mascotte .yeux{animation:cligne 5s infinite;transform-origin:center 92px;transform-box:view-box}
+@keyframes cligne{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.mascotte .cle{transform-origin:206px 196px;animation:cle 1.6s ease-in-out infinite}
+@keyframes cle{0%,100%{transform:rotate(0)}50%{transform:rotate(-16deg)}}
+.mascotte .flamme{transform-origin:120px 250px;animation:flamme .9s ease-in-out infinite alternate}
+@keyframes flamme{to{transform:scale(1.08,1.15)}}
+.pastille{position:absolute;z-index:4;display:flex;align-items:center;gap:8px;font-family:var(--titre);font-weight:700;font-size:1rem;color:var(--encre);padding:8px 16px 6px 8px;border-radius:999px;border:2px solid var(--encre);box-shadow:0 6px 0 var(--encre);line-height:1.1;animation:flotte 4s ease-in-out infinite}
+.pastille i{width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid var(--encre);display:grid;place-items:center;flex:none;margin-top:-2px}
+.pastille i svg{width:16px;height:16px}
+.pastille small{display:block;font-family:var(--corps);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.p1{background:var(--beurre);right:12%;top:13%;animation-delay:-1s}
+.p2{background:var(--peche);right:4%;top:72%;animation-delay:-2.5s}
+@keyframes flotte{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.bulle{position:absolute;border-radius:50%;border:2px solid var(--encre);opacity:.9;animation:monte 7s ease-in infinite;z-index:1}
+@keyframes monte{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translateY(-260px) scale(1.1);opacity:0}}
+.vague{display:block;width:100%;height:60px;margin-top:-1px}
+
+/* confiance */
+.confiance{padding:16px 0 40px}
+.confiance ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.confiance li{display:flex;align-items:center;gap:10px;padding:10px 20px 10px 10px;border-radius:999px;background:#fff;border:2px solid var(--encre);font-weight:700;color:var(--encre);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.confiance li:hover{transform:translateY(-4px) rotate(-1deg)}
+.confiance li i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none}
+.confiance li i svg{width:20px;height:20px}
+
+/* sections */
+.sec{padding:90px 0;position:relative}
+.titre-sec{text-align:center;max-width:720px;margin:0 auto 50px}
+.etiquette{display:inline-block;font-family:var(--titre);font-weight:700;font-size:.95rem;padding:4px 16px 2px;border-radius:999px;border:2px solid var(--encre);background:var(--beurre);color:var(--encre);margin-bottom:14px;transform:rotate(-2deg)}
+.titre-sec h2{font-size:clamp(2.1rem,4.6vw,3.3rem)}
+.titre-sec p{margin:14px auto 0;max-width:56ch}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.carte{position:relative;border-radius:var(--r);padding:30px 28px 28px;border:2.5px solid var(--encre);background:#fff;transition:transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;box-shadow:0 6px 0 var(--encre)}
+.carte:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:0 12px 0 var(--encre)}
+.carte .ico{width:78px;height:78px;margin-bottom:18px;position:relative;display:grid;place-items:center}
+.carte .ico::before{content:"";position:absolute;inset:0;border-radius:42% 58% 63% 37% / 46% 40% 60% 54%;background:var(--c,var(--lilas));transition:border-radius .6s,transform .6s}
+.carte:hover .ico::before{border-radius:58% 42% 40% 60% / 60% 55% 45% 40%;transform:rotate(20deg) scale(1.06)}
+.carte .ico svg{position:relative;width:46px;height:46px}
+.carte h3{font-size:1.5rem;margin-bottom:6px}
+.carte p{margin:0}
+.carte.c1{--c:var(--lilas)}.carte.c2{--c:var(--menthe)}.carte.c3{--c:var(--peche)}.carte.c4{--c:var(--beurre)}.carte.c5{--c:var(--menthe)}.carte.c6{--c:var(--peche)}
+.carte .coin{position:absolute;top:18px;right:18px;font-family:var(--titre);font-weight:700;font-size:.82rem;padding:2px 12px 0;border-radius:999px;background:var(--encre);color:var(--creme)}
+
+/* pourquoi */
+.pourquoi{background:var(--lilas-pale);border-radius:60px;margin:0 16px}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.atout{background:var(--creme);border-radius:var(--r);padding:28px 24px;border:2.5px solid var(--encre);text-align:center;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.atout:hover{transform:translateY(-6px) scale(1.02)}
+.atout .rond{width:84px;height:84px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;border:2.5px solid var(--encre)}
+.atout .rond svg{width:42px;height:42px}
+.atout h3{font-size:1.35rem;margin-bottom:6px}
+.atout p{margin:0;font-size:1rem}
+
+/* étapes */
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.etapes svg.chemin{position:absolute;left:8%;right:8%;top:20px;width:84%;height:60px;z-index:0}
+.etape{position:relative;z-index:1;text-align:center;padding:0 8px}
+.etape .num{width:96px;height:96px;margin:0 auto 18px;display:grid;place-items:center;font-family:var(--titre);font-weight:800;font-size:2.6rem;color:var(--encre);border:2.5px solid var(--encre);box-shadow:0 6px 0 var(--encre);border-radius:46% 54% 50% 50% / 55% 45% 55% 45%;transition:transform .35s cubic-bezier(.34,1.56,.64,1);line-height:1;padding-top:6px}
+.etape:hover .num{transform:translateY(-6px) rotate(-6deg)}
+.etape h3{font-size:1.35rem;margin-bottom:4px}
+.etape p{margin:0;font-size:1rem}
+
+/* à propos */
+.apropos-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.apropos-illu{position:relative}
+.apropos-illu svg{width:100%;height:auto}
+.apropos-txt h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:18px}
+.apropos-txt .lead{font-size:1.25rem;color:var(--encre);font-weight:600}
+.puces{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.puces li{padding:6px 16px 4px;border-radius:999px;font-weight:700;color:var(--encre);border:2px solid var(--encre);font-size:.95rem}
+
+/* galerie */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.illu-carte{margin:0;border-radius:var(--r);border:2.5px solid var(--encre);overflow:hidden;background:#fff;box-shadow:0 6px 0 var(--encre);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.illu-carte:hover{transform:translateY(-6px) rotate(.8deg)}
+.illu-carte .fond{aspect-ratio:1/1;display:grid;place-items:center;padding:18px}
+.illu-carte .fond svg{width:100%;height:100%}
+.illu-carte figcaption{padding:14px 18px 16px;border-top:2.5px solid var(--encre)}
+.illu-carte b{display:block;font-family:var(--titre);font-size:1.15rem;color:var(--encre);line-height:1.15}
+.illu-carte span{font-size:.9rem}
+.tarifs{margin-top:40px;display:flex;flex-wrap:wrap;gap:20px 30px;align-items:center;justify-content:space-between;padding:28px 40px 28px 64px;border-radius:999px;background:var(--beurre);border:2.5px solid var(--encre)}
+.tarifs h3{font-size:1.7rem}
+.tarifs p{margin:4px 0 0;max-width:62ch}
+
+/* avis */
+.avis-bloc{position:relative;max-width:900px;margin:0 auto;text-align:center;padding:56px 40px;border-radius:50px;background:var(--menthe-pale);border:2.5px solid var(--encre);overflow:hidden}
+.avis-bloc h2{font-size:clamp(2rem,4.4vw,3rem);margin:10px 0}
+.avis-bloc p{max-width:54ch;margin:0 auto 24px}
+.coeurs{display:flex;justify-content:center;gap:10px;margin-bottom:6px}
+.coeurs svg{width:38px;height:38px;animation:battre 1.8s ease-in-out infinite}
+.coeurs svg:nth-child(2){animation-delay:.2s}.coeurs svg:nth-child(3){animation-delay:.4s}
+@keyframes battre{0%,100%{transform:scale(1)}40%{transform:scale(1.18)}}
+.avis-bloc .deco{position:absolute;border-radius:50%;z-index:0}
+.avis-bloc>*:not(.deco){position:relative;z-index:1}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:14px}
+.faq-item{border:2.5px solid var(--encre);border-radius:26px;background:#fff;overflow:hidden;transition:background .3s}
+.faq-item.ouvert{background:var(--lilas-pale)}
+.faq-item button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;background:none;border:0;padding:18px 22px;cursor:pointer;font-family:var(--titre);font-weight:700;font-size:1.22rem;color:var(--encre);line-height:1.25}
+.faq-item .plus{flex:none;width:38px;height:38px;border-radius:50%;background:var(--beurre);border:2px solid var(--encre);position:relative;transition:transform .4s cubic-bezier(.34,1.56,.64,1),background .3s}
+.faq-item .plus::before,.faq-item .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2.5px;border-radius:2px;background:var(--encre);transform:translate(-50%,-50%)}
+.faq-item .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-item.ouvert .plus{transform:rotate(135deg);background:var(--menthe)}
+.faq-item .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.faq-item.ouvert .rep{grid-template-rows:1fr}
+.faq-item .rep>div{overflow:hidden}
+.faq-item .rep p{margin:0;padding:0 22px 20px}
+
+/* infos */
+.infos-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.boite{border-radius:var(--r);border:2.5px solid var(--encre);padding:30px;background:#fff;box-shadow:0 6px 0 var(--encre)}
+.boite h3{font-size:1.6rem;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.boite h3 i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--encre);flex:none}
+.boite h3 i svg{width:22px;height:22px}
+.jours{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.jours li{display:flex;justify-content:space-between;gap:10px;padding:9px 16px;border-radius:999px;background:var(--creme);font-weight:600}
+.jours li b{color:var(--encre)}
+.jours li.auj{background:var(--menthe);color:var(--encre);border:2px solid var(--encre);padding:7px 14px}
+.jours li.auj b::after{content:"aujourd'hui";margin-left:8px;font-size:.75rem;background:var(--encre);color:var(--creme);padding:2px 9px 1px;border-radius:999px;vertical-align:2px}
+.petit{font-size:.9rem;margin:14px 0 0;opacity:.85}
+.zone-illu{border-radius:22px;background:var(--peche-pale);margin-bottom:18px;overflow:hidden}
+.zone-illu svg{width:100%;height:auto}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.contact-txt h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:14px}
+.coord{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.coord li{display:flex;align-items:center;gap:14px;padding:12px 18px 12px 12px;border-radius:999px;border:2px solid var(--encre);background:#fff}
+.coord i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none}
+.coord i svg{width:22px;height:22px}
+.coord small{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;opacity:.7}
+.coord a,.coord span{font-weight:700;color:var(--encre);text-decoration:none;word-break:break-word}
+.coord a:hover{color:#7a57ea}
+form.formulaire{background:var(--lilas-pale);border:2.5px solid var(--encre);border-radius:36px;padding:34px;box-shadow:0 8px 0 var(--encre)}
+.formulaire h3{font-size:1.7rem;margin-bottom:18px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.large{grid-column:1/-1}
+.champ label{font-weight:700;color:var(--encre);font-size:.95rem;padding-left:10px}
+.champ input,.champ select,.champ textarea{font:inherit;font-weight:600;color:var(--encre);padding:13px 18px;border-radius:999px;border:2px solid var(--encre);background:#fff;width:100%;transition:box-shadow .2s}
+.champ textarea{border-radius:24px;min-height:120px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{outline:none;box-shadow:0 0 0 4px var(--menthe)}
+.formulaire .btn{margin-top:20px;width:100%}
+.msg{display:none;margin:16px 0 0;padding:14px 18px;border-radius:20px;background:var(--menthe);border:2px solid var(--encre);color:var(--encre);font-weight:700}
+.msg.ok{display:block;animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(.8);opacity:0}to{transform:none;opacity:1}}
+
+/* pied */
+footer{background:var(--encre);color:#d9d2f0;padding:80px 0 0;position:relative}
+footer .vague-haut{position:absolute;top:-58px;left:0;width:100%;height:60px}
+.pied{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px;padding-bottom:44px}
+footer h4{color:var(--beurre);font-size:1.25rem;margin-bottom:12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none;color:#fff;word-break:break-word}
+footer a:hover{color:var(--menthe)}
+footer .logo b{color:#fff}
+footer .logo b span{color:var(--lilas)}
+.demo{text-align:center;font-size:.86rem;padding:14px 16px;background:#211938;color:#b9b0d6}
+
+.appel-flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--menthe);border:2.5px solid var(--encre);box-shadow:0 5px 0 var(--encre);place-items:center;color:var(--encre);animation:hop 2.6s infinite}
+.appel-flottant svg{width:26px;height:26px}
+@keyframes hop{0%,80%,100%{transform:translateY(0)}88%{transform:translateY(-10px)}}
+
+/* révélation */
+.rv{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .6s ease,transform .7s cubic-bezier(.34,1.56,.64,1)}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* responsive */
+@media (max-width:1020px){
+  .burger{display:block}
+  .menu{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;background:var(--creme);border:2.5px solid var(--encre);border-radius:30px;padding:14px;box-shadow:0 8px 0 var(--encre);opacity:0;transform:translateY(-14px) scale(.96);pointer-events:none;transition:opacity .25s,transform .35s cubic-bezier(.34,1.56,.64,1)}
+  .menu.ouvert{opacity:1;transform:none;pointer-events:auto}
+  .menu a{padding:12px 18px;font-size:1.1rem}
+  .menu .tel-nav{margin:8px 0 0;text-align:center}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .atouts{grid-template-columns:1fr 1fr}
+  .etapes{grid-template-columns:1fr 1fr;gap:34px 22px}
+  .etapes svg.chemin{display:none}
+  .galerie{grid-template-columns:1fr 1fr}
+  .apropos-grid,.contact-grid,.infos-grid{grid-template-columns:1fr}
+  .apropos-illu{max-width:420px;margin:0 auto}
+  .pied{grid-template-columns:1fr 1fr}
+  .hero{min-height:0}
+  .hero-scene{min-height:0;display:flex;flex-direction:column}
+  .geant{position:relative;right:auto;top:auto;transform:none;width:100%;max-width:640px;margin:-10px auto 0;order:2}
+  .mascotte{right:6%;bottom:8%;width:min(300px,40%)}
+  .hero-txt{order:1;padding-top:10px;max-width:none}
+  .p1{right:auto;left:0;top:0}
+  .p2{right:auto;left:0;top:auto;bottom:2%}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .nav{top:8px}
+  .nav .barre{padding:6px 6px 6px 10px}
+  .logo b{font-size:1.05rem}
+  .logo svg{width:34px;height:34px}
+  .hero{padding:100px 0 30px}
+  .hero .accroche{font-size:1.08rem}
+  .hero .btns .btn{flex:1 1 100%}
+  .geant{margin-top:10px}
+  .mascotte{width:36%;right:2%;bottom:17%}
+  .pastille{font-size:.86rem;padding:6px 12px 4px 6px;box-shadow:0 4px 0 var(--encre)}
+  .pastille i{width:24px;height:24px}
+  .pastille small{font-size:.62rem}
+  .sec{padding:66px 0}
+  .services-grid,.atouts,.etapes,.galerie{grid-template-columns:1fr}
+  .etape{display:grid;grid-template-columns:80px 1fr;gap:0 16px;text-align:left;align-items:center}
+  .etape .num{width:76px;height:76px;font-size:2rem;margin:0;grid-row:1/3}
+  .pourquoi{margin:0 8px;border-radius:36px}
+  .tarifs{border-radius:32px;padding:24px 22px}
+  .tarifs .btn{width:100%}
+  .avis-bloc{padding:40px 22px;border-radius:36px}
+  .champs{grid-template-columns:1fr}
+  form.formulaire{padding:24px 18px;border-radius:28px}
+  .boite{padding:22px 18px}
+  .coord li{border-radius:26px}
+  .pied{grid-template-columns:1fr}
+  .appel-flottant{display:grid}
+  .demo{padding-bottom:92px}
+  .confiance li{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="barre">
+      <a href="#accueil" class="logo" aria-label="Entretien Chaudière 31 – accueil">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c10 0 18 6 18 17s-7 19-18 19S2 31 2 20 10 2 20 2z" fill="#c9b8ff" stroke="#2b2148" stroke-width="2"/><rect x="12" y="10" width="16" height="20" rx="5" fill="#fffaf3" stroke="#2b2148" stroke-width="2"/><circle cx="17" cy="17" r="1.6" fill="#2b2148"/><circle cx="23" cy="17" r="1.6" fill="#2b2148"/><path d="M17 21q3 3 6 0" stroke="#2b2148" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M20 25c-1.5 1.6-1.5 2.6 0 3.4 1.5-.8 1.5-1.8 0-3.4z" fill="#ffc2a1" stroke="#2b2148" stroke-width="1"/></svg>
+        <b>Entretien Chaudière <span>31</span></b>
+      </a>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#etapes">Déroulé</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33628492897" class="tel-nav">06 28 49 28 97</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- =========== HÉRO =========== -->
+<section class="hero" id="accueil">
+  <div class="wrap hero-scene">
+    <div class="geant" aria-hidden="true">
+      <svg viewBox="0 0 820 600">
+        <defs>
+          <linearGradient id="gChiffre" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9b8ff"/><stop offset=".55" stop-color="#d9c9ff"/><stop offset="1" stop-color="#ffc2a1"/></linearGradient>
+          <linearGradient id="gBlob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9ff0d1"/><stop offset="1" stop-color="#ffe59a"/></linearGradient>
+        </defs>
+        <g class="blob-bouge"><path d="M420 30c140-10 300 50 340 190s-30 280-180 330-330 40-430-50S20 260 90 160 280 40 420 30z" fill="url(#gBlob)" opacity=".75"/></g>
+        <circle cx="120" cy="90" r="34" fill="#ffc2a1" opacity=".8"/>
+        <circle cx="760" cy="470" r="22" fill="#c9b8ff"/>
+        <text class="chiffre" x="410" y="520" text-anchor="middle" font-size="600" fill="#2b2148" opacity=".9" transform="translate(10 12)">31</text>
+        <text class="chiffre" x="410" y="520" text-anchor="middle" font-size="600" fill="url(#gChiffre)" stroke="#2b2148" stroke-width="6" paint-order="stroke">31</text>
+      </svg>
+      <span class="pastille p1"><i><svg viewBox="0 0 16 16" fill="none" stroke="#2b2148" stroke-width="2.4" stroke-linecap="round"><path d="M3 8.5l3 3 7-7"/></svg></i><span><small>Qualibat</small>Remplacement chaudière</span></span>
+      <span class="pastille p2"><i><svg viewBox="0 0 16 16" fill="none" stroke="#2b2148" stroke-width="2.4" stroke-linecap="round"><path d="M3 8.5l3 3 7-7"/></svg></i><span><small>Qualibat</small>Pompe à chaleur</span></span>
+    </div>
+
+    <div class="hero-txt rv">
+      <span class="badge-zone"><i><svg viewBox="0 0 16 16" fill="none" stroke="#2b2148" stroke-width="2"><path d="M8 15s5-4.5 5-8.5a5 5 0 0 0-10 0C3 10.5 8 15 8 15z"/><circle cx="8" cy="6.5" r="1.6"/></svg></i>Colomiers et ouest toulousain</span>
+      <h1>Entretien <span class="surl">Chaudière</span> 31</h1>
+      <p class="accroche">Votre chaudière mérite sa petite visite annuelle&nbsp;! Entretien gaz ou fioul avec attestation, dépannage et remplacement, à Colomiers et alentour.</p>
+      <div class="btns">
+        <a class="btn btn-encre" href="tel:+33628492897"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a class="btn btn-menthe" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 16l10-10 3 3L9 19H6z"/></svg>Demander un devis</a>
+      </div>
+    </div>
+
+    <!-- mascotte -->
+    <div class="mascotte" aria-hidden="true">
+      <svg viewBox="0 0 260 320" fill="none">
+        <ellipse cx="124" cy="306" rx="78" ry="10" fill="#2b2148" opacity=".15"/>
+        <!-- tuyaux -->
+        <path d="M96 268v28M124 268v28M152 268v28" stroke="#2b2148" stroke-width="6" stroke-linecap="round"/>
+        <path d="M96 268v28M124 268v28M152 268v28" stroke="#c9b8ff" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- bras gauche -->
+        <path d="M44 170c-22 8-30 26-24 44" stroke="#2b2148" stroke-width="12" stroke-linecap="round"/>
+        <path d="M44 170c-22 8-30 26-24 44" stroke="#fffaf3" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="20" cy="216" r="10" fill="#ffc2a1" stroke="#2b2148" stroke-width="3"/>
+        <!-- corps -->
+        <rect x="40" y="40" width="168" height="232" rx="52" fill="#fffaf3" stroke="#2b2148" stroke-width="5"/>
+        <rect x="56" y="56" width="136" height="20" rx="10" fill="#c9b8ff" stroke="#2b2148" stroke-width="3"/>
+        <circle cx="74" cy="66" r="4" fill="#2b2148"/><circle cx="90" cy="66" r="4" fill="#9ff0d1" stroke="#2b2148" stroke-width="2"/>
+        <rect x="140" y="62" width="40" height="8" rx="4" fill="#fffaf3" stroke="#2b2148" stroke-width="2"/>
+        <!-- visage -->
+        <g class="yeux">
+          <ellipse cx="96" cy="118" rx="10" ry="13" fill="#2b2148"/>
+          <ellipse cx="152" cy="118" rx="10" ry="13" fill="#2b2148"/>
+          <circle cx="99" cy="113" r="4" fill="#fff"/><circle cx="155" cy="113" r="4" fill="#fff"/>
+        </g>
+        <ellipse cx="76" cy="146" rx="13" ry="8" fill="#ffc2a1"/>
+        <ellipse cx="172" cy="146" rx="13" ry="8" fill="#ffc2a1"/>
+        <path d="M104 146q20 22 40 0" stroke="#2b2148" stroke-width="5" stroke-linecap="round" fill="#ff9a8a"/>
+        <!-- hublot flamme -->
+        <rect x="80" y="196" width="88" height="58" rx="29" fill="#2b2148"/>
+        <g class="flamme">
+          <path d="M124 204c-14 16-18 28-10 38 4 6 16 6 20 0 8-10 4-22-10-38z" fill="#ffc2a1"/>
+          <path d="M124 220c-6 7-8 13-4 18 2 3 6 3 8 0 4-5 2-11-4-18z" fill="#ffe59a"/>
+        </g>
+        <!-- bras droit + clé -->
+        <g class="cle">
+          <path d="M206 170c18 2 26 14 26 30" stroke="#2b2148" stroke-width="12" stroke-linecap="round"/>
+          <path d="M206 170c18 2 26 14 26 30" stroke="#fffaf3" stroke-width="6" stroke-linecap="round"/>
+          <path d="M230 196 L232 140" stroke="#2b2148" stroke-width="12" stroke-linecap="round"/>
+          <path d="M230 196 L232 140" stroke="#9ff0d1" stroke-width="6" stroke-linecap="round"/>
+          <path d="M218 128a16 16 0 1 0 28 0l-6 8h-16z" fill="#9ff0d1" stroke="#2b2148" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="231" cy="204" r="11" fill="#ffc2a1" stroke="#2b2148" stroke-width="3"/>
+        </g>
+        <!-- étincelles -->
+        <g stroke="#2b2148" stroke-width="3" stroke-linecap="round"><path d="M226 98l4-10M246 104l10-6M212 92l-2-10"/></g>
+      </svg>
+    </div>
+
+
+    <span class="bulle" style="width:22px;height:22px;background:#9ff0d1;left:44%;bottom:10%"></span>
+    <span class="bulle" style="width:14px;height:14px;background:#ffe59a;left:52%;bottom:16%;animation-delay:-2s"></span>
+    <span class="bulle" style="width:18px;height:18px;background:#ffc2a1;right:10%;bottom:30%;animation-delay:-4s"></span>
+    <span class="bulle" style="width:12px;height:12px;background:#c9b8ff;left:6%;bottom:2%;animation-delay:-5s"></span>
+  </div>
+</section>
+
+<!-- =========== CONFIANCE =========== -->
+<section class="confiance" aria-label="Points de confiance">
+  <div class="wrap">
+    <ul class="rv">
+      <li><i style="background:var(--beurre)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2"><path d="M12 2l8 3.5v6c0 5.5-3.5 9-8 10.5-4.5-1.5-8-5-8-10.5v-6z"/><path d="M8 12l3 3 5-6"/></svg></i>QUALIBAT Remplacement chaudière</li>
+      <li><i style="background:var(--peche)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2"><path d="M12 2l8 3.5v6c0 5.5-3.5 9-8 10.5-4.5-1.5-8-5-8-10.5v-6z"/><path d="M8 12l3 3 5-6"/></svg></i>QUALIBAT Pompe à chaleur</li>
+      <li><i style="background:var(--menthe)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></svg></i>Attestation d'entretien remise</li>
+      <li><i style="background:var(--lilas)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></i>Colomiers et ouest toulousain</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========== SERVICES =========== -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette">Nos services</span>
+      <h2>Tout pour une chaudière qui ronronne</h2>
+      <p>De l'entretien annuel au remplacement, en passant par la pompe à chaleur : on s'occupe de votre confort, toute l'année.</p>
+    </div>
+    <div class="services-grid">
+      <article class="carte c1 rv"><span class="coin">Annuel</span>
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="6" width="24" height="34" rx="7"/><path d="M24 22c-4 5-4 8 0 11 4-3 4-6 0-11z"/><path d="M17 12h14"/><path d="M18 40v3M30 40v3"/></svg></div>
+        <h3>Entretien annuel de chaudière</h3>
+        <p>Chaudière gaz ou fioul : contrôle, nettoyage, réglages et remise de l'attestation d'entretien.</p>
+      </article>
+      <article class="carte c2 rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8a9 9 0 0 0-8 12L8 34a3.5 3.5 0 0 0 5 5l14-14a9 9 0 0 0 12-8l-5 3-4-1-1-4z"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Plus d'eau chaude, chaudière en sécurité, bruit inhabituel ? Appelez pour un diagnostic.</p>
+      </article>
+      <article class="carte c3 rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18a14 14 0 0 1 24-6l4-4v10H28l4-4a10 10 0 0 0-17 4"/><path d="M38 30a14 14 0 0 1-24 6l-4 4V30h10l-4 4a10 10 0 0 0 17-4"/></svg></div>
+        <h3>Remplacement de chaudière</h3>
+        <p>Votre vieille chaudière fatigue ? Étude et pose d'un équipement adapté à votre logement.</p>
+      </article>
+      <article class="carte c4 rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="38" height="26" rx="6"/><circle cx="20" cy="23" r="8"/><path d="M20 23v-6M20 23l5 3M20 23l-5 3"/><path d="M33 16h5M33 22h5M33 28h5"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Installation et suivi de pompe à chaleur, pour un chauffage qui puise ses calories dans l'air.</p>
+      </article>
+      <article class="carte c5 rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="38" height="14" rx="6"/><path d="M11 19h26"/><path d="M15 30v4M24 30v8M33 30v4"/><path d="M38 34l2 2M40 30h3"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Un peu de fraîcheur pendant l'été toulousain grâce à une climatisation bien posée.</p>
+      </article>
+      <article class="carte c6 rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="20" height="40" rx="10"/><path d="M14 16h20"/><path d="M20 28q4-4 8 0M20 34q4-4 8 0"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>De l'eau chaude sanitaire produite grâce aux calories de l'air, une alternative au cumulus classique.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========== POURQUOI =========== -->
+<section class="sec pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette" style="background:var(--menthe)">Pourquoi nous</span>
+      <h2>Les petits plus qui changent tout</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><div class="rond" style="background:var(--beurre)"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4l16 7v11c0 11-7 18-16 22C15 40 8 33 8 22V11z"/><path d="M16 24l6 6 10-12"/></svg></div><h3>Qualifié QUALIBAT</h3><p>Qualifications QUALIBAT pour le remplacement de chaudière et la pompe à chaleur.</p></div>
+      <div class="atout rv d1"><div class="rond" style="background:var(--menthe)"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M18 24h14M18 31h10"/></svg></div><h3>Attestation fournie</h3><p>Après chaque entretien, vous recevez l'attestation à conserver pour votre assurance ou votre bailleur.</p></div>
+      <div class="atout rv d2"><div class="rond" style="background:var(--peche)"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M16 28q8 8 16 0"/><circle cx="18" cy="20" r="2" fill="#2b2148"/><circle cx="30" cy="20" r="2" fill="#2b2148"/></svg></div><h3>Explications claires</h3><p>On vous dit ce qui a été fait, ce qui va bien et ce qui mérite d'être surveillé, sans jargon.</p></div>
+      <div class="atout rv d3"><div class="rond" style="background:var(--lilas)"><svg viewBox="0 0 48 48" fill="none" stroke="#2b2148" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s14-12 14-24a14 14 0 0 0-28 0c0 12 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg></div><h3>Tout près de chez vous</h3><p>Basé à Colomiers, pour intervenir dans l'ouest toulousain.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== ÉTAPES =========== -->
+<section class="sec" id="etapes">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette" style="background:var(--peche)">Comment ça se passe</span>
+      <h2>Simple comme un coup de fil</h2>
+    </div>
+    <ol class="etapes">
+      <svg class="chemin" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C 100 0, 160 60, 266 30 S 430 0, 533 30 S 700 60, 800 30" stroke="#2b2148" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round" fill="none"/></svg>
+      <li class="etape rv"><div class="num" style="background:var(--lilas)">1</div><h3>Vous appelez</h3><p>Par téléphone ou via le formulaire, vous expliquez votre besoin.</p></li>
+      <li class="etape rv d1"><div class="num" style="background:var(--menthe)">2</div><h3>On cale un rendez-vous</h3><p>Un créneau est convenu ensemble, à votre domicile.</p></li>
+      <li class="etape rv d2"><div class="num" style="background:var(--peche)">3</div><h3>L'intervention</h3><p>Entretien, diagnostic ou étude, avec explications à la clé.</p></li>
+      <li class="etape rv d3"><div class="num" style="background:var(--beurre)">4</div><h3>Le compte rendu</h3><p>Attestation d'entretien ou devis détaillé, selon la demande.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========== À PROPOS =========== -->
+<section class="sec" id="apropos" style="background:var(--menthe-pale)">
+  <div class="wrap apropos-grid">
+    <div class="apropos-illu rv" aria-hidden="true">
+      <svg viewBox="0 0 420 380" fill="none">
+        <path d="M210 20c110 0 190 60 190 170s-80 170-190 170S20 300 20 190 100 20 210 20z" fill="#c9b8ff" opacity=".55"/>
+        <path d="M80 300V170l130-90 130 90v130z" fill="#fffaf3" stroke="#2b2148" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M60 184L210 80l150 104" stroke="#2b2148" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="120" y="200" width="56" height="56" rx="14" fill="#ffe59a" stroke="#2b2148" stroke-width="4"/>
+        <rect x="236" y="214" width="56" height="86" rx="14" fill="#ffc2a1" stroke="#2b2148" stroke-width="4"/>
+        <circle cx="280" cy="258" r="4" fill="#2b2148"/>
+        <rect x="250" y="96" width="26" height="44" rx="6" fill="#9ff0d1" stroke="#2b2148" stroke-width="4"/>
+        <g stroke="#2b2148" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M258 84q-6-10 0-18M268 80q-6-10 0-18"/></g>
+        <path d="M40 300h340" stroke="#2b2148" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="70" cy="70" r="16" fill="#ffe59a" stroke="#2b2148" stroke-width="3"/>
+        <circle cx="370" cy="110" r="10" fill="#9ff0d1" stroke="#2b2148" stroke-width="3"/>
+        <text x="210" y="350" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="800" font-size="28" fill="#2b2148">Colomiers · 31770</text>
+      </svg>
+    </div>
+    <div class="apropos-txt rv d1">
+      <span class="etiquette">À propos</span>
+      <h2>Un chauffagiste de proximité à Colomiers</h2>
+      <p class="lead">Entretien Chaudière 31 intervient à Colomiers et dans l'ouest toulousain, pour le chauffage et l'eau chaude des particuliers.</p>
+      <p>Son cœur de métier : l'entretien annuel des chaudières gaz ou fioul, avec remise de l'attestation, ainsi que le dépannage et le remplacement de chaudière.</p>
+      <p>L'entreprise s'occupe également de pompes à chaleur, de climatisation et de chauffe-eau thermodynamiques, et détient les qualifications QUALIBAT Remplacement chaudière et QUALIBAT PAC.</p>
+      <ul class="puces">
+        <li style="background:var(--beurre)">Chaudière gaz</li>
+        <li style="background:var(--peche)">Chaudière fioul</li>
+        <li style="background:var(--lilas)">PAC</li>
+        <li style="background:#fff">Clim</li>
+        <li style="background:var(--menthe)">Chauffe-eau thermo.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========== RÉALISATIONS =========== -->
+<section class="sec" id="realisations">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette" style="background:var(--lilas)">En images</span>
+      <h2>Le genre d'installations qu'on bichonne</h2>
+      <p>Des illustrations pour vous donner une idée des équipements pris en charge.</p>
+    </div>
+    <div class="galerie">
+      <figure class="illu-carte rv">
+        <div class="fond" style="background:var(--lilas-pale)">
+          <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <circle cx="100" cy="100" r="88" fill="#c9b8ff" opacity=".5"/>
+            <rect x="60" y="34" width="80" height="120" rx="22" fill="#fffaf3" stroke="#2b2148" stroke-width="4"/>
+            <rect x="72" y="46" width="56" height="12" rx="6" fill="#9ff0d1" stroke="#2b2148" stroke-width="2.5"/>
+            <rect x="78" y="104" width="44" height="32" rx="16" fill="#2b2148"/>
+            <path d="M100 110c-7 8-9 14-5 19 2 3 8 3 10 0 4-5 2-11-5-19z" fill="#ffc2a1"/>
+            <path d="M80 154v20M100 154v20M120 154v20" stroke="#2b2148" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="90" cy="80" r="3" fill="#2b2148"/><circle cx="110" cy="80" r="3" fill="#2b2148"/>
+          </svg>
+        </div>
+        <figcaption><b>Chaudière murale gaz</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="illu-carte rv d1">
+        <div class="fond" style="background:var(--peche-pale)">
+          <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <path d="M100 14c50 0 86 34 86 86s-36 86-86 86-86-34-86-86 36-86 86-86z" fill="#ffc2a1" opacity=".55"/>
+            <rect x="40" y="60" width="120" height="104" rx="20" fill="#fffaf3" stroke="#2b2148" stroke-width="4"/>
+            <rect x="54" y="74" width="92" height="22" rx="11" fill="#ffe59a" stroke="#2b2148" stroke-width="2.5"/>
+            <circle cx="70" cy="85" r="4" fill="#2b2148"/>
+            <rect x="62" y="110" width="76" height="40" rx="14" fill="#2b2148"/>
+            <path d="M100 116c-8 9-10 16-5 22 2 3 8 3 10 0 5-6 3-13-5-22z" fill="#ffc2a1"/>
+            <path d="M160 90h20v-50" stroke="#2b2148" stroke-width="5" stroke-linecap="round"/>
+            <path d="M176 34q4-8 0-14M186 34q4-8 0-14" stroke="#2b2148" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+          </svg>
+        </div>
+        <figcaption><b>Chaudière fioul au sol</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="illu-carte rv d2">
+        <div class="fond" style="background:var(--menthe-pale)">
+          <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <circle cx="100" cy="100" r="88" fill="#9ff0d1" opacity=".55"/>
+            <rect x="30" y="66" width="140" height="92" rx="18" fill="#fffaf3" stroke="#2b2148" stroke-width="4"/>
+            <circle cx="84" cy="112" r="32" fill="#ece5ff" stroke="#2b2148" stroke-width="4"/>
+            <g class="tourne-mini" style="transform-origin:84px 112px;animation:tourneMini 2.5s linear infinite"><path d="M84 112c-4-14 0-24 8-26 4 10 0 20-8 26zM84 112c14 2 22 10 20 18-10 2-18-6-20-18zM84 112c-10 10-20 12-26 6 4-10 14-12 26-6z" fill="#c9b8ff" stroke="#2b2148" stroke-width="2.5"/></g>
+            <circle cx="84" cy="112" r="5" fill="#2b2148"/>
+            <path d="M132 90h24M132 104h24M132 118h24M132 132h24" stroke="#2b2148" stroke-width="4" stroke-linecap="round"/>
+            <path d="M50 158v12M150 158v12" stroke="#2b2148" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <figcaption><b>Pompe à chaleur extérieure</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+      <figure class="illu-carte rv d3">
+        <div class="fond" style="background:var(--beurre-pale)">
+          <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+            <path d="M100 12c52 4 88 40 84 92s-44 84-92 80-80-44-76-92 32-84 84-80z" fill="#ffe59a" opacity=".7"/>
+            <rect x="66" y="26" width="68" height="150" rx="34" fill="#fffaf3" stroke="#2b2148" stroke-width="4"/>
+            <path d="M66 64h68" stroke="#2b2148" stroke-width="4"/>
+            <circle cx="88" cy="46" r="5" fill="#9ff0d1" stroke="#2b2148" stroke-width="2.5"/>
+            <path d="M108 42h14M108 50h10" stroke="#2b2148" stroke-width="3" stroke-linecap="round"/>
+            <path d="M84 110q16-14 32 0M84 130q16-14 32 0" stroke="#c9b8ff" stroke-width="6" stroke-linecap="round"/>
+            <path d="M88 176v10M112 176v10" stroke="#2b2148" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <figcaption><b>Chauffe-eau thermodynamique</b><span>Exemple d'installation</span></figcaption>
+      </figure>
+    </div>
+    <div class="tarifs rv">
+      <div><h3>Tarifs : sur devis</h3><p>Le prix dépend de l'appareil, de son accessibilité et de l'intervention à réaliser. Pour un remplacement ou une PAC, des aides comme MaPrimeRénov' peuvent exister, selon éligibilité.</p></div>
+      <a class="btn btn-encre" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== AVIS =========== -->
+<section class="sec" id="avis" style="padding-top:20px">
+  <div class="wrap">
+    <div class="avis-bloc rv">
+      <span class="deco" style="width:160px;height:160px;background:var(--lilas);left:-50px;top:-50px;opacity:.6"></span>
+      <span class="deco" style="width:120px;height:120px;background:var(--peche);right:-30px;bottom:-40px;opacity:.7"></span>
+      <div class="coeurs" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z" fill="#ffc2a1" stroke="#2b2148" stroke-width="1.8"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z" fill="#c9b8ff" stroke="#2b2148" stroke-width="1.8"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z" fill="#ffe59a" stroke="#2b2148" stroke-width="1.8"/></svg>
+      </div>
+      <span class="etiquette" style="background:#fff">Avis clients</span>
+      <h2>Vos avis comptent&nbsp;!</h2>
+      <p>Votre chaudière a déjà eu droit à sa visite&nbsp;? Racontez comment ça s'est passé : votre retour aide vos voisins de Colomiers et de l'ouest toulousain à trouver le bon chauffagiste.</p>
+      <a class="btn btn-creme" href="#contact">Donner mon avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========== FAQ =========== -->
+<section class="sec" id="faq" style="background:var(--peche-pale)">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette" style="background:var(--menthe)">FAQ</span>
+      <h2>Vos questions, nos réponses</h2>
+    </div>
+    <div class="faq rv">
+      <div class="faq-item"><button aria-expanded="false">L'entretien de chaudière est-il obligatoire&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Pour les chaudières gaz, fioul ou bois d'une puissance comprise entre 4 et 400 kW, un entretien annuel par un professionnel est en principe obligatoire. Il permet de vérifier le bon fonctionnement et la sécurité de l'appareil.</p></div></div></div>
+      <div class="faq-item"><button aria-expanded="false">À quoi sert l'attestation d'entretien&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Elle prouve que l'entretien a bien été réalisé. Elle peut vous être demandée par votre assureur ou votre bailleur : gardez-la précieusement, au moins deux ans.</p></div></div></div>
+      <div class="faq-item"><button aria-expanded="false">Quel est le meilleur moment pour l'entretien&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Idéalement avant la saison de chauffe, à la fin de l'été ou au début de l'automne. Les agendas se remplissent vite en hiver : mieux vaut anticiper.</p></div></div></div>
+      <div class="faq-item"><button aria-expanded="false">Ma chaudière est en panne, que faire&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Vérifiez d'abord la pression d'eau, l'alimentation électrique et l'arrivée de gaz ou de fioul. En cas d'odeur de gaz, aérez, ne touchez à aucun interrupteur, quittez le logement et appelez le numéro d'urgence de votre distributeur. Pour le reste, contactez-nous pour un diagnostic.</p></div></div></div>
+      <div class="faq-item"><button aria-expanded="false">Faut-il remplacer ma chaudière par une pompe à chaleur&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Pas forcément : tout dépend de votre logement, de son isolation, de vos radiateurs et de votre budget. Une étude permet de comparer les options. Des aides comme MaPrimeRénov' ou les primes CEE peuvent s'appliquer selon éligibilité.</p></div></div></div>
+      <div class="faq-item"><button aria-expanded="false">Une pompe à chaleur s'entretient-elle aussi&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Oui. Un entretien régulier aide à préserver ses performances, et selon la puissance de l'appareil, un entretien périodique peut être obligatoire. On vous conseille la fréquence adaptée.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== INFOS =========== -->
+<section class="sec" id="infos">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="etiquette" style="background:var(--beurre)">Infos pratiques</span>
+      <h2>Quand et où&nbsp;?</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="boite rv">
+        <h3><i style="background:var(--lilas)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>Horaires</h3>
+        <ul class="jours" id="jours">
+          <li data-j="1"><b>Lundi</b><span>Sur rendez-vous</span></li>
+          <li data-j="2"><b>Mardi</b><span>Sur rendez-vous</span></li>
+          <li data-j="3"><b>Mercredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="4"><b>Jeudi</b><span>Sur rendez-vous</span></li>
+          <li data-j="5"><b>Vendredi</b><span>Sur rendez-vous</span></li>
+          <li data-j="6"><b>Samedi</b><span>Fermé</span></li>
+          <li data-j="0"><b>Dimanche</b><span>Fermé</span></li>
+        </ul>
+        <p class="petit">Horaires indicatifs à confirmer par téléphone.</p>
+      </div>
+      <div class="boite rv d1">
+        <h3><i style="background:var(--peche)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2.4" stroke-linecap="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></i>Zone d'intervention</h3>
+        <div class="zone-illu">
+          <svg viewBox="0 0 400 180" fill="none" aria-hidden="true">
+            <path d="M150 30c60-8 110 20 112 62s-40 74-104 74-106-26-104-66 36-62 96-70z" fill="#c9b8ff" opacity=".6"/>
+            <circle cx="322" cy="96" r="44" fill="#9ff0d1" stroke="#2b2148" stroke-width="2.5" stroke-dasharray="4 6"/>
+            <text x="322" y="101" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="700" font-size="15" fill="#2b2148">Toulouse</text>
+            <path d="M156 60c-14 0-24 10-24 23 0 18 24 38 24 38s24-20 24-38c0-13-10-23-24-23z" fill="#ffc2a1" stroke="#2b2148" stroke-width="3"/>
+            <circle cx="156" cy="83" r="8" fill="#fffaf3" stroke="#2b2148" stroke-width="2.5"/>
+            <text x="156" y="150" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="22" fill="#2b2148">Colomiers</text>
+            <path d="M196 96q44-24 78-6" stroke="#2b2148" stroke-width="2.5" stroke-dasharray="2 8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p><b style="color:var(--encre)">Colomiers et ouest toulousain.</b> Un doute sur votre commune&nbsp;? Un petit appel et on vous dit.</p>
+        <a class="btn btn-menthe" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Entretien%20Chaudiere%2031%20Colomiers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CONTACT =========== -->
+<section class="sec" id="contact" style="background:var(--beurre-pale);padding-bottom:130px">
+  <div class="wrap contact-grid">
+    <div class="contact-txt rv">
+      <span class="etiquette" style="background:var(--peche)">Contact</span>
+      <h2>On planifie la visite de votre chaudière&nbsp;?</h2>
+      <p>Entretien, panne, remplacement ou projet de pompe à chaleur : laissez un message ou appelez directement.</p>
+      <ul class="coord">
+        <li><i style="background:var(--menthe)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><small>Téléphone</small><a href="tel:+33628492897">06 28 49 28 97</a></div></li>
+        <li><i style="background:var(--lilas)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="4"/><path d="M3 7l9 6 9-6"/></svg></i><div><small>E-mail</small><a href="mailto:ruddy.javega@gmail.com">ruddy.javega@gmail.com</a></div></li>
+        <li><i style="background:var(--peche)"><svg viewBox="0 0 24 24" fill="none" stroke="#2b2148" stroke-width="2.2" stroke-linecap="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><small>Secteur</small><span>Colomiers et ouest toulousain</span></div></li>
+      </ul>
+    </div>
+    <form class="formulaire rv d1" id="form" novalidate>
+      <h3>Votre demande</h3>
+      <div class="champs">
+        <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel"></div>
+        <div class="champ"><label for="mail">E-mail</label><input id="mail" type="email" autocomplete="email"></div>
+        <div class="champ"><label for="ville">Commune</label><input id="ville" placeholder="ex. Colomiers"></div>
+        <div class="champ large"><label for="objet">C'est pour…</label>
+          <select id="objet">
+            <option>Entretien annuel de chaudière</option>
+            <option>Dépannage</option>
+            <option>Remplacement de chaudière</option>
+            <option>Pompe à chaleur</option>
+            <option>Climatisation</option>
+            <option>Chauffe-eau thermodynamique</option>
+            <option>Autre</option>
+          </select></div>
+        <div class="champ large"><label for="message">Message</label><textarea id="message" placeholder="Type de chaudière (gaz, fioul), marque si vous la connaissez, disponibilités…"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-encre">Envoyer ma demande</button>
+      <p class="msg" id="msg" role="status">Maquette de démonstration – ce formulaire n'envoie rien pour l'instant. Appelez le 06 28 49 28 97 pour une vraie demande.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="vague-haut" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v30z" fill="#2b2148"/></svg>
+  <div class="wrap pied">
+    <div>
+      <a href="#accueil" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c10 0 18 6 18 17s-7 19-18 19S2 31 2 20 10 2 20 2z" fill="#c9b8ff" stroke="#fffaf3" stroke-width="2"/><rect x="12" y="10" width="16" height="20" rx="5" fill="#fffaf3" stroke="#2b2148" stroke-width="2"/><circle cx="17" cy="17" r="1.6" fill="#2b2148"/><circle cx="23" cy="17" r="1.6" fill="#2b2148"/><path d="M17 21q3 3 6 0" stroke="#2b2148" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><b>Entretien Chaudière <span>31</span></b></a>
+      <p style="margin:14px 0 0">Entretien et dépannage de chaudières gaz ou fioul, remplacement, pompe à chaleur, climatisation et chauffe-eau thermodynamique à Colomiers et dans l'ouest toulousain.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li><a href="tel:+33628492897">06 28 49 28 97</a></li><li><a href="mailto:ruddy.javega@gmail.com">ruddy.javega@gmail.com</a></li><li>Colomiers et ouest toulousain</li></ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul><li>Lun. – ven. : sur rendez-vous</li><li>Sam. – dim. : fermé</li><li style="opacity:.7;font-size:.9rem">Horaires indicatifs à confirmer</li></ul>
+    </div>
+    <div>
+      <h4>Qualifications</h4>
+      <ul><li>QUALIBAT Remplacement chaudière</li><li>QUALIBAT PAC</li></ul>
+    </div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33628492897" aria-label="Appeler le 06 28 49 28 97"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<style>@keyframes tourneMini{to{transform:rotate(360deg)}}</style>
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function fermer(){menu.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  document.querySelectorAll('.faq-item button').forEach(function(b){
+    b.addEventListener('click',function(){var it=b.parentElement,o=it.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});
+  });
+
+  var li=document.querySelector('#jours li[data-j="'+new Date().getDay()+'"]');
+  if(li)li.classList.add('auj');
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('msg');m.classList.remove('ok');void m.offsetWidth;m.classList.add('ok');});
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(el){el.classList.add('vu');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
