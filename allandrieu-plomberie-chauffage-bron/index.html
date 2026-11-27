@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allandrieu Plomberie Chauffage – plombier chauffagiste à Bron</title>
+<meta name="description" content="Allandrieu Plomberie Chauffage, plombier chauffagiste à Bron (69500) : chaudières gaz ou fioul, chauffage et eau chaude au bois, plomberie et dépannage à Bron et dans l'agglomération lyonnaise.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#a8322d;
+  --rouge-f:#86251f;
+  --bois:#7a5234;
+  --bois-f:#5b3b24;
+  --kraft:#e9d9bd;
+  --kraft-f:#dcc6a0;
+  --creme:#fbf5ea;
+  --vert:#2f5a43;
+  --vert-f:#24473500;
+  --encre:#2b1f17;
+  --encre-d:#5a4a3d;
+  --main:"Shadows Into Light Two","Segoe Print",cursive;
+  --texte:"Bitter",Georgia,serif;
+  --larg:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--creme);color:var(--encre);font-family:var(--texte);font-size:1.03rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(122,82,52,.06) 1px,transparent 1.4px);background-size:9px 9px}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--main);font-weight:400;margin:0;line-height:1.1}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.bois{background:
+  repeating-linear-gradient(91deg,rgba(43,31,23,.10) 0 2px,transparent 2px 11px),
+  repeating-linear-gradient(89deg,rgba(255,240,220,.05) 0 1px,transparent 1px 27px),
+  radial-gradient(ellipse 120px 14px at 30% 40%,rgba(43,31,23,.18),transparent 70%),
+  radial-gradient(ellipse 160px 12px at 78% 70%,rgba(43,31,23,.15),transparent 70%),
+  linear-gradient(180deg,#80583a,#6c4729)}
+.vichy{background-color:#fff9f1;background-image:
+  linear-gradient(90deg,rgba(168,50,45,.62) 50%,transparent 50%),
+  linear-gradient(rgba(168,50,45,.62) 50%,transparent 50%);background-size:26px 26px}
+.kraft{background-color:var(--kraft);background-image:
+  radial-gradient(rgba(122,82,52,.12) 1px,transparent 1.5px),
+  radial-gradient(rgba(255,255,255,.25) 1px,transparent 1.5px);background-size:6px 6px,9px 9px;background-position:0 0,3px 4px}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;color:var(--creme);box-shadow:0 3px 0 rgba(43,31,23,.25);transition:box-shadow .3s}
+.nav.plein{box-shadow:0 10px 24px -10px rgba(43,31,23,.6)}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background-color:#fff9f1;background-image:linear-gradient(90deg,rgba(168,50,45,.62) 50%,transparent 50%),linear-gradient(rgba(168,50,45,.62) 50%,transparent 50%);background-size:8px 8px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo b{font-family:var(--main);font-weight:400;font-size:1.9rem;letter-spacing:.01em}
+.logo span{font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.8;margin-top:2px}
+.menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 11px;border-radius:6px;transition:background .25s}
+.menu a:hover{background:rgba(251,245,234,.12)}
+.menu .devis{background:var(--rouge);margin-left:8px;padding:9px 16px;box-shadow:0 3px 0 var(--rouge-f)}
+.menu .devis:hover{background:#b93b35}
+.burger{display:none;width:46px;height:46px;border:2px solid rgba(251,245,234,.7);border-radius:8px;background:transparent;cursor:pointer;position:relative}
+.burger i{position:absolute;left:11px;right:11px;height:2px;background:var(--creme);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger i:nth-child(1){top:13px}.burger i:nth-child(2){top:20px}.burger i:nth-child(3){top:27px}
+.nav.ouvert .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.ouvert .burger i:nth-child(2){opacity:0}
+.nav.ouvert .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- BOUTONS ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--texte);font-weight:700;font-size:1rem;padding:14px 22px;border-radius:10px;border:2px solid var(--encre);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-rouge{background:var(--rouge);color:#fff;border-color:var(--encre);box-shadow:4px 4px 0 var(--encre)}
+.btn-rouge:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre);background:#b93b35}
+.btn-creme{background:var(--creme);color:var(--encre);box-shadow:4px 4px 0 var(--encre)}
+.btn-creme:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre)}
+.btn-vert{background:var(--vert);color:#fff;box-shadow:4px 4px 0 var(--encre)}
+.btn-vert:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre)}
+
+/* ---------- BANDEAU ---------- */
+.bandeau{position:relative;padding-top:76px;overflow-x:clip}
+.bandeau-haut{position:relative;padding:58px 0 0}
+.bandeau-haut .wrap{position:relative}
+.bandeau-texte{max-width:640px;position:relative;z-index:2}
+.ardoise-hero{position:absolute;right:0;top:-6px;width:min(360px,32vw);padding-top:44px;transform:rotate(2.5deg);transform-origin:top center;z-index:2}
+.ardoise-hero::before{content:"";position:absolute;top:0;left:20%;width:60%;height:50px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 100 L50 0 L100 100' fill='none' stroke='%237a5234' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.ardoise-hero .cadre{padding:10px;border-radius:10px;box-shadow:0 22px 30px -18px rgba(43,31,23,.7)}
+.ardoise-hero .tableau{background:var(--vert);background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.1),transparent 60%);border-radius:4px;padding:18px 22px 20px;color:#f3efe3}
+.ardoise-hero b{display:block;font-family:var(--main);font-weight:400;font-size:1.75rem;line-height:1.1;color:#fff;border-bottom:2px dashed rgba(243,239,227,.4);padding-bottom:6px;margin-bottom:8px}
+.ardoise-hero ul{list-style:none;margin:0;padding:0;font-family:var(--main);font-size:1.3rem;line-height:1.45}
+.ardoise-hero li::before{content:"~ ";color:#f2b8a8}
+.ardoise-hero small{display:block;margin-top:8px;font-size:.78rem;color:rgba(243,239,227,.75)}
+.ardoise-mini{display:inline-flex;align-items:center;gap:8px;background:var(--vert);color:var(--creme);padding:6px 14px 6px 10px;border-radius:4px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transform:rotate(-1.5deg);box-shadow:2px 3px 0 rgba(43,31,23,.3)}
+.ardoise-mini svg{width:18px;height:18px}
+.bandeau h1{font-size:clamp(3.4rem,8.4vw,6.6rem);line-height:.92;margin:16px 0 4px;color:var(--rouge);text-shadow:2px 2px 0 rgba(43,31,23,.12)}
+.bandeau h1 small{display:block;font-size:.42em;color:var(--bois);line-height:1.1;margin-top:6px}
+.accroche{font-size:1.16rem;max-width:56ch;color:#3b2c21}
+.accroche strong{color:var(--vert)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.panorama{position:relative;margin-top:-30px;height:clamp(230px,29vw,400px);z-index:1}
+.panorama svg{position:absolute;inset:0;width:100%;height:100%}
+.nappe-bord{height:46px;position:relative;z-index:1;
+  -webkit-mask:radial-gradient(14px at 50% 100%,transparent 98%,#000) 0 0/28px 100%;mask:radial-gradient(14px at 50% 100%,transparent 98%,#000) 0 0/28px 100%}
+
+/* carte de visite épinglée */
+.carte-visite{position:absolute;z-index:5;right:max(16px,calc((100vw - var(--larg))/2));bottom:-74px;width:360px;background:#fffdf8;border-radius:6px;padding:30px 28px 24px;transform:rotate(2.2deg);box-shadow:0 2px 0 rgba(43,31,23,.08),0 26px 40px -18px rgba(43,31,23,.55);transition:transform .4s}
+.carte-visite:hover{transform:rotate(.6deg) translateY(-4px)}
+.carte-visite::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(122,82,52,.4);border-radius:3px;pointer-events:none}
+.punaise{position:absolute;top:-14px;left:50%;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#f1867f 0 18%,var(--rouge) 46%,var(--rouge-f) 100%);box-shadow:3px 6px 6px rgba(43,31,23,.35)}
+.carte-visite .nom{font-family:var(--main);font-size:2.05rem;color:var(--encre);line-height:1}
+.carte-visite .metier{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bois);margin:6px 0 14px}
+.cv-liste{list-style:none;margin:0;padding:12px 0 0;border-top:2px solid var(--encre)}
+.cv-liste li{display:flex;align-items:center;gap:10px;padding:5px 0;font-size:.95rem}
+.cv-liste svg{width:18px;height:18px;color:var(--rouge);flex:none}
+.cv-liste a{text-decoration:none;font-weight:600;word-break:break-all}
+.cv-liste a:hover{color:var(--rouge)}
+.cv-liste .tel{font-family:var(--texte);font-size:1.35rem;font-weight:800;word-break:normal}
+.tampon{position:absolute;right:-26px;top:-34px;width:104px;height:104px;transform:rotate(-14deg);opacity:.85;mix-blend-mode:multiply;pointer-events:none}
+
+/* ---------- CONFIANCE ---------- */
+.confiance{margin-top:120px;padding:0}
+.confiance ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 16px}
+.confiance li{display:flex;align-items:center;gap:10px;background:var(--creme);border:2px solid var(--encre);border-radius:999px;padding:9px 18px 9px 12px;font-weight:600;font-size:.95rem;box-shadow:3px 3px 0 var(--encre)}
+.confiance li svg{width:24px;height:24px;color:var(--rouge);flex:none}
+.confiance a{text-decoration:none}
+
+/* ---------- SECTIONS ---------- */
+.sec{padding:100px 0 0}
+.titre-sec{text-align:center;margin-bottom:46px}
+.titre-sec .sur{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--vert);border-bottom:2px solid var(--vert);padding-bottom:3px}
+.titre-sec h2{font-size:clamp(2.4rem,5.2vw,3.9rem);margin-top:10px;color:var(--encre)}
+.titre-sec h2 span{color:var(--rouge)}
+.titre-sec p{max-width:62ch;margin:10px auto 0;color:var(--encre-d)}
+.trait{display:block;width:150px;height:14px;margin:6px auto 0;color:var(--rouge)}
+
+/* étiquettes services */
+.etiquettes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 22px}
+.tag-wrap{position:relative;padding-top:36px;filter:drop-shadow(3px 5px 0 rgba(43,31,23,.18));transition:transform .35s}
+.tag-wrap:nth-child(odd){transform:rotate(-1.4deg)}
+.tag-wrap:nth-child(even){transform:rotate(1.2deg)}
+.tag-wrap:hover{transform:rotate(0) translateY(-6px)}
+.tag-wrap::before{content:"";position:absolute;top:0;left:calc(50% - 30px);width:60px;height:46px;border:2px solid var(--bois);border-bottom:0;border-radius:50% 50% 0 0/100% 100% 0 0;z-index:2}
+.tag{background:var(--kraft);padding:42px 22px 24px;height:100%;clip-path:polygon(22% 0,78% 0,100% 30px,100% 100%,0 100%,0 30px);position:relative;
+  background-image:radial-gradient(rgba(122,82,52,.12) 1px,transparent 1.5px);background-size:6px 6px}
+.tag::before{content:"";position:absolute;top:14px;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--creme);box-shadow:inset 0 0 0 3px var(--bois-f)}
+.tag .ico{width:54px;height:54px;color:var(--encre);margin:6px 0 12px}
+.tag h3{font-size:1.65rem;color:var(--rouge);margin-bottom:6px}
+.tag p{margin:0;font-size:.95rem;color:#3b2c21}
+.tag.vert{background-color:#d9e3d4}
+
+/* atouts */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.atout{background:var(--creme);border:2px dashed var(--bois);border-radius:14px;padding:26px 22px;position:relative;transition:border-color .3s,transform .3s}
+.atout:hover{border-color:var(--rouge);transform:translateY(-4px)}
+.atout svg{width:46px;height:46px;color:var(--vert);margin-bottom:10px}
+.atout h3{font-size:1.55rem;margin-bottom:6px;color:var(--encre)}
+.atout p{margin:0;font-size:.95rem;color:var(--encre-d)}
+
+/* recette */
+.recette{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:center}
+.recette-illu{position:relative}
+.recette-illu .carnet{padding:28px;border-radius:10px;transform:rotate(-2deg);box-shadow:0 20px 34px -18px rgba(43,31,23,.5)}
+.recette-illu svg{width:100%;height:auto}
+.scotch{position:absolute;width:110px;height:30px;background:rgba(251,245,234,.7);border:1px solid rgba(122,82,52,.2);top:-12px;left:30%;transform:rotate(-6deg);z-index:2}
+.etapes{list-style:none;margin:0;padding:0;counter-reset:e;display:grid;gap:18px}
+.etape{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;padding:18px 20px;background:#fffdf8;border-left:6px solid var(--rouge);border-radius:4px 12px 12px 4px;box-shadow:0 10px 24px -18px rgba(43,31,23,.6)}
+.etape .n{font-family:var(--main);font-size:3rem;line-height:.9;color:var(--rouge);text-align:center;border:2px solid var(--encre);border-radius:50%;width:60px;height:60px;display:grid;place-items:center;padding-top:6px}
+.etape h3{font-size:1.55rem;margin-bottom:2px}
+.etape p{margin:0;color:var(--encre-d);font-size:.97rem}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.papier{position:relative;padding:44px 42px 36px;border-radius:4px;box-shadow:0 22px 40px -22px rgba(43,31,23,.55);transform:rotate(-.8deg)}
+.papier h2{font-size:clamp(2.2rem,4.4vw,3.2rem);color:var(--rouge);margin-bottom:14px}
+.papier p{color:#3b2c21}
+.papier .tampon2{position:absolute;right:20px;top:-34px;width:120px;height:120px;transform:rotate(12deg);opacity:.9;mix-blend-mode:multiply}
+.fiche{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fiche div{background:#fffdf8;border:2px solid var(--encre);border-radius:10px;padding:14px 16px;box-shadow:3px 3px 0 var(--encre)}
+.fiche b{display:block;font-family:var(--main);font-weight:400;font-size:1.35rem;color:var(--vert);line-height:1.1;margin-bottom:2px}
+.fiche span{font-size:.92rem}
+
+/* croquis */
+.croquis{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.polaroid{margin:0;background:#fffdf8;padding:12px 12px 16px;box-shadow:0 16px 30px -18px rgba(43,31,23,.55);position:relative;transition:transform .35s}
+.polaroid:nth-child(1){transform:rotate(-2deg)}.polaroid:nth-child(2){transform:rotate(1.5deg)}.polaroid:nth-child(3){transform:rotate(-1deg)}.polaroid:nth-child(4){transform:rotate(2deg)}
+.polaroid:hover{transform:rotate(0) scale(1.03)}
+.polaroid::before{content:"";position:absolute;top:-11px;left:calc(50% - 42px);width:84px;height:24px;background:rgba(233,217,189,.85);border:1px solid rgba(122,82,52,.25);transform:rotate(-3deg)}
+.polaroid .zone-p{background:var(--kraft);border-radius:2px}
+.polaroid svg{width:100%;height:auto}
+.polaroid figcaption{padding-top:10px;text-align:center}
+.polaroid figcaption b{display:block;font-family:var(--main);font-weight:400;font-size:1.4rem;line-height:1.1}
+.polaroid figcaption i{font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rouge)}
+
+.ardoise{margin-top:64px;border-radius:14px;padding:16px;position:relative}
+.ardoise-in{background:var(--vert);background-image:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08),transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(0,0,0,.18),transparent 60%);border-radius:6px;color:#f3efe3;padding:36px 40px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center}
+.ardoise h3{font-size:clamp(2.2rem,4vw,3.1rem);color:#fff}
+.ardoise h3 span{color:#f2b8a8}
+.ardoise p{color:rgba(243,239,227,.9);margin:10px 0 18px}
+.menu-ardoise{list-style:none;margin:0;padding:0;font-family:var(--main);font-size:1.4rem}
+.menu-ardoise li{display:flex;align-items:baseline;gap:10px;padding:5px 0}
+.menu-ardoise li::after{content:"";order:2;flex:1;border-bottom:2px dotted rgba(243,239,227,.45);transform:translateY(-6px)}
+.menu-ardoise li span:last-child{order:3;color:#f2b8a8;white-space:nowrap}
+
+/* avis */
+.livre{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;padding:34px 38px;border-radius:16px;border:2px solid var(--encre);box-shadow:6px 6px 0 var(--encre);background:#fffdf8;position:relative;overflow:hidden}
+.livre::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px}
+.livre svg{width:84px;height:84px;color:var(--rouge)}
+.livre h3{font-size:2.1rem;margin-bottom:4px}
+.livre p{margin:0;color:var(--encre-d);max-width:60ch}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.q{background:#fffdf8;border:2px solid var(--encre);border-radius:12px;overflow:hidden;transition:box-shadow .3s}
+.q.ouvert{box-shadow:4px 4px 0 var(--rouge)}
+.q button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;font-family:var(--texte);font-weight:700;font-size:1.04rem}
+.q button:focus-visible{outline:3px solid var(--rouge);outline-offset:-3px}
+.q button .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--kraft);position:relative;transition:transform .3s,background .3s}
+.q button .pm::before,.q button .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--encre);transform:translate(-50%,-50%)}
+.q button .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.q.ouvert .pm{background:var(--rouge)}
+.q.ouvert .pm::before,.q.ouvert .pm::after{background:#fff}
+.q.ouvert .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{margin:0;padding:0 20px 18px;color:var(--encre-d)}
+
+/* horaires & zone */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.pancarte{position:relative;padding-top:50px}
+.pancarte::before{content:"";position:absolute;top:0;left:22%;width:56%;height:52px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 100 L50 0 L100 100' fill='none' stroke='%232b1f17' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.pancarte .clou{z-index:2}
+.pancarte .clou{position:absolute;top:-8px;left:calc(50% - 9px);width:18px;height:18px;border-radius:50%;background:#9c9187;box-shadow:inset -3px -3px 0 rgba(0,0,0,.25)}
+.pancarte-in{border-radius:12px;color:var(--creme);padding:26px 28px;box-shadow:0 20px 30px -18px rgba(43,31,23,.7)}
+.pancarte h3{font-size:2.1rem;margin-bottom:2px}
+.pancarte .note{font-size:.9rem;opacity:.9;margin-bottom:12px}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:7px 10px;border-bottom:1px dashed rgba(251,245,234,.3);font-size:.97rem}
+.horaires td:last-child{text-align:right;opacity:.85}
+.horaires tr.auj td{background:var(--creme);color:var(--encre);font-weight:700;opacity:1}
+.horaires tr.auj td:first-child{border-radius:6px 0 0 6px}
+.horaires tr.auj td:last-child{border-radius:0 6px 6px 0}
+.horaires tr.auj td:first-child::after{content:"aujourd'hui";margin-left:8px;font-family:var(--main);font-weight:400;color:var(--rouge);font-size:1.05rem}
+.zone{border:2px solid var(--encre);border-radius:14px;overflow:hidden;background:#fffdf8;box-shadow:5px 5px 0 var(--encre)}
+.zone>svg{width:100%;height:auto;border-bottom:2px solid var(--encre)}
+.zone-txt{padding:20px 24px 24px}
+.zone-txt h3{font-size:1.9rem}
+.zone-txt p{color:var(--encre-d);margin:4px 0 16px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+.contact-intro h2{font-size:clamp(2.4rem,4.8vw,3.6rem);color:var(--rouge);margin-bottom:12px}
+.coord{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.coord li{display:flex;align-items:center;gap:12px;background:#fffdf8;border:2px solid var(--encre);border-radius:10px;padding:12px 14px}
+.coord svg{width:22px;height:22px;color:var(--rouge);flex:none}
+.coord a{text-decoration:none;font-weight:700;word-break:break-all}
+.coord a:hover{color:var(--rouge)}
+form{border-radius:8px;padding:34px 32px 30px;box-shadow:0 24px 40px -22px rgba(43,31,23,.55);position:relative}
+form h3{font-size:2rem;margin-bottom:14px;color:var(--encre)}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.champ{display:flex;flex-direction:column;gap:4px}
+.champ.l{grid-column:1/-1}
+label{font-weight:700;font-size:.86rem;color:var(--bois-f)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--encre);background:#fffdf8;border:2px solid var(--encre);border-radius:8px;padding:11px 12px;width:100%;transition:box-shadow .2s,border-color .2s}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--rouge);box-shadow:3px 3px 0 var(--rouge)}
+.form-bas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:20px}
+.form-bas small{font-size:.82rem;color:var(--bois-f);max-width:32ch}
+.retour{display:none;margin:18px 0 0;padding:14px 16px;border-radius:10px;background:var(--vert);color:#fff;font-weight:700}
+.retour.vu{display:block}
+
+/* footer */
+footer{margin-top:120px;color:rgba(251,245,234,.88);position:relative}
+.foot-vichy{height:22px}
+.foot-in{padding:54px 0 26px}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.pied .marque{font-family:var(--main);font-size:2.4rem;color:#fff;line-height:1}
+.pied h4{font-family:var(--main);font-weight:400;font-size:1.45rem;color:#f2c9a8;margin:0 0 8px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin-bottom:6px;font-size:.95rem}
+.pied a{text-decoration:none}
+.pied a:hover{text-decoration:underline;color:#fff}
+.pied p{font-size:.95rem;margin-top:10px}
+.bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px dashed rgba(251,245,234,.3);margin-top:36px;padding-top:16px;font-size:.82rem;color:rgba(251,245,234,.7)}
+.demo{background:var(--kraft);color:var(--encre-d);text-align:center;font-size:.82rem;padding:10px 16px 12px}
+
+.flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;background:var(--rouge);color:#fff;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:40px;border:2px solid var(--encre);box-shadow:3px 3px 0 var(--encre);align-items:center;gap:9px}
+.flottant svg{width:20px;height:20px}
+
+/* reveal */
+.rv{opacity:0;translate:0 24px;transition:opacity .8s ease,translate .8s ease}
+.rv.vu{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;translate:none;transition:none}
+  *{transition-duration:.01ms!important;animation:none!important}
+}
+@keyframes fumee{0%{opacity:0;transform:translateY(6px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-18px)}}
+.fumee{animation:fumee 4s ease-in-out infinite}
+.fumee.d2{animation-delay:1.3s}.fumee.d3{animation-delay:2.6s}
+@keyframes flamme{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.08) translateY(-1px)}}
+.flamme{transform-box:fill-box;transform-origin:50% 100%;animation:flamme 1.6s ease-in-out infinite}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .etiquettes{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .croquis{grid-template-columns:repeat(2,1fr)}
+  .pied{grid-template-columns:1fr 1fr}
+  .carte-visite{width:320px}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .menu{position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--creme);color:var(--encre);padding:10px 16px 20px;gap:0;border-bottom:4px solid var(--bois);box-shadow:0 20px 30px -20px rgba(43,31,23,.6);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{font-family:var(--main);font-weight:400;font-size:1.6rem;padding:9px 4px;border-bottom:1px dashed rgba(122,82,52,.35);border-radius:0}
+  .menu .devis{margin:14px 0 0;text-align:center;color:#fff;border-radius:10px;border-bottom:0;font-family:var(--texte);font-weight:700;font-size:1.05rem}
+  .bandeau-texte{max-width:none}
+  .ardoise-hero{display:none}
+  .panorama{margin-top:10px}
+  .carte-visite{position:relative;right:auto;bottom:auto;margin:-70px auto 0;width:min(100% - 40px,380px);transform:rotate(1.6deg)}
+  .confiance{margin-top:56px}
+  .tampon{right:-8px;top:-30px;width:86px;height:86px}
+  .recette,.apropos,.contact,.infos{grid-template-columns:1fr;gap:40px}
+  .recette-illu{max-width:440px;margin:0 auto;width:100%}
+  .ardoise-in{grid-template-columns:1fr;gap:20px}
+  .livre{grid-template-columns:1fr;gap:14px;text-align:left}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .sec{padding-top:76px}
+  .bandeau-haut{padding-top:34px}
+  .accroche{font-size:1.05rem}
+  .actions .btn{flex:1 1 100%;justify-content:center}
+  .panorama{height:230px}
+  .etiquettes{grid-template-columns:1fr 1fr;gap:16px 12px}
+  .tag{padding:40px 14px 18px}
+  .tag .ico{width:42px;height:42px}
+  .tag h3{font-size:1.35rem}
+  .tag p{font-size:.86rem}
+  .atouts{grid-template-columns:1fr}
+  .croquis{grid-template-columns:1fr 1fr;gap:18px 14px}
+  .polaroid{padding:8px 8px 12px}
+  .polaroid figcaption b{font-size:1.15rem}
+  .polaroid figcaption i{font-size:.62rem;letter-spacing:.08em}
+  .fiche{grid-template-columns:1fr 1fr;gap:12px}
+  .fiche div{padding:10px 12px}
+  .fiche b{font-size:1.15rem}
+  .fiche span{font-size:.82rem;line-height:1.4;display:block}
+  .confiance ul{gap:10px}
+  .confiance li{padding:7px 14px 7px 10px}
+  .papier{padding:40px 22px 26px}
+  .ardoise-in{padding:26px 20px}
+  .menu-ardoise{font-size:1.2rem}
+  .livre{padding:26px 22px}
+  .champs{grid-template-columns:1fr}
+  form{padding:28px 18px 24px}
+  .etape{grid-template-columns:52px 1fr;gap:14px;padding:16px}
+  .etape .n{width:50px;height:50px;font-size:2.4rem}
+  .pied{grid-template-columns:1fr}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:84px}
+  .confiance li{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+
+<header class="nav bois" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Allandrieu Plomberie Chauffage, retour en haut"><b>Allandrieu</b><span>Plomberie · Chauffage</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Prestations</a></li>
+      <li><a href="#atouts">L'atelier</a></li>
+      <li><a href="#recette">Déroulé</a></li>
+      <li><a href="#realisations">Croquis</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#infos">Horaires</a></li>
+      <li><a class="devis" href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ============ BANDEAU ============ -->
+<section class="bandeau kraft" id="accueil">
+  <div class="bandeau-haut">
+    <div class="wrap">
+      <div class="bandeau-texte rv">
+        <span class="ardoise-mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Bron · agglomération lyonnaise</span>
+        <h1>Allandrieu<small>Plomberie &amp; Chauffage</small></h1>
+        <p class="accroche">Une chaudière gaz ou fioul qui fatigue, un <strong>poêle ou une chaudière à bois</strong> à raccorder, un robinet qui goutte ou un petit dépannage : à Bron, on vous reçoit comme au bouchon — simplement, et avec du solide.</p>
+        <div class="actions">
+          <a class="btn btn-rouge" href="tel:+33685402138"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+          <a class="btn btn-creme" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>Demander un devis</a>
+        </div>
+      </div>
+      <div class="ardoise-hero rv" aria-hidden="true">
+        <div class="cadre bois"><div class="tableau">
+          <b>Au menu de l'atelier</b>
+          <ul><li>Chaudières gaz &amp; fioul</li><li>Chauffage au bois</li><li>Eau chaude au bois</li><li>Plomberie &amp; dépannage</li></ul>
+          <small>Tout est servi sur devis</small>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panorama" aria-hidden="true">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>
+        <pattern id="hach" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="6" stroke="#2b1f17" stroke-width="1" opacity=".55"/></pattern>
+        <pattern id="tuile" width="14" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 Q7 0 14 8" fill="none" stroke="#2b1f17" stroke-width=".9" opacity=".55"/></pattern>
+      </defs>
+      <g filter="url(#crayon)" stroke="#2b1f17" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2">
+        <!-- colline de Fourvière + basilique -->
+        <path d="M-10 250 C60 170 170 120 300 128 C380 132 430 170 470 230 V400 H-10z" fill="#d7c29e" stroke-width="1.6"/>
+        <path d="M60 220c40-30 80-46 120-52M260 150c50 4 100 30 140 70" stroke-width="1" opacity=".6"/>
+        <g transform="translate(210 54)">
+          <rect x="0" y="40" width="120" height="44" fill="#efe2c8"/>
+          <path d="M0 40 L60 18 L120 40" fill="#efe2c8"/>
+          <rect x="-8" y="14" width="22" height="70" fill="#efe2c8"/><rect x="106" y="14" width="22" height="70" fill="#efe2c8"/>
+          <path d="M-8 14h22M106 14h22M-4 14v-6h14v6M110 14v-6h14v6" />
+          <path d="M3 26v12M117 26v12M24 56v18M44 56v18M64 56v18M84 56v18M104 56v18" stroke-width="1.4"/>
+          <path d="M150 84V20" stroke-width="1.6"/><path d="M144 20h12M150 20l0-14M146 10h8" stroke-width="1.6"/>
+          <path d="M140 84V40h20v44" fill="#efe2c8"/>
+        </g>
+        <!-- tour crayon Part-Dieu -->
+        <g transform="translate(560 30)">
+          <path d="M0 220 V70 Q0 50 22 50 Q44 50 44 70 V220" fill="#efe2c8"/>
+          <path d="M8 60 L22 8 L36 60" fill="#a8322d" fill-opacity=".85"/>
+          <path d="M6 90h32M6 120h32M6 150h32M6 180h32M6 210h32" stroke-width="1" opacity=".6"/>
+          <rect x="30" y="66" width="12" height="154" fill="url(#hach)" stroke="none"/>
+        </g>
+        <!-- toits -->
+        <g>
+          <path d="M380 270 l60-36 60 36z" fill="#c26a4f" fill-opacity=".75"/><path d="M380 270 l60-36 60 36z" fill="url(#tuile)" stroke="none"/>
+          <rect x="390" y="270" width="100" height="80" fill="#efe2c8"/><rect x="410" y="290" width="18" height="24"/><rect x="452" y="290" width="18" height="24"/>
+          <path d="M470 246v-24h12v32" fill="#efe2c8"/>
+          <path d="M620 262 l50-30 50 30z" fill="#c26a4f" fill-opacity=".75"/><path d="M620 262 l50-30 50 30z" fill="url(#tuile)" stroke="none"/>
+          <rect x="628" y="262" width="84" height="90" fill="#efe2c8"/><rect x="646" y="282" width="16" height="22"/><rect x="680" y="282" width="16" height="22"/>
+          <path d="M1060 250 l70-40 70 40z" fill="#c26a4f" fill-opacity=".75"/><path d="M1060 250 l70-40 70 40z" fill="url(#tuile)" stroke="none"/>
+          <rect x="1070" y="250" width="120" height="100" fill="#efe2c8"/><rect x="1090" y="272" width="20" height="26"/><rect x="1150" y="272" width="20" height="26"/>
+          <path d="M1160 226v-30h14v38" fill="#efe2c8"/>
+          <path d="M1220 280 l55-32 55 32z" fill="#c26a4f" fill-opacity=".75"/><path d="M1220 280 l55-32 55 32z" fill="url(#tuile)" stroke="none"/>
+          <rect x="1228" y="280" width="94" height="70" fill="#efe2c8"/><rect x="1246" y="296" width="16" height="20"/><rect x="1284" y="296" width="16" height="20"/>
+          <path d="M1340 290 l60-30 60 30z" fill="#c26a4f" fill-opacity=".75"/>
+          <rect x="1348" y="290" width="100" height="60" fill="#efe2c8"/>
+        </g>
+        <!-- fumées de cheminées -->
+        <g stroke="#7a5234" stroke-width="1.6" opacity=".7">
+          <path class="fumee" d="M476 214c-8-10 8-14 0-24s8-14 0-24"/>
+          <path class="fumee d2" d="M1167 188c-8-10 8-14 0-24s8-14 0-24"/>
+        </g>
+        <!-- sol atelier -->
+        <path d="M-10 352 H1450" stroke-width="2.4"/>
+        <rect x="-10" y="352" width="1460" height="60" fill="#b78a5e" stroke="none" opacity=".55"/>
+        <path d="M30 370h90M180 380h120M420 372h80M760 378h140M980 368h90M1240 376h120" stroke-width="1" opacity=".5"/>
+        <!-- chaudière murale -->
+        <g transform="translate(740 170)">
+          <rect x="0" y="0" width="86" height="124" rx="8" fill="#fbf5ea"/>
+          <rect x="70" y="6" width="12" height="112" fill="url(#hach)" stroke="none"/>
+          <path d="M28 0v-30h30v30" fill="#fbf5ea"/>
+          <circle cx="43" cy="44" r="16"/>
+          <path class="flamme" d="M43 54c-6 0-8-5-5-9 2-3 3-3 3-8 4 2 5 5 5 7 1-1 2-2 2-4 3 4 3 8 1 10-1 2-3 4-6 4z" fill="#a8322d" stroke="#86251f" stroke-width="1"/>
+          <rect x="14" y="80" width="58" height="22" rx="3"/>
+          <circle cx="56" cy="91" r="5"/><path d="M22 91h18" stroke-width="1.4"/>
+          <path d="M18 124v40M36 124v40M54 124v28h40" stroke-width="2.2"/>
+        </g>
+        <!-- poêle à bois -->
+        <g transform="translate(880 150)">
+          <path d="M44 0V-160" stroke-width="10" stroke="#2b1f17"/>
+          <path d="M44 0V-160" stroke-width="6" stroke="#5b3b24"/>
+          <path d="M40 -60h8M40 -110h8" stroke="#efe2c8" stroke-width="1.6"/>
+          <path d="M14 10h60l6-10H8z" fill="#3a2a1f"/>
+          <rect x="6" y="10" width="76" height="110" rx="8" fill="#3a2a1f"/>
+          <rect x="18" y="26" width="52" height="54" rx="6" fill="#f0b36c" stroke="#efe2c8" stroke-width="2"/>
+          <path class="flamme" d="M30 78c-4-10 4-14 6-24 4 6 2 10 6 14 2-6 6-10 6-16 6 8 8 16 4 26z" fill="#a8322d" stroke="none"/>
+          <path class="flamme" d="M38 78c-2-6 2-8 4-14 3 4 2 7 6 10 0 2 0 3-1 4z" fill="#f7d08a" stroke="none"/>
+          <path d="M22 76h44" stroke="#5b3b24" stroke-width="3"/>
+          <path d="M18 94h52M18 104h52" stroke="#efe2c8" stroke-width="1.2" opacity=".6"/>
+          <path d="M14 120v14M74 120v14" stroke-width="3"/>
+          <!-- bûches -->
+          <g transform="translate(100 150)">
+            <rect x="0" y="-26" width="70" height="20" rx="10" fill="#9c6b43"/><circle cx="64" cy="-16" r="8" fill="#d9b48a"/>
+            <rect x="8" y="-46" width="64" height="20" rx="10" fill="#8a5c38"/><circle cx="66" cy="-36" r="8" fill="#d9b48a"/>
+            <rect x="-4" y="-6" width="82" height="4" fill="none" stroke="none"/>
+          </g>
+        </g>
+        <!-- établi -->
+        <g transform="translate(1110 260)">
+          <rect x="0" y="0" width="200" height="16" fill="#9c6b43"/>
+          <path d="M14 16v76M186 16v76M14 60h172" stroke-width="2.4"/>
+          <rect x="140" y="-20" width="34" height="20" fill="#5a4a3d"/>
+          <path d="M150 -20v-10h14v10" />
+          <path d="M20 -4 l50-18" stroke-width="5" stroke="#5a4a3d"/>
+          <circle cx="76" cy="-24" r="8" />
+          <path d="M96 -2c0-12 20-12 20 0" stroke="#2f5a43" stroke-width="5"/>
+        </g>
+        <!-- outils au mur -->
+        <g transform="translate(1130 150)" stroke-width="2">
+          <path d="M0 0h170" stroke-width="3" stroke="#7a5234"/>
+          <path d="M24 4v54M18 58h12" /><path d="M24 4c-10 0-10 12 0 12" />
+          <path d="M70 4l0 64M62 10h16" stroke-width="3"/>
+          <path d="M120 4c-14 20-14 40 0 56c14-16 14-36 0-56z" />
+          <path d="M150 4v40l8 8" />
+        </g>
+        <path d="M0 352 C 90 344, 140 360, 220 352" stroke-width="1" opacity=".4"/>
+      </g>
+    </svg>
+  </div>
+  <div class="nappe-bord vichy" aria-hidden="true"></div>
+
+  <!-- carte de visite épinglée -->
+  <div class="carte-visite" id="carte">
+    <span class="punaise" aria-hidden="true"></span>
+    <div class="nom">Allandrieu</div>
+    <div class="metier">Plombier · Chauffagiste · Bron</div>
+    <ul class="cv-liste">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a class="tel" href="tel:+33685402138">06 85 40 21 38</a></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:plomberiechauffage.a@gmail.com">plomberiechauffage.a@gmail.com</a></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Bron et agglomération lyonnaise</span></li>
+    </ul>
+    <svg class="tampon" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="cercle" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="#a8322d" stroke-width="3"/>
+      <circle cx="60" cy="60" r="34" fill="none" stroke="#a8322d" stroke-width="1.5"/>
+      <text font-family="Bitter,serif" font-size="11.5" font-weight="800" letter-spacing="2.4" fill="#a8322d"><textPath href="#cercle">PLOMBERIE · CHAUFFAGE · BRON ·</textPath></text>
+      <text x="60" y="58" text-anchor="middle" font-family="Bitter,serif" font-size="15" font-weight="800" fill="#a8322d">69500</text>
+      <path d="M44 68h32" stroke="#a8322d" stroke-width="1.5"/>
+      <text x="60" y="80" text-anchor="middle" font-family="Bitter,serif" font-size="8" font-weight="700" letter-spacing="1" fill="#a8322d">RHÔNE</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<section class="confiance" aria-label="L'essentiel">
+  <div class="wrap">
+    <ul class="rv">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Basé à Bron (69500)</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>Bron et agglomération lyonnaise</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 16c-2 0-3-1.5-2-3s1.5-1.5 1.5-3.5c1.5 1 2 2 2 3.5.7-.5.8-1 .8-1.6 1.2 1.8.9 4.6-2.3 4.6z"/></svg>Chaudières gaz et fioul</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 18h16M6 18l2-8h8l2 8M10 10V6h4v4"/><path d="M12 15c-1 0-1.5-.8-1-1.6.4-.6.8-.8.8-1.8.8.5 1.2 1.2 1.2 2 .3.8-.2 1.4-1 1.4z"/></svg>Chauffage &amp; eau chaude au bois</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PRESTATIONS ============ -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">La carte de l'atelier</span>
+      <h2>Ce qu'on fait <span>pour vous</span></h2>
+      <svg class="trait" viewBox="0 0 150 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M3 9c20-8 40 6 60-1s40-6 60 0 18 2 24-2"/></svg>
+      <p>Du chauffage au gaz, au fioul ou au bois jusqu'à la petite réparation qui traîne : un seul numéro pour la maison.</p>
+    </div>
+    <div class="etiquettes">
+      <div class="tag-wrap rv"><div class="tag">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="6" width="32" height="42" rx="4"/><path d="M12 15h32"/><circle cx="28" cy="30" r="8"/><path d="M28 35c-3.5 0-4.5-2.5-3.5-4.5s2-2 2-4.5c2 1 3 3 2.7 4.5.9-.6 1.2-1.4 1.2-2.3 1.6 1.8 1.8 3.6 1.2 5-.6 1.2-1.8 1.8-3.6 1.8z" stroke="#a8322d"/><path d="M20 48v4M36 48v4"/></svg>
+        <h3>Chaudière gaz</h3><p>Installation, remplacement et entretien de chaudières gaz, réglées pour votre logement.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="24" height="36" rx="3"/><path d="M6 24h24M12 32h12"/><path d="M34 26h12a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H34z"/><path d="M30 40h4"/><path d="M42 16c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" stroke="#a8322d"/></svg>
+        <h3>Chaudière fioul</h3><p>Entretien, remise en route, remplacement : le brûleur et la cuve passés en revue.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag vert">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 4v12"/><path d="M16 16h24l2 6H14z"/><rect x="14" y="22" width="28" height="24" rx="3"/><path d="M26 40c-3-6 2-8 3-13 3 4 1 6 4 8 1-2 2-3 2-5 3 4 3 8 1 10z" stroke="#a8322d"/><path d="M18 46v5M38 46v5"/></svg>
+        <h3>Chauffage au bois</h3><p>Poêle ou chaudière bois : raccordement au circuit, conseils d'usage et entretien.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag vert">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="6" width="24" height="40" rx="12"/><path d="M22 46v6M34 46v6M16 18h24"/><path d="M28 36c-3 0-4-2.4-3-4.4l3-5 3 5c1 2 0 4.4-3 4.4z" stroke="#2f5a43"/><path d="M44 18c2 2 2 4 0 6M48 14c4 4 4 10 0 14" stroke="#a8322d"/></svg>
+        <h3>Eau chaude au bois</h3><p>Production d'eau chaude couplée au chauffage bois, ballon et liaisons hydrauliques.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 20h18a6 6 0 0 1 6 6v6"/><path d="M10 14v12M6 14h8"/><path d="M30 32h8v6h-8z"/><path d="M34 42c-2 3-3 4-3 6a3 3 0 0 0 6 0c0-2-1-3-3-6z" stroke="#a8322d"/></svg>
+        <h3>Plomberie</h3><p>Robinetterie, évacuations, sanitaires, recherche de fuite : la plomberie du quotidien.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M36 6a10 10 0 0 0-9 14L9 38a4.5 4.5 0 0 0 6.4 6.4L33 27a10 10 0 0 0 14-9l-6 2.5-4.5-4.5L39 10z"/><path d="M42 38v10M37 43h10" stroke="#a8322d"/></svg>
+        <h3>Dépannage</h3><p>Panne de chauffage, plus d'eau chaude, fuite : diagnostic et remise en état.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="10" width="32" height="40" rx="3"/><path d="M22 6h12v8H22z"/><path d="M18 26l4 4 7-7" stroke="#a8322d"/><path d="M32 28h8M18 40l4 4 7-7"/><path d="M32 42h8"/></svg>
+        <h3>Entretien annuel</h3><p>Visite d'entretien de chaudière avec attestation, pour passer l'hiver tranquille.</p></div></div>
+      <div class="tag-wrap rv"><div class="tag vert">
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 48l14-14M18 30l8 8M22 34l18-18 4 4-18 18"/><path d="M40 8l8 8-4 4-8-8z"/><path d="M8 14h12M14 8v12" stroke="#a8322d"/></svg>
+        <h3>Petits travaux</h3><p>Le coup de main de factotum : ces petites réparations qu'on remet toujours à plus tard.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATOUTS ============ -->
+<section class="sec" id="atouts">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">Pourquoi nous choisir</span>
+      <h2>L'esprit <span>de l'atelier</span></h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><svg viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22L23 8l17 14"/><path d="M10 19v19h26V19"/><path d="M19 38V28h8v10"/></svg><h3>Un artisan de Bron</h3><p>Installé à Bron, il intervient dans la commune et l'agglomération lyonnaise, sans grands détours.</p></div>
+      <div class="atout rv"><svg viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 6v8M14 14h18l2 5H12z"/><rect x="12" y="19" width="22" height="18" rx="3"/><path d="M21 33c-2-4 2-6 2-9 2 3 1 4 3 6 1-1 1-2 1-3 2 3 1 6-1 6z"/></svg><h3>Gaz, fioul et bois</h3><p>Chaudières classiques comme chauffage au bois : un interlocuteur qui connaît plusieurs énergies.</p></div>
+      <div class="atout rv"><svg viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6a8 8 0 0 0-7 11L8 32a3.6 3.6 0 0 0 5 5l15-15a8 8 0 0 0 11-7l-5 2-3.5-3.5L33 8z"/></svg><h3>Du gros au petit</h3><p>Plombier, chauffagiste et dépanneur : du remplacement de chaudière au joint qui fuit.</p></div>
+      <div class="atout rv"><svg viewBox="0 0 46 46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 6H12a3 3 0 0 0-3 3v28a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3V15z"/><path d="M28 6v9h9M15 24h16M15 30h10"/></svg><h3>Un devis, d'abord</h3><p>Avant les travaux, vous savez ce qui est prévu et ce que ça coûte, noir sur blanc.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECETTE ============ -->
+<section class="sec" id="recette">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">Comment ça se passe</span>
+      <h2>La recette <span>maison</span></h2>
+    </div>
+    <div class="recette">
+      <div class="recette-illu rv">
+        <span class="scotch" aria-hidden="true"></span>
+        <div class="carnet kraft">
+          <svg viewBox="0 0 360 300" aria-hidden="true">
+            <g fill="none" stroke="#2b1f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
+              <path d="M20 40h320M20 80h320M20 120h320M20 160h320M20 200h320M20 240h320" stroke="#7a5234" stroke-width=".8" opacity=".5"/>
+              <path d="M60 10v280" stroke="#a8322d" stroke-width="1.2" opacity=".6"/>
+              <text x="80" y="34" font-family="Shadows Into Light Two,cursive" font-size="26" fill="#a8322d" stroke="none">Pour une maison au chaud :</text>
+              <text x="80" y="72" font-family="Shadows Into Light Two,cursive" font-size="21" fill="#2b1f17" stroke="none">– 1 coup de fil</text>
+              <text x="80" y="112" font-family="Shadows Into Light Two,cursive" font-size="21" fill="#2b1f17" stroke="none">– 1 visite sur place</text>
+              <text x="80" y="152" font-family="Shadows Into Light Two,cursive" font-size="21" fill="#2b1f17" stroke="none">– 1 devis clair</text>
+              <text x="80" y="192" font-family="Shadows Into Light Two,cursive" font-size="21" fill="#2b1f17" stroke="none">– du travail soigné</text>
+              <g transform="translate(236 196)">
+                <path d="M10 60h80l-8 30H18z" fill="#a8322d" fill-opacity=".85"/>
+                <path d="M6 60h88"/>
+                <path d="M34 54c-6-10 6-12 0-22M50 54c-6-10 6-12 0-22M66 54c-6-10 6-12 0-22" stroke="#7a5234"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <ol class="etapes">
+        <li class="etape rv"><span class="n">1</span><div><h3>On s'appelle</h3><p>Au 06 85 40 21 38 ou par le formulaire : vous expliquez votre besoin, chaudière, poêle ou fuite.</p></div></li>
+        <li class="etape rv"><span class="n">2</span><div><h3>On passe voir</h3><p>Rendez-vous chez vous à Bron ou dans l'agglomération pour constater l'installation.</p></div></li>
+        <li class="etape rv"><span class="n">3</span><div><h3>On chiffre</h3><p>Un devis détaillé, matériel et main-d'œuvre, pour décider sans mauvaise surprise.</p></div></li>
+        <li class="etape rv"><span class="n">4</span><div><h3>On s'y met</h3><p>Intervention réalisée, essais faits, explications données — et le chantier laissé propre.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A PROPOS ============ -->
+<section class="sec" id="apropos">
+  <div class="wrap">
+    <div class="apropos">
+      <div class="papier kraft rv">
+        <svg class="tampon2" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="cercle2" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+          <circle cx="60" cy="60" r="56" fill="none" stroke="#2f5a43" stroke-width="3"/>
+          <circle cx="60" cy="60" r="33" fill="none" stroke="#2f5a43" stroke-width="1.5"/>
+          <text font-family="Bitter,serif" font-size="10.5" font-weight="800" letter-spacing="1.6" fill="#2f5a43"><textPath href="#cercle2">ARTISAN · AGGLO LYONNAISE ·</textPath></text>
+          <path d="M45 62l15-13 15 13M49 59v14h22V59" fill="none" stroke="#2f5a43" stroke-width="2.4" stroke-linejoin="round"/><path d="M60 70c-3 0-4-2-3-4 1-1.5 1.5-2 1.5-4 2 1 3 2.5 3 4 .5-.3.8-.8.8-1.3 1 1.5.8 5.3-2.3 5.3z" fill="#2f5a43"/>
+        </svg>
+        <span class="sur" style="font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--vert)">À propos</span>
+        <h2>Une plomberie de quartier, à Bron</h2>
+        <p>Allandrieu Plomberie Chauffage est une entreprise de plomberie et de chauffage basée à Bron, dans le Rhône, qui intervient à Bron et dans l'agglomération lyonnaise.</p>
+        <p>Son terrain de prédilection : les chaudières à gaz ou au fioul, et le chauffage ou l'eau chaude au bois. Elle est aussi référencée comme plombier, chauffagiste et dépanneur pour les petits travaux de la maison.</p>
+        <p style="margin:0">Pour un devis ou un dépannage, un appel au 06 85 40 21 38 ou un e-mail suffit pour lancer les choses.</p>
+      </div>
+      <div class="fiche rv">
+        <div><b>Bron</b><span>Commune de l'entreprise, 69500</span></div>
+        <div><b>Agglo lyonnaise</b><span>Secteur d'intervention</span></div>
+        <div><b>Gaz &amp; fioul</b><span>Chaudières : pose, entretien, dépannage</span></div>
+        <div><b>Bois</b><span>Chauffage et/ou eau chaude au bois</span></div>
+        <div><b>Plomberie</b><span>Sanitaires, fuites, robinetterie</span></div>
+        <div><b>Factotum</b><span>Petits dépannages de la maison</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROQUIS / REALISATIONS ============ -->
+<section class="sec" id="realisations">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">Le carnet de croquis</span>
+      <h2>Types de <span>chantiers</span></h2>
+      <p>Quelques croquis pour donner une idée des interventions proposées — ce sont des exemples de prestation, pas des photos de chantiers.</p>
+    </div>
+    <div class="croquis">
+      <figure class="polaroid rv"><div class="zone-p">
+        <svg viewBox="0 0 240 200" aria-hidden="true"><g fill="none" stroke="#2b1f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
+          <path d="M10 180h220"/><rect x="80" y="40" width="80" height="110" rx="8" fill="#fbf5ea"/><path d="M80 60h80"/>
+          <circle cx="120" cy="92" r="16"/><path d="M120 102c-5 0-7-4-4-8 2-3 3-3 3-7 4 2 5 5 4 7 2-1 2-2 2-3 2 4 2 11-5 11z" fill="#a8322d" stroke="none"/>
+          <rect x="94" y="122" width="52" height="16" rx="2"/><path d="M96 150v30M120 150v30M144 150v30"/>
+          <path d="M106 40V14h28v26"/><path d="M170 60c20-6 40 4 50-6" stroke="#2f5a43" stroke-dasharray="4 5"/>
+        </g></svg></div>
+        <figcaption><i>Exemple de prestation</i><b>Remplacement de chaudière gaz</b></figcaption>
+      </figure>
+      <figure class="polaroid rv"><div class="zone-p">
+        <svg viewBox="0 0 240 200" aria-hidden="true"><g fill="none" stroke="#2b1f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
+          <path d="M10 180h220"/><path d="M90 50V6" stroke-width="7"/>
+          <path d="M60 60h60l6-10H54z" fill="#3a2a1f"/><rect x="52" y="60" width="76" height="100" rx="8" fill="#3a2a1f"/>
+          <rect x="64" y="74" width="52" height="46" rx="5" fill="#f0b36c" stroke="#efe2c8"/>
+          <path d="M76 118c-4-8 4-12 6-20 4 5 2 8 6 12 2-5 6-8 6-13 6 7 6 14 3 21z" fill="#a8322d" stroke="none"/>
+          <path d="M60 160v20M120 160v20"/>
+          <rect x="150" y="150" width="70" height="16" rx="8" fill="#9c6b43"/><rect x="158" y="134" width="62" height="16" rx="8" fill="#8a5c38"/>
+        </g></svg></div>
+        <figcaption><i>Exemple de prestation</i><b>Raccordement d'un poêle à bois</b></figcaption>
+      </figure>
+      <figure class="polaroid rv"><div class="zone-p">
+        <svg viewBox="0 0 240 200" aria-hidden="true"><g fill="none" stroke="#2b1f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
+          <path d="M10 180h220"/><rect x="40" y="40" width="64" height="140" rx="30" fill="#fbf5ea"/><path d="M40 70h64"/>
+          <text x="72" y="120" text-anchor="middle" font-family="Bitter,serif" font-size="12" font-weight="700" fill="#2b1f17" stroke="none">ECS</text>
+          <path d="M104 80h40v-30M104 150h60v-40" /><rect x="140" y="70" width="70" height="80" rx="6" fill="#efe2c8"/>
+          <path d="M160 130c-3-6 2-8 3-13 3 4 1 6 4 8 1-2 2-3 2-5 4 5 3 9 0 10z" fill="#a8322d" stroke="none"/>
+          <path d="M150 90h50" stroke-dasharray="3 4"/>
+        </g></svg></div>
+        <figcaption><i>Exemple de prestation</i><b>Eau chaude couplée au bois</b></figcaption>
+      </figure>
+      <figure class="polaroid rv"><div class="zone-p">
+        <svg viewBox="0 0 240 200" aria-hidden="true"><g fill="none" stroke="#2b1f17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon)">
+          <path d="M10 180h220"/><path d="M40 120h120a10 10 0 0 0 10-10V40"/><path d="M150 40h40M170 40v-14M160 26h20"/>
+          <rect x="60" y="112" width="18" height="16" fill="#2f5a43" stroke="none" opacity=".8"/>
+          <path d="M120 130c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z" fill="#7fb0c9" stroke="#2b1f17" stroke-width="1.4"/>
+          <path d="M40 120v60"/><path d="M180 120l30 30M196 120l-14 30" stroke="#a8322d" stroke-width="3"/>
+          <path d="M100 160h40" stroke-width="1" opacity=".5"/>
+        </g></svg></div>
+        <figcaption><i>Exemple de prestation</i><b>Réparation de fuite</b></figcaption>
+      </figure>
+    </div>
+
+    <div class="ardoise bois rv">
+      <div class="ardoise-in">
+        <div>
+          <h3>L'ardoise <span>du jour</span></h3>
+          <p>Ici, pas de prix au hasard : chaque installation est différente. Tout est établi sur devis, après un échange ou une visite.</p>
+          <a class="btn btn-creme" href="#contact">Demander mon devis</a>
+        </div>
+        <ul class="menu-ardoise">
+          <li><span>Chaudière gaz ou fioul</span><span>sur devis</span></li>
+          <li><span>Poêle / chaudière bois</span><span>sur devis</span></li>
+          <li><span>Eau chaude au bois</span><span>sur devis</span></li>
+          <li><span>Entretien annuel</span><span>sur devis</span></li>
+          <li><span>Plomberie &amp; fuites</span><span>sur devis</span></li>
+          <li><span>Petits travaux</span><span>sur devis</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec" id="avis">
+  <div class="wrap">
+    <div class="livre rv">
+      <svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M42 20c-8-6-20-8-32-6v52c12-2 24 0 32 6 8-6 20-8 32-6V14c-12-2-24 0-32 6z"/><path d="M42 20v52"/><path d="M52 36h14M52 46h14M18 36h14M18 46h10"/></svg>
+      <div>
+        <h3>Votre avis compte</h3>
+        <p>Vous avez fait appel à Allandrieu Plomberie Chauffage ? Un mot sur Google, c'est comme une recommandation au comptoir : ça aide les voisins de Bron et de l'agglomération à trouver le bon artisan.</p>
+      </div>
+      <a class="btn btn-vert" href="https://www.google.com/maps/search/?api=1&amp;query=Allandrieu+Plomberie+Chauffage+Bron" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">Questions fréquentes</span>
+      <h2>On vous <span>répond</span></h2>
+    </div>
+    <div class="faq rv">
+      <div class="q"><button aria-expanded="false">Dans quelles communes intervenez-vous ?<span class="pm"></span></button><div class="rep"><div><p>L'entreprise est basée à Bron et intervient dans l'agglomération lyonnaise. Appelez pour vérifier la disponibilité selon votre adresse.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Peut-on relier un poêle ou une chaudière bois au chauffage existant ?<span class="pm"></span></button><div class="rep"><div><p>Dans certains cas, oui : tout dépend du type d'appareil, du circuit en place et du conduit de fumée. Une visite permet de vérifier la faisabilité avant tout devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">L'entretien de la chaudière est-il obligatoire ?<span class="pm"></span></button><div class="rep"><div><p>Pour la plupart des chaudières (gaz, fioul, bois), un entretien annuel est requis et donne lieu à une attestation. C'est aussi la meilleure façon d'éviter les pannes en plein hiver.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Faites-vous aussi les petits dépannages ?<span class="pm"></span></button><div class="rep"><div><p>Oui, l'entreprise est aussi référencée comme dépanneur pour les petits travaux : robinet qui fuit, chasse d'eau, joint à changer… Décrivez le problème lors de votre appel.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Ma chaudière fioul est ancienne, faut-il la remplacer ?<span class="pm"></span></button><div class="rep"><div><p>Pas forcément tout de suite. Un diagnostic permet de juger de son état et de vous présenter les options possibles, réparation ou remplacement, avec leurs avantages.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Comment obtenir un devis ?<span class="pm"></span></button><div class="rep"><div><p>Par téléphone au 06 85 40 21 38, par e-mail ou avec le formulaire de cette page. Un rendez-vous peut être proposé pour voir l'installation.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORAIRES & ZONE ============ -->
+<section class="sec" id="infos">
+  <div class="wrap">
+    <div class="titre-sec rv">
+      <span class="sur">Infos pratiques</span>
+      <h2>Quand &amp; <span>où</span></h2>
+    </div>
+    <div class="infos">
+      <div class="pancarte rv">
+        <span class="clou" aria-hidden="true"></span>
+        <div class="pancarte-in bois">
+          <h3>Horaires</h3>
+          <p class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi</p>
+          <table class="horaires"><tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="zone rv">
+        <svg viewBox="0 0 520 250" aria-hidden="true">
+          <rect width="520" height="250" fill="#e9d9bd"/>
+          <g filter="url(#crayon)" fill="none" stroke-linecap="round">
+            <path d="M120 0 C140 60 120 110 150 160 S170 230 160 250" stroke="#2f5a43" stroke-width="9" opacity=".55"/>
+            <path d="M230 0 C210 70 180 110 160 160" stroke="#2f5a43" stroke-width="9" opacity=".55"/>
+            <text x="74" y="40" font-family="Shadows Into Light Two,cursive" font-size="18" fill="#2f5a43">Saône</text>
+            <text x="238" y="34" font-family="Shadows Into Light Two,cursive" font-size="18" fill="#2f5a43">Rhône</text>
+            <circle cx="300" cy="128" r="94" stroke="#a8322d" stroke-width="2" stroke-dasharray="7 7"/>
+            <text x="190" y="140" font-family="Bitter,serif" font-size="13" font-weight="700" fill="#2b1f17">Lyon</text>
+            <circle cx="176" cy="136" r="5" fill="#2b1f17"/>
+            <path d="M318 154c0-16 22-16 22 0 0 12-11 24-11 24s-11-12-11-24z" fill="#a8322d" stroke="#2b1f17" stroke-width="1.6"/>
+            <circle cx="329" cy="152" r="4" fill="#fbf5ea"/>
+            <text x="348" y="176" font-family="Shadows Into Light Two,cursive" font-size="28" fill="#2b1f17">Bron</text>
+            <text x="508" y="238" text-anchor="end" font-family="Bitter,serif" font-size="11" font-weight="700" letter-spacing="2" fill="#7a5234">AGGLOMÉRATION LYONNAISE</text>
+          </g>
+        </svg>
+        <div class="zone-txt">
+          <h3>Bron &amp; alentours</h3>
+          <p>Entreprise basée à Bron (69500), intervenant dans l'agglomération lyonnaise.</p>
+          <a class="btn btn-rouge" href="https://www.google.com/maps/search/?api=1&amp;query=Allandrieu+Plomberie+Chauffage+Bron+69500" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact-intro rv">
+        <span class="titre-sec" style="margin:0;text-align:left"><span class="sur">Contact &amp; devis</span></span>
+        <h2>Passez commande, on s'occupe du reste</h2>
+        <p>Dites-nous ce qui ne va pas — ou ce que vous voulez installer. Une photo de l'appareil ou de sa plaque aide souvent à préparer le devis.</p>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33685402138">06 85 40 21 38</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:plomberiechauffage.a@gmail.com">plomberiechauffage.a@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Bron et agglomération lyonnaise</span></li>
+        </ul>
+      </div>
+      <form id="form" class="kraft rv" novalidate>
+        <h3>Bon de demande</h3>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 ..."></div>
+          <div class="champ"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Bron, Villeurbanne…"></div>
+          <div class="champ l"><label for="objet">Votre besoin</label>
+            <select id="objet" name="objet"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chauffage / eau chaude au bois</option><option>Plomberie</option><option>Dépannage</option><option>Entretien</option><option>Petits travaux</option></select></div>
+          <div class="champ l"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Décrivez votre installation ou le problème…"></textarea></div>
+        </div>
+        <div class="form-bas">
+          <small>Vos informations servent uniquement à répondre à votre demande.</small>
+          <button class="btn btn-rouge" type="submit">Envoyer</button>
+        </div>
+        <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bois">
+  <div class="foot-vichy vichy" aria-hidden="true"></div>
+  <div class="foot-in">
+    <div class="wrap">
+      <div class="pied">
+        <div>
+          <div class="marque">Allandrieu</div>
+          <p>Plomberie &amp; chauffage à Bron : chaudières gaz ou fioul, chauffage et eau chaude au bois, dépannage et petits travaux dans l'agglomération lyonnaise.</p>
+        </div>
+        <div>
+          <h4>Coordonnées</h4>
+          <ul>
+            <li><a href="tel:+33685402138">06 85 40 21 38</a></li>
+            <li><a href="mailto:plomberiechauffage.a@gmail.com" style="word-break:break-all">plomberiechauffage.a@gmail.com</a></li>
+            <li>Bron (69500)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Horaires</h4>
+          <ul><li>Sur rendez-vous, du lundi au vendredi</li><li style="opacity:.85;font-size:.85rem">Horaires à confirmer</li></ul>
+        </div>
+        <div>
+          <h4>Raccourcis</h4>
+          <ul><li><a href="#services">Prestations</a></li><li><a href="#realisations">Croquis</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Devis</a></li></ul>
+        </div>
+      </div>
+      <div class="bas"><span>© Allandrieu Plomberie Chauffage · Bron</span><span>Mentions légales à compléter</span></div>
+    </div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33685402138" aria-label="Appeler Allandrieu Plomberie Chauffage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

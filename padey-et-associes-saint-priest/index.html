@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padey et Associés – chauffagiste plombier à Saint-Priest</title>
+<meta name="description" content="Padey et Associés, Cité Berliet à Saint-Priest (69800) : remplacement de chaudière gaz ou fioul, plomberie sanitaire et VMC. Qualifications QUALIBAT Remplacement chaudière et Plomberie sanitaire (RGE). Intervention dans le Rhône.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#1e2226;
+  --graphite2:#161a1d;
+  --acier:#4a5560;
+  --beton:#e6e4df;
+  --beton2:#d9d6cf;
+  --orange:#f26b1d;
+  --bleu:#1f4e79;
+  --blanc:#ffffff;
+  --texte:#3a4249;
+  --texte-clair:rgba(255,255,255,.74);
+  --trait:rgba(30,34,38,.16);
+  --titre:"Big Shoulders Display",Impact,sans-serif;
+  --corps:"IBM Plex Sans",system-ui,sans-serif;
+  --larg:1220px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--beton);color:var(--graphite);font-family:var(--corps);font-size:1rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--titre);font-weight:800;margin:0;line-height:.98;text-transform:uppercase;letter-spacing:.01em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.mono{font-family:var(--corps);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.quadrille{background-image:linear-gradient(rgba(31,78,121,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(31,78,121,.09) 1px,transparent 1px),linear-gradient(rgba(31,78,121,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(31,78,121,.05) 1px,transparent 1px);background-size:80px 80px,80px 80px,16px 16px,16px 16px}
+.hachures{height:14px;background:repeating-linear-gradient(-45deg,var(--orange) 0 14px,var(--graphite) 14px 28px)}
+.pochoir{font-family:var(--titre);font-weight:900;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(180deg,var(--c,#f26b1d) 0 46%,transparent 46% 54%,var(--c,#f26b1d) 54%)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;font-family:var(--titre);font-size:1.15rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid var(--graphite);transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;position:relative}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-orange{background:var(--orange);color:var(--graphite);box-shadow:5px 5px 0 var(--graphite)}
+.btn-orange:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--graphite)}
+.btn-ligne{background:var(--blanc);color:var(--graphite);box-shadow:5px 5px 0 var(--bleu)}
+.btn-ligne:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--bleu)}
+.btn-sombre{background:transparent;color:var(--blanc);border-color:var(--blanc)}
+.btn-sombre:hover{background:var(--blanc);color:var(--graphite)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--graphite);color:var(--blanc);border-bottom:3px solid var(--orange)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo .plaque{background:var(--orange);color:var(--graphite);font-family:var(--titre);font-weight:900;font-size:1.3rem;padding:4px 9px;line-height:1;position:relative}
+.logo b{font-family:var(--titre);font-weight:800;font-size:1.45rem;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+.logo small{display:block;font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.6);text-transform:uppercase;margin-top:3px}
+.menu{display:flex;gap:4px;align-items:center;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 12px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
+.menu a:hover{background:var(--acier);color:var(--blanc)}
+.menu .tel-nav{background:var(--orange);color:var(--graphite);font-weight:700;margin-left:10px}
+.menu .tel-nav:hover{background:var(--blanc);color:var(--graphite)}
+.burger{display:none;width:48px;height:44px;background:var(--orange);border:0;cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:3px;background:var(--graphite);transition:transform .25s,opacity .25s}
+.burger span:nth-child(1){top:12px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:28px}
+.nav.ouvert .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.ouvert .burger span:nth-child(2){opacity:0}
+.nav.ouvert .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* hero */
+.hero{padding-top:71px;background-color:var(--beton);position:relative}
+.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;min-height:calc(100vh - 71px - 96px);border-left:1px solid var(--trait);border-right:1px solid var(--trait)}
+.hero-texte{padding:56px 48px 48px 0;display:flex;flex-direction:column;justify-content:center;border-right:2px solid var(--graphite);position:relative}
+.ref{display:flex;align-items:center;gap:10px;color:var(--bleu);margin-bottom:20px}
+.ref::before{content:"";width:28px;height:2px;background:var(--orange)}
+.etiquettes{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.etiq{display:inline-flex;align-items:stretch;border:2px solid var(--graphite);background:var(--blanc);font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.etiq b{background:var(--graphite);color:var(--blanc);padding:6px 9px;font-weight:700}
+.etiq span{padding:6px 10px}
+.etiq.rge b{background:var(--bleu)}
+.hero h1{font-size:clamp(3.4rem,7.6vw,7.4rem);font-weight:900;line-height:.86;letter-spacing:-.005em}
+.hero h1 .et{display:inline-block;color:var(--orange);font-size:.6em;vertical-align:.25em}
+.hero h1 small{display:block;font-size:.27em;letter-spacing:.08em;color:var(--acier);margin-top:14px;font-weight:700}
+.accroche{font-size:1.1rem;color:var(--texte);max-width:520px;margin:24px 0 30px}
+.accroche strong{color:var(--graphite);background:linear-gradient(transparent 62%,rgba(242,107,29,.35) 62%)}
+.boutons{display:flex;gap:18px;flex-wrap:wrap}
+.hero-plan{position:relative;padding:28px 0 28px 28px;display:flex;align-items:center}
+.hero-plan svg{width:100%;height:auto}
+.flux{stroke-dasharray:6 10;animation:flux 1.4s linear infinite}
+.flux.lent{animation-duration:2.4s}
+.flux.inv{animation-direction:reverse}
+@keyframes flux{to{stroke-dashoffset:-32}}
+.helice{animation:tourne 3s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.flamme{animation:vacille 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes vacille{50%{transform:scaleY(.8)}}
+.cartouche{border-top:2px solid var(--graphite);border-bottom:2px solid var(--graphite);background:var(--blanc)}
+.cartouche .wrap{display:grid;grid-template-columns:1.4fr repeat(4,1fr);border-left:2px solid var(--graphite)}
+.cartouche div>div{padding:14px 16px;border-right:2px solid var(--graphite);min-height:94px;display:flex;flex-direction:column;justify-content:center}
+.cartouche small{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acier);font-weight:600}
+.cartouche strong{font-family:var(--titre);font-size:1.3rem;font-weight:800;text-transform:uppercase;line-height:1.1;margin-top:4px}
+.cartouche .titre-c strong{font-size:1.55rem}
+.cartouche a{text-decoration:none}
+.cartouche a:hover{color:var(--orange)}
+
+/* titres de section */
+.bloc{padding:110px 0;position:relative}
+.bloc.sombre{background:var(--graphite);color:var(--blanc)}
+.bloc.blanc{background:var(--blanc)}
+.tete{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:56px;max-width:900px}
+.tete .num{font-size:clamp(4.5rem,10vw,8rem);line-height:.8}
+.tete .mono{color:var(--bleu);display:block;margin-bottom:10px}
+.sombre .tete .mono{color:var(--orange)}
+.tete h2{font-size:clamp(2.4rem,5vw,4rem)}
+.tete p{margin:14px 0 0;color:var(--texte);max-width:620px}
+.sombre .tete p{color:var(--texte-clair)}
+
+/* confiance */
+.confiance{background:var(--graphite);color:var(--blanc)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{display:flex;gap:14px;align-items:center;padding:24px 20px;border-right:1px solid rgba(255,255,255,.12)}
+.confiance li:last-child{border-right:0}
+.confiance svg{width:38px;height:38px;flex:none;color:var(--orange)}
+.confiance strong{display:block;font-family:var(--titre);font-size:1.3rem;font-weight:800;text-transform:uppercase;line-height:1.05}
+.confiance span{font-size:.78rem;color:rgba(255,255,255,.66)}
+
+/* plaques rivetées */
+.plaque-r{position:relative;background:var(--blanc);border:2px solid var(--graphite);padding:34px 28px 28px;transition:transform .25s,box-shadow .25s}
+.plaque-r::before{content:"";position:absolute;inset:8px;pointer-events:none;background:
+  radial-gradient(circle,#8b949c 0 3px,#4a5560 3.5px,transparent 4.5px) 0 0/100% 100% no-repeat}
+.rivets{position:absolute;inset:9px;pointer-events:none}
+.rivets i{position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#c9ced3,#4a5560 70%);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.rivets i:nth-child(1){top:0;left:0}.rivets i:nth-child(2){top:0;right:0}.rivets i:nth-child(3){bottom:0;left:0}.rivets i:nth-child(4){bottom:0;right:0}
+.plaque-r::before{display:none}
+.plaque-r:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--orange)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.service .haut{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+.service .ico{width:64px;height:64px;color:var(--graphite)}
+.service .n{font-size:2.9rem;line-height:.9;--c:#4a5560}
+.service h3{font-size:1.75rem;margin-bottom:10px}
+.service p{color:var(--texte);margin:0;font-size:.96rem}
+.service .code{display:inline-block;margin-top:18px;padding:3px 8px;background:var(--beton);border-left:3px solid var(--orange);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--graphite)}
+.service.cle .code{border-left-color:var(--bleu);background:rgba(31,78,121,.1);color:var(--bleu)}
+
+/* atouts */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.18)}
+.atout{padding:34px 26px;border-right:1px solid rgba(255,255,255,.18);position:relative;transition:background .3s}
+.atout:last-child{border-right:0}
+.atout:hover{background:rgba(255,255,255,.04)}
+.atout svg{width:46px;height:46px;color:var(--orange);margin-bottom:22px}
+.atout h3{font-size:1.55rem;margin-bottom:10px}
+.atout p{color:var(--texte-clair);font-size:.94rem;margin:0}
+.atout .tag{position:absolute;top:14px;right:16px;font-size:.66rem;letter-spacing:.14em;color:rgba(255,255,255,.4);font-weight:600}
+
+/* étapes */
+.etapes{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.tuyau{position:absolute;left:0;right:0;top:44px;height:12px;background:linear-gradient(180deg,#8b949c,#4a5560);border-top:2px solid var(--graphite);border-bottom:2px solid var(--graphite);overflow:hidden}
+.tuyau::after{content:"";position:absolute;inset:3px 0;background:repeating-linear-gradient(90deg,var(--orange) 0 18px,transparent 18px 40px);animation:defile 1.6s linear infinite}
+@keyframes defile{to{background-position:40px 0}}
+.etape{position:relative;z-index:1}
+.vanne{width:100px;height:100px;margin-bottom:22px;background:var(--beton);border:2px solid var(--graphite);display:grid;place-items:center;position:relative}
+.vanne span{font-size:3.6rem;line-height:1;--c:#1e2226}
+.vanne::after{content:"";position:absolute;right:-8px;top:-8px;width:16px;height:16px;background:var(--orange);border:2px solid var(--graphite)}
+.etape h3{font-size:1.6rem;margin-bottom:8px}
+.etape p{color:var(--texte);font-size:.95rem;margin:0}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.cite{border:2px solid var(--graphite);background:var(--blanc);position:relative}
+.cite svg{width:100%;height:auto}
+.cite figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;border-top:2px solid var(--graphite);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--acier)}
+.apropos h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin:12px 0 22px}
+.apropos p{color:var(--texte)}
+.fiche{margin-top:26px;border:2px solid var(--graphite);display:grid;grid-template-columns:1fr 1fr}
+.fiche div{padding:12px 16px;border-right:2px solid var(--graphite);border-bottom:2px solid var(--graphite)}
+.fiche div:nth-child(2n){border-right:0}
+.fiche div:nth-last-child(-n+2){border-bottom:0}
+.fiche small{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acier);font-weight:600}
+.fiche b{font-family:var(--titre);font-size:1.2rem;text-transform:uppercase;font-weight:800}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.fig{margin:0;border:2px solid var(--graphite);background:var(--beton);transition:transform .25s,box-shadow .25s}
+.fig:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--bleu)}
+.fig svg{width:100%;height:auto;background-color:#eef0f1}
+.fig figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-top:2px solid var(--graphite);background:var(--blanc)}
+.fig h3{font-size:1.4rem}
+.fig small{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--bleu);white-space:nowrap}
+.nomenclature{margin-top:48px;border:2px solid var(--graphite);background:var(--blanc)}
+.nomenclature .t{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--graphite);color:var(--blanc);padding:14px 20px}
+.nomenclature .t h3{font-size:1.6rem}
+.nomenclature .t span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.nomenclature table{width:100%;border-collapse:collapse;font-size:.95rem}
+.nomenclature th,.nomenclature td{padding:13px 20px;border-bottom:1px solid var(--trait);text-align:left}
+.nomenclature th{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acier);font-weight:600;background:var(--beton)}
+.nomenclature td:first-child{font-family:var(--titre);font-weight:800;font-size:1.1rem;color:var(--acier);width:70px}
+.nomenclature td:last-child{text-align:right;font-weight:700;color:var(--bleu);white-space:nowrap}
+.nomenclature p{padding:14px 20px;margin:0;font-size:.9rem;color:var(--texte)}
+
+/* avis */
+.avis{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;border:2px solid var(--blanc);padding:44px;position:relative}
+.avis .jauge{width:120px;height:120px}
+.avis h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:8px 0 12px}
+.avis p{margin:0;color:var(--texte-clair);max-width:560px}
+.avis .mono{color:var(--orange)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq .tete{grid-template-columns:auto 1fr;margin-bottom:0}
+.q{border:2px solid var(--graphite);background:var(--blanc);margin-bottom:12px}
+.q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;padding:18px 20px;font-family:var(--corps);font-weight:600;font-size:1.02rem;color:var(--graphite);text-align:left;cursor:pointer}
+.q button i{flex:none;width:30px;height:30px;background:var(--graphite);position:relative;transition:background .2s}
+.q button i::before,.q button i::after{content:"";position:absolute;left:8px;right:8px;top:13px;height:3px;background:var(--blanc);transition:transform .3s}
+.q button i::after{transform:rotate(90deg)}
+.q.ouvert button i{background:var(--orange)}
+.q.ouvert button i::after{transform:rotate(0)}
+.q button:hover i{background:var(--bleu)}
+.q .r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q.ouvert .r{grid-template-rows:1fr}
+.q .r>div{overflow:hidden}
+.q .r p{margin:0;padding:0 20px 18px;color:var(--texte);border-top:1px dashed var(--trait);padding-top:14px}
+
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.panneau{border:2px solid var(--graphite);background:var(--blanc)}
+.panneau .t{background:var(--graphite);color:var(--blanc);padding:14px 22px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.panneau .t h3{font-size:1.5rem}
+.panneau .t span{font-size:.7rem;letter-spacing:.14em;color:var(--orange);font-weight:700;text-transform:uppercase}
+.panneau .c{padding:24px 22px}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:10px 12px;border-bottom:1px solid var(--trait)}
+.horaires td:last-child{text-align:right;color:var(--texte)}
+.horaires tr.auj td{background:var(--orange);color:var(--graphite);font-weight:700}
+.horaires tr.auj td:first-child::after{content:" ◀ aujourd'hui";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.note-h{margin:16px 0 0;font-size:.9rem;color:var(--texte);border-left:3px solid var(--bleu);padding-left:12px}
+.adresse{font-family:var(--titre);font-weight:800;font-size:1.9rem;text-transform:uppercase;line-height:1.05;margin-bottom:16px}
+.coord{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:10px}
+.coord a{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:500;word-break:break-word}
+.coord a:hover{color:var(--bleu)}
+.coord svg{width:20px;height:20px;color:var(--orange);flex:none}
+.mini-plan{border:1px solid var(--trait);margin-bottom:20px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(2.4rem,5vw,3.8rem);margin:12px 0 20px}
+.contact .intro p{color:var(--texte-clair)}
+.bon{background:var(--beton);color:var(--graphite);border:2px solid var(--blanc);box-shadow:10px 10px 0 var(--orange)}
+.bon .t{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 22px;border-bottom:2px solid var(--graphite);background:var(--blanc)}
+.bon .t h3{font-size:1.5rem}
+.bon .t span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu);font-weight:700}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:26px 22px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.plein{grid-column:1/-1}
+label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--graphite)}
+input,select,textarea{font-family:var(--corps);font-size:1rem;padding:12px 14px;border:2px solid var(--graphite);background:var(--blanc);color:var(--graphite);outline:none;width:100%;transition:box-shadow .2s}
+input:focus,select:focus,textarea:focus{box-shadow:4px 4px 0 var(--bleu)}
+textarea{min-height:120px;resize:vertical}
+form .btn{grid-column:1/-1}
+.retour{grid-column:1/-1;display:none;margin:0;padding:14px 16px;background:var(--graphite);color:var(--blanc);border-left:6px solid var(--orange);font-weight:500}
+.retour.vu{display:block}
+
+/* pied */
+footer{background:var(--graphite2);color:var(--blanc);padding:70px 0 26px}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.pied h4{margin:0 0 16px;font-family:var(--titre);font-weight:800;font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;color:var(--orange)}
+.pied p,.pied li{color:rgba(255,255,255,.72);font-size:.92rem}
+.pied ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--orange)}
+.mentions{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(255,255,255,.55)}
+.demo{background:#0f1214;color:rgba(255,255,255,.62);text-align:center;font-size:.8rem;padding:12px 16px}
+.appel-flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:62px;height:62px;background:var(--orange);color:var(--graphite);border:3px solid var(--graphite);box-shadow:4px 4px 0 var(--graphite);place-items:center;text-decoration:none}
+.appel-flottant svg{width:26px;height:26px}
+
+/* révélation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+@media (max-width:1100px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .atout:nth-child(2){border-right:0}
+  .atout:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}
+  .pied{grid-template-columns:1fr 1fr}
+  .menu a{padding:9px 8px;letter-spacing:.06em}
+}
+@media (max-width:960px){
+  .burger{display:block}
+  .menu{position:fixed;top:71px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--graphite);border-bottom:3px solid var(--orange);padding:8px 16px 20px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.12);font-size:.85rem}
+  .menu .tel-nav{margin:16px 0 0;text-align:center;border:0}
+  .hero-grid{grid-template-columns:1fr;min-height:0;border:0}
+  .hero-texte{padding:44px 0 36px;border-right:0}
+  .hero-plan{padding:0 0 30px;border-top:2px solid var(--graphite);padding-top:24px}
+  .cartouche .wrap{grid-template-columns:1fr 1fr}
+  .cartouche .titre-c{grid-column:1/-1}
+  .cartouche div>div{border-bottom:2px solid var(--graphite);min-height:0}
+  .confiance ul{grid-template-columns:1fr 1fr}
+  .confiance li:nth-child(2){border-right:0}
+  .confiance li:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12)}
+  .etapes{grid-template-columns:1fr 1fr;row-gap:44px}
+  .tuyau{display:none}
+  .apropos,.faq,.contact,.infos{grid-template-columns:1fr;gap:40px}
+  .avis{grid-template-columns:1fr;text-align:left}
+}
+@media (max-width:600px){
+  .bloc{padding:76px 0}
+  .logo small{display:none}
+  .logo b{font-size:1.2rem}
+  .tete{grid-template-columns:1fr;gap:6px;margin-bottom:40px}
+  .tete .num{font-size:4.2rem}
+  .services,.galerie,.etapes,.atouts{grid-template-columns:1fr}
+  .atout{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.18)}
+  .atout:last-child{border-bottom:0}
+  .confiance ul{grid-template-columns:1fr}
+  .confiance li{border-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding:18px 4px}
+  .confiance li:last-child{border-bottom:0}
+  .hero h1{font-size:3.6rem}
+  .boutons{flex-direction:column;align-items:stretch;padding-right:6px}
+  .cartouche strong{font-size:1.1rem}
+  .cartouche .titre-c strong{font-size:1.3rem}
+  .fig figcaption{flex-direction:column;align-items:flex-start;gap:4px}
+  .avis{padding:30px 22px}
+  .nomenclature th,.nomenclature td{padding:11px 12px}
+  .nomenclature td:first-child{width:44px}
+  form{grid-template-columns:1fr;padding:22px 16px}
+  .bon{box-shadow:6px 6px 0 var(--orange)}
+  .pied{grid-template-columns:1fr}
+  .appel-flottant{display:grid}
+  .demo{padding-bottom:90px}
+  .fiche{grid-template-columns:1fr}
+  .fiche div{border-right:0!important;border-bottom:2px solid var(--graphite)!important}
+  .fiche div:last-child{border-bottom:0!important}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Padey et Associés – accueil">
+      <span class="plaque">P&amp;A</span>
+      <span><b>Padey et Associés</b><small>Chauffage · Sanitaire · VMC</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#atelier">L’atelier</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+33472512646" class="tel-nav">04 72 51 26 46</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero quadrille" id="accueil">
+  <div class="wrap hero-grid">
+    <div class="hero-texte">
+      <p class="ref mono">Plan n° 69800 · Saint-Priest · Cité Berliet</p>
+      <div class="etiquettes">
+        <span class="etiq"><b>QUALIBAT</b><span>Remplacement chaudière</span></span>
+        <span class="etiq"><b>QUALIBAT</b><span>Plomberie sanitaire</span></span>
+        <span class="etiq rge"><b>RGE</b><span>Qualifié</span></span>
+      </div>
+      <h1>Padey <span class="et">&amp;</span> Associés<small>Chauffage · Plomberie · Ventilation</small></h1>
+      <p class="accroche">Depuis la Cité Berliet, au cœur de Saint-Priest, une équipe qui traite votre chaufferie comme une pièce mécanique : <strong>remplacement de chaudière gaz ou fioul</strong>, <strong>plomberie sanitaire</strong> et <strong>VMC</strong>, réglés au millimètre.</p>
+      <div class="boutons">
+        <a class="btn btn-orange" href="tel:+33472512646"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a>
+        <a class="btn btn-ligne" href="#contact">Demander un devis</a>
+      </div>
+    </div>
+    <div class="hero-plan" aria-hidden="true">
+      <svg viewBox="0 0 600 560" fill="none" font-family="IBM Plex Sans, sans-serif">
+        <defs>
+          <pattern id="hach" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="10" stroke="#1e2226" stroke-width="1.4"/></pattern>
+          <pattern id="beton" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1" fill="#4a5560"/><circle cx="10" cy="10" r=".8" fill="#4a5560"/><path d="M8 3l2 1" stroke="#4a5560" stroke-width=".8"/></pattern>
+          <marker id="fl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f4e79"/></marker>
+        </defs>
+        <!-- murs et dalle -->
+        <rect x="40" y="40" width="20" height="440" fill="url(#hach)" stroke="#1e2226" stroke-width="2"/>
+        <rect x="40" y="40" width="520" height="20" fill="url(#hach)" stroke="#1e2226" stroke-width="2"/>
+        <rect x="40" y="480" width="520" height="26" fill="url(#beton)" stroke="#1e2226" stroke-width="2"/>
+        <rect x="540" y="60" width="20" height="200" fill="url(#hach)" stroke="#1e2226" stroke-width="2"/>
+        <rect x="540" y="330" width="20" height="150" fill="url(#hach)" stroke="#1e2226" stroke-width="2"/>
+        <!-- VMC caisson plafond -->
+        <rect x="300" y="72" width="120" height="58" fill="#fff" stroke="#1e2226" stroke-width="2"/>
+        <circle cx="360" cy="101" r="20" stroke="#1e2226" stroke-width="1.6"/>
+        <g class="helice"><path d="M360 101c0-10 4-15 9-16-1 7-4 12-9 16zM360 101c9 4 11 10 9 15-6-4-8-9-9-15zM360 101c-8 6-15 5-18 0 7-2 13-2 18 0z" fill="#4a5560"/></g>
+        <path d="M420 92 H540" stroke="#4a5560" stroke-width="16"/>
+        <path d="M420 92 H540" stroke="#fff" stroke-width="12"/>
+        <path class="flux" d="M424 92 H536" stroke="#1f4e79" stroke-width="3"/>
+        <path d="M300 112 H140 V160" stroke="#4a5560" stroke-width="14"/>
+        <path d="M300 112 H140 V160" stroke="#fff" stroke-width="10"/>
+        <path class="flux inv" d="M296 112 H140 V156" stroke="#1f4e79" stroke-width="3"/>
+        <rect x="126" y="160" width="28" height="8" fill="#1e2226"/>
+        <text x="306" y="150" font-size="11" font-weight="600" fill="#1e2226" letter-spacing="1">VMC</text>
+        <!-- chaudière murale -->
+        <rect x="96" y="200" width="110" height="150" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+        <rect x="108" y="212" width="86" height="26" fill="#e6e4df" stroke="#1e2226" stroke-width="1.4"/>
+        <circle cx="124" cy="225" r="6" stroke="#1e2226" stroke-width="1.4"/><circle cx="144" cy="225" r="6" stroke="#1e2226" stroke-width="1.4"/>
+        <rect x="160" y="220" width="26" height="10" fill="#1e2226"/>
+        <rect x="124" y="256" width="54" height="64" stroke="#1e2226" stroke-width="1.4" stroke-dasharray="4 3"/>
+        <path class="flamme" d="M151 312c-9 0-13-6-11-12 2-5 6-7 6-13 4 3 5 7 4 10 3-2 4-4 4-7 4 4 6 8 5 13-1 5-4 9-8 9z" fill="#f26b1d"/>
+        <text x="96" y="192" font-size="11" font-weight="600" fill="#1e2226" letter-spacing="1">CHAUDIÈRE</text>
+        <!-- conduit fumées -->
+        <path d="M190 200 V176 H76 V60" stroke="#1e2226" stroke-width="2" stroke-dasharray="2 4"/>
+        <!-- ballon -->
+        <rect x="300" y="270" width="96" height="190" rx="46" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+        <path d="M318 300 H378 M318 330 H378 M318 360 H378 M318 390 H378 M318 420 H378" stroke="#1e2226" stroke-opacity=".18"/>
+        <path d="M322 438 l12-14 12 14 12-14 12 14" stroke="#f26b1d" stroke-width="2"/>
+        <rect x="318" y="460" width="10" height="20" fill="#1e2226"/><rect x="368" y="460" width="10" height="20" fill="#1e2226"/>
+        <text x="302" y="262" font-size="11" font-weight="600" fill="#1e2226" letter-spacing="1">BALLON ECS</text>
+        <!-- réseaux -->
+        <path d="M120 350 V400 H300" stroke="#4a5560" stroke-width="10"/>
+        <path class="flux" d="M120 352 V400 H298" stroke="#f26b1d" stroke-width="4"/>
+        <path d="M180 350 V430 H300" stroke="#4a5560" stroke-width="10"/>
+        <path class="flux inv lent" d="M180 352 V430 H298" stroke="#1f4e79" stroke-width="4"/>
+        <path d="M396 320 H470 V200 H540" stroke="#4a5560" stroke-width="10"/>
+        <path class="flux" d="M398 320 H470 V200 H538" stroke="#f26b1d" stroke-width="4"/>
+        <path d="M396 410 H500 V300 H540" stroke="#4a5560" stroke-width="10"/>
+        <path class="flux lent inv" d="M398 410 H500 V300 H538" stroke="#1f4e79" stroke-width="4"/>
+        <!-- vannes -->
+        <g stroke="#1e2226" stroke-width="2" fill="#fff"><path d="M228 392 l14 8 -14 8z M256 392 l-14 8 14 8z"/><path d="M228 422 l14 8 -14 8z M256 422 l-14 8 14 8z"/></g>
+        <g fill="#f26b1d" stroke="#1e2226" stroke-width="1.6"><rect x="236" y="380" width="12" height="8"/><rect x="236" y="410" width="12" height="8"/></g>
+        <circle cx="470" cy="260" r="12" fill="#fff" stroke="#1e2226" stroke-width="2"/><path d="M470 260 l6-6" stroke="#f26b1d" stroke-width="2"/>
+        <!-- radiateur extérieur à la pièce -->
+        <text x="476" y="190" font-size="10" font-weight="600" fill="#1e2226" letter-spacing="1">DÉPART</text>
+        <text x="506" y="290" font-size="10" font-weight="600" fill="#1e2226" letter-spacing="1">RETOUR</text>
+        <!-- cotes -->
+        <g stroke="#1f4e79" stroke-width="1.2">
+          <path d="M96 368 H206" marker-start="url(#fl)" marker-end="url(#fl)"/>
+          <path d="M96 360 V376 M206 360 V376"/>
+          <path d="M424 270 V460" marker-start="url(#fl)" marker-end="url(#fl)"/>
+          <path d="M404 270 H432 M404 460 H432"/>
+          <path d="M60 530 H540" marker-start="url(#fl)" marker-end="url(#fl)"/>
+          <path d="M60 516 V540 M540 516 V540"/>
+        </g>
+        <g font-size="12" font-weight="600" fill="#1f4e79">
+          <rect x="128" y="374" width="46" height="16" fill="#e6e4df"/>
+          <text x="151" y="386" text-anchor="middle">A</text>
+          <rect x="430" y="356" width="22" height="18" fill="#e6e4df"/>
+          <text x="441" y="369" text-anchor="middle">B</text>
+          <rect x="258" y="522" width="84" height="16" fill="#e6e4df"/>
+          <text x="300" y="535" text-anchor="middle">COUPE A-A</text>
+        </g>
+        <!-- repères -->
+        <g font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="18">
+          <circle cx="226" cy="214" r="13" fill="#1e2226"/><text x="226" y="220" text-anchor="middle" fill="#f26b1d">1</text>
+          <circle cx="414" cy="290" r="13" fill="#1e2226"/><text x="414" y="296" text-anchor="middle" fill="#f26b1d">2</text>
+          <circle cx="436" cy="140" r="13" fill="#1e2226"/><text x="436" y="146" text-anchor="middle" fill="#f26b1d">3</text>
+        </g>
+        <!-- légende -->
+        <g font-size="10" font-weight="600" fill="#1e2226" letter-spacing=".5">
+          <rect x="72" y="76" width="0" height="0"/>
+          <path d="M440 470 H462" stroke="#f26b1d" stroke-width="4"/><text x="468" y="474">DÉPART</text>
+          <path d="M440 456 H462" stroke="#1f4e79" stroke-width="4"/><text x="468" y="460">RETOUR</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="cartouche">
+    <div class="wrap">
+      <div class="titre-c"><small>Entreprise</small><strong>Padey et Associés</strong></div>
+      <div><small>Adresse</small><strong>25 Deuxième Avenue</strong></div>
+      <div><small>Commune</small><strong>69800 Saint-Priest</strong></div>
+      <div><small>Secteur</small><strong>Rhône (69)</strong></div>
+      <div><small>Téléphone</small><strong><a href="tel:+33472512646">04 72 51 26 46</a></strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="hachures" aria-hidden="true"></div>
+<section class="confiance" aria-label="Informations clés">
+  <ul class="wrap">
+    <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="6" width="28" height="28"/><path d="M13 20l5 5 9-10"/></svg><div><strong>QUALIBAT</strong><span>Remplacement chaudière</span></div></li>
+    <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 10h14v8h10v14"/><path d="M28 32h8"/><circle cx="8" cy="10" r="3"/></svg><div><strong>QUALIBAT RGE</strong><span>Plomberie sanitaire</span></div></li>
+    <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 34V16l8-6 8 6v18M22 34V20l6-4 6 4v14M4 34h32"/><path d="M11 22h6M11 28h6"/></svg><div><strong>Cité Berliet</strong><span>Saint-Priest (69800)</span></div></li>
+    <li><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="14"/><path d="M20 6v28M6 20h28"/><circle cx="20" cy="20" r="4"/></svg><div><strong>Rhône (69)</strong><span>Zone d’intervention</span></div></li>
+  </ul>
+</section>
+<div class="hachures" aria-hidden="true"></div>
+
+<section class="bloc quadrille" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num pochoir">01</span>
+      <div><span class="mono">Services · Fiche technique</span><h2>Ce qu’on règle pour vous</h2></div>
+    </div>
+    <div class="services">
+      <article class="plaque-r service cle rv"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="14" y="6" width="36" height="44"/><rect x="20" y="12" width="24" height="8"/><path d="M32 44c-5 0-7-3-6-7 1-3 3-4 3-8 4 2 4 5 4 7 1-1 2-3 2-5 3 3 4 6 3 9-1 3-3 4-6 4z" fill="#f26b1d" stroke="none"/><path d="M20 50v10M28 50v10M36 50v10M44 50v10"/></svg><span class="n pochoir">A1</span></div>
+        <h3>Remplacement de chaudière gaz</h3>
+        <p>Dépose de l’ancien appareil, pose d’une chaudière adaptée à votre logement, raccordements et mise en service.</p>
+        <span class="code">Qualif. QUALIBAT</span>
+      </article>
+      <article class="plaque-r service cle rv d1"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="8" y="14" width="30" height="42"/><path d="M14 22h18M14 28h18"/><rect x="15" y="34" width="16" height="12"/><path d="M38 24h10a6 6 0 0 1 6 6v20"/><rect x="48" y="50" width="12" height="8" fill="#f26b1d"/><path d="M23 6v8"/></svg><span class="n pochoir">A2</span></div>
+        <h3>Chaudière fioul</h3>
+        <p>Remplacement de chaudières fioul et conseil sur l’évolution de votre installation de chauffage.</p>
+        <span class="code">Qualif. QUALIBAT</span>
+      </article>
+      <article class="plaque-r service cle rv d2"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M10 14h20v10h18"/><path d="M48 18v12"/><path d="M48 30c-4 6-6 9-6 12a6 6 0 0 0 12 0c0-3-2-6-6-12z" fill="#1f4e79" stroke="none"/><rect x="4" y="10" width="8" height="8" fill="#f26b1d"/><path d="M10 50h44M16 50v-8h32v8"/></svg><span class="n pochoir">B1</span></div>
+        <h3>Plomberie sanitaire</h3>
+        <p>Réseaux d’eau, alimentation et évacuation, équipements sanitaires : installation et rénovation soignées.</p>
+        <span class="code">QUALIBAT RGE</span>
+      </article>
+      <article class="plaque-r service rv"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="6" y="18" width="34" height="28"/><circle cx="23" cy="32" r="9"/><path d="M23 32l6-4M23 32l-2 7M23 32l-6-3"/><path d="M40 26h18M40 38h18" /><path d="M48 22l6 4-6 4M54 34l-6 4 6 4" stroke="#f26b1d"/></svg><span class="n pochoir">C1</span></div>
+        <h3>VMC</h3>
+        <p>Pose et remplacement de ventilation mécanique contrôlée pour renouveler l’air et limiter l’humidité.</p>
+        <span class="code">Service référencé</span>
+      </article>
+      <article class="plaque-r service rv d1"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M40 8a12 12 0 0 0-14 15L8 41a5 5 0 0 0 7 7l18-18a12 12 0 0 0 15-14l-7 7-6-1-1-6z"/><circle cx="12" cy="44" r="1.6" fill="currentColor"/><path d="M44 40l12 12" stroke="#f26b1d"/></svg><span class="n pochoir">D1</span></div>
+        <h3>Entretien de chaudière</h3>
+        <p>Visite annuelle, nettoyage, contrôle des organes de sécurité et réglages pour un fonctionnement fiable.</p>
+        <span class="code">Prestation courante</span>
+      </article>
+      <article class="plaque-r service rv d2"><span class="rivets"><i></i><i></i><i></i><i></i></span>
+        <div class="haut"><svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M32 6L4 56h56z"/><path d="M32 24v16"/><circle cx="32" cy="47" r="2" fill="#f26b1d" stroke="none"/></svg><span class="n pochoir">D2</span></div>
+        <h3>Dépannage</h3>
+        <p>Plus de chauffage, plus d’eau chaude, une fuite : diagnostic méthodique et intervention dès que possible.</p>
+        <span class="code">Prestation courante</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bloc sombre" id="atouts">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num pochoir">02</span>
+      <div><span class="mono">Pourquoi nous choisir</span><h2>Du travail d’atelier</h2></div>
+    </div>
+    <div class="atouts rv">
+      <div class="atout"><span class="tag">R-01</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="8" y="8" width="32" height="32"/><path d="M16 24l6 6 10-12"/></svg><h3>Qualifié QUALIBAT</h3><p>Deux qualifications réelles : remplacement de chaudière et plomberie sanitaire (RGE).</p></div>
+      <div class="atout"><span class="tag">R-02</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 14h12v10h12v10h12"/><circle cx="6" cy="14" r="3"/><circle cx="42" cy="34" r="3"/></svg><h3>Une vue d’ensemble</h3><p>Chauffage, sanitaire et ventilation sont liés : un seul interlocuteur pour les trois.</p></div>
+      <div class="atout"><span class="tag">R-03</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M24 44s-14-12-14-24a14 14 0 0 1 28 0c0 12-14 24-14 24z"/><circle cx="24" cy="20" r="5"/></svg><h3>Ancré à Saint-Priest</h3><p>Installé dans la Cité Berliet, à deux pas des quartiers de l’Est lyonnais.</p></div>
+      <div class="atout"><span class="tag">R-04</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="10" y="6" width="28" height="36"/><path d="M16 14h16M16 20h16M16 26h10"/><path d="M26 34l4 4 8-9" stroke="#fff"/></svg><h3>Un devis lisible</h3><p>Chaque poste chiffré et expliqué avant le moindre coup de clé.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc quadrille" id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num pochoir">03</span>
+      <div><span class="mono">Comment ça se passe</span><h2>Le circuit d’une intervention</h2></div>
+    </div>
+    <div class="etapes">
+      <span class="tuyau" aria-hidden="true"></span>
+      <div class="etape rv"><div class="vanne"><span class="pochoir">1</span></div><h3>Appel</h3><p>Vous nous exposez le besoin au 04 72 51 26 46 ou via le formulaire.</p></div>
+      <div class="etape rv d1"><div class="vanne"><span class="pochoir">2</span></div><h3>Relevé</h3><p>Visite sur place : état de l’installation, contraintes, mesures.</p></div>
+      <div class="etape rv d2"><div class="vanne"><span class="pochoir">3</span></div><h3>Devis</h3><p>Une proposition détaillée, poste par poste, à valider sans pression.</p></div>
+      <div class="etape rv d3"><div class="vanne"><span class="pochoir">4</span></div><h3>Chantier</h3><p>Pose, essais, mise en service et explications avant de partir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc blanc" id="atelier">
+  <div class="wrap apropos">
+    <figure class="cite rv" style="margin:0" aria-hidden="true">
+      <svg viewBox="0 0 560 360" fill="none">
+        <rect width="560" height="360" fill="#eef0f1"/>
+        <path d="M0 60 H560 M0 120 H560 M0 180 H560 M0 240 H560 M0 300 H560 M70 0 V360 M140 0 V360 M210 0 V360 M280 0 V360 M350 0 V360 M420 0 V360 M490 0 V360" stroke="#1f4e79" stroke-opacity=".08"/>
+        <!-- rangée de maisons de cité ouvrière -->
+        <g stroke="#1e2226" stroke-width="2">
+          <path d="M30 300 V170 L100 120 L170 170 V300" fill="#fff"/>
+          <path d="M170 300 V170 L240 120 L310 170 V300" fill="#fff"/>
+          <path d="M310 300 V170 L380 120 L450 170 V300" fill="#fff"/>
+          <path d="M450 300 V190 H530 V300" fill="#fff"/>
+          <path d="M30 170 H530" stroke-opacity=".3"/>
+        </g>
+        <g fill="#1f4e79" stroke="#1e2226" stroke-width="1.6">
+          <rect x="52" y="192" width="30" height="38"/><rect x="118" y="192" width="30" height="38"/>
+          <rect x="192" y="192" width="30" height="38"/><rect x="258" y="192" width="30" height="38"/>
+          <rect x="332" y="192" width="30" height="38"/><rect x="398" y="192" width="30" height="38"/>
+          <rect x="470" y="206" width="40" height="30"/>
+        </g>
+        <g fill="#f26b1d" stroke="#1e2226" stroke-width="1.6">
+          <rect x="86" y="250" width="28" height="50"/><rect x="226" y="250" width="28" height="50"/><rect x="366" y="250" width="28" height="50"/>
+        </g>
+        <g stroke="#1e2226" stroke-width="2" fill="#4a5560"><rect x="122" y="112" width="14" height="30"/><rect x="262" y="112" width="14" height="30"/><rect x="402" y="112" width="14" height="30"/></g>
+        <path d="M0 300 H560" stroke="#1e2226" stroke-width="3"/>
+        <rect x="0" y="300" width="560" height="14" fill="url(#hach)" opacity=".5"/>
+        <!-- cotes -->
+        <g stroke="#1f4e79" stroke-width="1.2"><path d="M30 334 H170" marker-start="url(#fl)" marker-end="url(#fl)"/><path d="M30 326 V342 M170 326 V342"/></g>
+        <text x="100" y="352" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1f4e79">TRAVÉE TYPE</text>
+        <text x="540" y="40" text-anchor="end" font-family="Big Shoulders Display" font-weight="900" font-size="34" fill="#1e2226" opacity=".85">2ᵉ AVENUE</text>
+        <text x="540" y="62" text-anchor="end" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#4a5560" letter-spacing="2">CITÉ BERLIET · SAINT-PRIEST</text>
+      </svg>
+      <figcaption><span>Fig. 0 – Illustration de la cité ouvrière</span><span>Croquis non contractuel</span></figcaption>
+    </figure>
+    <div class="rv d1">
+      <span class="mono" style="color:var(--bleu)">04 · L’atelier</span>
+      <h2>Padey et Associés, au cœur de la Cité Berliet</h2>
+      <p>Padey et Associés est installé au 25 Deuxième Avenue, dans la Cité Berliet de Saint-Priest, ce quartier ouvrier historique né autour de l’ancienne usine de camions de la commune.</p>
+      <p>L’entreprise remplace les chaudières gaz et fioul, réalise des travaux de plomberie sanitaire et installe des systèmes de VMC. Elle est titulaire des qualifications QUALIBAT Remplacement chaudière et QUALIBAT Plomberie sanitaire (RGE).</p>
+      <p>Une approche concrète, méthodique, pour des installations qui fonctionnent simplement, à Saint-Priest et dans le Rhône.</p>
+      <div class="fiche">
+        <div><small>Adresse</small><b>25 Deuxième Avenue</b></div>
+        <div><small>Commune</small><b>69800 Saint-Priest</b></div>
+        <div><small>Métiers</small><b>Chauffage · Sanitaire · VMC</b></div>
+        <div><small>Qualifications</small><b>QUALIBAT · RGE</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc quadrille" id="realisations">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num pochoir">05</span>
+      <div><span class="mono">Réalisations · Planches</span><h2>Types de chantiers</h2><p>Planches d’illustration des prestations proposées. Chaque installation est étudiée sur place.</p></div>
+    </div>
+    <div class="galerie">
+      <figure class="fig rv">
+        <svg viewBox="0 0 520 280" fill="none">
+          <path d="M0 40H520M0 80H520M0 120H520M0 160H520M0 200H520M0 240H520M40 0V280M80 0V280M120 0V280M160 0V280M200 0V280M240 0V280M280 0V280M320 0V280M360 0V280M400 0V280M440 0V280M480 0V280" stroke="#1f4e79" stroke-opacity=".08"/>
+          <rect x="70" y="50" width="110" height="160" stroke="#4a5560" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="125" y="135" text-anchor="middle" font-family="IBM Plex Sans" font-size="12" font-weight="600" fill="#4a5560">DÉPOSE</text>
+          <path d="M200 130 H290" stroke="#f26b1d" stroke-width="4"/><path d="M280 118 L298 130 L280 142" stroke="#f26b1d" stroke-width="4"/>
+          <rect x="320" y="50" width="110" height="160" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <rect x="334" y="64" width="82" height="24" fill="#e6e4df" stroke="#1e2226" stroke-width="1.4"/>
+          <path d="M375 178c-8 0-11-5-10-10 1-5 5-6 5-11 4 3 4 6 4 8 2-1 3-3 3-6 4 4 5 7 4 11-1 5-3 8-6 8z" fill="#f26b1d"/>
+          <path d="M340 210v40M360 210v40M390 210v40M410 210v40" stroke="#1e2226" stroke-width="2.4"/>
+          <path d="M320 262 H430" stroke="#1f4e79" stroke-width="1.2" marker-start="url(#fl)" marker-end="url(#fl)"/>
+        </svg>
+        <figcaption><h3>Remplacement de chaudière</h3><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="fig rv d1">
+        <svg viewBox="0 0 520 280" fill="none">
+          <path d="M0 40H520M0 80H520M0 120H520M0 160H520M0 200H520M0 240H520M40 0V280M80 0V280M120 0V280M160 0V280M200 0V280M240 0V280M280 0V280M320 0V280M360 0V280M400 0V280M440 0V280M480 0V280" stroke="#1f4e79" stroke-opacity=".08"/>
+          <path d="M60 240 H460" stroke="#1e2226" stroke-width="3"/>
+          <path d="M100 160 h90 a10 10 0 0 1 10 10 v20 a40 40 0 0 1 -40 40 h-30 a40 40 0 0 1 -40 -40 v-20 a10 10 0 0 1 10 -10z" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <path d="M145 160 V100 h30" stroke="#1e2226" stroke-width="2.4"/><path d="M175 92 v16" stroke="#1e2226" stroke-width="2.4"/>
+          <rect x="290" y="70" width="120" height="160" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <path d="M310 120 h80" stroke="#1e2226" stroke-width="2"/><circle cx="350" cy="96" r="10" stroke="#1e2226" stroke-width="2"/>
+          <path d="M40 200 H100" stroke="#1f4e79" stroke-width="6"/><path class="flux" d="M40 200 H100" stroke="#fff" stroke-width="2"/>
+          <path d="M40 220 H80 V240" stroke="#4a5560" stroke-width="8"/>
+          <path d="M440 140 h40 M440 150 h40" stroke="#f26b1d" stroke-width="4"/>
+        </svg>
+        <figcaption><h3>Salle d’eau &amp; sanitaires</h3><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="fig rv">
+        <svg viewBox="0 0 520 280" fill="none">
+          <path d="M0 40H520M0 80H520M0 120H520M0 160H520M0 200H520M0 240H520M40 0V280M80 0V280M120 0V280M160 0V280M200 0V280M240 0V280M280 0V280M320 0V280M360 0V280M400 0V280M440 0V280M480 0V280" stroke="#1f4e79" stroke-opacity=".08"/>
+          <path d="M40 60 H480" stroke="#1e2226" stroke-width="3"/>
+          <rect x="200" y="70" width="120" height="60" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <circle cx="260" cy="100" r="20" stroke="#1e2226" stroke-width="2"/>
+          <g class="helice"><path d="M260 100c0-10 4-15 9-16-1 7-4 12-9 16zM260 100c9 4 11 10 9 15-6-4-8-9-9-15zM260 100c-8 6-15 5-18 0 7-2 13-2 18 0z" fill="#4a5560"/></g>
+          <path d="M200 100 H90 V200 M320 100 H430 V200" stroke="#4a5560" stroke-width="14"/>
+          <path d="M200 100 H90 V200 M320 100 H430 V200" stroke="#fff" stroke-width="10"/>
+          <path class="flux inv" d="M198 100 H90 V198" stroke="#1f4e79" stroke-width="3"/>
+          <path class="flux inv" d="M322 100 H430 V198" stroke="#1f4e79" stroke-width="3"/>
+          <rect x="72" y="200" width="36" height="10" fill="#1e2226"/><rect x="412" y="200" width="36" height="10" fill="#1e2226"/>
+          <text x="90" y="236" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1e2226">CUISINE</text>
+          <text x="430" y="236" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="600" fill="#1e2226">SDB</text>
+          <path d="M240 160 h40" stroke="#f26b1d" stroke-width="4"/><path d="M272 150 l12 10 -12 10" stroke="#f26b1d" stroke-width="4"/>
+        </svg>
+        <figcaption><h3>Installation de VMC</h3><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="fig rv d1">
+        <svg viewBox="0 0 520 280" fill="none">
+          <path d="M0 40H520M0 80H520M0 120H520M0 160H520M0 200H520M0 240H520M40 0V280M80 0V280M120 0V280M160 0V280M200 0V280M240 0V280M280 0V280M320 0V280M360 0V280M400 0V280M440 0V280M480 0V280" stroke="#1f4e79" stroke-opacity=".08"/>
+          <rect x="90" y="50" width="120" height="170" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <rect x="104" y="64" width="92" height="26" fill="#e6e4df" stroke="#1e2226" stroke-width="1.4"/>
+          <circle cx="150" cy="150" r="34" stroke="#1e2226" stroke-width="2"/>
+          <path d="M150 150 l20 -16" stroke="#f26b1d" stroke-width="4"/><circle cx="150" cy="150" r="4" fill="#1e2226"/>
+          <path d="M126 150h-8M182 150h-8M150 126v-8" stroke="#1e2226" stroke-width="2"/>
+          <path d="M290 90 l70 70" stroke="#1e2226" stroke-width="10" stroke-linecap="square"/>
+          <path d="M280 80 a16 16 0 1 1 22 0 l-11 11z" fill="#4a5560" stroke="#1e2226" stroke-width="2"/>
+          <rect x="350" y="160" width="100" height="56" fill="#fff" stroke="#1e2226" stroke-width="2.4"/>
+          <path d="M362 176h76M362 188h76M362 200h46" stroke="#1e2226" stroke-opacity=".4" stroke-width="2"/>
+          <path d="M414 196 l8 8 16-18" stroke="#f26b1d" stroke-width="4"/>
+        </svg>
+        <figcaption><h3>Entretien &amp; contrôle</h3><small>Exemple de prestation</small></figcaption>
+      </figure>
+    </div>
+
+    <div class="nomenclature rv">
+      <div class="t"><h3>Nomenclature des tarifs</h3><span>Tous travaux : sur devis</span></div>
+      <table>
+        <thead><tr><th>Rep.</th><th>Désignation</th><th>Prix</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Remplacement de chaudière gaz ou fioul</td><td>Sur devis</td></tr>
+          <tr><td>B</td><td>Travaux de plomberie sanitaire</td><td>Sur devis</td></tr>
+          <tr><td>C</td><td>Installation ou remplacement de VMC</td><td>Sur devis</td></tr>
+          <tr><td>D</td><td>Entretien et dépannage</td><td>Sur devis</td></tr>
+        </tbody>
+      </table>
+      <p>Chaque logement est différent : le chiffrage est établi après relevé de votre installation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc sombre" id="avis">
+  <div class="wrap">
+    <div class="avis rv">
+      <svg class="jauge" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+        <circle cx="60" cy="60" r="52" stroke="#fff" stroke-width="3"/>
+        <circle cx="60" cy="60" r="44" stroke="#fff" stroke-opacity=".25" stroke-width="1"/>
+        <path d="M22 78 A42 42 0 1 1 98 78" stroke="#4a5560" stroke-width="8"/>
+        <path d="M22 78 A42 42 0 0 1 60 18" stroke="#f26b1d" stroke-width="8"/>
+        <path d="M60 60 L84 36" stroke="#fff" stroke-width="4"/><circle cx="60" cy="60" r="6" fill="#f26b1d"/>
+        <text x="60" y="98" text-anchor="middle" font-family="Big Shoulders Display" font-weight="900" font-size="16" fill="#fff">AVIS</text>
+      </svg>
+      <div>
+        <span class="mono">06 · Votre avis compte</span>
+        <h2>Un chantier réalisé avec nous&nbsp;?</h2>
+        <p>Votre retour aide les habitants de Saint-Priest et de l’Est lyonnais à choisir leur artisan. Quelques mots sur Google suffisent.</p>
+      </div>
+      <a class="btn btn-sombre" href="https://www.google.com/maps/search/?api=1&amp;query=Padey+et+Associ%C3%A9s+Saint-Priest" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc quadrille" id="faq">
+  <div class="wrap faq">
+    <div class="tete rv" style="display:block">
+      <span class="num pochoir">07</span>
+      <span class="mono" style="margin-top:16px">Questions fréquentes</span>
+      <h2>Les réponses, sans jargon</h2>
+      <p>Une autre question&nbsp;? Appelez le 04 72 51 26 46.</p>
+    </div>
+    <div class="rv d1">
+      <div class="q"><button aria-expanded="false">Quand faut-il remplacer sa chaudière&nbsp;?<i></i></button><div class="r"><div><p>Pannes à répétition, consommation qui grimpe, pièces difficiles à trouver : ce sont souvent des signes. Un diagnostic sur place permet de comparer réparation et remplacement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">L’entretien annuel est-il obligatoire&nbsp;?<i></i></button><div class="r"><div><p>Pour les chaudières gaz et fioul, un entretien annuel est en principe obligatoire. Il contribue à la sécurité et au bon rendement de l’appareil.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">À quoi sert une VMC&nbsp;?<i></i></button><div class="r"><div><p>Elle renouvelle l’air du logement en continu, évacue l’humidité des pièces d’eau et limite les risques de condensation et de moisissures.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Que signifient les qualifications QUALIBAT&nbsp;?<i></i></button><div class="r"><div><p>QUALIBAT est un organisme de qualification des entreprises du bâtiment. Padey et Associés détient les qualifications Remplacement chaudière et Plomberie sanitaire (RGE).</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Peut-on bénéficier d’aides pour les travaux&nbsp;?<i></i></button><div class="r"><div><p>Certains travaux peuvent ouvrir droit à des aides, selon votre situation et les règles en vigueur. Renseignez-vous sur les sites officiels ; nous pouvons vous orienter lors du devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Quelle est votre zone d’intervention&nbsp;?<i></i></button><div class="r"><div><p>Saint-Priest et le Rhône. Pour savoir si votre commune est couverte, le plus simple est de nous appeler.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc blanc" id="infos">
+  <div class="wrap infos">
+    <div class="panneau rv">
+      <div class="t"><h3>Horaires</h3><span>À confirmer</span></div>
+      <div class="c">
+        <table class="horaires"><tbody>
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </tbody></table>
+        <p class="note-h">Horaires à confirmer – sur rendez-vous, du lundi au vendredi.</p>
+      </div>
+    </div>
+    <div class="panneau rv d1">
+      <div class="t"><h3>Accès</h3><span>Cité Berliet</span></div>
+      <div class="c">
+        <svg class="mini-plan" viewBox="0 0 400 130" aria-hidden="true">
+          <rect width="400" height="130" fill="#eef0f1"/>
+          <g stroke="#1f4e79" stroke-opacity=".1"><path d="M0 26H400M0 52H400M0 78H400M0 104H400M50 0V130M100 0V130M150 0V130M200 0V130M250 0V130M300 0V130M350 0V130"/></g>
+          <path d="M0 70 H400" stroke="#4a5560" stroke-width="16"/>
+          <path d="M120 0 V130 M260 0 V130" stroke="#4a5560" stroke-width="6"/>
+          <g fill="#fff" stroke="#1e2226" stroke-width="1.4"><rect x="20" y="20" width="80" height="36"/><rect x="140" y="20" width="100" height="36"/><rect x="280" y="84" width="100" height="36"/><rect x="20" y="84" width="80" height="36"/></g>
+          <rect x="146" y="84" width="96" height="36" fill="#f26b1d" stroke="#1e2226" stroke-width="2"/>
+          <text x="194" y="107" text-anchor="middle" font-family="Big Shoulders Display" font-weight="900" font-size="16" fill="#1e2226">N° 25</text>
+          <text x="318" y="74" font-family="IBM Plex Sans" font-size="10" font-weight="600" fill="#fff" letter-spacing="1">2ᵉ AVENUE</text>
+        </svg>
+        <p class="adresse">25 Deuxième Avenue<br>69800 Saint-Priest</p>
+        <ul class="coord">
+          <li><a href="tel:+33472512646"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>04 72 51 26 46</a></li>
+          <li><a href="mailto:padey-associes@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>padey-associes@orange.fr</a></li>
+        </ul>
+        <a class="btn btn-orange" href="https://www.google.com/maps/search/?api=1&amp;query=25+Deuxi%C3%A8me+Avenue+69800+Saint-Priest" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hachures" aria-hidden="true"></div>
+<section class="bloc sombre" id="contact">
+  <div class="wrap contact">
+    <div class="intro rv">
+      <span class="mono" style="color:var(--orange)">08 · Contact</span>
+      <h2>Ouvrir un bon d’intervention</h2>
+      <p>Chaudière à remplacer, salle d’eau à refaire, VMC à installer&nbsp;? Décrivez votre besoin, on vous rappelle pour en parler.</p>
+      <ul class="coord">
+        <li><a href="tel:+33472512646"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>04 72 51 26 46</a></li>
+        <li><a href="mailto:padey-associes@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>padey-associes@orange.fr</a></li>
+      </ul>
+    </div>
+    <div class="bon rv d1">
+      <div class="t"><h3>Bon de demande</h3><span>Réf. BD-69800</span></div>
+      <form id="form" novalidate>
+        <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="champ plein"><label for="mail">E-mail</label><input id="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+        <div class="champ plein"><label for="type">Nature des travaux</label><select id="type"><option>Remplacement de chaudière gaz</option><option>Chaudière fioul</option><option>Plomberie sanitaire</option><option>VMC</option><option>Entretien / dépannage</option><option>Autre</option></select></div>
+        <div class="champ plein"><label for="msg">Description</label><textarea id="msg" placeholder="Commune, type de logement, équipement en place…"></textarea></div>
+        <button class="btn btn-orange" type="submit">Envoyer la demande</button>
+        <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n’a pas été envoyée.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a class="logo" href="#accueil" style="margin-bottom:16px"><span class="plaque">P&amp;A</span><span><b>Padey et Associés</b></span></a>
+        <p>Remplacement de chaudière gaz ou fioul, plomberie sanitaire et VMC à Saint-Priest. Qualifications QUALIBAT Remplacement chaudière et Plomberie sanitaire (RGE).</p>
+      </div>
+      <div><h4>Coordonnées</h4><ul><li>25 Deuxième Avenue<br>Cité Berliet<br>69800 Saint-Priest</li><li><a href="tel:+33472512646">04 72 51 26 46</a></li><li><a href="mailto:padey-associes@orange.fr">padey-associes@orange.fr</a></li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Sur rendez-vous</li><li>Du lundi au vendredi</li><li>(à confirmer)</li></ul></div>
+      <div><h4>Plan du site</h4><ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul></div>
+    </div>
+    <div class="mentions"><span>© <span id="an">2026</span> Padey et Associés – Saint-Priest (69)</span><span>Mentions légales · Aucune donnée collectée sur cette maquette</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+<a class="appel-flottant" href="tel:+33472512646" aria-label="Appeler Padey et Associés"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+  document.getElementById('an').textContent=new Date().getFullYear();
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

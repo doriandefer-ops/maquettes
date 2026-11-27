@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruno Ascione – artisan chauffagiste à Villeurbanne</title>
+<meta name="description" content="Bruno Ascione, artisan chauffagiste à Villeurbanne (69100) : chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Villeurbanne et Lyon.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#f4eedf;
+  --ivoire2:#ece4cf;
+  --celadon:#6f9a8d;
+  --vert:#1f3b36;
+  --vert2:#16302b;
+  --or:#c29a4b;
+  --or-clair:#dcbd7c;
+  --noir:#161616;
+  --rose:#d9a79a;
+  --texte:#2c3a36;
+  --doux:#5a6863;
+  --titre:"Poiret One",Georgia,serif;
+  --corps:"Libre Franklin",system-ui,sans-serif;
+  --larg:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--ivoire);color:var(--texte);font-family:var(--corps);font-size:1rem;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--titre);font-weight:400;margin:0;line-height:1.1;color:var(--vert)}
+h3{font-family:var(--corps);font-weight:600;letter-spacing:.02em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+
+/* pans coupés */
+.pans{clip-path:polygon(14px 0,calc(100% - 14px) 0,100% 14px,100% calc(100% - 14px),calc(100% - 14px) 100%,14px 100%,0 calc(100% - 14px),0 14px)}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 22px;font-size:.74rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--vert);background:var(--or);clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,10px 100%,0 50%)}
+.badge.clair{background:var(--ivoire);color:var(--vert)}
+
+/* boutons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;font:600 .82rem var(--corps);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:0;transition:transform .25s,background .25s,color .25s;clip-path:polygon(12px 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,12px 100%,0 50%)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-or{background:var(--or);color:var(--noir)}
+.btn-or:hover{background:var(--or-clair);transform:translateY(-2px)}
+.btn-ligne{background:var(--or);color:var(--ivoire);padding:1.5px}
+.btn-ligne span{display:flex;align-items:center;justify-content:center;width:100%;padding:13.5px 28.5px;background:var(--vert);clip-path:polygon(11px 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,11px 100%,0 50%);transition:background .25s}
+.btn-ligne:hover span{background:transparent}
+.btn-ligne:hover{background:var(--or);color:var(--noir);transform:translateY(-2px)}
+.btn-vert{background:var(--vert);color:var(--ivoire)}
+.btn-vert:hover{background:var(--celadon);transform:translateY(-2px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+.nav .barre{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.nav.plein{background:rgba(22,48,43,.97);box-shadow:0 1px 0 var(--or)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ivoire)}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font-family:var(--titre);font-weight:400;font-size:1.35rem;line-height:1;letter-spacing:.04em}
+.logo small{display:block;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--or-clair);margin-top:4px}
+.menu{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:8px 12px;text-decoration:none;color:var(--ivoire);font-size:.76rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;position:relative}
+.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:2px;height:1px;background:var(--or);transition:left .25s,right .25s}
+.menu a:hover::after{left:12px;right:12px}
+.nav .btn{padding:11px 22px;font-size:.72rem}
+.burger{display:none;width:46px;height:46px;background:transparent;border:1px solid var(--or);color:var(--ivoire);cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:1.5px;background:currentColor;position:relative;transition:transform .3s,background .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.ouvert .burger span{background:transparent}
+.nav.ouvert .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero affiche */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:radial-gradient(ellipse 70% 60% at 50% 72%,#2c5149 0%,var(--vert) 55%,var(--vert2) 100%);color:var(--ivoire);overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:110px 0 120px;text-align:center}
+.cadre{position:absolute;inset:92px 22px 92px;border:1px solid rgba(194,154,75,.55);pointer-events:none}
+.cadre::before{content:"";position:absolute;inset:6px;border:1px solid rgba(194,154,75,.25)}
+.rayons{position:absolute;left:50%;bottom:70px;width:max(1000px,100%);transform:translateX(-50%);height:auto;pointer-events:none}
+.rayons .r{fill:var(--or);opacity:.08}
+.rayons .soleil{fill:none;stroke:var(--or);opacity:.28}
+.tour{position:absolute;bottom:70px;width:clamp(120px,14.5vw,215px);height:auto;pointer-events:none}
+.tour-g{left:max(40px,5vw)}
+.tour-d{right:max(40px,5vw);transform:scaleX(-1)}
+.affiche{position:relative;z-index:2;width:min(760px,100% - 32px);display:flex;flex-direction:column;align-items:center}
+.eventail{width:150px;height:auto;margin:0 auto 14px}
+.cartouche{--c:22px;position:relative;padding:1.5px;margin:18px 0 26px;background:var(--or)}
+.cartouche,.cartouche .c1,.cartouche .c2,.cartouche .c3{clip-path:polygon(var(--c) 0,calc(100% - var(--c)) 0,100% var(--c),100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,var(--c) 100%,0 calc(100% - var(--c)),0 var(--c))}
+.cartouche .c1{--c:21px;background:#173430;padding:6px}
+.cartouche .c2{--c:16px;background:rgba(194,154,75,.6);padding:1px}
+.cartouche .c3{--c:15px;background:#173430;padding:24px 44px 22px}
+.cartouche h1{color:var(--ivoire);font-size:clamp(2.8rem,7.2vw,5.6rem);letter-spacing:.04em;line-height:1}
+.cartouche h1 span{display:block;font-family:var(--corps);font-size:clamp(.66rem,1.2vw,.82rem);font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--or-clair);margin-top:16px}
+.filet{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px}
+.filet i{height:1px;width:70px;background:var(--or)}
+.filet b{width:8px;height:8px;background:var(--or);transform:rotate(45deg)}
+.accroche{font-size:clamp(1rem,1.6vw,1.15rem);max-width:34em;color:rgba(244,238,223,.88);margin:0 auto 30px;font-weight:300}
+.accroche strong{font-weight:600;color:var(--ivoire)}
+.actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.frise-hero{position:absolute;left:0;right:0;bottom:0;height:70px;background:var(--vert2);border-top:1px solid var(--or)}
+.frise-hero svg{width:100%;height:100%}
+
+/* bandeau de confiance */
+.confiance{background:var(--noir);color:var(--ivoire);border-bottom:3px double var(--or)}
+.confiance ul{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:24px 18px;text-align:center;border-left:1px solid rgba(194,154,75,.35)}
+.confiance li:first-child{border-left:0}
+.confiance svg{width:30px;height:30px;margin:0 auto 8px}
+.confiance b{display:block;font-family:var(--titre);font-size:1.25rem;font-weight:400;color:var(--or-clair)}
+.confiance span{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,238,223,.7)}
+
+/* sections */
+.bloc{padding:96px 0;position:relative}
+.bloc.fonce{background:var(--vert);color:rgba(244,238,223,.86)}
+.bloc.fonce h2,.bloc.fonce h3{color:var(--ivoire)}
+.bloc.creme{background:var(--ivoire2)}
+.entete{text-align:center;max-width:700px;margin:0 auto 60px}
+.orn{display:block;width:120px;height:auto;margin:0 auto 18px}
+.sur{display:block;font-size:.72rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+.entete h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-bottom:18px}
+.entete p{color:var(--doux);margin:0}
+.bloc.fonce .entete p{color:rgba(244,238,223,.75)}
+.rail{height:14px;background:repeating-linear-gradient(90deg,var(--or) 0 2px,transparent 2px 10px);opacity:.55}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.service{position:relative;padding:3px;background:linear-gradient(160deg,var(--or),rgba(194,154,75,.35));clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transition:transform .35s}
+.service>div{background:var(--ivoire);height:100%;padding:34px 28px 30px;clip-path:inherit;position:relative}
+.service>div::before{content:"";position:absolute;top:0;left:50%;width:1px;height:26px;background:var(--or)}
+.service:hover{transform:translateY(-6px)}
+.service:hover>div{background:#fbf7ec}
+.service .ico{width:74px;height:74px;margin:6px auto 20px}
+.service h3{text-align:center;font-family:var(--titre);font-weight:400;font-size:1.55rem;margin-bottom:10px;letter-spacing:.01em}
+.service p{text-align:center;font-size:.94rem;color:var(--doux);margin:0}
+.service .num{position:absolute;top:14px;right:22px;font-family:var(--titre);font-size:.9rem;color:var(--or)}
+
+/* atouts : pilastres */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(194,154,75,.5)}
+.atout{padding:10px 30px 14px;border-right:1px solid rgba(194,154,75,.5);position:relative}
+.atout svg{width:56px;height:56px;margin-bottom:20px}
+.atout h3{font-family:var(--titre);font-weight:400;font-size:1.5rem;margin-bottom:12px;line-height:1.2}
+.atout p{font-size:.94rem;margin:0}
+
+/* étapes en gradins */
+.gradins{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:end}
+.marche{background:var(--ivoire);border:1px solid var(--or);border-bottom:0;padding:30px 24px 34px;position:relative;margin-left:-1px}
+.marche:nth-child(1){min-height:260px}
+.marche:nth-child(2){min-height:300px}
+.marche:nth-child(3){min-height:340px}
+.marche:nth-child(4){min-height:380px;background:var(--vert);color:rgba(244,238,223,.86)}
+.marche:nth-child(4) h3{color:var(--ivoire)}
+.marche .n{font-family:var(--titre);font-size:3.4rem;line-height:1;color:var(--or);display:block;margin-bottom:14px}
+.marche h3{font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.marche p{font-size:.93rem;margin:0}
+.socle{height:18px;background:var(--vert);border-top:3px double var(--or)}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.medaillon{position:relative;aspect-ratio:3/4;max-width:380px;margin:0 auto;width:100%}
+.medaillon svg{width:100%;height:100%}
+.apropos h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:22px}
+.apropos p{font-size:1.02rem}
+.signature{margin-top:26px;display:flex;align-items:center;gap:16px}
+.signature i{height:1px;width:60px;background:var(--or)}
+.signature span{font-family:var(--titre);font-size:1.6rem;color:var(--or-clair)}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.real{margin:0;text-align:center}
+.arche{position:relative;padding:6px;background:var(--or);border-radius:999px 999px 0 0;transition:transform .35s}
+.arche svg{width:100%;height:auto;aspect-ratio:3/4;border-radius:999px 999px 0 0;background:var(--vert)}
+.real:hover .arche{transform:translateY(-6px)}
+.real figcaption{padding-top:16px}
+.real b{display:block;font-family:var(--titre);font-size:1.3rem;font-weight:400;color:var(--vert);line-height:1.2}
+.real span{display:block;margin-top:6px;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--celadon);font-weight:600}
+.tarif{margin:56px auto 0;max-width:820px;position:relative;padding:3px;background:var(--or);clip-path:polygon(26px 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,26px 100%,0 50%)}
+.tarif>div{background:var(--vert);color:rgba(244,238,223,.85);clip-path:inherit;display:flex;align-items:center;justify-content:center;gap:34px;padding:30px 70px;flex-wrap:wrap;text-align:left}
+.tarif strong{font-family:var(--titre);font-weight:400;font-size:2.4rem;color:var(--or-clair);white-space:nowrap}
+.tarif p{margin:0;max-width:30em;font-size:.95rem}
+
+/* avis */
+.avis{text-align:center;max-width:760px;margin:0 auto}
+.avis .eventail{width:200px;margin-bottom:24px}
+.avis h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.avis p{color:var(--doux);margin:0 auto 30px;max-width:34em}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto;border-top:1px solid var(--or)}
+.q{border-bottom:1px solid var(--or)}
+.q button{width:100%;display:flex;align-items:center;gap:18px;padding:22px 4px;background:none;border:0;cursor:pointer;text-align:left;font:500 1.04rem var(--corps);color:var(--vert)}
+.q button::before{content:"";width:10px;height:10px;background:var(--or);transform:rotate(45deg);flex:none;transition:background .3s,transform .3s}
+.q.ouvert button::before{background:var(--rose);transform:rotate(225deg) scale(1.2)}
+.q button i{margin-left:auto;font-style:normal;font-family:var(--titre);font-size:1.6rem;color:var(--or);transition:transform .3s;line-height:1}
+.q.ouvert button i{transform:rotate(45deg)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{margin:0;padding:0 4px 24px 32px;color:var(--doux)}
+
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.panneau{position:relative;padding:3px;background:var(--or);clip-path:polygon(20px 0,calc(100% - 20px) 0,100% 20px,100% calc(100% - 20px),calc(100% - 20px) 100%,20px 100%,0 calc(100% - 20px),0 20px)}
+.panneau>div{background:var(--ivoire);padding:40px 38px;height:100%;clip-path:inherit}
+.panneau h3{font-family:var(--titre);font-weight:400;font-size:1.9rem;margin-bottom:6px}
+.note{color:var(--celadon);font-weight:600;font-size:.92rem;margin-bottom:18px}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:11px 10px;border-bottom:1px dotted rgba(194,154,75,.8);font-size:.95rem}
+.horaires td:last-child{text-align:right;color:var(--doux)}
+.horaires tr.auj td{background:var(--vert);color:var(--ivoire);font-weight:600}
+.horaires tr.auj td:last-child{color:var(--or-clair)}
+.horaires tr.auj td:first-child::after{content:"aujourd'hui";margin-left:10px;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or-clair);font-weight:600}
+.plan{margin:16px 0 20px;border:1px solid var(--or)}
+.plan svg{width:100%;height:auto}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
+.contact h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:18px}
+.coord a,.coord div.l{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(194,154,75,.4);text-decoration:none;word-break:break-word}
+.coord svg{width:44px;height:44px;flex:none}
+.coord small{display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or-clair);font-weight:600}
+.coord span{font-size:1.05rem;color:var(--ivoire)}
+.coord a:hover span{color:var(--or-clair)}
+form{background:var(--ivoire);color:var(--texte);padding:40px;position:relative;clip-path:polygon(24px 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%,0 24px)}
+form::before{content:"";position:absolute;inset:10px;border:1px solid rgba(194,154,75,.6);pointer-events:none;clip-path:inherit}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.large{grid-column:1/-1}
+label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--vert)}
+input,select,textarea{font:inherit;font-size:.98rem;color:var(--noir);background:#fbf8ef;border:0;border-bottom:1px solid var(--or);padding:12px 12px;width:100%;transition:background .2s,border-color .2s}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;background:#fff;border-bottom-color:var(--vert);box-shadow:0 2px 0 var(--vert)}
+.envoi{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px;position:relative}
+.envoi small{flex:1;min-width:180px;color:var(--doux);font-size:.82rem}
+.retour{display:none;position:relative;margin:20px 0 0;padding:14px 18px;background:var(--rose);color:var(--noir);font-weight:600;text-align:center}
+.retour.vu{display:block}
+
+/* footer */
+footer{background:var(--noir);color:rgba(244,238,223,.72);padding:70px 0 30px;border-top:3px double var(--or)}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}
+.pied h4{margin:0 0 14px;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--or)}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li,.pied p{font-size:.92rem;margin:0 0 6px}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--or-clair)}
+.mentions{margin-top:44px;padding-top:22px;border-top:1px solid rgba(194,154,75,.3);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.8rem}
+.demo{background:#0d0d0d;color:rgba(244,238,223,.6);text-align:center;font-size:.78rem;padding:12px 16px;letter-spacing:.04em}
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;width:62px;height:62px;align-items:center;justify-content:center;background:var(--or);color:var(--noir);clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);transition:transform .25s}
+.appel-flottant:hover{transform:scale(1.06)}
+.appel-flottant svg{width:26px;height:26px}
+
+/* animations */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.rayons g.tourne{transform-origin:500px 520px;animation:rayonne 90s linear infinite}
+@keyframes rayonne{to{transform:rotate(360deg)}}
+.flamme{animation:vacille 2.6s ease-in-out infinite;transform-origin:center bottom;transform-box:fill-box}
+@keyframes vacille{50%{transform:scaleY(.86)}}
+
+/* responsive */
+@media (max-width:1080px){
+  .menu a{padding:8px 8px;letter-spacing:.12em}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr);row-gap:30px}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:inline-flex}
+  .nav .btn-nav{display:none}
+  .nav{background:rgba(22,48,43,.97)}
+  .menu{position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--vert2);border-bottom:1px solid var(--or);padding:10px 16px 20px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:14px 8px;font-size:.86rem;border-bottom:1px solid rgba(194,154,75,.25)}
+  .menu a::after{display:none}
+  .menu .m-appel{margin-top:14px;border:0;text-align:center;background:var(--or);color:var(--noir);font-weight:700}
+  .gradins{grid-template-columns:repeat(2,1fr)}
+  .marche{min-height:0!important;margin:0 0 -1px -1px}
+  .apropos,.infos,.contact{grid-template-columns:1fr}
+  .medaillon{max-width:300px}
+  .confiance ul{grid-template-columns:1fr 1fr}
+  .confiance li:nth-child(3){border-left:0}
+  .confiance li:nth-child(n+3){border-top:1px solid rgba(194,154,75,.35)}
+  .appel-flottant{display:flex}
+}
+@media (min-width:921px){.menu .m-appel{display:none}}
+@media (max-width:600px){
+  .bloc{padding:80px 0}
+  .confiance li{padding:20px 8px}
+  .confiance b{font-size:1.08rem;line-height:1.3}
+  .confiance span{font-size:.64rem;letter-spacing:.1em}
+  .logo small{letter-spacing:.2em}
+  .hero{padding:118px 0 110px}
+  .cadre{inset:86px 10px 80px}
+  .tour{width:23vw;opacity:.45;bottom:70px}
+  .tour-g{left:-4vw}.tour-d{right:-4vw}
+  .cartouche .c3{padding:20px 18px 18px}
+  .cartouche h1{font-size:2.7rem}
+  .cartouche h1 span{letter-spacing:.26em}
+  .actions{flex-direction:column;width:100%;max-width:330px}
+  .actions .btn{width:100%}
+  .services,.gradins{grid-template-columns:1fr}
+  .galerie{grid-template-columns:1fr 1fr;gap:16px}
+  .arche{padding:4px}
+  .real b{font-size:1.05rem}
+  .real span{font-size:.58rem;letter-spacing:.14em}
+  .atouts{grid-template-columns:1fr;border-left:0}
+  .atout{border-right:0;border-left:1px solid rgba(194,154,75,.5);padding:4px 0 4px 22px}
+  .tarif{clip-path:none}
+  .tarif>div{clip-path:none;padding:28px 24px;text-align:center}
+  .panneau>div,form{padding:30px 22px}
+  .champs{grid-template-columns:1fr}
+  .pied{grid-template-columns:1fr}
+  .demo{padding-bottom:92px}
+  .horaires td{padding:10px 6px}
+  .horaires tr.auj td:first-child::after{display:block;margin:2px 0 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="tour" viewBox="0 0 240 640"><g fill="#122a26" stroke="#c29a4b" stroke-width="1.2"><rect x="0" y="360" width="240" height="280"/><rect x="22" y="250" width="196" height="110"/><rect x="44" y="160" width="152" height="90"/><rect x="66" y="90" width="108" height="70"/><rect x="88" y="40" width="64" height="50"/><rect x="104" y="14" width="32" height="26"/></g><g stroke="#c29a4b" stroke-width=".6" opacity=".5"><path d="M60 362v278"/><path d="M120 362v278"/><path d="M180 362v278"/></g><g fill="#c29a4b" opacity=".5"><rect x="12" y="372" width="7" height="11"/><rect x="44" y="372" width="7" height="11"/><rect x="92" y="372" width="7" height="11"/><rect x="108" y="372" width="7" height="11"/><rect x="124" y="372" width="7" height="11"/><rect x="140" y="372" width="7" height="11"/><rect x="156" y="372" width="7" height="11"/><rect x="172" y="372" width="7" height="11"/><rect x="188" y="372" width="7" height="11"/><rect x="28" y="392" width="7" height="11"/><rect x="44" y="392" width="7" height="11"/><rect x="60" y="392" width="7" height="11"/><rect x="76" y="392" width="7" height="11"/><rect x="108" y="392" width="7" height="11"/><rect x="124" y="392" width="7" height="11"/><rect x="140" y="392" width="7" height="11"/><rect x="156" y="392" width="7" height="11"/><rect x="172" y="392" width="7" height="11"/><rect x="204" y="392" width="7" height="11"/><rect x="220" y="392" width="7" height="11"/><rect x="12" y="412" width="7" height="11"/><rect x="44" y="412" width="7" height="11"/><rect x="76" y="412" width="7" height="11"/><rect x="92" y="412" width="7" height="11"/><rect x="108" y="412" width="7" height="11"/><rect x="124" y="412" width="7" height="11"/><rect x="140" y="412" width="7" height="11"/><rect x="156" y="412" width="7" height="11"/><rect x="172" y="412" width="7" height="11"/><rect x="188" y="412" width="7" height="11"/><rect x="204" y="412" width="7" height="11"/><rect x="220" y="412" width="7" height="11"/><rect x="12" y="432" width="7" height="11"/><rect x="28" y="432" width="7" height="11"/><rect x="60" y="432" width="7" height="11"/><rect x="76" y="432" width="7" height="11"/><rect x="124" y="432" width="7" height="11"/><rect x="140" y="432" width="7" height="11"/><rect x="156" y="432" width="7" height="11"/><rect x="172" y="432" width="7" height="11"/><rect x="188" y="432" width="7" height="11"/><rect x="204" y="432" width="7" height="11"/><rect x="12" y="452" width="7" height="11"/><rect x="44" y="452" width="7" height="11"/><rect x="60" y="452" width="7" height="11"/><rect x="76" y="452" width="7" height="11"/><rect x="92" y="452" width="7" height="11"/><rect x="108" y="452" width="7" height="11"/><rect x="124" y="452" width="7" height="11"/><rect x="140" y="452" width="7" height="11"/><rect x="188" y="452" width="7" height="11"/><rect x="204" y="452" width="7" height="11"/><rect x="220" y="452" width="7" height="11"/><rect x="12" y="472" width="7" height="11"/><rect x="28" y="472" width="7" height="11"/><rect x="60" y="472" width="7" height="11"/><rect x="92" y="472" width="7" height="11"/><rect x="108" y="472" width="7" height="11"/><rect x="124" y="472" width="7" height="11"/><rect x="140" y="472" width="7" height="11"/><rect x="156" y="472" width="7" height="11"/><rect x="188" y="472" width="7" height="11"/><rect x="204" y="472" width="7" height="11"/><rect x="220" y="472" width="7" height="11"/><rect x="12" y="492" width="7" height="11"/><rect x="28" y="492" width="7" height="11"/><rect x="44" y="492" width="7" height="11"/><rect x="60" y="492" width="7" height="11"/><rect x="76" y="492" width="7" height="11"/><rect x="108" y="492" width="7" height="11"/><rect x="140" y="492" width="7" height="11"/><rect x="156" y="492" width="7" height="11"/><rect x="172" y="492" width="7" height="11"/><rect x="12" y="512" width="7" height="11"/><rect x="28" y="512" width="7" height="11"/><rect x="44" y="512" width="7" height="11"/><rect x="76" y="512" width="7" height="11"/><rect x="92" y="512" width="7" height="11"/><rect x="172" y="512" width="7" height="11"/><rect x="220" y="512" width="7" height="11"/><rect x="12" y="532" width="7" height="11"/><rect x="28" y="532" width="7" height="11"/><rect x="60" y="532" width="7" height="11"/><rect x="76" y="532" width="7" height="11"/><rect x="92" y="532" width="7" height="11"/><rect x="108" y="532" width="7" height="11"/><rect x="124" y="532" width="7" height="11"/><rect x="140" y="532" width="7" height="11"/><rect x="156" y="532" width="7" height="11"/><rect x="188" y="532" width="7" height="11"/><rect x="204" y="532" width="7" height="11"/><rect x="220" y="532" width="7" height="11"/><rect x="12" y="552" width="7" height="11"/><rect x="28" y="552" width="7" height="11"/><rect x="60" y="552" width="7" height="11"/><rect x="76" y="552" width="7" height="11"/><rect x="108" y="552" width="7" height="11"/><rect x="124" y="552" width="7" height="11"/><rect x="172" y="552" width="7" height="11"/><rect x="188" y="552" width="7" height="11"/><rect x="204" y="552" width="7" height="11"/><rect x="220" y="552" width="7" height="11"/><rect x="12" y="572" width="7" height="11"/><rect x="28" y="572" width="7" height="11"/><rect x="44" y="572" width="7" height="11"/><rect x="60" y="572" width="7" height="11"/><rect x="76" y="572" width="7" height="11"/><rect x="124" y="572" width="7" height="11"/><rect x="140" y="572" width="7" height="11"/><rect x="156" y="572" width="7" height="11"/><rect x="172" y="572" width="7" height="11"/><rect x="188" y="572" width="7" height="11"/><rect x="204" y="572" width="7" height="11"/><rect x="220" y="572" width="7" height="11"/><rect x="12" y="592" width="7" height="11"/><rect x="28" y="592" width="7" height="11"/><rect x="44" y="592" width="7" height="11"/><rect x="60" y="592" width="7" height="11"/><rect x="76" y="592" width="7" height="11"/><rect x="92" y="592" width="7" height="11"/><rect x="108" y="592" width="7" height="11"/><rect x="140" y="592" width="7" height="11"/><rect x="156" y="592" width="7" height="11"/><rect x="172" y="592" width="7" height="11"/><rect x="204" y="592" width="7" height="11"/><rect x="12" y="612" width="7" height="11"/><rect x="28" y="612" width="7" height="11"/><rect x="76" y="612" width="7" height="11"/><rect x="92" y="612" width="7" height="11"/><rect x="108" y="612" width="7" height="11"/><rect x="124" y="612" width="7" height="11"/><rect x="172" y="612" width="7" height="11"/><rect x="204" y="612" width="7" height="11"/><rect x="36" y="262" width="7" height="11"/><rect x="52" y="262" width="7" height="11"/><rect x="68" y="262" width="7" height="11"/><rect x="84" y="262" width="7" height="11"/><rect x="100" y="262" width="7" height="11"/><rect x="132" y="262" width="7" height="11"/><rect x="148" y="262" width="7" height="11"/><rect x="164" y="262" width="7" height="11"/><rect x="180" y="262" width="7" height="11"/><rect x="196" y="262" width="7" height="11"/><rect x="36" y="282" width="7" height="11"/><rect x="84" y="282" width="7" height="11"/><rect x="100" y="282" width="7" height="11"/><rect x="116" y="282" width="7" height="11"/><rect x="132" y="282" width="7" height="11"/><rect x="164" y="282" width="7" height="11"/><rect x="180" y="282" width="7" height="11"/><rect x="196" y="282" width="7" height="11"/><rect x="52" y="302" width="7" height="11"/><rect x="68" y="302" width="7" height="11"/><rect x="100" y="302" width="7" height="11"/><rect x="116" y="302" width="7" height="11"/><rect x="132" y="302" width="7" height="11"/><rect x="148" y="302" width="7" height="11"/><rect x="164" y="302" width="7" height="11"/><rect x="180" y="302" width="7" height="11"/><rect x="196" y="302" width="7" height="11"/><rect x="68" y="322" width="7" height="11"/><rect x="84" y="322" width="7" height="11"/><rect x="100" y="322" width="7" height="11"/><rect x="116" y="322" width="7" height="11"/><rect x="132" y="322" width="7" height="11"/><rect x="148" y="322" width="7" height="11"/><rect x="180" y="322" width="7" height="11"/><rect x="36" y="342" width="7" height="11"/><rect x="52" y="342" width="7" height="11"/><rect x="68" y="342" width="7" height="11"/><rect x="84" y="342" width="7" height="11"/><rect x="116" y="342" width="7" height="11"/><rect x="164" y="342" width="7" height="11"/><rect x="180" y="342" width="7" height="11"/><rect x="196" y="342" width="7" height="11"/><rect x="60" y="172" width="7" height="11"/><rect x="76" y="172" width="7" height="11"/><rect x="108" y="172" width="7" height="11"/><rect x="124" y="172" width="7" height="11"/><rect x="140" y="172" width="7" height="11"/><rect x="156" y="172" width="7" height="11"/><rect x="172" y="172" width="7" height="11"/><rect x="76" y="192" width="7" height="11"/><rect x="92" y="192" width="7" height="11"/><rect x="108" y="192" width="7" height="11"/><rect x="124" y="192" width="7" height="11"/><rect x="140" y="192" width="7" height="11"/><rect x="156" y="192" width="7" height="11"/><rect x="172" y="192" width="7" height="11"/><rect x="60" y="212" width="7" height="11"/><rect x="76" y="212" width="7" height="11"/><rect x="92" y="212" width="7" height="11"/><rect x="108" y="212" width="7" height="11"/><rect x="124" y="212" width="7" height="11"/><rect x="140" y="212" width="7" height="11"/><rect x="156" y="212" width="7" height="11"/><rect x="172" y="212" width="7" height="11"/><rect x="60" y="232" width="7" height="11"/><rect x="76" y="232" width="7" height="11"/><rect x="108" y="232" width="7" height="11"/><rect x="124" y="232" width="7" height="11"/><rect x="140" y="232" width="7" height="11"/><rect x="92" y="102" width="7" height="11"/><rect x="124" y="102" width="7" height="11"/><rect x="140" y="102" width="7" height="11"/><rect x="156" y="102" width="7" height="11"/><rect x="76" y="122" width="7" height="11"/><rect x="92" y="122" width="7" height="11"/><rect x="124" y="122" width="7" height="11"/><rect x="140" y="122" width="7" height="11"/><rect x="76" y="142" width="7" height="11"/><rect x="92" y="142" width="7" height="11"/><rect x="108" y="142" width="7" height="11"/><rect x="156" y="142" width="7" height="11"/><rect x="100" y="52" width="7" height="11"/><rect x="116" y="52" width="7" height="11"/><rect x="132" y="52" width="7" height="11"/><rect x="100" y="72" width="7" height="11"/><rect x="132" y="72" width="7" height="11"/></g><g fill="#d9a79a" opacity=".85"><rect x="28" y="372" width="7" height="11"/><rect x="76" y="372" width="7" height="11"/><rect x="220" y="372" width="7" height="11"/><rect x="188" y="392" width="7" height="11"/><rect x="60" y="412" width="7" height="11"/><rect x="92" y="432" width="7" height="11"/><rect x="108" y="432" width="7" height="11"/><rect x="156" y="452" width="7" height="11"/><rect x="172" y="452" width="7" height="11"/><rect x="76" y="472" width="7" height="11"/><rect x="172" y="472" width="7" height="11"/><rect x="188" y="492" width="7" height="11"/><rect x="204" y="492" width="7" height="11"/><rect x="60" y="512" width="7" height="11"/><rect x="124" y="512" width="7" height="11"/><rect x="140" y="512" width="7" height="11"/><rect x="204" y="512" width="7" height="11"/><rect x="172" y="532" width="7" height="11"/><rect x="44" y="552" width="7" height="11"/><rect x="156" y="552" width="7" height="11"/><rect x="92" y="572" width="7" height="11"/><rect x="124" y="592" width="7" height="11"/><rect x="188" y="592" width="7" height="11"/><rect x="44" y="612" width="7" height="11"/><rect x="156" y="612" width="7" height="11"/><rect x="188" y="612" width="7" height="11"/><rect x="220" y="612" width="7" height="11"/><rect x="52" y="282" width="7" height="11"/><rect x="68" y="282" width="7" height="11"/><rect x="36" y="302" width="7" height="11"/><rect x="84" y="302" width="7" height="11"/><rect x="36" y="322" width="7" height="11"/><rect x="52" y="322" width="7" height="11"/><rect x="164" y="322" width="7" height="11"/><rect x="92" y="172" width="7" height="11"/><rect x="60" y="192" width="7" height="11"/><rect x="172" y="232" width="7" height="11"/><rect x="108" y="122" width="7" height="11"/><rect x="124" y="142" width="7" height="11"/><rect x="140" y="142" width="7" height="11"/></g><g stroke="#c29a4b" stroke-width="1" fill="none"><path d="M120 0v14"/><path d="M110 14l10-9 10 9"/></g></symbol>
+    <symbol id="eventail" viewBox="0 0 200 104"><g fill="none" stroke="#c29a4b" stroke-width="1.4"><path d="M10 100a90 90 0 0 1 180 0z"/><path d="M40 100a60 60 0 0 1 120 0"/><path d="M70 100a30 30 0 0 1 60 0"/><path d="M100 100L100 10M100 100L36 36M100 100L164 36M100 100L13 67M100 100L187 67M100 100L66 17M100 100L134 17"/></g><circle cx="100" cy="100" r="5" fill="#c29a4b"/></symbol>
+    <symbol id="ph" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap barre">
+    <a href="#accueil" class="logo" aria-label="Bruno Ascione, accueil">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1L39 20 20 39 1 20z" fill="none" stroke="#c29a4b"/><path d="M20 6L34 20 20 34 6 20z" fill="#c29a4b"/><text x="20" y="25.5" text-anchor="middle" font-family="Poiret One,serif" font-size="14" fill="#16302b">BA</text></svg>
+      <span><b>Bruno Ascione</b><small>Chauffagiste · Villeurbanne</small></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#apropos">L'artisan</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33698461963" class="m-appel">Appeler le 06 98 46 19 63</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+33698461963" class="btn btn-or btn-nav"><svg><use href="#ph"/></svg>06 98 46 19 63</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <svg class="rayons" viewBox="0 0 1000 560" aria-hidden="true"><g class="tourne"><g class="r"><path d="M500 520L-400 520L-398 466z"/><path d="M500 520L-393 412L-385 358z"/><path d="M500 520L-374 305L-359 252z"/><path d="M500 520L-342 201L-321 151z"/><path d="M500 520L-297 102L-270 54z"/><path d="M500 520L-241 9L-208 -35z"/><path d="M500 520L-174 -77L-136 -116z"/><path d="M500 520L-97 -154L-55 -188z"/><path d="M500 520L-11 -221L34 -250z"/><path d="M500 520L82 -277L131 -301z"/><path d="M500 520L181 -322L232 -339z"/><path d="M500 520L285 -354L338 -365z"/><path d="M500 520L392 -373L446 -378z"/><path d="M500 520L500 -380L554 -378z"/><path d="M500 520L608 -373L662 -365z"/><path d="M500 520L715 -354L768 -339z"/><path d="M500 520L819 -322L869 -301z"/><path d="M500 520L918 -277L966 -250z"/><path d="M500 520L1011 -221L1055 -188z"/><path d="M500 520L1097 -154L1136 -116z"/><path d="M500 520L1174 -77L1208 -35z"/><path d="M500 520L1241 9L1270 54z"/><path d="M500 520L1297 102L1321 151z"/><path d="M500 520L1342 201L1359 252z"/><path d="M500 520L1374 305L1385 358z"/><path d="M500 520L1393 412L1398 466z"/></g></g><g class="soleil"><circle cx="500" cy="520" r="150" stroke-width="1"/><circle cx="500" cy="520" r="210" stroke-width=".7" stroke-dasharray="2 8"/><circle cx="500" cy="520" r="290" stroke-width=".6"/></g></svg>
+  <svg class="tour tour-g" viewBox="0 0 240 640" aria-hidden="true"><use href="#tour"/></svg>
+  <svg class="tour tour-d" viewBox="0 0 240 640" aria-hidden="true"><use href="#tour"/></svg>
+  <div class="cadre" aria-hidden="true"></div>
+  <div class="affiche">
+    <span class="badge">Villeurbanne · 69100</span>
+    <div class="cartouche"><div class="c1"><div class="c2"><div class="c3">
+      <h1>Bruno Ascione<span>Artisan chauffagiste</span></h1>
+      <div class="filet" aria-hidden="true"><i></i><b></b><i></i></div>
+    </div></div></div></div>
+    <p class="accroche">Au pied des Gratte-Ciel, la chaleur se règle avec soin&nbsp;: <strong>chaudière gaz ou fioul, pompe à chaleur, climatisation et chauffe-eau thermodynamique</strong>, de Villeurbanne à Lyon.</p>
+    <div class="actions">
+      <a href="tel:+33698461963" class="btn btn-or"><svg><use href="#ph"/></svg>Appeler</a>
+      <a href="#contact" class="btn btn-ligne"><span>Demander un devis</span></a>
+    </div>
+  </div>
+  <div class="frise-hero" aria-hidden="true">
+    <svg preserveAspectRatio="none" viewBox="0 0 1440 70" role="presentation">
+      <defs>
+        <pattern id="motif" width="240" height="70" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#c29a4b" stroke-width="1.3">
+            <!-- radiateur -->
+            <rect x="14" y="16" width="86" height="40" rx="3"/>
+            <path d="M26 16v40M38 16v40M50 16v40M62 16v40M74 16v40M86 16v40"/>
+            <path d="M20 56v6M94 56v6"/>
+            <!-- losange -->
+            <path d="M120 35l8-8 8 8-8 8z" fill="#c29a4b"/>
+            <!-- chaudière -->
+            <rect x="156" y="10" width="44" height="52" rx="3"/>
+            <rect x="164" y="17" width="28" height="9"/>
+            <path d="M178 52c-6 0-8-4-8-7 0-4 4-6 8-12 4 6 8 8 8 12 0 3-2 7-8 7z" stroke="#d9a79a"/>
+            <path d="M218 35l8-8 8 8-8 8z"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="1440" height="70" fill="url(#motif)"/>
+    </svg>
+  </div>
+</section>
+
+<section class="confiance" aria-label="Informations clés">
+  <ul class="wrap">
+    <li class="rv"><svg viewBox="0 0 30 30" fill="none" stroke="#c29a4b" stroke-width="1.4"><path d="M15 3c-5 0-8 4-8 8 0 6 8 15 8 15s8-9 8-15c0-4-3-8-8-8z"/><path d="M15 8l3 3-3 3-3-3z" fill="#c29a4b"/></svg><b>Villeurbanne</b><span>69100 · Rhône</span></li>
+    <li class="rv d1"><svg viewBox="0 0 30 30" fill="none" stroke="#c29a4b" stroke-width="1.4"><circle cx="15" cy="15" r="11"/><path d="M4 15h22M15 4c5 5 5 17 0 22M15 4c-5 5-5 17 0 22"/></svg><b>Villeurbanne &amp; Lyon</b><span>Zone d'intervention</span></li>
+    <li class="rv d2"><svg viewBox="0 0 30 30" fill="none" stroke="#c29a4b" stroke-width="1.4"><circle cx="15" cy="10" r="5"/><path d="M5 27c0-6 4-9 10-9s10 3 10 9"/></svg><b>Artisan à son nom</b><span>Un interlocuteur unique</span></li>
+    <li class="rv d3"><svg viewBox="0 0 30 30" fill="none" stroke="#c29a4b" stroke-width="1.4"><path d="M15 4c-5 7-8 10-8 15a8 8 0 0 0 16 0c0-5-3-8-8-15z"/><path d="M11 19h8M15 15v8" stroke="#d9a79a"/></svg><b>Chaud &amp; froid</b><span>Chaudière · PAC · Clim · CET</span></li>
+  </ul>
+</section>
+
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <svg class="orn" aria-hidden="true"><use href="#eventail"/></svg>
+      <span class="sur">Les prestations</span>
+      <h2>Le confort, étage par étage</h2>
+      <p>Appartements des Gratte-Ciel, maisons de Cusset ou des Buers, immeubles des Charpennes&nbsp;: chaque logement a son installation idéale. Voici ce que Bruno Ascione prend en charge.</p>
+    </div>
+    <div class="services">
+      <article class="service rv"><div><span class="num">I</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><rect x="24" y="16" width="26" height="40" rx="2"/><rect x="29" y="21" width="16" height="6"/><path class="flamme" d="M37 51c-5 0-7-3-7-6 0-4 4-6 7-11 3 5 7 7 7 11 0 3-2 6-7 6z" stroke="#d9a79a" fill="#d9a79a" fill-opacity=".25"/><path d="M31 56v5M43 56v5"/></svg>
+        <h3>Chaudière gaz ou fioul</h3><p>Installation, remplacement et mise en service de votre chaudière gaz ou fioul, avec un conseil adapté au logement.</p></div></article>
+      <article class="service rv d1"><div><span class="num">II</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><rect x="16" y="24" width="42" height="28" rx="2"/><circle cx="32" cy="38" r="9"/><path d="M32 29v18M23 38h18M26 32l12 12M38 32l-12 12" stroke="#6f9a8d"/><path d="M48 30v16M52 30v16"/></svg>
+        <h3>Pompe à chaleur</h3><p>Étude et pose de pompes à chaleur qui puisent les calories de l'air extérieur pour chauffer plus sobrement.</p></div></article>
+      <article class="service rv d2"><div><span class="num">III</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><rect x="14" y="22" width="46" height="14" rx="2"/><path d="M18 32h38"/><path d="M24 42c-2 4 2 6 0 10M37 42c-2 4 2 6 0 10M50 42c-2 4 2 6 0 10" stroke="#6f9a8d"/></svg>
+        <h3>Climatisation</h3><p>Climatiseurs muraux et systèmes réversibles pour retrouver la fraîcheur quand l'été s'installe sur la métropole.</p></div></article>
+      <article class="service rv"><div><span class="num">IV</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><rect x="26" y="12" width="22" height="50" rx="11"/><circle cx="37" cy="22" r="5" stroke="#6f9a8d"/><path d="M30 44h14M30 50h14" stroke="#d9a79a"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3><p>Un ballon d'eau chaude couplé à une petite pompe à chaleur, en remplacement d'un cumulus classique.</p></div></article>
+      <article class="service rv d1"><div><span class="num">V</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><path d="M46 18a8 8 0 0 0-8 11L22 45a3.5 3.5 0 0 0 5 5l16-16a8 8 0 0 0 11-8l-5 5-5-1-1-5z"/></svg>
+        <h3>Entretien annuel</h3><p>Vérification, nettoyage et réglages pour un appareil sûr, efficace et qui dure dans le temps.</p></div></article>
+      <article class="service rv d2"><div><span class="num">VI</span>
+        <svg class="ico" viewBox="0 0 74 74" fill="none" stroke="#1f3b36" stroke-width="1.6"><path d="M37 2L72 37 37 72 2 37z" stroke="#c29a4b"/><path d="M40 14L26 38h10l-3 22 16-26H39z" stroke="#d9a79a"/></svg>
+        <h3>Dépannage</h3><p>Radiateurs froids, eau tiède ou clim muette&nbsp;: un appel pour poser le diagnostic et organiser l'intervention.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<div class="rail" aria-hidden="true"></div>
+
+<section class="bloc fonce" id="atouts">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="sur">Pourquoi le choisir</span>
+      <h2>Une affaire d'artisan</h2>
+      <p>Des engagements simples, tenus à l'échelle d'une entreprise à taille humaine.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><svg viewBox="0 0 56 56" fill="none" stroke="#c29a4b" stroke-width="1.4"><circle cx="28" cy="20" r="9"/><path d="M10 50c0-10 8-15 18-15s18 5 18 15"/></svg><h3>Un seul interlocuteur</h3><p>Vous échangez directement avec Bruno Ascione, du premier appel à la fin du chantier.</p></div>
+      <div class="atout rv d1"><svg viewBox="0 0 56 56" fill="none" stroke="#c29a4b" stroke-width="1.4"><path d="M10 48V22l10-8v34M20 48V8h16v40M36 48V14l10 8v26"/><path d="M6 48h44"/></svg><h3>La proximité villeurbannaise</h3><p>Basé à Villeurbanne, il intervient sur la commune et à Lyon, sans détour par une plateforme.</p></div>
+      <div class="atout rv d2"><svg viewBox="0 0 56 56" fill="none" stroke="#c29a4b" stroke-width="1.4"><rect x="12" y="8" width="32" height="40" rx="2"/><path d="M18 18h20M18 26h20M18 34h12"/><path d="M34 40l4 4 8-10" stroke="#d9a79a"/></svg><h3>Un devis clair</h3><p>Une proposition écrite et détaillée avant toute intervention, pour décider sereinement.</p></div>
+      <div class="atout rv d3"><svg viewBox="0 0 56 56" fill="none" stroke="#c29a4b" stroke-width="1.4"><path d="M28 6c-8 10-12 14-12 22a12 12 0 0 0 24 0c0-8-4-12-12-22z"/><path d="M22 34h12" stroke="#6f9a8d"/></svg><h3>Le chaud comme le froid</h3><p>Chaudière, PAC, clim et eau chaude&nbsp;: une vision d'ensemble de votre confort.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="entete rv">
+      <svg class="orn" aria-hidden="true"><use href="#eventail"/></svg>
+      <span class="sur">Comment ça se passe</span>
+      <h2>Quatre marches jusqu'au confort</h2>
+      <p>Comme les gradins des tours de l'avenue Henri-Barbusse, chaque étape s'appuie sur la précédente.</p>
+    </div>
+    <div class="gradins">
+      <div class="marche rv"><span class="n">1</span><h3>Premier contact</h3><p>Par téléphone ou via le formulaire, vous expliquez votre besoin et votre équipement actuel.</p></div>
+      <div class="marche rv d1"><span class="n">2</span><h3>Visite sur place</h3><p>Diagnostic du logement, de l'existant et des contraintes d'installation.</p></div>
+      <div class="marche rv d2"><span class="n">3</span><h3>Devis détaillé</h3><p>Une proposition écrite, chiffrée, que vous prenez le temps d'étudier.</p></div>
+      <div class="marche rv d3"><span class="n">4</span><h3>Pose &amp; mise en service</h3><p>Installation soignée, réglages, puis explications pour bien utiliser votre équipement.</p></div>
+    </div>
+    <div class="socle" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="bloc fonce" id="apropos">
+  <div class="wrap apropos">
+    <div class="medaillon rv" aria-hidden="true">
+      <svg viewBox="0 0 300 400">
+        <path d="M10 390V150A140 140 0 0 1 290 150V390z" fill="#16302b" stroke="#c29a4b" stroke-width="2"/>
+        <path d="M24 376V152A126 126 0 0 1 276 152V376z" fill="none" stroke="#c29a4b" stroke-width=".8"/>
+        <g stroke="#c29a4b" stroke-width=".8" opacity=".5">
+          <path d="M150 300L40 120M150 300L80 70M150 300L150 40M150 300L220 70M150 300L260 120"/>
+        </g>
+        <circle cx="150" cy="300" r="70" fill="#1f3b36" stroke="#c29a4b"/>
+        <g transform="translate(60 160)">
+          <svg width="52" height="138" viewBox="0 0 240 640"><use href="#tour"/></svg>
+        </g>
+        <g transform="translate(240 160) scale(-1 1)">
+          <svg width="52" height="138" viewBox="0 0 240 640"><use href="#tour"/></svg>
+        </g>
+        <text x="150" y="292" text-anchor="middle" font-family="Poiret One,serif" font-size="44" fill="#dcbd7c">BA</text>
+        <text x="150" y="324" text-anchor="middle" font-family="Libre Franklin,sans-serif" font-size="10" letter-spacing="4" fill="#f4eedf">69100</text>
+        <path d="M24 376h252" stroke="#c29a4b"/>
+        <g fill="#c29a4b"><path d="M150 352l6 6-6 6-6-6z"/></g>
+      </svg>
+    </div>
+    <div class="rv d1">
+      <span class="sur">L'artisan</span>
+      <h2>Bruno Ascione, chauffagiste à Villeurbanne</h2>
+      <p>Bruno Ascione est artisan chauffagiste à Villeurbanne, dans le 69100. Il intervient sur les chaudières gaz ou fioul, les pompes à chaleur, la climatisation et les chauffe-eau thermodynamiques.</p>
+      <p>Entre les immeubles des années 30 du quartier des Gratte-Ciel, les maisons de faubourg et les appartements plus récents, Villeurbanne offre des logements très variés&nbsp;: chacun appelle une solution pensée sur mesure.</p>
+      <p>Il se déplace à Villeurbanne et à Lyon. Pour un projet, un entretien ou une panne, un simple appel ou un e-mail suffit pour en parler.</p>
+      <div class="signature"><i></i><span>Bruno Ascione</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc creme" id="realisations">
+  <div class="wrap">
+    <div class="entete rv">
+      <svg class="orn" aria-hidden="true"><use href="#eventail"/></svg>
+      <span class="sur">Réalisations types</span>
+      <h2>Quelques chantiers en vitrine</h2>
+      <p>Illustrations des types de prestations proposées&nbsp;; elles ne représentent pas des chantiers réels.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real rv"><div class="arche"><svg viewBox="0 0 300 400" aria-hidden="true">
+        <g stroke="#c29a4b" stroke-width="1" opacity=".35"><path d="M150 400L0 140M150 400L60 40M150 400L150 0M150 400L240 40M150 400L300 140"/></g>
+        <rect x="90" y="120" width="120" height="190" rx="4" fill="#f4eedf"/><rect x="104" y="136" width="92" height="34" fill="#1f3b36"/><circle cx="122" cy="153" r="6" fill="#c29a4b"/><path d="M136 150h46M136 158h30" stroke="#dcbd7c" stroke-width="3"/>
+        <path class="flamme" d="M150 280c-16 0-22-10-22-18 0-12 12-18 22-36 10 18 22 24 22 36 0 8-6 18-22 18z" fill="#d9a79a"/><path d="M150 280c-6 0-9-4-9-8 0-5 4-8 9-14 5 6 9 9 9 14 0 4-3 8-9 8z" fill="#f4eedf"/>
+        <path d="M110 310v40M130 310v40M170 310v40M190 310v40" stroke="#c29a4b" stroke-width="5"/><rect x="40" y="350" width="220" height="8" fill="#c29a4b"/></svg></div>
+        <figcaption><b>Chaudière gaz murale</b><span>Exemple de prestation</span></figcaption></figure>
+      <figure class="real rv d1"><div class="arche"><svg viewBox="0 0 300 400" aria-hidden="true">
+        <g stroke="#c29a4b" stroke-width="1" opacity=".35"><path d="M150 400L0 140M150 400L60 40M150 400L150 0M150 400L240 40M150 400L300 140"/></g>
+        <path d="M50 340V200l100-70 100 70v140z" fill="#16302b" stroke="#c29a4b" stroke-width="2"/><rect x="130" y="270" width="40" height="70" fill="#c29a4b"/><rect x="78" y="230" width="34" height="34" fill="#dcbd7c" opacity=".5"/><rect x="188" y="230" width="34" height="34" fill="#dcbd7c" opacity=".5"/>
+        <rect x="196" y="290" width="78" height="50" rx="3" fill="#f4eedf"/><circle cx="224" cy="315" r="17" fill="#1f3b36"/><path d="M224 298v34M207 315h34" stroke="#6f9a8d" stroke-width="3"/><path d="M254 300v30M262 300v30" stroke="#1f3b36" stroke-width="2"/>
+        <rect x="20" y="340" width="260" height="8" fill="#c29a4b"/></svg></div>
+        <figcaption><b>Pompe à chaleur en maison</b><span>Exemple de prestation</span></figcaption></figure>
+      <figure class="real rv d2"><div class="arche"><svg viewBox="0 0 300 400" aria-hidden="true">
+        <g stroke="#c29a4b" stroke-width="1" opacity=".35"><path d="M150 400L0 140M150 400L60 40M150 400L150 0M150 400L240 40M150 400L300 140"/></g>
+        <rect x="50" y="140" width="200" height="50" rx="6" fill="#f4eedf"/><path d="M62 176h176" stroke="#6f9a8d" stroke-width="3"/><rect x="66" y="152" width="40" height="14" fill="#1f3b36"/>
+        <g fill="none" stroke="#dcbd7c" stroke-width="3" stroke-dasharray="7 7"><path d="M90 200c-6 22 10 30 2 56"/><path d="M150 200c-6 22 10 30 2 62"/><path d="M210 200c-6 22 10 30 2 56"/></g>
+        <path d="M70 300h160v40H70z" fill="#6f9a8d"/><path d="M80 300v-20h140v20" fill="none" stroke="#c29a4b" stroke-width="3"/><rect x="40" y="340" width="220" height="8" fill="#c29a4b"/></svg></div>
+        <figcaption><b>Climatisation de séjour</b><span>Exemple de prestation</span></figcaption></figure>
+      <figure class="real rv d3"><div class="arche"><svg viewBox="0 0 300 400" aria-hidden="true">
+        <g stroke="#c29a4b" stroke-width="1" opacity=".35"><path d="M150 400L0 140M150 400L60 40M150 400L150 0M150 400L240 40M150 400L300 140"/></g>
+        <rect x="104" y="110" width="92" height="230" rx="46" fill="#f4eedf"/><path d="M104 170h92" stroke="#c29a4b" stroke-width="2"/><circle cx="150" cy="140" r="16" fill="#1f3b36"/><path d="M150 126v28M136 140h28" stroke="#6f9a8d" stroke-width="3"/>
+        <rect x="122" y="190" width="56" height="120" rx="6" fill="#1f3b36"/><rect x="128" y="250" width="44" height="54" fill="#d9a79a"/><rect x="128" y="200" width="44" height="44" fill="#6f9a8d" opacity=".6"/>
+        <path d="M60 140c14 0 18 12 34 10M60 162c14 0 18 12 34 10" stroke="#dcbd7c" stroke-width="3" fill="none" stroke-dasharray="6 6"/><rect x="40" y="340" width="220" height="8" fill="#c29a4b"/></svg></div>
+        <figcaption><b>Chauffe-eau thermodynamique</b><span>Exemple de prestation</span></figcaption></figure>
+    </div>
+    <div class="tarif rv"><div><strong>Sur devis</strong><p>Chaque installation dépend du logement, de l'appareil existant et des accès. Le tarif est établi après échange et, si besoin, visite. Demande de devis gratuite et sans engagement.</p></div></div>
+  </div>
+</section>
+
+<section class="bloc" id="avis">
+  <div class="wrap avis rv">
+    <svg class="eventail" viewBox="0 0 200 104" aria-hidden="true"><use href="#eventail"/></svg>
+    <span class="sur">Votre avis compte</span>
+    <h2>Bruno Ascione est intervenu chez vous&nbsp;?</h2>
+    <p>Partagez votre expérience sur Google&nbsp;: quelques lignes aident vos voisins de Villeurbanne et de Lyon à trouver le bon artisan.</p>
+    <a class="btn btn-vert" href="https://www.google.com/maps/search/?api=1&amp;query=Ascione+Bruno+Villeurbanne" target="_blank" rel="noopener">Laisser un avis Google</a>
+  </div>
+</section>
+
+<div class="rail" aria-hidden="true"></div>
+
+<section class="bloc creme" id="faq">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="sur">Questions fréquentes</span>
+      <h2>Bon à savoir</h2>
+    </div>
+    <div class="faq rv">
+      <div class="q"><button aria-expanded="false">Chaudière ou pompe à chaleur : que choisir&nbsp;?<i>+</i></button><div class="rep"><div><p>Le choix dépend de l'isolation, des radiateurs ou du plancher chauffant, de la place disponible et du budget. En appartement comme en maison, une visite permet de comparer les options concrètement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Peut-on installer une climatisation en appartement&nbsp;?<i>+</i></button><div class="rep"><div><p>C'est souvent possible, sous réserve des contraintes techniques et, en copropriété, des règles de l'immeuble pour l'unité extérieure. Ces points sont étudiés avant le devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">L'entretien de la chaudière est-il obligatoire&nbsp;?<i>+</i></button><div class="rep"><div><p>Oui, l'entretien annuel est obligatoire pour les chaudières gaz et fioul concernées par la réglementation. Il est aussi conseillé pour les pompes à chaleur afin de préserver leur rendement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Comment fonctionne un chauffe-eau thermodynamique&nbsp;?<i>+</i></button><div class="rep"><div><p>Une petite pompe à chaleur récupère les calories de l'air pour chauffer l'eau du ballon. Il consomme en général moins qu'un cumulus électrique classique, à condition d'être bien placé.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Où intervenez-vous&nbsp;?<i>+</i></button><div class="rep"><div><p>À Villeurbanne et à Lyon. Pour une autre commune proche, le plus simple est d'appeler pour vérifier.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Le devis est-il gratuit&nbsp;?<i>+</i></button><div class="rep"><div><p>La demande de devis est gratuite et sans engagement. Les modalités (visite, délais) vous sont précisées lors du premier échange.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="infos">
+  <div class="wrap infos">
+    <div class="panneau rv"><div>
+      <span class="sur">Horaires</span>
+      <h3>Quand le joindre</h3>
+      <p class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi</p>
+      <table class="horaires"><tbody>
+        <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+        <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+        <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+        <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+        <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+        <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+        <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+      </tbody></table>
+    </div></div>
+    <div class="panneau rv d1"><div>
+      <span class="sur">Zone desservie</span>
+      <h3>Villeurbanne et Lyon</h3>
+      <div class="plan"><svg viewBox="0 0 400 220" aria-hidden="true"><rect width="400" height="220" fill="#ece4cf"/><g stroke="#c29a4b" stroke-width=".6" opacity=".5"><path d="M0 44h400M0 88h400M0 132h400M0 176h400M50 0v220M100 0v220M150 0v220M200 0v220M250 0v220M300 0v220M350 0v220"/></g><path d="M0 40c60 20 110 10 150 40s30 80 60 140" stroke="#6f9a8d" stroke-width="9" fill="none" opacity=".6"/><path d="M60 0c10 40 30 70 70 100" stroke="#6f9a8d" stroke-width="6" fill="none" opacity=".45"/><text x="168" y="200" font-family="Libre Franklin,sans-serif" font-size="10" fill="#1f3b36" opacity=".6">Rhône</text><circle cx="120" cy="140" r="5" fill="#1f3b36"/><text x="58" y="160" font-family="Poiret One,serif" font-size="17" fill="#1f3b36">Lyon</text><path d="M268 96l14-14 14 14-14 14z" fill="#c29a4b"/><circle cx="282" cy="96" r="34" fill="none" stroke="#1f3b36" stroke-dasharray="3 5"/><text x="232" y="150" font-family="Poiret One,serif" font-size="20" fill="#1f3b36">Villeurbanne</text></svg></div>
+      <p style="color:var(--doux);font-size:.95rem">Artisan basé à Villeurbanne (69100), interventions à Villeurbanne et à Lyon.</p>
+      <a class="btn btn-vert" href="https://www.google.com/maps/search/?api=1&amp;query=Ascione+Bruno+Villeurbanne+69100" target="_blank" rel="noopener">Itinéraire</a>
+    </div></div>
+  </div>
+</section>
+
+<section class="bloc fonce" id="contact">
+  <div class="wrap contact">
+    <div class="coord rv">
+      <span class="sur">Contact</span>
+      <h2>Parlons de votre chauffage</h2>
+      <p>Installation, remplacement, entretien ou dépannage&nbsp;: décrivez votre besoin, Bruno Ascione vous recontacte.</p>
+      <a href="tel:+33698461963"><svg viewBox="0 0 44 44" fill="none"><path d="M22 1L43 22 22 43 1 22z" stroke="#c29a4b"/><svg x="12" y="12" width="20" height="20" style="color:#dcbd7c"><use href="#ph"/></svg></svg><div><small>Téléphone</small><span>06 98 46 19 63</span></div></a>
+      <a href="mailto:bruno.ascione@hotmail.com"><svg viewBox="0 0 44 44" fill="none" stroke="#dcbd7c" stroke-width="1.5"><path d="M22 1L43 22 22 43 1 22z" stroke="#c29a4b" stroke-width="1"/><rect x="13" y="15" width="18" height="14" rx="1"/><path d="M13.5 16l8.5 7 8.5-7"/></svg><div><small>E-mail</small><span>bruno.ascione@hotmail.com</span></div></a>
+      <div class="l"><svg viewBox="0 0 44 44" fill="none" stroke="#dcbd7c" stroke-width="1.5"><path d="M22 1L43 22 22 43 1 22z" stroke="#c29a4b" stroke-width="1"/><path d="M22 12c-4 0-7 3-7 7 0 5 7 12 7 12s7-7 7-12c0-4-3-7-7-7z"/></svg><div><small>Zone</small><span>Villeurbanne (69100) et Lyon</span></div></div>
+    </div>
+    <form id="form" class="rv d1" novalidate>
+      <div class="champs">
+        <div class="champ"><label for="nom">Nom</label><input id="nom" autocomplete="name" placeholder="Votre nom"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+        <div class="champ"><label for="mail">E-mail</label><input id="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+        <div class="champ"><label for="ville">Commune</label><input id="ville" placeholder="Villeurbanne, Lyon 6e…"></div>
+        <div class="champ large"><label for="besoin">Votre besoin</label><select id="besoin"><option>Chaudière gaz ou fioul</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Entretien</option><option>Dépannage</option><option>Autre</option></select></div>
+        <div class="champ large"><label for="msg">Message</label><textarea id="msg" placeholder="Type de logement, étage, équipement actuel…"></textarea></div>
+      </div>
+      <div class="envoi"><button class="btn btn-vert" type="submit">Envoyer la demande</button><small>Vos coordonnées servent uniquement à répondre à votre demande.</small></div>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a href="#accueil" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1L39 20 20 39 1 20z" fill="none" stroke="#c29a4b"/><path d="M20 6L34 20 20 34 6 20z" fill="#c29a4b"/><text x="20" y="25.5" text-anchor="middle" font-family="Poiret One,serif" font-size="14" fill="#16302b">BA</text></svg><span><b>Bruno Ascione</b><small>Artisan chauffagiste</small></span></a>
+        <p style="margin-top:18px;max-width:22em">Chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Villeurbanne et Lyon.</p>
+      </div>
+      <div><h4>Coordonnées</h4><ul><li><a href="tel:+33698461963">06 98 46 19 63</a></li><li><a href="mailto:bruno.ascione@hotmail.com">bruno.ascione@hotmail.com</a></li><li>Villeurbanne (69100)</li></ul></div>
+      <div><h4>Horaires</h4><ul><li>À confirmer</li><li>Sur rendez-vous</li><li>Du lundi au vendredi</li></ul></div>
+      <div><h4>Navigation</h4><ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul></div>
+    </div>
+    <div class="mentions"><span>© 2026 Bruno Ascione – artisan chauffagiste – Villeurbanne</span><span>Mentions légales · Confidentialité (à compléter)</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement.</div>
+<a href="tel:+33698461963" class="appel-flottant" aria-label="Appeler Bruno Ascione"><svg><use href="#ph"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>40);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.closest('.q'),o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+  var row=document.querySelector('.horaires tr[data-j="'+new Date().getDay()+'"]');if(row)row.classList.add('auj');
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

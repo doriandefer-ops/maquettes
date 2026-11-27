@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Di Marco Plomberie – plombier chauffagiste à Vénissieux</title>
+<meta name="description" content="Di Marco Plomberie, plombier chauffagiste à Vénissieux (69200) : chaudière gaz ou fioul, entretien, dépannage, chauffe-eau et plomberie générale à Vénissieux et dans le sud-est lyonnais. Devis sur demande au 07 77 25 83 39.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acide:#c6f432;
+  --violet:#6c3cff;
+  --noir:#0f0f0f;
+  --blanc:#ffffff;
+  --papier:#f2f0ea;
+  --rose:#ff5fa2;
+  --mono:"Rubik Mono One",system-ui,sans-serif;
+  --corps:"Rubik",system-ui,sans-serif;
+  --b:3px solid var(--noir);
+  --bb:4px solid var(--noir);
+  --o:6px 6px 0 var(--noir);
+  --o-g:10px 10px 0 var(--noir);
+  --larg:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--papier);color:var(--noir);font-family:var(--corps);font-size:1.0625rem;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(15,15,15,.09) 1.2px,transparent 1.3px);background-size:22px 22px}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{margin:0;line-height:1.02;font-weight:400}
+h2,.mono{font-family:var(--mono);letter-spacing:-.02em;word-spacing:-.28em}
+.t-nom h1,.t-ville .cp,.piste span,.pied .grand,.logo,.t-appel .num,.sticker,.panneau h3,.tarifs h3,.etape .chiffre{word-spacing:-.28em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+
+/* ---------- boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--corps);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:.95em 1.35em;border:var(--b);background:var(--blanc);color:var(--noir);box-shadow:var(--o);transition:transform .15s ease,box-shadow .15s ease,background .15s;cursor:pointer;white-space:nowrap}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--noir)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--noir)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-acide{background:var(--acide)}
+.btn-violet{background:var(--violet);color:var(--blanc)}
+.btn-rose{background:var(--rose)}
+.btn-noir{background:var(--noir);color:var(--acide);box-shadow:6px 6px 0 var(--violet)}
+.btn-noir:hover{box-shadow:9px 9px 0 var(--violet)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:12px 0;transition:padding .2s}
+.nav .barre{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--blanc);border:var(--b);box-shadow:var(--o);padding:10px 10px 10px 16px}
+.nav.plein{padding:8px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--mono);font-size:1rem;line-height:1}
+.logo .pastille{width:38px;height:38px;border:var(--b);background:var(--acide);display:grid;place-items:center;transform:rotate(-6deg)}
+.logo .pastille svg{width:22px;height:22px}
+.logo small{display:block;font-family:var(--corps);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px;color:var(--violet)}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-weight:700;font-size:.92rem;padding:.55em .8em;border:2px solid transparent;transition:background .15s,border-color .15s}
+.menu a:hover{background:var(--acide);border-color:var(--noir)}
+.menu .btn{padding:.6em 1em;font-size:.85rem;box-shadow:4px 4px 0 var(--noir);margin-left:6px}
+.burger{display:none;width:48px;height:48px;border:var(--b);background:var(--acide);cursor:pointer;padding:0;flex-direction:column;justify-content:center;box-shadow:3px 3px 0 var(--noir)}
+.burger span{display:block;width:22px;height:3px;background:var(--noir);margin:4px auto;transition:transform .2s,opacity .2s}
+.nav.ouvert .burger span:nth-child(1){transform:translateY(11px) rotate(45deg)}
+.nav.ouvert .burger span:nth-child(2){opacity:0}
+.nav.ouvert .burger span:nth-child(3){transform:translateY(-11px) rotate(-45deg)}
+
+/* ---------- héros bento ---------- */
+.heros{padding:118px 0 40px;overflow:hidden}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(120px,auto);gap:18px}
+.tuile{position:relative;border:var(--bb);box-shadow:var(--o-g);padding:28px;overflow:hidden}
+.t-nom{grid-column:1/8;grid-row:1/4;background:var(--blanc);display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.t-illu{grid-column:8/13;grid-row:1/3;background:var(--violet);padding:0;min-height:330px}
+.t-appel{grid-column:8/11;grid-row:3/5;background:var(--acide);display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.t-appel:hover{transform:translate(-4px,-4px);box-shadow:14px 14px 0 var(--noir)}
+.t-rose{grid-column:11/13;grid-row:3/5;background:var(--rose);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:10px}
+.t-ville{grid-column:1/8;grid-row:4/6;background:var(--noir);color:var(--blanc);padding:0;display:flex;align-items:stretch;min-height:200px}
+.t-ruban{grid-column:8/13;grid-row:5/6;background:var(--papier);display:flex;align-items:center;gap:16px;padding:18px 24px}
+.etiquette{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;background:var(--noir);color:var(--acide);padding:.45em .8em;align-self:flex-start}
+.etiquette i{width:9px;height:9px;border-radius:50%;background:var(--acide);display:block;animation:clign 1.4s steps(2) infinite}
+@keyframes clign{50%{opacity:.15}}
+.t-nom h1{font-family:var(--mono);font-size:clamp(2.5rem,6.2vw,5.6rem);line-height:.92;letter-spacing:-.04em;word-break:keep-all}
+.t-nom h1 .surl{display:inline-block;background:var(--acide);border:var(--b);padding:.02em .14em .08em;margin-top:.08em;transform:rotate(-2deg);box-shadow:5px 5px 0 var(--violet)}
+.t-nom .accroche{font-size:clamp(1.05rem,1.5vw,1.28rem);font-weight:500;max-width:36em;margin:0}
+.t-nom .accroche strong{background:linear-gradient(transparent 58%,var(--rose) 58%);font-weight:800}
+.boutons{display:flex;flex-wrap:wrap;gap:16px}
+.sticker{position:absolute;z-index:3;font-family:var(--mono);font-size:.78rem;line-height:1.15;text-align:center;border:var(--b);background:var(--rose);padding:12px 14px;box-shadow:4px 4px 0 var(--noir);transform:rotate(9deg)}
+.t-nom .sticker{top:22px;right:22px;background:var(--acide)}
+.t-illu svg{width:100%;height:100%}
+.t-illu .sticker{bottom:18px;left:18px;transform:rotate(-7deg);background:var(--blanc)}
+.t-appel .lab{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem}
+.t-appel .num{font-family:var(--mono);font-size:clamp(1.35rem,2.1vw,1.9rem);line-height:1.05;letter-spacing:-.03em}
+.t-appel .fleche{width:54px;height:54px;border:var(--b);background:var(--noir);display:grid;place-items:center;align-self:flex-end;transition:transform .2s}
+.t-appel:hover .fleche{transform:rotate(-45deg)}
+.t-appel .fleche svg{width:26px;height:26px}
+.t-rose .gros{font-family:var(--mono);font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:.95}
+.t-rose p{margin:0;font-weight:700;font-size:.92rem}
+.t-rose svg{width:64px;height:64px}
+.t-ville .txt{flex:1 1 0;min-width:0;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;position:relative;z-index:2}
+.t-ville .cp{font-family:var(--mono);font-size:clamp(2rem,3.8vw,3.4rem);line-height:.9;color:var(--acide)}
+.t-ville .cp span{display:block;font-size:.42em;color:var(--blanc);margin-top:.25em}
+.t-ville p{margin:0;color:rgba(255,255,255,.82);font-size:.98rem;max-width:26em}
+.t-ville .tours{flex:0 0 44%;align-self:flex-end;display:flex;align-items:flex-end}
+.t-ville .tours svg{width:100%;height:auto}
+.t-ruban svg{width:46px;height:46px;flex:none}
+.t-ruban p{margin:0;font-weight:600;font-size:.98rem}
+
+/* animation illu */
+.goutte-a{animation:goutte 2.4s ease-in infinite}
+@keyframes goutte{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{transform:translateY(46px);opacity:1}100%{transform:translateY(52px);opacity:0}}
+.flamme-a{transform-origin:50% 100%;transform-box:fill-box;animation:flamme 1.1s ease-in-out infinite alternate}
+@keyframes flamme{to{transform:scaleY(1.18) scaleX(.92)}}
+.cle-a{transform-origin:72% 30%;transform-box:fill-box;animation:cle 3.2s ease-in-out infinite}
+@keyframes cle{0%,100%{transform:rotate(0)}50%{transform:rotate(-9deg)}}
+.vapeur{animation:vap 3s ease-out infinite;opacity:0}
+.vapeur.v2{animation-delay:1.5s}
+@keyframes vap{0%{transform:translateY(0);opacity:0}30%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+
+/* ---------- bandeau défilant ---------- */
+.defile{background:var(--noir);color:var(--acide);border-block:var(--bb);overflow:hidden;transform:rotate(-1.4deg);margin:34px -20px 0;position:relative;z-index:2}
+.defile.v{background:var(--acide);color:var(--noir);transform:rotate(1.2deg);margin-top:-14px;z-index:1}
+.piste{display:flex;width:max-content;animation:defile 30s linear infinite}
+.defile.v .piste{animation-direction:reverse;animation-duration:36s}
+.piste span{font-family:var(--mono);font-size:clamp(1rem,2vw,1.4rem);padding:14px 0;white-space:nowrap;display:flex;align-items:center}
+.piste span::after{content:"";width:18px;height:18px;margin:0 26px;background:var(--rose);border:2px solid currentColor;transform:rotate(45deg)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ---------- confiance ---------- */
+.confiance{padding:64px 0 10px}
+.conf-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.conf{display:flex;gap:14px;align-items:center;background:var(--blanc);border:var(--b);box-shadow:var(--o);padding:18px}
+.conf .ic{width:52px;height:52px;flex:none;border:var(--b);display:grid;place-items:center}
+.conf .ic svg{width:28px;height:28px}
+.conf b{display:block;font-weight:800;line-height:1.2}
+.conf span{font-size:.9rem;color:#3c3c3c}
+.conf:nth-child(1) .ic{background:var(--acide)}
+.conf:nth-child(2) .ic{background:var(--rose)}
+.conf:nth-child(3) .ic{background:var(--violet)}
+.conf:nth-child(4) .ic{background:var(--papier)}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.bloc{padding:96px 0}
+.entete{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:46px}
+.entete>div{flex:1 1 560px;max-width:820px}
+.entete h2{font-size:clamp(1.9rem,4.4vw,3.6rem);line-height:.98;max-width:15em}
+.entete p{max-width:30em;margin:0;font-size:1.06rem}
+.surtitre{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;background:var(--violet);color:var(--blanc);padding:.4em .75em;border:var(--b);margin-bottom:16px;transform:rotate(-2deg)}
+.surl-v{background:var(--acide);padding:0 .12em;border:3px solid var(--noir);display:inline-block;transform:rotate(1deg)}
+.surl-r{background:var(--rose);padding:0 .12em;border:3px solid var(--noir);display:inline-block;transform:rotate(-1deg)}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.serv{background:var(--blanc);border:var(--b);box-shadow:var(--o);padding:26px 24px 24px;transition:transform .18s,box-shadow .18s,background .18s;position:relative}
+.serv:hover{transform:translate(-4px,-4px) rotate(-.6deg);box-shadow:11px 11px 0 var(--noir)}
+.serv .ic{width:74px;height:74px;border:var(--b);display:grid;place-items:center;margin-bottom:20px;box-shadow:4px 4px 0 var(--noir)}
+.serv .ic svg{width:44px;height:44px}
+.serv h3{font-family:var(--corps);font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:8px}
+.serv p{margin:0;font-size:.99rem;color:#2c2c2c}
+.serv .badge{position:absolute;top:-14px;right:16px;font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--noir);color:var(--acide);padding:.4em .7em;transform:rotate(4deg)}
+.serv.vedette{background:var(--acide);grid-column:span 1}
+.c1 .ic{background:var(--rose)}.c2 .ic{background:var(--acide)}.c3 .ic{background:var(--violet)}.c4 .ic{background:var(--papier)}.c5 .ic{background:var(--rose)}.c6 .ic{background:var(--acide)}
+.vedette .ic{background:var(--blanc)}
+
+/* pourquoi */
+.pourquoi{background:var(--violet);color:var(--blanc);border-block:var(--bb)}
+.pourquoi .surtitre{background:var(--acide);color:var(--noir)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.atout{background:var(--noir);border:3px solid var(--noir);box-shadow:8px 8px 0 var(--acide);padding:28px 24px;transition:transform .18s}
+.atout:nth-child(even){transform:translateY(26px)}
+.atout:hover{transform:translateY(-6px) rotate(-1deg)}
+.atout:nth-child(even):hover{transform:translateY(20px) rotate(1deg)}
+.atout .n{font-family:var(--mono);font-size:2.6rem;line-height:1;color:var(--acide);margin-bottom:16px;display:block}
+.atout:nth-child(2) .n{color:var(--rose)}.atout:nth-child(4) .n{color:var(--rose)}
+.atout h3{font-weight:800;font-family:var(--corps);font-size:1.18rem;margin-bottom:10px;color:var(--blanc)}
+.atout p{margin:0;color:rgba(255,255,255,.8);font-size:.97rem}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:var(--bb);box-shadow:var(--o-g);background:var(--blanc)}
+.etape{padding:30px 24px 28px;border-right:var(--b);position:relative}
+.etape:last-child{border-right:0}
+.etape .chiffre{font-family:var(--mono);font-size:3.6rem;line-height:.9;display:inline-block;-webkit-text-stroke:3px var(--noir);color:transparent;margin-bottom:18px}
+.etape:nth-child(1) .chiffre{color:var(--acide)}
+.etape:nth-child(3) .chiffre{color:var(--rose)}
+.etape h3{font-weight:800;font-family:var(--corps);font-size:1.15rem;text-transform:uppercase;margin-bottom:8px}
+.etape p{margin:0;font-size:.97rem}
+.etape:nth-child(2){background:var(--papier)}
+.etape:nth-child(4){background:var(--acide)}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.apropos .carte{background:var(--blanc);border:var(--bb);box-shadow:var(--o-g);padding:38px}
+.apropos .carte h2{font-size:clamp(1.8rem,3.6vw,2.9rem);margin-bottom:22px}
+.apropos .carte p{font-size:1.06rem}
+.apropos .carte p:last-child{margin:0}
+.fiche{display:grid;gap:14px}
+.ligne-fiche{display:flex;justify-content:space-between;align-items:center;gap:14px;border:var(--b);background:var(--papier);padding:16px 18px;box-shadow:4px 4px 0 var(--noir);text-decoration:none;transition:transform .15s,background .15s}
+a.ligne-fiche:hover{transform:translate(-3px,-3px);background:var(--acide)}
+.ligne-fiche span{font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+.ligne-fiche b{font-weight:800;text-align:right;overflow-wrap:anywhere}
+.ligne-fiche:nth-child(2){transform:rotate(-1deg)}
+.ligne-fiche:nth-child(3){transform:rotate(.8deg)}
+.ligne-fiche:nth-child(2):hover,.ligne-fiche:nth-child(3):hover{transform:translate(-3px,-3px)}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.real{background:var(--blanc);border:var(--b);box-shadow:var(--o);margin:0;transition:transform .18s,box-shadow .18s}
+.real:hover{transform:translate(-3px,-3px) rotate(.6deg);box-shadow:10px 10px 0 var(--noir)}
+.real .vis{aspect-ratio:4/3;border-bottom:var(--b);overflow:hidden}
+.real .vis svg{width:100%;height:100%}
+.real figcaption{padding:16px 18px}
+.real figcaption b{display:block;font-weight:800;font-size:1.04rem;text-transform:uppercase;line-height:1.2;margin-bottom:6px}
+.real figcaption small{display:inline-block;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--papier);border:2px solid var(--noir);padding:.25em .55em}
+.tarifs{margin-top:44px;display:grid;grid-template-columns:1.3fr 1fr;border:var(--bb);box-shadow:var(--o-g);background:var(--rose)}
+.tarifs .g{padding:32px;border-right:var(--bb)}
+.tarifs h3{line-height:1.1;font-family:var(--mono);font-size:clamp(1.4rem,2.6vw,2.1rem);margin-bottom:14px}
+.tarifs ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tarifs li{display:flex;justify-content:space-between;gap:12px;background:var(--blanc);border:var(--b);padding:12px 16px;font-weight:700}
+.tarifs li em{font-style:normal;font-weight:800;background:var(--noir);color:var(--acide);padding:.1em .55em;white-space:nowrap}
+.tarifs .d{padding:32px;background:var(--acide);display:flex;flex-direction:column;justify-content:center;gap:18px}
+.tarifs .d p{margin:0;font-weight:500;font-size:1.04rem}
+
+/* avis */
+.avis{background:var(--noir);color:var(--blanc);border-block:var(--bb);overflow:hidden}
+.avis-in{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.avis h2{font-size:clamp(2rem,5vw,4rem);line-height:.95;margin-bottom:20px}
+.avis h2 .surl-v{color:var(--noir)}
+.avis p{color:rgba(255,255,255,.82);max-width:34em;font-size:1.06rem}
+.avis .bulle{width:230px;height:230px;border:var(--bb);background:var(--rose);box-shadow:10px 10px 0 var(--acide);display:grid;place-items:center;transform:rotate(6deg);border-radius:50%}
+.avis .bulle svg{width:120px;height:120px}
+
+/* faq */
+.faq-grille{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+.faq-grille .entete{position:sticky;top:110px;display:block}
+.faq-grille .entete>div{flex:1 1 560px;max-width:820px}
+.entete h2{margin-bottom:18px}
+.q{border:var(--b);background:var(--blanc);box-shadow:5px 5px 0 var(--noir);margin-bottom:16px;transition:background .15s}
+.q button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-weight:800;font-size:1.06rem;line-height:1.3}
+.q button:focus-visible{outline:3px solid var(--violet);outline-offset:-6px}
+.q .plus{width:36px;height:36px;flex:none;border:var(--b);background:var(--acide);display:grid;place-items:center;font-family:var(--mono);font-size:1.1rem;transition:transform .2s,background .2s}
+.q.ouvert{background:var(--papier)}
+.q.ouvert .plus{transform:rotate(45deg);background:var(--rose)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{margin:0;padding:0 20px 20px;font-size:1rem}
+
+/* horaires */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.panneau{border:var(--bb);box-shadow:var(--o-g);padding:30px;background:var(--blanc)}
+.panneau h3{font-family:var(--mono);font-size:1.5rem;margin-bottom:8px}
+.panneau .note{font-weight:700;background:var(--acide);border:var(--b);padding:.5em .8em;display:inline-block;margin:4px 0 18px;font-size:.95rem}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:11px 12px;border-bottom:2px dashed rgba(15,15,15,.25);font-weight:600}
+.horaires td:last-child{text-align:right;font-weight:500}
+.horaires tr.auj td{background:var(--violet);color:var(--blanc);border-bottom-color:var(--violet)}
+.horaires tr.auj td:first-child::after{content:"Aujourd'hui";margin-left:10px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--acide);color:var(--noir);padding:.2em .5em;font-weight:800}
+.zone{background:var(--acide);display:flex;flex-direction:column;gap:18px}
+.zone .carte-svg{border:var(--b);background:var(--blanc)}
+.zone .carte-svg svg{width:100%;height:auto}
+.zone p{margin:0;font-weight:500}
+
+/* contact */
+.contact{background:var(--papier)}
+.contact-grille{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:start}
+.coord{background:var(--violet);color:var(--blanc);border:var(--bb);box-shadow:var(--o-g);padding:34px}
+.coord h2{font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:18px}
+.coord p{color:rgba(255,255,255,.86)}
+.coord a.l{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--blanc);color:var(--noir);border:var(--b);padding:14px 16px;margin-top:14px;font-weight:800;box-shadow:4px 4px 0 var(--noir);transition:transform .15s;overflow-wrap:anywhere}
+.coord a.l:hover{transform:translate(-3px,-3px);background:var(--acide)}
+.coord a.l svg{width:24px;height:24px;flex:none}
+form{background:var(--blanc);border:var(--bb);box-shadow:var(--o-g);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.full{grid-column:1/-1}
+label{font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+input,select,textarea{font:inherit;font-size:1rem;border:var(--b);background:var(--papier);padding:13px 14px;border-radius:0;color:var(--noir);width:100%;transition:box-shadow .15s,background .15s}
+input:focus,select:focus,textarea:focus{outline:none;background:var(--blanc);box-shadow:5px 5px 0 var(--violet)}
+textarea{min-height:130px;resize:vertical}
+.rgpd{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
+.rgpd input{width:22px;height:22px;flex:none;accent-color:var(--violet);margin-top:2px}
+form .btn{grid-column:1/-1;justify-self:start}
+.retour{grid-column:1/-1;display:none;margin:0;background:var(--rose);border:var(--b);padding:14px 16px;font-weight:800;box-shadow:4px 4px 0 var(--noir)}
+.retour.vu{display:block;animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.9) rotate(-2deg);opacity:0}}
+
+/* footer */
+footer{background:var(--noir);color:var(--blanc);border-top:var(--bb);padding:70px 0 0}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding-bottom:50px}
+.pied .grand{font-family:var(--mono);font-size:clamp(1.6rem,3vw,2.4rem);line-height:.95;color:var(--acide);margin-bottom:16px}
+.pied h4{margin:0 0 14px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:var(--rose)}
+.pied p,.pied li{color:rgba(255,255,255,.78);font-size:.96rem}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;overflow-wrap:anywhere}
+.pied a:hover{color:var(--acide);text-decoration:underline}
+.mentions{border-top:2px solid rgba(255,255,255,.18);padding:22px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.86rem;color:rgba(255,255,255,.6)}
+.demo{background:var(--acide);color:var(--noir);text-align:center;font-weight:700;font-size:.85rem;padding:10px 16px;border-top:3px solid var(--noir)}
+
+/* appel flottant */
+.flottant{position:fixed;right:16px;bottom:16px;z-index:60;display:none;align-items:center;gap:10px;background:var(--acide);color:var(--noir);border:var(--b);box-shadow:5px 5px 0 var(--noir);font-weight:900;text-transform:uppercase;text-decoration:none;padding:14px 18px;font-size:.95rem;letter-spacing:.04em}
+.flottant svg{width:22px;height:22px;animation:sonne 2.4s ease-in-out infinite}
+@keyframes sonne{0%,60%,100%{transform:rotate(0)}65%,75%{transform:rotate(-14deg)}70%,80%{transform:rotate(14deg)}}
+
+/* révélations */
+.rv{opacity:0;transform:translateY(34px) rotate(-1deg);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1.2)}
+.rv.vu{opacity:1;transform:none}
+.atout.rv.vu:nth-child(even){transform:translateY(26px)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .t-nom{grid-column:1/-1;grid-row:auto}
+  .t-illu{grid-column:1/8;grid-row:auto}
+  .t-appel{grid-column:8/13;grid-row:auto}
+  .t-rose{grid-column:8/13;grid-row:auto}
+  .t-ville{grid-column:1/-1;grid-row:auto}
+  .t-ruban{grid-column:1/-1;grid-row:auto}
+  .bento{grid-template-rows:none}
+  .t-illu{grid-row:span 2}
+  .conf-grille{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:flex}
+  .menu{position:absolute;top:calc(100% + 8px);left:16px;right:16px;flex-direction:column;align-items:stretch;background:var(--blanc);border:var(--bb);box-shadow:var(--o);padding:12px;gap:4px;display:none}
+  .nav.ouvert .menu{display:flex}
+  .menu a{padding:.8em 1em;font-size:1.05rem;border:2px solid var(--noir);background:var(--papier)}
+  .menu .btn{margin:6px 0 0;justify-content:center;padding:.9em;background:var(--acide);font-size:1rem}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr)}
+  .etape:nth-child(2){border-right:0}
+  .etape:nth-child(-n+2){border-bottom:var(--b)}
+  .apropos,.faq-grille,.infos,.contact-grille,.avis-in{grid-template-columns:1fr}
+  .faq-grille .entete{position:static}
+  .tarifs{grid-template-columns:1fr}
+  .tarifs .g{border-right:0;border-bottom:var(--bb)}
+  .avis .bulle{width:170px;height:170px}
+  .avis .bulle svg{width:90px;height:90px}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .heros{padding-top:100px}
+  .bento{grid-template-columns:1fr;gap:16px}
+  .t-nom,.t-illu,.t-appel,.t-rose,.t-ville,.t-ruban{grid-column:1/-1;grid-row:auto}
+  .tuile{padding:22px;box-shadow:7px 7px 0 var(--noir)}
+  .t-illu{padding:0;min-height:0;aspect-ratio:5/4}
+  .t-ville{padding:0;flex-direction:column}
+  .t-ville .txt{padding:22px}
+  .t-nom .sticker{position:static;align-self:flex-start;transform:rotate(-3deg);margin-bottom:-6px}
+  .t-nom h1{font-size:clamp(2.1rem,11vw,3rem)}
+  .boutons{flex-direction:column}
+  .boutons .btn{width:100%}
+  .t-appel{gap:20px}
+  .t-rose{flex-direction:row;justify-content:flex-start;text-align:left;padding:18px 22px}
+  .t-rose svg{width:50px;height:50px;flex:none}
+  .conf-grille,.services,.atouts,.galerie,.etapes{grid-template-columns:1fr}
+  .atout:nth-child(even),.atout.rv.vu:nth-child(even){transform:none}
+  .etape{border-right:0;border-bottom:var(--b)}
+  .etape:last-child{border-bottom:0}
+  .bloc{padding:70px 0}
+  .entete{margin-bottom:32px}
+  form{grid-template-columns:1fr;padding:22px}
+  .apropos .carte,.coord,.panneau{padding:24px}
+  .tarifs .g,.tarifs .d{padding:24px}
+  .tarifs li{flex-direction:column;gap:6px}
+  .tarifs li em{align-self:flex-start}
+  .pied{grid-template-columns:1fr}
+  .flottant{display:flex}
+  .demo{padding-bottom:84px}
+  .ligne-fiche{flex-direction:column;align-items:flex-start}
+  .ligne-fiche b{text-align:left}
+  .avis .bulle{width:140px;height:140px;justify-self:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap barre">
+    <a href="#haut" class="logo" aria-label="Di Marco Plomberie, retour en haut">
+      <span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f0f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.3-.2-.2-2.3z"/></svg></span>
+      <span>DI MARCO<small>Plomberie · Vénissieux</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#infos">Horaires</a></li>
+      <li><a href="#contact" class="btn btn-acide">Devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="haut">
+<!-- ================= HÉROS BENTO ================= -->
+<section class="heros">
+  <div class="wrap bento">
+
+    <div class="tuile t-nom">
+      <span class="sticker">Chaudière<br>gaz · fioul</span>
+      <span class="etiquette"><i></i>Plombier chauffagiste · 69200</span>
+      <h1>DI MARCO<br><span class="surl">PLOMBERIE</span></h1>
+      <p class="accroche">Chaudière qui boude au premier froid, robinet qui goutte, chauffe-eau à bout de souffle&nbsp;? <strong>Un seul numéro à Vénissieux</strong> pour votre chauffage gaz ou fioul et toute la plomberie de la maison, des Minguettes au centre-ville.</p>
+      <div class="boutons">
+        <a class="btn btn-noir" href="tel:+33777258339"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn btn-rose" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+      </div>
+    </div>
+
+    <div class="tuile t-illu" aria-hidden="true">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+        <rect width="500" height="400" fill="#6c3cff"/>
+        <g fill="#5a2ee6"><circle cx="40" cy="40" r="3"/><circle cx="80" cy="40" r="3"/><circle cx="120" cy="40" r="3"/><circle cx="40" cy="80" r="3"/><circle cx="80" cy="80" r="3"/><circle cx="120" cy="80" r="3"/><circle cx="40" cy="120" r="3"/><circle cx="80" cy="120" r="3"/><circle cx="120" cy="120" r="3"/></g>
+        <!-- tuyaux -->
+        <path d="M0 330 H120 V250" fill="none" stroke="#0f0f0f" stroke-width="30"/>
+        <path d="M0 330 H120 V250" fill="none" stroke="#c6f432" stroke-width="20"/>
+        <path d="M500 300 H380 V200 H330" fill="none" stroke="#0f0f0f" stroke-width="30"/>
+        <path d="M500 300 H380 V200 H330" fill="none" stroke="#ff5fa2" stroke-width="20"/>
+        <rect x="104" y="296" width="32" height="18" fill="#fff" stroke="#0f0f0f" stroke-width="5"/>
+        <rect x="362" y="262" width="36" height="18" fill="#fff" stroke="#0f0f0f" stroke-width="5"/>
+        <!-- vanne -->
+        <circle cx="380" cy="200" r="16" fill="#0f0f0f"/><path d="M362 182 L398 218 M398 182 L362 218" stroke="#c6f432" stroke-width="8" stroke-linecap="round"/>
+        <!-- chaudière -->
+        <g>
+          <rect x="146" y="70" width="190" height="250" fill="#0f0f0f" transform="translate(10 10)"/>
+          <rect x="146" y="70" width="190" height="250" fill="#ffffff" stroke="#0f0f0f" stroke-width="6"/>
+          <rect x="146" y="70" width="190" height="46" fill="#c6f432" stroke="#0f0f0f" stroke-width="6"/>
+          <circle cx="176" cy="93" r="9" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="4"/>
+          <rect x="196" y="85" width="70" height="16" fill="#0f0f0f"/>
+          <text x="231" y="98" font-family="Rubik Mono One, monospace" font-size="12" fill="#c6f432" text-anchor="middle">62°C</text>
+          <circle cx="303" cy="93" r="11" fill="#fff" stroke="#0f0f0f" stroke-width="4"/><path d="M303 93 l6 -5" stroke="#0f0f0f" stroke-width="4" stroke-linecap="round"/>
+          <!-- hublot flamme -->
+          <rect x="186" y="150" width="110" height="110" fill="#0f0f0f" stroke="#0f0f0f" stroke-width="6"/>
+          <rect x="196" y="160" width="90" height="90" fill="#2a1a66"/>
+          <g class="flamme-a"><path d="M241 240 C210 236 208 205 228 186 C226 202 236 206 240 198 C238 182 248 172 258 166 C254 184 274 196 270 218 C268 234 256 240 241 240Z" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="4"/>
+          <path d="M241 238 C228 234 228 220 238 212 C238 222 246 222 246 214 C254 222 256 236 241 238Z" fill="#c6f432"/></g>
+          <!-- manomètre bas -->
+          <rect x="146" y="282" width="190" height="38" fill="#f2f0ea" stroke="#0f0f0f" stroke-width="6"/>
+          <rect x="166" y="294" width="18" height="14" fill="#0f0f0f"/><rect x="194" y="294" width="18" height="14" fill="#0f0f0f"/><rect x="222" y="294" width="18" height="14" fill="#6c3cff"/>
+          <path d="M200 320 V350 M270 320 V350" stroke="#0f0f0f" stroke-width="14"/>
+          <path d="M200 320 V350 M270 320 V350" stroke="#fff" stroke-width="6"/>
+        </g>
+        <!-- vapeur -->
+        <path class="vapeur" d="M220 60 q-10 -12 0 -24 q10 -12 0 -24" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+        <path class="vapeur v2" d="M262 60 q-10 -12 0 -24 q10 -12 0 -24" fill="none" stroke="#c6f432" stroke-width="6" stroke-linecap="round"/>
+        <!-- goutte -->
+        <path class="goutte-a" d="M120 262 C112 274 110 280 120 284 C130 280 128 274 120 262Z" fill="#fff" stroke="#0f0f0f" stroke-width="3"/>
+        <!-- clé à molette -->
+        <g class="cle-a">
+          <g transform="translate(262 268) rotate(-38)">
+            <rect x="8" y="8" width="190" height="34" rx="0" fill="#0f0f0f"/>
+            <rect x="0" y="0" width="190" height="34" fill="#c6f432" stroke="#0f0f0f" stroke-width="6"/>
+            <rect x="30" y="11" width="110" height="12" fill="#0f0f0f" opacity=".85"/>
+            <path d="M186 -24 h58 v26 h-24 v30 h24 v26 h-58z" fill="#ffffff" stroke="#0f0f0f" stroke-width="6" stroke-linejoin="miter"/>
+            <circle cx="204" cy="17" r="6" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="3"/>
+          </g>
+        </g>
+        <!-- étoiles -->
+        <path d="M430 60 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8z" fill="#c6f432" stroke="#0f0f0f" stroke-width="4"/>
+        <path d="M70 180 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="3"/>
+      </svg>
+      <span class="sticker">Entretien<br>+ dépannage</span>
+    </div>
+
+    <a class="tuile t-appel" href="tel:+33777258339">
+      <span class="lab">Appel direct</span>
+      <span class="num">07 77 25<br>83 39</span>
+      <span class="fleche"><svg viewBox="0 0 24 24" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="square"><path d="M5 19 19 5M8 5h11v11"/></svg></span>
+    </a>
+
+    <div class="tuile t-rose">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 C20 22 14 32 14 40 a18 18 0 0 0 36 0 C50 32 44 22 32 6Z" fill="#fff" stroke="#0f0f0f" stroke-width="4"/><path d="M24 42 a8 8 0 0 0 8 8" fill="none" stroke="#0f0f0f" stroke-width="4" stroke-linecap="round"/></svg>
+      <div><span class="gros mono">DEVIS</span><p>sur demande, avant travaux</p></div>
+    </div>
+
+    <div class="tuile t-ville">
+      <div class="txt">
+        <span class="etiquette" style="background:var(--acide);color:var(--noir)">Votre plombier de quartier</span>
+        <div class="cp">VÉNISSIEUX<span>69200 · sud-est lyonnais</span></div>
+        <p>Basé à Vénissieux, Di Marco Plomberie intervient dans la commune et alentour. Une question sur votre adresse&nbsp;? Un appel suffit.</p>
+      </div>
+      <div class="tours" aria-hidden="true">
+        <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMax meet">
+          <circle cx="300" cy="60" r="30" fill="#ff5fa2" stroke="#fff" stroke-width="4"/>
+          <g stroke="#0f0f0f" stroke-width="4">
+            <rect x="20" y="70" width="70" height="170" fill="#6c3cff"/>
+            <rect x="100" y="20" width="62" height="220" fill="#c6f432"/>
+            <rect x="172" y="96" width="78" height="144" fill="#ffffff"/>
+            <rect x="260" y="44" width="58" height="196" fill="#ff5fa2"/>
+            <rect x="328" y="120" width="66" height="120" fill="#6c3cff"/>
+          </g>
+          <g fill="#0f0f0f">
+            <rect x="32" y="86" width="12" height="10"/><rect x="54" y="86" width="12" height="10"/><rect x="32" y="110" width="12" height="10"/><rect x="54" y="110" width="12" height="10" fill="#c6f432"/><rect x="32" y="134" width="12" height="10"/><rect x="54" y="134" width="12" height="10"/><rect x="32" y="158" width="12" height="10" fill="#c6f432"/><rect x="54" y="158" width="12" height="10"/><rect x="32" y="182" width="12" height="10"/><rect x="54" y="182" width="12" height="10"/>
+            <rect x="112" y="36" width="10" height="10"/><rect x="132" y="36" width="10" height="10"/><rect x="112" y="60" width="10" height="10"/><rect x="132" y="60" width="10" height="10" fill="#ff5fa2"/><rect x="112" y="84" width="10" height="10"/><rect x="132" y="84" width="10" height="10"/><rect x="112" y="108" width="10" height="10" fill="#ff5fa2"/><rect x="132" y="108" width="10" height="10"/><rect x="112" y="132" width="10" height="10"/><rect x="132" y="132" width="10" height="10"/><rect x="112" y="156" width="10" height="10"/><rect x="132" y="156" width="10" height="10" fill="#6c3cff"/><rect x="112" y="180" width="10" height="10"/><rect x="132" y="180" width="10" height="10"/>
+            <rect x="184" y="112" width="14" height="10"/><rect x="208" y="112" width="14" height="10" fill="#6c3cff"/><rect x="184" y="136" width="14" height="10"/><rect x="208" y="136" width="14" height="10"/><rect x="184" y="160" width="14" height="10" fill="#ff5fa2"/><rect x="208" y="160" width="14" height="10"/><rect x="184" y="184" width="14" height="10"/><rect x="208" y="184" width="14" height="10"/>
+            <rect x="272" y="60" width="10" height="10"/><rect x="292" y="60" width="10" height="10"/><rect x="272" y="84" width="10" height="10" fill="#fff"/><rect x="292" y="84" width="10" height="10"/><rect x="272" y="108" width="10" height="10"/><rect x="292" y="108" width="10" height="10"/><rect x="272" y="132" width="10" height="10"/><rect x="292" y="132" width="10" height="10" fill="#fff"/><rect x="272" y="156" width="10" height="10"/><rect x="292" y="156" width="10" height="10"/>
+            <rect x="340" y="136" width="12" height="10"/><rect x="364" y="136" width="12" height="10" fill="#c6f432"/><rect x="340" y="160" width="12" height="10"/><rect x="364" y="160" width="12" height="10"/><rect x="340" y="184" width="12" height="10" fill="#c6f432"/><rect x="364" y="184" width="12" height="10"/>
+          </g>
+          <rect x="0" y="226" width="400" height="14" fill="#f2f0ea"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tuile t-ruban">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="3" y="3" width="42" height="42" fill="#c6f432" stroke="#0f0f0f" stroke-width="4"/><path d="M14 25l7 7 13-15" fill="none" stroke="#0f0f0f" stroke-width="5" stroke-linecap="square"/></svg>
+      <p>Chaudière gaz ou fioul, plomberie, chauffe-eau&nbsp;: un interlocuteur unique, joignable au téléphone ou par e-mail.</p>
+    </div>
+
+  </div>
+
+  <div class="defile" aria-hidden="true">
+    <div class="piste">
+      <span>CHAUDIÈRE GAZ</span><span>CHAUDIÈRE FIOUL</span><span>ENTRETIEN</span><span>DÉPANNAGE</span><span>CHAUFFE-EAU</span><span>FUITES</span><span>SANITAIRES</span><span>VÉNISSIEUX 69200</span>
+      <span>CHAUDIÈRE GAZ</span><span>CHAUDIÈRE FIOUL</span><span>ENTRETIEN</span><span>DÉPANNAGE</span><span>CHAUFFE-EAU</span><span>FUITES</span><span>SANITAIRES</span><span>VÉNISSIEUX 69200</span>
+    </div>
+  </div>
+  <div class="defile v" aria-hidden="true">
+    <div class="piste">
+      <span>07 77 25 83 39</span><span>DEVIS SUR DEMANDE</span><span>SUD-EST LYONNAIS</span><span>PLOMBERIE GÉNÉRALE</span>
+      <span>07 77 25 83 39</span><span>DEVIS SUR DEMANDE</span><span>SUD-EST LYONNAIS</span><span>PLOMBERIE GÉNÉRALE</span>
+      <span>07 77 25 83 39</span><span>DEVIS SUR DEMANDE</span><span>SUD-EST LYONNAIS</span><span>PLOMBERIE GÉNÉRALE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONFIANCE ================= -->
+<section class="confiance" aria-label="Informations clés">
+  <div class="wrap conf-grille">
+    <div class="conf rv"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#0f0f0f" stroke-width="3" stroke-linejoin="round"><path d="M16 29s10-9 10-17a10 10 0 0 0-20 0c0 8 10 17 10 17z"/><circle cx="16" cy="12" r="3.5"/></svg></span><div><b>Basé à Vénissieux</b><span>69200, Rhône</span></div></div>
+    <div class="conf rv d1"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#0f0f0f" stroke-width="3" stroke-linejoin="round"><path d="M4 8l8-3 8 3 8-3v19l-8 3-8-3-8 3z"/><path d="M12 5v19M20 8v19"/></svg></span><div><b>Sud-est lyonnais</b><span>Zone d'intervention</span></div></div>
+    <div class="conf rv d2"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"><rect x="7" y="4" width="18" height="24"/><path d="M16 21c-3 0-4-3-2-6 0 2 2 2 2 0 2 1 3 6 0 6z"/></svg></span><div><b>Chaudière gaz ou fioul</b><span>Prestation référencée</span></div></div>
+    <div class="conf rv d3"><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#0f0f0f" stroke-width="3" stroke-linejoin="round"><path d="M6 6h5l2 6-3 2a14 14 0 0 0 8 8l2-3 6 2v5a2 2 0 0 1-2 2C14 28 4 18 4 8a2 2 0 0 1 2-2z"/></svg></span><div><b>Contact direct</b><span>Téléphone et e-mail</span></div></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <div><span class="surtitre">Ce qu'on fait</span><h2>Du <span class="surl-v">chauffage</span> au <span class="surl-r">robinet</span></h2></div>
+      <p>La chaudière gaz ou fioul est au cœur du métier, complétée par les interventions de plomberie dont un logement a besoin au quotidien.</p>
+    </div>
+    <div class="services">
+      <article class="serv vedette c1 rv">
+        <span class="badge">Spécialité</span>
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#0f0f0f" stroke-width="3.4" stroke-linejoin="round"><rect x="10" y="4" width="28" height="36"/><path d="M10 12h28"/><circle cx="16" cy="8" r="1.6" fill="#0f0f0f"/><path d="M24 34c-5 0-7-5-3-10 0 3 3 3 3 0 4 3 5 10 0 10z" fill="#ff5fa2"/><path d="M18 40v5M30 40v5"/></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Installation, remplacement et mise en service de chaudières gaz ou fioul, avec conseil sur le modèle adapté à votre logement.</p>
+      </article>
+      <article class="serv c2 rv d1">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#0f0f0f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M10 10l4 4M34 34l4 4M38 10l-4 4M14 34l-4 4"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>Nettoyage, réglages et contrôles de votre chaudière pour un appareil sûr, économe et qui dure.</p>
+      </article>
+      <article class="serv c3 rv d2">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 4 12 26h11l-3 18 16-24H25z"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Plus de chauffage, plus d'eau chaude, code erreur&nbsp;: diagnostic de la panne et remise en route dès que possible.</p>
+      </article>
+      <article class="serv c4 rv">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#0f0f0f" stroke-width="3.4" stroke-linejoin="round"><rect x="12" y="6" width="24" height="34" rx="12"/><path d="M18 40v4M30 40v4M24 16v12"/><circle cx="24" cy="30" r="3" fill="#6c3cff"/></svg></div>
+        <h3>Chauffe-eau</h3>
+        <p>Remplacement ou installation de ballon d'eau chaude, détartrage et remplacement des pièces d'usure.</p>
+      </article>
+      <article class="serv c5 rv d1">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#0f0f0f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h18v8H4zM22 20h10a6 6 0 0 1 6 6v6"/><path d="M38 38c-3 4-3 6 0 6s3-2 0-6z" fill="#c6f432"/></svg></div>
+        <h3>Recherche de fuite</h3>
+        <p>Fuite sous l'évier, joint fatigué, canalisation qui suinte&nbsp;: repérage et réparation de la partie en cause.</p>
+      </article>
+      <article class="serv c6 rv d2">
+        <div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#0f0f0f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h36v6a10 10 0 0 1-10 10H16A10 10 0 0 1 6 30z"/><path d="M12 24V10a4 4 0 0 1 8 0"/><path d="M14 40l-2 4M34 40l2 4"/></svg></div>
+        <h3>Plomberie générale</h3>
+        <p>Robinetterie, WC, lavabo, évacuations&nbsp;: les petits et moyens travaux de plomberie de la maison.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="bloc pourquoi" id="pourquoi">
+  <div class="wrap">
+    <div class="entete rv">
+      <div><span class="surtitre">Pourquoi nous</span><h2>Un artisan, pas un standard téléphonique</h2></div>
+      <p style="color:rgba(255,255,255,.85)">Des engagements simples, que l'on préfère tenir plutôt que promettre en grand.</p>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><span class="n">01</span><h3>Proximité vénissiane</h3><p>Une entreprise installée à Vénissieux, qui connaît les immeubles et pavillons du secteur.</p></div>
+      <div class="atout rv d1"><span class="n">02</span><h3>Chauffage + plomberie</h3><p>La chaudière et la tuyauterie autour, traitées par la même personne&nbsp;: moins d'allers-retours.</p></div>
+      <div class="atout rv d2"><span class="n">03</span><h3>Devis clair</h3><p>Le détail des travaux et des fournitures vous est présenté avant toute intervention.</p></div>
+      <div class="atout rv d3"><span class="n">04</span><h3>Conseils francs</h3><p>Réparer ou remplacer&nbsp;? On vous explique les options sans pousser à la dépense.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTHODE ================= -->
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="entete rv">
+      <div><span class="surtitre">Comment ça se passe</span><h2>4 étapes, <span class="surl-v">zéro</span> flou</h2></div>
+      <p>Du premier coup de fil à la remise en route, voici le déroulé habituel d'une intervention.</p>
+    </div>
+    <div class="etapes rv">
+      <div class="etape"><span class="chiffre">1</span><h3>Vous appelez</h3><p>Au 07 77 25 83 39 ou via le formulaire&nbsp;: vous décrivez la panne ou le projet.</p></div>
+      <div class="etape"><span class="chiffre">2</span><h3>Diagnostic</h3><p>Échange au téléphone puis, si besoin, passage sur place pour évaluer la situation.</p></div>
+      <div class="etape"><span class="chiffre">3</span><h3>Devis</h3><p>Vous recevez une proposition détaillée et vous décidez, sans engagement.</p></div>
+      <div class="etape"><span class="chiffre">4</span><h3>Intervention</h3><p>Travaux réalisés, installation testée et conseils d'utilisation pour la suite.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="bloc" id="apropos" style="padding-top:20px">
+  <div class="wrap apropos">
+    <div class="carte rv">
+      <span class="surtitre">À propos</span>
+      <h2>Di Marco, la plomberie made in Vénissieux</h2>
+      <p>Di Marco Plomberie est une entreprise de plomberie et de chauffage basée à Vénissieux, dans le 69200. Son domaine de prédilection&nbsp;: les chaudières à gaz ou au fioul, de l'installation à l'entretien.</p>
+      <p>Autour de ce cœur de métier, l'entreprise prend en charge les dépannages, les chauffe-eau et les travaux de plomberie courants, pour les logements de Vénissieux et du sud-est lyonnais.</p>
+      <p>Le contact se fait en direct, par téléphone ou par e-mail, pour un échange simple et un devis établi avant travaux.</p>
+    </div>
+    <div class="fiche rv d2">
+      <div class="ligne-fiche"><span>Entreprise</span><b>Di Marco Plomberie</b></div>
+      <div class="ligne-fiche"><span>Commune</span><b>Vénissieux (69200)</b></div>
+      <div class="ligne-fiche"><span>Spécialité</span><b>Chaudière gaz ou fioul</b></div>
+      <a class="ligne-fiche" href="tel:+33777258339"><span>Téléphone</span><b>07 77 25 83 39</b></a>
+      <a class="ligne-fiche" href="mailto:jdima@sfr.fr"><span>E-mail</span><b>jdima@sfr.fr</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉALISATIONS ================= -->
+<section class="bloc" id="realisations" style="padding-top:30px">
+  <div class="wrap">
+    <div class="entete rv">
+      <div><span class="surtitre">Réalisations</span><h2>Le genre de <span class="surl-r">chantiers</span> qu'on aime</h2></div>
+      <p>Quelques types d'interventions illustrés. Ces visuels sont des exemples de prestations, pas des photos de chantiers réels.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real rv">
+        <div class="vis"><svg viewBox="0 0 320 240" aria-hidden="true"><rect width="320" height="240" fill="#c6f432"/><rect x="0" y="190" width="320" height="50" fill="#f2f0ea" stroke="#0f0f0f" stroke-width="4"/><rect x="118" y="40" width="96" height="134" fill="#0f0f0f"/><rect x="110" y="32" width="96" height="134" fill="#fff" stroke="#0f0f0f" stroke-width="5"/><rect x="110" y="32" width="96" height="26" fill="#6c3cff" stroke="#0f0f0f" stroke-width="5"/><rect x="134" y="76" width="48" height="48" fill="#0f0f0f"/><path d="M158 118c-12 0-14-12-6-22 0 6 6 6 6 0 8 6 10 22 0 22z" fill="#ff5fa2"/><path d="M134 166v24M182 166v24" stroke="#0f0f0f" stroke-width="8"/><path d="M40 60l6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="3"/><rect x="232" y="70" width="54" height="26" fill="#0f0f0f" transform="rotate(10 259 83)"/><text x="259" y="88" font-family="Rubik Mono One,monospace" font-size="11" fill="#c6f432" text-anchor="middle" transform="rotate(10 259 83)">NEUVE</text></svg></div>
+        <figcaption><b>Remplacement de chaudière gaz</b><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="real rv d1">
+        <div class="vis"><svg viewBox="0 0 320 240" aria-hidden="true"><rect width="320" height="240" fill="#ff5fa2"/><rect x="40" y="60" width="140" height="150" fill="#fff" stroke="#0f0f0f" stroke-width="5"/><rect x="60" y="80" width="100" height="40" fill="#f2f0ea" stroke="#0f0f0f" stroke-width="4"/><circle cx="80" cy="100" r="8" fill="#c6f432" stroke="#0f0f0f" stroke-width="3"/><circle cx="110" cy="100" r="8" fill="#6c3cff" stroke="#0f0f0f" stroke-width="3"/><rect x="60" y="140" width="100" height="50" fill="#0f0f0f"/><path d="M200 70h80v80h-80z" fill="#c6f432" stroke="#0f0f0f" stroke-width="5"/><path d="M216 98l14 14 34-34" fill="none" stroke="#0f0f0f" stroke-width="7"/><circle cx="240" cy="190" r="22" fill="#fff" stroke="#0f0f0f" stroke-width="5"/><path d="M240 190l10-10" stroke="#0f0f0f" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <figcaption><b>Entretien d'une chaudière fioul</b><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="real rv d2">
+        <div class="vis"><svg viewBox="0 0 320 240" aria-hidden="true"><rect width="320" height="240" fill="#6c3cff"/><rect x="118" y="30" width="84" height="170" rx="42" fill="#0f0f0f" transform="translate(8 8)"/><rect x="118" y="30" width="84" height="170" rx="42" fill="#fff" stroke="#0f0f0f" stroke-width="5"/><path d="M118 120h84" stroke="#0f0f0f" stroke-width="4" stroke-dasharray="8 6"/><rect x="146" y="140" width="28" height="12" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="3"/><path d="M140 200v26M180 200v26" stroke="#c6f432" stroke-width="10"/><path d="M140 200v26M180 200v26" stroke="#0f0f0f" stroke-width="3"/><path d="M40 160h60M220 160h60" stroke="#c6f432" stroke-width="6" stroke-dasharray="4 10" stroke-linecap="round"/></svg></div>
+        <figcaption><b>Pose d'un chauffe-eau</b><small>Exemple de prestation</small></figcaption>
+      </figure>
+      <figure class="real rv d3">
+        <div class="vis"><svg viewBox="0 0 320 240" aria-hidden="true"><rect width="320" height="240" fill="#f2f0ea"/><rect x="30" y="150" width="260" height="60" fill="#fff" stroke="#0f0f0f" stroke-width="5"/><path d="M60 150V110h80" fill="none" stroke="#0f0f0f" stroke-width="16"/><path d="M60 150V110h80" fill="none" stroke="#c6f432" stroke-width="8"/><path d="M140 110h40v-60" fill="none" stroke="#0f0f0f" stroke-width="16"/><path d="M140 110h40v-60" fill="none" stroke="#ff5fa2" stroke-width="8"/><rect x="128" y="100" width="24" height="20" fill="#6c3cff" stroke="#0f0f0f" stroke-width="4"/><path d="M180 50h50" stroke="#0f0f0f" stroke-width="10" stroke-linecap="round"/><path d="M230 46v20" stroke="#0f0f0f" stroke-width="6"/><path d="M230 76c-6 9-6 13 0 13s6-4 0-13z" fill="#6c3cff"/><circle cx="96" cy="70" r="20" fill="#c6f432" stroke="#0f0f0f" stroke-width="4"/><path d="M88 70l6 6 10-12" fill="none" stroke="#0f0f0f" stroke-width="4"/></svg></div>
+        <figcaption><b>Réparation de fuite et robinetterie</b><small>Exemple de prestation</small></figcaption>
+      </figure>
+    </div>
+
+    <div class="tarifs rv">
+      <div class="g">
+        <h3>Tarifs&nbsp;: sur devis</h3>
+        <ul>
+          <li>Installation / remplacement de chaudière <em>Sur devis</em></li>
+          <li>Entretien de chaudière gaz ou fioul <em>Sur devis</em></li>
+          <li>Dépannage chauffage ou plomberie <em>Sur devis</em></li>
+          <li>Chauffe-eau, robinetterie, fuites <em>Sur devis</em></li>
+        </ul>
+      </div>
+      <div class="d">
+        <p>Chaque logement est différent&nbsp;: le prix dépend de l'appareil, de l'accès et des fournitures. Décrivez votre besoin, vous recevez une estimation claire avant de vous engager.</p>
+        <a class="btn btn-noir" href="#contact">Obtenir mon devis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="bloc avis" id="avis">
+  <div class="wrap avis-in">
+    <div class="rv">
+      <span class="surtitre" style="background:var(--rose);color:var(--noir)">Avis clients</span>
+      <h2>Votre avis <span class="surl-v">compte</span></h2>
+      <p>Di Marco Plomberie vous a dépanné ou a remis votre chaudière en route&nbsp;? Quelques mots sur Google aident vos voisins de Vénissieux à trouver un artisan de confiance.</p>
+      <a class="btn btn-acide" href="https://www.google.com/maps/search/?api=1&amp;query=Di+Marco+Plomberie+V%C3%A9nissieux" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+    <div class="bulle rv d2" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><path d="M14 20h92v62H52l-24 20V82H14z" fill="#fff" stroke="#0f0f0f" stroke-width="6" stroke-linejoin="round"/><path d="M36 42h48M36 60h30" stroke="#0f0f0f" stroke-width="7" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="bloc" id="faq">
+  <div class="wrap faq-grille">
+    <div class="entete rv">
+      <span class="surtitre">FAQ</span>
+      <h2>Les questions qu'on nous pose</h2>
+      <p>Réponses générales&nbsp;: chaque situation se précise au téléphone.</p>
+    </div>
+    <div>
+      <div class="q rv"><button aria-expanded="false">À quelle fréquence faire entretenir ma chaudière&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>Pour une chaudière gaz ou fioul, un entretien annuel est la règle généralement recommandée et souvent obligatoire. Il permet de vérifier la sécurité de l'appareil et d'en préserver le rendement.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Intervenez-vous sur les chaudières fioul&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>Oui, la chaudière à gaz ou au fioul fait partie des prestations de l'entreprise. Précisez la marque et le modèle lors de votre appel pour préparer l'intervention.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Ma chaudière affiche un code erreur, que faire&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>Notez le code et, si la notice l'autorise, tentez un réarmement. Si le problème persiste ou si vous sentez une odeur de gaz, coupez l'alimentation et appelez un professionnel (ou les urgences gaz en cas d'odeur).</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Le devis est-il payant&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>Les conditions du devis (déplacement, diagnostic) vous sont indiquées au téléphone avant tout rendez-vous, pour qu'il n'y ait aucune surprise.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Quelle zone couvrez-vous&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>L'entreprise est basée à Vénissieux et intervient dans le sud-est lyonnais. Indiquez votre adresse lors du premier contact pour confirmer.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Réparer ou remplacer un vieux chauffe-eau&nbsp;?<span class="plus">+</span></button><div class="rep"><div><p>Cela dépend de l'âge de l'appareil, de l'état de la cuve et du coût des pièces. Un diagnostic permet de vous conseiller l'option la plus raisonnable.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HORAIRES / ZONE ================= -->
+<section class="bloc" id="infos" style="padding-top:20px">
+  <div class="wrap">
+    <div class="entete rv"><div><span class="surtitre">Infos pratiques</span><h2>Quand &amp; où</h2></div></div>
+    <div class="infos">
+      <div class="panneau rv">
+        <h3>Horaires</h3>
+        <span class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi</span>
+        <table class="horaires">
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </table>
+      </div>
+      <div class="panneau zone rv d2">
+        <h3>Zone d'intervention</h3>
+        <div class="carte-svg" aria-hidden="true">
+          <svg viewBox="0 0 400 220">
+            <rect width="400" height="220" fill="#fff"/>
+            <path d="M0 40 C80 60 120 20 200 50 S320 30 400 60" fill="none" stroke="#6c3cff" stroke-width="10" opacity=".25"/>
+            <g stroke="#0f0f0f" stroke-width="2" opacity=".25"><path d="M0 110h400M0 160h400M90 0v220M200 0v220M310 0v220"/></g>
+            <path d="M120 150 C140 70 260 60 300 110 C330 150 280 200 200 196 C140 192 110 180 120 150Z" fill="#c6f432" stroke="#0f0f0f" stroke-width="4" stroke-dasharray="10 6"/>
+            <rect x="166" y="140" width="76" height="34" fill="#0f0f0f"/>
+            <text x="204" y="162" font-family="Rubik Mono One,monospace" font-size="11" fill="#c6f432" text-anchor="middle">69200</text>
+            <path d="M204 48c-14 0-24 10-24 23 0 18 24 36 24 36s24-18 24-36c0-13-10-23-24-23z" fill="#ff5fa2" stroke="#0f0f0f" stroke-width="4"/>
+            <circle cx="204" cy="71" r="8" fill="#fff" stroke="#0f0f0f" stroke-width="3"/>
+            <text x="40" y="30" font-family="Rubik,sans-serif" font-weight="800" font-size="12" fill="#0f0f0f">LYON ↑</text>
+          </svg>
+        </div>
+        <p><strong>Vénissieux (69200) et sud-est lyonnais.</strong> Les interventions se font à votre domicile, sur rendez-vous.</p>
+        <a class="btn btn-noir" href="https://www.google.com/maps/search/?api=1&amp;query=V%C3%A9nissieux+69200" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="bloc contact" id="contact">
+  <div class="wrap contact-grille">
+    <div class="coord rv">
+      <span class="surtitre" style="background:var(--acide);color:var(--noir)">Contact</span>
+      <h2>On en parle&nbsp;?</h2>
+      <p>Expliquez votre besoin&nbsp;: type d'appareil, symptôme de la panne ou projet de remplacement. Vous serez recontacté pour la suite.</p>
+      <a class="l" href="tel:+33777258339"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>07 77 25 83 39</a>
+      <a class="l" href="mailto:jdima@sfr.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg>jdima@sfr.fr</a>
+    </div>
+    <form id="form" class="rv d2" novalidate>
+      <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+      <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 ..."></div>
+      <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Vénissieux"></div>
+      <div class="champ"><label for="type">Besoin</label><select id="type" name="type"><option>Chaudière gaz ou fioul</option><option>Entretien</option><option>Dépannage</option><option>Chauffe-eau</option><option>Fuite / plomberie</option><option>Autre</option></select></div>
+      <div class="champ full"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Décrivez la panne ou le projet..."></textarea></div>
+      <label class="rgpd"><input type="checkbox"> <span style="font-weight:500;text-transform:none;letter-spacing:0;font-size:.9rem">J'accepte d'être recontacté au sujet de ma demande.</span></label>
+      <button class="btn btn-violet" type="submit">Envoyer ma demande</button>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n'a pas été envoyée. Pour un devis, appelez le 07 77 25 83 39.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap pied">
+    <div>
+      <div class="grand">DI MARCO<br>PLOMBERIE</div>
+      <p>Plombier chauffagiste à Vénissieux&nbsp;: chaudière gaz ou fioul, entretien, dépannage, chauffe-eau et plomberie générale.</p>
+    </div>
+    <div>
+      <h4>Coordonnées</h4>
+      <ul><li><a href="tel:+33777258339">07 77 25 83 39</a></li><li><a href="mailto:jdima@sfr.fr">jdima@sfr.fr</a></li><li>Vénissieux (69200)</li></ul>
+    </div>
+    <div>
+      <h4>Horaires</h4>
+      <ul><li>Horaires à confirmer</li><li>Sur rendez-vous, du lundi au vendredi</li></ul>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap mentions">
+    <span>© 2026 Di Marco Plomberie · Vénissieux</span>
+    <span>Mentions légales · Données personnelles</span>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33777258339" aria-label="Appeler Di Marco Plomberie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var first=document.querySelector('.q');if(first){first.classList.add('ouvert');first.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

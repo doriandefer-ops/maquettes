@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DMP Energie – pompe à chaleur et énergies renouvelables à Vénissieux</title>
+<meta name="description" content="DMP Energie, SAS installée 4 rue Roger Planchon à Vénissieux (69200) depuis 2022 : vente et installation de pompes à chaleur, climatisation, panneaux photovoltaïques, chauffe-eau thermodynamique et chauffage au bois. Ouvert du lundi au vendredi, 7h30–17h.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --foret:#24533f;
+  --foret-2:#1c4232;
+  --tilleul:#a8c66c;
+  --ocre:#f0b23e;
+  --ciel:#cfe6ea;
+  --lin:#f5f1e6;
+  --lin-2:#ece5d3;
+  --encre:#18241d;
+  --doux:#4a5a50;
+  --titre:"Fraunces",Georgia,serif;
+  --corps:"DM Sans",system-ui,sans-serif;
+  --larg:1200px;
+  --r:34px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--lin);color:var(--encre);font-family:var(--corps);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--titre);font-weight:600;margin:0;line-height:1.06;letter-spacing:-.015em;font-variation-settings:"SOFT" 100}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--foret)}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.surtitre{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--foret);margin-bottom:16px}
+.surtitre svg{width:20px;height:20px}
+.sec{padding:110px 0;position:relative}
+.sec-tete{max-width:680px;margin-bottom:56px}
+.sec-tete.centre{text-align:center;margin-inline:auto}
+.sec-tete h2{font-size:clamp(34px,4.4vw,56px)}
+.sec-tete p{color:var(--doux);font-size:18px;margin-top:18px}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .3s cubic-bezier(.3,1.6,.5,1),background .3s,box-shadow .3s,color .3s;cursor:pointer;font-family:var(--corps)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translateY(-3px)}
+.btn-foret{background:var(--foret);color:var(--lin);box-shadow:0 12px 26px -12px rgba(36,83,63,.7)}
+.btn-foret:hover{background:var(--foret-2)}
+.btn-ocre{background:var(--ocre);color:var(--encre);box-shadow:0 12px 26px -12px rgba(240,178,62,.8)}
+.btn-ocre:hover{background:#f4c160}
+.btn-ligne{border-color:var(--foret);color:var(--foret);background:transparent}
+.btn-ligne:hover{background:var(--foret);color:var(--lin)}
+
+/* nav */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50}
+.nav .barre{width:min(var(--larg),100% - 28px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;background:rgba(245,241,230,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(36,83,63,.14);border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 14px 40px -24px rgba(24,36,29,.45)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:700;font-size:21px;color:var(--foret);white-space:nowrap}
+.logo svg{width:34px;height:34px}
+.liens{display:flex;list-style:none;margin:0;padding:0;gap:4px}
+.liens a{display:block;text-decoration:none;padding:9px 14px;border-radius:999px;font-size:15px;font-weight:500;transition:background .25s,color .25s}
+.liens a:hover{background:var(--ciel);color:var(--foret)}
+.nav-tel{padding:11px 18px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--foret);cursor:pointer;position:relative}
+.burger span{position:absolute;left:14px;right:14px;height:2px;border-radius:2px;background:var(--lin);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* hero */
+.hero{padding:120px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:780px;height:780px;right:-260px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(240,178,62,.22),transparent 65%);z-index:-1}
+.hero-grille{display:grid;grid-template-columns:1.08fr 1fr;gap:56px;align-items:center}
+.illu{position:relative}
+.illu svg.scene{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(36,83,63,.18))}
+.rayons{transform-origin:150px 140px;animation:tourne 40s linear infinite}
+.soleil-c{transform-origin:150px 140px;animation:pulse 4s ease-in-out infinite}
+.feuille-f{animation:flotte 6s ease-in-out infinite}
+.feuille-f.b{animation-delay:-2s;animation-duration:7s}
+.feuille-f.c{animation-delay:-4s;animation-duration:8s}
+.helice{transform-origin:486px 444px;animation:tourne 2.4s linear infinite}
+.fumee{animation:monte 4s ease-in-out infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes flotte{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(6px,-12px) rotate(8deg)}}
+@keyframes monte{0%{opacity:0;transform:translateY(8px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-18px)}}
+.texte-hero .surtitre{background:#fff;padding:8px 14px 8px 10px;border-radius:999px;box-shadow:0 6px 18px -12px rgba(24,36,29,.4)}
+.hero h1{font-size:clamp(42px,5.2vw,74px);line-height:1.02;letter-spacing:-.025em}
+.hero h1 em{color:var(--foret);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.04em;height:.26em;background:var(--tilleul);opacity:.55;border-radius:999px;z-index:-1}
+.hero .intro{font-size:19px;color:var(--doux);margin:24px 0 30px;max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.pastille{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:#fff;border-radius:999px;padding:10px 18px 10px 12px;font-weight:600;font-size:15px;box-shadow:0 10px 26px -16px rgba(24,36,29,.5)}
+.pastille .pt{width:12px;height:12px;border-radius:50%;background:var(--tilleul);box-shadow:0 0 0 4px rgba(168,198,108,.3);flex:none}
+.pastille.ferme .pt{background:var(--ocre);box-shadow:0 0 0 4px rgba(240,178,62,.3)}
+.pastille small{font-weight:500;color:var(--doux);font-size:14px}
+
+/* vague */
+.vague{display:block;width:100%;height:70px}
+.confiance{background:var(--foret);color:var(--lin);padding:36px 0 46px}
+.conf-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.conf{display:flex;gap:14px;align-items:center}
+.conf .ic{width:54px;height:54px;flex:none;border-radius:46% 54% 40% 60%/55% 45% 55% 45%;background:rgba(168,198,108,.2);display:grid;place-items:center;color:var(--tilleul)}
+.conf .ic svg{width:26px;height:26px}
+.conf strong{display:block;font-family:var(--titre);font-size:19px;font-weight:600;line-height:1.2}
+.conf span{font-size:14px;color:rgba(245,241,230,.75)}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.carte{background:#fff;border-radius:var(--r);padding:34px 30px 32px;position:relative;overflow:hidden;transition:transform .45s cubic-bezier(.3,1.4,.5,1),box-shadow .45s}
+.carte:hover{transform:translateY(-8px);box-shadow:0 30px 50px -30px rgba(36,83,63,.45)}
+.carte::after{content:"";position:absolute;width:180px;height:180px;right:-70px;bottom:-80px;border-radius:50%;background:var(--c,var(--ciel));opacity:.35;transition:transform .6s}
+.carte:hover::after{transform:scale(1.4)}
+.carte .ico{width:78px;height:78px;display:grid;place-items:center;border-radius:58% 42% 52% 48%/48% 56% 44% 52%;background:var(--c,var(--ciel));margin-bottom:24px;transition:border-radius .6s,transform .6s}
+.carte:hover .ico{border-radius:42% 58% 46% 54%/56% 44% 56% 44%;transform:rotate(-6deg)}
+.carte .ico svg{width:42px;height:42px}
+.carte h3{font-size:24px;margin-bottom:10px}
+.carte p{color:var(--doux);margin:0;font-size:16px;position:relative;z-index:1}
+.c-t{--c:var(--tilleul)}.c-o{--c:var(--ocre)}.c-c{--c:var(--ciel)}
+
+/* atouts */
+.atouts-zone{background:var(--ciel);border-radius:60px;padding:90px 0;position:relative;overflow:hidden;width:min(1320px,100% - 24px);margin:0 auto}
+.atouts-zone .deco{position:absolute;opacity:.5;pointer-events:none}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.at{background:var(--lin);padding:30px 26px;border-radius:8px 48px 8px 48px;transition:transform .4s,border-radius .5s}
+.at:hover{transform:translateY(-6px);border-radius:48px 8px 48px 8px}
+.at .n{font-family:var(--titre);font-style:italic;font-size:40px;color:var(--ocre);line-height:1;display:block;margin-bottom:14px}
+.at h3{font-size:22px;margin-bottom:8px}
+.at p{color:var(--doux);font-size:15.5px;margin:0}
+
+/* étapes */
+.etapes{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.chemin{position:absolute;left:0;right:0;top:20px;width:100%;height:80px;z-index:0}
+.etape{position:relative;z-index:1;text-align:center;padding:0 6px}
+.etape .bulle{width:104px;height:104px;margin:0 auto 22px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--titre);font-size:44px;font-weight:600;color:var(--foret);border:3px solid var(--tilleul);transition:background .3s,color .3s,transform .4s}
+.etape:nth-child(odd) .bulle{border-color:var(--ocre)}
+.etape:hover .bulle{background:var(--foret);color:var(--lin);transform:scale(1.06) rotate(-4deg)}
+.etape h3{font-size:22px;margin-bottom:8px}
+.etape p{color:var(--doux);font-size:15.5px;margin:0}
+
+/* à propos */
+.propos{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.propos-visuel{position:relative}
+.propos-visuel svg{width:100%;height:auto}
+.propos-txt p{font-size:18px;color:var(--doux)}
+.propos-txt p strong{color:var(--encre)}
+.fiche{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.fiche div{background:#fff;border-radius:22px;padding:14px 18px}
+.fiche span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--doux);font-weight:600}
+.fiche b{font-family:var(--titre);font-weight:600;font-size:17px}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.real{margin:0;background:#fff;border-radius:var(--r);overflow:hidden;transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
+.real:hover{transform:translateY(-6px) rotate(-.6deg)}
+.real svg{width:100%;height:auto;aspect-ratio:4/3}
+.real figcaption{padding:16px 20px 20px}
+.real .tag{display:inline-block;background:var(--lin);color:var(--foret);font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+.real strong{display:block;font-family:var(--titre);font-size:19px;font-weight:600;line-height:1.2}
+.tarifs{margin-top:56px;background:var(--foret);color:var(--lin);border-radius:48px;padding:48px;display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.tarifs h3{font-size:34px;margin-bottom:12px}
+.tarifs h3 em{color:var(--ocre);font-style:italic;font-weight:400}
+.tarifs p{color:rgba(245,241,230,.8);margin:0}
+.puces{display:flex;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
+.puces span{background:rgba(245,241,230,.1);border:1px solid rgba(245,241,230,.22);border-radius:999px;padding:10px 16px;font-size:15px;transition:background .3s}
+.puces span:hover{background:rgba(168,198,108,.28)}
+.puces span b{color:var(--ocre);font-weight:600;margin-left:6px}
+
+/* avis */
+.avis{position:relative;background:#fff;border-radius:60px;padding:64px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;overflow:hidden}
+.avis .soleil{width:170px;height:170px}
+.avis h2{font-size:clamp(32px,3.6vw,48px);margin-bottom:14px}
+.avis p{color:var(--doux);max-width:36em}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:14px}
+.q{background:#fff;border-radius:28px;transition:box-shadow .3s}
+.q.ouvert{box-shadow:0 18px 40px -26px rgba(36,83,63,.5)}
+.q button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;font-family:var(--titre);font-weight:600;font-size:19px;line-height:1.3}
+.q button:focus-visible{outline:3px solid var(--ocre);border-radius:28px}
+.q .plus{width:36px;height:36px;flex:none;border-radius:50%;background:var(--ciel);position:relative;transition:background .3s,transform .4s}
+.q .plus::before,.q .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;border-radius:2px;background:var(--foret);transform:translate(-50%,-50%)}
+.q .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.q.ouvert .plus{background:var(--ocre);transform:rotate(45deg)}
+.rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.rep>div{overflow:hidden}
+.rep p{padding:0 26px 24px;margin:0;color:var(--doux)}
+.q.ouvert .rep{grid-template-rows:1fr}
+
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bloc-info{background:#fff;border-radius:var(--r);padding:38px}
+.bloc-info h3{font-size:28px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.bloc-info h3 svg{width:34px;height:34px}
+.statut{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;font-weight:600;font-size:14px;background:rgba(168,198,108,.25);color:var(--foret);margin-bottom:16px}
+.statut i{width:9px;height:9px;border-radius:50%;background:var(--foret)}
+.statut.ferme{background:rgba(240,178,62,.22);color:#7a5208}
+.statut.ferme i{background:#b07a16}
+.jours{list-style:none;margin:0;padding:0}
+.jours li{display:flex;justify-content:space-between;padding:12px 16px;border-radius:16px;transition:background .3s}
+.jours li:nth-child(odd){background:var(--lin)}
+.jours li span:last-child{font-weight:600}
+.jours li.ferme-j span:last-child{color:var(--doux);font-weight:500}
+.jours li.auj{background:var(--foret);color:var(--lin)}
+.jours li.auj span:last-child{color:var(--ocre)}
+.jours li.auj span:first-child::after{content:" · aujourd'hui";font-size:13px;opacity:.8}
+.adresse{font-family:var(--titre);font-size:24px;line-height:1.3;margin-bottom:8px}
+.bloc-info .note{color:var(--doux);font-size:15px}
+.carte-zone{border-radius:26px;overflow:hidden;margin:20px 0 22px;background:var(--ciel)}
+.carte-zone svg{width:100%;height:auto}
+.tels{display:grid;gap:8px;margin-bottom:22px}
+.tels a{text-decoration:none;font-weight:600;display:flex;gap:10px;align-items:center}
+.tels a:hover{color:var(--foret)}
+.tels svg{width:20px;height:20px;color:var(--foret)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:start}
+.contact-txt{background:var(--tilleul);border-radius:48px 48px 48px 12px;padding:44px;position:relative;overflow:hidden}
+.contact-txt h2{font-size:clamp(32px,3.6vw,46px);margin-bottom:14px}
+.contact-txt h2 em{color:var(--encre)}
+.contact-txt p{color:#24321f}
+.contact-txt .liste{display:grid;gap:12px;margin-top:22px;position:relative;z-index:1}
+.contact-txt .liste a{display:flex;align-items:center;gap:12px;background:rgba(245,241,230,.75);padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:600;transition:background .3s;word-break:break-word}
+.contact-txt .liste a:hover{background:var(--lin)}
+.contact-txt .liste svg{width:20px;height:20px;flex:none;color:var(--foret)}
+.form{background:#fff;border-radius:48px 48px 12px 48px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.full{grid-column:1/-1}
+.champ label{font-weight:600;font-size:14px}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:16px;color:var(--encre);background:var(--lin);border:2px solid transparent;border-radius:18px;padding:13px 16px;outline:none;transition:border-color .25s,background .25s;width:100%}
+.champ textarea{min-height:120px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{border-color:var(--tilleul);background:#fff}
+.form .btn{justify-self:start}
+.envoi{grid-column:1/-1;display:none;background:var(--ciel);color:var(--foret-2);border-radius:18px;padding:14px 18px;font-weight:600;margin:0}
+.envoi.on{display:block}
+
+/* footer */
+footer{background:var(--foret-2);color:var(--lin);position:relative;margin-top:60px}
+footer .vague{position:absolute;top:-69px;left:0}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding:60px 0 40px}
+.pied .logo{color:var(--lin);font-size:26px;margin-bottom:14px}
+.pied p{color:rgba(245,241,230,.72);font-size:15px;margin:0}
+.pied h4{font-family:var(--titre);font-weight:600;font-size:18px;margin:0 0 12px;color:var(--tilleul)}
+.pied ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:2;color:rgba(245,241,230,.85)}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--ocre)}
+.mentions{border-top:1px solid rgba(245,241,230,.15);padding:18px 0;font-size:13.5px;color:rgba(245,241,230,.6);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo{background:var(--encre);color:rgba(245,241,230,.75);text-align:center;font-size:13px;padding:12px 16px}
+
+.flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--ocre);color:var(--encre);align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(24,36,29,.55);animation:sautille 3s ease-in-out infinite}
+.flottant svg{width:26px;height:26px}
+@keyframes sautille{0%,80%,100%{transform:none}88%{transform:translateY(-6px) rotate(-8deg)}94%{transform:translateY(0) rotate(6deg)}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px) scale(.98);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1.1)}
+.rv.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+@media (max-width:1080px){
+  .liens a{padding:9px 10px;font-size:14px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .conf-grille{grid-template-columns:repeat(2,1fr);gap:26px}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:920px){
+  .burger{display:block}
+  .nav-tel{display:none}
+  .nav .barre{position:relative}
+  .liens{position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;background:var(--lin);border-radius:30px;padding:14px;box-shadow:0 30px 60px -30px rgba(24,36,29,.6);border:1px solid rgba(36,83,63,.14);opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transition:opacity .3s,transform .3s,visibility .3s}
+  .liens.ouvert{opacity:1;visibility:visible;transform:none}
+  .liens a{padding:14px 18px;font-size:17px}
+  .hero{padding-top:110px}
+  .hero-grille{grid-template-columns:1fr;gap:28px}
+  .texte-hero{order:-1}
+  .illu{max-width:560px;margin:0 auto;width:100%}
+  .etapes{grid-template-columns:repeat(2,1fr);row-gap:44px}
+  .chemin{display:none}
+  .propos{grid-template-columns:1fr;gap:36px}
+  .propos-visuel{max-width:440px;margin:0 auto;width:100%}
+  .tarifs{grid-template-columns:1fr;padding:36px}
+  .avis{grid-template-columns:1fr;padding:44px 32px;border-radius:44px;text-align:center}
+  .avis .soleil{margin:0 auto;width:130px;height:130px}
+  .avis p{margin-inline:auto}
+  .infos,.contact{grid-template-columns:1fr}
+  .flottant{display:flex}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{width:calc(100% - 32px)}
+  .sec{padding:80px 0}
+  .nav{top:10px}
+  .nav .barre{width:calc(100% - 20px);padding-left:14px}
+  .logo{font-size:19px}
+  .hero h1{font-size:clamp(36px,10.4vw,46px)}
+  .hero h1 em{white-space:normal}
+  .hero .intro{font-size:17px}
+  .actions .btn{flex:1 1 100%;justify-content:center}
+  .services,.atouts,.galerie,.conf-grille,.etapes,.fiche{grid-template-columns:1fr}
+  .atouts-zone{border-radius:40px;padding:70px 0;width:calc(100% - 16px)}
+  .carte{padding:28px 24px}
+  .tarifs{padding:30px 22px;border-radius:36px}
+  .avis{padding:36px 22px}
+  .bloc-info,.contact-txt,.form{padding:28px 20px}
+  .form{grid-template-columns:1fr;border-radius:36px}
+  .contact-txt{border-radius:36px}
+  .q button{font-size:17px;padding:18px 20px}
+  .rep p{padding:0 20px 20px}
+  .pied{grid-template-columns:1fr;gap:28px}
+  .demo{padding-bottom:90px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="barre">
+    <a href="#accueil" class="logo" aria-label="DMP Energie – accueil">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#24533f"/><path d="M12 27c0-9 6-15 17-16-1 11-7 17-16 17" fill="#a8c66c"/><path d="M12 28c4-5 8-9 13-12" stroke="#24533f" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="28" cy="11" r="4" fill="#f0b23e"/></svg>
+      DMP Energie
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="liens" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methode">Démarche</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#infos">Horaires</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-foret nav-tel" href="tel:+33623254973">06 23 25 49 73</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="wrap hero-grille">
+    <div class="illu rv" aria-hidden="true">
+      <svg class="scene" viewBox="0 0 600 560">
+        <defs>
+          <clipPath id="blob"><path d="M300 22c92-6 176 30 230 102 52 70 66 168 34 252-34 90-116 156-212 172-98 16-206-12-268-88C22 382 2 278 26 190 50 102 122 40 204 26c32-6 64-3 96-4z"/></clipPath>
+          <linearGradient id="gCiel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe6ea"/><stop offset="1" stop-color="#f5f1e6"/></linearGradient>
+          <linearGradient id="gPv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f5d74"/><stop offset="1" stop-color="#1d3d4f"/></linearGradient>
+        </defs>
+        <g clip-path="url(#blob)">
+          <rect width="600" height="560" fill="url(#gCiel)"/>
+          <!-- soleil -->
+          <g class="rayons" fill="#f0b23e" opacity=".55">
+            <path d="M150 40l7 44h-14z"/><path d="M150 240l-7-44h14z"/><path d="M50 140l44-7v14z"/><path d="M250 140l-44 7v-14z"/>
+            <path d="M79 69l36 26-10 10z"/><path d="M221 211l-36-26 10-10z"/><path d="M221 69l-26 36-10-10z"/><path d="M79 211l26-36 10 10z"/>
+          </g>
+          <circle class="soleil-c" cx="150" cy="140" r="44" fill="#f0b23e"/>
+          <circle cx="150" cy="140" r="30" fill="#f6c766" opacity=".7"/>
+          <!-- nuage -->
+          <path d="M380 110c0-16 14-28 30-26 6-14 26-20 40-10 16-8 36 2 38 20 14 2 22 12 20 24H384c-6 0-6-8-4-8z" fill="#fff" opacity=".9"/>
+          <!-- collines -->
+          <path d="M0 400c80-40 170-50 260-30s180 10 340-40v230H0z" fill="#a8c66c"/>
+          <path d="M0 450c120-30 230-20 340 0s190 10 260-10v120H0z" fill="#86a952"/>
+          <!-- arbre de Parilly -->
+          <rect x="94" y="330" width="14" height="96" rx="6" fill="#5b4632"/>
+          <path d="M101 380l-22-22M101 360l20-18" stroke="#5b4632" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="101" cy="300" r="56" fill="#24533f"/>
+          <circle cx="66" cy="330" r="34" fill="#2e6a4f"/>
+          <circle cx="136" cy="326" r="36" fill="#2e6a4f"/>
+          <circle cx="112" cy="282" r="26" fill="#3a7d5c"/>
+          <!-- maison -->
+          <rect x="230" y="300" width="230" height="150" rx="6" fill="#fffaf0"/>
+          <path d="M214 306L345 196l131 110z" fill="#c8673f"/>
+          <!-- panneaux PV -->
+          <g transform="translate(345 196)">
+            <path d="M12 12l90 76H22L-8 62z" fill="url(#gPv)"/>
+            <path d="M12 12l90 76M-8 62l110 26" stroke="#cfe6ea" stroke-width="1" opacity=".5" fill="none"/>
+            <path d="M42 37L20 75M72 62L52 82M2 38L52 54M-2 50L80 74" stroke="#cfe6ea" stroke-width="1.2" opacity=".55" fill="none"/>
+            <path d="M14 18l20 17" stroke="#fff" stroke-width="3" opacity=".5" stroke-linecap="round"/>
+          </g>
+          <rect x="384" y="198" width="22" height="40" fill="#8f4a2d"/>
+          <g fill="#fff" opacity=".7"><circle class="fumee" cx="395" cy="186" r="7"/><circle class="fumee" cx="402" cy="172" r="9" style="animation-delay:-1.4s"/><circle class="fumee" cx="392" cy="156" r="6" style="animation-delay:-2.6s"/></g>
+          <rect x="258" y="330" width="56" height="50" rx="8" fill="#cfe6ea" stroke="#24533f" stroke-width="4"/>
+          <path d="M286 330v50M258 355h56" stroke="#24533f" stroke-width="3"/>
+          <rect x="342" y="360" width="50" height="90" rx="22" fill="#24533f"/>
+          <circle cx="380" cy="408" r="4" fill="#f0b23e"/>
+          <rect x="406" y="330" width="40" height="36" rx="8" fill="#cfe6ea" stroke="#24533f" stroke-width="4"/>
+          <!-- PAC -->
+          <rect x="462" y="408" width="80" height="62" rx="10" fill="#fff" stroke="#24533f" stroke-width="4"/>
+          <circle cx="486" cy="444" r="16" fill="#cfe6ea" stroke="#24533f" stroke-width="3"/>
+          <g class="helice" fill="#24533f"><ellipse cx="486" cy="436" rx="4" ry="8"/><ellipse cx="486" cy="452" rx="4" ry="8"/><ellipse cx="478" cy="444" rx="8" ry="4"/><ellipse cx="494" cy="444" rx="8" ry="4"/></g>
+          <path d="M512 424h20M512 434h20M512 444h20M512 454h20" stroke="#24533f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M462 430h-4" stroke="#24533f" stroke-width="4"/>
+          <path d="M556 420c10-8 10-18 0-26M572 428c16-14 16-32 0-46" stroke="#f0b23e" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- herbes -->
+          <path d="M200 470c4-14 2-24-4-32M210 470c2-12 8-20 14-24M520 486c2-12-2-22-8-28M532 486c4-10 10-16 18-18" stroke="#24533f" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- fleurs -->
+          <circle cx="250" cy="478" r="6" fill="#f0b23e"/><circle cx="470" cy="498" r="5" fill="#fff"/><circle cx="160" cy="470" r="5" fill="#fff"/>
+        </g>
+        <!-- feuilles flottantes -->
+        <g class="feuille-f"><path d="M530 120c30-24 54-20 62-16-4 34-30 52-62 50 4-12 2-24 0-34z" fill="#a8c66c"/><path d="M532 150c16-12 32-26 54-42" stroke="#24533f" stroke-width="2.5" fill="none"/></g>
+        <g class="feuille-f b"><path d="M14 230c10-30 32-40 44-42 8 30-6 56-36 66-2-10-4-18-8-24z" fill="#24533f"/><path d="M22 252c10-18 20-40 32-58" stroke="#a8c66c" stroke-width="2.5" fill="none"/></g>
+        <g class="feuille-f c"><path d="M430 520c20-6 40 2 48 10-14 18-40 22-60 10 6-4 8-12 12-20z" fill="#f0b23e"/></g>
+      </svg>
+    </div>
+    <div class="texte-hero">
+      <span class="surtitre rv"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z" fill="#a8c66c"/><path d="M5 19l8-8" stroke="#24533f" stroke-width="1.8" stroke-linecap="round"/></svg>DMP Energie · Vénissieux</span>
+      <h1 class="rv d1">Votre maison, branchée sur <em>le soleil</em> et l'air du dehors.</h1>
+      <p class="intro rv d2">Pompes à chaleur, panneaux photovoltaïques, chauffe-eau thermodynamique ou chauffage au bois&nbsp;: DMP Energie fait entrer les énergies renouvelables chez vous, depuis la rue Roger Planchon, à Vénissieux, aux portes du parc de Parilly.</p>
+      <div class="actions rv d2">
+        <a class="btn btn-foret" href="tel:+33623254973"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn btn-ocre" href="#contact">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="pastille rv d3" id="pastille"><span class="pt"></span>Lun–Ven 7h30–17h <small id="etat"></small></div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C180 0 360 0 540 26s360 44 540 18S1320 0 1440 20V70H0z" fill="#24533f"/></svg>
+<section class="confiance" aria-label="Informations clés">
+  <div class="wrap conf-grille">
+    <div class="conf rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><strong>Vénissieux (69200)</strong><span>4 rue Roger Planchon</span></div></div>
+    <div class="conf rv d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14zM5 19l8-8"/></svg></span><div><strong>Depuis 2022</strong><span>SAS DMP Energie</span></div></div>
+    <div class="conf rv d2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><strong>Lun–Ven 7h30–17h</strong><span>Fermé le week-end</span></div></div>
+    <div class="conf rv d3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg></span><div><strong>Vente &amp; installation</strong><span>PAC, clim, solaire, bois</span></div></div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 40C180 0 360 0 540 26s360 44 540 18S1320 0 1440 20V70H0z" fill="#24533f"/></svg>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-tete rv">
+      <span class="surtitre">Nos services</span>
+      <h2>Six façons de <em>chauffer plus vert</em> à Vénissieux</h2>
+      <p>De l'air, du soleil, du bois&nbsp;: DMP Energie vend et installe les équipements qui puisent dans les ressources renouvelables, puis veille à leur bon fonctionnement.</p>
+    </div>
+    <div class="services">
+      <article class="carte c-t rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="12" width="38" height="26" rx="5"/><circle cx="18" cy="25" r="8"/><path d="M18 19v12M12 25h12"/><path d="M32 19h6M32 25h6M32 31h6"/><path d="M10 38v4M38 38v4"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Vente et installation de pompes à chaleur qui captent les calories de l'air pour chauffer votre logement.</p>
+      </article>
+      <article class="carte c-c rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="16" rx="5"/><path d="M11 18h26"/><path d="M14 30c0 4-3 6-3 10M24 30c0 4-3 6-3 10M34 30c0 4-3 6-3 10"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Des étés lyonnais plus doux grâce à une climatisation bien dimensionnée et posée avec soin.</p>
+      </article>
+      <article class="carte c-o rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38l6-22h28l-6 22z"/><path d="M11 27h28M24 16l-4 22M33 16l-4 22"/><circle cx="12" cy="8" r="4"/><path d="M20 8h4M12 0v1"/></svg></div>
+        <h3>Panneaux photovoltaïques</h3>
+        <p>Produire votre propre électricité grâce au soleil, avec des panneaux intégrés à votre toiture.</p>
+      </article>
+      <article class="carte c-c rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="4" width="22" height="40" rx="11"/><path d="M13 15h22"/><path d="M24 22c-4 5-5 8-5 10a5 5 0 0 0 10 0c0-2-1-5-5-10z"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Une eau chaude sanitaire produite à partir de l'air ambiant, plus économe qu'un cumulus classique.</p>
+      </article>
+      <article class="carte c-o rv d1">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="28" height="30" rx="6"/><path d="M20 2v10"/><path d="M24 36c-5 0-7-3-6-7 1-3 4-4 4-8 4 2 8 6 8 10 0 3-3 5-6 5z"/><path d="M14 42v4M34 42v4"/></svg></div>
+        <h3>Chauffage au bois</h3>
+        <p>La chaleur enveloppante d'un équipement au bois, une énergie locale et renouvelable.</p>
+      </article>
+      <article class="carte c-t rv d2">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#18241d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6a9 9 0 0 0-8 12L8 34a4 4 0 0 0 6 6l16-16a9 9 0 0 0 12-8l-5 5-5-2-2-5 5-5z"/></svg></div>
+        <h3>Entretien &amp; suivi</h3>
+        <p>Contrôle et entretien de vos équipements pour qu'ils gardent leurs performances au fil des saisons.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ATOUTS -->
+<section class="atouts-zone" id="atouts">
+  <svg class="deco" style="right:-40px;top:-30px;width:240px" viewBox="0 0 200 200" aria-hidden="true"><path d="M20 180C30 80 90 30 190 20 180 120 120 175 20 180z" fill="#a8c66c"/><path d="M20 180C70 120 120 70 170 40" stroke="#24533f" stroke-width="3" fill="none"/></svg>
+  <svg class="deco" style="left:-50px;bottom:-40px;width:200px" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="80" fill="#f0b23e" opacity=".6"/></svg>
+  <div class="wrap" style="position:relative">
+    <div class="sec-tete centre rv">
+      <span class="surtitre">Pourquoi DMP Energie</span>
+      <h2>Une entreprise <em>d'ici</em>, tournée vers le renouvelable</h2>
+    </div>
+    <div class="atouts">
+      <div class="at rv"><span class="n">i.</span><h3>Un seul interlocuteur</h3><p>Pompe à chaleur, solaire, eau chaude, bois&nbsp;: un même contact pour comparer et combiner les solutions.</p></div>
+      <div class="at rv d1"><span class="n">ii.</span><h3>Joignable en semaine</h3><p>Une équipe disponible du lundi au vendredi, de 7h30 à 17h, par téléphone ou par e-mail.</p></div>
+      <div class="at rv d2"><span class="n">iii.</span><h3>Basée à Vénissieux</h3><p>Des locaux rue Roger Planchon, au cœur de l'Est lyonnais, pour des échanges en toute proximité.</p></div>
+      <div class="at rv d3"><span class="n">iv.</span><h3>Des devis clairs</h3><p>Chaque proposition est détaillée pour vous permettre de décider sereinement, sans pression.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="sec" id="methode">
+  <div class="wrap">
+    <div class="sec-tete centre rv">
+      <span class="surtitre">Comment ça se passe</span>
+      <h2>Du premier appel à <em>la première économie</em></h2>
+    </div>
+    <div class="etapes">
+      <svg class="chemin" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M140 40C260 -10 340 90 450 40S640 -10 750 40 940 90 1060 40" fill="none" stroke="#a8c66c" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/></svg>
+      <div class="etape rv"><div class="bulle">1</div><h3>On fait connaissance</h3><p>Vous appelez ou écrivez&nbsp;: on parle de votre logement et de vos envies.</p></div>
+      <div class="etape rv d1"><div class="bulle">2</div><h3>Visite sur place</h3><p>Étude de la maison, de la toiture, de l'exposition et des équipements existants.</p></div>
+      <div class="etape rv d2"><div class="bulle">3</div><h3>Devis détaillé</h3><p>Une proposition claire, avec le matériel et les options qui vous correspondent.</p></div>
+      <div class="etape rv d3"><div class="bulle">4</div><h3>Installation</h3><p>Pose, mise en service et prise en main expliquée pour en profiter dès le premier jour.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="sec" id="apropos" style="padding-top:20px">
+  <div class="wrap propos">
+    <div class="propos-visuel rv" aria-hidden="true">
+      <svg viewBox="0 0 440 420">
+        <path d="M220 16c86 0 170 46 196 128 26 84-14 180-90 228-78 48-190 44-258-16C0 296-12 196 30 122 66 58 140 16 220 16z" fill="#a8c66c"/>
+        <path d="M70 330c40-120 140-210 300-250-20 160-130 260-300 250z" fill="#24533f"/>
+        <path d="M70 330C150 250 230 170 340 110" stroke="#a8c66c" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M140 270l-30-40M190 220l-24-50M240 180l-10-46M180 240l50 10M230 196l56 4" stroke="#a8c66c" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="350" cy="80" r="40" fill="#f0b23e"/>
+        <circle cx="350" cy="80" r="56" fill="none" stroke="#f0b23e" stroke-width="3" stroke-dasharray="4 10"/>
+        <g font-family="Fraunces, serif" font-style="italic" font-size="30" fill="#f5f1e6"><text x="98" y="380">depuis 2022</text></g>
+      </svg>
+    </div>
+    <div class="propos-txt rv d1">
+      <span class="surtitre">À propos</span>
+      <h2 style="font-size:clamp(32px,3.8vw,50px);margin-bottom:22px">DMP Energie, <em>jeune pousse</em> de Vénissieux</h2>
+      <p><strong>DMP Energie est une SAS créée fin 2022 et installée au 4 rue Roger Planchon, à Vénissieux.</strong> Son métier&nbsp;: la vente et l'installation de pompes à chaleur, de climatisation, de panneaux photovoltaïques, de chauffe-eau thermodynamiques et de solutions de chauffage au bois.</p>
+      <p>L'idée est simple&nbsp;: aider chaque foyer à remplacer peu à peu les énergies fossiles par l'air, le soleil et le bois, avec un équipement adapté à sa maison et à son budget.</p>
+      <div class="fiche">
+        <div><span>Forme</span><b>SAS</b></div>
+        <div><span>Création</span><b>2022</b></div>
+        <div><span>Adresse</span><b>4 rue Roger Planchon</b></div>
+        <div><span>Ville</span><b>69200 Vénissieux</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉALISATIONS -->
+<section class="sec" id="realisations" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-tete rv">
+      <span class="surtitre">Réalisations</span>
+      <h2>Le genre de chantiers <em>qu'on aime mener</em></h2>
+      <p>Illustrations de prestations types — elles ne représentent pas des chantiers réels.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real rv">
+        <svg viewBox="0 0 320 240" aria-hidden="true">
+          <rect width="320" height="240" fill="#cfe6ea"/><circle cx="262" cy="52" r="24" fill="#f0b23e"/>
+          <path d="M0 200c80-20 200-20 320-6v46H0z" fill="#a8c66c"/>
+          <rect x="70" y="120" width="170" height="90" rx="4" fill="#fffaf0"/>
+          <path d="M56 124L155 56l99 68z" fill="#c8673f"/>
+          <path d="M150 64l88 60h-74l-30-34z" fill="#1d3d4f"/><path d="M168 76l-16 30M190 92l-14 30M210 106l-10 18M140 90l84 12" stroke="#cfe6ea" stroke-width="1.2" opacity=".6"/>
+          <rect x="96" y="146" width="36" height="30" rx="5" fill="#cfe6ea" stroke="#24533f" stroke-width="3"/><rect x="170" y="150" width="30" height="60" rx="13" fill="#24533f"/>
+          <path d="M236 70l10-10M246 84l14-4M224 58l2-14" stroke="#f0b23e" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <figcaption><span class="tag">Exemple de prestation</span><strong>Panneaux photovoltaïques en toiture</strong></figcaption>
+      </figure>
+      <figure class="real rv d1">
+        <svg viewBox="0 0 320 240" aria-hidden="true">
+          <rect width="320" height="240" fill="#f5f1e6"/>
+          <path d="M0 196h320v44H0z" fill="#a8c66c"/>
+          <rect x="30" y="40" width="130" height="156" fill="#fffaf0" stroke="#24533f" stroke-width="3"/>
+          <rect x="54" y="70" width="40" height="40" rx="6" fill="#cfe6ea" stroke="#24533f" stroke-width="3"/>
+          <rect x="180" y="124" width="104" height="72" rx="12" fill="#fff" stroke="#24533f" stroke-width="4"/>
+          <circle cx="214" cy="160" r="22" fill="#cfe6ea" stroke="#24533f" stroke-width="3"/><path d="M214 146v28M200 160h28" stroke="#24533f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M250 142h22M250 154h22M250 166h22M250 178h22" stroke="#24533f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M160 150h20" stroke="#f0b23e" stroke-width="5"/><path d="M160 166h20" stroke="#5aa0c0" stroke-width="5"/>
+          <path d="M296 120c8-8 8-18 0-26M306 128c14-14 14-32 0-46" stroke="#f0b23e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <figcaption><span class="tag">Exemple de prestation</span><strong>Pompe à chaleur air-eau pour une maison</strong></figcaption>
+      </figure>
+      <figure class="real rv d2">
+        <svg viewBox="0 0 320 240" aria-hidden="true">
+          <rect width="320" height="240" fill="#ece5d3"/>
+          <path d="M0 200h320v40H0z" fill="#c9b892"/>
+          <rect x="148" y="0" width="22" height="70" fill="#4a5a50"/>
+          <rect x="112" y="70" width="96" height="120" rx="16" fill="#24533f"/>
+          <rect x="126" y="92" width="68" height="60" rx="10" fill="#18241d"/>
+          <path d="M160 146c-14 0-20-9-16-20 3-8 10-10 10-22 10 6 22 16 22 28 0 9-7 14-16 14z" fill="#f0b23e"/>
+          <path d="M160 146c-6 0-9-4-7-9 1-4 5-5 5-10 5 3 10 7 10 12 0 4-3 7-8 7z" fill="#fff3c4"/>
+          <rect x="104" y="190" width="112" height="10" rx="4" fill="#18241d"/>
+          <g fill="#8b5e3c"><rect x="236" y="168" width="60" height="12" rx="6"/><rect x="242" y="154" width="54" height="12" rx="6"/><rect x="236" y="182" width="60" height="12" rx="6"/></g>
+          <path d="M30 60c20-16 40-10 48-6-6 22-26 30-48 24 2-6 2-12 0-18z" fill="#a8c66c"/>
+        </svg>
+        <figcaption><span class="tag">Exemple de prestation</span><strong>Chauffage au bois dans le séjour</strong></figcaption>
+      </figure>
+      <figure class="real rv d3">
+        <svg viewBox="0 0 320 240" aria-hidden="true">
+          <rect width="320" height="240" fill="#e4f0e6"/>
+          <path d="M0 204h320v36H0z" fill="#a8c66c"/>
+          <rect x="120" y="36" width="80" height="168" rx="40" fill="#fff" stroke="#24533f" stroke-width="4"/>
+          <path d="M120 80h80" stroke="#24533f" stroke-width="3"/>
+          <circle cx="160" cy="58" r="10" fill="#cfe6ea" stroke="#24533f" stroke-width="3"/>
+          <path d="M160 112c-12 16-16 26-16 32a16 16 0 0 0 32 0c0-6-4-16-16-32z" fill="#5aa0c0"/>
+          <path d="M140 36V14H60M180 36V14h80" stroke="#24533f" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M60 30c10-6 20 6 30 0M240 30c10-6 20 6 30 0" stroke="#f0b23e" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <figcaption><span class="tag">Exemple de prestation</span><strong>Chauffe-eau thermodynamique au garage</strong></figcaption>
+      </figure>
+    </div>
+    <div class="tarifs rv">
+      <div>
+        <h3>Nos tarifs&nbsp;? <em>Sur devis.</em></h3>
+        <p>Chaque maison, chaque toiture, chaque besoin est différent&nbsp;: le prix est établi après étude de votre projet.</p>
+      </div>
+      <div class="puces">
+        <span>Pompe à chaleur<b>sur devis</b></span>
+        <span>Climatisation<b>sur devis</b></span>
+        <span>Photovoltaïque<b>sur devis</b></span>
+        <span>Chauffe-eau thermodynamique<b>sur devis</b></span>
+        <span>Chauffage au bois<b>sur devis</b></span>
+        <span>Entretien<b>sur devis</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="sec" id="avis" style="padding-top:20px">
+  <div class="wrap">
+    <div class="avis rv">
+      <svg class="soleil" viewBox="0 0 200 200" aria-hidden="true">
+        <g class="rayons" style="transform-origin:100px 100px" fill="#f0b23e"><path d="M100 4l8 30H92z"/><path d="M100 196l-8-30h16z"/><path d="M4 100l30-8v16z"/><path d="M196 100l-30 8V92z"/><path d="M32 32l27 15-12 12z"/><path d="M168 168l-27-15 12-12z"/><path d="M168 32l-15 27-12-12z"/><path d="M32 168l15-27 12 12z"/></g>
+        <circle cx="100" cy="100" r="52" fill="#f0b23e"/>
+        <path d="M80 92c0-6 8-6 8 0M112 92c0-6 8-6 8 0" stroke="#18241d" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M82 112c10 12 26 12 36 0" stroke="#18241d" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <span class="surtitre">Votre avis compte</span>
+        <h2>Un projet mené avec <em>DMP Energie</em>&nbsp;?</h2>
+        <p>Racontez votre expérience sur Google&nbsp;: votre retour aide d'autres familles de Vénissieux et des environs à franchir le pas vers les énergies renouvelables.</p>
+        <a class="btn btn-foret" href="https://www.google.com/maps/search/?api=1&amp;query=DMP+Energie+Venissieux" target="_blank" rel="noopener">Laisser un avis Google<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-tete centre rv">
+      <span class="surtitre">Questions fréquentes</span>
+      <h2>Vous vous <em>demandez</em> peut-être…</h2>
+    </div>
+    <div class="faq">
+      <div class="q rv"><button aria-expanded="false">Ma maison convient-elle à une pompe à chaleur&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Beaucoup de logements peuvent en accueillir une, mais l'isolation, les émetteurs de chaleur et la place disponible pour l'unité extérieure comptent. Une visite permet de vérifier tout cela avant de vous proposer une solution.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Des panneaux solaires sont-ils intéressants dans la région lyonnaise&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>L'ensoleillement de la région permet généralement une production intéressante, mais tout dépend de l'orientation, de l'inclinaison et des ombres portées sur votre toit. L'étude du projet sert justement à l'estimer.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Peut-on combiner plusieurs équipements&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Oui, par exemple une pompe à chaleur avec des panneaux photovoltaïques, ou un chauffe-eau thermodynamique avec un chauffage au bois. Les combinaisons possibles sont discutées lors du devis.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Existe-t-il des aides financières&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Certains travaux de rénovation énergétique peuvent ouvrir droit à des aides publiques, sous conditions qui évoluent régulièrement. Renseignez-vous sur les sites officiels&nbsp;; nous pourrons en parler ensemble.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Quand puis-je vous joindre&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Du lundi au vendredi, de 7h30 à 17h, au 06 23 25 49 73 ou au 09 83 09 50 09. Vous pouvez aussi écrire à dmp-energie@outlook.fr à tout moment.</p></div></div></div>
+      <div class="q rv"><button aria-expanded="false">Faut-il entretenir une pompe à chaleur&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Oui, un entretien régulier est recommandé, et il est encadré par la réglementation selon la puissance de l'appareil. Il permet de conserver de bonnes performances dans la durée.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS -->
+<section class="sec" id="infos" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-tete rv">
+      <span class="surtitre">Horaires &amp; accès</span>
+      <h2>Nous trouver <em>à Vénissieux</em></h2>
+    </div>
+    <div class="infos">
+      <div class="bloc-info rv">
+        <h3><svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#cfe6ea"/><path d="M17 9v8l5 3" stroke="#24533f" stroke-width="2.6" stroke-linecap="round"/></svg>Horaires d'ouverture</h3>
+        <span class="statut" id="statut"><i></i><span>Horaires</span></span>
+        <ul class="jours" id="jours">
+          <li data-j="1"><span>Lundi</span><span>07:30 – 17:00</span></li>
+          <li data-j="2"><span>Mardi</span><span>07:30 – 17:00</span></li>
+          <li data-j="3"><span>Mercredi</span><span>07:30 – 17:00</span></li>
+          <li data-j="4"><span>Jeudi</span><span>07:30 – 17:00</span></li>
+          <li data-j="5"><span>Vendredi</span><span>07:30 – 17:00</span></li>
+          <li data-j="6" class="ferme-j"><span>Samedi</span><span>Fermé</span></li>
+          <li data-j="0" class="ferme-j"><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+      </div>
+      <div class="bloc-info rv d1">
+        <h3><svg viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#a8c66c" opacity=".5"/><path d="M17 26s-6-5-6-10a6 6 0 0 1 12 0c0 5-6 10-6 10z" stroke="#24533f" stroke-width="2.4"/><circle cx="17" cy="16" r="2" fill="#24533f"/></svg>Adresse</h3>
+        <p class="adresse">4 rue Roger Planchon<br>69200 Vénissieux</p>
+        <p class="note">L'annonce légale de la société mentionne le 4-6 rue Roger Planchon.</p>
+        <div class="carte-zone" aria-hidden="true">
+          <svg viewBox="0 0 400 150">
+            <rect width="400" height="150" fill="#cfe6ea"/>
+            <path d="M0 110c60-30 120-10 180-24s140-50 220-30v94H0z" fill="#a8c66c" opacity=".7"/>
+            <path d="M0 60C80 50 140 90 220 70s120-40 180-30" stroke="#fff" stroke-width="10" fill="none"/>
+            <path d="M120 0c10 50 30 100 20 150" stroke="#fff" stroke-width="7" fill="none"/>
+            <circle cx="320" cy="96" r="24" fill="#24533f" opacity=".85"/><circle cx="308" cy="88" r="14" fill="#2e6a4f"/>
+                        <path d="M190 30c-14 0-24 10-24 23 0 18 24 40 24 40s24-22 24-40c0-13-10-23-24-23z" fill="#f0b23e" stroke="#18241d" stroke-width="2"/>
+            <circle cx="190" cy="53" r="8" fill="#18241d"/>
+            <text x="10" y="142" font-family="DM Sans, sans-serif" font-size="10" fill="#4a5a50">Plan illustratif, non à l'échelle</text>
+          </svg>
+        </div>
+        <div class="tels">
+          <a href="tel:+33623254973"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>06 23 25 49 73 <small style="font-weight:400;color:var(--doux)">mobile</small></a>
+          <a href="tel:+33983095009"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>09 83 09 50 09 <small style="font-weight:400;color:var(--doux)">fixe</small></a>
+        </div>
+        <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&amp;query=4+rue+Roger+Planchon+69200+Venissieux" target="_blank" rel="noopener">Itinéraire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="padding-top:40px">
+  <div class="wrap contact">
+    <div class="contact-txt rv">
+      <span class="surtitre" style="color:var(--encre)">Contact</span>
+      <h2>Parlons de <em>votre projet</em></h2>
+      <p>Une question sur une pompe à chaleur, une toiture solaire ou un poêle&nbsp;? Laissez-nous un message, DMP Energie vous recontacte en semaine.</p>
+      <div class="liste">
+        <a href="tel:+33623254973"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>06 23 25 49 73</a>
+        <a href="tel:+33983095009"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 15h4"/></svg>09 83 09 50 09</a>
+        <a href="mailto:dmp-energie@outlook.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 7l9 6 9-6"/></svg>dmp-energie@outlook.fr</a>
+      </div>
+      <svg viewBox="0 0 200 200" style="position:absolute;right:-50px;bottom:-60px;width:200px;opacity:.35" aria-hidden="true"><path d="M20 180C30 80 90 30 190 20 180 120 120 175 20 180z" fill="#24533f"/></svg>
+    </div>
+    <form class="form rv d1" id="form" novalidate>
+      <div class="champ"><label for="nom">Nom</label><input id="nom" type="text" autocomplete="name" placeholder="Votre nom"></div>
+      <div class="champ"><label for="tel">Téléphone</label><input id="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+      <div class="champ"><label for="mail">E-mail</label><input id="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+      <div class="champ"><label for="projet">Votre projet</label>
+        <select id="projet"><option>Pompe à chaleur</option><option>Climatisation</option><option>Panneaux photovoltaïques</option><option>Chauffe-eau thermodynamique</option><option>Chauffage au bois</option><option>Entretien</option><option>Autre</option></select></div>
+      <div class="champ full"><label for="msg">Message</label><textarea id="msg" placeholder="Type de logement, commune, équipement actuel…"></textarea></div>
+      <button class="btn btn-foret" type="submit">Envoyer ma demande<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="envoi" id="envoi" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="vague" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C200 70 420 10 640 30s420 40 600 10S1380 30 1440 40V70H0z" fill="#1c4232"/></svg>
+  <div class="wrap pied">
+    <div>
+      <a href="#accueil" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#a8c66c"/><path d="M12 27c0-9 6-15 17-16-1 11-7 17-16 17" fill="#24533f"/><circle cx="28" cy="11" r="4" fill="#f0b23e"/></svg>DMP Energie</a>
+      <p>SAS – vente et installation de pompes à chaleur, climatisation, panneaux photovoltaïques, chauffe-eau thermodynamique et chauffage au bois, à Vénissieux depuis 2022.</p>
+    </div>
+    <div><h4>Coordonnées</h4><ul><li>4 rue Roger Planchon</li><li>69200 Vénissieux</li><li><a href="tel:+33623254973">06 23 25 49 73</a></li><li><a href="tel:+33983095009">09 83 09 50 09</a></li><li><a href="mailto:dmp-energie@outlook.fr">dmp-energie@outlook.fr</a></li></ul></div>
+    <div><h4>Horaires</h4><ul><li>Lundi – vendredi</li><li>7h30 – 17h00</li><li>Samedi, dimanche : fermé</li></ul></div>
+    <div><h4>Navigation</h4><ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  </div>
+  <div class="wrap mentions"><span>© <span id="an">2026</span> DMP Energie SAS — Vénissieux</span><span>Mentions légales à compléter</span></div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33623254973" aria-label="Appeler DMP Energie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');});});
+
+  document.querySelectorAll('.q button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var q=btn.parentNode,o=!q.classList.contains('ouvert');
+      document.querySelectorAll('.q.ouvert').forEach(function(x){x.classList.remove('ouvert');x.querySelector('button').setAttribute('aria-expanded','false');});
+      if(o){q.classList.add('ouvert');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+
+  // horaires réels : lun–ven 7h30–17h
+  var n=new Date(),d=n.getDay(),min=n.getHours()*60+n.getMinutes();
+  var li=document.querySelector('#jours li[data-j="'+d+'"]');if(li)li.classList.add('auj');
+  var ouvert=d>=1&&d<=5&&min>=450&&min<1020;
+  var st=document.getElementById('statut'),pa=document.getElementById('pastille'),et=document.getElementById('etat');
+  st.querySelector('span').textContent=ouvert?'Ouvert en ce moment':'Fermé pour le moment';
+  et.textContent=ouvert?'· ouvert':'· fermé';
+  if(!ouvert){st.classList.add('ferme');pa.classList.add('ferme');}
+  document.getElementById('an').textContent=n.getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('envoi').classList.add('on');});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('visible');});
+})();
+</script>
+</body>
+</html>

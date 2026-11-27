@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poulenard Plomberie – chauffagiste à Bron</title>
+<meta name="description" content="Poulenard Plomberie, chauffagiste à Bron (69500) : installation et entretien de chaudières gaz ou fioul, radiateurs et chaudières électriques à Bron et dans l'Est lyonnais. Devis sur demande.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#f4efe6;
+  --papier2:#ebe4d6;
+  --encre:#1b1b1f;
+  --brique:#b23a2b;
+  --brique-f:#8f2d21;
+  --rhone:#24557a;
+  --gris:#7b766d;
+  --gris-t:#5f5a52;
+  --filet:rgba(27,27,31,.18);
+  --filet-f:rgba(27,27,31,.55);
+  --serif:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --sans:"Karla",system-ui,-apple-system,sans-serif;
+  --larg:1320px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--sans);font-size:1.0625rem;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(27,27,31,.035) 1px,transparent 1.2px),radial-gradient(rgba(123,118,109,.05) 1px,transparent 1.2px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.kicker{font-family:var(--sans);font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--brique)}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(244,239,230,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--filet);transition:box-shadow .3s}
+.nav.plein{box-shadow:0 10px 30px -22px rgba(27,27,31,.5)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.logo b{font-family:var(--serif);font-weight:400;font-size:1.55rem;letter-spacing:.02em}
+.logo span{font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gris-t);border-left:1px solid var(--filet-f);padding-left:10px}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;text-decoration:none;font-size:.86rem;font-weight:600;padding:8px 11px;position:relative}
+.menu a:not(.btn-nav)::after{content:"";position:absolute;left:11px;right:11px;bottom:4px;height:1px;background:var(--brique);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:not(.btn-nav):hover::after{transform:scaleX(1)}
+.btn-nav{background:var(--encre);color:var(--papier)!important;margin-left:8px;padding:9px 16px!important;font-weight:700!important;transition:background .25s}
+.btn-nav:hover{background:var(--brique)}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--encre);background:transparent;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:2px;background:var(--encre);transition:transform .3s,opacity .3s}
+.burger i:nth-child(1){top:15px}.burger i:nth-child(2){top:22px}.burger i:nth-child(3){top:29px}
+.nav.ouvert .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.ouvert .burger i:nth-child(2){opacity:0}
+.nav.ouvert .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- BOUTONS ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1rem;padding:15px 24px;border:1.5px solid var(--encre);transition:transform .25s,background .25s,color .25s,box-shadow .25s;cursor:pointer;font-family:var(--sans)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-plein{background:var(--brique);border-color:var(--brique);color:#fff}
+.btn-plein:hover{background:var(--brique-f);border-color:var(--brique-f);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--encre)}
+.btn-trait{background:transparent;color:var(--encre)}
+.btn-trait:hover{background:var(--encre);color:var(--papier);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--brique)}
+
+/* ---------- UNE (HERO) ---------- */
+.une{padding:96px 0 0;position:relative}
+.bandeau-haut{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:3px double var(--encre);border-bottom:1px solid var(--encre);padding:9px 0;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.bandeau-haut span:nth-child(2){color:var(--brique)}
+.titre-zone{position:relative;margin-top:14px}
+.geant{font-family:var(--serif);font-weight:400;text-transform:uppercase;line-height:.8;letter-spacing:-.015em;font-size:calc((min(100vw,1320px) - 32px)/6.35);white-space:nowrap;margin:0;padding-top:.06em;color:var(--encre);position:relative;z-index:1}
+.geant .o{color:var(--brique)}
+.sous-titre{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--encre);margin-top:.1em;padding-top:10px;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2vw,1.45rem);color:var(--gris-t);position:relative;z-index:1}
+.gravure{position:absolute;z-index:3;right:1%;top:43%;width:39%;pointer-events:none}
+.sous-titre span:last-child{display:none}
+.gravure svg{width:100%;height:auto;filter:drop-shadow(0 1px 0 rgba(244,239,230,.6))}
+.une-grille{display:grid;grid-template-columns:1.15fr .85fr;gap:0;margin-top:26px;border-top:1px solid var(--filet-f)}
+.une-texte{padding:34px 48px 46px 0;border-right:1px solid var(--filet)}
+.une-texte h2{font-size:clamp(2rem,3.6vw,3.25rem);line-height:1.04;margin-bottom:18px}
+.une-texte h2 em{color:var(--rhone)}
+.chapo{font-size:1.15rem;color:#33312e;max-width:58ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.une-cote{padding:34px 0 30px 36px;display:flex;flex-direction:column;justify-content:flex-end}
+.encart{border:1px solid var(--encre);padding:16px 18px;background:var(--papier);position:relative;z-index:4;max-width:330px;margin-left:auto}
+.encart .kicker{display:block;margin-bottom:6px}
+.encart a{font-family:var(--serif);font-size:1.7rem;text-decoration:none;display:block;line-height:1.15}
+.encart a:hover{color:var(--brique)}
+.encart small{display:block;color:var(--gris-t);font-size:.86rem;margin-top:4px}
+
+/* ---------- CONFIANCE ---------- */
+.confiance{border-top:1px solid var(--encre);border-bottom:3px double var(--encre);background:var(--encre);color:var(--papier)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:18px 18px;display:flex;gap:12px;align-items:center;font-size:.92rem;border-left:1px solid rgba(244,239,230,.18)}
+.confiance li:first-child{border-left:0}
+.confiance li svg{width:28px;height:28px;flex:none;color:#e9a093}
+.confiance b{display:block;font-family:var(--serif);font-weight:400;font-size:1.15rem;line-height:1.15}
+.confiance a{text-decoration:none}
+
+/* ---------- RUBRIQUES ---------- */
+.rubrique{padding:96px 0 0}
+.tete{display:grid;grid-template-columns:auto 1fr;gap:0 28px;align-items:end;border-bottom:1px solid var(--encre);padding-bottom:18px;margin-bottom:40px}
+.tete .num{font-family:var(--serif);font-size:clamp(4rem,8vw,6.5rem);line-height:.78;color:var(--brique);grid-row:span 2}
+.tete .kicker{color:var(--gris-t)}
+.tete h2{font-size:clamp(2.1rem,4.4vw,3.6rem)}
+.tete p{grid-column:2;margin:10px 0 0;color:var(--gris-t);max-width:70ch}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--encre);border-left:1px solid var(--filet)}
+.carte{padding:28px 26px 30px;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);position:relative;transition:background .3s}
+.carte:hover{background:var(--papier2)}
+.carte .ico{width:58px;height:58px;color:var(--encre);margin-bottom:18px;transition:transform .35s}
+.carte:hover .ico{transform:rotate(-4deg) scale(1.06)}
+.carte .ico .r{color:var(--brique)}
+.carte .n{position:absolute;top:22px;right:24px;font-family:var(--serif);font-style:italic;color:var(--gris);font-size:1.05rem}
+.carte h3{font-size:1.6rem;margin-bottom:8px}
+.carte p{margin:0;color:#3a3833;font-size:.98rem}
+.carte .tag{display:inline-block;margin-top:14px;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rhone);border-bottom:1px solid currentColor}
+
+/* atouts */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.atout{padding:6px 26px 10px;border-left:1px solid var(--filet)}
+.atout:first-child{border-left:0;padding-left:0}
+.atout svg{width:40px;height:40px;color:var(--rhone);margin-bottom:14px}
+.atout h3{font-size:1.45rem;margin-bottom:8px}
+.atout p{margin:0;color:#3a3833;font-size:.97rem}
+
+/* étapes */
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:e;position:relative}
+.etapes::before{content:"";position:absolute;left:0;right:0;top:38px;border-top:1px dashed var(--filet-f)}
+.etape{padding:0 22px 0 0;position:relative}
+.etape .rond{width:76px;height:76px;border:1.5px solid var(--encre);border-radius:50%;background:var(--papier);display:grid;place-items:center;font-family:var(--serif);font-size:2.2rem;position:relative;margin-bottom:18px;transition:background .3s,color .3s}
+.etape:hover .rond{background:var(--brique);color:#fff;border-color:var(--brique)}
+.etape h3{font-size:1.4rem;margin-bottom:6px}
+.etape p{margin:0;color:#3a3833;font-size:.97rem}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start}
+.colonnes{column-count:2;column-gap:40px;column-rule:1px solid var(--filet);font-size:1.06rem}
+.colonnes p:first-child::first-letter{font-family:var(--serif);float:left;font-size:5.4rem;line-height:.82;padding:6px 10px 0 0;color:var(--brique)}
+.citation{border-top:3px double var(--encre);border-bottom:1px solid var(--encre);padding:22px 0}
+.citation p{font-family:var(--serif);font-size:1.75rem;line-height:1.2;margin:0 0 12px}
+.citation p em{color:var(--brique)}
+.fiche{list-style:none;margin:18px 0 0;padding:0;font-size:.95rem}
+.fiche li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dotted var(--filet-f);padding:8px 0}
+.fiche li span:first-child{color:var(--gris-t)}
+.fiche li span:last-child{text-align:right;font-weight:600}
+
+/* galerie */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.planche{margin:0}
+.planche .cadre{border:1px solid var(--encre);background:#f8f4ec;padding:10px;transition:transform .35s,box-shadow .35s}
+.planche:hover .cadre{transform:translateY(-4px);box-shadow:6px 6px 0 var(--encre)}
+.planche svg{width:100%;height:auto}
+.planche figcaption{padding-top:10px;font-size:.9rem;line-height:1.4}
+.planche figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:1.22rem}
+.planche figcaption i{color:var(--gris-t);font-size:.78rem;font-style:normal;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+.tarifs{margin-top:56px;display:grid;grid-template-columns:1fr 1.3fr;gap:48px;border-top:3px double var(--encre);padding-top:30px}
+.tarifs h3{font-size:2.2rem;margin-bottom:10px}
+.tarifs p{color:#3a3833}
+.annonces{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--filet)}
+.annonce{padding:14px 18px;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet)}
+.annonce b{font-family:var(--serif);font-weight:400;font-size:1.2rem;display:block}
+.annonce span{display:flex;justify-content:space-between;font-size:.86rem;color:var(--gris-t)}
+.annonce span em{font-style:normal;font-weight:800;color:var(--brique);letter-spacing:.08em;text-transform:uppercase;font-size:.75rem}
+
+/* avis */
+.lecteurs{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;border:1px solid var(--encre);padding:36px 40px;background:linear-gradient(var(--papier2),var(--papier2)) padding-box;position:relative}
+.lecteurs::before{content:"";position:absolute;inset:6px;border:1px solid var(--filet);pointer-events:none}
+.lecteurs svg{width:92px;height:92px;color:var(--rhone)}
+.lecteurs h3{font-size:2rem;margin-bottom:8px}
+.lecteurs p{margin:0;color:#3a3833;max-width:62ch}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.q{border-top:1px solid var(--encre)}
+.q:nth-last-child(-n+2){border-bottom:1px solid var(--encre)}
+.q button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;cursor:pointer;font-family:var(--serif);font-size:1.3rem;line-height:1.2}
+.q button:focus-visible{outline:2px solid var(--brique);outline-offset:3px}
+.q button span.plus{flex:none;width:30px;height:30px;border:1px solid var(--encre);border-radius:50%;position:relative;transition:transform .3s,background .3s}
+.q button span.plus::before,.q button span.plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.q button span.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.q.ouvert button span.plus{background:var(--encre);color:var(--papier)}
+.q.ouvert button span.plus::after{transform:translate(-50%,-50%) rotate(0)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{margin:0 0 18px;color:#3a3833;max-width:60ch}
+
+/* infos pratiques */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--encre);border-bottom:1px solid var(--encre)}
+.infos>div{padding:30px 36px 34px 0}
+.infos>div+div{border-left:1px solid var(--filet);padding:30px 0 34px 36px}
+.infos h3{font-size:1.8rem;margin-bottom:6px}
+.note{color:var(--gris-t);font-size:.92rem;margin-bottom:14px}
+.horaires{width:100%;border-collapse:collapse;font-size:.98rem}
+.horaires td{padding:9px 10px;border-bottom:1px dotted var(--filet-f)}
+.horaires td:last-child{text-align:right;color:var(--gris-t)}
+.horaires tr.auj td{background:var(--encre);color:var(--papier);font-weight:700;border-bottom-color:var(--encre)}
+.horaires tr.auj td:first-child::after{content:"aujourd'hui";margin-left:10px;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:var(--brique);padding:2px 7px;font-weight:800}
+.carte-zone{border:1px solid var(--encre);margin:16px 0 18px;background:#f8f4ec}
+.carte-zone svg{width:100%;height:auto}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact-intro h2{font-size:clamp(2.2rem,4.5vw,3.8rem);margin:8px 0 16px}
+.contact-intro h2 em{color:var(--brique)}
+.coord{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--encre)}
+.coord li{border-bottom:1px solid var(--filet);padding:14px 0;display:flex;gap:14px;align-items:center}
+.coord svg{width:22px;height:22px;color:var(--brique);flex:none}
+.coord a{text-decoration:none;font-weight:600;word-break:break-word}
+.coord a:hover{color:var(--brique)}
+form{border:1px solid var(--encre);padding:30px;background:#f8f4ec;position:relative}
+form::before{content:"Bon de demande";position:absolute;top:-12px;left:22px;background:var(--papier);padding:0 10px;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--brique)}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.champ{display:flex;flex-direction:column;gap:5px}
+.champ.l{grid-column:1/-1}
+label{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-t)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--encre);background:transparent;border:0;border-bottom:1.5px solid var(--encre);padding:9px 2px;border-radius:0;width:100%;transition:border-color .25s,background .25s}
+textarea{border:1.5px solid var(--encre);padding:10px;min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--brique);background:rgba(178,58,43,.04)}
+.form-bas{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:22px}
+.form-bas small{color:var(--gris-t);font-size:.82rem;max-width:34ch}
+.retour{display:none;margin-top:18px;padding:14px 16px;border:1.5px solid var(--rhone);background:rgba(36,85,122,.08);color:var(--rhone);font-weight:700}
+.retour.vu{display:block}
+
+/* footer */
+footer{margin-top:110px;background:var(--encre);color:rgba(244,239,230,.82);padding:56px 0 26px}
+.pied-titre{font-family:var(--serif);font-size:clamp(3rem,12vw,9.5rem);line-height:.85;color:var(--papier);text-transform:uppercase;border-bottom:1px solid rgba(244,239,230,.25);padding-bottom:18px;margin-bottom:34px;letter-spacing:-.01em;overflow:hidden}
+.pied-titre span{color:#e07a6a}
+.pied{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.pied h4{font-family:var(--sans);font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#e9a093;margin-bottom:12px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied li{margin-bottom:7px;font-size:.95rem}
+.pied a{text-decoration:none}
+.pied a:hover{color:#fff;text-decoration:underline}
+.pied p{font-size:.95rem}
+.bas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-top:40px;padding-top:18px;border-top:1px solid rgba(244,239,230,.18);font-size:.82rem;color:rgba(244,239,230,.6)}
+.demo{background:#e4dccd;color:#4c4841;text-align:center;font-size:.8rem;padding:10px 16px 12px;border-top:1px solid var(--filet)}
+
+.flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;background:var(--brique);color:#fff;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:40px;box-shadow:0 12px 26px -10px rgba(27,27,31,.6);align-items:center;gap:9px}
+.flottant svg{width:20px;height:20px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important;animation:none!important}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .menu a{padding:8px 8px;font-size:.82rem}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr);gap:30px 0}
+  .atout:nth-child(3){border-left:0;padding-left:0}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .confiance ul{grid-template-columns:repeat(2,1fr)}
+  .confiance li:nth-child(3){border-left:0}
+  .confiance li:nth-child(n+3){border-top:1px solid rgba(244,239,230,.18)}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--papier);border-bottom:3px double var(--encre);padding:8px 16px 18px;gap:0;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{font-family:var(--serif);font-weight:400;font-size:1.5rem;padding:12px 0;border-bottom:1px solid var(--filet)}
+  .menu a:not(.btn-nav)::after{display:none}
+  .btn-nav{margin:14px 0 0;text-align:center;font-family:var(--sans)!important;font-size:1rem!important}
+  .une-grille{grid-template-columns:1fr}
+  .une-texte{border-right:0;padding:26px 0 10px}
+  .une-cote{padding:10px 0 34px}
+  .encart{margin-left:0;max-width:none}
+  .titre-zone{display:flex;flex-direction:column}
+  .geant{order:1}
+  .gravure{order:2;position:relative;right:auto;top:auto;width:min(92%,460px);margin:-6.5vw auto 4px;align-self:center}
+  .sous-titre{order:3}
+  .sous-titre span:last-child{display:block}
+  .apropos,.contact,.tarifs{grid-template-columns:1fr;gap:34px}
+  .faq{grid-template-columns:1fr}
+  .q:nth-last-child(2){border-bottom:0}
+  .infos{grid-template-columns:1fr}
+  .infos>div{padding:28px 0}
+  .infos>div+div{border-left:0;border-top:1px solid var(--filet);padding:28px 0}
+  .lecteurs{grid-template-columns:1fr;gap:18px;padding:28px 24px}
+  .etapes{grid-template-columns:1fr 1fr;gap:34px 0}
+  .etapes::before{display:none}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .logo span{display:none}
+  .bandeau-haut{font-size:.62rem;letter-spacing:.1em}
+  .bandeau-haut span:nth-child(3){display:none}
+  .sous-titre{flex-direction:column;gap:2px;font-size:1rem}
+  .rubrique{padding-top:72px}
+  .tete{grid-template-columns:1fr;gap:6px}
+  .tete .num{grid-row:auto;font-size:3.6rem}
+  .tete p{grid-column:1}
+  .services{grid-template-columns:1fr}
+  .carte{display:grid;grid-template-columns:46px 1fr;gap:0 16px;padding:22px 18px 22px}
+  .carte .ico{width:46px;height:46px;grid-row:1/4;margin:2px 0 0}
+  .carte h3{font-size:1.4rem;padding-right:26px}
+  .carte .tag{justify-self:start;margin-top:10px}
+  .carte .n{top:20px;right:16px}
+  .atouts{grid-template-columns:1fr}
+  .atout{border-left:0;padding:0 0 22px;border-bottom:1px solid var(--filet)}
+  .etapes{grid-template-columns:1fr}
+  .colonnes{column-count:1}
+  .galerie{grid-template-columns:1fr 1fr;gap:16px}
+  .planche figcaption b{font-size:1.05rem}
+  .annonces{grid-template-columns:1fr}
+  .confiance ul{grid-template-columns:1fr}
+  .confiance li{border-left:0!important;border-top:1px solid rgba(244,239,230,.18)}
+  .confiance li:first-child{border-top:0}
+  .champs{grid-template-columns:1fr}
+  form{padding:24px 18px}
+  .pied{grid-template-columns:1fr}
+  .flottant{display:inline-flex}
+  .demo{padding-bottom:80px}
+  .actions .btn{flex:1 1 100%;justify-content:center}
+  .citation p{font-size:1.45rem}
+}
+@media (max-width:420px){
+  .planche .cadre{padding:6px}
+  .planche figcaption{font-size:.82rem}
+  .planche figcaption i{font-size:.64rem;letter-spacing:.08em}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#une" aria-label="Poulenard Plomberie, retour en haut"><b>Poulenard</b><span>Plomberie · Bron</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#atouts">Atouts</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#infos">Infos</a></li>
+      <li><a class="btn-nav" href="#contact">Demander un devis</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ============ LA UNE ============ -->
+<section class="une" id="une">
+  <div class="wrap">
+    <div class="bandeau-haut"><span>Édition Bron · 69500</span><span>Spécial chauffage</span><span>Est lyonnais</span></div>
+    <div class="titre-zone">
+      <h1 class="geant" id="geant"><span class="sr">Poulenard Plomberie, chauffagiste à Bron – </span><span aria-hidden="true">P<span class="o">o</span>ulenard</span></h1>
+      <div class="sous-titre"><span>Plomberie &amp; chauffage — chaudières, radiateurs</span><span>Bron et l'Est lyonnais</span></div>
+      <div class="gravure" aria-hidden="true">
+        <svg viewBox="0 0 540 430" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hA" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#1b1b1f" stroke-width="1.1"/></pattern>
+            <pattern id="hB" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1b1b1f" stroke-width=".8"/></pattern>
+            <pattern id="hC" width="6" height="6" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="6" y2="0" stroke="#1b1b1f" stroke-width=".7"/></pattern>
+          </defs>
+          <g fill="none" stroke="#1b1b1f" stroke-linecap="round" stroke-linejoin="round">
+            <!-- conduit -->
+            <rect x="112" y="2" width="56" height="64" fill="#f4efe6" stroke-width="2.4"/>
+            <rect x="150" y="2" width="18" height="64" fill="url(#hA)" stroke="none"/>
+            <path d="M112 22h56M112 44h56" stroke-width="1.4"/>
+            <!-- chaudière murale -->
+            <rect x="40" y="64" width="200" height="282" rx="12" fill="#f4efe6" fill-opacity=".9" stroke-width="2.6"/>
+            <path d="M222 70 Q238 70 238 88 V328 Q238 344 222 344" fill="url(#hA)" stroke="none"/>
+            <path d="M58 82h162" stroke-width="1"/>
+            <path d="M58 88h120" stroke-width=".8" stroke-dasharray="2 4"/>
+            <rect x="74" y="112" width="132" height="94" rx="6" fill="#f4efe6" stroke-width="1.8"/>
+            <circle cx="140" cy="159" r="30" fill="url(#hC)" stroke-width="1.6"/>
+            <circle cx="140" cy="159" r="22" fill="#f4efe6" stroke-width="1.2"/>
+            <path d="M140 176c-11 0-14-9-10-16 3-5 6-6 5-14 7 4 9 10 8 15 3-2 4-5 4-8 5 6 6 11 4 16-2 4-6 7-11 7z" fill="#b23a2b" stroke="#8f2d21" stroke-width="1.1"/>
+            <path d="M58 226h164" stroke-width="1"/>
+            <rect x="64" y="246" width="152" height="58" rx="5" fill="#f4efe6" stroke-width="1.8"/>
+            <rect x="76" y="258" width="50" height="22" fill="#24557a" fill-opacity=".14" stroke="#24557a" stroke-width="1.4"/>
+            <path d="M84 270h8M96 266v8M104 270h14" stroke="#24557a" stroke-width="1.4"/>
+            <circle cx="152" cy="275" r="11" stroke-width="1.6"/><path d="M152 266v6" stroke-width="1.6"/>
+            <circle cx="190" cy="275" r="11" stroke-width="1.6"/><path d="M196 268l-4 5" stroke-width="1.6"/>
+            <path d="M76 292h50" stroke-width=".8"/>
+            <path d="M60 322h160" stroke-width=".8" stroke-dasharray="1 4"/>
+            <!-- tuyaux sous chaudière -->
+            <path d="M80 346v62M108 346v62M146 346v62M174 346v40h130v-26" stroke-width="2.2"/>
+            <path d="M200 346v30h120v-16" stroke-width="2.2"/>
+            <rect x="74" y="370" width="12" height="10" fill="#1b1b1f"/>
+            <rect x="102" y="370" width="12" height="10" fill="#1b1b1f"/>
+            <rect x="140" y="370" width="12" height="10" fill="#1b1b1f"/>
+            <path d="M70 375h-8M118 375h8" stroke-width="2"/>
+            <!-- radiateur -->
+            <g>
+              <path d="M286 220h228M286 384h228" stroke-width="2"/>
+              <g fill="#f4efe6" stroke-width="2">
+                <rect x="290" y="206" width="24" height="190" rx="11"/>
+                <rect x="318" y="206" width="24" height="190" rx="11"/>
+                <rect x="346" y="206" width="24" height="190" rx="11"/>
+                <rect x="374" y="206" width="24" height="190" rx="11"/>
+                <rect x="402" y="206" width="24" height="190" rx="11"/>
+                <rect x="430" y="206" width="24" height="190" rx="11"/>
+                <rect x="458" y="206" width="24" height="190" rx="11"/>
+                <rect x="486" y="206" width="24" height="190" rx="11"/>
+              </g>
+              <g fill="url(#hB)" stroke="none">
+                <rect x="305" y="216" width="7" height="170" rx="3"/>
+                <rect x="333" y="216" width="7" height="170" rx="3"/>
+                <rect x="361" y="216" width="7" height="170" rx="3"/>
+                <rect x="389" y="216" width="7" height="170" rx="3"/>
+                <rect x="417" y="216" width="7" height="170" rx="3"/>
+                <rect x="445" y="216" width="7" height="170" rx="3"/>
+                <rect x="473" y="216" width="7" height="170" rx="3"/>
+                <rect x="501" y="216" width="7" height="170" rx="3"/>
+              </g>
+              <path d="M296 238v128M324 238v128M352 238v128M380 238v128M408 238v128M436 238v128M464 238v128M492 238v128" stroke-width=".7" stroke-dasharray="3 5"/>
+              <!-- robinet thermostatique -->
+              <path d="M290 372h-12" stroke-width="2.2"/>
+              <rect x="262" y="340" width="18" height="34" rx="6" fill="#f4efe6" stroke-width="1.8"/>
+              <path d="M262 348h18M262 356h18M262 364h18" stroke-width=".8"/>
+              <path d="M300 396v12M500 396v12" stroke-width="2.4"/>
+              <!-- chaleur -->
+              <g stroke="#b23a2b" stroke-width="2">
+                <path d="M330 192c-8-12 8-18 0-30s8-18 0-30"/>
+                <path d="M400 192c-8-12 8-18 0-30s8-18 0-30"/>
+                <path d="M470 192c-8-12 8-18 0-30s8-18 0-30"/>
+              </g>
+            </g>
+            <!-- sol -->
+            <path d="M10 410h520" stroke-width="2"/>
+            <path d="M20 418l12-8M44 418l12-8M68 418l12-8M92 418l12-8M116 418l12-8M140 418l12-8M164 418l12-8M188 418l12-8M212 418l12-8M236 418l12-8M260 418l12-8M284 418l12-8M308 418l12-8M332 418l12-8M356 418l12-8M380 418l12-8M404 418l12-8M428 418l12-8M452 418l12-8M476 418l12-8M500 418l12-8" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="une-grille">
+      <div class="une-texte rv">
+        <span class="kicker">À la une · Chauffage à Bron</span>
+        <h2>Quand le froid descend sur la plaine de l'Est, on remet <em>la chaudière</em> à la une.</h2>
+        <p class="chapo">Chaudière à gaz ou au fioul, radiateurs, chaudière électrique : Poulenard Plomberie s'occupe du chauffage des maisons et appartements de Bron et de l'Est lyonnais. Une question, une panne, un projet de remplacement ? Le plus simple reste de décrocher le téléphone.</p>
+        <div class="actions">
+          <a class="btn btn-plein" href="tel:+33478426467"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+          <a class="btn btn-trait" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Demander un devis</a>
+        </div>
+      </div>
+      <div class="une-cote">
+        <div class="encart rv">
+          <span class="kicker">Standard</span>
+          <a href="tel:+33478426467">04 78 42 64 67</a>
+          <small>Ligne fixe basée à Bron · ou par e-mail</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIANCE ============ -->
+<section class="confiance" aria-label="En bref">
+  <div class="wrap">
+    <ul>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 29s-9-9.4-9-16a9 9 0 0 1 18 0c0 6.6-9 16-9 16z"/><circle cx="16" cy="13" r="3.4"/></svg><div><b>Bron, 69500</b>Entreprise installée à Bron</div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24"/></svg><div><b>Est lyonnais</b>Zone d'intervention</div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="3"/><path d="M16 21c-3 0-4-2-3-4s2-2 2-5c2 1 3 3 3 5 1-1 1-2 1-3 2 3 1 7-3 7z"/></svg><div><b>Gaz · fioul · électrique</b>Chaudières et radiateurs</div></li>
+      <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 5h6l2 7-3.5 2a16 16 0 0 0 7.5 7.5L22 18l7 2v6a3 3 0 0 1-3 3A23 23 0 0 1 5 8a3 3 0 0 1 3-3z"/></svg><div><b><a href="tel:+33478426467">04 78 42 64 67</a></b>Devis sur simple appel</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 01 SERVICES ============ -->
+<section class="rubrique" id="services">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">01</span>
+      <span class="kicker">Rubrique · Les prestations</span>
+      <h2>Au sommaire du chauffage</h2>
+      <p>Les deux spécialités de la maison — la chaudière gaz ou fioul, le radiateur et la chaudière électrique — et tout ce qui va avec pour que l'installation tienne l'hiver.</p>
+    </div>
+    <div class="services">
+      <article class="carte rv">
+        <span class="n">i.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="8" width="36" height="46" rx="4"/><path d="M14 18h36"/><circle cx="32" cy="34" r="9"/><path class="r" d="M32 40c-4 0-5-3-4-5.5 1-1.8 2-2 2-5 2.5 1.4 3.4 3.4 3 5 1-.7 1.4-1.6 1.4-2.6 1.8 2 2 4 1.4 5.5-.7 1.6-2 2.6-3.8 2.6z" stroke="#b23a2b"/><path d="M22 54v6M42 54v6M28 13h8"/></svg>
+        <h3>Chaudière à gaz</h3>
+        <p>Installation, remplacement et mise en service de chaudières gaz murales ou au sol, avec réglages adaptés à votre logement.</p>
+        <span class="tag">Spécialité</span>
+      </article>
+      <article class="carte rv">
+        <span class="n">ii.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="16" width="26" height="40" rx="3"/><path d="M8 26h26M14 34h14M14 40h14"/><path d="M40 30h12a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H40z"/><path d="M34 44h6M48 22c-3 4-4 6-4 8a4 4 0 0 0 8 0c0-2-1-4-4-8z" stroke="#b23a2b"/><path d="M4 56h56"/></svg>
+        <h3>Chaudière au fioul</h3>
+        <p>Entretien, remise en route et remplacement de chaudières fioul, contrôle du brûleur et des organes de sécurité.</p>
+        <span class="tag">Spécialité</span>
+      </article>
+      <article class="carte rv">
+        <span class="n">iii.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="22" width="8" height="30" rx="4"/><rect x="20" y="22" width="8" height="30" rx="4"/><rect x="30" y="22" width="8" height="30" rx="4"/><rect x="40" y="22" width="8" height="30" rx="4"/><path d="M6 28h48M6 46h48M54 46h4M14 52v5M44 52v5"/><path d="M20 16c-2-3 2-4 0-8M32 16c-2-3 2-4 0-8M44 16c-2-3 2-4 0-8" stroke="#b23a2b"/></svg>
+        <h3>Radiateurs</h3>
+        <p>Pose, remplacement ou ajout de radiateurs, purge, équilibrage et robinets thermostatiques pour une chaleur mieux répartie.</p>
+        <span class="tag">Spécialité</span>
+      </article>
+      <article class="carte rv">
+        <span class="n">iv.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="6" width="32" height="50" rx="4"/><path d="M16 16h32"/><path d="M34 24l-7 12h9l-6 12" stroke="#b23a2b"/><path d="M24 56v4M40 56v4M24 11h4"/></svg>
+        <h3>Chaudière électrique</h3>
+        <p>Installation et dépannage de chaudières électriques, une solution compacte quand le gaz n'arrive pas jusqu'au logement.</p>
+        <span class="tag">Spécialité</span>
+      </article>
+      <article class="carte rv">
+        <span class="n">v.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="10" width="40" height="46" rx="3"/><path d="M24 6h16v8H24z"/><path d="M20 26l4 4 8-8" stroke="#b23a2b"/><path d="M36 28h10M20 40l4 4 8-8" /><path d="M36 42h10"/></svg>
+        <h3>Entretien annuel</h3>
+        <p>Visite d'entretien de la chaudière, nettoyage, contrôle de combustion et attestation remise à l'issue du passage.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+      <article class="carte rv">
+        <span class="n">vi.</span>
+        <svg class="ico" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 8a12 12 0 0 0-11 16L10 43a5 5 0 0 0 7 7l19-19A12 12 0 0 0 52 20l-7 3-5-5 3-7z"/><circle cx="14" cy="46" r="1.5"/><path d="M48 44v8M44 48h8" stroke="#b23a2b"/></svg>
+        <h3>Dépannage chauffage</h3>
+        <p>Plus d'eau chaude, radiateurs froids, chaudière en sécurité : diagnostic de la panne et remise en état de l'installation.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 ATOUTS ============ -->
+<section class="rubrique" id="atouts">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">02</span>
+      <span class="kicker">Rubrique · L'éditorial</span>
+      <h2>Pourquoi confier son chauffage à Poulenard</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 36s-11-11-11-19a11 11 0 0 1 22 0c0 8-11 19-11 19z"/><circle cx="20" cy="17" r="4"/></svg>
+        <h3>Un artisan de Bron</h3>
+        <p>Une entreprise du coin, qui connaît les pavillons comme les immeubles de l'Est lyonnais et circule dans le secteur.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="5" width="20" height="30" rx="3"/><path d="M20 27c-4 0-5-3-4-5s3-3 3-7c3 2 4 4 4 6 1-1 1-2 1-3 2 3 2 9-4 9z"/></svg>
+        <h3>Le chauffage pour métier</h3>
+        <p>Gaz, fioul, électrique : les chaudières et radiateurs sont le cœur de l'activité, pas un à-côté.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4H10a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V13z"/><path d="M24 4v9h9M13 21h14M13 27h9"/></svg>
+        <h3>Un devis avant tout</h3>
+        <p>Chaque intervention importante fait l'objet d'un devis détaillé, pour savoir à quoi s'attendre avant de signer.</p>
+      </div>
+      <div class="atout rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30V12a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H14z"/><path d="M13 16h14M13 21h9"/></svg>
+        <h3>Des conseils francs</h3>
+        <p>Réparer ou remplacer ? On regarde l'existant et on vous explique les options, sans pousser au changement inutile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 METHODE ============ -->
+<section class="rubrique" id="methode">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">03</span>
+      <span class="kicker">Rubrique · Mode d'emploi</span>
+      <h2>Comment ça se passe</h2>
+    </div>
+    <ol class="etapes">
+      <li class="etape rv"><div class="rond">1</div><h3>Vous appelez</h3><p>Au 04 78 42 64 67 ou via le formulaire : vous décrivez votre chaudière, vos radiateurs ou la panne.</p></li>
+      <li class="etape rv"><div class="rond">2</div><h3>On fait le point</h3><p>Un rendez-vous est fixé pour voir l'installation sur place, à Bron ou dans l'Est lyonnais.</p></li>
+      <li class="etape rv"><div class="rond">3</div><h3>Devis détaillé</h3><p>Vous recevez une proposition claire : matériel, main-d'œuvre, délais. Vous décidez en connaissance de cause.</p></li>
+      <li class="etape rv"><div class="rond">4</div><h3>Intervention</h3><p>Travaux réalisés, installation testée, chantier rangé et explications données sur l'utilisation.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 04 A PROPOS ============ -->
+<section class="rubrique" id="apropos">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">04</span>
+      <span class="kicker">Rubrique · Portrait</span>
+      <h2>Une plomberie de Bron, tournée vers la chaleur</h2>
+    </div>
+    <div class="apropos">
+      <div class="colonnes rv">
+        <p>Poulenard Plomberie est une entreprise de plomberie et de chauffage installée à Bron, dans le Rhône, aux portes de Lyon. Son terrain de jeu : la commune et l'Est lyonnais, ces quartiers résidentiels et ces ensembles où l'on se chauffe aussi bien au gaz qu'au fioul ou à l'électricité.</p>
+        <p>Ses spécialités sont nettes : la chaudière à gaz ou au fioul d'un côté, le radiateur et la chaudière électrique de l'autre. C'est ce qui fait la différence entre un logement où il fait bon et un hiver passé en pull.</p>
+        <p>Pour une demande, un rendez-vous ou un devis, l'entreprise se joint simplement par téléphone au 04 78 42 64 67 ou par e-mail.</p>
+      </div>
+      <aside class="rv">
+        <div class="citation">
+          <p>« Une installation de chauffage, ça se <em>règle</em>, ça s'<em>entretient</em> — et ça s'explique. »</p>
+          <span class="kicker">La ligne de la maison</span>
+        </div>
+        <ul class="fiche">
+          <li><span>Entreprise</span><span>Poulenard Plomberie</span></li>
+          <li><span>Commune</span><span>Bron (69500)</span></li>
+          <li><span>Secteur</span><span>Bron et Est lyonnais</span></li>
+          <li><span>Spécialités</span><span>Chaudières gaz, fioul, électriques · radiateurs</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 REALISATIONS ============ -->
+<section class="rubrique" id="realisations">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">05</span>
+      <span class="kicker">Rubrique · Planches</span>
+      <h2>Types de chantiers</h2>
+      <p>Des planches dessinées pour illustrer le genre d'interventions proposées. Ce sont des exemples de prestation, non des photos de chantiers réels.</p>
+    </div>
+    <div class="galerie">
+      <figure class="planche rv">
+        <div class="cadre">
+          <svg viewBox="0 0 300 220" aria-hidden="true"><defs><pattern id="g1" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1b1b1f" stroke-width=".8"/></pattern></defs>
+            <g fill="none" stroke="#1b1b1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="20" width="96" height="60" fill="#f8f4ec"/><path d="M58 20v60M20 50h28M68 50h28"/>
+              <rect x="10" y="130" width="280" height="80" fill="#f8f4ec"/><path d="M10 145h280M100 145v65M200 145v65M80 175h12M180 175h12M280 175h-12"/>
+              <rect x="190" y="14" width="76" height="104" rx="6" fill="#f8f4ec"/><rect x="256" y="18" width="8" height="96" fill="url(#g1)" stroke="none"/>
+              <circle cx="228" cy="54" r="14" /><path d="M228 62c-5 0-6-4-4-7s3-3 3-7c3 2 4 4 4 6 2 3 1 8-3 8z" fill="#b23a2b" stroke="none"/>
+              <rect x="204" y="86" width="48" height="16" rx="2"/><path d="M210 118v12M226 118v12M242 118v12"/>
+              <path d="M210 4v10M246 4v10" />
+              <path d="M140 116c0-8 14-8 14 0v14h-14z" fill="url(#g1)"/><path d="M136 130h22"/>
+            </g></svg>
+        </div>
+        <figcaption><i>Exemple de prestation</i><b>Chaudière gaz murale en cuisine</b>Remplacement d'un ancien appareil.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <div class="cadre">
+          <svg viewBox="0 0 300 220" aria-hidden="true"><defs><pattern id="g2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1b1b1f" stroke-width=".8"/></pattern></defs>
+            <g fill="none" stroke="#1b1b1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 200h288" stroke-width="2.2"/>
+              <rect x="30" y="60" width="90" height="140" rx="4" fill="#f8f4ec"/><rect x="108" y="64" width="10" height="132" fill="url(#g2)" stroke="none"/>
+              <path d="M30 90h90"/><rect x="48" y="104" width="54" height="34" /><circle cx="75" cy="121" r="9"/><path d="M75 126c-3 0-4-3-2-5l2-4 2 4c2 2 1 5-2 5z" fill="#b23a2b" stroke="none"/>
+              <path d="M60 60V30h20v30"/><path d="M60 40h20" />
+              <rect x="170" y="110" width="110" height="80" rx="38" fill="#f8f4ec"/><path d="M175 168h100" /><rect x="200" y="96" width="20" height="14"/>
+              <path d="M178 190v10M272 190v10M120 170h50" />
+              <path d="M186 140h80" stroke-dasharray="3 5"/><text x="225" y="160" font-family="Karla,sans-serif" font-size="12" text-anchor="middle" fill="#1b1b1f" stroke="none">FIOUL</text>
+            </g></svg>
+        </div>
+        <figcaption><i>Exemple de prestation</i><b>Chaudière fioul au sous-sol</b>Entretien et remise en route.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <div class="cadre">
+          <svg viewBox="0 0 300 220" aria-hidden="true"><defs><pattern id="g3" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1b1b1f" stroke-width=".8"/></pattern></defs>
+            <g fill="none" stroke="#1b1b1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="70" y="10" width="160" height="96" fill="#f8f4ec"/><path d="M150 10v96M70 58h160"/><path d="M78 18l30 30M160 18l20 20" stroke-width=".8"/>
+              <path d="M60 110h180" stroke-width="3"/>
+              <g fill="#f8f4ec"><rect x="80" y="126" width="16" height="66" rx="7"/><rect x="100" y="126" width="16" height="66" rx="7"/><rect x="120" y="126" width="16" height="66" rx="7"/><rect x="140" y="126" width="16" height="66" rx="7"/><rect x="160" y="126" width="16" height="66" rx="7"/><rect x="180" y="126" width="16" height="66" rx="7"/><rect x="200" y="126" width="16" height="66" rx="7"/></g>
+              <g fill="url(#g3)" stroke="none"><rect x="90" y="132" width="5" height="54"/><rect x="110" y="132" width="5" height="54"/><rect x="130" y="132" width="5" height="54"/><rect x="150" y="132" width="5" height="54"/><rect x="170" y="132" width="5" height="54"/><rect x="190" y="132" width="5" height="54"/><rect x="210" y="132" width="5" height="54"/></g>
+              <rect x="62" y="166" width="12" height="22" rx="4"/><path d="M74 182h6"/>
+              <path d="M6 204h288" stroke-width="2.2"/><path d="M88 192v12M208 192v12"/>
+            </g></svg>
+        </div>
+        <figcaption><i>Exemple de prestation</i><b>Radiateurs sous fenêtre</b>Pose et robinet thermostatique.</figcaption>
+      </figure>
+      <figure class="planche rv">
+        <div class="cadre">
+          <svg viewBox="0 0 300 220" aria-hidden="true"><defs><pattern id="g4" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#1b1b1f" stroke-width=".8"/></pattern></defs>
+            <g fill="none" stroke="#1b1b1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="40" y="30" width="80" height="120" rx="6" fill="#f8f4ec"/><rect x="110" y="34" width="8" height="112" fill="url(#g4)" stroke="none"/>
+              <path d="M40 50h80"/><path d="M84 66l-12 22h14l-10 22" stroke="#b23a2b" stroke-width="2.4"/>
+              <rect x="54" y="120" width="52" height="16"/><path d="M56 150v30M80 150v30M104 150v30"/>
+              <rect x="170" y="40" width="100" height="120" fill="#f8f4ec"/><path d="M170 60h100"/>
+              <g><rect x="182" y="72" width="10" height="26"/><rect x="198" y="72" width="10" height="26"/><rect x="214" y="72" width="10" height="26"/><rect x="230" y="72" width="10" height="26"/><rect x="246" y="72" width="10" height="26"/></g>
+              <path d="M182 112h74M182 126h74M182 140h50" stroke-width=".9"/>
+              <path d="M120 90h50" stroke-dasharray="4 4" stroke="#24557a"/>
+              <path d="M6 200h288" stroke-width="2.2"/>
+            </g></svg>
+        </div>
+        <figcaption><i>Exemple de prestation</i><b>Chaudière électrique</b>Installation en appartement.</figcaption>
+      </figure>
+    </div>
+
+    <div class="tarifs rv">
+      <div>
+        <span class="kicker">Petites annonces · Tarifs</span>
+        <h3>Tout est sur devis</h3>
+        <p>Chaque logement a son installation, ses contraintes d'accès et son matériel. Plutôt qu'un barème approximatif, Poulenard Plomberie établit un devis adapté après échange ou visite.</p>
+        <a class="btn btn-trait" href="#contact">Demander mon devis</a>
+      </div>
+      <div class="annonces">
+        <div class="annonce"><b>Remplacement de chaudière gaz</b><span>Murale ou au sol<em>Sur devis</em></span></div>
+        <div class="annonce"><b>Chaudière fioul</b><span>Entretien, remplacement<em>Sur devis</em></span></div>
+        <div class="annonce"><b>Pose de radiateurs</b><span>Ajout ou remplacement<em>Sur devis</em></span></div>
+        <div class="annonce"><b>Chaudière électrique</b><span>Installation, dépannage<em>Sur devis</em></span></div>
+        <div class="annonce"><b>Entretien annuel</b><span>Visite et attestation<em>Sur devis</em></span></div>
+        <div class="annonce"><b>Dépannage</b><span>Diagnostic de panne<em>Sur devis</em></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 AVIS ============ -->
+<section class="rubrique" id="avis">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">06</span>
+      <span class="kicker">Rubrique · Courrier des lecteurs</span>
+      <h2>Votre avis compte</h2>
+    </div>
+    <div class="lecteurs rv">
+      <svg viewBox="0 0 92 92" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="20" width="76" height="54" rx="3"/><path d="M8 24l38 26 38-26"/><path d="M26 10h40M20 84h52" stroke-width="1.2"/></svg>
+      <div>
+        <h3>Écrivez au courrier des lecteurs</h3>
+        <p>Vous avez fait appel à Poulenard Plomberie pour votre chaudière ou vos radiateurs ? Quelques lignes sur Google aident vos voisins de Bron à trouver un chauffagiste — et permettent à l'entreprise de progresser.</p>
+      </div>
+      <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Poulenard+Plomberie+Bron" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 FAQ ============ -->
+<section class="rubrique" id="faq">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">07</span>
+      <span class="kicker">Rubrique · Questions-réponses</span>
+      <h2>Vos questions, nos réponses</h2>
+    </div>
+    <div class="faq rv">
+      <div class="q"><button aria-expanded="false">À quelle fréquence faire entretenir ma chaudière ?<span class="plus"></span></button><div class="rep"><div><p>Pour une chaudière gaz ou fioul, l'entretien est en principe annuel et fait l'objet d'une attestation. Il permet de vérifier la sécurité de l'appareil et de garder un bon rendement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Intervenez-vous en dehors de Bron ?<span class="plus"></span></button><div class="rep"><div><p>L'entreprise intervient à Bron et dans l'Est lyonnais. Pour une adresse précise, le plus simple est d'appeler afin de vérifier la disponibilité.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Faut-il réparer ou remplacer une vieille chaudière ?<span class="plus"></span></button><div class="rep"><div><p>Tout dépend de l'état de l'appareil, de la disponibilité des pièces et du coût de la réparation. Un diagnostic sur place permet de vous présenter les deux options honnêtement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Mes radiateurs chauffent mal en haut, que faire ?<span class="plus"></span></button><div class="rep"><div><p>C'est souvent le signe d'air dans le circuit : une purge peut suffire. Si le problème persiste ou concerne plusieurs radiateurs, un équilibrage ou un contrôle de pression peut être nécessaire.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Une chaudière électrique, pour quel logement ?<span class="plus"></span></button><div class="rep"><div><p>Elle peut convenir aux logements sans raccordement gaz ou aux surfaces modestes. L'intérêt dépend de l'isolation et de l'abonnement électrique : on en parle lors du devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Comment obtenir un devis ?<span class="plus"></span></button><div class="rep"><div><p>Par téléphone au 04 78 42 64 67, par e-mail ou via le formulaire ci-dessous. Selon les travaux, une visite peut être proposée avant d'établir le devis.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 INFOS ============ -->
+<section class="rubrique" id="infos">
+  <div class="wrap">
+    <div class="tete rv">
+      <span class="num">08</span>
+      <span class="kicker">Rubrique · Pratique</span>
+      <h2>Horaires &amp; secteur</h2>
+    </div>
+    <div class="infos rv">
+      <div>
+        <h3>Horaires</h3>
+        <p class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi</p>
+        <table class="horaires">
+          <tbody>
+            <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+            <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+            <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Secteur d'intervention</h3>
+        <p class="note">Bron et Est lyonnais (69500)</p>
+        <div class="carte-zone" aria-hidden="true">
+          <svg viewBox="0 0 460 210">
+            <defs><pattern id="hz" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#b23a2b" stroke-width=".9"/></pattern></defs>
+            <path d="M0 70 C60 60 90 96 130 92 S200 40 236 30 S300 12 340 0" fill="none" stroke="#24557a" stroke-width="10" stroke-linecap="round" opacity=".85"/>
+            <text x="40" y="54" font-family="DM Serif Display,serif" font-style="italic" font-size="14" fill="#24557a">le Rhône</text>
+            <circle cx="96" cy="128" r="30" fill="none" stroke="#1b1b1f" stroke-width="1.2" stroke-dasharray="3 4"/>
+            <text x="96" y="132" font-family="Karla,sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#1b1b1f">LYON</text>
+            <ellipse cx="290" cy="118" rx="150" ry="74" fill="url(#hz)" stroke="#b23a2b" stroke-width="1.4"/>
+            <circle cx="236" cy="124" r="9" fill="#b23a2b"/>
+            <rect x="196" y="140" width="80" height="24" fill="#f8f4ec" stroke="#1b1b1f"/>
+            <text x="236" y="157" font-family="DM Serif Display,serif" font-size="16" text-anchor="middle" fill="#1b1b1f">Bron</text>
+            <rect x="314" y="80" width="114" height="22" fill="#f8f4ec"/>
+            <text x="371" y="96" font-family="Karla,sans-serif" font-size="11" font-weight="800" letter-spacing="1.6" text-anchor="middle" fill="#b23a2b">EST LYONNAIS</text>
+            <path d="M14 196l10-20 10 20M24 176v-10" fill="none" stroke="#1b1b1f" stroke-width="1.2"/><text x="24" y="160" font-family="Karla,sans-serif" font-size="10" text-anchor="middle">N</text>
+          </svg>
+        </div>
+        <a class="btn btn-trait" href="https://www.google.com/maps/search/?api=1&amp;query=Poulenard+Plomberie+Bron+69500" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 CONTACT ============ -->
+<section class="rubrique" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact-intro rv">
+        <span class="kicker">N° 09 · Contact</span>
+        <h2>Écrivez-nous, on vous <em>rappelle</em>.</h2>
+        <p>Décrivez votre installation (type de chaudière, nombre de radiateurs, symptôme de la panne) : la réponse n'en sera que plus précise.</p>
+        <ul class="coord">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33478426467">04 78 42 64 67</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:poulenard.luc@gmail.com">poulenard.luc@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s-7-7-7-12a7 7 0 0 1 14 0c0 5-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Bron et Est lyonnais (69500)</span></li>
+        </ul>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <div class="champs">
+          <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+          <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 ..."></div>
+          <div class="champ"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+          <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Bron, Vaulx-en-Velin…"></div>
+          <div class="champ l"><label for="objet">Objet</label>
+            <select id="objet" name="objet">
+              <option>Chaudière gaz</option><option>Chaudière fioul</option><option>Chaudière électrique</option><option>Radiateurs</option><option>Entretien annuel</option><option>Dépannage</option><option>Autre demande</option>
+            </select></div>
+          <div class="champ l"><label for="msg">Votre message</label><textarea id="msg" name="msg" placeholder="Décrivez votre installation ou votre besoin…"></textarea></div>
+        </div>
+        <div class="form-bas">
+          <small>Vos coordonnées servent uniquement à vous recontacter au sujet de votre demande.</small>
+          <button class="btn btn-plein" type="submit">Envoyer la demande</button>
+        </div>
+        <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied-titre">Poulenard<span>.</span></div>
+    <div class="pied">
+      <div>
+        <h4>Poulenard Plomberie</h4>
+        <p>Plomberie et chauffage à Bron : chaudières à gaz ou fioul, radiateurs et chaudières électriques, pour Bron et l'Est lyonnais.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:+33478426467">04 78 42 64 67</a></li>
+          <li><a href="mailto:poulenard.luc@gmail.com">poulenard.luc@gmail.com</a></li>
+          <li>Bron (69500) · Est lyonnais</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>Sur rendez-vous, du lundi au vendredi</li><li style="color:rgba(244,239,230,.6);font-size:.85rem">Horaires à confirmer</li></ul>
+      </div>
+      <div>
+        <h4>Sommaire</h4>
+        <ul><li><a href="#services">01 · Services</a></li><li><a href="#realisations">05 · Réalisations</a></li><li><a href="#faq">07 · FAQ</a></li><li><a href="#contact">09 · Devis</a></li></ul>
+      </div>
+    </div>
+    <div class="bas"><span>© Poulenard Plomberie · Bron</span><span>Mentions légales à compléter · Site vitrine</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+
+<a class="flottant" href="tel:+33478426467" aria-label="Appeler Poulenard Plomberie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+
+  /* ajuste le titre géant à la largeur de la colonne */
+  var g=document.getElementById('geant');
+  function ajuste(){
+    g.style.fontSize='';
+    var cible=g.parentElement.clientWidth,mot=g.querySelector('[aria-hidden]');
+    var l=mot.getBoundingClientRect().width;
+    if(l>0){var fs=parseFloat(getComputedStyle(g).fontSize);g.style.fontSize=(fs*cible/l*0.995)+'px';}
+  }
+  ajuste();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ajuste);
+  window.addEventListener('resize',ajuste);
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

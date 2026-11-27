@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clavel &amp; Fils – chauffagiste à Décines-Charpieu</title>
+<meta name="description" content="Clavel &amp; Fils, entreprise familiale de chauffage à Décines-Charpieu (69150) : chaudière à gaz ou fioul, installation de pompes à chaleur, entretien et dépannage. Installateur RGE QualiPAC dans le Rhône.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0c1222;
+  --bleu:#18223a;
+  --bleu2:#111a2e;
+  --or:#d6b36a;
+  --or-clair:#ecd59f;
+  --cuivre:#b8703f;
+  --ivoire:#f3ede2;
+  --gris:#8e98ab;
+  --texte:rgba(243,237,226,.78);
+  --filet:rgba(214,179,106,.28);
+  --filet-doux:rgba(214,179,106,.14);
+  --titre:"Italiana",Georgia,serif;
+  --corps:"Raleway",system-ui,sans-serif;
+  --larg:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--nuit);color:var(--ivoire);font-family:var(--corps);font-weight:400;font-size:1.03rem;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--titre);font-weight:400;margin:0;line-height:1.1;letter-spacing:.01em}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+.sc{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--or)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;font-family:var(--corps);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--or);transition:background .35s,color .35s,box-shadow .35s,transform .35s;cursor:pointer}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-or{background:linear-gradient(135deg,#e5c788,#d6b36a 45%,#b8873f);color:#1a1408;box-shadow:0 0 0 rgba(214,179,106,0)}
+.btn-or:hover{box-shadow:0 0 34px rgba(214,179,106,.45);transform:translateY(-2px)}
+.btn-trait{background:transparent;color:var(--ivoire)}
+.btn-trait:hover{background:rgba(214,179,106,.1);color:var(--or-clair);transform:translateY(-2px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.plein{background:rgba(12,18,34,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--filet-doux)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque .mono{width:40px;height:40px;border:1px solid var(--or);display:grid;place-items:center;font-family:var(--titre);color:var(--or);font-size:1.05rem;position:relative}
+.marque .mono::after{content:"";position:absolute;inset:3px;border:1px solid var(--filet)}
+.marque b{font-family:var(--titre);font-weight:400;font-size:1.35rem;letter-spacing:.04em}
+.marque small{display:block;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gris);margin-top:-2px}
+.menu{display:flex;gap:30px;align-items:center;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--texte);position:relative;padding:6px 0;transition:color .3s}
+.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--or);transition:left .3s,right .3s}
+.menu a:hover{color:var(--or-clair)}
+.menu a:hover::after{left:0;right:0}
+.menu .tel-nav{border:1px solid var(--or);padding:10px 16px;color:var(--or)}
+.menu .tel-nav::after{display:none}
+.burger{display:none;width:46px;height:46px;background:none;border:1px solid var(--filet);cursor:pointer;position:relative}
+.burger span{position:absolute;left:12px;right:12px;height:1px;background:var(--or);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.nav.ouvert .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span:nth-child(2){opacity:0}
+.nav.ouvert .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:104px 0 270px;
+  background:radial-gradient(60vw 40vw at 50% 100%,rgba(214,179,106,.22),transparent 70%),radial-gradient(40vw 30vw at 20% 20%,rgba(24,34,58,.9),transparent 70%),linear-gradient(180deg,#070b16 0%,#0c1222 40%,#18223a 100%)}
+.etoiles{position:absolute;inset:0;pointer-events:none}
+.etoiles i{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--or-clair);box-shadow:0 0 6px 1px rgba(236,213,159,.7);animation:scint 4s ease-in-out infinite}
+@keyframes scint{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+.colline{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(150px,19vw,280px);pointer-events:none}
+.colline .lum{animation:scint 3.2s ease-in-out infinite}
+.trait-art{position:absolute;bottom:170px;width:170px;opacity:.85;pointer-events:none}
+.trait-art.g{left:max(3vw,24px)}
+.trait-art.d{right:max(3vw,24px);width:200px}
+.trait-art path,.trait-art rect,.trait-art circle,.trait-art line{vector-effect:non-scaling-stroke}
+.trait-art .flamme{animation:flamme 2.4s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
+@keyframes flamme{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.82)}}
+.trait-art .helice{animation:tourne 6s linear infinite;transform-origin:center;transform-box:fill-box}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.hero-contenu{position:relative;z-index:2;max-width:780px;padding:0 16px}
+.cadre{width:116px;height:116px;margin:0 auto 20px;position:relative;display:grid;place-items:center}
+.cadre::before,.cadre::after{content:"";position:absolute;border:1px solid var(--or)}
+.cadre::before{inset:0;transform:rotate(45deg) scale(.72)}
+.cadre::after{inset:10px;transform:rotate(45deg) scale(.72);border-color:var(--filet)}
+.cadre span{font-family:var(--titre);font-size:2.3rem;color:var(--or);text-shadow:0 0 24px rgba(214,179,106,.55);position:relative;z-index:1}
+.cadre .pt{position:absolute;width:5px;height:5px;background:var(--or);border-radius:50%;box-shadow:0 0 10px var(--or)}
+.cadre .pt.a{top:-2px;left:calc(50% - 2.5px)}.cadre .pt.b{bottom:-2px;left:calc(50% - 2.5px)}
+.hero .sc{display:flex;align-items:center;justify-content:center;gap:14px}
+.hero .sc::before,.hero .sc::after{content:"";width:38px;height:1px;background:var(--or)}
+.hero h1{font-size:clamp(3.2rem,8.4vw,6.4rem);margin:14px 0 12px;background:linear-gradient(180deg,#fff8ea 10%,#ecd59f 55%,#c69a52);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px rgba(214,179,106,.15)}
+.hero .accroche{font-size:clamp(1.05rem,2vw,1.22rem);font-weight:300;color:var(--texte);max-width:620px;margin:0 auto 30px}
+.hero .accroche em{font-style:normal;color:var(--or-clair)}
+.boutons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.pastille{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:9px 18px 9px 12px;border:1px solid var(--filet);border-radius:40px;background:rgba(12,18,34,.6);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--ivoire)}
+.pastille i{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4dfa9,#b8873f);display:grid;place-items:center;box-shadow:0 0 16px rgba(214,179,106,.5)}
+.pastille i svg{width:13px;height:13px}
+
+/* confiance */
+.confiance{border-top:1px solid var(--filet-doux);border-bottom:1px solid var(--filet-doux);background:var(--bleu2)}
+.confiance ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.confiance li{padding:26px 20px;text-align:center;border-left:1px solid var(--filet-doux);display:flex;flex-direction:column;align-items:center;gap:8px}
+.confiance li:first-child{border-left:0}
+.confiance svg{width:28px;height:28px;color:var(--or)}
+.confiance strong{font-family:var(--titre);font-weight:400;font-size:1.22rem;letter-spacing:.03em}
+.confiance span{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);font-weight:600}
+
+/* sections */
+.bloc{padding:120px 0;position:relative}
+.bloc.alt{background:linear-gradient(180deg,var(--bleu2),var(--nuit))}
+.entete{text-align:center;max-width:680px;margin:0 auto 64px}
+.entete h2{font-size:clamp(2.3rem,5vw,3.6rem);margin:14px 0 18px}
+.entete p{color:var(--texte)}
+.orne{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--or)}
+.orne::before,.orne::after{content:"";width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--or))}
+.orne::after{transform:scaleX(-1)}
+.orne b{width:6px;height:6px;transform:rotate(45deg);background:var(--or);box-shadow:0 0 10px var(--or)}
+
+/* services */
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--filet-doux);border:1px solid var(--filet-doux)}
+.carte{background:var(--nuit);padding:44px 34px;position:relative;transition:background .4s;overflow:hidden}
+.carte::before{content:"";position:absolute;left:50%;top:0;width:0;height:1px;background:var(--or);transition:width .5s,left .5s}
+.carte:hover{background:#111a2f}
+.carte:hover::before{width:100%;left:0}
+.carte .num{position:absolute;top:22px;right:26px;font-family:var(--titre);color:var(--filet);font-size:1.5rem}
+.ico{width:58px;height:58px;margin-bottom:24px;color:var(--or);transition:transform .5s,filter .5s}
+.carte:hover .ico{transform:translateY(-4px);filter:drop-shadow(0 0 10px rgba(214,179,106,.55))}
+.carte h3{font-size:1.6rem;margin-bottom:12px}
+.carte p{color:var(--texte);font-size:.96rem;margin:0}
+.carte .tag{display:inline-block;margin-top:18px;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cuivre);font-weight:700}
+
+/* atouts */
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.atout{padding:34px 26px;border:1px solid var(--filet-doux);position:relative;text-align:center;transition:border-color .4s,transform .4s}
+.atout:hover{border-color:var(--or);transform:translateY(-4px)}
+.atout::before,.atout::after{content:"";position:absolute;width:14px;height:14px;border-color:var(--or);border-style:solid}
+.atout::before{top:-1px;left:-1px;border-width:1px 0 0 1px}
+.atout::after{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
+.atout svg{width:44px;height:44px;margin:0 auto 18px;color:var(--or)}
+.atout h3{font-size:1.35rem;margin-bottom:10px}
+.atout p{color:var(--texte);font-size:.94rem;margin:0}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;counter-reset:e}
+.etapes::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,var(--or),var(--cuivre),var(--or),transparent)}
+.etape{text-align:center;padding:0 20px;position:relative}
+.etape .rond{width:76px;height:76px;margin:0 auto 26px;border-radius:50%;border:1px solid var(--or);background:var(--nuit);display:grid;place-items:center;font-family:var(--titre);font-size:1.9rem;color:var(--or);position:relative;box-shadow:0 0 0 8px var(--nuit),0 0 30px rgba(214,179,106,.25)}
+.etape h3{font-size:1.4rem;margin-bottom:10px}
+.etape p{color:var(--texte);font-size:.94rem}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.blason{aspect-ratio:1;max-width:440px;width:100%;margin:0 auto;position:relative}
+.blason svg{width:100%;height:100%}
+.apropos h2{font-size:clamp(2.2rem,4.5vw,3.3rem);margin:14px 0 24px}
+.apropos p{color:var(--texte)}
+.apropos .sig{display:flex;gap:30px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--filet-doux)}
+.apropos .sig div{font-size:.88rem;color:var(--texte)}
+.apropos .sig b{display:block;font-family:var(--titre);font-weight:400;font-size:1.25rem;color:var(--ivoire)}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.real{border:1px solid var(--filet-doux);background:var(--bleu2);transition:transform .45s,border-color .45s}
+.real:hover{transform:translateY(-6px);border-color:var(--or)}
+.real svg{width:100%;height:auto;aspect-ratio:4/3;background:radial-gradient(circle at 50% 70%,rgba(214,179,106,.14),transparent 70%),#0e1628}
+.real figcaption{padding:18px 20px 20px}
+.real h3{font-size:1.2rem;margin-bottom:4px}
+.real small{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cuivre);font-weight:700}
+.tarifs{margin-top:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:1px solid var(--or);position:relative}
+.tarifs>div{padding:40px 44px}
+.tarifs h3{font-size:2rem;margin:10px 0 14px}
+.tarifs p{color:var(--texte);margin:0}
+.tarifs ul{list-style:none;margin:0;padding:40px 44px;border-left:1px solid var(--filet);display:flex;flex-direction:column;gap:14px;justify-content:center}
+.tarifs li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px dotted var(--filet);padding-bottom:10px;font-size:.95rem}
+.tarifs li span:last-child{font-family:var(--titre);color:var(--or);font-size:1.1rem;white-space:nowrap}
+
+/* avis */
+.avis{text-align:center;max-width:760px;margin:0 auto;padding:64px 48px;border:1px solid var(--filet);position:relative;background:radial-gradient(circle at 50% 0%,rgba(214,179,106,.12),transparent 70%)}
+.avis .etoiles-or{display:flex;gap:10px;justify-content:center;margin-bottom:24px}
+.avis .etoiles-or svg{width:24px;height:24px;color:var(--or);opacity:.55}
+.avis h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin:12px 0 18px}
+.avis p{color:var(--texte);margin-bottom:30px}
+
+/* faq */
+.faq{max-width:840px;margin:0 auto}
+.q{border-bottom:1px solid var(--filet-doux)}
+.q:first-child{border-top:1px solid var(--filet-doux)}
+.q button{width:100%;background:none;border:0;color:var(--ivoire);text-align:left;font-family:var(--titre);font-size:1.35rem;padding:26px 50px 26px 0;cursor:pointer;position:relative;transition:color .3s}
+.q button:hover{color:var(--or-clair)}
+.q button::after{content:"";position:absolute;right:10px;top:50%;width:12px;height:12px;border-right:1px solid var(--or);border-bottom:1px solid var(--or);transform:translateY(-70%) rotate(45deg);transition:transform .35s}
+.q.ouvert button::after{transform:translateY(-30%) rotate(-135deg)}
+.q .r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.q.ouvert .r{grid-template-rows:1fr}
+.q .r>div{overflow:hidden}
+.q .r p{color:var(--texte);padding:0 40px 26px 0;margin:0}
+
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panneau{border:1px solid var(--filet-doux);padding:44px;background:var(--bleu2)}
+.panneau h3{font-size:1.9rem;margin:10px 0 22px}
+.horaires{width:100%;border-collapse:collapse;font-size:.95rem}
+.horaires td{padding:11px 12px;border-bottom:1px solid var(--filet-doux)}
+.horaires td:last-child{text-align:right;color:var(--texte)}
+.horaires tr.auj td{background:rgba(214,179,106,.12);color:var(--or-clair)}
+.horaires tr.auj td:first-child{box-shadow:inset 2px 0 0 var(--or)}
+.horaires tr.auj td:first-child::after{content:" · aujourd'hui";font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or)}
+.note-h{margin-top:18px;font-size:.88rem;color:var(--gris)}
+.adresse{font-family:var(--titre);font-size:1.6rem;line-height:1.3;margin-bottom:12px}
+.coord{list-style:none;padding:0;margin:20px 0 28px;display:flex;flex-direction:column;gap:12px}
+.coord a{text-decoration:none;display:flex;gap:12px;align-items:center;color:var(--texte);transition:color .3s;word-break:break-word}
+.coord a:hover{color:var(--or-clair)}
+.coord svg{width:18px;height:18px;color:var(--or);flex:none}
+.plan{height:150px;margin-bottom:26px;border:1px solid var(--filet-doux);overflow:hidden}
+.plan svg{width:100%;height:100%}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(2.2rem,4.5vw,3.3rem);margin:14px 0 20px}
+.contact .intro p{color:var(--texte)}
+form{border:1px solid var(--filet);padding:44px;background:var(--bleu2);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.champ{display:flex;flex-direction:column;gap:8px}
+.champ.plein{grid-column:1/-1}
+label{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--or)}
+input,select,textarea{font-family:var(--corps);font-size:1rem;color:var(--ivoire);background:var(--nuit);border:1px solid var(--filet-doux);padding:14px 14px;outline:none;transition:border-color .3s,box-shadow .3s;width:100%}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#d6b36a 50%),linear-gradient(135deg,#d6b36a 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+input:focus,select:focus,textarea:focus{border-color:var(--or);box-shadow:0 0 0 3px rgba(214,179,106,.15)}
+textarea{min-height:130px;resize:vertical}
+form .btn{grid-column:1/-1}
+.retour{grid-column:1/-1;display:none;border:1px solid var(--or);padding:16px 18px;color:var(--or-clair);background:rgba(214,179,106,.08);font-size:.95rem}
+.retour.vu{display:block}
+
+/* pied */
+footer{border-top:1px solid var(--filet);background:#080d19;padding:80px 0 30px}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.pied h4{font-family:var(--corps);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin:0 0 18px;font-weight:700}
+.pied p,.pied li{color:var(--texte);font-size:.92rem}
+.pied ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.pied a{text-decoration:none;transition:color .3s}
+.pied a:hover{color:var(--or-clair)}
+.mentions{margin-top:56px;padding-top:24px;border-top:1px solid var(--filet-doux);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;color:var(--gris)}
+.demo{background:#050810;color:rgba(243,237,226,.6);text-align:center;font-size:.8rem;padding:12px 16px;letter-spacing:.04em}
+.appel-flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ecd59f,#b8873f);color:#1a1408;place-items:center;box-shadow:0 0 0 6px rgba(214,179,106,.18),0 10px 30px rgba(0,0,0,.5);text-decoration:none}
+.appel-flottant svg{width:24px;height:24px}
+
+/* révélation */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+@media (max-width:1080px){
+  .grille{grid-template-columns:repeat(2,1fr)}
+  .atouts{grid-template-columns:repeat(2,1fr)}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  .pied{grid-template-columns:1fr 1fr}
+  .trait-art{width:130px}.trait-art.d{width:150px}
+}
+@media (max-width:900px){
+  .burger{display:block}
+  .menu{position:fixed;top:76px;left:0;right:0;flex-direction:column;gap:0;background:rgba(12,18,34,.98);border-bottom:1px solid var(--filet);padding:10px 16px 24px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .nav.ouvert{background:rgba(12,18,34,.98)}
+  .menu li{width:100%;border-bottom:1px solid var(--filet-doux)}
+  .menu a{display:block;padding:16px 0;font-size:.8rem}
+  .menu li:last-child{border:0;padding-top:16px}
+  .menu .tel-nav{text-align:center}
+  .confiance ul{grid-template-columns:1fr 1fr}
+  .confiance li:nth-child(3){border-left:0}
+  .confiance li:nth-child(n+3){border-top:1px solid var(--filet-doux)}
+  .etapes{grid-template-columns:1fr 1fr;row-gap:48px}
+  .etapes::before{display:none}
+  .apropos,.contact,.infos{grid-template-columns:1fr;gap:44px}
+  .tarifs{grid-template-columns:1fr}
+  .tarifs ul{border-left:0;border-top:1px solid var(--filet)}
+  .trait-art{display:none}
+}
+@media (max-width:600px){
+  body{font-size:1rem}
+  .bloc{padding:84px 0}
+  .hero{padding:104px 0 160px}
+  .cadre{width:104px;height:104px;margin-bottom:22px}
+  .cadre span{font-size:1.85rem}
+  .hero .sc{font-size:.62rem;letter-spacing:.24em;gap:10px}
+  .hero .sc::before,.hero .sc::after{width:20px}
+  .boutons{flex-direction:column;align-items:stretch;max-width:320px;margin:0 auto}
+  .grille,.atouts,.galerie,.etapes{grid-template-columns:1fr}
+  .carte{padding:36px 26px}
+  .confiance li{padding:20px 10px}
+  .confiance strong{font-size:1.05rem}
+  .confiance span{font-size:.6rem;letter-spacing:.16em}
+  .entete{margin-bottom:44px}
+  .tarifs>div,.tarifs ul{padding:30px 22px}
+  .avis{padding:44px 22px}
+  .panneau{padding:30px 22px}
+  form{grid-template-columns:1fr;padding:28px 20px}
+  .pied{grid-template-columns:1fr}
+  .q button{font-size:1.18rem}
+  .appel-flottant{display:grid}
+  .demo{padding-bottom:88px}
+  .marque small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#accueil" class="marque" aria-label="Clavel &amp; Fils – accueil">
+      <span class="mono">C&amp;F</span>
+      <span><b>Clavel &amp; Fils</b><small>Chauffage · Décines</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Savoir-faire</a></li>
+      <li><a href="#methode">Méthode</a></li>
+      <li><a href="#maison">La maison</a></li>
+      <li><a href="#realisations">Réalisations</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:+33478499239" class="tel-nav">04 78 49 92 39</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="etoiles" id="etoiles" aria-hidden="true"></div>
+
+  <!-- chaudière au trait -->
+  <svg class="trait-art g" viewBox="0 0 120 190" fill="none" stroke="#d6b36a" stroke-width="1.2" aria-hidden="true">
+    <rect x="18" y="8" width="84" height="128" rx="6"/>
+    <rect x="26" y="16" width="68" height="22" rx="2" stroke-opacity=".6"/>
+    <circle cx="40" cy="27" r="4"/><circle cx="56" cy="27" r="4"/>
+    <line x1="68" y1="27" x2="86" y2="27" stroke-opacity=".6"/>
+    <rect x="38" y="56" width="44" height="48" rx="3" stroke-opacity=".5"/>
+    <path class="flamme" d="M60 98c-9 0-13-7-11-14 2-6 7-8 7-15 5 4 6 8 5 12 3-2 4-5 4-8 5 5 7 10 6 15-1 6-5 10-11 10z" fill="#b8703f" fill-opacity=".35"/>
+    <line x1="34" y1="136" x2="34" y2="182"/><line x1="50" y1="136" x2="50" y2="182"/><line x1="70" y1="136" x2="70" y2="182"/><line x1="86" y1="136" x2="86" y2="182"/>
+    <rect x="30" y="150" width="8" height="6" stroke-opacity=".6"/><rect x="66" y="150" width="8" height="6" stroke-opacity=".6"/>
+    <line x1="26" y1="122" x2="94" y2="122" stroke-opacity=".4"/>
+  </svg>
+  <!-- PAC au trait -->
+  <svg class="trait-art d" viewBox="0 0 160 130" fill="none" stroke="#d6b36a" stroke-width="1.2" aria-hidden="true">
+    <rect x="8" y="10" width="144" height="100" rx="5"/>
+    <circle cx="58" cy="60" r="36"/>
+    <circle cx="58" cy="60" r="30" stroke-opacity=".4"/>
+    <g class="helice"><path d="M58 60c0-14 6-22 14-24-2 10-6 18-14 24zM58 60c12 6 16 15 13 23-8-6-12-14-13-23zM58 60c-12 8-22 7-27 0 10-3 19-3 27 0z" fill="#d6b36a" fill-opacity=".18"/><circle cx="58" cy="60" r="4"/></g>
+    <line x1="108" y1="26" x2="140" y2="26" stroke-opacity=".6"/><line x1="108" y1="34" x2="140" y2="34" stroke-opacity=".6"/><line x1="108" y1="42" x2="140" y2="42" stroke-opacity=".6"/><line x1="108" y1="50" x2="140" y2="50" stroke-opacity=".6"/>
+    <rect x="110" y="78" width="28" height="16" rx="2" stroke-opacity=".6"/>
+    <line x1="22" y1="110" x2="22" y2="122"/><line x1="138" y1="110" x2="138" y2="122"/><line x1="12" y1="122" x2="148" y2="122" stroke-opacity=".5"/>
+  </svg>
+
+  <!-- Fourvière lumineuse -->
+  <svg class="colline" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2844"/><stop offset="1" stop-color="#0c1222"/></linearGradient>
+      <radialGradient id="halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#d6b36a" stop-opacity=".55"/><stop offset="1" stop-color="#d6b36a" stop-opacity="0"/></radialGradient>
+      <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3dca4"/><stop offset="1" stop-color="#b8703f"/></linearGradient>
+    </defs>
+    <ellipse cx="720" cy="130" rx="260" ry="110" fill="url(#halo)"/>
+    <path d="M0 250 C180 230 300 200 440 180 C560 160 620 128 720 124 C820 120 900 150 1000 172 C1140 200 1300 220 1440 232 V300 H0Z" fill="url(#gc)"/>
+    <!-- basilique -->
+    <g fill="url(#gb)" opacity=".95">
+      <rect x="664" y="80" width="112" height="46"/>
+      <rect x="656" y="54" width="20" height="72"/><rect x="764" y="54" width="20" height="72"/>
+      <rect x="682" y="62" width="18" height="64"/><rect x="740" y="62" width="18" height="64"/>
+      <path d="M656 54h20l-2-6h-16z"/><path d="M764 54h20l-2-6h-16z"/>
+      <path d="M700 80 L720 58 L740 80Z"/>
+      <rect x="716" y="40" width="8" height="20"/><path d="M714 40h12l-6-8z"/>
+    </g>
+    <g fill="#0c1222" opacity=".65">
+      <rect x="660" y="64" width="4" height="12" rx="2"/><rect x="668" y="64" width="4" height="12" rx="2"/>
+      <rect x="768" y="64" width="4" height="12" rx="2"/><rect x="776" y="64" width="4" height="12" rx="2"/>
+      <path d="M712 126v-18a8 8 0 0 1 16 0v18z"/>
+      <circle cx="720" cy="92" r="5"/>
+    </g>
+    <!-- tour métallique -->
+    <path d="M884 150 L896 66 L908 150 M889 120 H903 M892 96 H900" stroke="#d6b36a" stroke-width="1.6" fill="none" opacity=".75"/>
+    <!-- immeubles & quais -->
+    <g fill="#0f1830">
+      <path d="M0 270 h60 v-30 h40 v20 h50 v-34 h36 v40 h60 v-24 h46 v30 h70 v-20 h44 v28 h80 v-16 h60 v20 h70 v-30 h40 v26 h56 v-22 h50 v30 h60 v-26 h40 v20 h60 v-30 h50 v34 h70 v-18 h60 v24 h48 v-28 h60 v30 h60 v-20 H1440 V300 H0Z"/>
+    </g>
+    <path d="M0 286 H1440" stroke="#d6b36a" stroke-opacity=".35"/>
+    <g id="lumignons"></g>
+  </svg>
+
+  <div class="hero-contenu">
+    <div class="cadre rv vu" aria-hidden="true"><i class="pt a"></i><i class="pt b"></i><span>C&amp;F</span></div>
+    <p class="sc">Chauffagiste · Décines-Charpieu</p>
+    <h1>Clavel &amp; Fils</h1>
+    <p class="accroche">À l’est de Lyon, une maison de famille qui entretient la chaleur des foyers&nbsp;: <em>chaudières gaz et fioul</em>, <em>pompes à chaleur</em> et la rigueur d’un métier transmis de père en fils.</p>
+    <div class="boutons">
+      <a class="btn btn-or" href="tel:+33478499239"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a>
+      <a class="btn btn-trait" href="#contact">Demander un devis</a>
+    </div>
+    <div class="pastille"><i><svg viewBox="0 0 24 24" fill="none" stroke="#1a1408" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg></i>Installateur RGE QualiPAC</div>
+  </div>
+</section>
+
+<section class="confiance" aria-label="Informations clés">
+  <ul class="wrap">
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/><path d="M11 22l-2 7 7-3 7 3-2-7"/></svg><strong>RGE QualiPAC</strong><span>Label réel</span></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 15l11-9 11 9"/><path d="M8 13v14h16V13"/><path d="M13 27v-8h6v8"/></svg><strong>Entreprise familiale</strong><span>Clavel &amp; Fils</span></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 29s-9-8-9-15a9 9 0 0 1 18 0c0 7-9 15-9 15z"/><circle cx="16" cy="14" r="3"/></svg><strong>Décines-Charpieu</strong><span>10 rue Guynemer</span></li>
+    <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 5 8 5 12s-1 8-5 12c-4-4-5-8-5-12s1-8 5-12z"/></svg><strong>Rhône (69)</strong><span>Zone d’intervention</span></li>
+  </ul>
+</section>
+
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <div class="orne"><b></b></div>
+      <p class="sc" style="margin-top:18px">Savoir-faire</p>
+      <h2>Le chauffage, sous toutes ses lumières</h2>
+      <p>Des chaudières qui ont fait leurs preuves aux pompes à chaleur d’aujourd’hui, Clavel &amp; Fils accompagne chaque installation avec le même soin.</p>
+    </div>
+    <div class="grille">
+      <article class="carte rv">
+        <span class="num">I</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="4" width="32" height="40" rx="3"/><rect x="17" y="9" width="22" height="7" rx="1"/><circle cx="21" cy="12.5" r="1.4"/><circle cx="27" cy="12.5" r="1.4"/><path d="M28 38c-4 0-6-3-5-6 1-3 3-3 3-7 3 2 3 4 3 6 1-1 2-2 2-4 2 2 3 5 3 7-1 3-3 4-6 4z"/><path d="M18 44v8M24 44v8M32 44v8M38 44v8"/></svg>
+        <h3>Chaudière gaz</h3>
+        <p>Installation et remplacement de chaudières gaz, à condensation ou non, dimensionnées selon votre logement et vos usages.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="carte rv d1">
+        <span class="num">II</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="8" y="10" width="26" height="38" rx="3"/><path d="M14 18h14M14 24h14" stroke-opacity=".7"/><rect x="14" y="30" width="14" height="10" rx="1"/><path d="M34 22h8a4 4 0 0 1 4 4v18"/><path d="M42 44h8v6h-8z"/><path d="M21 4v6"/><circle cx="21" cy="35" r="2"/></svg>
+        <h3>Chaudière fioul</h3>
+        <p>Pose, remplacement et mise en service de chaudières fioul, avec un conseil honnête sur les évolutions possibles de votre installation.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="carte rv d2">
+        <span class="num">III</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="12" width="48" height="32" rx="3"/><circle cx="21" cy="28" r="11"/><path d="M21 28c0-5 2-8 5-9-1 4-2 7-5 9zM21 28c4 2 5 5 4 8-3-2-4-5-4-8zM21 28c-4 3-8 2-9 0 3-1 6-1 9 0z"/><path d="M38 20h10M38 24h10M38 28h10M38 32h10"/><path d="M10 44v6M46 44v6"/></svg>
+        <h3>Pompe à chaleur</h3>
+        <p>Installation de pompes à chaleur par un professionnel RGE QualiPAC : étude, pose, raccordement et mise en route.</p>
+        <span class="tag">RGE QualiPAC</span>
+      </article>
+      <article class="carte rv">
+        <span class="num">IV</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M34 8a10 10 0 0 0-12 12L8 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 12-12l-6 6-5-1-1-5z"/><circle cx="11" cy="37" r="1.4"/><path d="M38 34l10 10M44 32l6 6M36 40l6 6" stroke-opacity=".6"/></svg>
+        <h3>Entretien annuel</h3>
+        <p>Contrôle, nettoyage et réglages de votre chaudière pour un appareil sûr, économe et prêt à passer l’hiver lyonnais.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+      <article class="carte rv d1">
+        <span class="num">V</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="28" cy="30" r="20"/><path d="M28 18v12l8 5"/><path d="M28 4v4M10 10l3 3M46 10l-3 3"/><path d="M22 2h12" stroke-opacity=".6"/></svg>
+        <h3>Dépannage</h3>
+        <p>Panne de chauffage ou d’eau chaude : un diagnostic posé, des explications claires et une remise en route dès que possible.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+      <article class="carte rv d2">
+        <span class="num">VI</span>
+        <svg class="ico" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 46h44"/><path d="M12 46V22l16-12 16 12v24"/><path d="M22 46V32h12v14"/><path d="M28 10V4M24 6h8" stroke-opacity=".7"/><path d="M38 18l6-6M44 18h-6v-6" /></svg>
+        <h3>Rénovation énergétique</h3>
+        <p>Remplacement d’un ancien équipement par une solution plus performante, avec conseils sur les aides accessibles selon votre éligibilité.</p>
+        <span class="tag">Conseil</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="atouts">
+  <div class="wrap">
+    <div class="entete rv">
+      <div class="orne"><b></b></div>
+      <p class="sc" style="margin-top:18px">Pourquoi nous confier votre chauffage</p>
+      <h2>Une exigence de famille</h2>
+    </div>
+    <div class="atouts">
+      <div class="atout rv"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="15" cy="14" r="6"/><circle cx="30" cy="17" r="4.5"/><path d="M4 38c0-7 5-12 11-12s11 5 11 12"/><path d="M26 38c0-5 2-9 6-10 5 0 8 4 8 10"/></svg><h3>Un savoir-faire transmis</h3><p>Le « & Fils » n’est pas un détail : le métier se partage et se perfectionne en famille.</p></div>
+      <div class="atout rv d1"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 4l14 6v10c0 9-6 16-14 20C14 36 8 29 8 20V10z"/><path d="M15 22l5 5 9-10"/></svg><h3>Un label reconnu</h3><p>La qualification RGE QualiPAC encadre l’installation des pompes à chaleur.</p></div>
+      <div class="atout rv d2"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 40s-12-10-12-20a12 12 0 0 1 24 0c0 10-12 20-12 20z"/><circle cx="22" cy="20" r="4"/></svg><h3>Un artisan de proximité</h3><p>Installé à Décines-Charpieu, au cœur de l’Est lyonnais, pour intervenir dans le Rhône.</p></div>
+      <div class="atout rv d3"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="8" y="6" width="28" height="34" rx="2"/><path d="M14 14h16M14 20h16M14 26h10"/><path d="M26 32l3 3 6-7"/></svg><h3>Des devis clairs</h3><p>Une proposition détaillée et expliquée avant tout engagement, sans mauvaise surprise.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="entete rv">
+      <div class="orne"><b></b></div>
+      <p class="sc" style="margin-top:18px">Comment ça se passe</p>
+      <h2>Quatre temps, sans détour</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><div class="rond">1</div><h3>Le premier appel</h3><p>Vous décrivez votre besoin au 04 78 49 92 39 ou via le formulaire.</p></div>
+      <div class="etape rv d1"><div class="rond">2</div><h3>La visite</h3><p>Nous examinons votre installation et vos attentes, sur place.</p></div>
+      <div class="etape rv d2"><div class="rond">3</div><h3>Le devis</h3><p>Vous recevez une proposition détaillée, poste par poste.</p></div>
+      <div class="etape rv d3"><div class="rond">4</div><h3>L’intervention</h3><p>Pose ou réparation soignée, mise en service et conseils d’usage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="maison">
+  <div class="wrap apropos">
+    <div class="blason rv" aria-hidden="true">
+      <svg viewBox="0 0 440 440" fill="none">
+        <defs><radialGradient id="hb" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#d6b36a" stop-opacity=".3"/><stop offset="1" stop-color="#d6b36a" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="220" cy="220" r="210" fill="url(#hb)"/>
+        <circle cx="220" cy="220" r="170" stroke="#d6b36a" stroke-opacity=".5"/>
+        <circle cx="220" cy="220" r="160" stroke="#d6b36a" stroke-opacity=".25" stroke-dasharray="2 6"/>
+        <rect x="120" y="120" width="200" height="200" transform="rotate(45 220 220)" stroke="#d6b36a"/>
+        <rect x="134" y="134" width="172" height="172" transform="rotate(45 220 220)" stroke="#d6b36a" stroke-opacity=".35"/>
+        <text x="220" y="246" text-anchor="middle" font-family="Italiana, serif" font-size="78" fill="#d6b36a">C&amp;F</text>
+        <text x="220" y="280" text-anchor="middle" font-family="Raleway, sans-serif" font-size="9" letter-spacing="3" fill="#8e98ab">DÉCINES · RHÔNE</text>
+        <text x="220" y="168" text-anchor="middle" font-family="Raleway, sans-serif" font-size="11" letter-spacing="6" fill="#b8703f">CHAUFFAGE</text>
+        <g fill="#ecd59f"><circle cx="220" cy="50" r="3"/><circle cx="220" cy="390" r="3"/><circle cx="50" cy="220" r="3"/><circle cx="390" cy="220" r="3"/></g>
+      </svg>
+    </div>
+    <div class="rv d1">
+      <p class="sc">La maison</p>
+      <h2>Clavel &amp; Fils, une histoire de famille à Décines</h2>
+      <p>Installée au 10 rue Guynemer, à Décines-Charpieu, l’entreprise Clavel &amp; Fils porte dans son nom ce qui fait sa force : un métier de chauffagiste partagé et transmis en famille.</p>
+      <p>Elle intervient sur les chaudières à gaz ou au fioul et installe des pompes à chaleur, avec la qualification RGE QualiPAC. Des pavillons de Décines aux appartements de l’agglomération, chaque chantier est mené avec la même attention au détail.</p>
+      <p>Un interlocuteur direct, joignable par téléphone ou par e-mail, pour un chauffage qui se fait oublier.</p>
+      <div class="sig">
+        <div><b>Gaz &amp; fioul</b>Chaudières</div>
+        <div><b>QualiPAC</b>Pompes à chaleur</div>
+        <div><b>69150</b>Décines-Charpieu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="realisations">
+  <div class="wrap">
+    <div class="entete rv">
+      <div class="orne"><b></b></div>
+      <p class="sc" style="margin-top:18px">Réalisations</p>
+      <h2>Quelques types de chantiers</h2>
+      <p>Illustrations indicatives des prestations proposées – chaque projet est étudié au cas par cas.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real rv" style="margin:0">
+        <svg viewBox="0 0 240 180" fill="none" stroke="#d6b36a" stroke-width="1.2">
+          <path d="M20 160h200" stroke-opacity=".4"/>
+          <rect x="90" y="30" width="60" height="90" rx="4"/><rect x="98" y="38" width="44" height="14" rx="1" stroke-opacity=".6"/>
+          <path d="M120 108c-6 0-9-4-8-9 1-4 4-5 4-10 4 3 4 6 4 8 2-1 3-3 3-5 3 3 4 6 4 9-1 4-3 7-7 7z" fill="#b8703f" fill-opacity=".4"/>
+          <path d="M100 120v40M112 120v40M128 120v40M140 120v40" stroke-opacity=".7"/>
+          <path d="M150 60h40v100M30 80h60" stroke-opacity=".5" stroke-dasharray="3 4"/>
+          <circle cx="190" cy="40" r="2" fill="#ecd59f"/><circle cx="40" cy="44" r="1.5" fill="#ecd59f"/>
+        </svg>
+        <figcaption><small>Exemple de prestation</small><h3>Chaudière gaz murale</h3></figcaption>
+      </figure>
+      <figure class="real rv d1" style="margin:0">
+        <svg viewBox="0 0 240 180" fill="none" stroke="#d6b36a" stroke-width="1.2">
+          <path d="M20 150h200" stroke-opacity=".4"/>
+          <path d="M40 150V80l40-30 40 30v70" stroke-opacity=".7"/>
+          <rect x="140" y="104" width="70" height="46" rx="3"/>
+          <circle cx="166" cy="127" r="16"/><path d="M166 127c0-7 3-11 7-12-1 5-3 9-7 12zM166 127c6 3 7 7 6 11-4-3-6-6-6-11zM166 127c-6 4-11 3-13 0 5-1 9-1 13 0z" fill="#d6b36a" fill-opacity=".2"/>
+          <path d="M190 116h14M190 122h14M190 128h14"/>
+          <path d="M120 120h20M120 128h20" stroke="#b8703f"/>
+          <rect x="62" y="104" width="20" height="24" stroke-opacity=".5"/>
+          <circle cx="200" cy="40" r="2" fill="#ecd59f"/><circle cx="30" cy="36" r="1.5" fill="#ecd59f"/>
+        </svg>
+        <figcaption><small>Exemple de prestation</small><h3>Pompe à chaleur air/eau</h3></figcaption>
+      </figure>
+      <figure class="real rv d2" style="margin:0">
+        <svg viewBox="0 0 240 180" fill="none" stroke="#d6b36a" stroke-width="1.2">
+          <path d="M20 160h200" stroke-opacity=".4"/>
+          <rect x="40" y="56" width="70" height="104" rx="4" stroke-opacity=".45" stroke-dasharray="4 4"/>
+          <text x="75" y="112" text-anchor="middle" font-family="Raleway" font-size="10" fill="#8e98ab" stroke="none" letter-spacing="2">AVANT</text>
+          <path d="M118 108h16l-5-5M134 108l-5 5" stroke="#b8703f"/>
+          <rect x="142" y="50" width="58" height="84" rx="4"/>
+          <rect x="150" y="58" width="42" height="12" rx="1" stroke-opacity=".6"/>
+          <circle cx="171" cy="98" r="12" stroke-opacity=".6"/>
+          <path d="M152 134v26M190 134v26" stroke-opacity=".7"/>
+          <circle cx="210" cy="36" r="2" fill="#ecd59f"/>
+        </svg>
+        <figcaption><small>Exemple de prestation</small><h3>Remplacement de chaudière fioul</h3></figcaption>
+      </figure>
+      <figure class="real rv d3" style="margin:0">
+        <svg viewBox="0 0 240 180" fill="none" stroke="#d6b36a" stroke-width="1.2">
+          <path d="M20 160h200" stroke-opacity=".4"/>
+          <rect x="70" y="40" width="70" height="100" rx="4"/>
+          <circle cx="105" cy="80" r="18" stroke-opacity=".6"/><path d="M105 80l8-8" stroke="#b8703f" stroke-width="1.6"/>
+          <path d="M150 70l26-26a8 8 0 0 1 10 10l-26 26-12 2z"/>
+          <path d="M80 152h50" stroke-opacity=".6"/>
+          <path d="M40 60l6 6M46 60l-6 6" stroke="#ecd59f"/>
+          <circle cx="200" cy="120" r="2" fill="#ecd59f"/>
+        </svg>
+        <figcaption><small>Exemple de prestation</small><h3>Entretien &amp; réglages</h3></figcaption>
+      </figure>
+    </div>
+
+    <div class="tarifs rv">
+      <div>
+        <p class="sc">Tarifs</p>
+        <h3>Chaque installation a son juste prix</h3>
+        <p>Chaque logement est différent : surface, isolation, équipement existant. C’est pourquoi Clavel &amp; Fils établit un devis personnalisé après étude de votre situation.</p>
+      </div>
+      <ul>
+        <li><span>Installation de chaudière gaz ou fioul</span><span>Sur devis</span></li>
+        <li><span>Installation de pompe à chaleur</span><span>Sur devis</span></li>
+        <li><span>Entretien annuel</span><span>Sur devis</span></li>
+        <li><span>Dépannage</span><span>Sur devis</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="avis">
+  <div class="wrap">
+    <div class="avis rv">
+      <div class="etoiles-or" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 7 7 .6-5.4 4.6 1.7 7.3L12 17.6 5.7 21.5l1.7-7.3L2 9.6 9 9z"/></svg>
+      </div>
+      <p class="sc">Votre avis compte</p>
+      <h2>Vous avez fait appel à nous&nbsp;?</h2>
+      <p>Votre retour aide d’autres habitants de Décines-Charpieu et de l’Est lyonnais à trouver un chauffagiste de confiance. Partagez votre expérience en quelques mots sur Google.</p>
+      <a class="btn btn-trait" href="https://www.google.com/maps/search/?api=1&amp;query=Clavel+et+Fils+D%C3%A9cines-Charpieu" target="_blank" rel="noopener">Laisser un avis Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="faq">
+  <div class="wrap">
+    <div class="entete rv">
+      <div class="orne"><b></b></div>
+      <p class="sc" style="margin-top:18px">Questions fréquentes</p>
+      <h2>Éclairer vos choix</h2>
+    </div>
+    <div class="faq rv">
+      <div class="q"><button aria-expanded="false">À quelle fréquence faut-il entretenir une chaudière&nbsp;?</button><div class="r"><div><p>Pour les chaudières gaz et fioul, un entretien annuel est en principe obligatoire. Il permet de vérifier la sécurité de l’appareil et d’en préserver le rendement.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Que signifie le label RGE QualiPAC&nbsp;?</button><div class="r"><div><p>C’est une qualification qui atteste des compétences d’un installateur pour la pose de pompes à chaleur. Le recours à un professionnel RGE est généralement une condition pour prétendre à certaines aides publiques.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Puis-je remplacer ma chaudière fioul par une pompe à chaleur&nbsp;?</button><div class="r"><div><p>C’est souvent envisageable, mais cela dépend de votre logement, de son isolation et de vos émetteurs (radiateurs, plancher chauffant). Une visite permet d’évaluer la solution la plus adaptée.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Existe-t-il des aides pour changer d’équipement&nbsp;?</button><div class="r"><div><p>Des dispositifs existent selon votre situation et vos revenus. Les conditions évoluent régulièrement : nous vous conseillons de vérifier votre éligibilité sur les sites officiels, et nous pouvons vous orienter lors du devis.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Intervenez-vous en dehors de Décines-Charpieu&nbsp;?</button><div class="r"><div><p>L’entreprise intervient à Décines-Charpieu et dans le Rhône. Appelez-nous pour vérifier que votre commune fait partie de la zone desservie.</p></div></div></div>
+      <div class="q"><button aria-expanded="false">Comment obtenir un devis&nbsp;?</button><div class="r"><div><p>Par téléphone au 04 78 49 92 39, par e-mail ou via le formulaire ci-dessous. Une visite peut être proposée pour établir un devis précis.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc alt" id="infos">
+  <div class="wrap infos">
+    <div class="panneau rv">
+      <p class="sc">Horaires</p>
+      <h3>Sur rendez-vous</h3>
+      <table class="horaires">
+        <tbody>
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </tbody>
+      </table>
+      <p class="note-h">Horaires à confirmer – sur rendez-vous, du lundi au vendredi.</p>
+    </div>
+    <div class="panneau rv d1">
+      <p class="sc">Nous trouver</p>
+      <h3>Décines-Charpieu</h3>
+      <div class="plan" aria-hidden="true">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice" fill="none">
+          <rect width="400" height="150" fill="#0e1628"/>
+          <path d="M0 40 H400 M0 100 H400 M80 0 V150 M210 0 V150 M320 0 V150" stroke="#d6b36a" stroke-opacity=".14"/>
+          <path d="M0 128 C120 110 220 140 400 118" stroke="#d6b36a" stroke-opacity=".3" stroke-width="5"/>
+          <path d="M140 0 L260 150" stroke="#d6b36a" stroke-opacity=".22" stroke-width="2"/>
+          <circle cx="200" cy="64" r="22" fill="#d6b36a" fill-opacity=".14"/>
+          <circle cx="200" cy="64" r="6" fill="#d6b36a"/>
+          <text x="214" y="56" font-family="Raleway" font-size="10" fill="#ecd59f" letter-spacing="2">RUE GUYNEMER</text>
+        </svg>
+      </div>
+      <p class="adresse">10 rue Guynemer<br>69150 Décines-Charpieu</p>
+      <ul class="coord">
+        <li><a href="tel:+33478499239"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>04 78 49 92 39</a></li>
+        <li><a href="mailto:clavel.gerard@wanadoo.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>clavel.gerard@wanadoo.fr</a></li>
+      </ul>
+      <a class="btn btn-or" href="https://www.google.com/maps/search/?api=1&amp;query=10+rue+Guynemer+69150+D%C3%A9cines-Charpieu" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="contact">
+  <div class="wrap contact">
+    <div class="intro rv">
+      <p class="sc">Contact</p>
+      <h2>Parlons de votre confort</h2>
+      <p>Un projet de chaudière, une pompe à chaleur à étudier, un entretien à planifier&nbsp;? Laissez-nous quelques mots : nous revenons vers vous pour en discuter.</p>
+      <ul class="coord">
+        <li><a href="tel:+33478499239"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>04 78 49 92 39</a></li>
+        <li><a href="mailto:clavel.gerard@wanadoo.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>clavel.gerard@wanadoo.fr</a></li>
+      </ul>
+    </div>
+    <form id="form" class="rv d1" novalidate>
+      <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></div>
+      <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 …"></div>
+      <div class="champ plein"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
+      <div class="champ plein"><label for="objet">Votre besoin</label>
+        <select id="objet" name="objet"><option>Chaudière gaz</option><option>Chaudière fioul</option><option>Pompe à chaleur</option><option>Entretien</option><option>Dépannage</option><option>Autre demande</option></select></div>
+      <div class="champ plein"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Commune, type de logement, équipement actuel…"></textarea></div>
+      <button class="btn btn-or" type="submit">Envoyer la demande</button>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n’a pas été envoyée.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a href="#accueil" class="marque" style="margin-bottom:18px"><span class="mono">C&amp;F</span><span><b>Clavel &amp; Fils</b></span></a>
+        <p>Entreprise familiale de chauffage à Décines-Charpieu : chaudières gaz et fioul, pompes à chaleur. Installateur RGE QualiPAC.</p>
+      </div>
+      <div><h4>Coordonnées</h4><ul><li>10 rue Guynemer<br>69150 Décines-Charpieu</li><li><a href="tel:+33478499239">04 78 49 92 39</a></li><li><a href="mailto:clavel.gerard@wanadoo.fr">clavel.gerard@wanadoo.fr</a></li></ul></div>
+      <div><h4>Horaires</h4><ul><li>Sur rendez-vous</li><li>Du lundi au vendredi</li><li>(à confirmer)</li></ul></div>
+      <div><h4>Navigation</h4><ul><li><a href="#services">Savoir-faire</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Devis</a></li></ul></div>
+    </div>
+    <div class="mentions"><span>© <span id="an">2026</span> Clavel &amp; Fils – Décines-Charpieu (69)</span><span>Mentions légales · Données personnelles : aucune donnée collectée sur cette maquette</span></div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n’est pas encore en ligne officiellement</div>
+<a class="appel-flottant" href="tel:+33478499239" aria-label="Appeler Clavel &amp; Fils"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+
+  // étoiles scintillantes
+  var et=document.getElementById('etoiles'),i,s;
+  for(i=0;i<46;i++){s=document.createElement('i');s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*62)+'%';s.style.animationDelay=(Math.random()*4)+'s';s.style.animationDuration=(3+Math.random()*3)+'s';if(Math.random()>.7){s.style.width=s.style.height='3px';}et.appendChild(s);}
+  // lumignons sur la colline
+  var g=document.getElementById('lumignons'),ns='http://www.w3.org/2000/svg',xs=[];
+  for(i=0;i<70;i++){var x=40+Math.random()*1360,y;
+    y=x<720?250-(x/720)*120:124+((x-720)/720)*108; y+=8+Math.random()*30;
+    var c=document.createElementNS(ns,'circle');c.setAttribute('cx',x.toFixed(1));c.setAttribute('cy',y.toFixed(1));c.setAttribute('r',(Math.random()*1.4+.8).toFixed(1));
+    c.setAttribute('fill',Math.random()>.35?'#ecd59f':'#e0904f');c.setAttribute('class','lum');c.style.animationDelay=(Math.random()*3)+'s';g.appendChild(c);}
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.parentElement,o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+
+  var j=new Date().getDay(),row=document.querySelector('.horaires tr[data-j="'+j+'"]');if(row)row.classList.add('auj');
+  document.getElementById('an').textContent=new Date().getFullYear();
+
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>

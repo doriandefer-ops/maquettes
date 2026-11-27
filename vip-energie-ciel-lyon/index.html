@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vip Energie Ciel – chauffagiste à Lyon 6e</title>
+<meta name="description" content="Vip Energie Ciel, chauffagiste à Lyon 6e (69006), qualifié QUALIBAT PAC : chaudière gaz ou fioul, radiateur et chaudière électrique, isolation des murs par l'extérieur, pompe à chaleur, climatisation et chauffe-eau thermodynamique dans la métropole de Lyon.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blanc:#fbfbf9;
+  --noir:#111111;
+  --gris:#8b8b88;
+  --gris-txt:#6b6b68;
+  --clair:#e7e7e3;
+  --ciel:#2f7bff;
+  --ciel-fonce:#1f5fd6;
+  --sans:"Schibsted Grotesk",system-ui,sans-serif;
+  --mono:"Geist Mono",ui-monospace,monospace;
+  --pad:40px;
+  --gap:24px;
+  --max:1440px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--blanc);color:var(--noir);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em;line-height:1}
+p{margin:0 0 1em}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.grid>*{min-width:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.bleu{color:var(--ciel)}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(251,251,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--noir)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--ciel);display:block}
+.logo small{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--gris-txt);letter-spacing:.04em}
+.liens{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+.liens a{text-decoration:none;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;position:relative;padding:4px 0}
+.liens a span{color:var(--gris-txt);margin-right:4px}
+.liens a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ciel);transition:right .3s}
+.liens a:hover::after{right:0}
+.nav-tel{font-family:var(--mono);font-size:12px;text-decoration:none;border:1px solid var(--noir);padding:9px 14px;letter-spacing:.04em;transition:background .2s,color .2s;white-space:nowrap}
+.nav-tel:hover{background:var(--noir);color:var(--blanc)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--noir);background:none;cursor:pointer;position:relative;padding:0}
+.burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--noir);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{padding-top:64px}
+.hero-top{padding-top:28px;padding-bottom:18px;border-bottom:1px solid var(--noir);display:flex;justify-content:space-between;gap:16px;color:var(--gris-txt)}
+.hero-main{padding-top:40px;padding-bottom:48px;row-gap:32px}
+.hero h1{grid-column:1/span 8;font-size:clamp(64px,10.6vw,172px);font-weight:800;letter-spacing:-.055em;line-height:.86}
+.hero h1 .l2{display:block;padding-left:.9em}
+.hero h1 .l3{display:block;color:var(--ciel)}
+.meta{grid-column:10/span 3;align-self:end;border-top:1px solid var(--noir);margin:0}
+.meta div{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--clair);font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.meta dt{color:var(--gris-txt)}
+.meta dd{margin:0;text-align:right;font-weight:500}
+.meta div:last-child{border-bottom:1px solid var(--noir)}
+.accroche{grid-column:1/span 6;font-size:clamp(20px,1.8vw,26px);line-height:1.35;letter-spacing:-.01em;margin:0;max-width:30ch}
+.accroche em{font-style:normal;color:var(--ciel)}
+.cta{grid-column:7/span 6;display:flex;gap:12px;justify-content:flex-end;align-items:end;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.05em;padding:16px 22px;border:1px solid var(--noir);transition:background .25s,color .25s,border-color .25s,transform .25s;cursor:pointer;font-weight:500}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-plein{background:var(--noir);color:var(--blanc)}
+.btn-plein:hover{background:var(--ciel);border-color:var(--ciel)}
+.btn-vide{background:transparent}
+.btn-vide:hover{background:var(--noir);color:var(--blanc)}
+.btn:hover svg{transform:translateX(3px)}
+.btn svg{transition:transform .25s}
+
+.bande{border-top:1px solid var(--noir);border-bottom:1px solid var(--noir);background:var(--blanc);position:relative;overflow:hidden}
+.bande svg{width:100%;height:auto;aspect-ratio:1440/460}
+.bande .cap{position:absolute;right:var(--pad);top:14px;color:var(--gris-txt);font-size:11px}
+.fan{transform-origin:812px 180px;animation:tourne 3.6s linear infinite}
+.flux{stroke-dasharray:6 8;animation:coule 1.6s linear infinite}
+.lab-m{display:none}
+.halo{transform-origin:1112px 92px;animation:respire 5s ease-in-out infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+@keyframes coule{to{stroke-dashoffset:-28}}
+@keyframes respire{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.12);opacity:.15}}
+
+/* ---------- CONFIANCE ---------- */
+.confiance{padding-top:0;padding-bottom:0}
+.confiance .grid>div{grid-column:span 3;padding:22px 0 24px;border-right:1px solid var(--clair);padding-right:16px}
+.confiance .grid>div:last-child{border-right:0}
+.confiance .mono{color:var(--gris-txt);display:block;margin-bottom:8px}
+.confiance strong{font-size:20px;font-weight:600;letter-spacing:-.015em;display:block;line-height:1.2}
+.confiance .k{display:inline-block;width:8px;height:8px;background:var(--ciel);border-radius:50%;margin-right:8px;vertical-align:middle}
+.confiance-wrap{border-bottom:1px solid var(--noir)}
+
+/* ---------- SECTIONS ---------- */
+.sec{padding:110px 0 0}
+.sec-tete{border-top:1px solid var(--noir);padding-top:18px;margin-bottom:56px;row-gap:16px}
+.idx{grid-column:1/span 3;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;display:flex;gap:14px;align-items:baseline}
+.idx b{font-weight:500;font-size:44px;letter-spacing:-.04em;line-height:.9;color:var(--ciel)}
+.sec-tete h2{grid-column:4/span 7;font-size:clamp(36px,4.6vw,72px);font-weight:700;letter-spacing:-.045em;line-height:.95}
+.sec-tete h2 span{color:var(--gris)}
+.sec-tete p{grid-column:4/span 6;color:var(--gris-txt);font-size:18px;margin:6px 0 0;max-width:56ch}
+
+/* services */
+.services{border-top:1px solid var(--noir);border-left:1px solid var(--clair)}
+.carte{grid-column:span 3;border-right:1px solid var(--clair);border-bottom:1px solid var(--clair);padding:24px 22px 30px;position:relative;transition:background .3s;min-height:300px;display:flex;flex-direction:column}
+.services{column-gap:0}
+.carte::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:3px;background:var(--ciel);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.carte:hover::before{transform:scaleX(1)}
+.carte:hover{background:#fff}
+.carte .num{font-family:var(--mono);font-size:11px;color:var(--gris-txt);letter-spacing:.05em;display:flex;justify-content:space-between}
+.carte .num em{font-style:normal;color:var(--ciel)}
+.carte svg{width:56px;height:56px;margin:36px 0 auto;color:var(--noir);transition:transform .35s}
+.carte:hover svg{transform:translateY(-4px)}
+.carte h3{font-size:22px;letter-spacing:-.025em;margin:28px 0 10px;line-height:1.1}
+.carte p{font-size:15px;color:var(--gris-txt);margin:0;line-height:1.5}
+.ac{stroke:var(--ciel)}
+.acf{fill:var(--ciel)}
+
+/* atouts */
+.atouts .at{grid-column:span 3;border-top:1px solid var(--noir);padding-top:18px}
+.at .mono{color:var(--ciel)}
+.at h3{font-size:24px;margin:22px 0 12px;letter-spacing:-.025em;line-height:1.1}
+.at p{color:var(--gris-txt);font-size:16px;margin:0}
+
+/* méthode */
+.etapes{counter-reset:e}
+.etape{grid-column:span 3;position:relative;padding-top:26px}
+.etape::before{content:"";position:absolute;top:0;left:0;right:calc(-1 * var(--gap));height:1px;background:var(--noir)}
+.etape:last-child::before{right:0}
+.etape::after{content:"";position:absolute;top:-5px;left:0;width:11px;height:11px;border-radius:50%;background:var(--blanc);border:1.5px solid var(--noir);transition:background .3s}
+.etape:hover::after{background:var(--ciel);border-color:var(--ciel)}
+.etape .gros{font-family:var(--mono);font-size:96px;line-height:.9;letter-spacing:-.06em;font-weight:400;color:var(--clair);display:block;margin:14px 0 18px;transition:color .3s}
+.etape:hover .gros{color:var(--ciel)}
+.etape h3{font-size:22px;margin-bottom:10px;letter-spacing:-.02em}
+.etape p{font-size:15.5px;color:var(--gris-txt);margin:0}
+
+/* à propos */
+.propos-txt{grid-column:4/span 5;font-size:22px;line-height:1.45;letter-spacing:-.01em}
+.propos-txt p:first-child::first-letter{color:var(--ciel)}
+.fiche{grid-column:10/span 3;border-top:1px solid var(--noir);align-self:start}
+.fiche div{padding:12px 0;border-bottom:1px solid var(--clair)}
+.fiche .mono{display:block;color:var(--gris-txt);margin-bottom:4px;font-size:11px}
+.fiche a,.fiche span.v{font-size:16px;text-decoration:none;word-break:break-word}
+.fiche a:hover{color:var(--ciel)}
+
+/* réalisations */
+.galerie{row-gap:var(--gap)}
+.real{grid-column:span 3;margin:0;border:1px solid var(--noir);background:#fff;overflow:hidden}
+.real svg{width:100%;height:auto;aspect-ratio:16/9;border-bottom:1px solid var(--noir);transition:transform .6s}
+.real:hover svg{transform:scale(1.025)}
+.real figcaption{display:flex;flex-direction:column-reverse;gap:6px;padding:14px 18px;align-items:baseline}
+.real figcaption strong{font-size:17px;line-height:1.25;letter-spacing:-.02em;font-weight:600}
+.real figcaption .mono{color:var(--gris-txt);font-size:11px;white-space:nowrap}
+.tarifs{margin-top:72px}
+.tarifs-tete{grid-column:1/span 3}
+.tarifs-tete h3{font-size:28px;letter-spacing:-.03em;margin-bottom:12px}
+.tarifs-tete p{font-size:15px;color:var(--gris-txt)}
+.table{grid-column:4/span 9;border-top:1px solid var(--noir)}
+.ligne{display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--clair);transition:padding .25s}
+.ligne:hover{padding-left:8px}
+.ligne .mono{color:var(--gris-txt)}
+.ligne span:nth-child(2){font-size:19px;letter-spacing:-.015em}
+.ligne b{font-family:var(--mono);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ciel);border:1px solid var(--ciel);padding:5px 10px}
+
+/* avis */
+.avis-bloc{grid-column:4/span 9;border:1px solid var(--noir);padding:48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.avis-bloc .rond{width:120px;height:120px;border-radius:50%;background:var(--ciel);display:grid;place-items:center;color:#fff}
+.avis-bloc .rond svg{width:54px;height:54px}
+.avis-bloc h3{font-size:clamp(26px,2.6vw,38px);letter-spacing:-.035em;line-height:1.05;margin-bottom:14px}
+.avis-bloc p{color:var(--gris-txt);max-width:54ch}
+
+/* faq */
+.faq{grid-column:4/span 9;border-top:1px solid var(--noir)}
+.q{border-bottom:1px solid var(--clair)}
+.q button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:52px 1fr 28px;align-items:center;gap:12px;padding:22px 0;font-size:20px;letter-spacing:-.02em;font-weight:500;line-height:1.25}
+.q button:focus-visible{outline:2px solid var(--ciel);outline-offset:2px}
+.q button .mono{color:var(--gris-txt)}
+.q .plus{width:28px;height:28px;position:relative;border:1px solid var(--noir);border-radius:50%;transition:background .3s,border-color .3s,transform .3s}
+.q .plus::before,.q .plus::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--noir);transform:translate(-50%,-50%)}
+.q .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+.q button[aria-expanded="true"] .plus{background:var(--ciel);border-color:var(--ciel)}
+.q button[aria-expanded="true"] .plus::before,.q button[aria-expanded="true"] .plus::after{background:#fff}
+.q button[aria-expanded="true"] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.q button:hover{color:var(--ciel)}
+.rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.rep>div{overflow:hidden}
+.rep p{padding:0 40px 24px 64px;color:var(--gris-txt);margin:0;font-size:16.5px;max-width:72ch}
+.q.ouvert .rep{grid-template-rows:1fr}
+
+/* horaires & zone */
+.horaires{grid-column:1/span 5;border-top:1px solid var(--noir)}
+.horaires .note{font-size:15px;color:var(--gris-txt);margin:16px 0 0}
+.jour{display:grid;grid-template-columns:1fr auto;padding:13px 10px 13px 0;border-bottom:1px solid var(--clair);font-size:17px;transition:background .3s,padding .3s}
+.jour span:last-child{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--gris-txt);align-self:center}
+.jour.auj{background:var(--noir);color:var(--blanc);padding-left:12px;padding-right:12px}
+.jour.auj span:last-child{color:var(--blanc)}
+.jour.auj span:first-child::after{content:"Aujourd'hui";font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:var(--ciel);color:#fff;padding:3px 7px;margin-left:10px;vertical-align:2px}
+.zone{grid-column:7/span 6;border-top:1px solid var(--noir);padding-top:18px}
+.zone h3{font-size:30px;letter-spacing:-.035em;margin:10px 0 12px;line-height:1.05}
+.zone p{color:var(--gris-txt)}
+.zone>svg{width:100%;height:auto;border:1px solid var(--clair);background:#fff;margin:20px 0}
+
+/* contact */
+.form{grid-column:1/span 7;display:grid;grid-template-columns:1fr 1fr;gap:28px 24px}
+.champ{display:flex;flex-direction:column;gap:6px}
+.champ.full{grid-column:1/-1}
+.champ label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--gris-txt)}
+.champ input,.champ select,.champ textarea{font:inherit;font-size:18px;color:var(--noir);background:transparent;border:0;border-bottom:1px solid var(--noir);padding:10px 0;border-radius:0;outline:none;transition:border-color .2s;width:100%}
+.champ select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--noir) 50%),linear-gradient(135deg,var(--noir) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 6px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.champ textarea{min-height:110px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{border-bottom:2px solid var(--ciel)}
+.form .btn{justify-self:start}
+.envoi{grid-column:1/-1;display:none;border:1px solid var(--ciel);color:var(--ciel-fonce);padding:16px 18px;font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+.envoi.on{display:block}
+.coord{grid-column:9/span 4;border-top:1px solid var(--noir)}
+.coord div{padding:16px 0;border-bottom:1px solid var(--clair)}
+.coord .mono{display:block;color:var(--gris-txt);font-size:11px;margin-bottom:6px}
+.coord a{text-decoration:none;font-size:22px;letter-spacing:-.02em;font-weight:600;word-break:break-word}
+.coord a:hover{color:var(--ciel)}
+.coord .petit{font-size:16px;font-weight:500}
+
+/* footer */
+footer{margin-top:120px;border-top:1px solid var(--noir)}
+.pied{padding-top:40px;padding-bottom:40px;row-gap:32px}
+.pied .marque{grid-column:1/span 5;font-size:clamp(40px,5vw,76px);font-weight:800;letter-spacing:-.055em;line-height:.9}
+.pied .marque i{display:inline-block;width:.42em;height:.42em;border-radius:50%;background:var(--ciel);vertical-align:.12em;margin-left:.08em}
+.pied .col{grid-column:span 2}
+.pied .col:first-of-type{grid-column:7/span 2}
+.pied h4{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gris-txt);margin:0 0 12px;font-weight:400}
+.pied ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:1.9}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--ciel)}
+.mentions{border-top:1px solid var(--clair);padding:18px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--gris-txt)}
+.demo{background:var(--noir);color:#cfcfcb;text-align:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;padding:12px 16px}
+
+/* flottant */
+.flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--ciel);color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(47,123,255,.6)}
+.flottant svg{width:24px;height:24px}
+.flottant::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--ciel);animation:onde 2.4s ease-out infinite}
+@keyframes onde{from{transform:scale(.85);opacity:1}to{transform:scale(1.3);opacity:0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.visible{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1180px){
+  .liens{gap:18px}
+  .liens a span{display:none}
+  .carte{grid-column:span 6;min-height:0}
+  .real{grid-column:span 6}
+  .atouts .at{grid-column:span 6;margin-bottom:36px}
+  .etape{grid-column:span 6;margin-bottom:40px}
+  .etape:nth-child(2n)::before{right:0}
+}
+@media (max-width:960px){
+  :root{--pad:24px;--gap:16px}
+  .burger{display:block}
+  .nav-tel{display:none}
+  .liens{position:fixed;top:64px;left:0;right:0;background:var(--blanc);flex-direction:column;gap:0;padding:8px var(--pad) 24px;border-bottom:1px solid var(--noir);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .liens.ouvert{opacity:1;transform:none;visibility:visible}
+  .liens li{border-bottom:1px solid var(--clair)}
+  .liens a{display:block;padding:16px 0;font-size:14px}
+  .liens a span{display:inline}
+  .hero h1{grid-column:1/-1}
+  .meta{grid-column:1/-1}
+  .accroche{grid-column:1/-1}
+  .cta{grid-column:1/-1;justify-content:flex-start}
+  .confiance .grid>div{grid-column:span 6;border-right:0;border-bottom:1px solid var(--clair)}
+  .idx{grid-column:1/-1}
+  .sec-tete h2,.sec-tete p{grid-column:1/-1}
+  .propos-txt,.fiche,.real,.tarifs-tete,.table,.avis-bloc,.faq,.horaires,.zone,.form,.coord{grid-column:1/-1}
+  .fiche,.coord{margin-top:32px}
+  .zone{margin-top:48px}
+  .pied .marque{grid-column:1/-1}
+  .pied .col,.pied .col:first-of-type{grid-column:span 4}
+  .flottant{display:flex}
+  .bande svg{aspect-ratio:auto;height:340px}
+  .bande .cap{display:none}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  :root{--pad:16px}
+  .sec{padding-top:80px}
+  .sec-tete{margin-bottom:36px}
+  .hero-top{font-size:10.5px}
+  .hero-top span:nth-child(2){display:none}
+  .hero h1{font-size:clamp(52px,19.5vw,96px)}
+  .bande svg{aspect-ratio:780/460;height:auto}
+  .lab-d{display:none}
+  .lab-m{display:inline}
+  .hero h1 .l2{padding-left:.5em}
+  .btn{width:100%;justify-content:space-between}
+  .carte,.atouts .at,.etape{grid-column:1/-1}
+  .etape::before{right:0}
+  .etape .gros{font-size:72px}
+  .confiance .grid>div{grid-column:1/-1}
+  .propos-txt{font-size:19px}
+  .avis-bloc{grid-template-columns:1fr;padding:28px 22px;gap:24px}
+  .avis-bloc .rond{width:84px;height:84px}
+  .avis-bloc .rond svg{width:38px;height:38px}
+  .q button{grid-template-columns:36px 1fr 28px;font-size:17px}
+  .rep p{padding:0 8px 22px 48px}
+  .real figcaption{flex-direction:column;gap:4px}
+  .form{grid-template-columns:1fr}
+  .ligne{grid-template-columns:36px 1fr;row-gap:8px}
+  .ligne b{grid-column:2;justify-self:start}
+  .pied .col,.pied .col:first-of-type{grid-column:1/-1}
+  .coord a{font-size:19px}
+  .mentions{flex-direction:column;gap:6px}
+  .demo{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#accueil" class="logo" aria-label="Vip Energie Ciel – accueil"><i></i>Vip Energie Ciel <small>/ 69006</small></a>
+    <nav aria-label="Navigation principale">
+      <ul class="liens" id="menu">
+        <li><a href="#prestations"><span>01</span>Prestations</a></li>
+        <li><a href="#methode"><span>03</span>Méthode</a></li>
+        <li><a href="#realisations"><span>05</span>Réalisations</a></li>
+        <li><a href="#faq"><span>07</span>FAQ</a></li>
+        <li><a href="#horaires"><span>08</span>Horaires</a></li>
+        <li><a href="#contact"><span>09</span>Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-tel" href="tel:+33954956049">T. 09 54 95 60 49</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <div class="hero-top mono"><span>(00) Chauffage — Isolation — PAC</span><span>Lyon 6e · 45.77° N</span><span>Métropole de Lyon</span></div>
+    <div class="grid hero-main">
+      <h1 class="rv">Vip<span class="l2">Energie</span><span class="l3">Ciel.</span></h1>
+      <dl class="meta rv d2">
+        <div><dt>Code postal</dt><dd>69006</dd></div>
+        <div><dt>Label</dt><dd class="bleu">QUALIBAT PAC</dd></div>
+        <div><dt>Prestations</dt><dd>05</dd></div>
+        <div><dt>Zone</dt><dd>Lyon + métropole</dd></div>
+        <div><dt>Devis</dt><dd>Sur demande</dd></div>
+      </dl>
+      <p class="accroche rv d1">Les immeubles du 6e ont du caractère&nbsp;; leur chauffage peut avoir de la <em>méthode</em>. Chaudière, pompe à chaleur, isolation par l'extérieur&nbsp;: un seul interlocuteur pour tout le confort thermique.</p>
+      <div class="cta rv d2">
+        <a class="btn btn-plein" href="tel:+33954956049"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Appeler</a>
+        <a class="btn btn-vide" href="#contact">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="bande" aria-hidden="true">
+    <svg id="schema" viewBox="0 0 1440 460" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#111" stroke-width="1.5">
+      <defs>
+        <pattern id="fen" width="40" height="40" patternUnits="userSpaceOnUse">
+          <rect x="11" y="7" width="18" height="26" fill="#fbfbf9" stroke="#111" stroke-width="1"/>
+          <line x1="20" y1="7" x2="20" y2="33" stroke="#111" stroke-width=".7"/>
+        </pattern>
+        <pattern id="hach" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="8" stroke="#2f7bff" stroke-width="2"/>
+        </pattern>
+        <pattern id="balc" width="6" height="10" patternUnits="userSpaceOnUse">
+          <line x1="3" y1="0" x2="3" y2="10" stroke="#111" stroke-width=".8"/>
+        </pattern>
+      </defs>
+      <!-- grille de fond -->
+      <g stroke="#e7e7e3" stroke-width="1">
+        <path d="M120 0V440M240 0V440M360 0V440M480 0V440M600 0V440M720 0V440M840 0V440M960 0V440M1080 0V440M1200 0V440M1320 0V440"/>
+      </g>
+      <!-- soleil -->
+      <circle class="halo" cx="1112" cy="92" r="62" stroke="#2f7bff" stroke-width="1"/>
+      <circle cx="1112" cy="92" r="44" fill="#2f7bff" stroke="none"/>
+      <path d="M1040 176 L1080 130 M1000 176 L1060 120" stroke="#2f7bff" stroke-width="1" stroke-dasharray="3 5"/>
+
+      <!-- immeuble 1 -->
+      <path d="M120 200 L134 166 H346 L360 200" fill="#fbfbf9"/>
+      <rect x="168" y="174" width="18" height="18" fill="#fbfbf9"/><rect x="230" y="174" width="18" height="18" fill="#fbfbf9"/><rect x="292" y="174" width="18" height="18" fill="#fbfbf9"/>
+      <rect x="140" y="146" width="16" height="20" fill="#fbfbf9"/>
+      <rect x="120" y="200" width="240" height="240" fill="url(#fen)"/>
+      <rect x="120" y="200" width="240" height="240"/>
+      <rect x="120" y="400" width="240" height="40" fill="#fbfbf9"/>
+      <path d="M140 440V418a12 12 0 0 1 24 0V440M200 440V418a12 12 0 0 1 24 0V440M260 440V418a12 12 0 0 1 24 0V440M316 440V418a12 12 0 0 1 24 0V440" stroke-width="1"/>
+      <rect x="120" y="272" width="240" height="8" fill="url(#balc)"/><line x1="120" y1="272" x2="360" y2="272"/>
+
+      <!-- immeuble 2 : ITE -->
+      <path d="M400 160 L414 124 H666 L680 160" fill="#fbfbf9"/>
+      <rect x="440" y="132" width="18" height="20" fill="#fbfbf9"/><rect x="510" y="132" width="18" height="20" fill="#fbfbf9"/><rect x="580" y="132" width="18" height="20" fill="#fbfbf9"/><rect x="630" y="132" width="18" height="20" fill="#fbfbf9"/>
+      <rect x="600" y="100" width="22" height="24" fill="#fbfbf9"/>
+      <rect x="400" y="160" width="280" height="280" fill="url(#fen)"/>
+      <rect x="390" y="160" width="10" height="280" fill="url(#hach)" stroke="#2f7bff"/>
+      <rect x="400" y="160" width="280" height="280"/>
+      <rect x="400" y="400" width="280" height="40" fill="#fbfbf9"/>
+      <path d="M420 440V416h40V440M500 440V416h40V440M580 440V416h40V440" stroke-width="1"/>
+      <rect x="642" y="412" width="22" height="28" fill="#2f7bff" stroke="none"/>
+      <rect x="400" y="232" width="280" height="8" fill="url(#balc)"/><line x1="400" y1="232" x2="680" y2="232"/>
+      <rect x="400" y="352" width="280" height="8" fill="url(#balc)"/><line x1="400" y1="352" x2="680" y2="352"/>
+      <!-- chaleur intérieure -->
+      <g stroke="#2f7bff" stroke-width="1.2">
+        <path class="flux" d="M440 300 q6 -8 0 -16 q-6 -8 0 -16"/>
+        <path class="flux" d="M520 300 q6 -8 0 -16 q-6 -8 0 -16"/>
+        <path class="flux" d="M600 300 q6 -8 0 -16 q-6 -8 0 -16"/>
+      </g>
+
+      <!-- immeuble 3 : PAC -->
+      <rect x="720" y="200" width="240" height="240" fill="url(#fen)"/>
+      <rect x="720" y="200" width="240" height="240"/>
+      <line x1="712" y1="200" x2="968" y2="200" stroke-width="2.5"/>
+      <rect x="720" y="400" width="240" height="40" fill="#fbfbf9"/>
+      <path d="M740 440V416h60V440M880 440V416h60V440" stroke-width="1"/>
+      <rect x="720" y="312" width="240" height="8" fill="url(#balc)"/><line x1="720" y1="312" x2="960" y2="312"/>
+      <path d="M720 186H960" stroke-width="1"/><path d="M724 186V200M760 186V200M796 186V200M884 186V200M920 186V200M956 186V200" stroke-width="1"/>
+      <!-- unité PAC -->
+      <rect x="784" y="154" width="84" height="46" fill="#fff"/>
+      <circle cx="812" cy="180" r="15"/>
+      <g class="fan" stroke="#2f7bff" stroke-width="1.6"><path d="M812 167V193M799 180H825M803 171l18 18M821 171l-18 18"/></g>
+      <path d="M838 164H858M838 172H858M838 180H858M838 188H858" stroke-width="1"/>
+      <path d="M790 200v-4M862 200v-4" stroke-width="2"/>
+      <!-- flux PAC vers immeuble ITE -->
+      <path class="flux" d="M784 168 H700 V300 H680" stroke="#2f7bff" stroke-width="2"/>
+      <path class="flux" d="M868 176 C 900 160, 920 190, 950 170 S 990 160, 1010 150" stroke="#2f7bff" stroke-width="1.2" style="animation-duration:2.6s"/>
+
+      <!-- immeuble 4 -->
+      <path d="M1000 160 L1014 126 H1306 L1320 160" fill="#fbfbf9"/>
+      <rect x="1050" y="134" width="18" height="18" fill="#fbfbf9"/><rect x="1150" y="134" width="18" height="18" fill="#fbfbf9"/><rect x="1250" y="134" width="18" height="18" fill="#fbfbf9"/>
+      <rect x="1270" y="104" width="18" height="22" fill="#fbfbf9"/>
+      <rect x="1000" y="160" width="320" height="280" fill="url(#fen)"/>
+      <rect x="1000" y="160" width="320" height="280"/>
+      <rect x="1000" y="400" width="320" height="40" fill="#fbfbf9"/>
+      <path d="M1020 440V418a14 14 0 0 1 28 0V440M1100 440V418a14 14 0 0 1 28 0V440M1180 440V418a14 14 0 0 1 28 0V440M1260 440V418a14 14 0 0 1 28 0V440" stroke-width="1"/>
+      <rect x="1000" y="272" width="320" height="8" fill="url(#balc)"/><line x1="1000" y1="272" x2="1320" y2="272"/>
+
+      <!-- platanes -->
+      <g stroke-width="1.2" fill="#fbfbf9">
+        <circle cx="382" cy="392" r="18"/><line x1="382" y1="410" x2="382" y2="440"/>
+        <circle cx="700" cy="394" r="16"/><line x1="700" y1="410" x2="700" y2="440"/>
+        <circle cx="982" cy="390" r="18"/><line x1="982" y1="408" x2="982" y2="440"/>
+      </g>
+      <!-- sol -->
+      <line x1="0" y1="440" x2="1440" y2="440" stroke-width="2"/>
+      <path d="M0 450H1440" stroke="#e7e7e3"/>
+
+      <!-- légendes -->
+      <g class="lab-d" font-family="Geist Mono, monospace" font-size="14" fill="#111" stroke="none" letter-spacing=".5">
+        <text x="396" y="52">01 — Isolation par l'extérieur</text>
+        <text x="786" y="52">02 — Pompe à chaleur</text>
+        <text x="610" y="84" fill="#2f7bff">03 — Flux</text>
+        <text x="1040" y="92" text-anchor="end" fill="#2f7bff">04 — Apports solaires</text>
+      </g>
+      <g stroke-width="1"><path d="M395 60V156M786 60V150M700 92V164"/><circle cx="395" cy="60" r="2.5" fill="#111"/><circle cx="786" cy="60" r="2.5" fill="#111"/><circle cx="700" cy="92" r="2.5" fill="#2f7bff" stroke="#2f7bff"/></g>
+      <g class="lab-m" font-family="Geist Mono, monospace" font-size="24" fill="#111" stroke="none">
+        <text x="404" y="52">01 ITE</text>
+        <text x="794" y="52">02 PAC</text>
+        <text x="610" y="84" fill="#2f7bff">03</text>
+        <text x="1040" y="100" text-anchor="end" fill="#2f7bff">04 Soleil</text>
+      </g>
+    </svg>
+    <span class="cap mono">Fig. 01 — Schéma de principe, façades du 6e</span>
+  </div>
+</section>
+
+<section class="confiance-wrap" aria-label="Informations clés">
+  <div class="wrap confiance">
+    <div class="grid">
+      <div class="rv"><span class="mono">Label</span><strong><span class="k"></span>QUALIBAT PAC</strong></div>
+      <div class="rv d1"><span class="mono">Implantation</span><strong>Lyon 6e — 69006</strong></div>
+      <div class="rv d2"><span class="mono">Zone desservie</span><strong>Lyon 6e et métropole de Lyon</strong></div>
+      <div class="rv d3"><span class="mono">Savoir-faire</span><strong>Chauffage, isolation, PAC, clim, eau chaude</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 PRESTATIONS -->
+<section class="sec" id="prestations">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>01</b>Prestations</div>
+      <h2>Cinq métiers, <span>un seul système thermique.</span></h2>
+      <p>Production de chaleur, enveloppe du bâtiment, eau chaude et rafraîchissement&nbsp;: tout se conçoit ensemble, de l'appartement haussmannien à la maison de la métropole.</p>
+    </div>
+    <div class="grid services">
+      <article class="carte rv">
+        <div class="num"><span>01.1</span><em>Chauffage</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="14" y="6" width="28" height="38"/><rect x="20" y="12" width="16" height="7"/><path class="ac" d="M28 37c-4 0-6-3-5-6 1-2 3-3 3-6 3 2 6 5 6 8 0 2-2 4-4 4z"/><path d="M20 44v6M28 44v6M36 44v6"/></svg>
+        <h3>Chaudière à gaz ou fioul</h3>
+        <p>Installation et remplacement de chaudières gaz ou fioul, dimensionnées selon votre logement et vos usages.</p>
+      </article>
+      <article class="carte rv d1">
+        <div class="num"><span>01.2</span><em>Électrique</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 14v30M8 44h40M48 14v30"/><rect x="12" y="14" width="6" height="26" rx="3"/><rect x="21" y="14" width="6" height="26" rx="3"/><rect x="30" y="14" width="6" height="26" rx="3"/><rect x="39" y="14" width="6" height="26" rx="3"/><path class="ac" d="M30 2l-6 9h7l-5 8"/></svg>
+        <h3>Radiateur et chaudière électrique</h3>
+        <p>Pose de radiateurs électriques et de chaudières électriques, une solution adaptée aux logements sans gaz.</p>
+      </article>
+      <article class="carte rv d2">
+        <div class="num"><span>01.3</span><em>Enveloppe</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="6" width="22" height="44"/><path d="M10 17h22M10 28h22M10 39h22M21 6v11M16 17v11M26 28v11M21 39v11"/><rect class="ac" x="36" y="6" width="8" height="44"/><path class="ac" d="M36 14l8-8M36 24l8-8M36 34l8-8M36 44l8-8"/><path d="M48 6v44"/></svg>
+        <h3>Isolation des murs par l'extérieur</h3>
+        <p>Une enveloppe continue qui limite les déperditions sans réduire la surface habitable intérieure.</p>
+      </article>
+      <article class="carte rv d3">
+        <div class="num"><span>01.4</span><em>Renouvelable</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="14" width="44" height="30"/><circle cx="21" cy="29" r="10"/><path class="ac" d="M21 21v16M13 29h16"/><path d="M36 21h10M36 26h10M36 31h10M36 36h10M10 44v4M46 44v4"/><path class="ac" d="M14 8c4-3 8 3 12 0s8 3 12 0"/></svg>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude, installation et mise en service de pompes à chaleur — qualification QUALIBAT PAC.</p>
+      </article>
+      <article class="carte rv">
+        <div class="num"><span>01.5</span><em>Confort d'été</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="8" width="44" height="18" rx="2"/><path d="M12 20h32"/><path class="ac" d="M16 32c0 4-3 6-3 10M28 32c0 4-3 6-3 10M40 32c0 4-3 6-3 10"/><path d="M42 13h3"/></svg>
+        <h3>Climatisation</h3>
+        <p>Climatisation pour traverser les étés lyonnais au frais, avec des unités choisies pour rester discrètes.</p>
+      </article>
+      <article class="carte rv d1">
+        <div class="num"><span>01.6</span><em>Eau chaude</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="16" y="4" width="24" height="46" rx="12"/><path d="M16 16h24"/><path class="ac" d="M28 26c-4 5-5 8-5 10a5 5 0 0 0 10 0c0-2-1-5-5-10z"/><path d="M22 50v3M34 50v3M22 10h4"/></svg>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Une eau chaude sanitaire produite en captant les calories de l'air, pour alléger la facture.</p>
+      </article>
+      <article class="carte rv d2">
+        <div class="num"><span>01.7</span><em>Suivi</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M36 6a10 10 0 0 0-9 14L8 39a4 4 0 0 0 6 6l19-19a10 10 0 0 0 14-9l-6 6-6-2-2-6 6-6z"/><circle class="acf" cx="11" cy="42" r="2" stroke="none"/><path class="ac" d="M40 38l8 8M44 34l8 8"/></svg>
+        <h3>Entretien des équipements</h3>
+        <p>Visites d'entretien de chaudières et de pompes à chaleur pour préserver rendement et durée de vie.</p>
+      </article>
+      <article class="carte rv d3">
+        <div class="num"><span>01.8</span><em>Intervention</em></div>
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="28" cy="30" r="20"/><path d="M28 18v12l8 5"/><path d="M22 4h12M28 4v6"/><circle class="ac" cx="28" cy="30" r="26" stroke-dasharray="2 5"/></svg>
+        <h3>Dépannage</h3>
+        <p>Diagnostic et remise en route en cas de panne de chauffage ou d'eau chaude, sur rendez-vous.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ATOUTS -->
+<section class="sec" id="atouts">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>02</b>Pourquoi nous</div>
+      <h2>Penser le bâtiment <span>avant l'appareil.</span></h2>
+    </div>
+    <div class="grid atouts">
+      <div class="at rv"><span class="mono">A — Polyvalence</span><h3>Chaud, froid, isolation</h3><p>Chaudière, pompe à chaleur, climatisation ou isolation des murs&nbsp;: les solutions sont comparées entre elles, pas imposées.</p></div>
+      <div class="at rv d1"><span class="mono">B — Qualification</span><h3>QUALIBAT PAC</h3><p>Une qualification QUALIBAT dédiée aux pompes à chaleur, gage d'un savoir-faire reconnu sur ces installations.</p></div>
+      <div class="at rv d2"><span class="mono">C — Proximité</span><h3>Ancré dans le 6e</h3><p>Basé à Lyon 6e, Vip Energie Ciel intervient dans l'arrondissement et dans l'ensemble de la métropole de Lyon.</p></div>
+      <div class="at rv d3"><span class="mono">D — Clarté</span><h3>Un devis lisible</h3><p>Chaque proposition détaille le matériel, la main-d'œuvre et les options, pour décider en connaissance de cause.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 MÉTHODE -->
+<section class="sec" id="methode">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>03</b>Méthode</div>
+      <h2>Quatre temps, <span>du premier appel à la mise en service.</span></h2>
+    </div>
+    <div class="grid etapes">
+      <div class="etape rv"><span class="gros">01</span><h3>Premier échange</h3><p>Vous décrivez votre logement, votre équipement actuel et votre projet, par téléphone ou par e-mail.</p></div>
+      <div class="etape rv d1"><span class="gros">02</span><h3>Visite technique</h3><p>Relevé sur place&nbsp;: surfaces, isolation, emplacement possible des unités, contraintes de copropriété.</p></div>
+      <div class="etape rv d2"><span class="gros">03</span><h3>Devis détaillé</h3><p>Une proposition chiffrée et argumentée, avec les alternatives possibles quand elles ont du sens.</p></div>
+      <div class="etape rv d3"><span class="gros">04</span><h3>Installation</h3><p>Pose, mise en service, réglages et explications d'usage pour profiter pleinement de l'équipement.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 À PROPOS -->
+<section class="sec" id="apropos">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>04</b>À propos</div>
+      <h2>Vip Energie Ciel, <span>Lyon 6e.</span></h2>
+    </div>
+    <div class="grid">
+      <div class="propos-txt rv">
+        <p>Vip Energie Ciel est une entreprise de chauffage et d'énergie installée dans le 6e arrondissement de Lyon. Son champ d'action couvre la chaudière à gaz ou fioul, le radiateur et la chaudière électrique, l'isolation des murs par l'extérieur, la pompe à chaleur, la climatisation et le chauffe-eau thermodynamique.</p>
+        <p>Titulaire de la qualification QUALIBAT PAC, l'entreprise intervient dans le 6e et dans toute la métropole de Lyon, pour des projets de rénovation comme pour le remplacement d'un équipement existant.</p>
+      </div>
+      <div class="fiche rv d1">
+        <div><span class="mono">Raison</span><span class="v">Vip Energie Ciel</span></div>
+        <div><span class="mono">Ville</span><span class="v">Lyon 6e (69006)</span></div>
+        <div><span class="mono">Label</span><span class="v">QUALIBAT PAC</span></div>
+        <div><span class="mono">Téléphone</span><a href="tel:+33954956049">09 54 95 60 49</a></div>
+        <div><span class="mono">E-mail</span><a href="mailto:jeanlucouzen@gmail.com">jeanlucouzen@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 RÉALISATIONS -->
+<section class="sec" id="realisations">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>05</b>Réalisations</div>
+      <h2>Types de chantiers <span>et tarifs.</span></h2>
+      <p>Illustrations schématiques des prestations proposées — elles ne représentent pas des chantiers réels.</p>
+    </div>
+    <div class="grid galerie">
+      <figure class="real rv">
+        <svg viewBox="0 0 320 180" fill="none" stroke="#111" stroke-width="1.2">
+          <rect width="320" height="180" fill="#fff" stroke="none"/>
+          <path d="M0 150H320" /><path d="M20 20H120V90H20z"/><path d="M70 20V90M20 55h100" stroke-width=".8"/>
+          <rect x="150" y="30" width="56" height="80" fill="#fbfbf9"/><rect x="160" y="40" width="36" height="14"/><circle cx="178" cy="78" r="9" stroke="#2f7bff"/><path d="M178 84c-3 0-4-2-3-4l3-4 3 4c1 2 0 4-3 4z" fill="#2f7bff" stroke="none"/>
+          <path d="M162 110v40M172 110v40M184 110v40M194 110v40"/><path d="M194 130H260V150" stroke="#2f7bff" stroke-width="1.6"/>
+          <rect x="230" y="100" width="70" height="50"/><path d="M230 112h70" stroke-width=".8"/><circle cx="250" cy="124" r="3"/><circle cx="280" cy="124" r="3"/>
+          <g font-family="Geist Mono, monospace" font-size="9" fill="#8b8b88" stroke="none"><text x="20" y="168">A.01 — CHAUDIÈRE MURALE GAZ</text></g>
+        </svg>
+        <figcaption><strong>Remplacement de chaudière gaz en appartement</strong><span class="mono">Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real rv d1">
+        <svg viewBox="0 0 320 180" fill="none" stroke="#111" stroke-width="1.2">
+          <defs><pattern id="h2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#2f7bff" stroke-width="1.4"/></pattern></defs>
+          <rect width="320" height="180" fill="#fff" stroke="none"/>
+          <rect x="60" y="20" width="160" height="130" fill="#fbfbf9"/>
+          <rect x="60" y="20" width="80" height="130" fill="url(#h2)" stroke="#2f7bff"/>
+          <path d="M60 52h80M60 85h80M60 118h80M100 20v32M80 52v33M120 52v33M100 85v33M80 118v32M120 118v32" stroke="#2f7bff" stroke-width=".8"/>
+          <rect x="158" y="36" width="18" height="26"/><rect x="190" y="36" width="18" height="26"/><rect x="158" y="80" width="18" height="26"/><rect x="190" y="80" width="18" height="26"/>
+          <path d="M240 150V24M280 150V24M240 50h40M240 90h40M240 130h40M240 50l40 40M280 90l-40 40" stroke-width="1"/>
+          <path d="M0 150H320"/>
+          <g font-family="Geist Mono, monospace" font-size="9" fill="#8b8b88" stroke="none"><text x="20" y="168">A.02 — ITE, PANNEAUX + ENDUIT</text></g>
+        </svg>
+        <figcaption><strong>Isolation d'une façade par l'extérieur</strong><span class="mono">Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real rv">
+        <svg viewBox="0 0 320 180" fill="none" stroke="#111" stroke-width="1.2">
+          <rect width="320" height="180" fill="#fff" stroke="none"/>
+          <circle cx="270" cy="38" r="16" fill="#2f7bff" stroke="none"/>
+          <path d="M40 150V80L110 34L180 80V150Z" fill="#fbfbf9"/><rect x="62" y="96" width="24" height="24"/><rect x="130" y="100" width="24" height="50"/>
+          <rect x="204" y="116" width="58" height="34" fill="#fff"/><circle cx="224" cy="133" r="10"/><path d="M224 125v16M216 133h16" stroke="#2f7bff"/><path d="M242 124h14M242 130h14M242 136h14M242 142h14" stroke-width=".8"/>
+          <path d="M204 128H180" stroke="#2f7bff" stroke-width="1.6" stroke-dasharray="4 4"/>
+          <path d="M0 150H320"/>
+          <g font-family="Geist Mono, monospace" font-size="9" fill="#8b8b88" stroke="none"><text x="20" y="168">A.03 — PAC AIR/EAU, MAISON</text></g>
+        </svg>
+        <figcaption><strong>Pompe à chaleur pour une maison de la métropole</strong><span class="mono">Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real rv d1">
+        <svg viewBox="0 0 320 180" fill="none" stroke="#111" stroke-width="1.2">
+          <rect width="320" height="180" fill="#fff" stroke="none"/>
+          <path d="M0 150H320M30 150V20H290"/>
+          <rect x="70" y="40" width="54" height="110" rx="27" fill="#fbfbf9"/><path d="M70 66h54"/><circle cx="97" cy="53" r="5" stroke="#2f7bff"/>
+          <path d="M86 40V26H40M108 40V26H180" stroke="#2f7bff" stroke-width="1.6"/>
+          <rect x="190" y="44" width="80" height="26" rx="2"/><path d="M198 62h64"/><path d="M206 80c0 6-4 8-4 14M230 80c0 6-4 8-4 14M254 80c0 6-4 8-4 14" stroke="#2f7bff"/>
+          <g font-family="Geist Mono, monospace" font-size="9" fill="#8b8b88" stroke="none"><text x="40" y="168">A.04 — CET + CLIMATISATION</text></g>
+        </svg>
+        <figcaption><strong>Chauffe-eau thermodynamique et climatisation</strong><span class="mono">Exemple de prestation</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="grid tarifs">
+      <div class="tarifs-tete rv"><h3>Tarifs</h3><p>Chaque logement est différent&nbsp;: les prix sont établis après visite, sur devis gratuit et sans engagement à confirmer lors du premier contact.</p></div>
+      <div class="table rv d1">
+        <div class="ligne"><span class="mono">T.01</span><span>Chaudière à gaz ou fioul</span><b>Sur devis</b></div>
+        <div class="ligne"><span class="mono">T.02</span><span>Radiateur et chaudière électrique</span><b>Sur devis</b></div>
+        <div class="ligne"><span class="mono">T.03</span><span>Isolation des murs par l'extérieur</span><b>Sur devis</b></div>
+        <div class="ligne"><span class="mono">T.04</span><span>Pompe à chaleur et climatisation</span><b>Sur devis</b></div>
+        <div class="ligne"><span class="mono">T.05</span><span>Chauffe-eau thermodynamique</span><b>Sur devis</b></div>
+        <div class="ligne"><span class="mono">T.06</span><span>Entretien et dépannage</span><b>Sur devis</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 AVIS -->
+<section class="sec" id="avis">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>06</b>Avis</div>
+      <h2>Votre avis <span>compte.</span></h2>
+    </div>
+    <div class="grid">
+      <div class="avis-bloc rv">
+        <div class="rond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <div>
+          <h3>Vous avez fait appel à Vip Energie Ciel&nbsp;?</h3>
+          <p>Partagez votre expérience sur Google&nbsp;: quelques lignes suffisent pour aider vos voisins du 6e et de la métropole à choisir leur chauffagiste.</p>
+          <a class="btn btn-plein" href="https://www.google.com/maps/search/?api=1&amp;query=Vip+Energie+Ciel+Lyon" target="_blank" rel="noopener">Laisser un avis Google<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>07</b>Questions</div>
+      <h2>Questions <span>fréquentes.</span></h2>
+    </div>
+    <div class="grid">
+      <div class="faq rv">
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.1</span>Une pompe à chaleur est-elle possible en appartement&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Cela dépend de la configuration (balcon, terrasse, toiture, règlement de copropriété) et du système de chauffage existant. Une visite technique permet de vérifier la faisabilité et de proposer l'option la plus adaptée.</p></div></div></div>
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.2</span>Faut-il remplacer ma chaudière ou passer à la PAC&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Il n'y a pas de réponse universelle&nbsp;: l'isolation du logement, les émetteurs (radiateurs, plancher) et le budget entrent en compte. Les deux pistes peuvent être chiffrées pour comparer.</p></div></div></div>
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.3</span>L'isolation par l'extérieur concerne-t-elle les immeubles&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Oui, elle peut concerner maisons et immeubles, sous réserve des règles d'urbanisme et, en copropriété, d'une décision collective. Elle a l'avantage de ne pas réduire la surface intérieure.</p></div></div></div>
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.4</span>Des aides financières existent-elles&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Certains travaux de rénovation énergétique peuvent ouvrir droit à des aides publiques, selon des conditions qui évoluent régulièrement. Renseignez-vous sur les sites officiels et parlons-en lors du devis.</p></div></div></div>
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.5</span>Quelle zone couvrez-vous&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>Vip Energie Ciel est basé à Lyon 6e et intervient dans l'arrondissement ainsi que dans la métropole de Lyon. Pour une adresse précise, le plus simple est d'appeler.</p></div></div></div>
+        <div class="q"><button aria-expanded="false"><span class="mono">Q.6</span>À quelle fréquence entretenir une chaudière ou une PAC&nbsp;?<span class="plus"></span></button><div class="rep"><div><p>L'entretien des chaudières est en principe annuel et celui des pompes à chaleur est également encadré selon la puissance. Un entretien régulier aide à conserver de bonnes performances.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 HORAIRES & ZONE -->
+<section class="sec" id="horaires">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>08</b>Horaires &amp; zone</div>
+      <h2>Quand <span>et où.</span></h2>
+    </div>
+    <div class="grid">
+      <div class="horaires rv" id="jours">
+        <div class="jour" data-j="1"><span>Lundi</span><span>Sur rendez-vous</span></div>
+        <div class="jour" data-j="2"><span>Mardi</span><span>Sur rendez-vous</span></div>
+        <div class="jour" data-j="3"><span>Mercredi</span><span>Sur rendez-vous</span></div>
+        <div class="jour" data-j="4"><span>Jeudi</span><span>Sur rendez-vous</span></div>
+        <div class="jour" data-j="5"><span>Vendredi</span><span>Sur rendez-vous</span></div>
+        <div class="jour" data-j="6"><span>Samedi</span><span>À confirmer</span></div>
+        <div class="jour" data-j="0"><span>Dimanche</span><span>À confirmer</span></div>
+        <p class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi.</p>
+      </div>
+      <div class="zone rv d1">
+        <span class="mono" style="color:var(--gris-txt)">Zone d'intervention</span>
+        <h3>Lyon 6e et métropole de Lyon</h3>
+        <p>Entreprise basée dans le 6e arrondissement (69006). Adresse précise communiquée lors de la prise de rendez-vous.</p>
+        <svg viewBox="0 0 600 300" fill="none" stroke="#111" stroke-width="1.2" aria-label="Schéma de la zone : Lyon 6e au centre de la métropole">
+          <circle cx="300" cy="150" r="130" stroke="#e7e7e3"/><circle cx="300" cy="150" r="80" stroke="#e7e7e3"/>
+          <path d="M120 40 C 200 80, 230 120, 250 170 S 280 260, 300 300" stroke="#8b8b88" stroke-width="2"/>
+          <path d="M60 110 C 140 120, 200 130, 230 110 S 270 60, 290 0" stroke="#8b8b88" stroke-width="1.6" stroke-dasharray="1 0"/>
+          <path d="M300 0V300M150 150H450" stroke="#e7e7e3"/>
+          <circle cx="330" cy="120" r="34" fill="#2f7bff" fill-opacity=".12" stroke="#2f7bff"/>
+          <circle cx="330" cy="120" r="6" fill="#2f7bff" stroke="none"/>
+          <g font-family="Geist Mono, monospace" font-size="12" fill="#111" stroke="none">
+            <text x="372" y="104">LYON 6E — 69006</text>
+            <text x="440" y="250" fill="#8b8b88">MÉTROPOLE DE LYON</text>
+            <text x="16" y="290" fill="#8b8b88">SCHÉMA NON À L'ÉCHELLE</text>
+          </g>
+        </svg>
+        <a class="btn btn-vide" href="https://www.google.com/maps/search/?api=1&amp;query=Vip+Energie+Ciel+Lyon+69006" target="_blank" rel="noopener">Itinéraire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="grid sec-tete rv">
+      <div class="idx"><b>09</b>Contact</div>
+      <h2>Parlons <span>de votre projet.</span></h2>
+      <p>Décrivez votre besoin en quelques lignes&nbsp;: Vip Energie Ciel revient vers vous pour organiser une visite.</p>
+    </div>
+    <div class="grid">
+      <form class="form rv" id="form" novalidate>
+        <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+        <div class="champ"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email"></div>
+        <div class="champ"><label for="type">Prestation</label>
+          <select id="type" name="type"><option>Chaudière gaz ou fioul</option><option>Radiateur / chaudière électrique</option><option>Isolation par l'extérieur</option><option>Pompe à chaleur</option><option>Climatisation</option><option>Chauffe-eau thermodynamique</option><option>Entretien / dépannage</option></select></div>
+        <div class="champ full"><label for="msg">Votre projet</label><textarea id="msg" name="msg" placeholder="Type de logement, commune, équipement actuel…"></textarea></div>
+        <button class="btn btn-plein" type="submit">Envoyer la demande<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        <p class="envoi" id="envoi" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+      </form>
+      <div class="coord rv d1">
+        <div><span class="mono">Téléphone</span><a href="tel:+33954956049">09 54 95 60 49</a></div>
+        <div><span class="mono">E-mail</span><a class="petit" href="mailto:jeanlucouzen@gmail.com">jeanlucouzen@gmail.com</a></div>
+        <div><span class="mono">Zone</span><span>Lyon 6e et métropole de Lyon</span></div>
+        <div><span class="mono">Label</span><span class="bleu">QUALIBAT PAC</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid pied">
+      <div class="marque">Vip Energie Ciel<i></i></div>
+      <div class="col"><h4>Coordonnées</h4><ul><li><a href="tel:+33954956049">09 54 95 60 49</a></li><li><a href="mailto:jeanlucouzen@gmail.com">E-mail</a></li><li>Lyon 6e — 69006</li></ul></div>
+      <div class="col"><h4>Horaires</h4><ul><li>Sur rendez-vous</li><li>Lundi → vendredi</li><li>À confirmer</li></ul></div>
+      <div class="col"><h4>Plan</h4><ul><li><a href="#prestations">Prestations</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="mentions mono"><span>© <span id="an">2026</span> Vip Energie Ciel — QUALIBAT PAC</span><span>Mentions légales — à compléter</span></div>
+  </div>
+  <div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement</div>
+</footer>
+
+<a class="flottant" href="tel:+33954956049" aria-label="Appeler Vip Energie Ciel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></a>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('ouvert');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('ouvert');b.setAttribute('aria-expanded','false');});});
+
+  document.querySelectorAll('.q button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var q=btn.parentNode,o=!q.classList.contains('ouvert');
+      document.querySelectorAll('.q.ouvert').forEach(function(x){x.classList.remove('ouvert');x.querySelector('button').setAttribute('aria-expanded','false');});
+      if(o){q.classList.add('ouvert');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+
+  var sv=document.getElementById('schema');
+  function vb(){sv.setAttribute('viewBox',innerWidth<600?'390 0 780 460':'0 0 1440 460');}
+  vb();addEventListener('resize',vb);
+  var d=new Date().getDay(),j=document.querySelector('.jour[data-j="'+d+'"]');
+  if(j)j.classList.add('auj');
+  document.getElementById('an').textContent=new Date().getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('envoi').classList.add('on');});
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('visible');});
+})();
+</script>
+</body>
+</html>

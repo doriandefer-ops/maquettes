@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giner Climatique – chauffagiste et climatisation à Vénissieux</title>
+<meta name="description" content="Giner Climatique, SARL basée à Vénissieux (69200) : installation et entretien de chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Vénissieux et dans la métropole de Lyon.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#06232b;
+  --nuit2:#082e38;
+  --canard:#0b4f5c;
+  --cyan:#3fe0d0;
+  --citron:#c8ff5a;
+  --magenta:#ff7ad9;
+  --blanc:#f3fbfb;
+  --texte:rgba(243,251,251,.78);
+  --doux:rgba(243,251,251,.6);
+  --bord:rgba(243,251,251,.14);
+  --bord2:rgba(243,251,251,.26);
+  --titre:"Unbounded",system-ui,sans-serif;
+  --corps:"Inter",system-ui,sans-serif;
+  --larg:1200px;
+  --r:28px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--nuit);color:var(--blanc);font-family:var(--corps);font-size:1.03rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
+.fond{position:absolute;inset:0;z-index:-2;pointer-events:none;overflow:hidden;background:
+  radial-gradient(60vw 45vw at 85% 4%,rgba(63,224,208,.20),transparent 62%),
+  radial-gradient(50vw 40vw at 0% 22%,rgba(11,79,92,.85),transparent 65%),
+  radial-gradient(45vw 35vw at 100% 45%,rgba(255,122,217,.10),transparent 60%),
+  radial-gradient(55vw 45vw at 5% 70%,rgba(200,255,90,.06),transparent 60%),
+  radial-gradient(60vw 50vw at 90% 92%,rgba(11,79,92,.9),transparent 65%),
+  linear-gradient(180deg,#06232b 0%,#07303a 30%,#06232b 55%,#082a33 80%,#06232b 100%)}
+a{color:inherit}
+svg{display:block;max-width:100%}
+h1,h2,h3,h4{font-family:var(--titre);margin:0;line-height:1.1;letter-spacing:-.02em;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(var(--larg),100% - 32px);margin-inline:auto}
+
+/* verre */
+.verre{position:relative;background:linear-gradient(145deg,rgba(243,251,251,.11),rgba(243,251,251,.035) 65%);border:1px solid var(--bord);border-radius:var(--r);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 30px 70px -34px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.14)}
+.orbe{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:-1}
+.o1{width:420px;height:420px;background:var(--cyan);opacity:.28;top:-80px;right:-120px;animation:flotte 16s ease-in-out infinite}
+.o2{width:360px;height:360px;background:var(--magenta);opacity:.22;top:30%;left:-140px;animation:flotte 19s ease-in-out infinite reverse}
+.o3{width:260px;height:260px;background:var(--citron);opacity:.16;top:40%;left:42%;animation:flotte 22s ease-in-out infinite}
+@keyframes flotte{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
+
+/* nav pilule */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
+.nav .barre{pointer-events:auto;width:min(1120px,100% - 24px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 10px 9px 20px;border-radius:999px;background:rgba(6,35,43,.55);border:1px solid var(--bord);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);transition:background .3s,box-shadow .3s}
+.nav.plein .barre{background:rgba(6,35,43,.82);box-shadow:0 16px 40px -18px rgba(0,0,0,.7)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--titre);font-weight:700;font-size:.98rem;letter-spacing:-.01em;white-space:nowrap}
+.logo small{display:block;font-family:var(--corps);font-weight:500;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+.logo .pastille{width:34px;height:34px;border-radius:50%;background:conic-gradient(from 200deg,var(--cyan),var(--citron),var(--magenta),var(--cyan));display:grid;place-items:center;flex:none}
+.logo .pastille span{width:24px;height:24px;border-radius:50%;background:var(--nuit);display:grid;place-items:center;font-size:.72rem;font-weight:800}
+.menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+.menu a{display:block;padding:8px 13px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:500;color:var(--texte);transition:background .2s,color .2s}
+.menu a:hover{background:rgba(243,251,251,.09);color:var(--blanc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--corps);transition:transform .25s,box-shadow .25s,background .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-plein{background:linear-gradient(120deg,var(--citron),var(--cyan));color:#06232b;box-shadow:0 14px 34px -14px rgba(200,255,90,.7)}
+.btn-plein:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(63,224,208,.8)}
+.btn-verre{background:rgba(243,251,251,.08);border-color:var(--bord2);color:var(--blanc);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-verre:hover{background:rgba(243,251,251,.16);transform:translateY(-2px)}
+.nav .btn{padding:10px 18px;font-size:.88rem}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--bord2);background:rgba(243,251,251,.06);color:var(--blanc);cursor:pointer;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;position:relative;transition:transform .3s,background .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.nav.ouvert .burger span{background:transparent}
+.nav.ouvert .burger span::before{transform:translateY(6px) rotate(45deg)}
+.nav.ouvert .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;padding:clamp(220px,25vw,270px) 0 100px;overflow:hidden;overflow:clip}
+.geant{position:absolute;left:50%;top:96px;transform:translateX(-50%);font-family:var(--titre);font-weight:900;font-size:clamp(130px,26vw,420px);line-height:.8;letter-spacing:-.06em;white-space:nowrap;background:linear-gradient(100deg,rgba(63,224,208,.95) 0%,rgba(200,255,90,.85) 45%,rgba(255,122,217,.9) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.62;user-select:none;pointer-events:none;z-index:0}
+.geant::after{content:"69200 · MÉTROPOLE DE LYON";position:absolute;right:2%;bottom:-.5em;font-size:.05em;letter-spacing:.5em;font-weight:500;-webkit-text-fill-color:rgba(243,251,251,.45)}
+.hero .wrap{position:relative;z-index:2}
+.carte-hero{max-width:700px;padding:44px 44px 38px;border-radius:36px}
+.etiquette{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(63,224,208,.12);border:1px solid rgba(63,224,208,.35);font-size:.82rem;font-weight:600;color:var(--cyan);margin-bottom:22px}
+.etiquette i{width:8px;height:8px;border-radius:50%;background:var(--citron);box-shadow:0 0 0 4px rgba(200,255,90,.2)}
+.hero h1{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;margin-bottom:20px;max-width:12.5em}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--citron));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .chapo{font-size:1.1rem;color:var(--texte);max-width:30em;margin-bottom:30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0;list-style:none}
+.puces li{font-size:.82rem;padding:6px 12px;border-radius:999px;border:1px solid var(--bord);color:var(--doux)}
+.illu-hero{position:absolute;left:590px;bottom:-60px;width:min(540px,44vw);z-index:3;filter:drop-shadow(0 40px 50px rgba(0,0,0,.45))}
+.flux{fill:none;stroke-linecap:round;stroke-dasharray:14 16;animation:souffle 1.6s linear infinite}
+.flux.lent{animation-duration:2.4s}
+@keyframes souffle{to{stroke-dashoffset:-60}}
+.helice{transform-origin:256px 270px;animation:tourne 1.4s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.clignote{animation:cli 2.4s ease-in-out infinite}
+@keyframes cli{50%{opacity:.35}}
+
+/* sections */
+.bloc{padding:110px 0;position:relative}
+.entete{max-width:680px;margin-bottom:52px}
+.entete.centre{margin-inline:auto;text-align:center}
+.sur{display:inline-block;font-family:var(--titre);font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--citron);margin-bottom:16px}
+.entete h2{font-size:clamp(1.75rem,3.4vw,2.65rem);margin-bottom:16px}
+.entete p{color:var(--texte);font-size:1.06rem;margin:0}
+.grad{background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* confiance */
+.confiance{padding:0 0 20px;position:relative;z-index:4;margin-top:-40px}
+.confiance .verre{display:grid;grid-template-columns:repeat(4,1fr);border-radius:26px;overflow:hidden}
+.conf{padding:24px 24px;display:flex;gap:14px;align-items:center;border-left:1px solid var(--bord)}
+.conf:first-child{border-left:0}
+.conf svg{width:38px;height:38px;flex:none}
+.conf b{display:block;font-family:var(--titre);font-size:.92rem;font-weight:600}
+.conf span{font-size:.85rem;color:var(--doux)}
+
+/* services */
+.grille{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.service{padding:30px 28px 28px;transition:transform .35s,border-color .35s,background .35s}
+.service:hover{transform:translateY(-6px);border-color:rgba(63,224,208,.45);background:linear-gradient(145deg,rgba(63,224,208,.14),rgba(243,251,251,.04) 70%)}
+.ico{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(140deg,rgba(63,224,208,.22),rgba(255,122,217,.14));border:1px solid var(--bord2);margin-bottom:22px}
+.ico svg{width:34px;height:34px}
+.service h3{font-size:1.08rem;margin-bottom:10px;font-weight:600}
+.service p{color:var(--texte);font-size:.95rem;margin:0}
+.service .tag{display:inline-block;margin-top:16px;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan)}
+
+/* atouts */
+.atouts{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:stretch}
+.panneau{padding:42px;border-radius:32px;overflow:hidden;background:linear-gradient(150deg,rgba(11,79,92,.9),rgba(6,35,43,.6));}
+.panneau h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:18px}
+.panneau p{color:var(--texte)}
+.panneau .jauge{margin-top:30px}
+.atout-liste{display:grid;gap:16px}
+.atout{display:flex;gap:18px;padding:24px 26px;align-items:flex-start;transition:transform .3s}
+.atout:hover{transform:translateX(6px)}
+.atout .num{font-family:var(--titre);font-size:.82rem;font-weight:700;color:#06232b;background:var(--citron);width:36px;height:36px;border-radius:12px;display:grid;place-items:center;flex:none}
+.atout:nth-child(2) .num{background:var(--cyan)}
+.atout:nth-child(3) .num{background:var(--magenta)}
+.atout:nth-child(4) .num{background:var(--blanc)}
+.atout h3{font-size:1rem;margin-bottom:6px;font-weight:600}
+.atout p{margin:0;color:var(--texte);font-size:.94rem}
+
+/* étapes */
+.etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:e;position:relative}
+.etapes::before{content:"";position:absolute;left:4%;right:4%;top:44px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--citron),var(--magenta));opacity:.5}
+.etape{padding:28px 24px;text-align:left}
+.etape .rond{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-family:var(--titre);font-weight:800;font-size:1.15rem;background:var(--nuit);border:2px solid var(--cyan);color:var(--cyan);margin-bottom:20px;position:relative;box-shadow:0 0 0 8px rgba(6,35,43,.9)}
+.etape:nth-child(2) .rond{border-color:var(--citron);color:var(--citron)}
+.etape:nth-child(3) .rond{border-color:var(--magenta);color:var(--magenta)}
+.etape:nth-child(4) .rond{border-color:var(--blanc);color:var(--blanc)}
+.etape h3{font-size:1rem;margin-bottom:8px;font-weight:600}
+.etape p{margin:0;color:var(--texte);font-size:.93rem}
+
+/* à propos */
+.apropos{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.carte-id{padding:34px;border-radius:32px}
+.carte-id dl{margin:0;display:grid;gap:0}
+.carte-id dl div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--bord2)}
+.carte-id dl div:last-child{border-bottom:0}
+.carte-id dt{color:var(--doux);font-size:.88rem}
+.carte-id dd{margin:0;font-weight:600;text-align:right;font-size:.94rem}
+.carte-id dd a{text-decoration:none;color:var(--cyan)}
+.carte-id .haut{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.carte-id .haut svg{width:54px;height:54px}
+.carte-id .haut b{font-family:var(--titre);font-size:1.15rem}
+.texte-apropos h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:20px}
+.texte-apropos p{color:var(--texte);font-size:1.04rem}
+
+/* réalisations */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.real{overflow:hidden;padding:0;transition:transform .35s}
+.real:hover{transform:translateY(-6px) rotate(-.4deg)}
+.real svg{width:100%;height:auto;aspect-ratio:4/3;background:linear-gradient(160deg,rgba(11,79,92,.9),rgba(6,35,43,.9))}
+.real figcaption{padding:18px 20px 20px}
+.real b{display:block;font-family:var(--titre);font-size:.92rem;font-weight:600;margin-bottom:4px}
+.real span{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--magenta)}
+.tarifs{margin-top:28px;padding:30px 34px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;border-radius:28px;background:linear-gradient(110deg,rgba(200,255,90,.14),rgba(63,224,208,.08) 50%,rgba(255,122,217,.12))}
+.tarifs .prix{font-family:var(--titre);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--citron);white-space:nowrap}
+.tarifs p{margin:0;color:var(--texte)}
+
+/* avis */
+.avis{padding:54px 48px;text-align:center;border-radius:36px;overflow:hidden}
+.avis h2{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:0 auto 14px;max-width:18em}
+.avis p{color:var(--texte);max-width:36em;margin:0 auto 28px}
+.etoiles{display:flex;justify-content:center;gap:8px;margin-bottom:22px}
+.etoiles svg{width:34px;height:34px}
+
+/* faq */
+.faq{max-width:860px;margin-inline:auto;display:grid;gap:12px}
+.q{border-radius:22px;overflow:hidden}
+.q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;background:none;border:0;color:var(--blanc);font:600 1rem var(--corps);text-align:left;padding:22px 26px;cursor:pointer}
+.q button i{width:32px;height:32px;border-radius:50%;border:1px solid var(--bord2);display:grid;place-items:center;flex:none;transition:transform .3s,background .3s;font-style:normal;font-size:1.1rem;color:var(--cyan)}
+.q.ouvert button i{transform:rotate(45deg);background:rgba(63,224,208,.15)}
+.q .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.q.ouvert .rep{grid-template-rows:1fr}
+.q .rep>div{overflow:hidden}
+.q .rep p{padding:0 26px 22px;margin:0;color:var(--texte);font-size:.96rem}
+
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.infos .verre{padding:36px}
+.infos h3{font-size:1.2rem;margin-bottom:6px}
+.note{font-size:.9rem;color:var(--citron);margin-bottom:20px}
+.horaires{width:100%;border-collapse:collapse;font-size:.95rem}
+.horaires td{padding:11px 14px;border-bottom:1px solid var(--bord)}
+.horaires td:last-child{text-align:right;color:var(--doux)}
+.horaires tr.auj td{background:rgba(63,224,208,.13);color:var(--blanc);font-weight:600}
+.horaires tr.auj td:first-child{border-radius:12px 0 0 12px}
+.horaires tr.auj td:last-child{border-radius:0 12px 12px 0;color:var(--cyan)}
+.horaires tr.auj td:first-child::after{content:"Aujourd'hui";margin-left:10px;font-size:.68rem;padding:2px 8px;border-radius:99px;background:var(--cyan);color:#06232b;font-weight:700;letter-spacing:.04em;text-transform:uppercase;vertical-align:2px}
+.carte-zone{margin:18px 0 22px;border-radius:22px;overflow:hidden;border:1px solid var(--bord)}
+.carte-zone svg{width:100%;height:auto}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:start}
+.coord{padding:38px;border-radius:32px;background:linear-gradient(160deg,rgba(63,224,208,.18),rgba(11,79,92,.5) 60%,rgba(255,122,217,.12))}
+.coord h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:16px}
+.coord p{color:var(--texte)}
+.ligne{display:flex;align-items:center;gap:14px;padding:14px 0;text-decoration:none;border-bottom:1px solid var(--bord);word-break:break-word}
+.ligne:last-of-type{border-bottom:0}
+.ligne svg{width:42px;height:42px;flex:none}
+.ligne b{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--doux);font-weight:600}
+.ligne span{font-weight:600}
+.ligne:hover span{color:var(--citron)}
+form.verre{padding:38px;border-radius:32px}
+.champs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.champ{display:flex;flex-direction:column;gap:7px}
+.champ.large{grid-column:1/-1}
+label{font-size:.84rem;font-weight:600;color:var(--texte)}
+input,select,textarea{font:inherit;font-size:.98rem;color:var(--blanc);background:rgba(6,35,43,.5);border:1px solid var(--bord2);border-radius:16px;padding:13px 16px;width:100%;transition:border-color .2s,box-shadow .2s}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--cyan) 50%),linear-gradient(135deg,var(--cyan) 50%,transparent 50%);background-position:calc(100% - 22px) 52%,calc(100% - 16px) 52%;background-size:6px 6px;background-repeat:no-repeat}
+select option{background:var(--nuit)}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(63,224,208,.18)}
+::placeholder{color:rgba(243,251,251,.4)}
+.envoi{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:22px}
+.envoi small{color:var(--doux);font-size:.82rem;flex:1;min-width:200px}
+.retour{display:none;margin-top:18px;padding:16px 18px;border-radius:16px;background:rgba(200,255,90,.14);border:1px solid rgba(200,255,90,.45);color:var(--citron);font-weight:600}
+.retour.vu{display:block}
+
+/* footer */
+footer{padding:70px 0 30px;border-top:1px solid var(--bord);background:linear-gradient(180deg,rgba(6,35,43,0),rgba(4,24,30,.9))}
+.pied{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.pied h4{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;color:var(--cyan);font-weight:600}
+.pied p,.pied li{color:var(--doux);font-size:.92rem;margin:0 0 6px}
+.pied ul{list-style:none;margin:0;padding:0}
+.pied a{text-decoration:none}
+.pied a:hover{color:var(--blanc)}
+.mentions{margin-top:44px;padding-top:22px;border-top:1px solid var(--bord);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.82rem;color:var(--doux)}
+.demo{background:#041a20;color:rgba(243,251,251,.62);text-align:center;font-size:.8rem;padding:12px 16px 14px;border-top:1px solid var(--bord)}
+.appel-flottant{display:none;position:fixed;right:16px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;align-items:center;justify-content:center;background:linear-gradient(130deg,var(--citron),var(--cyan));color:#06232b;box-shadow:0 14px 30px -8px rgba(63,224,208,.7);animation:pulse 2.6s ease-in-out infinite}
+.appel-flottant svg{width:26px;height:26px}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,255,90,.45),0 14px 30px -8px rgba(63,224,208,.7)}50%{box-shadow:0 0 0 14px rgba(200,255,90,0),0 14px 30px -8px rgba(63,224,208,.7)}}
+
+/* révélation */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* responsive */
+@media (max-width:1100px){
+  .menu a{padding:8px 9px;font-size:.85rem}
+  .illu-hero{left:auto;right:-30px;width:min(460px,44vw)}
+  .g4,.galerie{grid-template-columns:repeat(2,1fr)}
+  .etapes{grid-template-columns:repeat(2,1fr)}
+  .etapes::before{display:none}
+  .pied{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  .burger{display:inline-flex}
+  .nav .btn-nav{display:none}
+  .menu{position:absolute;top:calc(100% + 10px);left:12px;right:12px;flex-direction:column;align-items:stretch;gap:2px;padding:12px;border-radius:26px;background:#072a33;box-shadow:0 24px 50px -20px rgba(0,0,0,.8);border:1px solid var(--bord2);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s;pointer-events:auto}
+  .nav.ouvert .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{padding:13px 16px;font-size:1rem}
+  .menu .m-appel{display:block;margin-top:6px;text-align:center;background:linear-gradient(120deg,var(--citron),var(--cyan));color:#06232b;font-weight:700}
+  .hero{min-height:auto;padding:200px 0 110px}
+  .carte-hero{max-width:none;padding:36px 28px 30px}
+  .illu-hero{position:relative;left:auto;right:auto;bottom:auto;width:min(440px,92%);margin:-56px auto -70px;display:block}
+  .geant{top:92px}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .atouts,.apropos,.infos,.contact{grid-template-columns:1fr}
+  .confiance .verre{grid-template-columns:1fr 1fr}
+  .conf:nth-child(3){border-left:0}
+  .conf:nth-child(n+3){border-top:1px solid var(--bord)}
+  .tarifs{grid-template-columns:1fr;gap:12px}
+  .appel-flottant{display:flex}
+}
+@media (min-width:961px){.menu .m-appel{display:none}}
+@media (max-width:620px){
+  body{font-size:1rem}
+  .bloc{padding:80px 0}
+  .logo small{display:none}
+  .hero{padding:168px 0 110px}
+  .geant{font-size:26vw;top:88px}
+  .geant::after{display:none}
+  .carte-hero{padding:30px 22px 26px;border-radius:30px}
+  .hero h1{font-size:1.9rem}
+  .hero .chapo{font-size:1rem}
+  .actions .btn{flex:1 1 100%}
+  .g3,.g4,.galerie,.etapes{grid-template-columns:1fr}
+  .confiance{margin-top:-30px}
+  .confiance .verre{grid-template-columns:1fr}
+  .conf{border-left:0!important;border-top:1px solid var(--bord);padding:18px 20px}
+  .conf:first-child{border-top:0}
+  .panneau,.coord,form.verre,.infos .verre,.carte-id{padding:28px 22px}
+  .avis{padding:40px 22px}
+  .champs{grid-template-columns:1fr}
+  .pied{grid-template-columns:1fr}
+  .horaires td{padding:10px 8px;font-size:.9rem}
+  .horaires tr.auj td:first-child::after{display:block;width:max-content;margin:4px 0 0}
+  .demo{padding-bottom:90px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="fond" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="barre">
+    <a href="#accueil" class="logo" aria-label="Giner Climatique, accueil">
+      <span class="pastille"><span>G</span></span>
+      <span>Giner Climatique<small>Vénissieux · 69200</small></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methode">Déroulé</a></li>
+        <li><a href="#apropos">L'entreprise</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+33636128116" class="m-appel">Appeler le 06 36 12 81 16</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+33636128116" class="btn btn-plein btn-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>06 36 12 81 16</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="orbe o1"></div><div class="orbe o2"></div><div class="orbe o3"></div>
+  <div class="geant" aria-hidden="true">GINER</div>
+  <div class="wrap">
+    <div class="carte-hero verre">
+      <span class="etiquette"><i></i>Chauffage · Climatisation · Eau chaude</span>
+      <h1>Du chaud l'hiver, du frais l'été&nbsp;: <em>votre confort réglé</em> depuis Vénissieux.</h1>
+      <p class="chapo">Giner Climatique installe et entretient chaudières gaz ou fioul, pompes à chaleur, climatisations et chauffe-eau thermodynamiques, des Minguettes au centre de Lyon.</p>
+      <div class="actions">
+        <a href="tel:+33636128116" class="btn btn-plein"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+        <a href="#contact" class="btn btn-verre">Demander un devis<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <ul class="puces">
+        <li>Chaudière gaz &amp; fioul</li><li>Pompe à chaleur</li><li>Climatisation</li><li>Chauffe-eau thermodynamique</li>
+      </ul>
+    </div>
+  <svg class="illu-hero" viewBox="0 0 440 400" role="img" aria-label="Illustration : climatiseur mural soufflant de l'air frais et unité extérieure de pompe à chaleur rejetant de l'air chaud">
+    <defs>
+      <linearGradient id="caisse" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3fbfb"/><stop offset="1" stop-color="#b9d9dc"/></linearGradient>
+      <linearGradient id="caisse2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f6f6"/><stop offset="1" stop-color="#9fc4c8"/></linearGradient>
+      <linearGradient id="froid" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3fe0d0"/><stop offset="1" stop-color="#9ff6ec"/></linearGradient>
+      <linearGradient id="chaud" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff7ad9"/><stop offset="1" stop-color="#ffb0e9"/></linearGradient>
+      <radialGradient id="halo"><stop offset="0" stop-color="#3fe0d0" stop-opacity=".45"/><stop offset="1" stop-color="#3fe0d0" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="230" cy="110" r="130" fill="url(#halo)"/>
+    <!-- split intérieur -->
+    <g>
+      <rect x="60" y="30" width="300" height="92" rx="24" fill="url(#caisse)"/>
+      <rect x="60" y="96" width="300" height="26" rx="12" fill="#cfe6e8"/>
+      <path d="M84 108h252" stroke="#7aa9ae" stroke-width="3" stroke-linecap="round"/>
+      <path d="M84 116h252" stroke="#9fc4c8" stroke-width="2" stroke-linecap="round"/>
+      <rect x="84" y="50" width="70" height="26" rx="8" fill="#06232b"/>
+      <text x="119" y="69" text-anchor="middle" font-family="Unbounded,sans-serif" font-size="15" font-weight="700" fill="#3fe0d0">21°</text>
+      <circle cx="330" cy="58" r="5" fill="#c8ff5a" class="clignote"/>
+      <rect x="250" y="54" width="60" height="6" rx="3" fill="#b9d9dc"/>
+    </g>
+    <!-- flux froid -->
+    <g stroke="url(#froid)" stroke-width="5">
+      <path class="flux" d="M100 134c-10 30 20 40 6 74"/>
+      <path class="flux lent" d="M160 136c-8 34 22 44 8 80"/>
+      <path class="flux" d="M220 136c-8 30 18 40 6 70"/>
+      <path class="flux lent" d="M280 134c-10 30 18 40 8 66"/>
+    </g>
+    <g fill="#3fe0d0" opacity=".9">
+      <path d="M58 196l6 10 6-10-6-10z M52 196h24 M64 184v24" stroke="#3fe0d0" stroke-width="2"/>
+    </g>
+    <!-- liaison frigorifique -->
+    <path d="M360 76h36v206h-20" fill="none" stroke="#c8ff5a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M360 90h24v190" fill="none" stroke="#0b4f5c" stroke-width="5" stroke-linecap="round"/>
+    <!-- unité extérieure -->
+    <g>
+      <rect x="150" y="196" width="232" height="160" rx="20" fill="url(#caisse2)"/>
+      <rect x="150" y="196" width="232" height="18" rx="9" fill="#f3fbfb" opacity=".7"/>
+      <circle cx="256" cy="270" r="62" fill="#0b4f5c"/>
+      <circle cx="256" cy="270" r="62" fill="none" stroke="#06232b" stroke-width="4"/>
+      <g class="helice" fill="#3fe0d0">
+        <path d="M256 270c-6-22 0-46 18-52 6 18-4 40-18 52z"/>
+        <path d="M256 270c22-6 46 0 52 18-18 6-40-4-52-18z"/>
+        <path d="M256 270c6 22 0 46-18 52-6-18 4-40 18-52z"/>
+        <path d="M256 270c-22 6-46 0-52-18 18-6 40 4 52 18z"/>
+      </g>
+      <circle cx="256" cy="270" r="9" fill="#f3fbfb"/>
+      <g stroke="#06232b" stroke-width="2" opacity=".35">
+        <path d="M194 240h124M194 256h124M194 272h124M194 288h124M194 304h124"/>
+      </g>
+      <rect x="334" y="222" width="34" height="112" rx="8" fill="#cfe6e8"/>
+      <path d="M342 236h18M342 248h18M342 260h18M342 272h18" stroke="#7aa9ae" stroke-width="3" stroke-linecap="round"/>
+      <rect x="168" y="356" width="40" height="12" rx="4" fill="#0b4f5c"/>
+      <rect x="324" y="356" width="40" height="12" rx="4" fill="#0b4f5c"/>
+    </g>
+    <!-- flux chaud -->
+    <g stroke="url(#chaud)" stroke-width="5">
+      <path class="flux" d="M144 236c-30-6-40 18-74 10"/>
+      <path class="flux lent" d="M144 270c-34-4-44 22-86 14"/>
+      <path class="flux" d="M144 304c-30-6-40 16-70 10"/>
+    </g>
+    <g transform="translate(36 300)">
+      <path d="M12 0c6 10 14 16 14 28a14 14 0 0 1-28 0C-2 18 8 12 12 0z" fill="#ff7ad9"/>
+      <path d="M12 16c3 5 6 8 6 13a6 6 0 0 1-12 0c0-5 4-8 6-13z" fill="#ffd6f2"/>
+    </g>
+    <rect x="132" y="372" width="268" height="6" rx="3" fill="#06232b" opacity=".35"/>
+  </svg>
+  </div>
+</section>
+
+<section class="confiance" aria-label="Informations clés">
+  <div class="wrap">
+    <div class="verre rv">
+      <div class="conf"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#3fe0d0" stroke-opacity=".5"/><path d="M20 9c-5 0-9 4-9 9 0 7 9 14 9 14s9-7 9-14c0-5-4-9-9-9z" stroke="#3fe0d0" stroke-width="2"/><circle cx="20" cy="18" r="3" fill="#c8ff5a"/></svg><div><b>Vénissieux (69200)</b><span>Entreprise basée sur la commune</span></div></div>
+      <div class="conf"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#c8ff5a" stroke-opacity=".5"/><circle cx="20" cy="20" r="10" stroke="#c8ff5a" stroke-width="2"/><path d="M10 20h20M20 10c4 4 4 16 0 20M20 10c-4 4-4 16 0 20" stroke="#c8ff5a" stroke-width="1.6"/></svg><div><b>Métropole de Lyon</b><span>Zone d'intervention</span></div></div>
+      <div class="conf"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#ff7ad9" stroke-opacity=".5"/><rect x="11" y="12" width="18" height="17" rx="3" stroke="#ff7ad9" stroke-width="2"/><path d="M15 17h10M15 21h10M15 25h6" stroke="#ff7ad9" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>SARL immatriculée</b><span>Inscrite au registre Sirene</span></div></div>
+      <div class="conf"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#f3fbfb" stroke-opacity=".4"/><path d="M12 22c0-6 8-6 8-12 0 6 8 6 8 12a8 8 0 0 1-16 0z" stroke="#ff7ad9" stroke-width="2"/><path d="M20 16v14M15 23l5 3 5-3" stroke="#3fe0d0" stroke-width="1.6" stroke-linecap="round"/></svg><div><b>Chaud &amp; froid</b><span>Chaudière, PAC, clim, CET</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="services">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="sur">Ce que l'on fait</span>
+      <h2>Un seul interlocuteur pour <span class="grad">chauffer, rafraîchir</span> et produire votre eau chaude.</h2>
+      <p>Des installations neuves au remplacement d'un appareil fatigué, chaque intervention commence par l'écoute de votre logement : appartement des Minguettes, pavillon du Moulin-à-Vent ou maison de l'Est lyonnais.</p>
+    </div>
+    <div class="grille g3">
+      <article class="service verre rv">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="5" width="22" height="30" rx="4" stroke="#f3fbfb"/><path d="M14 11h12" stroke="#3fe0d0"/><circle cx="25" cy="11" r="0.5" stroke="#c8ff5a"/><path d="M20 30c-3 0-5-2-5-5 0-3 3-4 5-8 2 4 5 5 5 8 0 3-2 5-5 5z" stroke="#ff7ad9"/></svg></div>
+        <h3>Chaudière gaz ou fioul</h3>
+        <p>Installation, remplacement et mise en service de chaudières gaz ou fioul, avec conseil sur la solution la plus adaptée à votre logement.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="service verre rv d1">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="32" height="24" rx="4" stroke="#f3fbfb"/><circle cx="17" cy="21" r="8" stroke="#3fe0d0"/><path d="M17 21l4-5M17 21l-5-2M17 21l1 6" stroke="#3fe0d0"/><path d="M29 14v14" stroke="#c8ff5a"/></svg></div>
+        <h3>Pompe à chaleur</h3>
+        <p>Étude et pose de pompes à chaleur pour capter les calories de l'air extérieur et chauffer votre maison plus sobrement.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="service verre rv d2">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="32" height="13" rx="4" stroke="#f3fbfb"/><path d="M9 17h22" stroke="#7aa9ae"/><path d="M12 25c-1 3 1 4 0 7M20 25c-1 3 1 4 0 7M28 25c-1 3 1 4 0 7" stroke="#3fe0d0"/></svg></div>
+        <h3>Climatisation</h3>
+        <p>Climatiseurs muraux et systèmes réversibles pour garder la fraîcheur quand les étés lyonnais s'installent sous les toits.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="service verre rv">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="4" width="18" height="32" rx="9" stroke="#f3fbfb"/><path d="M15 27h10" stroke="#ff7ad9"/><path d="M15 22h10" stroke="#ff7ad9" opacity=".6"/><path d="M20 9v6M17 12l3 3 3-3" stroke="#3fe0d0"/></svg></div>
+        <h3>Chauffe-eau thermodynamique</h3>
+        <p>Remplacement de ballons électriques classiques par un chauffe-eau thermodynamique qui puise l'énergie de l'air ambiant.</p>
+        <span class="tag">Service référencé</span>
+      </article>
+      <article class="service verre rv d1">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6a7 7 0 0 0-6 10L8 28a3 3 0 0 0 4 4l12-12a7 7 0 0 0 10-6l-4 4-4-1-1-4z" stroke="#f3fbfb"/><circle cx="10.5" cy="29.5" r="0.6" stroke="#c8ff5a"/></svg></div>
+        <h3>Entretien annuel</h3>
+        <p>Contrôle, nettoyage et réglages de vos équipements pour qu'ils durent et consomment au plus juste, saison après saison.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+      <article class="service verre rv d2">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4L10 22h9l-2 14 13-19h-9z" stroke="#c8ff5a"/></svg></div>
+        <h3>Dépannage</h3>
+        <p>Plus de chauffage, clim qui ne souffle plus, eau tiède&nbsp;? Un appel pour diagnostiquer la panne et organiser l'intervention.</p>
+        <span class="tag">Prestation courante</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="atouts" style="padding-top:30px">
+  <div class="wrap atouts">
+    <div class="panneau verre rv">
+      <span class="sur">Pourquoi Giner Climatique</span>
+      <h2>Le chaud et le froid, pensés <span class="grad">ensemble</span>.</h2>
+      <p>Chaudière, pompe à chaleur, clim, eau chaude : ces équipements se parlent. Les confier à la même entreprise, c'est éviter les solutions bricolées et garder une vision d'ensemble de votre confort.</p>
+      <svg class="jauge" viewBox="0 0 400 120" aria-hidden="true">
+        <defs><linearGradient id="jg" x1="0" x2="1"><stop offset="0" stop-color="#3fe0d0"/><stop offset=".5" stop-color="#c8ff5a"/><stop offset="1" stop-color="#ff7ad9"/></linearGradient></defs>
+        <rect x="10" y="48" width="380" height="20" rx="10" fill="rgba(243,251,251,.08)"/>
+        <rect x="10" y="48" width="380" height="20" rx="10" fill="url(#jg)" opacity=".85"/>
+        <circle cx="200" cy="58" r="20" fill="#06232b" stroke="#f3fbfb" stroke-width="3"/>
+        <text x="200" y="63" text-anchor="middle" font-family="Unbounded,sans-serif" font-size="13" font-weight="700" fill="#f3fbfb">21°</text>
+        <text x="10" y="100" font-family="Inter,sans-serif" font-size="13" fill="#3fe0d0">Rafraîchir</text>
+        <text x="390" y="100" text-anchor="end" font-family="Inter,sans-serif" font-size="13" fill="#ff7ad9">Chauffer</text>
+        <text x="10" y="30" font-family="Inter,sans-serif" font-size="12" fill="rgba(243,251,251,.6)">Été</text>
+        <text x="390" y="30" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="rgba(243,251,251,.6)">Hiver</text>
+      </svg>
+    </div>
+    <div class="atout-liste">
+      <div class="atout verre rv"><span class="num">01</span><div><h3>Un artisan de proximité</h3><p>Basée à Vénissieux, l'entreprise intervient dans la métropole de Lyon sans vous imposer de plateforme intermédiaire.</p></div></div>
+      <div class="atout verre rv d1"><span class="num">02</span><div><h3>Des conseils adaptés à votre logement</h3><p>Le bon appareil dépend de la surface, de l'isolation et de vos habitudes : on en parle avant de chiffrer.</p></div></div>
+      <div class="atout verre rv d2"><span class="num">03</span><div><h3>Un devis clair avant toute intervention</h3><p>Matériel, main-d'œuvre, délais : vous savez à quoi vous engager avant le premier coup de clé.</p></div></div>
+      <div class="atout verre rv d3"><span class="num">04</span><div><h3>Un contact direct</h3><p>Un numéro de portable et une adresse e-mail : vous échangez directement avec l'entreprise.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="methode">
+  <div class="wrap">
+    <div class="entete centre rv">
+      <span class="sur">Comment ça se passe</span>
+      <h2>Quatre étapes, du premier appel à la mise en route.</h2>
+      <p>Une démarche simple pour que votre projet avance sans mauvaise surprise.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape verre rv"><div class="rond">1</div><h3>Vous nous contactez</h3><p>Par téléphone ou via le formulaire : vous décrivez votre besoin, votre logement et votre équipement actuel.</p></div>
+      <div class="etape verre rv d1"><div class="rond">2</div><h3>Visite &amp; diagnostic</h3><p>Un passage sur place pour évaluer l'existant, les contraintes d'installation et les options possibles.</p></div>
+      <div class="etape verre rv d2"><div class="rond">3</div><h3>Devis détaillé</h3><p>Vous recevez une proposition écrite et prenez le temps de la comparer, sans pression.</p></div>
+      <div class="etape verre rv d3"><div class="rond">4</div><h3>Pose &amp; mise en service</h3><p>Installation, réglages et explications d'usage pour profiter pleinement de votre équipement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="apropos" style="padding-top:40px">
+  <div class="wrap apropos">
+    <div class="carte-id verre rv">
+      <div class="haut">
+        <svg viewBox="0 0 54 54" aria-hidden="true"><defs><linearGradient id="ci" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3fe0d0"/><stop offset=".5" stop-color="#c8ff5a"/><stop offset="1" stop-color="#ff7ad9"/></linearGradient></defs><circle cx="27" cy="27" r="26" fill="url(#ci)"/><circle cx="27" cy="27" r="19" fill="#06232b"/><text x="27" y="33" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="800" font-size="17" fill="#f3fbfb">G</text></svg>
+        <div><b>Giner Climatique</b><br><span style="color:var(--doux);font-size:.88rem">Fiche entreprise</span></div>
+      </div>
+      <dl>
+        <div><dt>Forme juridique</dt><dd>SARL</dd></div>
+        <div><dt>Siège</dt><dd>Vénissieux (69200)</dd></div>
+        <div><dt>Zone</dt><dd>Vénissieux et métropole de Lyon</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+33636128116">06 36 12 81 16</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:ginerclimatique@gmail.com">ginerclimatique@gmail.com</a></dd></div>
+      </dl>
+    </div>
+    <div class="texte-apropos rv d1">
+      <span class="sur">L'entreprise</span>
+      <h2>Une SARL vénissiane du <span class="grad">génie climatique</span>.</h2>
+      <p>Giner Climatique est une SARL installée à Vénissieux, dans le 69200, au sud de Lyon. Son métier&nbsp;: les chaudières gaz ou fioul, les pompes à chaleur, la climatisation et les chauffe-eau thermodynamiques.</p>
+      <p>Entre les étés chauds et les hivers humides de la vallée du Rhône, la métropole demande des installations capables de faire les deux&nbsp;: chauffer et rafraîchir. C'est précisément ce que l'entreprise propose, de Vénissieux aux communes voisines de la métropole de Lyon.</p>
+      <p>Pour un projet ou une question, le plus simple reste de passer un coup de fil ou d'écrire un e-mail.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="realisations">
+  <div class="wrap">
+    <div class="entete rv">
+      <span class="sur">Réalisations types</span>
+      <h2>Le genre de chantiers que l'on mène dans la métropole.</h2>
+      <p>Illustrations indicatives des prestations proposées, pas de photos de chantiers réels.</p>
+    </div>
+    <div class="galerie">
+      <figure class="real verre rv" style="margin:0">
+        <svg viewBox="0 0 400 300" aria-hidden="true"><rect x="0" y="230" width="400" height="70" fill="#06232b" opacity=".6"/><path d="M80 230V120l90-60 90 60v110z" fill="#0b4f5c" stroke="#3fe0d0" stroke-width="2"/><rect x="150" y="160" width="40" height="70" fill="#06232b"/><rect x="100" y="140" width="34" height="30" rx="3" fill="#3fe0d0" opacity=".35"/><rect x="206" y="140" width="34" height="30" rx="3" fill="#3fe0d0" opacity=".35"/><rect x="280" y="170" width="80" height="60" rx="8" fill="#e9f6f6"/><circle cx="310" cy="200" r="20" fill="#0b4f5c"/><path d="M310 200l12-8M310 200l-10-10M310 200l-2 14" stroke="#3fe0d0" stroke-width="4" stroke-linecap="round"/><path d="M366 186c14-4 18 10 30 6M366 204c14-4 18 10 30 6" stroke="#ff7ad9" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 6"/><path d="M260 200h20" stroke="#c8ff5a" stroke-width="4"/></svg>
+        <figcaption><b>Pompe à chaleur en pavillon</b><span>Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real verre rv d1" style="margin:0">
+        <svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="40" width="320" height="220" rx="10" fill="#0b4f5c" opacity=".5"/><rect x="80" y="70" width="240" height="56" rx="16" fill="#e9f6f6"/><path d="M96 112h208" stroke="#7aa9ae" stroke-width="4" stroke-linecap="round"/><rect x="98" y="82" width="44" height="18" rx="5" fill="#06232b"/><text x="120" y="96" text-anchor="middle" font-family="Unbounded,sans-serif" font-size="11" font-weight="700" fill="#3fe0d0">22°</text><g stroke="#3fe0d0" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="8 9"><path d="M120 136c-6 20 12 26 4 50"/><path d="M200 136c-6 20 12 26 4 54"/><path d="M280 136c-6 20 12 26 4 50"/></g><rect x="120" y="210" width="160" height="34" rx="8" fill="#06232b" opacity=".7"/><path d="M140 210v-14h120v14" fill="none" stroke="#f3fbfb" stroke-opacity=".3" stroke-width="3"/></svg>
+        <figcaption><b>Climatisation de séjour</b><span>Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real verre rv d2" style="margin:0">
+        <svg viewBox="0 0 400 300" aria-hidden="true"><rect x="60" y="250" width="280" height="10" rx="5" fill="#06232b"/><rect x="140" y="50" width="120" height="200" rx="14" fill="#e9f6f6"/><rect x="156" y="70" width="88" height="40" rx="8" fill="#06232b"/><circle cx="176" cy="90" r="8" fill="#c8ff5a"/><rect x="192" y="84" width="40" height="5" rx="2" fill="#3fe0d0"/><rect x="192" y="94" width="28" height="5" rx="2" fill="#3fe0d0" opacity=".5"/><path d="M200 150c-14 18-20 26-20 38a20 20 0 0 0 40 0c0-12-6-20-20-38z" fill="#ff7ad9"/><path d="M200 172c-6 8-9 12-9 18a9 9 0 0 0 18 0c0-6-3-10-9-18z" fill="#ffd6f2"/><path d="M170 250v-14M230 250v-14" stroke="#7aa9ae" stroke-width="6"/><path d="M100 120h40M100 140h40" stroke="#c8ff5a" stroke-width="4" stroke-linecap="round" opacity=".7"/></svg>
+        <figcaption><b>Remplacement de chaudière gaz</b><span>Exemple de prestation</span></figcaption>
+      </figure>
+      <figure class="real verre rv d3" style="margin:0">
+        <svg viewBox="0 0 400 300" aria-hidden="true"><rect x="40" y="250" width="320" height="10" rx="5" fill="#06232b"/><rect x="150" y="40" width="100" height="210" rx="50" fill="#e9f6f6"/><rect x="150" y="40" width="100" height="56" rx="28" fill="#cfe6e8"/><circle cx="200" cy="68" r="16" fill="#0b4f5c"/><path d="M200 68l8-6M200 68l-8-6M200 68v10" stroke="#3fe0d0" stroke-width="3" stroke-linecap="round"/><rect x="170" y="120" width="60" height="110" rx="10" fill="#06232b" opacity=".85"/><rect x="176" y="176" width="48" height="48" rx="6" fill="#ff7ad9" opacity=".8"/><rect x="176" y="150" width="48" height="22" rx="6" fill="#3fe0d0" opacity=".5"/><path d="M110 70c14 0 18 12 34 10M110 92c14 0 18 12 34 10" stroke="#3fe0d0" stroke-width="3" fill="none" stroke-dasharray="6 6" stroke-linecap="round"/><path d="M200 250v14" stroke="#7aa9ae" stroke-width="5"/></svg>
+        <figcaption><b>Chauffe-eau thermodynamique</b><span>Exemple de prestation</span></figcaption>
+      </figure>
+    </div>
+    <div class="tarifs verre rv">
+      <div class="prix">Sur devis</div>
+      <p>Chaque logement est différent : surface, isolation, appareil existant, accès. Les tarifs sont donc établis après échange et, si besoin, visite. Le devis est gratuit et sans engagement à demander.</p>
+      <a href="#contact" class="btn btn-plein">Demander mon devis</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="avis" style="padding-top:40px">
+  <div class="wrap">
+    <div class="avis verre rv">
+      <div class="orbe o1" style="width:300px;height:300px;top:-120px;right:-80px"></div>
+      <div class="etoiles" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z" fill="none" stroke="#c8ff5a" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z" fill="none" stroke="#3fe0d0" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.8 5.5 21l2-7.5L2 9h7z" fill="none" stroke="#ff7ad9" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="sur">Votre avis compte</span>
+      <h2>Vous avez fait appel à Giner Climatique&nbsp;?</h2>
+      <p>Votre retour aide vos voisins de Vénissieux et de la métropole à choisir leur artisan en confiance. Quelques mots sur Google suffisent.</p>
+      <a class="btn btn-verre" href="https://www.google.com/maps/search/?api=1&amp;query=Giner+Climatique+V%C3%A9nissieux" target="_blank" rel="noopener">Laisser un avis sur Google<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="faq">
+  <div class="wrap">
+    <div class="entete centre rv">
+      <span class="sur">Questions fréquentes</span>
+      <h2>Ce que l'on nous demande souvent.</h2>
+    </div>
+    <div class="faq">
+      <div class="q verre rv"><button aria-expanded="false">Pompe à chaleur ou chaudière : comment choisir&nbsp;?<i>+</i></button><div class="rep"><div><p>Tout dépend du logement : isolation, type d'émetteurs (radiateurs, plancher chauffant), place disponible pour une unité extérieure et budget. Un échange puis une visite permettent de comparer les options de façon concrète.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Une climatisation peut-elle aussi chauffer&nbsp;?<i>+</i></button><div class="rep"><div><p>Oui, un climatiseur dit «&nbsp;réversible&nbsp;» fonctionne comme une pompe à chaleur air-air : il rafraîchit l'été et peut chauffer en mi-saison ou en appoint l'hiver.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Faut-il entretenir sa chaudière chaque année&nbsp;?<i>+</i></button><div class="rep"><div><p>L'entretien annuel est obligatoire pour les chaudières gaz et fioul d'une certaine puissance, et vivement conseillé pour les pompes à chaleur. Il contribue à la sécurité, à la longévité et au bon rendement de l'appareil.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Qu'est-ce qu'un chauffe-eau thermodynamique&nbsp;?<i>+</i></button><div class="rep"><div><p>C'est un ballon d'eau chaude équipé d'une petite pompe à chaleur qui récupère les calories de l'air pour chauffer l'eau. Il consomme généralement moins qu'un ballon électrique classique, sous réserve d'un emplacement adapté.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Intervenez-vous en dehors de Vénissieux&nbsp;?<i>+</i></button><div class="rep"><div><p>L'entreprise intervient à Vénissieux et dans la métropole de Lyon. Pour une adresse précise, le plus simple est d'appeler ou d'indiquer votre commune dans le formulaire.</p></div></div></div>
+      <div class="q verre rv"><button aria-expanded="false">Le devis est-il payant&nbsp;?<i>+</i></button><div class="rep"><div><p>La demande de devis est gratuite et sans engagement. Les conditions précises (déplacement, délais) vous seront confirmées lors du premier échange.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="infos" style="padding-top:40px">
+  <div class="wrap infos">
+    <div class="verre rv">
+      <span class="sur">Horaires</span>
+      <h3>Quand nous joindre</h3>
+      <p class="note">Horaires à confirmer – sur rendez-vous, du lundi au vendredi</p>
+      <table class="horaires">
+        <tbody>
+          <tr data-j="1"><td>Lundi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="3"><td>Mercredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>Sur rendez-vous</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>À confirmer</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>À confirmer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="verre rv d1">
+      <span class="sur">Zone desservie</span>
+      <h3>Vénissieux et métropole de Lyon</h3>
+      <div class="carte-zone">
+        <svg viewBox="0 0 400 220" aria-hidden="true"><rect width="400" height="220" fill="#082e38"/><g stroke="rgba(243,251,251,.07)"><path d="M0 40h400M0 80h400M0 120h400M0 160h400M0 200h400M40 0v220M80 0v220M120 0v220M160 0v220M200 0v220M240 0v220M280 0v220M320 0v220M360 0v220"/></g><path d="M110 0c10 40-6 70 8 110s-2 80 10 110" stroke="#3fe0d0" stroke-width="8" fill="none" opacity=".35"/><path d="M60 0c20 30 40 50 50 90" stroke="#3fe0d0" stroke-width="5" fill="none" opacity=".25"/><circle cx="220" cy="120" r="90" fill="#3fe0d0" opacity=".07" stroke="#3fe0d0" stroke-opacity=".3" stroke-dasharray="4 6"/><circle cx="150" cy="66" r="6" fill="#f3fbfb" opacity=".7"/><text x="160" y="58" font-family="Inter,sans-serif" font-size="12" fill="rgba(243,251,251,.75)">Lyon</text><circle cx="220" cy="140" r="16" fill="#c8ff5a" opacity=".25"/><circle cx="220" cy="140" r="7" fill="#c8ff5a"/><text x="236" y="145" font-family="Unbounded,sans-serif" font-size="13" font-weight="700" fill="#f3fbfb">Vénissieux</text><text x="300" y="36" font-family="Inter,sans-serif" font-size="11" fill="rgba(243,251,251,.5)">Métropole de Lyon</text><text x="120" y="200" font-family="Inter,sans-serif" font-size="10" fill="rgba(63,224,208,.6)">Rhône</text></svg>
+      </div>
+      <p style="color:var(--texte);font-size:.95rem">Entreprise basée à Vénissieux (69200). Interventions sur la commune et dans la métropole lyonnaise.</p>
+      <a class="btn btn-verre" href="https://www.google.com/maps/search/?api=1&amp;query=Giner+Climatique+V%C3%A9nissieux+69200" target="_blank" rel="noopener">Itinéraire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" id="contact">
+  <div class="wrap contact">
+    <div class="coord verre rv">
+      <span class="sur">Contact</span>
+      <h2>Parlons de votre projet.</h2>
+      <p>Installation, remplacement, entretien ou panne : décrivez votre besoin, l'entreprise revient vers vous.</p>
+      <a class="ligne" href="tel:+33636128116"><svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" fill="rgba(200,255,90,.15)" stroke="#c8ff5a" stroke-opacity=".5"/><path d="M28 25.5v2.3a1.5 1.5 0 0 1-1.7 1.5 15 15 0 0 1-6.5-2.3 14.7 14.7 0 0 1-4.5-4.5 15 15 0 0 1-2.3-6.5A1.5 1.5 0 0 1 14.5 14.3h2.3a1.5 1.5 0 0 1 1.5 1.3l.5 2a1.5 1.5 0 0 1-.4 1.6l-1 1a12 12 0 0 0 4.5 4.5l1-1a1.5 1.5 0 0 1 1.6-.3l2 .5a1.5 1.5 0 0 1 1.3 1.5z" stroke="#c8ff5a" stroke-width="1.6"/></svg><div><b>Téléphone</b><span>06 36 12 81 16</span></div></a>
+      <a class="ligne" href="mailto:ginerclimatique@gmail.com"><svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" fill="rgba(63,224,208,.15)" stroke="#3fe0d0" stroke-opacity=".5"/><rect x="12" y="14" width="18" height="14" rx="2.5" stroke="#3fe0d0" stroke-width="1.6"/><path d="M12.5 15l8.5 7 8.5-7" stroke="#3fe0d0" stroke-width="1.6"/></svg><div><b>E-mail</b><span>ginerclimatique@gmail.com</span></div></a>
+      <div class="ligne"><svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" fill="rgba(255,122,217,.15)" stroke="#ff7ad9" stroke-opacity=".5"/><path d="M21 12c-4 0-7 3-7 7 0 5 7 11 7 11s7-6 7-11c0-4-3-7-7-7z" stroke="#ff7ad9" stroke-width="1.6"/><circle cx="21" cy="19" r="2.4" stroke="#ff7ad9" stroke-width="1.6"/></svg><div><b>Zone</b><span>Vénissieux (69200) et métropole de Lyon</span></div></div>
+    </div>
+    <form class="verre rv d1" id="form" novalidate>
+      <div class="champs">
+        <div class="champ"><label for="nom">Nom</label><input id="nom" name="nom" placeholder="Votre nom" autocomplete="name"></div>
+        <div class="champ"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" placeholder="06 …" autocomplete="tel"></div>
+        <div class="champ"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" placeholder="vous@exemple.fr" autocomplete="email"></div>
+        <div class="champ"><label for="ville">Commune</label><input id="ville" name="ville" placeholder="Vénissieux, Saint-Fons, Lyon 8e…"></div>
+        <div class="champ large"><label for="besoin">Votre besoin</label>
+          <select id="besoin" name="besoin">
+            <option>Chaudière gaz ou fioul</option>
+            <option>Pompe à chaleur</option>
+            <option>Climatisation</option>
+            <option>Chauffe-eau thermodynamique</option>
+            <option>Entretien</option>
+            <option>Dépannage</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="champ large"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Type de logement, surface, équipement actuel…"></textarea></div>
+      </div>
+      <div class="envoi">
+        <button type="submit" class="btn btn-plein">Envoyer ma demande<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <small>Vos informations servent uniquement à répondre à votre demande.</small>
+      </div>
+      <p class="retour" id="retour" role="status">Maquette de démonstration – votre demande n'a pas été envoyée.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pied">
+      <div>
+        <a href="#accueil" class="logo"><span class="pastille"><span>G</span></span><span>Giner Climatique</span></a>
+        <p style="margin-top:16px;max-width:22em">Chaudières gaz ou fioul, pompes à chaleur, climatisation et chauffe-eau thermodynamiques à Vénissieux et dans la métropole de Lyon.</p>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:+33636128116">06 36 12 81 16</a></li>
+          <li><a href="mailto:ginerclimatique@gmail.com">ginerclimatique@gmail.com</a></li>
+          <li>Vénissieux (69200)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horaires</h4>
+        <ul><li>À confirmer</li><li>Sur rendez-vous</li><li>Du lundi au vendredi</li></ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul><li><a href="#services">Services</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Devis</a></li></ul>
+      </div>
+    </div>
+    <div class="mentions">
+      <span>© 2026 Giner Climatique – SARL – Vénissieux (69200)</span>
+      <span>Mentions légales · Politique de confidentialité (à compléter)</span>
+    </div>
+  </div>
+</footer>
+<div class="demo">Maquette de démonstration réalisée par Dorian – ce site n'est pas encore en ligne officiellement.</div>
+
+<a href="tel:+33636128116" class="appel-flottant" aria-label="Appeler Giner Climatique"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  function fermer(){nav.classList.remove('ouvert');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Ouvrir le menu');}
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');burger.setAttribute('aria-expanded',o?'true':'false');burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',fermer);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+  function sc(){nav.classList.toggle('plein',window.scrollY>30);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('vu');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e);});}
+  document.querySelectorAll('.q button').forEach(function(b){b.addEventListener('click',function(){var q=b.closest('.q'),o=q.classList.toggle('ouvert');b.setAttribute('aria-expanded',o?'true':'false');});});
+  var p=document.querySelector('.q');if(p){p.classList.add('ouvert');p.querySelector('button').setAttribute('aria-expanded','true');}
+  var row=document.querySelector('.horaires tr[data-j="'+new Date().getDay()+'"]');if(row)row.classList.add('auj');
+  var f=document.getElementById('form'),r=document.getElementById('retour');
+  f.addEventListener('submit',function(e){e.preventDefault();r.classList.add('vu');r.scrollIntoView({block:'nearest',behavior:'smooth'});});
+})();
+</script>
+</body>
+</html>
